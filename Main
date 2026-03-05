@@ -1,0 +1,2876 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[margin=1in]{geometry}
+
+% ----------------------------------------------------------------
+% Colors
+% ----------------------------------------------------------------
+\definecolor{examplecolor}{RGB}{220,240,255}
+\definecolor{theoremcolor}{RGB}{255,245,220}
+\definecolor{definitioncolor}{RGB}{240,255,240}
+\definecolor{analogycolor}{RGB}{255,255,220}
+\definecolor{skillcolor}{RGB}{255,235,245}
+\definecolor{contextcolor}{RGB}{245,245,250}
+\definecolor{problemcolor}{RGB}{250,240,250}
+\definecolor{solutioncolor}{RGB}{240,248,255}
+
+% ----------------------------------------------------------------
+% Custom tcolorboxes
+% ----------------------------------------------------------------
+\newtcolorbox{definition}{
+    colback=definitioncolor,
+    colframe=green!50!black,
+    title=Definition,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{theorem}{
+    colback=theoremcolor,
+    colframe=orange!80!black,
+    title=Key Principle,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{example}{
+    colback=examplecolor,
+    colframe=blue!70!black,
+    title=Example,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{solution}{
+    colback=solutioncolor,
+    colframe=gray!60!black,
+    title=Solution,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{analogy}{
+    colback=analogycolor,
+    colframe=purple!70!black,
+    title=Exam Experts Analogy,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{problembox}{
+    colback=problemcolor,
+    colframe=red!50!black,
+    title=Problem,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{warningbox}{
+    colback=red!10,
+    colframe=red!70!black,
+    title=Common Mistake Warning,
+    fonttitle=\bfseries
+}
+
+% ----------------------------------------------------------------
+% Header / Footer
+% ----------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Exam Experts}
+\rhead{Chapter 10: Energy and Work Practice Exam}
+\cfoot{\thepage}
+
+% ----------------------------------------------------------------
+% Title
+% ----------------------------------------------------------------
+\title{\textbf{\Huge Chapter 10: Energy and Work}\vspace{10pt}}
+\author{Exam Experts College Physics}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{center}
+\large\textit{Demonstrate your mastery of energy concepts before the real exam!}
+\end{center}
+
+\vspace{0.5cm}
+
+\tableofcontents
+
+\newpage
+
+% ================================================================
+% SECTION 1: EXAM OVERVIEW AND INSTRUCTIONS
+% ================================================================
+
+\section{Exam Overview and Instructions}
+
+\subsection{About This Practice Exam}
+
+This comprehensive practice exam covers all major topics from Chapter 10: Energy and Work. It is designed to simulate real exam conditions and test your understanding of:
+
+\begin{itemize}
+    \item The Basic Energy Model (System and Environment)
+    \item Work and Work Done by Gravity on Inclines
+    \item Kinetic Energy and the Work-Energy Theorem
+    \item Potential Energy (Gravitational and Elastic)
+    \item Thermal Energy and Friction
+    \item Conservation of Energy
+\end{itemize}
+
+\subsection{Instructions for Taking This Practice Exam}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Time yourself}: Allow 90 minutes for the complete exam (approximately 3 minutes per problem).
+    \item \textbf{Show all work}: Partial credit is awarded for correct methodology even if the final answer is incorrect.
+    \item \textbf{Box your final answers}: Make your answers clearly visible.
+    \item \textbf{Include units}: Answers without proper units will lose points.
+    \item \textbf{Use $g = 9.8$ m/s$^2$} unless otherwise specified.
+    \item \textbf{No peeking at solutions}: Complete all problems before checking answers.
+\end{enumerate}
+
+\subsection{Exam Structure}
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Section} & \textbf{Number of Problems} & \textbf{Points} \\
+\hline
+Part A: Conceptual Questions & 8 & 24 \\
+Part B: Basic Energy Model \& Work & 5 & 25 \\
+Part C: Kinetic Energy \& Work-Energy Theorem & 6 & 30 \\
+Part D: Potential Energy & 5 & 25 \\
+Part E: Thermal Energy \& Friction & 4 & 20 \\
+Part F: Conservation of Energy & 6 & 36 \\
+Part G: Challenging Mixed Problems & 4 & 40 \\
+\hline
+\textbf{Total} & \textbf{38} & \textbf{200} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Formula Reference Sheet}
+
+You may use the following formulas during the exam:
+
+\begin{tcolorbox}[colback=white, colframe=black, title=\textbf{Formula Sheet}]
+\textbf{Work:}
+\begin{align*}
+W &= F d \cos\theta \\
+W &= \vec{F} \cdot \vec{d}
+\end{align*}
+
+\textbf{Kinetic Energy:}
+\[
+K = \frac{1}{2}mv^2
+\]
+
+\textbf{Work-Energy Theorem:}
+\[
+W_{\text{net}} = \Delta K = K_f - K_i = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2
+\]
+
+\textbf{Gravitational Potential Energy:}
+\[
+U_g = mgh
+\]
+
+\textbf{Elastic Potential Energy:}
+\[
+U_s = \frac{1}{2}kx^2
+\]
+
+\textbf{Thermal Energy from Friction:}
+\[
+\Delta E_{\text{th}} = f_k \cdot d = \mu_k N d
+\]
+
+\textbf{Conservation of Energy:}
+\[
+K_i + U_i + W_{\text{ext}} = K_f + U_f + \Delta E_{\text{th}}
+\]
+
+\textbf{Work by Gravity on Incline:}
+\[
+W_g = mgh = mgd\sin\theta
+\]
+
+\textbf{Power:}
+\[
+P = \frac{W}{t} = Fv
+\]
+\end{tcolorbox}
+
+\newpage
+
+% ================================================================
+% SECTION 2: PART A - CONCEPTUAL QUESTIONS
+% ================================================================
+
+\section{Part A: Conceptual Questions (24 points)}
+
+\textit{Answer each question in 2-3 complete sentences. Each question is worth 3 points.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem A1.} (3 points) \\
+Define what constitutes a ``system'' and ``environment'' in the basic energy model. Give an example of a physics problem where choosing the system boundary affects your analysis.
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A2.} (3 points) \\
+A ball is thrown straight up into the air. Explain what happens to its kinetic energy and gravitational potential energy as it rises. At what point is each type of energy at its maximum?
+\end{problembox}
+
+\vspace{2cm}
+
+
+\begin{problembox}
+\textbf{Problem A3.} (3 points) \\
+Why does kinetic energy depend on $v^2$ rather than just $v$? What practical consequence does this have for vehicle stopping distances?
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A4.} (3 points) \\
+A book slides across a rough table and comes to rest. Where did the kinetic energy ``go''? Is energy conserved in this process? Explain.
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A5.} (3 points) \\
+Explain why the choice of reference level for gravitational potential energy does not affect the final answer in energy conservation problems.
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A6.} (3 points) \\
+A compressed spring launches a ball vertically. Describe the energy transformations that occur from the moment the spring is released until the ball reaches its maximum height.
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A7.} (3 points) \\
+Two identical balls are released from the same height. Ball A slides down a frictionless ramp, while Ball B falls straight down. Compare their speeds at the bottom. Explain your reasoning using energy concepts.
+\end{problembox}
+
+\vspace{2cm}
+
+\begin{problembox}
+\textbf{Problem A8.} (3 points) \\
+When should you use energy methods instead of Newton's second law to solve a mechanics problem? Give one specific scenario where energy methods are clearly superior.
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 3: PART B - BASIC ENERGY MODEL AND WORK
+% ================================================================
+
+\section{Part B: Basic Energy Model and Work (25 points)}
+
+\textit{Show all work. Include units in your final answers.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem B1.} (5 points) \\
+A worker pushes a 25 kg crate across a warehouse floor with a constant horizontal force of 85 N. The crate moves 12 m in the direction of the push.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the work done by the worker on the crate.
+    \item If the coefficient of kinetic friction between the crate and floor is $\mu_k = 0.25$, calculate the work done by friction.
+    \item What is the net work done on the crate?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem B2.} (5 points) \\
+A 5.0 kg box is pulled 8.0 m across a horizontal floor by a rope that makes an angle of $30°$ above the horizontal. The tension in the rope is 40 N.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the work done by the tension force.
+    \item Calculate the work done by the normal force.
+    \item Calculate the work done by gravity.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem B3.} (5 points) \\
+A 15 kg sled slides down a frictionless hill that is 20 m long and inclined at $25°$ above the horizontal.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the vertical height of the hill?
+    \item Calculate the work done by gravity as the sled slides down.
+    \item Calculate the work done by the normal force.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem B4.} (5 points) \\
+A 1200 kg car travels up a hill that rises 50 m vertically over a horizontal distance of 400 m. The car maintains a constant speed.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the work done by gravity on the car.
+    \item If the car's engine provides a constant forward force of 2000 N along the road, calculate the work done by the engine.
+    \item Explain why the work done by the engine is greater than the magnitude of the work done by gravity.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem B5.} (5 points) \\
+A crane lifts a 500 kg steel beam vertically at constant velocity through a height of 15 m in 20 seconds.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the work done by the crane on the beam.
+    \item Calculate the power output of the crane.
+    \item If the crane's efficiency is 80\%, what is the electrical power input required?
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 4: PART C - KINETIC ENERGY AND WORK-ENERGY THEOREM
+% ================================================================
+
+\section{Part C: Kinetic Energy and Work-Energy Theorem (30 points)}
+
+\textit{Show all work. Use the work-energy theorem where appropriate.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem C1.} (5 points) \\
+Calculate the kinetic energy of each of the following:
+
+\begin{enumerate}[label=(\alph*)]
+    \item A 0.145 kg baseball traveling at 40 m/s
+    \item A 1500 kg car traveling at 25 m/s
+    \item A 75 kg sprinter running at 10 m/s
+    \item Compare the kinetic energies of (a) and (c). Which has more kinetic energy and by what factor?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem C2.} (5 points) \\
+A 1000 kg car accelerates from rest to 20 m/s.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the car's change in kinetic energy.
+    \item Using the work-energy theorem, determine the net work done on the car.
+    \item If the car accelerates uniformly over a distance of 100 m, what is the average net force on the car?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem C3.} (5 points) \\
+A 70 kg skier starts from rest at the top of a frictionless slope that is 50 m long and inclined at $35°$ to the horizontal. Use the work-energy theorem to find the skier's speed at the bottom of the slope.
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem C4.} (5 points) \\
+A car traveling at 30 m/s applies its brakes and skids to a stop in 45 m on a level road.
+
+\begin{enumerate}[label=(\alph*)]
+    \item If the car's mass is 1200 kg, calculate its initial kinetic energy.
+    \item Using the work-energy theorem, calculate the friction force that stopped the car.
+    \item What is the coefficient of kinetic friction between the tires and road?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem C5.} (5 points) \\
+A 2.0 kg block is pushed from rest by a constant horizontal force of 15 N across a rough horizontal surface with $\mu_k = 0.20$. After traveling 5.0 m:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the work done by the applied force.
+    \item Calculate the work done by friction.
+    \item Calculate the net work done on the block.
+    \item Find the block's final speed using the work-energy theorem.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem C6.} (5 points) \\
+Two objects have the same kinetic energy. Object A has mass $m$ and Object B has mass $4m$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Find the ratio of their speeds $v_A/v_B$.
+    \item Find the ratio of their momenta $p_A/p_B$.
+    \item If both objects are brought to rest by the same constant force, find the ratio of their stopping distances.
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 5: PART D - POTENTIAL ENERGY
+% ================================================================
+
+\section{Part D: Potential Energy (25 points)}
+
+\textit{Show all work. Clearly state your choice of reference level where applicable.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem D1.} (5 points) \\
+A 3.0 kg book is held 2.5 m above the floor.
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the gravitational potential energy relative to the floor.
+    \item Calculate the gravitational potential energy relative to a table 1.0 m above the floor.
+    \item If the book falls to the floor, what is the change in gravitational potential energy (using the floor as reference)?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem D2.} (5 points) \\
+A roller coaster car of mass 500 kg is at the top of a hill that is 40 m above the ground. It then descends to a point that is 15 m above the ground.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Using the ground as the reference level, calculate the potential energy at the top of the hill.
+    \item Calculate the potential energy at the 15 m point.
+    \item Calculate the change in potential energy as the car moves from the top to the 15 m point.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem D3.} (5 points) \\
+A spring with spring constant $k = 800$ N/m is compressed by 0.15 m from its equilibrium position.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the elastic potential energy stored in the spring.
+    \item If the spring is compressed an additional 0.10 m (total compression 0.25 m), what is the new elastic potential energy?
+    \item By what factor did the elastic potential energy increase when the compression increased from 0.15 m to 0.25 m?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem D4.} (5 points) \\
+A 4.0 kg block slides down a frictionless incline that makes an angle of $30°$ with the horizontal. The block travels a distance of 6.0 m along the incline.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the vertical height change of the block?
+    \item What is the change in gravitational potential energy?
+    \item How does this relate to the work done by gravity on the block?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem D5.} (5 points) \\
+A spring gun uses a spring with $k = 1200$ N/m. The spring is compressed 8.0 cm and used to launch a 20 g ball vertically upward.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the elastic potential energy stored in the compressed spring.
+    \item Assuming all this energy converts to gravitational potential energy at maximum height, how high will the ball rise above its launch point?
+    \item What is the ball's speed just as it leaves the spring?
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 6: PART E - THERMAL ENERGY
+% ================================================================
+
+\section{Part E: Thermal Energy and Friction (20 points)}
+
+\textit{Show all work. Express thermal energy in joules.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem E1.} (5 points) \\
+A 5.0 kg box is pushed across a rough horizontal floor for a distance of 8.0 m. The coefficient of kinetic friction is 0.30.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the friction force acting on the box.
+    \item Calculate the thermal energy generated during this motion.
+    \item Where does this thermal energy go?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem E2.} (5 points) \\
+A 1500 kg car traveling at 25 m/s brakes to a stop on a level road. The coefficient of kinetic friction between the tires and road is 0.70.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the initial kinetic energy of the car.
+    \item How much thermal energy is generated as the car stops?
+    \item Calculate the stopping distance of the car.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem E3.} (5 points) \\
+A 2.0 kg block slides down a rough incline that is 3.0 m long and inclined at $40°$ to the horizontal. The coefficient of kinetic friction is 0.25. The block starts from rest.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the normal force on the block.
+    \item Calculate the friction force.
+    \item Calculate the thermal energy generated as the block slides down.
+    \item Using energy methods, find the speed of the block at the bottom.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem E4.} (5 points) \\
+Two identical cars, each with mass 1200 kg, are traveling on a level road. Car A is traveling at 20 m/s and Car B is traveling at 40 m/s. Both cars brake to a stop with the same braking force.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the ratio of their initial kinetic energies ($KE_B/KE_A$).
+    \item Calculate the ratio of the thermal energy generated ($\Delta E_{th,B}/\Delta E_{th,A}$).
+    \item Calculate the ratio of their stopping distances ($d_B/d_A$).
+    \item Explain why doubling the speed has such a dramatic effect on stopping distance.
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 7: PART F - CONSERVATION OF ENERGY
+% ================================================================
+
+\section{Part F: Conservation of Energy (35 points)}
+
+\textit{Show all work. Draw energy bar charts where indicated. Clearly identify your system and state whether friction is present.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem F1.} (5 points) \\
+A 0.50 kg ball is dropped from rest at a height of 10 m above the ground. Neglect air resistance.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the ball's total mechanical energy at the top?
+    \item What is the ball's speed when it is 4.0 m above the ground?
+    \item What is the ball's speed just before it hits the ground?
+    \item Draw an energy bar chart showing $KE$, $PE_g$, and $E_{total}$ at the top, at 4.0 m, and at the ground.
+\end{enumerate}
+\end{problembox}
+
+\vspace{5cm}
+
+\begin{problembox}
+\textbf{Problem F2.} (5 points) \\
+A roller coaster car (mass 600 kg) starts from rest at point A, which is 50 m above the ground. It then passes through point B (30 m above ground) and point C (10 m above ground). Assume no friction.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the speed at point B.
+    \item Calculate the speed at point C.
+    \item What is the maximum height the car could reach after point C?
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem F3.} (6 points) \\
+A 2.0 kg block is released from rest and slides down a frictionless ramp from a height of 5.0 m. At the bottom of the ramp, it encounters a rough horizontal surface with $\mu_k = 0.40$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the block's speed at the bottom of the ramp?
+    \item How far does the block slide on the rough surface before stopping?
+    \item Draw an energy bar chart showing the energy at: (i) top of ramp, (ii) bottom of ramp, (iii) final rest position.
+\end{enumerate}
+\end{problembox}
+
+\vspace{5cm}
+
+\begin{problembox}
+\textbf{Problem F4.} (6 points) \\
+A spring ($k = 500$ N/m) is compressed 0.20 m and used to launch a 0.25 kg ball vertically upward.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Calculate the elastic potential energy stored in the spring.
+    \item What is the ball's speed just as it leaves the spring?
+    \item How high above the launch point does the ball rise?
+    \item Draw an energy bar chart showing the energy transformation from compressed spring to maximum height.
+\end{enumerate}
+\end{problembox}
+
+\vspace{5cm}
+
+\begin{problembox}
+\textbf{Problem F5.} (6 points) \\
+A 70 kg skier starts from rest at the top of a 100 m long slope inclined at $25°$ to the horizontal. The coefficient of kinetic friction between the skis and snow is 0.10.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the vertical drop of the slope?
+    \item Calculate the thermal energy generated by friction.
+    \item What is the skier's speed at the bottom of the slope?
+    \item Compare this to the speed if there were no friction.
+\end{enumerate}
+\end{problembox}
+
+\vspace{4cm}
+
+\begin{problembox}
+\textbf{Problem F6.} (7 points) \\
+A 1000 kg car is traveling at 15 m/s at the bottom of a hill. The driver takes her foot off the gas and coasts up the hill. The hill is 200 m long and rises at an angle of $8°$ to the horizontal. The coefficient of rolling friction is 0.02.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the car's initial kinetic energy?
+    \item What is the vertical height gained if the car travels the full 200 m?
+    \item Calculate the thermal energy generated by friction over 200 m.
+    \item Does the car make it to the top of the hill? If so, what is its speed at the top? If not, how far up the hill does it travel?
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 8: PART G - COMPREHENSIVE PROBLEMS
+% ================================================================
+
+\section{Part G: Comprehensive Problems (30 points)}
+
+\textit{These problems integrate multiple concepts. Show all work clearly, state assumptions, and explain your reasoning.}
+
+\vspace{0.5cm}
+
+\begin{problembox}
+\textbf{Problem G1.} (10 points) \\
+A 3.0 kg block is placed against a spring ($k = 600$ N/m) on a frictionless horizontal surface. The spring is compressed 0.25 m and released. The block slides along the frictionless surface until it reaches a rough incline (angle $30°$, $\mu_k = 0.20$).
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the block's speed just after leaving the spring?
+    \item What is the block's speed just as it reaches the bottom of the incline?
+    \item How far up the incline does the block travel before stopping?
+    \item Draw a complete energy bar chart showing the energy at: (i) spring compressed, (ii) leaving spring, (iii) bottom of incline, (iv) maximum height on incline.
+\end{enumerate}
+\end{problembox}
+
+\vspace{6cm}
+
+\begin{problembox}
+\textbf{Problem G2.} (10 points) \\
+A pendulum consists of a 2.0 kg ball attached to a 1.5 m long string. The ball is released from rest when the string makes an angle of $60°$ with the vertical.
+
+\begin{enumerate}[label=(\alph*)]
+    \item What is the height of the ball above its lowest point when released?
+    \item What is the ball's speed at the lowest point of its swing?
+    \item What is the tension in the string at the lowest point? (Hint: Use circular motion concepts along with energy.)
+    \item If the ball loses 10\% of its mechanical energy to air resistance during each complete swing, what is its maximum angle after one complete swing?
+\end{enumerate}
+\end{problembox}
+
+\vspace{6cm}
+
+\begin{problembox}
+\textbf{Problem G3.} (10 points) \\
+A 1200 kg car is traveling at 30 m/s on a level road when the driver sees an obstacle 80 m ahead. The driver's reaction time is 0.50 s, during which the car continues at constant speed. The coefficient of kinetic friction during braking is 0.80.
+
+\begin{enumerate}[label=(\alph*)]
+    \item How far does the car travel during the reaction time?
+    \item What is the car's kinetic energy when braking begins?
+    \item Using energy methods, calculate the stopping distance once braking begins.
+    \item Does the car stop before hitting the obstacle? By how much does it stop short, or by how much does it overshoot?
+    \item If the car had been traveling at 40 m/s instead, would it have stopped in time? Show your calculation.
+\end{enumerate}
+\end{problembox}
+
+\newpage
+
+% ================================================================
+% SECTION 9: ANSWER KEY BEGINS
+% ================================================================
+
+\section*{STOP --- Do Not Continue Until You Have Completed All Problems}
+
+\vspace{1cm}
+
+\begin{center}
+\rule{0.8\textwidth}{2pt}
+
+\vspace{0.5cm}
+
+{\Huge \textbf{SOLUTIONS}}
+
+\vspace{0.3cm}
+
+{\Large Complete Step-by-Step Solutions with Substitutions}
+
+\vspace{0.5cm}
+
+\rule{0.8\textwidth}{2pt}
+\end{center}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART A
+% ================================================================
+
+\section{Solutions: Part A --- The Basic Energy Model}
+
+\begin{solution}
+\textbf{Solution A1.}
+
+\textbf{(a) System and Environment:}
+\begin{itemize}
+    \item \textbf{System:} The ball
+    \item \textbf{Environment:} Earth (provides gravitational interaction), the person's hand (provides initial push), air (provides resistance)
+\end{itemize}
+
+\textbf{(b) Forms of Energy:}
+\begin{itemize}
+    \item \textbf{Kinetic Energy ($K$):} The ball has kinetic energy due to its motion. This is maximum at the moment of release and at the lowest points, minimum (zero) at the maximum height.
+    \item \textbf{Gravitational Potential Energy ($U_g$):} The ball has gravitational potential energy due to its height above the ground. This increases as the ball rises and decreases as it falls.
+    \item \textbf{Thermal Energy ($E_{th}$):} Some energy is converted to thermal energy due to air resistance (though this is typically small for a thrown ball).
+\end{itemize}
+
+\textbf{(c) Energy Transformations:}
+\begin{itemize}
+    \item \textbf{Going up:} $K \rightarrow U_g$ (kinetic energy converts to gravitational potential energy)
+    \item \textbf{At maximum height:} $K
+= 0$, $U_g$ is maximum (all energy is potential)
+    \item \textbf{Coming down:} $U_g \rightarrow K$ (gravitational potential energy converts back to kinetic energy)
+    \item Throughout the flight, a small amount of mechanical energy converts to thermal energy: $K + U_g \rightarrow E_{th}$
+\end{itemize}
+
+\textbf{(d) Energy Bar Chart at Maximum Height:}
+
+At maximum height, the ball momentarily stops, so $K = 0$ and all mechanical energy is stored as gravitational potential energy.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Axes
+    \draw[thick,->] (0,0) -- (6,0);
+    \draw[thick,->] (0,0) -- (0,4);
+    
+    % Labels
+    \node at (1,-0.5) {$K$};
+    \node at (2.5,-0.5) {$U_g$};
+    \node at (4,-0.5) {$U_s$};
+    \node at (5.5,-0.5) {$E_{th}$};
+    
+    % Bars
+    \draw[fill=blue!30] (0.5,0) rectangle (1.5,0); % K = 0
+    \draw[fill=green!30] (2,0) rectangle (3,3); % Ug = max
+    \draw[fill=yellow!30] (3.5,0) rectangle (4.5,0); % Us = 0
+    \draw[fill=red!30] (5,0) rectangle (6,0.3); % Small Eth
+    
+    \node at (-0.5,3) {max};
+    \node at (-0.5,0) {0};
+\end{tikzpicture}
+\end{center}
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution A2.}
+
+\textbf{(a) System:} The skier (and optionally the skis)
+
+\textbf{(b) Environment:} Earth, the snow-covered slope, air
+
+\textbf{(c) Energy Transfer Mechanisms:}
+
+\begin{itemize}
+    \item \textbf{Work done by gravity:} Gravity does positive work on the skier as they descend, transferring energy into the system and increasing kinetic energy.
+    
+    \item \textbf{Work done by friction:} Friction between skis and snow does negative work, transferring energy out of the mechanical system and converting it to thermal energy.
+    
+    \item \textbf{Work done by air resistance (drag):} Air resistance does negative work, also converting mechanical energy to thermal energy.
+\end{itemize}
+
+\textbf{(d) Energy Transformations:}
+
+\begin{itemize}
+    \item $U_g \rightarrow K$: As the skier descends, gravitational potential energy converts to kinetic energy (skier speeds up).
+    
+    \item $K \rightarrow E_{th}$: Friction and air resistance convert some kinetic energy to thermal energy (the snow and air warm up slightly).
+    
+    \item Net effect: $U_g \rightarrow K + E_{th}$
+\end{itemize}
+
+The skier's final kinetic energy is less than the initial potential energy because some energy has been converted to thermal energy through friction and drag.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution A3.}
+
+\textbf{(a) Open System:}
+
+An \textbf{open system} is one that can exchange energy with its environment. Energy can flow into or out of the system through work or heat transfer.
+
+\textbf{Example:} A car engine. Fuel (chemical energy) enters the system, and the engine does work on the wheels while also releasing heat to the environment.
+
+\textbf{(b) Closed System:}
+
+A \textbf{closed system} is one that does not exchange energy with its environment. The total energy within the system remains constant.
+
+\textbf{Example:} An ideal pendulum in a vacuum (no air resistance). The total mechanical energy ($K + U_g$) remains constant as energy transforms back and forth between kinetic and potential forms.
+
+\textbf{(c) Isolated System:}
+
+An \textbf{isolated system} is a special case of a closed system where there is no interaction with the environment whatsoever---no energy transfer, no mass transfer, no external forces.
+
+\textbf{Example:} The entire universe (theoretically), or an insulated container with a bouncing ball where we ignore all external influences.
+
+\textbf{Key Distinction:} In practice, truly isolated systems don't exist, but we often model systems as isolated when external influences are negligible. A closed system has constant energy; an isolated system has no external interactions at all.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution A4.}
+
+The energy principle (also called the first law of thermodynamics for mechanical systems) states:
+
+\begin{center}
+\boxed{\Delta E_{sys} = W_{ext}}
+\end{center}
+
+Or equivalently:
+\begin{center}
+\boxed{E_f = E_i + W_{ext}}
+\end{center}
+
+Where:
+\begin{itemize}
+    \item $\Delta E_{sys}$ = change in total system energy = $\Delta K + \Delta U + \Delta E_{th}$
+    \item $W_{ext}$ = work done by external forces (forces from the environment)
+    \item $E_i$ = initial total energy of the system
+    \item $E_f$ = final total energy of the system
+\end{itemize}
+
+\textbf{In words:} The change in a system's total energy equals the net work done on the system by external forces.
+
+\textbf{For an isolated system:} $W_{ext} = 0$, so $\Delta E_{sys} = 0$, meaning:
+\[E_f = E_i\]
+\[K_f + U_f + E_{th,f} = K_i + U_i + E_{th,i}\]
+
+This is the \textbf{law of conservation of energy}: In an isolated system, energy can transform from one form to another, but the total energy remains constant.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution A5.}
+
+Matching exercise:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Kinetic energy $\longrightarrow$ \textbf{(iii)} Energy of motion
+    
+    \item Gravitational potential energy $\longrightarrow$ \textbf{(i)} Energy stored due to position in a gravitational field
+    
+    \item Elastic potential energy $\longrightarrow$ \textbf{(iv)} Energy stored in a compressed or stretched spring
+    
+    \item Thermal energy $\longrightarrow$ \textbf{(ii)} Energy associated with temperature and molecular motion
+    
+    \item Work $\longrightarrow$ \textbf{(v)} Energy transferred by a force acting through a displacement
+\end{enumerate}
+
+\textbf{Explanation:}
+\begin{itemize}
+    \item \textbf{Kinetic energy} depends on mass and velocity: $K = \frac{1}{2}mv^2$
+    \item \textbf{Gravitational PE} depends on mass, gravity, and height: $U_g = mgh$
+    \item \textbf{Elastic PE} depends on spring constant and compression/stretch: $U_s = \frac{1}{2}kx^2$
+    \item \textbf{Thermal energy} is the internal energy due to random molecular motion
+    \item \textbf{Work} is the mechanism for energy transfer: $W = Fd\cos\theta$
+\end{itemize}
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART B
+% ================================================================
+
+\section{Solutions: Part B --- Work}
+
+\begin{solution}
+\textbf{Solution B1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Force: $F = 50$ N
+    \item Displacement: $d = 8.0$ m
+    \item Angle between force and displacement: $\theta = 30°$
+\end{itemize}
+
+\textbf{Formula:}
+\[W = Fd\cos\theta\]
+
+\textbf{Substitution:}
+\[W = (50 \text{ N})(8.0 \text{ m})\cos(30°)\]
+
+\textbf{Calculation:}
+\[\cos(30°) = \frac{\sqrt{3}}{2} \approx 0.866\]
+
+\[W = (50)(8.0)(0.866)\]
+
+\[W = (400)(0.866)\]
+
+\[\boxed{W = 346.4 \text{ J} \approx 350 \text{ J}}\]
+
+\textbf{Interpretation:} The work is positive because the force has a component in the direction of motion, meaning energy is being transferred into the box's kinetic energy.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution B2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 25$ kg
+    \item Displacement: $d = 15$ m horizontally
+    \item Applied force: $F = 120$ N at angle $\theta = 25°$ above horizontal
+\end{itemize}
+
+\textbf{(a) Work done by the applied force:}
+
+The displacement is horizontal, and the force is at $25°$ above horizontal.
+
+\textbf{Formula:}
+\[W_{applied} = Fd\cos\theta\]
+
+\textbf{Substitution:}
+\[W_{applied} = (120 \text{ N})(15 \text{ m})\cos(25°)\]
+
+\textbf{Calculation:}
+\[\cos(25°) \approx 0.906\]
+
+\[W_{applied} = (120)(15)(0.906) = (1800)(0.906)\]
+
+\[\boxed{W_{applied} = 1631 \text{ J} \approx 1630 \text{ J}}\]
+
+\textbf{(b) Work done by gravity:}
+
+Gravity acts downward ($\vec{F}_g = mg$ downward), and displacement is horizontal.
+
+The angle between gravity and horizontal displacement is $90°$.
+
+\textbf{Formula:}
+\[W_{gravity} = F_g d\cos(90°)\]
+
+\textbf{Substitution:}
+\[W_{gravity} = (mg)(d)(0) = 0\]
+
+\[\boxed{W_{gravity} = 0 \text{ J}}\]
+
+\textbf{Explanation:} Gravity does no work because it acts perpendicular to the displacement.
+
+\textbf{(c) Work done by the normal force:}
+
+The normal force acts perpendicular to the surface (upward for a horizontal surface), and displacement is horizontal.
+
+The angle between normal force and displacement is $90°$.
+
+\textbf{Formula:}
+\[W_{normal} = N \cdot d \cdot \cos(90°) = 0\]
+
+\[\boxed{W_{normal} = 0 \text{ J}}\]
+
+\textbf{Explanation:} The normal force does no work because it is perpendicular to the displacement.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution B3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 10$ kg
+    \item Incline angle: $\phi = 30°$
+    \item Distance along incline: $d = 12$ m
+    \item Motion: sliding down the incline
+\end{itemize}
+
+\textbf{(a) Work done by gravity:}
+
+\textbf{Method 1: Using the component of gravity along the incline}
+
+The component of gravity parallel to the incline (pointing down the slope) is:
+\[F_{g,\parallel} = mg\sin\phi\]
+
+Since the block moves down the incline, the force and displacement are in the same direction, so $\theta = 0°$.
+
+\textbf{Formula:}
+\[W_{gravity} = F_{g,\parallel} \cdot d \cdot \cos(0°) = mg\sin\phi \cdot d\]
+
+\textbf{Substitution:}
+\[W_{gravity} = (10 \text{ kg})(9.8 \text{ m/s}^2)\sin(30°)(12 \text{ m})\]
+
+\textbf{Calculation:}
+\[\sin(30°) = 0.5\]
+
+\[W_{gravity} = (10)(9.8)(0.5)(12)\]
+
+\[W_{gravity} = (98)(0.5)(12) = (49)(12)\]
+
+\[\boxed{W_{gravity} = 588 \text{ J}}\]
+
+\textbf{Method 2: Using vertical height}
+
+The vertical drop is: $h = d\sin\phi = (12)\sin(30°) = (12)(0.5) = 6$ m
+
+\[W_{gravity} = mgh = (10)(9.8)(6) = 588 \text{ J}\]
+
+Both methods give the same answer, confirming our result.
+
+\textbf{(b) Physical meaning of positive work by gravity:}
+
+The positive work done by gravity means that gravity is transferring energy \textbf{into} the block's kinetic energy. As the block slides down, gravity accelerates it, increasing its speed. The gravitational potential energy of the block decreases, and this energy is converted to kinetic energy (and possibly thermal energy if there's friction).
+
+In energy terms: $W_{gravity} = -\Delta U_g$, so positive work by gravity corresponds to a decrease in gravitational potential energy.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution B4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 5.0$ kg
+    \item Incline angle: $\phi = 20°$
+    \item Distance along incline: $d = 3.0$ m
+    \item Coefficient of kinetic friction: $\mu_k = 0.15$
+    \item Motion: pushed up the incline at constant velocity
+\end{itemize}
+
+\textbf{(a) Work done by gravity:}
+
+When moving up the incline, the displacement is up the slope, but gravity has a component pointing down the slope.
+
+The angle between gravity's parallel component and displacement is $180°$.
+
+\textbf{Formula:}
+\[W_{gravity} = -mgd\sin\phi\]
+
+(Negative because gravity opposes the upward motion)
+
+\textbf{Substitution:}
+\[W_{gravity} = -(5.0 \text{ kg})(9.8 \text{ m/s}^2)(3.0 \text{ m})\sin(20°)\]
+
+\textbf{Calculation:}
+\[\sin(20°) \approx 0.342\]
+
+\[W_{gravity} = -(5.0)(9.8)(3.0)(0.342)\]
+
+\[W_{gravity} = -(147)(0.342) = -50.3 \text{ J}\]
+
+\[\boxed{W_{gravity} = -50.3 \text{ J}}\]
+
+\textbf{(b) Work done by friction:}
+
+First, find the normal force. On an incline:
+\[N = mg\cos\phi\]
+
+\textbf{Substitution:}
+\[N = (5.0)(9.8)\cos(20°) = (49)(0.940) = 46.0 \text{ N}\]
+
+Friction force:
+\[f_k = \mu_k N = (0.15)(46.0) = 6.90 \text{ N}\]
+
+Friction opposes motion (points down the incline while block moves up), so $\theta = 180°$.
+
+\textbf{Formula:}
+\[W_{friction} = f_k \cdot d \cdot \cos(180°) = -f_k \cdot d\]
+
+\textbf{Substitution:}
+\[W_{friction} = -(6.90 \text{ N})(3.0 \text{ m})\]
+
+\[\boxed{W_{friction} = -20.7 \text{ J}}\]
+
+\textbf{(c) Work done by the applied force:}
+
+Since the block moves at constant velocity, the net force is zero, and by the work-energy theorem, the net work is zero.
+
+\[W_{net} = W_{applied} + W_{gravity} + W_{friction} + W_{normal} = 0\]
+
+The normal force does no work (perpendicular to displacement), so:
+
+\[W_{applied} + W_{gravity} + W_{friction} = 0\]
+
+\textbf{Solving for $W_{applied}$:}
+\[W_{applied} = -W_{gravity} - W_{friction}\]
+
+\[W_{applied} = -(-50.3) - (-20.7)\]
+
+\[W_{applied} = 50.3 + 20.7\]
+
+\[\boxed{W_{applied} = 71.0 \text{ J}}\]
+
+\textbf{(
+d) Verify using forces:
+
+At constant velocity, the applied force must balance gravity's parallel component plus friction:
+
+\[F_{applied} = mg\sin\phi + f_k\]
+
+\[F_{applied} = (5.0)(9.8)\sin(20°) + 6.90\]
+
+\[F_{applied} = (49)(0.342) + 6.90 = 16.76 + 6.90 = 23.66 \text{ N}\]
+
+Work by applied force:
+\[W_{applied} = F_{applied} \cdot d = (23.66)(3.0) = 71.0 \text{ J} \checkmark\]
+
+This confirms our answer from part (c).
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution B5.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 2.0$ kg
+    \item Incline angle: $\theta = 30°$
+    \item Slides down the incline a distance: $d = 4.0$ m
+    \item Coefficient of kinetic friction: $\mu_k = 0.25$
+\end{itemize}
+
+\textbf{(a) Work done by gravity:}
+
+When sliding down, gravity's component along the incline is in the same direction as motion.
+
+\textbf{Formula:}
+\[W_{gravity} = mgd\sin\theta\]
+
+\textbf{Substitution:}
+\[W_{gravity} = (2.0 \text{ kg})(9.8 \text{ m/s}^2)(4.0 \text{ m})\sin(30°)\]
+
+\textbf{Calculation:}
+\[\sin(30°) = 0.500\]
+
+\[W_{gravity} = (2.0)(9.8)(4.0)(0.500)\]
+
+\[W_{gravity} = (78.4)(0.500) = 39.2 \text{ J}\]
+
+\[\boxed{W_{gravity} = 39.2 \text{ J}}\]
+
+\textbf{(b) Work done by friction:}
+
+First, find the normal force:
+\[N = mg\cos\theta = (2.0)(9.8)\cos(30°) = (19.6)(0.866) = 17.0 \text{ N}\]
+
+Friction force:
+\[f_k = \mu_k N = (0.25)(17.0) = 4.25 \text{ N}\]
+
+Friction opposes motion (points up the incline while block slides down):
+
+\textbf{Formula:}
+\[W_{friction} = -f_k \cdot d\]
+
+\textbf{Substitution:}
+\[W_{friction} = -(4.25 \text{ N})(4.0 \text{ m})\]
+
+\[\boxed{W_{friction} = -17.0 \text{ J}}\]
+
+\textbf{(c) Net work done on the block:}
+
+\[W_{net} = W_{gravity} + W_{friction} + W_{normal}\]
+
+Since $W_{normal} = 0$ (perpendicular to displacement):
+
+\[W_{net} = 39.2 + (-17.0) + 0\]
+
+\[\boxed{W_{net} = 22.2 \text{ J}}\]
+
+\textbf{(d) Speed at the bottom using work-energy theorem:}
+
+The block starts from rest, so $K_i = 0$.
+
+\textbf{Work-Energy Theorem:}
+\[W_{net} = \Delta K = K_f - K_i = \frac{1}{2}mv_f^2 - 0\]
+
+\textbf{Solving for $v_f$:}
+\[v_f = \sqrt{\frac{2W_{net}}{m}}\]
+
+\textbf{Substitution:}
+\[v_f = \sqrt{\frac{2(22.2 \text{ J})}{2.0 \text{ kg}}}\]
+
+\[v_f = \sqrt{\frac{44.4}{2.0}} = \sqrt{22.2}\]
+
+\[\boxed{v_f = 4.71 \text{ m/s}}\]
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART C
+% ================================================================
+
+\section{Solutions: Part C --- Kinetic Energy and Work-Energy Theorem}
+
+\begin{solution}
+\textbf{Solution C1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass of car: $m = 1500$ kg
+    \item Speed: $v = 25$ m/s
+\end{itemize}
+
+\textbf{(a) Kinetic energy of the car:}
+
+\textbf{Formula:}
+\[K = \frac{1}{2}mv^2\]
+
+\textbf{Substitution:}
+\[K = \frac{1}{2}(1500 \text{ kg})(25 \text{ m/s})^2\]
+
+\textbf{Calculation:}
+\[K = \frac{1}{2}(1500)(625)\]
+
+\[K = (750)(625) = 468,750 \text{ J}\]
+
+\[\boxed{K = 4.69 \times 10^5 \text{ J} = 469 \text{ kJ}}\]
+
+\textbf{(b) Kinetic energy if speed doubles to 50 m/s:}
+
+\textbf{Substitution:}
+\[K_{new} = \frac{1}{2}(1500 \text{ kg})(50 \text{ m/s})^2\]
+
+\[K_{new} = \frac{1}{2}(1500)(2500)\]
+
+\[K_{new} = (750)(2500) = 1,875,000 \text{ J}\]
+
+\[\boxed{K_{new} = 1.875 \times 10^6 \text{ J} = 1.875 \text{ MJ}}\]
+
+\textbf{(c) Factor by which kinetic energy increases:}
+
+\textbf{Method 1 - Direct calculation:}
+\[\text{Factor} = \frac{K_{new}}{K_{original}} = \frac{1,875,000}{468,750} = 4\]
+
+\textbf{Method 2 - Using the $v^2$ relationship:}
+
+Since $K \propto v^2$, if speed doubles ($v \rightarrow 2v$):
+\[\frac{K_{new}}{K_{original}} = \frac{(2v)^2}{v^2} = \frac{4v^2}{v^2} = 4\]
+
+\[\boxed{\text{Kinetic energy increases by a factor of 4}}\]
+
+\textbf{Key insight:} This demonstrates why speeding is so dangerous. Doubling your speed quadruples the energy that must be dissipated in a crash or during braking.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution C2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass of car: $m = 1200$ kg
+    \item Initial velocity: $v_i = 20$ m/s
+    \item Final velocity: $v_f = 30$ m/s
+    \item Distance traveled: $d = 100$ m
+\end{itemize}
+
+\textbf{(a) Initial kinetic energy:}
+
+\textbf{Formula:}
+\[K_i = \frac{1}{2}mv_i^2\]
+
+\textbf{Substitution:}
+\[K_i = \frac{1}{2}(1200 \text{ kg})(20 \text{ m/s})^2\]
+
+\textbf{Calculation:}
+\[K_i = \frac{1}{2}(1200)(400) = (600)(400) = 240,000 \text{ J}\]
+
+\[\boxed{K_i = 2.40 \times 10^5 \text{ J}}\]
+
+\textbf{(b) Final kinetic energy:}
+
+\textbf{Formula:}
+\[K_f = \frac{1}{2}mv_f^2\]
+
+\textbf{Substitution:}
+\[K_f = \frac{1}{2}(1200 \text{ kg})(30 \text{ m/s})^2\]
+
+\textbf{Calculation:}
+\[K_f = \frac{1}{2}(1200)(900) = (600)(900) = 540,000 \text{ J}\]
+
+\[\boxed{K_f = 5.40 \times 10^5 \text{ J}}\]
+
+\textbf{(c) Net work done on the car:}
+
+\textbf{Work-Energy Theorem:}
+\[W_{net} = \Delta K = K_f - K_i\]
+
+\textbf{Substitution:}
+\[W_{net} = 540,000 \text{ J} - 240,000 \text{ J}\]
+
+\[\boxed{W_{net} = 3.00 \times 10^5 \text{ J} = 300 \text{ kJ}}\]
+
+\textbf{(d) Average net force on the car:}
+
+\textbf{Formula:}
+\[W_{net} = F_{net} \cdot d\]
+
+\textbf{Solving for $F_{net}$:}
+\[F_{net} = \frac{W_{net}}{d}\]
+
+\textbf{Substitution:}
+\[F_{net} = \frac{300,000 \text{ J}}{100 \text{ m}}\]
+
+\[\boxed{F_{net} = 3000 \text{ N} = 3.00 \text{ kN}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution C3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass of skier: $m = 70$ kg
+    \item Initial velocity: $v_i = 0$ (starts from rest)
+    \item Length of slope: $d = 50$ m
+    \item Incline angle: $\theta = 35°$
+    \item Frictionless surface
+\end{itemize}
+
+\textbf{Find:} Final speed $v_f$ at the bottom
+
+\textbf{Approach:} Use the work-energy theorem. On a frictionless incline, only gravity does work.
+
+\textbf{Step 1: Calculate work done by gravity}
+
+\textbf{Formula:}
+\[W_{gravity} = mgd\sin\theta\]
+
+\textbf{Substitution:}
+\[W_{gravity} = (70 \text{ kg})(9.8 \text{ m/s}^2)(50 \text{ m})\sin(35°)\]
+
+\textbf{Calculation:}
+\[\sin(35°) \approx 0.574\]
+
+\[W_{gravity} = (70)(9.8)(50)(0.574)\]
+
+\[W_{gravity} = (34,300)(0.574) = 19,688 \text{ J}\]
+
+\textbf{Step 2: Apply the work-energy theorem}
+
+Since the surface is frictionless and the normal force does no work:
+\[W_{net} = W_{gravity} = 19,688 \text{ J}\]
+
+\textbf{Work-Energy Theorem:}
+\[W_{net} = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2\]
+
+Since $v_i = 0$:
+\[W_{net} = \frac{1}{2}mv_f^2\]
+
+\textbf{Step 3: Solve for $v_f$}
+
+\[v_f = \sqrt{\frac{2W_{net}}{m}}\]
+
+\textbf{Substitution:}
+\[v_f = \sqrt{\frac{2(19,688 \text{ J})}{70 \text{ kg}}}\]
+
+\[v_f = \sqrt{\frac{39,376}{70}} = \sqrt{562.5}\]
+
+\[\boxed{v_f = 23.7 \text{ m/s}}\]
+
+\textbf{Alternative verification using kinematics:}
+
+The acceleration down a frictionless incline is $a = g\sin\theta = (9.8)(0.574) = 5.63$ m/s².
+
+Using $v_f^2 = v_i^2 + 2ad$:
+\[v_f = \sqrt{0 + 2(5.63)(50)} = \sqrt{563} = 23.7 \text{ m/s} \checkmark\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution C4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Initial velocity: $v_i = 30$ m/s
+    \item Final velocity: $v_f = 0$ (comes to a stop)
+    \item Stopping distance: $d = 45$ m
+    \item Mass of car: $m = 1200$ kg
+    \item Level road (horizontal surface)
+\end{itemize}
+
+\textbf{(a) Initial kinetic energy:}
+
+\textbf{Formula:}
+\[K_i = \frac{1}{2}mv_i^2\]
+
+\textbf{Substitution:}
+\[K_i = \frac{1}{2}(1200 \text{ kg})(30 \text{ m/s})^2\]
+
+\textbf{Calculation:}
+\[K_i = \frac{1}{2}(1200)(900) = (600)(900)\]
+
+\[\boxed{K_i = 540,000 \text{ J} = 540 \text{ kJ}}\]
+
+\textbf{(b) Friction force using work-energy theorem:}
+
+Since the car stops, $K_f = 0$.
+
+\textbf{Work-Energy Theorem:}
+\[W_{net} = K_f - K_i = 0 - 540,000 = -540,000 \text{ J}\]
+
+The only horizontal force doing work is friction (on a level road):
+\[W_{friction} = W_{net} = -540,000 \text{ J}\]
+
+\textbf{Relationship between work and friction force:}
+\[W_{friction} = -f_k \cdot d\]
+
+(Negative because friction opposes motion)
+
+\textbf{Solving for $f_k$:}
+\[f_k = -\frac{W_{friction}}{d} = -\frac{-540,000 \text{ J}}{45 \text{ m}}\]
+
+\[\boxed{f_k = 12,000 \text{ N} = 12 \text{ kN}}\]
+
+\textbf{(c) Coefficient of kinetic friction:}
+
+On a level surface, the normal force equals the weight:
+\[N = mg = (1200 \text{ kg})(9.8 \text{ m/s}^2) = 11,760 \text{ N}\]
+
+\textbf{Formula:}
+\[f_k = \mu_k N\]
+
+\textbf{Solving for $\mu_k$:}
+\[\mu_k = \frac{f_k}{N}\]
+
+\textbf{Substitution:}
+\[\mu_k = \frac{12,000 \text{ N}}{11,760 \text{ N}}\]
+
+\[\boxed{\mu_k = 1.02}\]
+
+\textbf{Note:} A coefficient of friction slightly greater than 1 is possible with specialized tires (like racing tires) or rough surfaces, but this is at the upper limit for typical road conditions. In practice, this would represent maximum braking with anti-lock brakes on a dry road.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution C5.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 2.0$ kg
+    \item Applied force: $F = 15$ N (horizontal)
+    \item Coefficient of kinetic friction: $\mu_k = 0.20$
+    \item Distance: $d = 5.0$ m
+    \item Initial velocity: $v_i = 0$ (starts from rest)
+    \item Horizontal surface
+\end{itemize}
+
+\textbf{(a) Work done by the applied force:}
+
+The applied force is in the same direction as displacement ($\theta = 0°$).
+
+\textbf{Formula:}
+\[W_{applied} = Fd\cos(0°) = Fd\]
+
+\textbf{Substitution:}
+\[W_{applied} = (15 \text{ N})(5.0 \text{ m})\]
+
+\[\boxed{W_{applied} = 75 \text{ J}}\]
+
+\textbf{(b) Work done by friction:}
+
+First, find the friction force. On a horizontal surface:
+\[N = mg = (2.0 \text{ kg})(9.8 \text{ m/s}^2) = 19.6 \text{ N}\]
+
+\[f_k = \mu_k N = (0.20)(19.6 \text{ N}) = 3.92 \text{ N}\]
+
+Friction opposes motion ($\theta = 180°$):
+
+\textbf{Formula:}
+\[W_{friction} = f_k \cdot d \cdot \cos(180°) = -f_k \cdot d\]
+
+\textbf{Substitution:}
+\[W_{friction} = -(3.92 \text{ N})(5.0 \text{ m})\]
+
+\[\boxed{W_{friction} = -19.6 \text{ J}}\]
+
+\textbf{(c) Net work done on the block:}
+
+The normal force and gravity do no work (perpendicular to displacement).
+
+\[W_{net} = W_{applied} + W_{friction}\]
+
+\textbf{Substitution:}
+\[W_{net} = 75 \text{ J} + (-19.6 \text{ J})\]
+
+\[\boxed{W_{net} = 55.4 \text{ J}}\]
+
+\textbf{(d) Final speed using work-energy theorem:}
+
+\textbf{Work-Energy Theorem:}
+\[W_{net} = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2\]
+
+Since $v_i = 0$:
+\[W_{net} = \frac{1}{2}mv_f^2\]
+
+\textbf{Solving for $v_f$:}
+\[v_f = \sqrt{\frac{2W_{net}}{m}}\]
+
+\textbf{Substitution:}
+\[v_f = \sqrt{\frac{2(55.4 \text{ J})}{2.0 \text{ kg}}}\]
+
+\[v_f = \sqrt{\frac{110.8}{2.0}} = \sqrt{55.4}\]
+
+\[\boxed{v_f = 7.44 \text{ m/s}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution C6.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Object A: mass $m_A = m$, speed $v_A$
+    \item Object B: mass $m_B = 4m$, speed $v_B$
+    \item Both objects have the same kinetic energy: $K_A = K_B$
+\end{itemize}
+
+\textbf{(a) Ratio of speeds $v_A/v_B$:}
+
+\textbf{Setting kinetic energies equal:}
+\[\frac{1}{2}m_A v_A^2 = \frac{1}{2}m_B v_B^2\]
+
+\[\frac{1}{2}(m)v_A^2 = \frac{1}{2}(4m)v_B^2\]
+
+\textbf{Simplifying:}
+\[v_A^2 = 4v_B^2\]
+
+\[v_A = 2v_B\]
+
+\[\boxed{\frac{v_A}{v_B} = 2}\]
+
+\textbf{Interpretation:} The lighter object must travel twice as fast to have the same kinetic energy as the heavier object.
+
+\textbf{(b) Ratio of momenta $p_A/p_B$:}
+
+\textbf{Formula for momentum:}
+\[p = mv\]
+
+\textbf{For Object A:}
+\[p_A = m_A v_A = m \cdot v_A\]
+
+\textbf{For Object B:}
+\[p_B = m_B v_B = 4m \cdot v_B\]
+
+\textbf{Using $v_A = 2v_B$:}
+\[p_A = m(2v_B) = 2mv_B\]
+
+\[p_B = 4mv_B\]
+
+\textbf{Taking the ratio:}
+\[\frac{p_A}{p_B} = \frac{2mv_B}{4mv_B} = \frac{2}{4}\]
+
+\[\boxed{\frac{p_A}{p_B} = \frac{1}{2}}\]
+
+\textbf{Interpretation:} Even though both objects have the same kinetic energy, the heavier object has twice the momentum.
+
+\textbf{(c) Ratio of stopping distances:}
+
+If both objects are brought to rest by the same constant force $F$, we use the work-energy theorem:
+
+\[W = F \cdot d = \Delta K = K_f - K_i = 0 - K_i = -K_i\]
+
+Since the force opposes motion:
+\[F \cdot d = K_i\]
+
+\[d = \frac{K_i}{F}\]
+
+Since both objects have the same kinetic energy ($K_A = K_B$) and are stopped by the same force $F$:
+
+\[d_A = \frac{K_A}{F} \quad \text{and} \quad d_B = \frac{K_B}{F}\]
+
+\
+\[\frac{d_A}{d_B} = \frac{K_A/F}{K_B/F} = \frac{K_A}{K_B} = 1\]
+
+\[\boxed{\frac{d_A}{d_B} = 1}\]
+
+\textbf{Interpretation:} Objects with the same kinetic energy require the same stopping distance when stopped by the same force, regardless of their mass. This is why kinetic energy (not momentum) determines stopping distance in braking problems.
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART D
+% ================================================================
+
+\section{Solutions: Part D --- Potential Energy}
+
+\begin{solution}
+\textbf{Solution D1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 3.0$ kg
+    \item Height above floor: $h = 2.5$ m
+    \item Table height: $h_{table} = 1.0$ m
+\end{itemize}
+
+\textbf{(a) Gravitational PE relative to the floor:}
+
+\textbf{Formula:}
+\[U_g = mgh\]
+
+where $h$ is measured from the reference level (floor).
+
+\textbf{Substitution:}
+\[U_g = (3.0 \text{ kg})(9.8 \text{ m/s}^2)(2.5 \text{ m})\]
+
+\[U_g = (3.0)(9.8)(2.5) = 73.5 \text{ J}\]
+
+\[\boxed{U_g = 73.5 \text{ J} \text{ (relative to floor)}}\]
+
+\textbf{(b) Gravitational PE relative to the table:}
+
+The height above the table is:
+\[h_{above\ table} = 2.5 \text{ m} - 1.0 \text{ m} = 1.5 \text{ m}\]
+
+\textbf{Substitution:}
+\[U_g = (3.0 \text{ kg})(9.8 \text{ m/s}^2)(1.5 \text{ m})\]
+
+\[U_g = (3.0)(9.8)(1.5) = 44.1 \text{ J}\]
+
+\[\boxed{U_g = 44.1 \text{ J} \text{ (relative to table)}}\]
+
+\textbf{(c) Change in gravitational PE when falling to floor:}
+
+\textbf{Formula:}
+\[\Delta U_g = U_{g,final} - U_{g,initial} = mgh_f - mgh_i\]
+
+Using the floor as reference: $h_f = 0$, $h_i = 2.5$ m
+
+\textbf{Substitution:}
+\[\Delta U_g = (3.0)(9.8)(0) - (3.0)(9.8)(2.5)\]
+
+\[\Delta U_g = 0 - 73.5\]
+
+\[\boxed{\Delta U_g = -73.5 \text{ J}}\]
+
+\textbf{Interpretation:} The negative sign indicates that gravitational potential energy \textit{decreases} as the book falls. This energy is converted to kinetic energy.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution D2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 500$ kg
+    \item Height at top of hill: $h_1 = 40$ m
+    \item Height at lower point: $h_2 = 15$ m
+    \item Reference level: ground ($h = 0$)
+\end{itemize}
+
+\textbf{(a) Potential energy at the top:}
+
+\textbf{Formula:}
+\[U_{g,top} = mgh_1\]
+
+\textbf{Substitution:}
+\[U_{g,top} = (500 \text{ kg})(9.8 \text{ m/s}^2)(40 \text{ m})\]
+
+\[U_{g,top} = (500)(9.8)(40) = 196{,}000 \text{ J}\]
+
+\[\boxed{U_{g,top} = 196 \text{ kJ}}\]
+
+\textbf{(b) Potential energy at the lower point:}
+
+\textbf{Formula:}
+\[U_{g,lower} = mgh_2\]
+
+\textbf{Substitution:}
+\[U_{g,lower} = (500 \text{ kg})(9.8 \text{ m/s}^2)(15 \text{ m})\]
+
+\[U_{g,lower} = (500)(9.8)(15) = 73{,}500 \text{ J}\]
+
+\[\boxed{U_{g,lower} = 73.5 \text{ kJ}}\]
+
+\textbf{(c) Change in potential energy:}
+
+\textbf{Formula:}
+\[\Delta U_g = U_{g,final} - U_{g,initial} = U_{g,lower} - U_{g,top}\]
+
+\textbf{Substitution:}
+\[\Delta U_g = 73{,}500 \text{ J} - 196{,}000 \text{ J}\]
+
+\[\boxed{\Delta U_g = -122{,}500 \text{ J} = -122.5 \text{ kJ}}\]
+
+\textbf{(d) Where does the lost potential energy go?}
+
+By conservation of energy, the decrease in gravitational potential energy must equal the increase in other forms of energy.
+
+If the track is frictionless:
+\[\Delta K = -\Delta U_g = +122.5 \text{ kJ}\]
+
+All the lost potential energy converts to kinetic energy.
+
+If there is friction, some energy goes to thermal energy:
+\[\Delta K + \Delta E_{th} = -\Delta U_g\]
+
+\[\boxed{\text{The energy converts to kinetic energy (and thermal energy if friction is present).}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution D3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Spring constant: $k = 200$ N/m
+    \item Compression: $x = 0.15$ m
+\end{itemize}
+
+\textbf{(a) Elastic potential energy stored:}
+
+\textbf{Formula:}
+\[U_s = \frac{1}{2}kx^2\]
+
+\textbf{Substitution:}
+\[U_s = \frac{1}{2}(200 \text{ N/m})(0.15 \text{ m})^2\]
+
+\[U_s = \frac{1}{2}(200)(0.0225)\]
+
+\[U_s = (100)(0.0225) = 2.25 \text{ J}\]
+
+\[\boxed{U_s = 2.25 \text{ J}}\]
+
+\textbf{(b) Energy stored if compression is doubled:}
+
+New compression: $x_{new} = 2 \times 0.15 = 0.30$ m
+
+\textbf{Substitution:}
+\[U_{s,new} = \frac{1}{2}(200)(0.30)^2\]
+
+\[U_{s,new} = \frac{1}{2}(200)(0.09) = (100)(0.09) = 9.0 \text{ J}\]
+
+\[\boxed{U_{s,new} = 9.0 \text{ J}}\]
+
+\textbf{(c) Factor by which energy increases:}
+
+\[\frac{U_{s,new}}{U_s} = \frac{9.0 \text{ J}}{2.25 \text{ J}} = 4\]
+
+\[\boxed{\text{The energy increases by a factor of 4}}\]
+
+\textbf{Explanation:} Since $U_s \propto x^2$, doubling the compression increases the stored energy by a factor of $2^2 = 4$. This is the key characteristic of elastic potential energy---it depends on the \textit{square} of the displacement.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution D4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 4.0$ kg
+    \item Incline angle: $\theta = 25°$
+    \item Distance along incline: $d = 6.0$ m
+    \item Reference: bottom of incline
+\end{itemize}
+
+\textbf{(a) Height gained:}
+
+The vertical height gained when traveling distance $d$ along an incline at angle $\theta$:
+
+\textbf{Formula:}
+\[h = d\sin\theta\]
+
+\textbf{Substitution:}
+\[h = (6.0 \text{ m})\sin(25°)\]
+
+\[h = (6.0)(0.423) = 2.54 \text{ m}\]
+
+\[\boxed{h = 2.54 \text{ m}}\]
+
+\textbf{(b) Change in gravitational potential energy:}
+
+\textbf{Formula:}
+\[\Delta U_g = mgh\]
+
+\textbf{Substitution:}
+\[\Delta U_g = (4.0 \text{ kg})(9.8 \text{ m/s}^2)(2.54 \text{ m})\]
+
+\[\Delta U_g = (4.0)(9.8)(2.54) = 99.6 \text{ J}\]
+
+\[\boxed{\Delta U_g = 99.6 \text{ J}}\]
+
+\textbf{(c) Relationship to work done by gravity:}
+
+The work done by gravity is:
+\[W_{gravity} = -\Delta U_g\]
+
+\textbf{Substitution:}
+\[W_{gravity} = -99.6 \text{ J}\]
+
+\[\boxed{W_{gravity} = -99.6 \text{ J}}\]
+
+\textbf{Verification:} We can also calculate directly:
+\[W_{gravity} = -mgd\sin\theta = -(4.0)(9.8)(6.0)\sin(25°) = -99.6 \text{ J} \checkmark\]
+
+\textbf{Interpretation:} The work done by gravity is the negative of the change in gravitational potential energy. When an object moves up (increasing $U_g$), gravity does negative work. When an object moves down (decreasing $U_g$), gravity does positive work.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution D5.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Spring constant: $k = 500$ N/m
+    \item Initial compression: $x_i = 0.20$ m
+    \item Final compression: $x_f = 0.08$ m
+\end{itemize}
+
+\textbf{(a) Initial elastic potential energy:}
+
+\textbf{Formula:}
+\[U_{s,i} = \frac{1}{2}kx_i^2\]
+
+\textbf{Substitution:}
+\[U_{s,i} = \frac{1}{2}(500 \text{ N/m})(0.20 \text{ m})^2\]
+
+\[U_{s,i} = \frac{1}{2}(500)(0.04) = (250)(0.04) = 10.0 \text{ J}\]
+
+\[\boxed{U_{s,i} = 10.0 \text{ J}}\]
+
+\textbf{(b) Final elastic potential energy:}
+
+\textbf{Substitution:}
+\[U_{s,f} = \frac{1}{2}(500)(0.08)^2\]
+
+\[U_{s,f} = \frac{1}{2}(500)(0.0064) = (250)(0.0064) = 1.6 \text{ J}\]
+
+\[\boxed{U_{s,f} = 1.6 \text{ J}}\]
+
+\textbf{(c) Work done by the spring:}
+
+The work done by the spring force equals the negative of the change in spring potential energy:
+
+\textbf{Formula:}
+\[W_{spring} = -\Delta U_s = -(U_{s,f} - U_{s,i}) = U_{s,i} - U_{s,f}\]
+
+\textbf{Substitution:}
+\[W_{spring} = 10.0 \text{ J} - 1.6 \text{ J}\]
+
+\[\boxed{W_{spring} = 8.4 \text{ J}}\]
+
+\textbf{Interpretation:} The spring does positive work as it expands (releases compression). This released energy can be converted to kinetic energy of an object pushed by the spring.
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART E
+% ================================================================
+
+\section{Solutions: Part E --- Thermal Energy}
+
+\begin{solution}
+\textbf{Solution E1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 8.0$ kg
+    \item Initial speed: $v_i = 5.0$ m/s
+    \item Final speed: $v_f = 0$ (comes to rest)
+    \item Coefficient of kinetic friction: $\mu_k = 0.30$
+\end{itemize}
+
+\textbf{(a) Initial kinetic energy:}
+
+\textbf{Formula:}
+\[K_i = \frac{1}{2}mv_i^2\]
+
+\textbf{Substitution:}
+\[K_i = \frac{1}{2}(8.0 \text{ kg})(5.0 \text{ m/s})^2\]
+
+\[K_i = \frac{1}{2}(8.0)(25) = (4.0)(25) = 100 \text{ J}\]
+
+\[\boxed{K_i = 100 \text{ J}}\]
+
+\textbf{(b) Thermal energy generated:}
+
+Since the block comes to rest on a level surface, all kinetic energy is converted to thermal energy:
+
+\[\Delta E_{th} = K_i - K_f = 100 \text{ J} - 0 = 100 \text{ J}\]
+
+\[\boxed{\Delta E_{th} = 100 \text{ J}}\]
+
+\textbf{(c) Stopping distance:}
+
+\textbf{Method 1: Using energy}
+
+The thermal energy generated equals the work done against friction:
+\[\Delta E_{th} = f_k \cdot d = \mu_k mg \cdot d\]
+
+\textbf{Solving for d:}
+\[d = \frac{\Delta E_{th}}{\mu_k mg}\]
+
+\textbf{Substitution:}
+\[d = \frac{100 \text{ J}}{(0.30)(8.0 \text{ kg})(9.8 \text{ m/s}^2)}\]
+
+\[d = \frac{100}{(0.30)(8.0)(9.8)} = \frac{100}{23.52} = 4.25 \text{ m}\]
+
+\[\boxed{d = 4.25 \text{ m}}\]
+
+\textbf{Method 2: Using kinematics (verification)}
+
+Friction force: $f_k = \mu_k mg = (0.30)(8.0)(9.8) = 23.52$ N
+
+Acceleration: $a = -\frac{f_k}{m} = -\frac{23.52}{8.0} = -2.94$ m/s²
+
+Using $v_f^2 = v_i^2 + 2ad$:
+\[0 = (5.0)^2 + 2(-2.94)d\]
+\[d = \frac{25}{5.88} = 4.25 \text{ m} \checkmark\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution E2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 1500$ kg
+    \item Initial speed: $v_i = 20$ m/s
+    \item Final speed: $v_f = 0$
+    \item Stopping distance: $d = 50$ m
+\end{itemize}
+
+\textbf{(a) Thermal energy generated:}
+
+All kinetic energy converts to thermal energy:
+
+\textbf{Formula:}
+\[\Delta E_{th} = K_i = \frac{1}{2}mv_i^2\]
+
+\textbf{Substitution:}
+\[\Delta E_{th} = \frac{1}{2}(1500 \text{ kg})(20 \text{ m/s})^2\]
+
+\[\Delta E_{th} = \frac{1}{2}(1500)(400) = (750)(400) = 300{,}000 \text{ J}\]
+
+\[\boxed{\Delta E_{th} = 300 \text{ kJ}}\]
+
+\textbf{(b) Friction force:}
+
+\textbf{Formula:}
+\[\Delta E_{th} = f_k \cdot d\]
+
+\textbf{Solving for $f_k$:}
+\[f_k = \frac{\Delta E_{th}}{d}\]
+
+\textbf{Substitution:}
+\[f_k = \frac{300{,}000 \text{ J}}{50 \text{ m}} = 6{,}000 \text{ N}\]
+
+\[\boxed{f_k = 6{,}000 \text{ N} = 6.0 \text{ kN}}\]
+
+\textbf{(c) Coefficient of kinetic friction:}
+
+On a level road, the normal force equals the weight:
+\[N = mg = (1500)(9.8) = 14{,}700 \text{ N}\]
+
+\textbf{Formula:}
+\[f_k = \mu_k N\]
+
+\textbf{Solving for $\mu_k$:}
+\[\mu_k = \frac{f_k}{N} = \frac{6{,}000}{14{,}700} = 0.408\]
+
+\[\boxed{\mu_k \approx 0.41}\]
+
+This is a reasonable value for rubber tires on dry pavement (typical range: 0.4--0.8).
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution E3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 50$ kg
+    \item Incline angle: $\theta = 15°$
+    \item Distance: $d = 20$ m
+    \item Coefficient of kinetic friction: $\mu_k = 0.20$
+    \item Motion: slides down at constant velocity
+\end{itemize}
+
+\textbf{(a) Decrease in gravitational potential energy:}
+
+\textbf{Height dropped:}
+\[h = d\sin\theta = (20)\sin(15°) = (20)(0.259) = 5.18 \text{ m}\]
+
+\textbf{Change in gravitational PE:}
+\[\Delta U_g = -mgh = -(50)(9.8)(5.18) = -2{,}538 \text{ J}\]
+
+The decrease (magnitude) is:
+\[\boxed{|\Delta U_g| = 2{,}538 \text{ J} \approx 2.54 \text{ kJ}}\]
+
+\textbf{(b) Change in kinetic energy:}
+
+Since the skier moves at \textbf{constant velocity}, there is no change in kinetic energy:
+
+\[\boxed{\Delta K = 0}\]
+
+\textbf{(c) Thermal energy generated:}
+
+Using conservation of energy:
+\[\Delta K + \Delta U_g + \Delta E_{th} = 0\]
+
+\[0 + (-2{,}538) + \Delta E_{th} = 0\]
+
+\[\boxed{\Delta E_{th} = 2{,}538 \text{ J} \approx 2.54 \text{ kJ}}\]
+
+\textbf{Interpretation:} All the gravitational potential energy released is converted to thermal energy due to friction. None goes to kinetic energy because the speed stays constant.
+
+\textbf{Verification using friction force:}
+
+Normal force: $N = mg\cos\theta = (50)(9.8)\cos(15°) = (490)(0.966) = 473.3$ N
+
+Friction force: $f_k = \mu_k N = (0.20)(473.3) = 94.7$ N
+
+Thermal energy: $\Delta E_{th} = f_k \cdot d = (94.7)(20) = 1{,}894$ J
+
+\textbf{Note:} The discrepancy arises because at constant velocity, we need $f_k = mg\sin\theta$:
+\[f_k = (50)(9.8)\sin(15°) = (490)(0.259) = 126.9 \text{ N}\]
+
+This gives $\mu_k = \frac{126.9}{473.3} = 0.268$, not 0.20. 
+
+The problem as stated is slightly inconsistent. Using the energy approach with the given height drop gives $\Delta E_{th} = 2{,}538$ J.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution E4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Car A: $m_A = 1000$ kg, $v_A = 20$ m/s
+    \item Car B: $m_B = 2000$ kg, $v_B = 20$ m/s
+    \item Same coefficient of friction: $\mu_k$
+\end{itemize}
+
+\textbf{(a) Ratio of kinetic energies:}
+
+\textbf{Formula:}
+\[K = \frac{1}{2}mv^2\]
+
+\[K_A = \frac{1}{2}(1000)(20)^2 = \frac{1}{2}(1000)(400) = 200{,}000 \text{ J}\]
+
+\[K_B = \frac{1}{2}(2000)(20)^2 = \frac{1}{2}(2000)(400) = 400{,}000 \text{ J}\]
+
+\[\frac{K_A}{K_B} = \frac{200{,}000}{400{,}000} = \frac{1}{2}\]
+
+\[\boxed{\frac{K_A}{K_B} = \frac{1}{2}}\]
+
+\textbf{(b) Ratio of friction forces:}
+
+On level ground: $N = mg$, so $f_k = \mu_k mg$
+
+\[\frac{f_{k,A}}{f_{k,B}} = \frac{\mu_k m_A g}{\mu_k m_B g} = \frac{m_A}{m_B} = \frac{1000}{2000} = \frac{1}{2}\]
+
+\[\boxed{\frac{f_{k,A}}{f_{k,B}} = \frac{1}{2}}\]
+
+\textbf{(c) Ratio of stopping distances:}
+
+Using $\Delta E_{th} = K_i$ and $\Delta E_{th} = f_k \cdot d$:
+
+\[
+d = \frac{K_i}{f_k} = \frac{\frac{1}{2}mv^2}{\mu_k mg} = \frac{v^2}{2\mu_k g}\]
+
+Notice that mass cancels! The stopping distance depends only on speed and friction coefficient, not mass.
+
+\[d_A = \frac{v_A^2}{2\mu_k g} = \frac{(20)^2}{2\mu_k g}\]
+
+\[d_B = \frac{v_B^2}{2\mu_k g} = \frac{(20)^2}{2\mu_k g}\]
+
+Since both cars have the same speed and same $\mu_k$:
+
+\[\frac{d_A}{d_B} = 1\]
+
+\[\boxed{\frac{d_A}{d_B} = 1 \text{ (same stopping distance)}}\]
+
+\textbf{(d) Physical explanation:}
+
+This result seems counterintuitive at first—shouldn't the heavier car be harder to stop?
+
+The key insight is that while the heavier car has more kinetic energy to dissipate, it also has a proportionally larger friction force (because $f_k = \mu_k mg$). These two effects exactly cancel:
+
+\begin{itemize}
+    \item Car B has \textbf{twice the kinetic energy} as Car A
+    \item Car B also has \textbf{twice the friction force} as Car A
+    \item Therefore, Car B dissipates energy twice as fast
+    \item Result: Both cars stop in the same distance
+\end{itemize}
+
+\textbf{Mathematical proof:}
+\[d = \frac{K}{f_k} = \frac{\frac{1}{2}mv^2}{\mu_k mg} = \frac{v^2}{2\mu_k g}\]
+
+Mass $m$ appears in both numerator and denominator and cancels completely. This is why stopping distance on a level road depends only on initial speed and road conditions, not vehicle mass.
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART F
+% ================================================================
+
+\section{Solutions: Part F --- Springs and Elastic Potential Energy}
+
+\begin{solution}
+\textbf{Solution F1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Spring constant: $k = 200$ N/m
+    \item Compression: $x = 0.15$ m
+\end{itemize}
+
+\textbf{(a) Elastic potential energy stored:}
+
+\textbf{Formula:}
+\[U_s = \frac{1}{2}kx^2\]
+
+\textbf{Substitution:}
+\[U_s = \frac{1}{2}(200 \text{ N/m})(0.15 \text{ m})^2\]
+
+\[U_s = \frac{1}{2}(200)(0.0225)\]
+
+\[U_s = (100)(0.0225)\]
+
+\[\boxed{U_s = 2.25 \text{ J}}\]
+
+\textbf{(b) Work required to compress the spring:}
+
+The work done by an external force to compress the spring equals the increase in elastic potential energy:
+
+\[W_{external} = \Delta U_s = U_{s,final} - U_{s,initial}\]
+
+Since the spring starts at its natural length, $U_{s,initial} = 0$:
+
+\[W_{external} = 2.25 - 0\]
+
+\[\boxed{W_{external} = 2.25 \text{ J}}\]
+
+\textbf{(c) Work done by the spring force during compression:}
+
+The spring force opposes compression, so it does negative work:
+
+\[W_{spring} = -\Delta U_s = -2.25 \text{ J}\]
+
+\[\boxed{W_{spring} = -2.25 \text{ J}}\]
+
+\textbf{Verification:} $W_{external} + W_{spring} = 2.25 + (-2.25) = 0$, which is correct since the block has no kinetic energy change if compressed slowly.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution F2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 0.50$ kg
+    \item Spring constant: $k = 800$ N/m
+    \item Initial compression: $x_i = 0.10$ m
+    \item Horizontal frictionless surface
+\end{itemize}
+
+\textbf{(a) Elastic potential energy initially stored:}
+
+\textbf{Formula:}
+\[U_{s,i} = \frac{1}{2}kx_i^2\]
+
+\textbf{Substitution:}
+\[U_{s,i} = \frac{1}{2}(800)(0.10)^2 = \frac{1}{2}(800)(0.01) = 4.0 \text{ J}\]
+
+\[\boxed{U_{s,i} = 4.0 \text{ J}}\]
+
+\textbf{(b) Speed when spring reaches natural length:}
+
+At natural length, $x = 0$, so $U_{s,f} = 0$. All elastic potential energy converts to kinetic energy.
+
+\textbf{Conservation of energy:}
+\[K_i + U_{s,i} = K_f + U_{s,f}\]
+
+\[0 + 4.0 = \frac{1}{2}mv_f^2 + 0\]
+
+\textbf{Solving for $v_f$:}
+\[v_f = \sqrt{\frac{2(4.0)}{0.50}} = \sqrt{\frac{8.0}{0.50}} = \sqrt{16}\]
+
+\[\boxed{v_f = 4.0 \text{ m/s}}\]
+
+\textbf{(c) Speed when compression is 5.0 cm:}
+
+At $x = 0.05$ m:
+\[U_{s} = \frac{1}{2}(800)(0.05)^2 = \frac{1}{2}(800)(0.0025) = 1.0 \text{ J}\]
+
+\textbf{Conservation of energy:}
+\[K_i + U_{s,i} = K + U_s\]
+
+\[0 + 4.0 = \frac{1}{2}mv^2 + 1.0\]
+
+\[\frac{1}{2}(0.50)v^2 = 3.0\]
+
+\[v = \sqrt{\frac{2(3.0)}{0.50}} = \sqrt{12}\]
+
+\[\boxed{v = 3.46 \text{ m/s}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution F3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 2.0$ kg
+    \item Spring constant: $k = 500$ N/m
+    \item Initial speed: $v_i = 3.0$ m/s
+    \item Horizontal frictionless surface
+\end{itemize}
+
+\textbf{(a) Maximum compression of the spring:}
+
+At maximum compression, the block momentarily stops ($v = 0$), so all kinetic energy is converted to elastic potential energy.
+
+\textbf{Initial kinetic energy:}
+\[K_i = \frac{1}{2}mv_i^2 = \frac{1}{2}(2.0)(3.0)^2 = \frac{1}{2}(2.0)(9.0) = 9.0 \text{ J}\]
+
+\textbf{Conservation of energy:}
+\[K_i + U_{s,i} = K_f + U_{s,f}\]
+
+\[9.0 + 0 = 0 + \frac{1}{2}kx_{max}^2\]
+
+\textbf{Solving for $x_{max}$:}
+\[x_{max} = \sqrt{\frac{2K_i}{k}} = \sqrt{\frac{2(9.0)}{500}} = \sqrt{\frac{18}{500}} = \sqrt{0.036}\]
+
+\[\boxed{x_{max} = 0.19 \text{ m} = 19 \text{ cm}}\]
+
+\textbf{(b) Speed when compression is half maximum:}
+
+When $x = \frac{x_{max}}{2} = 0.095$ m:
+
+\[U_s = \frac{1}{2}k\left(\frac{x_{max}}{2}\right)^2 = \frac{1}{2}k \cdot \frac{x_{max}^2}{4} = \frac{1}{4}\left(\frac{1}{2}kx_{max}^2\right) = \frac{1}{4}K_i = \frac{9.0}{4} = 2.25 \text{ J}\]
+
+\textbf{Conservation of energy:}
+\[K_i = K + U_s\]
+
+\[9.0 = \frac{1}{2}(2.0)v^2 + 2.25\]
+
+\[v^2 = \frac{2(9.0 - 2.25)}{2.0} = \frac{2(6.75)}{2.0} = 6.75\]
+
+\[\boxed{v = 2.60 \text{ m/s}}\]
+
+\textbf{Note:} The speed at half compression is NOT half the initial speed! This is because energy depends on $v^2$ and $x^2$.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution F4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 0.25$ kg
+    \item Spring constant: $k = 400$ N/m
+    \item Initial compression: $x_i = 0.08$ m
+    \item Coefficient of kinetic friction: $\mu_k = 0.10$
+\end{itemize}
+
+\textbf{(a) Initial elastic potential energy:}
+
+\[U_{s,i} = \frac{1}{2}kx_i^2 = \frac{1}{2}(400)(0.08)^2 = \frac{1}{2}(400)(0.0064) = 1.28 \text{ J}\]
+
+\[\boxed{U_{s,i} = 1.28 \text{ J}}\]
+
+\textbf{(b) Speed when spring reaches natural length:}
+
+The block travels distance $d = x_i = 0.08$ m while in contact with the spring.
+
+\textbf{Friction force:}
+\[f_k = \mu_k mg = (0.10)(0.25)(9.8) = 0.245 \text{ N}\]
+
+\textbf{Thermal energy generated:}
+\[\Delta E_{th} = f_k \cdot d = (0.245)(0.08) = 0.0196 \text{ J}\]
+
+\textbf{Energy conservation:}
+\[U_{s,i} = K_f + \Delta E_{th}\]
+
+\[1.28 = \frac{1}{2}(0.25)v^2 + 0.0196\]
+
+\[\frac{1}{2}(0.25)v^2 = 1.28 - 0.0196 = 1.26 \text{ J}\]
+
+\[v = \sqrt{\frac{2(1.26)}{0.25}} = \sqrt{10.1}\]
+
+\[\boxed{v = 3.18 \text{ m/s}}\]
+
+\textbf{(c) How far does the block slide after leaving the spring?}
+
+After leaving the spring, the block has kinetic energy $K = 1.26$ J and friction continues to act.
+
+\textbf{Using energy conservation:}
+\[K = \Delta E_{th} = f_k \cdot d_{slide}\]
+
+\[d_{slide} = \frac{K}{f_k} = \frac{1.26}{0.245}\]
+
+\[\boxed{d_{slide} = 5.14 \text{ m}}\]
+
+\textbf{(d) Total distance traveled:}
+
+\[d_{total} = x_i + d_{slide} = 0.08 + 5.14\]
+
+\[\boxed{d_{total} = 5.22 \text{ m}}\]
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART G
+% ================================================================
+
+\section{Solutions: Part G --- Conservation of Mechanical Energy}
+
+\begin{solution}
+\textbf{Solution G1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 0.50$ kg
+    \item Initial height: $h_i = 2.0$ m
+    \item Falls freely from rest
+\end{itemize}
+
+\textbf{(a) Speed just before hitting ground using energy:}
+
+\textbf{Reference level:} Ground ($y = 0$)
+
+\textbf{Initial state:} $K_i = 0$, $U_{g,i} = mgh_i$
+
+\textbf{Final state:} $K_f = \frac{1}{2}mv_f^2$, $U_{g,f} = 0$
+
+\textbf{Conservation of mechanical energy:}
+\[K_i + U_{g,i} = K_f + U_{g,f}\]
+
+\[0 + mgh_i = \frac{1}{2}mv_f^2 + 0\]
+
+\textbf{Solving for $v_f$:}
+\[v_f = \sqrt{2gh_i}\]
+
+\textbf{Substitution:}
+\[v_f = \sqrt{2(9.8)(2.0)} = \sqrt{39.2}\]
+
+\[\boxed{v_f = 6.26 \text{ m/s}}\]
+
+\textbf{(b) Verify using kinematics:}
+
+Using $v^2 = v_0^2 + 2a\Delta y$ with $v_0 = 0$, $a = g = 9.8$ m/s², $\Delta y = 2.0$ m:
+
+\[v^2 = 0 + 2(9.8)(2.0) = 39.2\]
+
+\[v = \sqrt{39.2} = 6.26 \text{ m/s} \checkmark\]
+
+\textbf{Both methods give the same answer}, confirming the equivalence of energy and kinematic approaches for constant acceleration.
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution G2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Initial speed: $v_i = 15$ m/s (upward)
+    \item Find maximum height
+\end{itemize}
+
+\textbf{Reference level:} Launch point ($y = 0$)
+
+\textbf{Initial state:} $K_i = \frac{1}{2}mv_i^2$, $U_{g,i} = 0$
+
+\textbf{Final state (at max height):} $K_f = 0$ (momentarily at rest), $U_{g,f} = mgh_{max}$
+
+\textbf{Conservation of mechanical energy:}
+\[K_i + U_{g,i} = K_f + U_{g,f}\]
+
+\[\frac{1}{2}mv_i^2 + 0 = 0 + mgh_{max}\]
+
+\textbf{Solving for $h_{max}$:}
+\[h_{max} = \frac{v_i^2}{2g}\]
+
+\textbf{Substitution:}
+\[h_{max} = \frac{(15)^2}{2(9.8)} = \frac{225}{19.6}\]
+
+\[\boxed{h_{max} = 11.5 \text{ m}}\]
+
+\textbf{Note:} Mass cancels out—all objects thrown upward with the same initial speed reach the same maximum height (neglecting air resistance).
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution G3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 5.0$ kg
+    \item Pendulum length: $L = 2.0$ m
+    \item Released from horizontal position
+\end{itemize}
+
+\textbf{(a) Speed at lowest point:}
+
+\textbf{Reference level:} Lowest point of swing
+
+When horizontal, the ball is at height $h = L = 2.0$ m above the lowest point.
+
+\textbf{Initial state:} $K_i = 0$, $U_{g,i} = mgL$
+
+\textbf{Final state:} $K_f = \frac{1}{2}mv_f^2$, $U_{g,f} = 0$
+
+\textbf{Conservation of energy:}
+\[mgL = \frac{1}{2}mv_f^2\]
+
+\[v_f = \sqrt{2gL} = \sqrt{2(9.8)(2.0)} = \sqrt{39.2}\]
+
+\[\boxed{v_f = 6.26 \text{ m/s}}\]
+
+\textbf{(b) Tension in string at lowest point:}
+
+At the lowest point, the ball moves in a circular arc, so it has centripetal acceleration:
+
+\[a_c = \frac{v^2}{L}\]
+
+Applying Newton's second law in the radial direction (positive toward center, i.e., upward):
+
+\[T - mg = m\frac{v^2}{L}\]
+
+\[T = mg + m\frac{v^2}{L} = m\left(g + \frac{v^2}{L}\right)\]
+
+\textbf{Substitution:}
+\[T = (5.0)\left(9.8 + \frac{39.2}{2.0}\right) = (5.0)(9.8 + 19.6) = (5.0)(29.4)\]
+
+\[\boxed{T = 147 \text{ N}}\]
+
+\textbf{Note:} The tension is 3 times the weight! This is because the string must support the weight AND provide centripetal force.
+
+\textbf{(c) Speed when string makes 30° with vertical:}
+
+At angle $\theta = 30°$, the height above the lowest point is:
+\[h = L - L\cos\theta = L(1 - \cos\theta) = 2.0(1 - \cos 30°) = 2.0(1 - 0.866) = 0.268 \text{ m}\]
+
+\textbf{Conservation of energy:}
+\[mgL = \frac{1}{2}mv^2 + mgh\]
+
+\[v = \sqrt{2g(L - h)} = \sqrt{2gL\cos\theta} = \sqrt{2(9.8)(2.0)(0.866)}\]
+
+\[v = \sqrt{33.9}\]
+
+\[\boxed{v = 5.83 \text{ m/s}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution G4.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 2.0$ kg
+    \item Incline angle: $\theta = 40°$
+    \item Length of incline: $L = 5.0$ m
+    \item Frictionless surface
+    \item Starts from rest at top
+\end{itemize}
+
+\textbf{(a) Height of incline:}
+
+\[h = L\sin\theta = (5.0)\sin(40°) = (5.0)(0.643)\]
+
+\[\boxed{h = 3.21 \text{ m}}\]
+
+\textbf{(b) Speed at bottom using energy:}
+
+\textbf{Conservation of energy:}
+\[mgh = \frac{1}{2}mv^2\]
+
+\[v = \sqrt{2gh} = \sqrt{2(9.8)(3.21)} = \sqrt{62.9}\]
+
+\[\boxed{v = 7.93 \text{ m/s}}\]
+
+\textbf{(c) Compare with kinematics:}
+
+On a frictionless incline, acceleration is $a = g\sin\theta = (9.8)\sin(40°) = 6.30$ m/s².
+
+Using $v^2 = v_0^2 + 2aL$:
+\[v^2 = 0 + 2(6.30)(5.0) = 63.0\]
+\[v = 7.94 \text{ m/s} \checkmark\]
+
+\textbf{Advantage of energy method:} We didn't need to know the incline angle or length separately—only the height mattered!
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution G5.}
+
+\textbf{Given:}
+\begin{itemize
+}
+    \item Mass: $m = 0.50$ kg
+    \item Spring constant: $k = 200$ N/m
+    \item Compression: $x = 0.15$ m
+    \item Horizontal surface is frictionless
+\end{itemize}
+
+\textbf{(a) Elastic potential energy stored:}
+
+\textbf{Formula:}
+\[U_s = \frac{1}{2}kx^2\]
+
+\textbf{Substitution:}
+\[U_s = \frac{1}{2}(200)(0.15)^2 = \frac{1}{2}(200)(0.0225) = 2.25 \text{ J}\]
+
+\[\boxed{U_s = 2.25 \text{ J}}\]
+
+\textbf{(b) Speed when leaving spring:}
+
+All elastic potential energy converts to kinetic energy:
+
+\[\frac{1}{2}kx^2 = \frac{1}{2}mv^2\]
+
+\[v = \sqrt{\frac{kx^2}{m}} = x\sqrt{\frac{k}{m}} = (0.15)\sqrt{\frac{200}{0.50}}\]
+
+\[v = (0.15)\sqrt{400} = (0.15)(20)\]
+
+\[\boxed{v = 3.0 \text{ m/s}}\]
+
+\textbf{(c) Maximum height on frictionless ramp:}
+
+After leaving the spring, the block's kinetic energy converts to gravitational potential energy:
+
+\[\frac{1}{2}mv^2 = mgh_{max}\]
+
+\[h_{max} = \frac{v^2}{2g} = \frac{(3.0)^2}{2(9.8)} = \frac{9.0}{19.6}\]
+
+\[\boxed{h_{max} = 0.459 \text{ m} = 45.9 \text{ cm}}\]
+
+\textbf{Alternative using total energy:}
+\[\frac{1}{2}kx^2 = mgh_{max}\]
+\[h_{max} = \frac{kx^2}{2mg} = \frac{(200)(0.0225)}{2(0.50)(9.8)} = \frac{4.5}{9.8} = 0.459 \text{ m} \checkmark\]
+\end{solution}
+
+\newpage
+
+% ================================================================
+% SOLUTIONS PART H
+% ================================================================
+
+\section{Solutions: Part H --- Advanced Problem Solving}
+
+\begin{solution}
+\textbf{Solution H1.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 4.0$ kg
+    \item Initial speed: $v_i = 8.0$ m/s
+    \item Incline angle: $\theta = 25°$
+    \item Coefficient of kinetic friction: $\mu_k = 0.30$
+\end{itemize}
+
+\textbf{(a) Maximum distance up the incline:}
+
+Let $d$ be the distance traveled up the incline. The height gained is $h = d\sin\theta$.
+
+\textbf{Energy conservation with friction:}
+\[K_i = U_{g,f} + \Delta E_{th}\]
+
+\[\frac{1}{2}mv_i^2 = mgh + f_k d\]
+
+The friction force is:
+\[f_k = \mu_k N = \mu_k mg\cos\theta\]
+
+Substituting:
+\[\frac{1}{2}mv_i^2 = mgd\sin\theta + \mu_k mg\cos\theta \cdot d\]
+
+\[\frac{1}{2}v_i^2 = gd(\sin\theta + \mu_k\cos\theta)\]
+
+\[d = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}\]
+
+\textbf{Substitution:}
+\[\sin(25°) = 0.423, \quad \cos(25°) = 0.906\]
+
+\[d = \frac{(8.0)^2}{2(9.8)(0.423 + 0.30 \times 0.906)}\]
+
+\[d = \frac{64}{2(9.8)(0.423 + 0.272)} = \frac{64}{2(9.8)(0.695)}\]
+
+\[d = \frac{64}{13.62}\]
+
+\[\boxed{d = 4.70 \text{ m}}\]
+
+\textbf{(b) Speed when returning to starting point:}
+
+On the way down, friction still opposes motion (now pointing up the incline), so more energy is lost.
+
+\textbf{Total energy dissipated (up and down):}
+\[\Delta E_{th,total} = f_k \cdot (2d) = \mu_k mg\cos\theta \cdot 2d\]
+
+\textbf{Energy equation:}
+\[\frac{1}{2}mv_i^2 = \frac{1}{2}mv_f^2 + \Delta E_{th,total}\]
+
+\[\frac{1}{2}v_i^2 = \frac{1}{2}v_f^2 + \mu_k g\cos\theta \cdot 2d\]
+
+\[v_f^2 = v_i^2 - 4\mu_k gd\cos\theta\]
+
+\textbf{Substitution:}
+\[v_f^2 = (8.0)^2 - 4(0.30)(9.8)(4.70)(0.906)\]
+
+\[v_f^2 = 64 - 4(0.30)(9.8)(4.70)(0.906)\]
+
+\[v_f^2 = 64 - 50.0 = 14.0\]
+
+\[v_f = \sqrt{14.0}\]
+
+\[\boxed{v_f = 3.74 \text{ m/s}}\]
+
+\textbf{(c) Total energy lost to friction:}
+
+\[\Delta E_{th,total} = \frac{1}{2}m(v_i^2 - v_f^2) = \frac{1}{2}(4.0)(64 - 14) = \frac{1}{2}(4.0)(50)\]
+
+\[\boxed{\Delta E_{th,total} = 100 \text{ J}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution H2.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 0.25$ kg
+    \item Spring constant: $k = 400$ N/m
+    \item Compression: $x = 0.10$ m
+    \item Incline angle: $\theta = 35°$
+    \item Coefficient of kinetic friction: $\mu_k = 0.20$
+\end{itemize}
+
+\textbf{(a) Initial elastic potential energy:}
+
+\[U_s = \frac{1}{2}kx^2 = \frac{1}{2}(400)(0.10)^2 = \frac{1}{2}(400)(0.01)\]
+
+\[\boxed{U_s = 2.0 \text{ J}}\]
+
+\textbf{(b) Maximum distance up the incline:}
+
+Let $d$ be the distance traveled. The spring energy converts to gravitational potential energy and thermal energy:
+
+\[\frac{1}{2}kx^2 = mgd\sin\theta + \mu_k mg\cos\theta \cdot d\]
+
+\[U_s = mgd(\sin\theta + \mu_k\cos\theta)\]
+
+\[d = \frac{U_s}{mg(\sin\theta + \mu_k\cos\theta)}\]
+
+\textbf{Substitution:}
+\[\sin(35°) = 0.574, \quad \cos(35°) = 0.819\]
+
+\[d = \frac{2.0}{(0.25)(9.8)(0.574 + 0.20 \times 0.819)}\]
+
+\[d = \frac{2.0}{(2.45)(0.574 + 0.164)} = \frac{2.0}{(2.45)(0.738)}\]
+
+\[d = \frac{2.0}{1.808}\]
+
+\[\boxed{d = 1.11 \text{ m}}\]
+
+\textbf{(c) Does the block return to the spring?}
+
+For the block to slide back down, the gravitational component must exceed the maximum static friction:
+
+\[mg\sin\theta > \mu_s mg\cos\theta\]
+
+\[\tan\theta > \mu_s\]
+
+Assuming $\mu_s \approx \mu_k = 0.20$:
+\[\tan(35°) = 0.700 > 0.20 \checkmark\]
+
+\textbf{Yes, the block will slide back down.}
+
+\textbf{(d) Speed when returning to spring:}
+
+On the way down, gravitational PE converts to KE and thermal energy:
+
+\[mgd\sin\theta = \frac{1}{2}mv_f^2 + \mu_k mg\cos\theta \cdot d\]
+
+\[v_f^2 = 2gd(\sin\theta - \mu_k\cos\theta)\]
+
+\textbf{Substitution:}
+\[v_f^2 = 2(9.8)(1.11)(0.574 - 0.20 \times 0.819)\]
+
+\[v_f^2 = 2(9.8)(1.11)(0.574 - 0.164) = 2(9.8)(1.11)(0.410)\]
+
+\[v_f^2 = 8.91\]
+
+\[\boxed{v_f = 2.98 \text{ m/s}}\]
+\end{solution}
+
+\vspace{0.5cm}
+
+\begin{solution}
+\textbf{Solution H3.}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Mass: $m = 1500$ kg
+    \item Initial speed: $v_i = 25$ m/s
+    \item Distance to obstacle: $D = 50$ m
+    \item Reaction time: $t_r = 0.80$ s
+    \item Braking deceleration: $a = 8.0$ m/s² (magnitude)
+\end{itemize}
+
+\textbf{(a) Distance traveled during reaction time:}
+
+During reaction time, the car travels at constant velocity:
+
+\[d_r = v_i \cdot t_r = (25)(0.80)\]
+
+\[\boxed{d_r = 20 \text{ m}}\]
+
+\textbf{(b) Kinetic energy when braking begins:}
+
+\[K = \frac{1}{2}mv_i^2 = \frac{1}{2}(1500)(25)^2 = \frac{1}{2}(1500)(625)\]
+
+\[\boxed{K = 468{,}750 \text{ J} = 469 \text{ kJ}}\]
+
+\textbf{(c) Stopping distance using energy:}
+
+The work done by braking force equals the kinetic energy:
+
+\[W = F \cdot d_s = ma \cdot d_s\]
+
+\[K = ma \cdot d_s\]
+
+\[d_s = \frac{K}{ma} = \frac{\frac{1}{2}mv^2}{ma} = \frac{v^2}{2a}\]
+
+\textbf{Substitution:}
+\[d_s = \frac{(25)^2}{2(8.0)} = \frac{625}{16}\]
+
+\[\boxed{d_s = 39.1 \text{ m}}\]
+
+\textbf{(d) Does the car stop in time?}
+
+Total distance needed:
+\[d_{total} = d_r + d_s = 20 + 39.1 = 59.1 \text{ m}\]
+
+Distance to obstacle: 50 m
+
+\[59.1 \text{ m} > 50 \text{ m}\]
+
+\[\boxed{\text{No, the car does NOT stop in time. It overshoots by } 9.1 \text{ m.}}\]
+
+\textbf{(e) At 40 m/s:}
+
+Reaction distance:
+\[d_r = (40)(0.80) = 32 \text{ m}\]
+
+Stopping distance:
+\[d_s = \frac{(40)^2}{2(8.0)} = \frac{1600}{16} = 100 \text{ m}\]
+
+Total:
+\[d_{total} = 32 + 100 = 132 \text{ m}\]
+
+\[\boxed{\text{No, at 40 m/s the car would overshoot by } 82 \text{ m.}}\]
+
+\textbf{Key insight:} Doubling the speed quadruples the stopping distance (since $d_s \propto v^2$), making high-speed driving much more dangerous.
+\end{solution}
+
+\vspace{1cm}
+
+\begin{center}
+\rule{0.8\textwidth}{2pt}
+
+\vspace{0.5cm}
+
+{\Large \textbf{End of Problem Set and Solutions}}
+
+\vspace{0.3cm}
+
+{\large Work and Energy --- Physics for Scientists and Engineers}
+
+\vspace{0.5cm}
+
+\rule{0.8\textwidth}{2pt}
+\end{center}
+
+\vspace{1cm}
+
+\section*{Summary of Key Formulas}
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=\textbf{Essential Energy Equations}]
+\begin{align*}
+\textbf{Work:} \quad & W = Fd\cos\theta = \vec{F} \cdot \vec{d} \\[8pt]
+\textbf{Kinetic Energy:} \quad & K = \frac{1}{2}mv^2 \\[8pt]
+\textbf{Work-Energy Theorem:} \quad & W_{net} = \Delta K = K_f - K_i \\[8pt]
+\textbf{Gravitational PE:} \quad & U_g = mgy \\[8pt]
+\textbf{Elastic PE:} \quad & U_s = \frac{1}{2}kx^2 \\[8pt]
+\textbf{Conservation of Energy:} \quad & K_i + U_i + W_{ext} = K_f + U_f + \Delta E_{th} \\[8pt]
+\textbf{Thermal Energy (friction):} \quad & \Delta E_{th} = f_k \cdot d \\[8pt]
+\textbf{Power:} \quad & P = \frac{W}{\Delta t} = \frac{dE}{dt} = Fv\cos\theta
+\end{align*}
+\end{tcolorbox}
+
+\end{document}
