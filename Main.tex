@@ -11,7 +11,6 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{graphicx}
-\usepackage{exercise}
 \usepackage{float}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
@@ -22,6 +21,8 @@
 
 % Page Setup
 \geometry{margin=1in}
+\setlength{\headheight}{13.6pt}
+\addtolength{\topmargin}{-1.6pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{AP Physics: Electric Charges, Forces, and Fields}
@@ -48,6 +49,17 @@
 % Custom Commands
 \newcommand{\vect}[1]{\vec{#1}}
 \newcommand{\unit}[1]{\,\mathrm{#1}}
+
+% Unicode character support
+\DeclareUnicodeCharacter{2713}{\ensuremath{\checkmark}}
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
+
+% Exercise environment
+\newenvironment{exercise}{%
+  \begin{tcolorbox}[colback=orange!5!white, colframe=orange!75!black, title=Practice Problem]
+}{%
+  \end{tcolorbox}
+}
 
 \begin{document}
 
@@ -1316,7 +1328,7 @@ When a conductor reaches electrostatic equilibrium (charges stop moving), severa
 \end{enumerate}
 \end{tcolorbox}
 
-\subsection{Why $E = 0$ Inside a Conductor}
+\subsection{Why \texorpdfstring{$E = 0$}{E = 0} Inside a Conductor}
 
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -5470,8 +5482,7 @@ E = \frac{R^2}{2r}\frac{dB}{dt} = \frac{(0.05)^2}{2(0.08)}(0.02) = \boxed{3.1 \t
     \item Slotting the conductor
 \end{itemize}
 
-\subs
-ection{Inductance}
+\subsection{Inductance}
 
 \subsection{Self-Inductance}
 
