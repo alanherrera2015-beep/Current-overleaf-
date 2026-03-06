@@ -51,6 +51,15 @@
   \end{tcolorbox}%
 }
 
+% Redefine law environment to use a tcolorbox
+\renewenvironment{law}[1][]{%
+  \refstepcounter{law}%
+  \begin{tcolorbox}[colback=orange!5!white, colframe=orange!75!black,
+    title={\textbf{Law \thelaw: #1}}]%
+}{%
+  \end{tcolorbox}%
+}
+
 % 5th Grade Analogy environment
 \newenvironment{analogy}{%
   \begin{tcolorbox}[colback=green!5!white, colframe=green!60!black,
@@ -1070,6 +1079,10 @@ where:
     \item $\epsilon_0 = 8.85 \times 10^{-12}$ C$^2$/(N$\cdot$m$^2$)
 \end{itemize}
 \end{law}
+
+\begin{analogy}
+Imagine you have a balloon that you can stretch around any group of objects. The number of arrows (electric field lines) poking out through the balloon only depends on how much charge is \textit{inside} the balloon --- not on the shape of the balloon or anything outside it. More charge inside means more arrows poking out, just like more candles inside a room means more light shining through the windows!
+\end{analogy}
 
 \begin{tcolorbox}[colback=green!5!white, colframe=green!50!black, title=Key Insights about Gauss's Law]
 \begin{itemize}
