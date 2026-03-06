@@ -42,6 +42,23 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{law}{Law}[section]
 
+% Redefine definition environment to use a tcolorbox
+\renewenvironment{definition}[1][]{%
+  \refstepcounter{definition}%
+  \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black,
+    title={\textbf{Definition \thedefinition: #1}}]%
+}{%
+  \end{tcolorbox}%
+}
+
+% 5th Grade Analogy environment
+\newenvironment{analogy}{%
+  \begin{tcolorbox}[colback=green!5!white, colframe=green!60!black,
+    title={\textbf{\textcolor{green!40!black}{5th Grade Analogy}}}]%
+}{%
+  \end{tcolorbox}%
+}
+
 % TikZ Libraries
 \usetikzlibrary{arrows.meta,patterns,decorations.markings,calc}
 \pgfplotsset{compat=1.18}
@@ -160,6 +177,10 @@ Electric charge is a fundamental property of matter that causes it to experience
 Electric charge is an intrinsic property of matter responsible for electromagnetic interactions. The SI unit of charge is the \textbf{coulomb (C)}.
 \end{definition}
 
+\begin{analogy}
+Think of electric charge like having a special magic sticker. Some stickers are ``+'' and some are ``$-$''. Stickers that are the same type push each other away, but a ``+'' and a ``$-$'' sticker always try to stick together!
+\end{analogy}
+
 \subsection{Fundamental Properties of Charge}
 
 \subsubsection{Quantization of Charge}
@@ -203,9 +224,17 @@ When you rub a balloon on your hair, electrons transfer from your hair to the ba
 A \textbf{conductor} is a material through which electric charge can flow freely. Metals are excellent conductors because they have free electrons that can move throughout the material.
 \end{definition}
 
+\begin{analogy}
+A conductor is like a playground slide --- electricity flows through it super fast and easily, just like you zoom down a slide!
+\end{analogy}
+
 \begin{definition}[Insulator]
 An \textbf{insulator} (or dielectric) is a material through which charge cannot flow freely. The electrons are tightly bound to their atoms.
 \end{definition}
+
+\begin{analogy}
+An insulator is like a brick wall that electricity cannot go through. Just like you can't walk through a wall, electricity can't flow through rubber or plastic!
+\end{analogy}
 
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -938,6 +967,10 @@ where:
     \item $\theta$ = angle between $\vec{E}$ and $\vec{A}$
 \end{itemize}
 \end{definition}
+
+\begin{analogy}
+Imagine you're holding a butterfly net in the rain. The more raindrops fall through the net --- and the more straight-on you hold it --- the bigger the flux. Electric flux counts how many electric field lines pass through an area, just like counting raindrops through your net!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -2309,6 +2342,10 @@ Just as gravitational potential energy exists due to gravitational forces, \text
 The electric potential energy of a system of charges is the work required to assemble the charges from infinity to their current positions.
 \end{definition}
 
+\begin{analogy}
+Think of a rock sitting at the top of a hill. It has lots of potential energy ready to be released when it rolls down. Electric potential energy is just like that --- charges up high on the ``electric hill'' have stored energy that gets released as they move to lower positions!
+\end{analogy}
+
 \subsubsection{Potential Energy of Two Point Charges}
 
 For two point charges $q_1$ and $q_2$ separated by distance $r$:
@@ -2412,6 +2449,10 @@ The \textbf{electric potential} $V$ at a point is the electric potential energy 
 Units: Volts (V) = Joules/Coulomb (J/C)
 \end{definition}
 
+\begin{analogy}
+Imagine a hill where the height tells you how fast a ball would roll. Electric potential is like the ``height'' of an electric hill --- it tells you how much energy each unit of charge will have at that spot. High potential = top of the hill!
+\end{analogy}
+
 Electric potential is a \textbf{scalar field}—it has a value at every point in space but no direction.
 
 \subsubsection{Potential Due to a Point Charge}
@@ -2480,6 +2521,10 @@ The \textbf{potential difference} between two points A and B is:
 This represents the work done per unit charge to move a charge from A to B.
 \end{definition}
 
+\begin{analogy}
+Potential difference is like the height difference between the top and bottom of a slide. The bigger the drop, the faster you go! A bigger potential difference gives a bigger push to electric charges --- just like a taller slide makes you go faster!
+\end{analogy}
+
 The work done by the electric field on a charge $q$ moving from A to B:
 \[
 \boxed{W_{field} = q(V_A - V_B) = -q\Delta V}
@@ -2522,6 +2567,10 @@ E = \frac{\Delta V}{d} = \frac{100}{0.020} = \boxed{5000 \text{ V/m} = 5000 \tex
 \begin{definition}[Equipotential Surface]
 An \textbf{equipotential surface} is a surface on which all points have the same electric potential.
 \end{definition}
+
+\begin{analogy}
+Think of a topographic map with lines connecting places at the same height above sea level. Equipotential surfaces are like those contour lines, but for electricity --- all points on the surface have the same ``electrical height.'' Moving along the contour line takes no energy, just like moving along an equipotential surface does no work!
+\end{analogy}
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=yellow!50!black, title=Properties of Equipotential Surfaces]
 \begin{enumerate}
@@ -2571,6 +2620,10 @@ The \textbf{electron volt} (eV) is the energy gained by an electron accelerated 
 \boxed{1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}}
 \]
 \end{definition}
+
+\begin{analogy}
+An electron volt is a super-tiny unit of energy --- like one single crumb of energy. It is the amount of energy one tiny electron gains when it slides down a 1-volt electric hill. Scientists use it because regular joules are way too big for describing atoms!
+\end{analogy}
 
 \begin{example}
 An electron is accelerated from rest through a potential difference of 500 V. Find its final speed.
@@ -2686,6 +2739,10 @@ This is 1.5 times the potential at the surface.
 A \textbf{capacitor} is a device that stores electric charge and energy. It consists of two conductors (plates) separated by an insulator.
 \end{definition}
 
+\begin{analogy}
+A capacitor is like a rechargeable water balloon. You fill it up with electric charge, hold the energy inside, and then release it all at once when needed --- just like popping the water balloon!
+\end{analogy}
+
 \begin{definition}[Capacitance]
 \textbf{Capacitance} is the ratio of the charge stored to the potential difference:
 \[
@@ -2695,6 +2752,10 @@ where $Q$ is the magnitude of charge on either plate and $V$ is the potential di
 
 The SI unit is the \textbf{farad} (F): $1 \text{ F} = 1 \text{ C/V}$
 \end{definition}
+
+\begin{analogy}
+Capacitance is like the size of a water bucket. A bigger bucket (higher capacitance) can hold more water without overflowing. A bigger capacitance stores more charge for the same voltage!
+\end{analogy}
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=yellow!50!black, title=Important Note]
 One farad is an extremely large capacitance. Typical capacitors range from picofarads (pF = $10^{-12}$ F) to microfarads ($\mu$F = $10^{-6}$ F).
@@ -3007,6 +3068,10 @@ u = \frac{1}{2}(8.85 \times 10^{-12})(9.0 \times 10^{12}) = \boxed{39.8 \text{ J
 A \textbf{dielectric} is an insulating material placed between the plates of a capacitor. It increases capacitance and prevents electrical breakdown.
 \end{definition}
 
+\begin{analogy}
+A dielectric is like a special sponge placed between the plates of a capacitor. It helps hold more charge, just like a sponge soaks up more water than an empty cup!
+\end{analogy}
+
 \begin{definition}[Dielectric Constant]
 The \textbf{dielectric constant} (or relative permittivity) $\kappa$ is the factor by which a dielectric increases capacitance:
 \[
@@ -3014,6 +3079,10 @@ The \textbf{dielectric constant} (or relative permittivity) $\kappa$ is the fact
 \]
 where $C_0$ is the capacitance without the dielectric.
 \end{definition}
+
+\begin{analogy}
+The dielectric constant is a number that tells you how much better a material is at storing charge compared to empty space. A higher number means the material is a better ``charge holder'' --- like a bigger, more absorbent sponge!
+\end{analogy}
 
 \begin{center}
 \begin{tabular}{lc}
@@ -3173,6 +3242,10 @@ For steady current: $I = \frac{Q}{t}$
 The SI unit is the \textbf{ampere} (A): 1 A = 1 C/s
 \end{definition}
 
+\begin{analogy}
+Electric current is like water flowing through a garden hose. The amount of water (charge) flowing past a point every second is the current. More flow = more current, just like opening the faucet wider makes more water come out!
+\end{analogy}
+
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
     % Wire
@@ -3213,6 +3286,10 @@ The SI unit is the \textbf{ampere} (A): 1 A = 1 C/s
 The \textbf{drift velocity} $v_d$ is the average velocity of charge carriers due to an applied electric field. It is typically very small (mm/s) compared to the random thermal velocities ($\sim 10^6$ m/s).
 \end{definition}
 
+\begin{analogy}
+Imagine a crowded school hallway full of students all trying to walk in the same direction, but constantly bumping into each other. They slowly shuffle forward overall --- that slow overall shuffle speed is like drift velocity. The individual students move fast, but the crowd as a whole moves slowly!
+\end{analogy}
+
 The current is related to drift velocity by:
 \[
 \boxed{I = nAv_d|q|}
@@ -3250,6 +3327,10 @@ Despite this slow drift, the electric signal travels at nearly the speed of ligh
 The SI unit is A/m$^2$.
 \end{definition}
 
+\begin{analogy}
+Current density is like how crowded that hallway is. If the hallway is narrow, the same number of students creates a denser, more packed flow. Current density measures how tightly packed the electric current is in the wire!
+\end{analogy}
+
 In vector form:
 \[
 \vec{J} = nq\vec{v}_d
@@ -3270,6 +3351,10 @@ I = \int \vec{J} \cdot d\vec{A}
 The SI unit is the \textbf{ohm} ($\Omega$): 1 $\Omega$ = 1 V/A
 \end{definition}
 
+\begin{analogy}
+Resistance is like a narrow, rocky section of a river that makes it hard for water to flow through. A wire with high resistance makes it harder for electricity to flow, just like a narrow rocky riverbed slows down water!
+\end{analogy}
+
 \begin{definition}[Ohm's Law]
 For ohmic materials, the current is directly proportional to the voltage:
 \[
@@ -3277,6 +3362,10 @@ For ohmic materials, the current is directly proportional to the voltage:
 \]
 This is \textbf{Ohm's Law}.
 \end{definition}
+
+\begin{analogy}
+Ohm's Law says: the harder you push the water (more voltage), the more water flows (more current) --- but a narrow, rocky hose (resistance) slows things down. More push = more flow, but the hose size matters too!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
@@ -3311,6 +3400,10 @@ where $L$ is length and $A$ is cross-sectional area.
 The SI unit is $\Omega \cdot$m.
 \end{definition}
 
+\begin{analogy}
+Resistivity describes how ``rocky'' or ``sticky'' a material is for electricity. Copper is very smooth (low resistivity), so electricity zooms through it easily. Rubber is super sticky (high resistivity) and stops electricity in its tracks!
+\end{analogy}
+
 \begin{center}
 \begin{tabular}{lc}
 \toprule
@@ -3335,6 +3428,10 @@ Glass & $10^{10}$ -- $10^{14}$ \\
 \]
 The SI unit is $(\Omega \cdot$m$)^{-1}$ or S/m (siemens per meter).
 \end{definition}
+
+\begin{analogy}
+Conductivity is the opposite of resistivity --- it tells you how easily electricity slides through a material, like how slippery a surface is. High conductivity means electricity zooms through effortlessly, like sliding on ice!
+\end{analogy}
 
 The microscopic form of Ohm's law:
 \[
@@ -3394,6 +3491,10 @@ The \textbf{power} dissipated in a circuit element is:
 The SI unit is the \textbf{watt} (W).
 \end{definition}
 
+\begin{analogy}
+Power is like how fast you eat a bag of candy. Electrical power is how fast a device uses up electrical energy. A hair dryer gobbles energy fast (high power), while a nightlight nibbles it slowly (low power)!
+\end{analogy}
+
 \begin{example}
 A 60 W light bulb operates at 120 V. Find:
 (a) The current through the bulb
@@ -3450,6 +3551,10 @@ The \textbf{electromotive force} ($\mathcal{E}$) of a source is the work done pe
 \]
 Despite its name, EMF is not a force but a potential difference (measured in volts).
 \end{definition}
+
+\begin{analogy}
+EMF is like the pump in a water fountain that keeps pushing water uphill so it can flow back down again. In a battery, the EMF is the ``pump'' that keeps giving energy to the electric charges so they keep flowing around the circuit!
+\end{analogy}
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=yellow!50!black, title=EMF vs. Terminal Voltage]
 A real battery has internal resistance $r$. The terminal voltage is:
@@ -3912,6 +4017,10 @@ The \textbf{time constant} of an RC circuit is:
 After one time constant, the capacitor is charged to approximately 63\% of its maximum value.
 \end{definition}
 
+\begin{analogy}
+The time constant is like how long it takes for a leaky bucket to fill up to a certain level. It tells you how quickly a circuit charges up or runs out of energy. A bigger time constant means it takes longer --- like a bigger, slower-leaking bucket!
+\end{analogy}
+
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
     % Axes
@@ -4057,6 +4166,10 @@ The \textbf{magnetic field} $\vec{B}$ is a vector field that exerts forces on mo
 \]
 Another common unit is the \textbf{gauss} (G): $1 \text{ T} = 10^4 \text{ G}$
 \end{definition}
+
+\begin{analogy}
+A magnetic field is like an invisible force field surrounding a magnet. You can't see it, but if you sprinkle iron filings near a magnet, they line up and trace out the invisible ``force field lines'' --- like a secret map of the magnetic field!
+\end{analogy}
 
 \begin{center}
 \begin{tabular}{lc}
@@ -4444,6 +4557,10 @@ The magnitude is:
 \]
 \end{definition}
 
+\begin{analogy}
+When electricity flows through a wire near a magnet, the magnet gives the wire a push sideways! It's like a stream of water pushing a paddle wheel --- the flowing charges in the wire get pushed by the magnetic field. This is how electric motors work!
+\end{analogy}
+
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
     % Wire
@@ -4703,6 +4820,10 @@ where:
 \end{itemize}
 \end{definition}
 
+\begin{analogy}
+The Biot-Savart Law is like a recipe for making magnetic field. Each tiny piece of wire carrying current ``bakes'' a little bit of magnetic field at nearby points. Add up all those tiny contributions and you get the total magnetic field --- like adding individual ingredients to make a cake!
+\end{analogy}
+
 The magnitude form:
 \[
 dB = \frac{\mu_0}{4\pi} \frac{I\,dl\sin\theta}{r^2}
@@ -4825,6 +4946,10 @@ The line integral of the magnetic field around any closed path equals $\mu_0$ ti
 \]
 \end{definition}
 
+\begin{analogy}
+Ampère's Law is like using a fence around a farm to figure out how many animals are inside. You walk all the way around the fence (the closed path) measuring the magnetic field, and that tells you the total current enclosed inside --- no need to look at each wire individually!
+\end{analogy}
+
 Ampère's law is most useful when there is high symmetry:
 \begin{itemize}
     \item Long straight wires (cylindrical symmetry)
@@ -4859,6 +4984,10 @@ B(2\pi r) = \mu_0 I
 \begin{definition}[Solenoid]
 A \textbf{solenoid} is a coil of wire wound in a helical pattern, typically around a cylindrical core.
 \end{definition}
+
+\begin{analogy}
+A solenoid is like a super-powered spring made of wire. When you run electricity through it, it creates a strong, straight magnetic field inside --- like a perfect bar magnet that you can turn on and off just by switching the current!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.6]
@@ -4920,6 +5049,10 @@ B = \boxed{2.01 \times 10^{-2} \text{ T} = 20.1 \text{ mT}}
 \begin{definition}[Toroid]
 A \textbf{toroid} is a solenoid bent into a circular (doughnut) shape.
 \end{definition}
+
+\begin{analogy}
+A toroid is like a solenoid bent into a donut shape. The magnetic field stays trapped inside the donut, like water flowing only inside a circular tunnel --- the field stays in and never escapes outside!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.6]
@@ -5064,6 +5197,10 @@ The \textbf{magnetic susceptibility} $\chi_m$ relates the magnetization $\vec{M}
 \]
 \end{definition}
 
+\begin{analogy}
+Magnetic susceptibility tells you how easily a material gets magnetized when placed near a magnet. High susceptibility means the material responds strongly (like iron near a fridge magnet), while low susceptibility means it barely reacts (like wood or plastic)!
+\end{analogy}
+
 \begin{definition}[Relative Permeability]
 The \textbf{relative permeability} $\kappa_m$ (or $\mu_r$) relates to susceptibility:
 \[
@@ -5075,6 +5212,10 @@ The magnetic field in a material:
 \]
 where $\mu = \kappa_m \mu_0$ is the permeability of the material.
 \end{definition}
+
+\begin{analogy}
+Relative permeability tells you how much better a material is at ``conducting'' magnetic fields compared to empty space. Iron is like a superhighway for magnetic fields (very high permeability), while air is just a dirt road. That's why iron cores make magnets much stronger!
+\end{analogy}
 
 \subsubsection{Ferromagnetism and Hysteresis}
 
@@ -5139,6 +5280,10 @@ where $\theta$ is the angle between $\vec{B}$ and the normal to the surface.
 
 The SI unit is the \textbf{weber} (Wb): $1$ Wb $= 1$ T$\cdot$m$^2$
 \end{definition}
+
+\begin{analogy}
+Magnetic flux is like counting the number of invisible magnetic ``threads'' passing through a hoop. If you tilt the hoop sideways, fewer threads go through it --- just like tilting an umbrella in the rain catches fewer raindrops!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -5439,6 +5584,10 @@ E = \frac{R^2}{2r}\frac{dB}{dt} = \frac{(0.05)^2}{2(0.08)}(0.02) = \boxed{3.1 \t
 \textbf{Eddy currents} are circulating currents induced in bulk conductors when exposed to changing magnetic fields.
 \end{definition}
 
+\begin{analogy}
+Eddy currents are like little whirlpools that appear inside a metal object moving through a magnetic field --- just like swirls that appear when you drag a spoon through water. These swirling currents can slow things down, like a magnetic brake on a roller coaster!
+\end{analogy}
+
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
     % Conducting plate
@@ -5493,6 +5642,10 @@ E = \frac{R^2}{2r}\frac{dB}{dt} = \frac{(0.05)^2}{2(0.08)}(0.02) = \boxed{3.1 \t
 \]
 The unit of inductance is the \textbf{henry} (H): 1 H = 1 V$\cdot$s/A = 1 Wb/A
 \end{definition}
+
+\begin{analogy}
+Self-inductance is like a stubborn, heavy flywheel. When you try to spin it faster or slower, it fights back and resists the change. Similarly, a coil resists sudden changes in electric current --- it wants to keep doing what it was doing!
+\end{analogy}
 
 The self-inductance relates magnetic flux to current:
 \[
@@ -5552,6 +5705,10 @@ The induced EMF in coil 2 due to changing current in coil 1:
 \boxed{\mathcal{E}_2 = -M\frac{dI_1}{dt}}
 \]
 \end{definition}
+
+\begin{analogy}
+Mutual inductance is like two friends using walkie-talkies. When one friend talks (changing current in coil 1), the other friend hears it (a current appears in coil 2) --- even though they are not directly connected, just nearby each other!
+\end{analogy}
 
 \begin{theorem}[Reciprocity of Mutual Inductance]
 The mutual inductance is symmetric:
@@ -6175,6 +6332,10 @@ The \textbf{capacitive reactance} is the opposition to current flow by a capacit
 Unit: ohms ($\Omega$)
 \end{definition}
 
+\begin{analogy}
+Capacitive reactance is like a bouncer who lets fast music (high frequency) into the club easily, but blocks slow songs (low frequency). A capacitor lets fast-changing AC through more easily and blocks slow changes --- the faster the changes, the less resistance!
+\end{analogy}
+
 The relationship: $V_0 = I_0 X_C$ or $V_{rms} = I_{rms} X_C$
 
 \begin{center}
@@ -6232,6 +6393,10 @@ The \textbf{inductive reactance} is the opposition to current flow by an inducto
 \]
 Unit: ohms ($\Omega$)
 \end{definition}
+
+\begin{analogy}
+Inductive reactance is like a heavy, stubborn door that's easy to open slowly but very hard to slam back and forth quickly. An inductor resists fast-changing current (high frequency) strongly, but lets slow changes pass through more easily!
+\end{analogy}
 
 The relationship: $V_0 = I_0 X_L$ or $V_{rms} = I_{rms} X_L$
 
@@ -6375,6 +6540,10 @@ The \textbf{impedance} $Z$ is the total opposition to current in an AC circuit:
 Unit: ohms ($\Omega$)
 \end{definition}
 
+\begin{analogy}
+Impedance is the total ``difficulty'' that electricity faces when flowing through an AC circuit. Think of it like an obstacle course: there are rocks in the river (resistance), spinning wheels (inductive reactance), and bouncy floors (capacitive reactance). Impedance adds all those obstacles together!
+\end{analogy}
+
 Ohm's law for AC circuits:
 \[
 \boxed{V = IZ}
@@ -6459,6 +6628,10 @@ X_L = X_C \quad \Rightarrow \quad \omega_0 L = \frac{1}{\omega_0 C}
 \]
 \end{definition}
 
+\begin{analogy}
+Resonance is like pushing someone on a swing at exactly the right moment every time. If you push at just the right rhythm (the resonant frequency), the swings get bigger and bigger with very little effort. In a circuit, at the right frequency, energy bounces back and forth with maximum strength!
+\end{analogy}
+
 The \textbf{resonant frequency}:
 \[
 \boxed{\omega_0 = \frac{1}{\sqrt{LC}}} \quad \text{or} \quad \boxed{f_0 = \frac{1}{2\pi\sqrt{LC}}}
@@ -6502,6 +6675,10 @@ The \textbf{quality factor} $Q$ measures the sharpness of the resonance:
 \boxed{Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 CR} = \frac{1}{R}\sqrt{\frac{L}{C}}}
 \]
 \end{definition}
+
+\begin{analogy}
+The quality factor is like how long a bell keeps ringing after you tap it. A high-quality bell (high $Q$) rings for a long time at a clear, pure pitch. A low-quality bell just goes ``thud.'' A high $Q$ circuit only responds strongly to one exact frequency --- like a perfectly tuned instrument!
+\end{analogy}
 
 The bandwidth (full width at half maximum power):
 \[
@@ -6563,6 +6740,10 @@ The \textbf{power factor} is:
 \boxed{\text{Power factor} = \cos\phi = \frac{R}{Z}}
 \]
 \end{definition}
+
+\begin{analogy}
+Power factor is like how efficiently you push a heavy box. If you push it perfectly straight (power factor = 1), all your effort goes into moving the box forward. If you push at an angle, some of your effort is wasted going sideways. Power factor tells you how much of your electrical effort is doing real useful work!
+\end{analogy}
 
 \begin{itemize}
     \item For a pure resistor: $\cos\phi = 1$ (maximum power transfer)
@@ -6673,6 +6854,10 @@ C = \frac{Q_C}{\omega V^2} = \frac{34600}{2\pi(60)(480)^2} = \boxed{398\,\mu\tex
 \begin{definition}[Transformer]
 A \textbf{transformer} is a device that transfers electrical energy between two circuits through electromagnetic induction. It consists of two coils (primary and secondary) wound on a common magnetic core.
 \end{definition}
+
+\begin{analogy}
+A transformer is like a gear system for electricity. Just as bicycle gears can trade pedaling speed for force (or vice versa), a transformer trades voltage for current --- stepping up voltage means stepping down current, and vice versa. This is how we send electricity over long distances without wasting it!
+\end{analogy}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -6876,6 +7061,10 @@ The \textbf{displacement current} is defined as:
 \]
 \end{definition}
 
+\begin{analogy}
+Displacement current is like an invisible helper that keeps the physics equations balanced. Even where no real charges flow (like the empty space inside a capacitor), the changing electric field behaves just like a current --- creating a real magnetic field. Maxwell discovered this invisible ``current'' is needed to make all of the electromagnetic equations work together correctly!
+\end{analogy}
+
 This term accounts for the changing electric field between capacitor plates and completes the symmetry between electric and magnetic fields.
 
 \begin{center}
@@ -7019,6 +7208,10 @@ The \textbf{Poynting vector} $\vec{S}$ represents the energy flow per unit area 
 Unit: W/m²
 \end{definition}
 
+\begin{analogy}
+The Poynting vector is like a GPS arrow that shows you exactly which direction electromagnetic energy is traveling and how fast. It always points in the direction the energy is going --- like a compass for energy flow!
+\end{analogy}
+
 The magnitude: $S = \frac{EB}{\mu_0} = \frac{E^2}{\mu_0 c} = \frac{cB^2}{\mu_0}$
 
 \subsubsection{Intensity}
@@ -7034,6 +7227,10 @@ In terms of rms values:
 I = \frac{E_{rms}^2}{\mu_0 c} = c\epsilon_0 E_{rms}^2
 \]
 \end{definition}
+
+\begin{analogy}
+Intensity is like the brightness of a flashlight. A more intense beam has more energy hitting every square meter every second. A powerful spotlight has high intensity, while a little nightlight has low intensity. It's how strong the electromagnetic radiation is!
+\end{analogy}
 
 \begin{example}
 Sunlight at Earth's surface has an intensity of about 1400 W/m². Find:
@@ -7069,6 +7266,10 @@ The \textbf{radiation pressure} on a surface:
 \boxed{P = \frac{2I}{c}} \quad \text{(complete reflection)}
 \]
 \end{definition}
+
+\begin{analogy}
+Radiation pressure is the tiny push that light gives to objects it shines on. It's so small we can't feel it in everyday life, but in space it's big enough to push a very thin sail and move a spacecraft! Scientists are actually working on ``light sails'' that use sunlight as their engine --- light really does push things!
+\end{analogy}
 
 \begin{example}
 A 100 mW laser beam has a cross-sectional area of 1.0 mm². Find:
