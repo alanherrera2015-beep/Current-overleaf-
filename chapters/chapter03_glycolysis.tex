@@ -1,0 +1,361 @@
+\section{Glycolysis}
+
+\subsection{Introduction to Glycolysis}
+
+\begin{definition}
+\textbf{Glycolysis} (from Greek: \textit{glykys} = sweet, \textit{lysis} = splitting) is the metabolic pathway that converts one molecule of glucose (6 carbons) into two molecules of pyruvate (3 carbons each), with the net production of ATP and NADH.
+\end{definition}
+
+\begin{itemize}
+    \item Location: Cytoplasm (cytosol)
+    \item Oxygen requirement: None (can occur aerobically or anaerobically)
+    \item Universal pathway: Found in virtually all living organisms
+    \item 10 enzyme-catalyzed reactions
+\end{itemize}
+
+\begin{analogy}
+Glycolysis is like breaking a $\$20$ bill into smaller bills so you can use them in vending machines. You start with one big glucose molecule (the \$20 bill) and end up with two pyruvate molecules (like two \$10 bills). Along the way, you have to pay a small fee (ATP investment), but you get more back than you spent (ATP payoff). The ``change'' you get (NADH) can be ``deposited'' later for even more energy!
+\end{analogy}
+
+\subsection{Overview: Two Phases of Glycolysis}
+
+\begin{theorem}
+\textbf{Glycolysis consists of two phases:}
+
+\textbf{Phase 1: Energy Investment Phase (Steps 1-5)}
+\begin{itemize}
+    \item Glucose is phosphorylated and converted to two 3-carbon molecules
+    \item Consumes 2 ATP
+    \item ``Priming'' the glucose for energy extraction
+\end{itemize}
+
+\textbf{Phase 2: Energy Payoff Phase (Steps 6-10)}
+\begin{itemize}
+    \item Two 3-carbon molecules are oxidized and converted to pyruvate
+    \item Produces 4 ATP and 2 NADH
+    \item Net yield: 2 ATP and 2 NADH per glucose
+\end{itemize}
+\end{theorem}
+
+\subsection{The Ten Reactions of Glycolysis}
+
+\subsubsection{Phase 1: Energy Investment Phase}
+
+\textbf{Reaction 1: Hexokinase}
+
+\[
+\text{Glucose} + \text{ATP} \xrightarrow{\text{Hexokinase}} \text{Glucose-6-phosphate} + \text{ADP}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = -16.7$ kJ/mol (irreversible)
+    \item \textbf{Enzyme:} Hexokinase (or Glucokinase in liver)
+    \item \textbf{Purpose:} 
+    \begin{itemize}
+        \item Traps glucose in the cell (G6P cannot cross membrane)
+        \item Destabilizes glucose for subsequent reactions
+    \end{itemize}
+    \item \textbf{Regulation:} Hexokinase inhibited by G6P (product inhibition)
+    \item Requires Mg$^{2+}$
+\end{itemize}
+
+\begin{definition}
+\textbf{Hexokinase vs. Glucokinase:}
+\begin{itemize}
+    \item \textbf{Hexokinase:} Found in most tissues, low $K_m$ (high affinity), inhibited by G6P
+    \item \textbf{Glucokinase:} Found in liver and pancreatic $\beta$-cells, high $K_m$ (low affinity), NOT inhibited by G6P
+\end{itemize}
+Glucokinase acts as a ``glucose sensor''—it only phosphorylates glucose when blood glucose is high.
+\end{definition}
+
+\textbf{Reaction 2: Phosphoglucose Isomerase}
+
+\[
+\text{Glucose-6-phosphate} \xleftrightarrow{\text{Phosphoglucose Isomerase}} \text{Fructose-6-phosphate}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +1.7$ kJ/mol (reversible, near equilibrium)
+    \item \textbf{Type:} Isomerization (aldose $\rightarrow$ ketose)
+    \item \textbf{Purpose:} Prepares for phosphorylation at C-1
+\end{itemize}
+
+\textbf{Reaction 3: Phosphofructokinase-1 (PFK-1)} \textcolor{red}{\textbf{[MAJOR REGULATORY STEP]}}
+
+\[
+\text{Fructose-6-phosphate} + \text{ATP} \xrightarrow{\text{PFK-1}} \text{Fructose-1,6-bisphosphate} + \text{ADP}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = -14.2$ kJ/mol (irreversible)
+    \item \textbf{COMMITTED STEP} of glycolysis
+    \item Most important regulatory enzyme in glycolysis
+    \item Requires Mg$^{2+}$
+\end{itemize}
+
+\begin{theorem}
+\textbf{Regulation of PFK-1:}
+
+\textbf{Activators (stimulate glycolysis):}
+\begin{itemize}
+    \item AMP (signals low energy)
+    \item Fructose-2,6-bisphosphate (F-2,6-BP) — most potent activator
+    \item ADP
+    \item P$_i$
+\end{itemize}
+
+\textbf{Inhibitors (slow glycolysis):}
+\begin{itemize}
+    \item ATP (signals high energy) — despite being a substrate!
+    \item Citrate (signals abundant biosynthetic precursors)
+    \item H$^+$ (low pH) — prevents excessive lactate production
+\end{itemize}
+\end{theorem}
+
+\begin{analogy}
+PFK-1 is like the ``gatekeeper'' of glycolysis. Imagine a bouncer at a club who decides how many people can enter. When the club is empty (low ATP, high AMP), the bouncer lets everyone in quickly. When the club is packed (high ATP, citrate), the bouncer slows down entry. Fructose-2,6-bisphosphate is like the club owner telling the bouncer ``Let more people in!''
+\end{analogy}
+
+\textbf{Reaction 4: Aldolase}
+
+\[
+\text{Fructose-1,6-bisphosphate} \xleftrightarrow{\text{Aldolase}} \text{DHAP} + \text{Glyceraldehyde-3-phosphate}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +23.8$ kJ/mol (unfavorable, but pulled forward)
+    \item \textbf{Type:} Aldol cleavage
+    \item Splits 6-carbon sugar into two 3-carbon pieces:
+    \begin{itemize}
+        \item Dihydroxyacetone phosphate (DHAP) — ketose
+        \item Glyceraldehyde-3-phosphate (G3P) — aldose
+    \end{itemize}
+\end{itemize}
+
+\textbf{Reaction 5: Triose Phosphate Isomerase}
+
+\[
+\text{Dihydroxyacetone phosphate} \xleftrightarrow{\text{TIM}} \text{Glyceraldehyde-3-phosphate}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +7.5$ kJ/mol (reversible)
+    \item Only G3P continues in glycolysis
+    \item Effectively: 1 glucose $\rightarrow$ 2 G3P
+    \item TIM is a ``kinetically perfect'' enzyme (diffusion-limited)
+\end{itemize}
+
+\begin{center}
+\fbox{\textbf{End of Phase 1: 2 ATP consumed, 2 G3P molecules ready for Phase 2}}
+\end{center}
+
+\subsubsection{Phase 2: Energy Payoff Phase}
+
+\textit{Note: Each reaction occurs TWICE per glucose (once for each G3P)}
+
+\textbf{Reaction 6: Glyceraldehyde-3-phosphate Dehydrogenase (GAPDH)}
+
+\[
+\text{G3P} + \text{NAD}^+ + \text{P}_i \xleftrightarrow{\text{GAPDH}} \text{1,3-Bisphosphoglycerate} + \text{NADH} + \text{H}^+
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +6.3$ kJ/mol (reversible)
+    \item \textbf{Type:} Oxidation and phosphorylation
+    \item Two coupled processes:
+    \begin{enumerate}
+        \item Oxidation of aldehyde to carboxylic acid (NAD$^+$ $\rightarrow$ NADH)
+        \item Attachment of inorganic phosphate (substrate-level phosphorylation setup)
+    \end{enumerate}
+    \item Creates high-energy acyl phosphate bond in 1,3-BPG
+    \item \textbf{Produces: 2 NADH per glucose}
+\end{itemize}
+
+\begin{analogy}
+This reaction is like a two-for-one deal. The enzyme oxidizes G3P (removing electrons to NAD$^+$) AND attaches a phosphate group at the same time. It's like a car wash that also fills your gas tank—two services in one stop. The energy from oxidation is captured in the high-energy phosphate bond.
+\end{analogy}
+
+\textbf{Reaction 7: Phosphoglycerate Kinase}
+
+\[
+\text{1,3-Bisphosphoglycerate} + \text{ADP} \xleftrightarrow{\text{PGK}} \text{3-Phosphoglycerate} + \text{ATP}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = -18.5$ kJ/mol (favorable)
+    \item \textbf{Type:} Substrate-level phosphorylation
+    \item First ATP-generating step in glycolysis
+    \item \textbf{Produces: 2 ATP per glucose} (one per G3P)
+    \item Named ``kinase'' because reverse reaction was discovered first
+\end{itemize}
+
+\begin{definition}
+\textbf{Substrate-level phosphorylation} is the direct transfer of a phosphate group from a high-energy substrate to ADP, forming ATP. This occurs in the cytoplasm and does not require oxygen or an electron transport chain.
+\end{definition}
+
+\textbf{Reaction 8: Phosphoglycerate Mutase}
+
+\[
+\text{3-Phosphoglycerate} \xleftrightarrow{\text{PGM}} \text{2-Phosphoglycerate}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +4.4$ kJ/mol (reversible)
+    \item \textbf{Type:} Isomerization (mutase = intramolecular phosphate transfer)
+    \item Moves phosphate from C3 to C2
+    \item Prepares molecule for dehydration
+\end{itemize}
+
+\textbf{Reaction 9: Enolase}
+
+\[
+\text{2-Phosphoglycerate} \xleftrightarrow{\text{Enolase}} \text{Phosphoenolpyruvate} + \text{H}_2\text{O}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = +1.7$ kJ/mol (reversible)
+    \item \textbf{Type:} Dehydration
+    \item Removes water, creating double bond
+    \item Creates phosphoenolpyruvate (PEP)—highest energy phosphate compound in metabolism!
+    \item Requires Mg$^{2+}$
+    \item Inhibited by fluoride (used in blood collection tubes)
+\end{itemize}
+
+\textbf{Reaction 10: Pyruvate Kinase}
+
+\[
+\text{Phosphoenolpyruvate} + \text{ADP} \xrightarrow{\text{Pyruvate Kinase}} \text{Pyruvate} + \text{ATP}
+\]
+
+\begin{itemize}
+    \item $\Delta G°' = -31.4$ kJ/mol (\textbf{highly favorable, irreversible})
+    \item \textbf{Type:} Substrate-level phosphorylation
+    \item Second ATP-generating step
+    \item \textbf{Produces: 2 ATP per glucose}
+    \item Third regulatory point of glycolysis
+    \item Requires K$^+$ and Mg$^{2+}$
+\end{itemize}
+
+\begin{theorem}
+\textbf{Regulation of Pyruvate Kinase:}
+
+\textbf{Activators:}
+\begin{itemize}
+    \item Fructose-1,6-bisphosphate (feedforward activation)
+    \item High [PEP]
+\end{itemize}
+
+\textbf{Inhibitors:}
+\begin{itemize}
+    \item ATP (signals high energy)
+    \item Alanine (signals abundant amino acids)
+    \item Acetyl-CoA
+    \item Phosphorylation by protein kinase A (in liver)
+\end{itemize}
+\end{theorem}
+
+\subsection{Overall Glycolysis Summary}
+
+\begin{center}
+\begin{tcolorbox}[colback=yellow!10, colframe=orange!80!black, title=\textbf{Net Reaction of Glycolysis}]
+\[
+\text{Glucose} + 2\text{NAD}^+ + 2\text{ADP} + 2\text{P}_i \rightarrow 2\text{Pyruvate} + 2\text{NADH} + 2\text{H}^+ + 2\text{ATP} + 2\text{H}_2\text{O}
+\]
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Component} & \textbf{Consumed} & \textbf{Produced} \\
+\midrule
+Glucose & 1 & — \\
+ATP & 2 (investment) & 4 (payoff) \\
+\textbf{Net ATP} & — & \textbf{2} \\
+NAD$^+$ & 2 & — \\
+NADH & — & 2 \\
+Pyruvate & — & 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Fates of Pyruvate}
+
+\begin{definition}
+The fate of pyruvate depends on the oxygen availability and the metabolic needs of the cell.
+\end{definition}
+
+\subsubsection{Aerobic Conditions (Oxygen Present)}
+
+\[
+\text{Pyruvate} \xrightarrow{\text{Pyruvate Dehydrogenase}} \text{Acetyl-CoA} \rightarrow \text{Citric Acid Cycle} \rightarrow \text{Electron Transport Chain}
+\]
+
+\begin{itemize}
+    \item Pyruvate enters mitochondria
+    \item Oxidized to acetyl-CoA (releases CO$_2$, generates NADH)
+    \item Complete oxidation yields ~30-32 ATP per glucose
+\end{itemize}
+
+\subsubsection{Anaerobic Conditions (No Oxygen)}
+
+\textbf{Lactic Acid Fermentation (Animals, some bacteria):}
+\[
+\text{Pyruvate} + \text{NADH} + \text{H}^+ \xrightarrow{\text{Lactate Dehydrogenase}} \text{Lactate} + \text{NAD}^+
+\]
+
+\begin{itemize}
+    \item Regenerates NAD$^+$ for continued glycolysis
+    \item Occurs in exercising muscle, red blood cells
+    \item Lactate can be recycled to glucose in liver (Cori cycle)
+\end{itemize}
+
+\textbf{Alcoholic Fermentation (Yeast, some bacteria):}
+\[
+\text{Pyruvate} \xrightarrow{\text{Pyruvate Decarboxylase}} \text{Acetaldehyde} + \text{CO}_2
+\]
+\[
+\text{Acetaldehyde} + \text{NADH} + \text{H}^+ \xrightarrow{\text{Alcohol Dehydrogenase}} \text{Ethanol} + \text{NAD}^+
+\]
+
+\begin{itemize}
+    \item Used in brewing and baking
+    \item CO$_2$ makes bread rise and beer fizzy
+\end{itemize}
+
+\begin{analogy}
+The fate of pyruvate is like what happens to a traveler at a crossroads. If the highway is open (oxygen available), they continue the journey to the big city (mitochondria) for maximum reward. If the highway is closed (no oxygen), they must take a detour (fermentation) that lets them keep moving but doesn't get them as far.
+\end{analogy}
+
+\subsection{Regulation of Glycolysis}
+
+\begin{theorem}
+\textbf{Three Irreversible Steps = Three Control Points:}
+\begin{enumerate}
+    \item \textbf{Hexokinase} (Reaction 1): Inhibited by G6P (product inhibition)
+    \item \textbf{Phosphofructokinase-1} (Reaction 3): Main control point
+    \item \textbf{Pyruvate kinase} (Reaction 10): Fine-tuning at the end
+\end{enumerate}
+\end{theorem}
+
+\subsubsection{The Role of Fructose-2,6-Bisphosphate}
+
+\begin{definition}
+\textbf{Fructose-2,6-bisphosphate (F-2,6-BP)} is the most potent activator of PFK-1 and inhibitor of fructose-1,6-bisphosphatase (gluconeogenesis enzyme). It is NOT a glycolytic intermediate but a regulatory molecule.
+\end{definition}
+
+\begin{itemize}
+    \item Produced by phosphofructokinase-2 (PFK-2)
+    \item Degraded by fructose-2,6-bisphosphatase (FBPase-2)
+    \item PFK-2 and FBPase-2 are the same protein (bifunctional enzyme)!
+    \item Hormonal control:
+    \begin{itemize}
+        \item \textbf{Insulin} $\rightarrow$ activates PFK-2 $\rightarrow$ increases F-2,6-BP $\rightarrow$ stimulates glycolysis
+        \item \textbf{Glucagon} $\rightarrow$ activates FBPase-2 $\rightarrow$ decreases F-2,6-BP $\rightarrow$ inhibits glycolysis
+    \end{itemize}
+\end{itemize}
+
+%========================================================
+% SECTION 11: GLUCONEOGENESIS AND DIABETES
+%========================================================
+

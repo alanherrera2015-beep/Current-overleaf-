@@ -1,0 +1,777 @@
+\section{Nucleotide Metabolism}
+
+\subsection{Overview of Nucleotide Structure and Function}
+
+\begin{definition}
+\textbf{Nucleotides} are the building blocks of DNA and RNA, consisting of three components: a nitrogenous base, a pentose sugar, and one or more phosphate groups.
+\end{definition}
+
+\textbf{Components:}
+\begin{enumerate}
+    \item \textbf{Nitrogenous base:}
+    \begin{itemize}
+        \item Purines: Adenine (A), Guanine (G) — two rings
+        \item Pyrimidines: Cytosine (C), Thymine (T), Uracil (U) — one ring
+    \end{itemize}
+    
+    \item \textbf{Pentose sugar:}
+    \begin{itemize}
+        \item Ribose (in RNA, ribonucleotides)
+        \item Deoxyribose (in DNA, deoxyribonucleotides)
+    \end{itemize}
+    
+    \item \textbf{Phosphate groups:} 1-3 phosphates (mono-, di-, triphosphate)
+\end{enumerate}
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!70!black, title=\textbf{Mnemonic: Purines vs. Pyrimidines}]
+\textbf{"PURe As Gold"} — \textbf{PUR}ines are \textbf{A}denine and \textbf{G}uanine
+
+\textbf{"CUT the PY"} — Pyrimidines are \textbf{C}ytosine, \textbf{U}racil, \textbf{T}hymine
+
+\textbf{"PURines are Pure and double-ringed"} — Purines have 2 rings
+\end{tcolorbox}
+
+\textbf{Functions of Nucleotides:}
+\begin{itemize}
+    \item Building blocks for DNA and RNA synthesis
+    \item Energy currency (ATP, GTP)
+    \item Coenzymes (NAD$^+$, FAD, CoA)
+    \item Second messengers (cAMP, cGMP)
+    \item Activated intermediates (UDP-glucose, CDP-choline)
+    \item Allosteric regulators
+\end{itemize}
+
+\subsection{Purine Synthesis}
+
+\subsubsection{De Novo Purine Synthesis}
+
+\textbf{Location:} Cytosol
+
+\textbf{Key feature:} The purine ring is built directly on ribose-5-phosphate (unlike pyrimidines)
+
+\textbf{Starting material:} Ribose-5-phosphate (from pentose phosphate pathway)
+
+\textbf{Sources of atoms in the purine ring:}
+\begin{itemize}
+    \item \textbf{N1}: Aspartate
+    \item \textbf{C2, C8}: N$^{10}$-formyl-THF (folate)
+    \item \textbf{N3, N9}: Glutamine (amide nitrogen)
+    \item \textbf{C4, C5, N7}: Glycine
+    \item \textbf{C6}: CO$_2$
+\end{itemize}
+
+\textbf{Step 1: Formation of PRPP (Rate-Limiting for Substrate)}
+\[
+\text{Ribose-5-P} + \text{ATP} \xrightarrow{\textbf{PRPP synthetase}} \text{PRPP} + \text{AMP}
+\]
+\begin{itemize}
+    \item PRPP = 5-phosphoribosyl-1-pyrophosphate
+    \item Activated by: Inorganic phosphate
+    \item Inhibited by: Purine nucleotides (feedback inhibition)
+\end{itemize}
+
+\textbf{Step 2: Committed Step}
+\[
+\text{PRPP} + \text{Glutamine} \xrightarrow{\textbf{Glutamine-PRPP amidotransferase}} \text{5-Phosphoribosylamine} + \text{Glutamate} + \text{PP}_i
+\]
+\begin{itemize}
+    \item \textbf{Rate-limiting step} of purine synthesis
+    \item Inhibited by: AMP, GMP, IMP (feedback inhibition)
+    \item Activated by: PRPP
+\end{itemize}
+
+\textbf{Subsequent Steps:}
+\begin{enumerate}
+    \item Nine more reactions build the purine ring
+    \item First complete purine nucleotide formed: \textbf{IMP} (inosine monophosphate)
+    \item Requires: Glycine, glutamine, aspartate, CO$_2$, N$^{10}$-formyl-THF
+    \item Consumes: 6 ATP equivalents
+\end{enumerate}
+
+\textbf{Conversion of IMP to AMP and GMP:}
+
+\textbf{IMP $\rightarrow$ AMP:}
+\begin{enumerate}
+    \item IMP + Aspartate + GTP $\rightarrow$ Adenylosuccinate
+    \item Adenylosuccinate $\rightarrow$ AMP + Fumarate
+\end{enumerate}
+\begin{itemize}
+    \item Requires \textbf{GTP} (reciprocal regulation)
+\end{itemize}
+
+\textbf{IMP $\rightarrow$ GMP:}
+\begin{enumerate}
+    \item IMP + NAD$^+$ $\rightarrow$ XMP (xanthosine monophosphate)
+    \item XMP + Glutamine + ATP $\rightarrow$ GMP
+\end{enumerate}
+\begin{itemize}
+    \item Requires \textbf{ATP} (reciprocal regulation)
+\end{itemize}
+
+\begin{tcolorbox}[colback=yellow!10, colframe=yellow!70!black, title=\textbf{Reciprocal Regulation of AMP and GMP Synthesis}]
+\begin{itemize}
+    \item AMP synthesis requires \textbf{GTP}
+    \item GMP synthesis requires \textbf{ATP}
+    \item This ensures balanced production of both purines
+    \item Excess of one stimulates synthesis of the other
+\end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Pu
+rine Salvage Pathway}
+
+\begin{definition}
+\textbf{Salvage pathways} recycle free purine bases (adenine, guanine, hypoxanthine) back to nucleotides, conserving energy compared to de novo synthesis.
+\end{definition}
+
+\textbf{Key Enzymes:}
+
+\textbf{1. Adenine Phosphoribosyltransferase (APRT):}
+\[
+\text{Adenine} + \text{PRPP} \xrightarrow{\text{APRT}} \text{AMP} + \text{PP}_i
+\]
+
+\textbf{2. Hypoxanthine-Guanine Phosphoribosyltransferase (HGPRT):}
+\[
+\text{Hypoxanthine} + \text{PRPP} \xrightarrow{\text{HGPRT}} \text{IMP} + \text{PP}_i
+\]
+\[
+\text{Guanine} + \text{PRPP} \xrightarrow{\text{HGPRT}} \text{GMP} + \text{PP}_i
+\]
+
+\begin{tcolorbox}[colback=red!5, colframe=red!70!black, title=\textbf{Clinical Correlation: Lesch-Nyhan Syndrome}]
+\textbf{Cause:} X-linked recessive deficiency of \textbf{HGPRT}
+
+\textbf{Pathophysiology:}
+\begin{itemize}
+    \item Cannot salvage hypoxanthine or guanine
+    \item PRPP accumulates $\rightarrow$ increased de novo purine synthesis
+    \item Excess purines degraded to uric acid
+    \item Severe hyperuricemia
+\end{itemize}
+
+\textbf{Clinical Features:}
+\begin{itemize}
+    \item Hyperuricemia and gout (early childhood)
+    \item Intellectual disability
+    \item \textbf{Self-mutilation} (lip and finger biting) — pathognomonic
+    \item Choreoathetosis and spasticity
+    \item Aggressive behavior
+\end{itemize}
+
+\textbf{Treatment:} Allopurinol (reduces uric acid but does not improve neurological symptoms)
+\end{tcolorbox}
+
+\subsubsection{Purine Degradation}
+
+Purines are degraded to \textbf{uric acid}, which is excreted in urine.
+
+\textbf{Pathway:}
+\begin{enumerate}
+    \item AMP $\rightarrow$ IMP $\rightarrow$ Inosine $\rightarrow$ Hypoxanthine
+    \item GMP $\rightarrow$ Guanosine $\rightarrow$ Guanine $\rightarrow$ Xanthine
+    \item Hypoxanthine $\xrightarrow{\text{Xanthine oxidase}}$ Xanthine $\xrightarrow{\text{Xanthine oxidase}}$ \textbf{Uric acid}
+\end{enumerate}
+
+\begin{tcolorbox}[colback=yellow!10, colframe=yellow!70!black, title=\textbf{Xanthine Oxidase: Key Enzyme in Purine Degradation}]
+\begin{itemize}
+    \item Converts hypoxanthine $\rightarrow$ xanthine $\rightarrow$ uric acid
+    \item Contains molybdenum, FAD, iron-sulfur centers
+    \item Produces hydrogen peroxide (H$_2$O$_2$) as byproduct
+    \item \textbf{Target of allopurinol} (gout treatment)
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!5, colframe=red!70!black, title=\textbf{Clinical Correlation: Gout}]
+\textbf{Definition:} Inflammatory arthritis caused by deposition of monosodium urate crystals in joints
+
+\textbf{Causes of Hyperuricemia:}
+\begin{itemize}
+    \item \textbf{Overproduction:} Lesch-Nyhan syndrome, PRPP synthetase overactivity, tumor lysis syndrome
+    \item \textbf{Underexcretion:} Renal insufficiency, thiazide diuretics, alcohol
+\end{itemize}
+
+\textbf{Clinical Features:}
+\begin{itemize}
+    \item Acute monoarticular arthritis (classically 1st MTP joint — podagra)
+    \item Tophi (urate deposits in soft tissue)
+    \item Uric acid kidney stones
+\end{itemize}
+
+\textbf{Treatment:}
+\begin{itemize}
+    \item \textbf{Acute:} NSAIDs, colchicine, corticosteroids
+    \item \textbf{Chronic:} Allopurinol/febuxostat (xanthine oxidase inhibitors), probenecid (uricosuric)
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Pyrimidine Metabolism}
+
+\subsubsection{De Novo Pyrimidine Synthesis}
+
+Unlike purines, the pyrimidine ring is synthesized \textbf{first as a free base}, then attached to ribose-5-phosphate.
+
+\textbf{Location:} Cytosol
+
+\textbf{Sources of Pyrimidine Ring Atoms:}
+\begin{itemize}
+    \item \textbf{Aspartate}: Contributes N1, C4, C5, C6
+    \item \textbf{Carbamoyl phosphate}: Contributes N3, C2 (from glutamine and CO$_2$)
+\end{itemize}
+
+\textbf{Step 1: Formation of Carbamoyl Phosphate}
+\[
+\text{Glutamine} + \text{CO}_2 + 2\text{ATP} \xrightarrow{\textbf{CPS II}} \text{Carbamoyl phosphate} + 2\text{ADP} + \text{P}_i
+\]
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Feature} & \textbf{CPS I} & \textbf{CPS II} \\
+\midrule
+Location & Mitochondria & Cytosol \\
+Nitrogen source & Free NH$_4^+$ & Glutamine \\
+Function & Urea cycle & Pyrimidine synthesis \\
+Activator & N-acetylglutamate & ATP, PRPP \\
+Inhibitor & — & UTP (feedback) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Step 2: Formation of Carbamoyl Aspartate}
+\[
+\text{Carbamoyl phosphate} + \text{Aspartate} \xrightarrow{\textbf{Aspartate transcarbamoylase (ATCase)}} \text{Carbamoyl aspartate}
+\]
+\begin{itemize}
+    \item \textbf{Rate-limiting step} in bacteria
+    \item Inhibited by CTP, activated by ATP
+\end{itemize}
+
+\textbf{Step 3: Ring Closure}
+\[
+\text{Carbamoyl aspartate} \xrightarrow{\text{Dihydroorotase}} \text{Dihydroorotate}
+\]
+
+\textbf{Step 4: Oxidation}
+\[
+\text{Dihydroorotate} \xrightarrow{\text{Dihydroorotate dehydrogenase}} \text{Orotate}
+\]
+\begin{itemize}
+    \item Only step occurring in \textbf{mitochondria} (inner membrane)
+    \item Uses ubiquinone as electron acceptor
+    \item Target of \textbf{leflunomide} (immunosuppressant for rheumatoid arthritis)
+\end{itemize}
+
+\textbf{Step 5: Attachment to Ribose-5-Phosphate}
+\[
+\text{Orotate} + \text{PRPP} \xrightarrow{\text{Orotate phosphoribosyltransferase}} \text{OMP} + \text{PP}_i
+\]
+
+\textbf{Step 6: Decarboxylation}
+\[
+\text{OMP} \xrightarrow{\text{OMP decarboxylase}} \text{UMP}
+\]
+
+\begin{tcolorbox}[colback=green!5, colframe=green!70!black, title=\textbf{UMP Synthase: Bifunctional Enzyme}]
+In mammals, orotate phosphoribosyltransferase and OMP decarboxylase activities are on a single bifunctional enzyme called \textbf{UMP synthase}.
+
+\textbf{Deficiency:} Hereditary orotic aciduria
+\end{tcolorbox}
+
+\textbf{Formation of Other Pyrimidine Nucleotides:}
+
+\textbf{UMP $\rightarrow$ UTP:}
+\[
+\text{UMP} \xrightarrow{\text{kinases}} \text{UDP} \xrightarrow{\text{kinases}} \text{UTP}
+\]
+
+\textbf{UTP $\rightarrow$ CTP:}
+\[
+\text{UTP} + \text{Glutamine} + \text{ATP} \xrightarrow{\text{CTP synthetase}} \text{CTP} + \text{Glutamate} + \text{ADP}
+\]
+
+\begin{tcolorbox}[colback=red!5, colframe=red!70!black, title=\textbf{Clinical Correlation: Hereditary Orotic Aciduria}]
+\textbf{Cause:} Autosomal recessive deficiency of \textbf{UMP synthase}
+
+\textbf{Pathophysiology:}
+\begin{itemize}
+    \item Cannot convert orotate to UMP
+    \item Orotic acid accumulates and is excreted
+    \item Pyrimidine deficiency impairs DNA/RNA synthesis
+\end{itemize}
+
+\textbf{Clinical Features:}
+\begin{itemize}
+    \item Megaloblastic anemia (does NOT respond to B12 or folate)
+    \item Failure to thrive
+    \item Orotic acid crystals in urine
+    \item No hyperammonemia (distinguishes from OTC deficiency)
+\end{itemize}
+
+\textbf{Treatment:} Oral \textbf{uridine} supplementation (bypasses the block)
+\end{tcolorbox}
+
+\subsubsection{Pyrimidine Salvage}
+
+Pyrimidine salvage is less important than purine salvage but does occur:
+\[
+\text{Uracil} + \text{Ribose-1-P} \xrightarrow{\text{Uridine phosphorylase}} \text{Uridine}
+\]
+\[
+\text{Uridine} + \text{ATP} \xrightarrow{\text{Uridine kinase}} \text{UMP} + \text{ADP}
+\]
+
+\subsubsection{Pyrimidine Degradation}
+
+Unlike purines (which produce uric acid), pyrimidines are degraded to \textbf{water-soluble products}:
+
+\textbf{Cytosine $\rightarrow$ Uracil} (by deamination)
+
+\textbf{Uracil degradation:}
+\[
+\text{Uracil} \rightarrow \text{Dihydrouracil} \rightarrow \beta\text{-ureidopropionate} \rightarrow \beta\text{-alanine} + \text{NH}_3 + \text{CO}_2
+\]
+
+\textbf{Thymine degradation:}
+\[
+\text{Thymine} \rightarrow \text{Dihydrothymine} \rightarrow \beta\text{-ureidoisobutyrate} \rightarrow \beta\text{-aminoisobutyrate} + \text{NH}_3 + \text{CO}_2
+\]
+
+\begin{itemize}
+    \item $\beta$-alanine: Component of CoA and carnosine
+    \item $\beta$-aminoisobutyrate: Elevated in urine during chemotherapy (tumor lysis)
+\end{itemize}
+
+\subsection{Deoxyribonucleotide Synthesis}
+
+\begin{definition}
+\textbf{Deoxyribonucleotides} are synthesized by reduction of ribonucleotides at the C2' position of the ribose sugar.
+\end{definition}
+
+\subsubsection{Ribonucleotide Reductase}
+
+\textbf{Reaction:}
+\[
+\text{NDP} \xrightarrow{\textbf{Ribonucleotide reductase}} \text{dNDP}
+\]
+
+\textbf{Substrates:} ADP, GDP, CDP, UDP (diphosphate forms)
+
+\textbf{Products:} dADP, dGDP, dCDP, dUDP
+
+\textbf{Mechanism:}
+\begin{itemize}
+    \item Requires \textbf{thioredoxin} (reduced form) as electron donor
+    \item Thioredoxin is regenerated by \textbf{thioredoxin reductase} using NADPH
+    \item Alternative: Glutaredoxin system (uses glutathione)
+\end{itemize}
+
+\textbf{Regulation of Ribonucleotide Reductase:}
+
+\begin{enumerate}
+    \item \textbf{Activity site:} Controls overall enzyme activity
+    \begin{itemize}
+        \item ATP: Activates enzyme
+        \item dATP: Inhibits enzyme (signals sufficient dNTPs)
+    \end{itemize}
+    
+    \item \textbf{Specificity site:} Determines which substrate is reduced
+    \begin{itemize}
+        \item ATP/dATP bound: Favors CDP and UDP reduction
+        \item dTTP bound: Favors GDP reduction
+        \item dGTP bound: Favors ADP reduction
+    \end{itemize}
+\end{enumerate}
+
+\begin{tcolorbox}[colback=yellow!10, colframe=yellow!70!black, title=\textbf{Clinical Significance of Ribonucleotide Reductase}]
+\textbf{Drug target:}
+\begin{itemize}
+    \item \textbf{Hydroxyurea}: Inhibits ribonucleotide reductase; used in sickle cell disease and myeloproliferative disorders
+    \item \textbf{Gemcitabine}: Nucleoside analog that inhibits the enzyme; used in cancer chemotherapy
+\end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Thymidylate Synthesis}
+
+dTMP (thymidylate) is synthesized from dUMP, not from reduction of TDP.
+
+\textbf{Reaction:}
+\[
+\text{dUMP} + \text{N}^{5},\text{N}^{10}\text{-methylene-THF} \xrightarrow{\textbf{Thymidylate synthase}} \text{dTMP} + \text{DHF}
+\]
+
+\textbf{Key Points:}
+\begin{itemize}
+    \item Methyl group transferred from N$^5$,N$^{10}$-methylene-THF
+    \item THF is oxidized to \textbf{DHF} (dihydrofolate)
+    \item DHF must be reduced back to THF by \textbf{dihydrofolate reductase (DHFR)}
+\end{itemize}
+
+\textbf{Regeneration of THF:}
+\[
+\text{DHF} + \text{NADPH} \xrightarrow{\textbf{DHFR}} \text{THF} + \text{NADP}^+
+\]
+
+\begin{tcolorbox}[colback=red!5, colframe=red!70!black, title=\textbf{Clinical Correlation: Anticancer and Antimicrobial Drugs}]
+\textbf{Thymidylate Synthase Inhibitors:}
+\begin{itemize}
+    \item \textbf{5-Fluorouracil (5-FU)}: Converted to 5-FdUMP; suicide inhibitor of thymidylate synthase
+    \item Used in colorectal, breast, and other cancers
+\end{itemize}
+
+\textbf{DHFR Inhibitors:}
+\begin{itemize}
+    \item \textbf{Methotrexate}: Anticancer drug; inhibits human DHFR
+    \item \textbf{Trimethoprim}: Antibiotic; selectively inhibits bacterial DHFR
+    \item \textbf{Pyrimethamine}: Antiprotozoal; inhibits protozoal DHFR
+\end{itemize}
+
+\textbf{Mechanism of Selectivity:}
+\begin{itemize}
+    \item Trimethoprim has 100,000× higher affinity for bacterial vs. human DHFR
+    \item Allows selective killing of bacteria
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Regulation of Nucleotide Metabolism}
+
+\textbf{Purine Synthesis Regulation:}
+
+\begin{enumerate}
+    \item \textbf{PRPP synthetase:}
+    \begin{itemize}
+        \item Inhibited by: ADP, GDP (feedback)
+        \item Activated by: Inorganic phosphate
+    \end{itemize}
+    
+    \item \textbf{Glutamine-PRPP amidotransferase} (committed step):
+    \begin{itemize}
+        \item Inhibited by: AMP, GMP, IMP
+        \item Activated by: PRPP
+    \end{itemize}
+    
+    \item \textbf{Reciprocal regulation:} AMP inhibits its own synthesis; GMP inhibits its own synthesis
+\end{enumerate}
+
+\textbf{Pyrimidine Synthesis Regulation:}
+
+\begin{enumerate}
+    \item \textbf{CPS II:}
+    \begin{itemize}
+        \item Inhibited by: UTP
+        \item Activated by: ATP, PRPP
+    \end{itemize}
+    
+    \item \textbf{CTP synthetase:}
+    \begin{itemize}
+        \item Inhibited by: CTP (product inhibition)
+    \end{itemize}
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+% PRACTICE PROBLEMS
+%----------------------------------------------------------------------------------------
+
+\section{NCLEX-Style Practice Problems}
+
+\begin{exercise}
+A 45-year-old man presents with severe pain in his right great toe that began suddenly during the night. The joint is red, swollen, and extremely tender. Serum uric acid is elevated. Which enzyme is the target of the medication
+that would be most appropriate to reduce uric acid production in this patient?
+\begin{enumerate}[label=\Alph*.]
+    \item Glutamine-PRPP amidotransferase
+    \item Xanthine oxidase
+    \item HGPRT
+    \item Adenosine deaminase
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Xanthine oxidase}
+
+\textbf{Rationale:} This patient has acute gouty arthritis caused by hyperuricemia. \textbf{Allopurinol} and \textbf{febuxostat} are xanthine oxidase inhibitors that reduce uric acid production by blocking the conversion of hypoxanthine to xanthine and xanthine to uric acid. This is the most appropriate target for reducing uric acid synthesis.
+
+\begin{itemize}
+    \item \textbf{A. Glutamine-PRPP amidotransferase}: Rate-limiting enzyme of de novo purine synthesis; not a current drug target
+    \item \textbf{C. HGPRT}: Salvage pathway enzyme; deficiency causes Lesch-Nyhan syndrome
+    \item \textbf{D. Adenosine deaminase}: Deficiency causes SCID; not a target for gout treatment
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A newborn presents with lethargy, poor feeding, and seizures on day 3 of life. Laboratory studies reveal hyperammonemia (850 µmol/L) and elevated orotic acid in the urine. Which enzyme is most likely deficient?
+\begin{enumerate}[label=\Alph*.]
+    \item Carbamoyl phosphate synthetase I
+    \item Ornithine transcarbamylase
+    \item Argininosuccinate synthetase
+    \item Arginase
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Ornithine transcarbamylase}
+
+\textbf{Rationale:} The combination of hyperammonemia with elevated urinary orotic acid is diagnostic of \textbf{ornithine transcarbamylase (OTC) deficiency}. In OTC deficiency, carbamoyl phosphate accumulates in mitochondria, leaks into the cytosol, and enters the pyrimidine synthesis pathway, leading to excess orotic acid production.
+
+\begin{itemize}
+    \item \textbf{A. CPS I deficiency}: Causes hyperammonemia but \textbf{without} orotic aciduria (carbamoyl phosphate is not made)
+    \item \textbf{C. Argininosuccinate synthetase}: Would show elevated citrulline
+    \item \textbf{D. Arginase}: Would show elevated arginine
+\end{itemize}
+
+\textbf{Key Point:} Orotic aciduria distinguishes OTC deficiency from CPS I deficiency.
+\end{solution}
+
+\begin{exercise}
+A 6-month-old infant presents with failure to thrive, musty body odor, fair skin, and developmental delay. Newborn screening reveals elevated phenylalanine levels. The parents are counseled about dietary restrictions. Which amino acid becomes essential in this patient's diet?
+\begin{enumerate}[label=\Alph*.]
+    \item Tryptophan
+    \item Methionine
+    \item Tyrosine
+    \item Cysteine
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: C. Tyrosine}
+
+\textbf{Rationale:} This infant has \textbf{phenylketonuria (PKU)}, caused by deficiency of phenylalanine hydroxylase. Normally, tyrosine is nonessential because it can be synthesized from phenylalanine. However, in PKU, this conversion is blocked, making \textbf{tyrosine conditionally essential} and requiring dietary supplementation.
+
+\begin{itemize}
+    \item \textbf{A. Tryptophan}: Essential amino acid, unrelated to PKU
+    \item \textbf{B. Methionine}: Essential amino acid, unrelated to PKU
+    \item \textbf{D. Cysteine}: Synthesized from methionine, not phenylalanine
+\end{itemize}
+
+\textbf{Key Point:} PKU patients require tyrosine supplementation and phenylalanine restriction.
+\end{solution}
+
+\begin{exercise}
+A 35-year-old woman with type 1 diabetes presents with nausea, vomiting, and abdominal pain. She has fruity breath odor. Laboratory studies show glucose 450 mg/dL, pH 7.15, and elevated serum ketones. Which of the following best explains the metabolic basis for ketone body production in this patient?
+\begin{enumerate}[label=\Alph*.]
+    \item Increased insulin promotes lipolysis
+    \item Excess acetyl-CoA from fatty acid oxidation exceeds TCA cycle capacity
+    \item Decreased glucagon inhibits ketogenesis
+    \item Malonyl-CoA activates CPT-I
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Excess acetyl-CoA from fatty acid oxidation exceeds TCA cycle capacity}
+
+\textbf{Rationale:} In diabetic ketoacidosis (DKA), insulin deficiency leads to:
+\begin{enumerate}
+    \item Increased lipolysis $\rightarrow$ elevated free fatty acids
+    \item Increased $\beta$-oxidation in liver $\rightarrow$ excess acetyl-CoA
+    \item Oxaloacetate is diverted to gluconeogenesis
+    \item TCA cycle capacity is overwhelmed
+    \item Excess acetyl-CoA is channeled to ketogenesis
+\end{enumerate}
+
+\begin{itemize}
+    \item \textbf{A}: Insulin \textbf{inhibits} lipolysis; its absence promotes lipolysis
+    \item \textbf{C}: Glucagon is \textbf{elevated} in DKA and \textbf{stimulates} ketogenesis
+    \item \textbf{D}: Malonyl-CoA \textbf{inhibits} CPT-I; in DKA, malonyl-CoA is low
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A 50-year-old man with hypercholesterolemia is started on atorvastatin. This medication works by inhibiting which enzyme?
+\begin{enumerate}[label=\Alph*.]
+    \item Acetyl-CoA carboxylase
+    \item HMG-CoA reductase
+    \item Squalene synthase
+    \item Lipoprotein lipase
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. HMG-CoA reductase}
+
+\textbf{Rationale:} Statins (atorvastatin, simvastatin, etc.) are competitive inhibitors of \textbf{HMG-CoA reductase}, the rate-limiting enzyme of cholesterol synthesis. This enzyme catalyzes the conversion of HMG-CoA to mevalonate.
+
+Effects of statin therapy:
+\begin{itemize}
+    \item Decreased hepatic cholesterol synthesis
+    \item Upregulation of LDL receptors (via SREBP-2)
+    \item Increased LDL clearance from blood
+    \item Reduced serum LDL cholesterol
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{A. Acetyl-CoA carboxylase}: Rate-limiting enzyme of fatty acid synthesis
+    \item \textbf{C. Squalene synthase}: Later step in cholesterol synthesis
+    \item \textbf{D. Lipoprotein lipase}: Releases fatty acids from VLDL/chylomicrons
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A 2-year-old child presents with developmental regression, hepatomegaly, and cherry-red spot on fundoscopic examination. Enzyme assay reveals deficiency of hexosaminidase A. Which of the following substances accumulates in this condition?
+\begin{enumerate}[label=\Alph*.]
+    \item Glucocerebroside
+    \item Sphingomyelin
+    \item GM2 ganglioside
+    \item Galactocerebroside
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: C. GM2 ganglioside}
+
+\textbf{Rationale:} This child has \textbf{Tay-Sachs disease}, caused by deficiency of hexosaminidase A. This enzyme normally degrades GM2 ganglioside. Deficiency leads to accumulation of GM2 ganglioside in neurons, causing progressive neurodegeneration.
+
+\begin{itemize}
+    \item \textbf{A. Glucocerebroside}: Accumulates in Gaucher disease (glucocerebrosidase deficiency)
+    \item \textbf{B. Sphingomyelin}: Accumulates in Niemann-Pick disease (sphingomyelinase deficiency)
+    \item \textbf{D. Galactocerebroside}: Accumulates in Krabbe disease (galactocerebrosidase deficiency)
+\end{itemize}
+
+\textbf{Key Features of Tay-Sachs:}
+\begin{itemize}
+    \item Cherry-red spot on macula
+    \item Progressive neurodegeneration
+    \item NO hepatosplenomegaly (distinguishes from Niemann-Pick)
+    \item Common in Ashkenazi Jewish population
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+During prolonged fasting, which of the following metabolic changes occurs in the liver?
+\begin{enumerate}[label=\Alph*.]
+    \item Increased malonyl-CoA concentration
+    \item Activation of acetyl-CoA carboxylase
+    \item Increased CPT-I activity
+    \item Decreased gluconeogenesis
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: C. Increased CPT-I activity}
+
+\textbf{Rationale:} During prolonged fasting:
+\begin{itemize}
+    \item Glucagon is elevated, insulin is low
+    \item Acetyl-CoA carboxylase is \textbf{inhibited} (phosphorylated)
+    \item Malonyl-CoA levels \textbf{decrease}
+    \item CPT-I is \textbf{relieved from inhibition} and becomes more active
+    \item Fatty acid $\beta$-oxidation increases
+    \item Ketogenesis increases
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{A}: Malonyl-CoA \textbf{decreases} during fasting
+    \item \textbf{B}: ACC is \textbf{inhibited} during fasting
+    \item \textbf{D}: Gluconeogenesis \textbf{increases} during fasting
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A patient with severe combined immunodeficiency (SCID) is found to have adenosine deaminase deficiency. Which of the following best explains the mechanism of immunodeficiency in this condition?
+\begin{enumerate}[label=\Alph*.]
+    \item Accumulation of uric acid is toxic to lymphocytes
+    \item Elevated dATP inhibits ribonucleotide reductase
+    \item Decreased purine synthesis impairs DNA replication
+    \item Excess adenosine activates T-cell apoptosis receptors
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Elevated dATP inhibits ribonucleotide reductase}
+
+\textbf{Rationale:} In adenosine deaminase (ADA) deficiency:
+\begin{enumerate}
+    \item Adenosine and deoxyadenosine accumulate
+    \item Deoxyadenosine is phosphorylated to dATP
+    \item dATP is a potent \textbf{inhibitor of ribonucleotide reductase}
+    \item This blocks synthesis of all deoxyribonucleotides
+    \item DNA synthesis is impaired
+    \item Rapidly dividing lymphocytes are most affected
+\end{enumerate}
+
+\begin{itemize}
+    \item \textbf{A}: Uric acid is not the toxic metabolite in ADA deficiency
+    \item \textbf{C}: Purine synthesis is not decreased; degradation is blocked
+    \item \textbf{D}: While adenosine has signaling effects, the primary mechanism is dATP toxicity
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A 25-year-old woman is being treated for acute lymphoblastic leukemia with methotrexate. Which of the following enzymes is directly inhibited by this drug?
+\begin{enumerate}[label=\Alph*.]
+    \item Thymidylate synthase
+    \item Dihydrofolate reductase
+    \item Ribonucleotide reductase
+    \item CTP synthetase
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Dihydrofolate reductase}
+
+\textbf{Rationale:} Methotrexate is a structural analog of folate that competitively inhibits \textbf{dihydrofolate reductase (DHFR)}. This enzyme is required to regenerate tetrahydrofolate (THF) from dihydrofolate.
+
+Effects of DHFR inhibition:
+\begin{itemize}
+    \item Decreased THF and its derivatives
+    \item Impaired one-carbon transfer reactions
+    \item Blocked thymidylate synthesis (requires N$^{5}$,N$^{10}$-methylene-THF)
+    \item Impaired purine synthesis (requires N$^{10}$-formyl-THF)
+    \item Inhibition of DNA synthesis
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{A. Thymidylate synthase}: Inhibited by 5-fluorouracil (5-FU)
+    \item \textbf{C. Ribonucleotide reductase}: Inhibited by hydroxyurea
+    \item \textbf{D. CTP synthetase}: Not a major chemotherapy target
+\end{itemize}
+\end{solution}
+
+\begin{exercise}
+A 40-year-old man with a history of alcohol abuse presents with peripheral neuropathy. Laboratory studies reveal megaloblastic anemia with elevated homocysteine and methylmalonic acid levels. Which vitamin deficiency is most likely?
+\begin{enumerate}[label=\Alph*.]
+    \item Folate (B9)
+    \item Cobalamin (B12)
+    \item Pyridoxine (B6)
+    \item Thiamine (B1)
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\textbf{Answer: B. Cobalamin (B12)}
+
+\textbf{Rationale:} The combination of megaloblastic anemia, elevated homocysteine, AND elevated methylmalonic acid (MMA) indicates \textbf{vitamin B12 deficiency}. B12 is a cofactor for two enzymes:
+
+\begin{enumerate}
+    \item \textbf{Methionine synthase}: Converts homocysteine to methionine
+    \begin{itemize}
+        \item Deficiency $\rightarrow$ elevated homocysteine
+    \end{itemize}
+    \item \textbf{Methylmalonyl-CoA mutase}: Converts methylmalonyl-CoA to succinyl-CoA
+    \begin{itemize}
+        \item Deficiency $\rightarrow$ elevated methylmalonic acid
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Distinguishing B12 from Folate Deficiency:}
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Finding} & \textbf{B12 Deficiency} & \textbf{Folate Deficiency} \\
+\midrule
+Homocysteine & Elevated & Elevated \\
+Methylmalonic acid & \textbf{Elevated} & Normal \\
+Neurologic symptoms & Present & Absent \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item \textbf{A. Folate}: Would have elevated homocysteine but \textbf{normal} MMA
+    \item \textbf{C. Pyridoxine}: Causes peripheral neuropathy but not megaloblastic anemia
+    \item \textbf{D. Thiamine}: Causes Wernicke-Korsakoff syndrome, not megaloblastic anemia
+\end{itemize}
+\end{solution}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY TABLES
+%----------------------------------------------------------------------------------------
+
