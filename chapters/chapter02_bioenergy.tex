@@ -1,0 +1,314 @@
+\section{Biochemical Energy, Metabolism, and Carbohydrates}
+
+\subsection{Introduction to Bioenergetics}
+
+\begin{definition}
+\textbf{Bioenergetics} is the study of energy transformations in living organisms, including how cells capture, store, and use energy to perform biological work.
+\end{definition}
+
+\begin{analogy}
+Think of your body as a city. The city needs electricity to power everything—lights, computers, factories. Your cells are like buildings in this city, and ATP is the electricity. Just as the power plant converts fuel (coal, natural gas) into electricity, your mitochondria convert food (glucose, fats) into ATP. Every activity in the city/cell requires this energy currency!
+\end{analogy}
+
+\subsection{Thermodynamics in Biochemistry}
+
+\subsubsection{Free Energy (Gibbs Free Energy)}
+
+\begin{definition}
+\textbf{Gibbs Free Energy (G)} is the energy available to do useful work at constant temperature and pressure. The change in free energy ($\Delta G$) determines whether a reaction is spontaneous.
+\end{definition}
+
+\begin{theorem}
+\textbf{Gibbs Free Energy Equation:}
+\[
+\Delta G = \Delta H - T\Delta S
+\]
+where:
+\begin{itemize}
+    \item $\Delta G$ = change in free energy (kJ/mol)
+    \item $\Delta H$ = change in enthalpy (heat content)
+    \item $T$ = absolute temperature (Kelvin)
+    \item $\Delta S$ = change in entropy (disorder)
+\end{itemize}
+\end{theorem}
+
+\textbf{Interpretation of $\Delta G$:}
+\begin{itemize}
+    \item $\Delta G < 0$: \textbf{Exergonic} (spontaneous, releases energy)
+    \item $\Delta G > 0$: \textbf{Endergonic} (non-spontaneous, requires energy input)
+    \item $\Delta G = 0$: System is at \textbf{equilibrium}
+\end{itemize}
+
+\subsubsection{Standard Free Energy Change}
+
+\begin{definition}
+The \textbf{standard free energy change} ($\Delta G°'$) is measured under biochemical standard conditions:
+\begin{itemize}
+    \item Temperature: 298 K (25°C)
+    \item Pressure: 1 atm
+    \item Concentration of reactants and products: 1 M
+    \item pH: 7.0 (this is the prime notation)
+    \item Water concentration: 55.5 M (treated as constant)
+\end{itemize}
+\end{definition}
+
+\begin{theorem}
+\textbf{Relationship Between $\Delta G$ and $\Delta G°'$:}
+\[
+\Delta G = \Delta G°' + RT\ln Q
+\]
+where:
+\begin{itemize}
+    \item $R$ = gas constant (8.314 J/mol·K)
+    \item $T$ = temperature in Kelvin
+    \item $Q$ = reaction quotient = $\frac{[\text{products}]}{[\text{reactants}]}$
+\end{itemize}
+
+At equilibrium ($\Delta G = 0$):
+\[
+\Delta G°' = -RT\ln K_{eq}
+\]
+\end{theorem}
+
+\begin{analogy}
+$\Delta G°'$ is like the ``official'' difficulty rating of a hiking trail—it's measured under standard conditions. But the actual difficulty you experience ($\Delta G$) depends on current conditions: Is it raining? Are you carrying a heavy pack? Similarly, the actual free energy change depends on the current concentrations in the cell.
+\end{analogy}
+
+\subsection{ATP: The Energy Currency}
+
+\begin{definition}
+\textbf{Adenosine triphosphate (ATP)} is the primary energy currency of the cell. It consists of:
+\begin{itemize}
+    \item Adenine (nitrogenous base)
+    \item Ribose (5-carbon sugar)
+    \item Three phosphate groups ($\alpha$, $\beta$, $\gamma$)
+\end{itemize}
+\end{definition}
+
+\subsubsection{ATP Hydrolysis}
+
+\[
+\text{ATP} + \text{H}_2\text{O} \rightarrow \text{ADP} + \text{P}_i + \text{H}^+ \quad \Delta G°' = -30.5 \text{ kJ/mol}
+\]
+
+\[
+\text{ATP} + \text{H}_2\text{O} \rightarrow \text{AMP} + \text{PP}_i + \text{H}^+ \quad \Delta G°' = -45.6 \text{ kJ/mol}
+\]
+
+\textbf{Why is ATP hydrolysis so exergonic?}
+\begin{enumerate}
+    \item \textbf{Electrostatic repulsion:} Three negative phosphate groups repel each other
+    \item \textbf{Resonance stabilization:} Products (ADP + P$_i$) have more resonance forms than ATP
+    \item \textbf{Hydration:} Products are better solvated by water
+    \item \textbf{Ionization:} Products ionize, releasing H$^+$ and driving equilibrium forward
+\end{enumerate}
+
+\begin{analogy}
+ATP is like a compressed spring. The three phosphate groups are pushed together, creating tension (electrostatic repulsion). When you release the spring (hydrolysis), energy is released as the ``spring'' relaxes. The products (ADP + P$_i$) are in a more relaxed, stable state.
+\end{analogy}
+
+\subsubsection{Energy Coupling}
+
+\begin{definition}
+\textbf{Energy coupling} is the use of an exergonic reaction to drive an endergonic reaction. The two reactions are linked, often through a common intermediate.
+\end{definition}
+
+\begin{example}
+\textbf{Glutamine Synthesis:}
+
+The synthesis of glutamine from glutamate and ammonia is endergonic:
+\[
+\text{Glutamate} + \text{NH}_3 \rightarrow \text{Glutamine} + \text{H}_2\text{O} \quad \Delta G°' = +14.2 \text{ kJ/mol}
+\]
+
+Coupling with ATP hydrolysis:
+\[
+\text{ATP} + \text{H}_2\text{O} \rightarrow \text{ADP} + \text{P}_i \quad \Delta G°' = -30.5 \text{ kJ/mol}
+\]
+
+Overall coupled reaction:
+\[
+\text{Glutamate} + \text{NH}_3 + \text{ATP} \rightarrow \text{Glutamine} + \text{ADP} + \text{P}_i
+\]
+\[
+\Delta G°'_{\text{overall}} = +14.2 + (-30.5) = -16.3 \text{ kJ/mol}
+\]
+
+The unfavorable reaction becomes favorable when coupled to ATP hydrolysis!
+\end{example}
+
+\subsection{Other High-Energy Compounds}
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Compound} & \textbf{$\Delta G°'$ of Hydrolysis (kJ/mol)} \\
+\midrule
+Phosphoenolpyruvate (PEP) & $-61.9$ \\
+1,3-Bisphosphoglycerate & $-49.4$ \\
+Phosphocreatine & $-43.1$ \\
+ATP $\rightarrow$ AMP + PP$_i$ & $-45.6$ \\
+ATP $\rightarrow$ ADP + P$_i$ & $-30.5$ \\
+Glucose-6-phosphate & $-13.8$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}
+\textbf{Phosphoryl Group Transfer Potential:}
+
+Compounds with more negative $\Delta G°'$ of hydrolysis can transfer their phosphate groups to compounds with less negative values. ATP occupies an intermediate position, allowing it to:
+\begin{itemize}
+    \item Accept phosphate from high-energy compounds (PEP, 1,3-BPG)
+    \item Donate phosphate to lower-energy compounds (glucose, glycerol)
+\end{itemize}
+\end{theorem}
+
+\begin{analogy}
+Think of phosphate groups like water flowing downhill. High-energy compounds like PEP are at the top of the hill—they can easily ``pour'' their phosphate down to ATP. ATP is at a middle elevation, so it can receive phosphate from above and donate it to compounds below (like glucose-6-phosphate at the bottom). Water (phosphate) always flows from high to low energy!
+\end{analogy}
+
+\subsection{Introduction to Carbohydrates}
+
+\begin{definition}
+\textbf{Carbohydrates} are polyhydroxy aldehydes or ketones, or substances that yield such compounds upon hydrolysis. The general formula is $(CH_2O)_n$, hence ``hydrates of carbon.''
+\end{definition}
+
+\subsubsection{Classification of Carbohydrates}
+
+\begin{enumerate}
+    \item \textbf{Monosaccharides:} Simple sugars that cannot be hydrolyzed further
+    \begin{itemize}
+        \item Trioses (3C): Glyceraldehyde, dihydroxyacetone
+        \item Tetroses (4C): Erythrose
+        \item Pentoses (5C): Ribose, deoxyribose, ribulose
+        \item Hexoses (6C): Glucose, fructose, galactose, mannose
+    \end{itemize}
+    
+    \item \textbf{Disaccharides:} Two monosaccharides joined by glycosidic bond
+    \begin{itemize}
+        \item Maltose: Glucose + Glucose ($\alpha$-1,4)
+        \item Lactose: Galactose + Glucose ($\beta$-1,4)
+        \item Sucrose: Glucose + Fructose ($\alpha$-1,$\beta$-2)
+    \end{itemize}
+    
+    \item \textbf{Oligosaccharides:} 3-10 monosaccharide units
+    
+    \item \textbf{Polysaccharides:} Many monosaccharide units
+    \begin{itemize}
+        \item Storage: Starch (plants), Glycogen (animals)
+        \item Structural: Cellulose (plants), Chitin (arthropods)
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Monosaccharide Structure}
+
+\begin{definition}
+\textbf{Aldoses} contain an aldehyde group; \textbf{ketoses} contain a ketone group. The position of the carbonyl determines the classification.
+\end{definition}
+
+\textbf{D and L Configuration:}
+\begin{itemize}
+    \item Based on the configuration of the chiral carbon farthest from the carbonyl
+    \item D-sugars: OH on the right in Fischer projection (most biological sugars)
+    \item L-sugars: OH on the left in Fischer projection
+\end{itemize}
+
+\textbf{Epimers:}
+\begin{definition}
+\textbf{Epimers} are sugars that differ in configuration at only one chiral carbon.
+\end{definition}
+
+\begin{example}
+\begin{itemize}
+    \item D-Glucose and D-Mannose are C-2 epimers
+    \item D-Glucose and D-Galactose are C-4 epimers
+\end{itemize}
+\end{example}
+
+\subsubsection{Cyclic Forms of Monosaccharides}
+
+\begin{definition}
+In aqueous solution, monosaccharides with 5+ carbons form cyclic structures through intramolecular hemiacetal or hemiketal formation:
+\begin{itemize}
+    \item \textbf{Pyranose:} 6-membered ring (like glucose)
+    \item \textbf{Furanose:} 5-membered ring (like fructose)
+\end{itemize}
+\end{definition}
+
+\textbf{Anomers and Mutarotation:}
+\begin{definition}
+\textbf{Anomers} are cyclic sugars that differ in configuration at the anomeric carbon (C-1 for aldoses, C-2 for ketoses):
+\begin{itemize}
+    \item $\alpha$-anomer: OH on anomeric carbon is axial (down in Haworth projection for D-sugars)
+    \item $\beta$-anomer: OH on anomeric carbon is equatorial (up in Haworth projection for D-sugars)
+\end{itemize}
+
+\textbf{Mutarotation} is the interconversion between $\alpha$ and $\beta$ anomers through the open-chain form.
+\end{definition}
+
+\begin{analogy}
+Imagine a revolving door (the open-chain form). People can enter as ``$\alpha$-visitors'' or ``$\beta$-visitors'' depending on which side they exit. In solution, sugars constantly spin through this revolving door, switching between $\alpha$ and $\beta$ forms until they reach equilibrium!
+\end{analogy}
+
+\subsubsection{Glycosidic Bonds}
+
+\begin{definition}
+A \textbf{glycosidic bond} forms when the anomeric carbon of one sugar reacts with a hydroxyl group of another molecule (sugar, amino acid, lipid, etc.), releasing water.
+\end{definition}
+
+\begin{itemize}
+    \item $\alpha$-glycosidic bond: Formed by $\alpha$-anomer
+    \item $\beta$-glycosidic bond: Formed by $\beta$-anomer
+    \item Notation: $\alpha$(1$\rightarrow$4) means $\alpha$-linkage from C-1 to C-4
+\end{itemize}
+
+\begin{example}
+\textbf{Important Glycosidic Bonds:}
+\begin{itemize}
+    \item \textbf{Maltose:} $\alpha$(1$\rightarrow$4) glucose-glucose (digestible)
+    \item \textbf{Cellobiose:} $\beta$(1$\rightarrow$4) glucose-glucose (humans cannot digest)
+    \item \textbf{Lactose:} $\beta$(1$\rightarrow$4) galactose-glucose
+    \item \textbf{Sucrose:} $\alpha$(1$\rightarrow$2$\beta$) glucose-fructose
+\end{itemize}
+\end{example}
+
+\subsubsection{Polysaccharides}
+
+\textbf{Storage Polysaccharides:}
+
+\begin{itemize}
+    \item \textbf{Starch} (plants):
+    \begin{itemize}
+        \item Amylose: Linear $\alpha$(1$\rightarrow$4) glucose chains
+        \item Amylopectin: Branched with $\alpha$(1$\rightarrow$6) branch points every 24-30 residues
+    \end{itemize}
+    
+    \item \textbf{Glycogen} (animals):
+    \begin{itemize}
+        \item Similar to amylopectin but more highly branched
+        \item $\alpha$(1$\rightarrow$6) branch points every 8-12 residues
+        \item Stored primarily in liver and muscle
+        \item More branches = more ends = faster mobilization
+    \end{itemize}
+\end{itemize}
+
+\begin{analogy}
+Glycogen is like a tree with many branches. When you need energy quickly (like running from danger), you can pick fruit from many branch ends simultaneously. Amylose is like a single vine—you can only pick from one end at a time. That's why animals store glycogen (highly branched) for quick energy access!
+\end{analogy}
+
+\textbf{Structural Polysaccharides:}
+
+\begin{itemize}
+    \item \textbf{Cellulose:} Linear $\beta$(1$\rightarrow$4) glucose chains
+    \begin{itemize}
+        \item Forms rigid, fibrous structures
+        \item Humans lack enzymes to cleave $\beta$(1$\rightarrow$4) bonds
+        \item Dietary fiber
+    \end{itemize}
+\end{itemize}
+
+%========================================================
+% SECTION 10: GLYCOLYSIS
+%========================================================
+

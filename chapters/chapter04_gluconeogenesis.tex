@@ -1,0 +1,228 @@
+\section{Gluconeogenesis and Diabetes}
+
+\subsection{Introduction to Gluconeogenesis}
+
+\begin{definition}
+\textbf{Gluconeogenesis} is the metabolic pathway that synthesizes glucose from non-carbohydrate precursors. It occurs primarily in the \textbf{liver} (90\%) and to a lesser extent in the \textbf{kidney} (10\%).
+\end{definition}
+
+\begin{analogy}
+If glycolysis is like spending money (breaking down glucose for energy), gluconeogenesis is like earning money (building glucose from scratch). When your ``glucose bank account'' runs low (during fasting or exercise), your liver acts like a glucose factory, manufacturing new glucose from raw materials to keep your blood sugar stable.
+\end{analogy}
+
+\subsection{Why Gluconeogenesis Matters}
+
+\begin{itemize}
+    \item \textbf{Brain} requires ~120 g glucose/day (cannot use fatty acids)
+    \item \textbf{Red blood cells} have no mitochondria—rely entirely on glycolysis
+    \item \textbf{Glycogen stores} last only 12-24 hours during fasting
+    \item \textbf{Exercise} depletes muscle glycogen rapidly
+\end{itemize}
+
+\subsection{Precursors for Gluconeogenesis}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Precursor} & \textbf{Source} & \textbf{Entry Point} \\
+\midrule
+Lactate & Muscle, RBCs & Pyruvate \\
+Alanine & Muscle protein & Pyruvate \\
+Glycerol & Adipose (fat breakdown) & DHAP \\
+Glucogenic amino acids & Protein breakdown & Various TCA intermediates \\
+Propionate & Odd-chain fatty acids & Succinyl-CoA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}
+\textbf{Important:} Fatty acids (even-chain) CANNOT be converted to glucose in animals because:
+\begin{itemize}
+    \item Acetyl-CoA cannot be converted to pyruvate (PDH is irreversible)
+    \item Acetyl-CoA enters TCA cycle but carbons are lost as CO$_2$
+    \item No net synthesis of oxaloacetate from acetyl-CoA
+\end{itemize}
+\end{theorem}
+
+\subsection{Gluconeogenesis Pathway}
+
+Gluconeogenesis is largely the reverse of glycolysis, but three irreversible glycolytic reactions must be bypassed with different enzymes.
+
+\subsubsection{Bypass 1: Pyruvate to Phosphoenolpyruvate}
+
+The pyruvate kinase reaction ($\Delta G°' = -31.4$ kJ/mol) is too energetically unfavorable to reverse. Two enzymes are required:
+
+\textbf{Step 1a: Pyruvate Carboxylase}
+
+\[
+\text{Pyruvate} + \text{CO}_2 + \text{ATP} + \text{H}_2\text{O} \xrightarrow{\text{Pyruvate Carboxylase}} \text{Oxaloacetate} + \text{ADP} + \text{P}_i
+\]
+
+\begin{itemize}
+    \item Location: \textbf{Mitochondrial matrix}
+    \item Requires \textbf{biotin} as cofactor
+    \item Requires \textbf{acetyl-CoA} as allosteric activator
+    \item Adds CO$_2$ to pyruvate (carboxylation)
+\end{itemize}
+
+\textbf{Step 1b: Phosphoenolpyruvate Carboxykinase (PEPCK)}
+
+\[
+\text{Oxaloacetate} + \text{GTP} \xrightarrow{\text{PEPCK}} \text{Phosphoenolpyruvate} + \text{CO}_2 + \text{GDP}
+\]
+
+\begin{itemize}
+    \item Location: \textbf{Cytosol} (in humans) or mitochondria (varies by species)
+    \item Removes CO$_2$ and adds phosphate from GTP
+    \item OAA must be transported out of mitochondria (as malate or aspartate)
+\end{itemize}
+
+\begin{analogy}
+Bypassing pyruvate kinase is like taking a detour around a one-way street. You can't go backward on the highway (pyruvate kinase), so you take two side roads (pyruvate carboxylase and PEPCK) to get around it. It costs more fuel (2 high-energy phosphates instead of 1), but it gets you where you need to go.
+\end{analogy}
+
+\subsubsection{Bypass 2: Fructose-1,6-bisphosphate to Fructose-6-phosphate}
+
+\[
+\text{Fructose-1,6-bisphosphate} + \text{H}_2\text{O} \xrightarrow{\text{Fructose-1,6-bisphosphatase}} \text{Fructose-6-phosphate} + \text{P}_i
+\]
+
+\begin{itemize}
+    \item Hydrolysis reaction (no ATP produced)
+    \item \textbf{Key regulatory enzyme} of gluconeogenesis
+    \item Inhibited by AMP and F-2,6-BP
+    \item Activated by ATP and citrate
+\end{itemize}
+
+\subsubsection{Bypass 3: Glucose-6-phosphate to Glucose}
+
+\[
+\text{Glucose-6-phosphate} + \text{H}_2\text{O} \xrightarrow{\text{Glucose-6-phosphatase}} \text{Glucose} + \text{P}_i
+\]
+
+\begin{itemize}
+    \item Located in \textbf{endoplasmic reticulum} membrane
+    \item Found only in \textbf{liver and kidney} (not muscle!)
+    \item This is why muscle cannot release free glucose into blood
+    \item G6P must be transported into ER lumen for hydrolysis
+\end{itemize}
+
+\subsection{Energy Cost of Gluconeogenesis}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5, colframe=red!70!black, title=\textbf{Energy Investment for Gluconeogenesis}]
+\textbf{Per glucose synthesized from 2 pyruvate:}
+\begin{itemize}
+    \item 4 ATP (2 for pyruvate carboxylase, 2 for phosphoglycerate kinase reversal)
+    \item 2 GTP (for PEPCK)
+    \item 2 NADH (for GAPDH reversal)
+\end{itemize}
+\textbf{Total: 6 high-energy phosphate bonds}
+
+Compare to glycolysis yield: 2 ATP + 2 NADH
+
+\textbf{Gluconeogenesis costs more than glycolysis produces!}
+\end{tcolorbox}
+\end{center}
+
+\subsection{Reciprocal Regulation of Glycolysis and Gluconeogenesis}
+
+\begin{theorem}
+\textbf{Glycolysis and gluconeogenesis are reciprocally regulated} to prevent a futile cycle (simultaneous operation would waste ATP).
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Regulator} & \textbf{Glycolysis} & \textbf{Gluconeogenesis} \\
+\midrule
+ATP (high) & Inhibits PFK-1 & Activates FBPase-1 \\
+AMP (low energy) & Activates PFK-1 & Inhibits FBPase-1 \\
+Citrate & Inhibits PFK-1 & Activates FBPase-1 \\
+F-2,6-BP & Activates PFK-1 & Inhibits FBPase-1 \\
+Insulin & Stimulates glycolysis & Inhibits gluconeogenesis \\
+Glucagon & Inhibits glycolysis & Stimulates gluconeogenesis \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+\subsection{The Cori Cycle}
+
+\begin{definition}
+The \textbf{Cori cycle} is the metabolic pathway in which lactate produced by anaerobic glycolysis in muscle is transported to the liver, converted to glucose via gluconeogenesis, and returned to muscle.
+\end{definition}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto]
+    % Nodes
+    \node[draw, rectangle, fill=blue!20, minimum width=3cm, minimum height=1.5cm] (muscle) {\textbf{MUSCLE}};
+    \node[draw, rectangle, fill=red!20, minimum width=3cm, minimum height=1.5cm, right=4cm of muscle] (liver) {\textbf{LIVER}};
+    
+    % Arrows
+    \draw[->,
+very thick, blue] (muscle.north) to[bend left=30] node[above] {Lactate} (liver.north);
+    \draw[->, very thick, red] (liver.south) to[bend left=30] node[below] {Glucose} (muscle.south);
+    
+    % Internal processes
+    \node[below=0.3cm of muscle, text width=3cm, align=center] {\small Glycolysis\\Glucose $\rightarrow$ Lactate\\(2 ATP produced)};
+    \node[below=0.3cm of liver, text width=3cm, align=center] {\small Gluconeogenesis\\Lactate $\rightarrow$ Glucose\\(6 ATP consumed)};
+    
+    % Blood
+    \node[above=1.5cm of muscle, xshift=2cm] {\textbf{BLOOD}};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+    \item Allows muscle to function anaerobically during intense exercise
+    \item Shifts metabolic burden (ATP cost) to the liver
+    \item Net cost: 4 ATP per cycle (liver pays 6, muscle gains 2)
+    \item Important during exercise, trauma, and in cancer (Warburg effect)
+\end{itemize}
+
+\begin{clinmark}
+\textbf{Clinical Correlation: Lactic Acidosis}
+
+When lactate production exceeds the liver's capacity for gluconeogenesis, lactate accumulates in blood, causing \textbf{lactic acidosis}. Causes include:
+\begin{itemize}
+    \item Tissue hypoxia (shock, cardiac arrest)
+    \item Liver failure (cannot perform gluconeogenesis)
+    \item Metformin toxicity (inhibits gluconeogenesis)
+    \item Thiamine deficiency (pyruvate cannot enter TCA cycle)
+\end{itemize}
+\end{clinmark}
+
+\subsection{Practice Problems: Gluconeogenesis}
+
+\begin{enumerate}
+    \item Which of the following enzymes is unique to gluconeogenesis?
+    \begin{enumerate}[label=\Alph*.]
+        \item Hexokinase
+        \item Phosphofructokinase-1
+        \item Fructose-1,6-bisphosphatase
+        \item Pyruvate kinase
+    \end{enumerate}
+    
+    \textbf{Answer: C.} Fructose-1,6-bisphosphatase is one of the four enzymes unique to gluconeogenesis, bypassing the irreversible PFK-1 reaction of glycolysis.
+    
+    \item A patient with liver cirrhosis develops hypoglycemia after fasting. Which metabolic pathway is most likely impaired?
+    \begin{enumerate}[label=\Alph*.]
+        \item Glycolysis
+        \item Glycogenolysis in muscle
+        \item Gluconeogenesis
+        \item Pentose phosphate pathway
+    \end{enumerate}
+    
+    \textbf{Answer: C.} Gluconeogenesis occurs primarily in the liver. During fasting, the liver synthesizes glucose to maintain blood glucose levels. Liver damage impairs this critical function.
+    
+    \item Fructose-2,6-bisphosphate (F-2,6-BP) has what effect on gluconeogenesis?
+    \begin{enumerate}[label=\Alph*.]
+        \item Activates fructose-1,6-bisphosphatase
+        \item Inhibits fructose-1,6-bisphosphatase
+        \item Activates pyruvate carboxylase
+        \item Has no effect on gluconeogenesis
+    \end{enumerate}
+    
+    \textbf{Answer: B.} F-2,6-BP inhibits FBPase-1 (gluconeogenesis) while activating PFK-1 (glycolysis), ensuring reciprocal regulation of these opposing pathways.
+\end{enumerate}
+
+%────────────────────────────────────────────────────────────────
