@@ -384,8 +384,6 @@ In charging by induction, the final charge on the object is \textbf{opposite} to
 Imagine a bunch of bar magnets (molecules) arranged randomly. When you bring a big magnet (charged rod) nearby, all the little bar magnets rotate to line up with it --- the north ends point toward the south pole of the big magnet. Polarization is the same idea: nearby charges cause the charge inside each molecule to shift and line up!
 \end{analogy}
 
-Even insulators can be affected by nearby charges through \textbf{polarization}---the slight shifting of charge within molecules.
-
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
     % Charged rod
@@ -471,8 +469,6 @@ The direction of the electric force between two charges depends on the signs of 
 \begin{analogy}
 Think of two people playing with magnets. When you try to push the same poles together (north--north or south--south), they push each other away --- that's like charges repelling! But when you put opposite poles together (north--south), they snap together --- that's opposite charges attracting!
 \end{analogy}
-
-The direction of the force depends on the signs of the charges:
 
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -571,8 +567,6 @@ Each force is calculated independently as if the other charges were not present.
 Imagine you're standing in a tug-of-war with several people pulling you in different directions at the same time. Each person pulls with their own force, and you feel the combined effect of all of them together. The superposition principle works the same way --- each charge exerts its own force, and the total force is just the sum of all the individual pulls!
 \end{analogy}
 
-When multiple charges are present, the net force on any charge is the \textbf{vector sum} of the individual forces from all other charges:
-
 \begin{example}
 Three charges are arranged along a line: $q_1 = +3.0$ $\mu$C at $x = 0$, $q_2 = -5.0$ $\mu$C at $x = 4.0$ m, and $q_3 = +2.0$ $\mu$C at $x = 7.0$ m. Find the net force on $q_2$.
 
@@ -639,8 +633,6 @@ For charges not arranged in a line, the superposition principle still applies, b
 \begin{analogy}
 Think of walking to school when there's both a strong wind pushing you sideways and gravity pulling you down. You feel both forces at once, and your total motion is a combination of both effects. To find your net force, you separately add up all the horizontal pushes and all the vertical pushes, then combine them --- just like 2D superposition!
 \end{analogy}
-
-For charges not arranged in a line, we must use vector components.
 
 \begin{example}
 Three charges are placed at the corners of a right triangle: $q_1 = +4.0$ $\mu$C at the origin, $q_2 = -3.0$ $\mu$C at $(3.0, 0)$ m, and $q_3 = +5.0$ $\mu$C at $(0, 4.0)$ m. Find the net force on $q_1$.
@@ -736,20 +728,6 @@ where $q_0$ is a small positive test charge. The electric field has units of N/C
 Imagine you're standing in a river and you feel the current pushing you. The electric field is like the river current at each point in space --- it tells you which direction and how strongly a positive charge would be pushed if you placed it there, even before you put anything in!
 \end{analogy}
 
-The \textbf{electric field} $\vec{E}$ at a point in space is defined as the electric force per unit positive test charge:
-
-\[
-\boxed{\vec{E} = \frac{\vec{F}}{q_0}}
-\]
-
-where $q_0$ is a small positive test charge.
-
-\begin{itemize}
-    \item \textbf{Units:} Newtons per Coulomb (N/C) or Volts per meter (V/m)
-    \item \textbf{Type:} Vector quantity (has magnitude and direction)
-    \item \textbf{Direction:} The direction of force on a positive test charge
-\end{itemize}
-
 \subsection{Electric Field Due to a Point Charge}
 
 \begin{law}[Electric Field of a Point Charge]
@@ -763,12 +741,6 @@ The field points \textbf{away from} a positive charge and \textbf{toward} a nega
 \begin{analogy}
 A point charge is like a lamp in a dark room. The brightness (field strength) follows an inverse-square law: move twice as far away and the light (field) becomes four times dimmer. A positive charge is like a lamp that ``pushes'' light outward in all directions, while a negative charge ``sucks'' light back in toward itself!
 \end{analogy}
-
-For a point charge $q$, the electric field at distance $r$ is:
-
-\[
-\boxed{E = k\frac{|q|}{r^2}}
-\]
 
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
@@ -819,17 +791,6 @@ Once we know the electric field, the force on any charge $q$ placed in that fiel
 The electric field is like a flowing river current. If you drop a leaf (positive charge) in, it goes with the current. If you drop a special ``anti-leaf'' (negative charge), it moves against the current. The stronger the current (larger $E$) or the heavier the leaf (larger $|q|$), the greater the force. The field tells every charge at every location how hard and which way to push!
 \end{analogy}
 
-Once we know the electric field, we can find the force on any charge placed in that field:
-
-\[
-\boxed{\vec{F} = q\vec{E}}
-\]
-
-\begin{itemize}
-    \item If $q > 0$: Force is in the \textbf{same direction} as $\vec{E}$
-    \item If $q < 0$: Force is in the \textbf{opposite direction} to $\vec{E}$
-\end{itemize}
-
 \begin{example}
 An electron is placed in a uniform electric field of magnitude $E = 2.0 \times 10^4$ N/C pointing to the right. Find the force on the electron and its acceleration.
 
@@ -861,12 +822,6 @@ Each field is calculated independently, then added as vectors.
 \begin{analogy}
 Think of several people all talking at the same time in a room. Each person creates their own sound waves spreading outward. At any spot in the room, you hear the combination (sum) of all those sound waves. Electric fields work the same way --- each charge creates its own field, and the total field at any point is the sum of all contributions!
 \end{analogy}
-
-The net electric field at any point is the vector sum of the fields from all charges:
-
-\[
-\boxed{\vec{E}_{net} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3 + \cdots = \sum_{i} \vec{E}_i}
-\]
 
 \begin{example}
 Two charges, $q_1 = +6.0$ $\mu$C and $q_2 = -6.0$ $\mu$C, are separated by 10 cm. Find the electric field at the midpoint between them.
@@ -924,8 +879,6 @@ E_{net} = E_1 + E_2 = 2.16 \times 10^{7} + 2.16 \times 10^{7} = \boxed{4.32 \tim
 \begin{analogy}
 Electric field lines are like the paths that tiny boats would follow on a river. The arrows show the current direction, and where the paths are packed closely together the river flows fastest (strong field). Where the paths spread far apart the river is calm (weak field). Drop a positive ``charge-boat'' anywhere and it will follow the field lines downstream!
 \end{analogy}
-
-Electric field lines are a visual representation of the electric field. They show both the direction and relative strength of the field.
 
 \begin{tcolorbox}[colback=yellow!10!white, colframe=yellow!50!black, title=Rules for Electric Field Lines]
 \begin{enumerate}
@@ -1896,8 +1849,6 @@ An \textbf{electric dipole} consists of two equal and opposite charges $+q$ and 
 A dipole is like a bar magnet, which has a north pole ($+$) and a south pole ($-$). The two poles are always together as a pair. You can't have just one pole alone --- similarly, a dipole always has a positive and a negative end paired together!
 \end{analogy}
 
-An \textbf{electric dipole} consists of two equal and opposite charges $+q$ and $-q$ separated by a distance $d$.
-
 \begin{center}
 \begin{tikzpicture}[scale=1.2]
     % Charges
@@ -1929,17 +1880,6 @@ where $|\vec{p}| = qd$ is the magnitude (SI unit: C$\cdot$m) and the direction i
 \begin{analogy}
 The dipole moment is like a compass needle's ``strength'' --- how strongly it points in a particular direction. A longer needle (bigger separation $d$) or a stronger magnet (bigger charge $q$) gives a larger dipole moment, meaning the dipole is more sensitive to being rotated by an external field!
 \end{analogy}
-
-The \textbf{electric dipole moment} is a vector quantity:
-\[
-\boxed{\vec{p} = q\vec{d}}
-\]
-
-where:
-\begin{itemize}
-    \item $|\vec{p}| = qd$ is the magnitude (units: C$\cdot$m)
-    \item Direction: from $-q$ to $+q$
-\end{itemize}
 
 \begin{example}
 A water molecule has an effective dipole moment of $6.2 \times 10^{-30}$ C$\cdot$m. If the effective charge separation is 0.04 nm, what is the effective charge?
@@ -2638,14 +2578,6 @@ Unlike electric fields (which are vectors requiring component addition), potenti
 Adding electric potentials is like adding money in your bank accounts. If account A has \$50 and account B has $-$\$30 (you owe \$30), your total is simply \$50 $+$ ($-$\$30) = \$20. No need for direction arrows --- just plain addition! That's much easier than adding vector forces.
 \end{analogy}
 
-Since potential is a scalar, the total potential from multiple charges is simply the algebraic sum:
-
-\[
-\boxed{V_{total} = V_1 + V_2 + V_3 + \cdots = \sum_i \frac{kq_i}{r_i}}
-\]
-
-This is much simpler than adding electric field vectors!
-
 \begin{example}
 Two charges $q_1 = +4.0$ $\mu$C and $q_2 = -4.0$ $\mu$C are separated by 20 cm. Find the potential at:
 (a) the midpoint between them
@@ -2707,12 +2639,6 @@ In vector form: $\vec{E} = -\nabla V$. For a uniform field: $E = -\dfrac{\Delta 
 \begin{analogy}
 Think of the electric potential as the elevation on a hill. The electric field is like the slope (steepness) of the hill --- it always points downhill (from high potential to low potential). The steeper the hill (large potential change over short distance), the stronger the electric field --- just like water flows faster down steeper slopes!
 \end{analogy}
-
-The electric field points in the direction of decreasing potential:
-
-\[
-\boxed{E_x = -\frac{dV}{dx}, \quad E_y = -\frac{dV}{dy}, \quad E_z = -\frac{dV}{dz}}
-\]
 
 In vector notation:
 \[
@@ -3635,18 +3561,6 @@ where $R_0$ is the resistance at reference temperature $T_0$ (usually 20°C) and
 Think of electrons moving through a metal like people running through a crowded hallway. When it's cold, people move slowly and don't bump into each other much --- low resistance. When it's hot, everyone is bouncing around more energetically and crashing into each other, creating more obstacles --- higher resistance. Hotter metal = more collisions = more resistance!
 \end{analogy}
 
-For most metals, resistance increases with temperature:
-\[
-\boxed{R = R_0[1 + \alpha(T - T_0)]}
-\]
-
-where:
-\begin{itemize}
-    \item $R_0$ = resistance at reference temperature $T_0$ (usually 20°C)
-    \item $\alpha$ = temperature coefficient of resistivity
-    \item For copper: $\alpha = 3.9 \times 10^{-3}$ °C$^{-1}$
-\end{itemize}
-
 Similarly for resistivity:
 \[
 \rho = \rho_0[1 + \alpha(T - T_0)]
@@ -3709,17 +3623,6 @@ The practical unit is the \textbf{kilowatt-hour} (kWh): $1\text{ kWh} = 3.6 \tim
 \begin{analogy}
 Electrical energy is like water flowing from a tank. Power is like the rate of flow (liters per second), and energy is the total amount of water that has flowed (total liters). Run the tap (power) for a longer time and you use more water (energy). Your electric bill charges you for the total ``water'' used --- that's kilowatt-hours!
 \end{analogy}
-
-Energy consumed over time:
-\[
-\boxed{E = Pt}
-\]
-
-The practical unit is the \textbf{kil
-owatt-hour} (kWh):
-\[
-1 \text{ kWh} = (1000 \text{ W})(3600 \text{ s}) = 3.6 \times 10^6 \text{ J}
-\]
 
 \begin{example}
 A 1500 W space heater operates for 8 hours per day. If electricity costs \$0.12 per kWh, what is the daily cost?
@@ -3851,16 +3754,6 @@ Series resistors are like speed bumps on a single road --- every car (electron) 
 \end{tikzpicture}
 \end{center}
 
-For resistors in \textbf{series}:
-\begin{itemize}
-    \item Same current flows through each resistor: $I_1 = I_2 = I_3 = I$
-    \item Voltages add: $V_{total} = V_1 + V_2 + V_3$
-    \item Equivalent resistance:
-\end{itemize}
-\[
-\boxed{R_{eq} = R_1 + R_2 + R_3 + \cdots}
-\]
-
 \subsection{Resistors in Parallel}
 
 \begin{law}[Resistors in Parallel]
@@ -3907,16 +3800,6 @@ Parallel resistors are like adding more checkout lanes at a grocery store. Each 
     \node[red] at (2.5,2.1) {$V$};
 \end{tikzpicture}
 \end{center}
-
-For resistors in \textbf{parallel}:
-\begin{itemize}
-    \item Same voltage across each resistor: $V_1 = V_2 = V_3 = V$
-    \item Currents add: $I_{total} = I_1 + I_2 + I_3$
-    \item Equivalent resistance:
-\end{itemize}
-\[
-\boxed{\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots}
-\]
 
 For two resistors in parallel:
 \[
@@ -4934,8 +4817,6 @@ The potential energy of a magnetic dipole in a magnetic field is:
 A magnetic dipole in a field is like a ball on a hill. When the dipole is aligned with the field ($\theta = 0°$), it's at the lowest point of the hill --- stable, low energy, doesn't want to move. When it's anti-aligned ($\theta = 180°$), it's at the top of the hill --- unstable, high energy, wants to fall. The potential energy tells you which way the dipole will naturally rotate!
 \end{analogy}
 
-The potential energy of a magnetic dipole in a magnetic field:
-
 \subsection{The DC Motor}
 
 A DC motor converts electrical energy into mechanical energy using the torque on a current loop.
@@ -4994,8 +4875,6 @@ where $n$ is the charge carrier density, $e$ is the elementary charge, and $t$ i
 The Hall effect is like a river being blown sideways by the wind. The current (water) flows one way, the magnetic field (wind) blows another way, and the charges get pushed sideways, piling up on one side of the conductor. This charge buildup creates the Hall voltage --- a measurable sideways ``pressure'' caused by the magnetic force on moving charges!
 \end{analogy}
 
-When a current-carrying conductor is placed in a magnetic field perpendicular to the current, a voltage develops perpendicular to both.
-
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
     % Conductor
@@ -5017,18 +4896,6 @@ When a current-carrying conductor is placed in a magnetic field perpendicular to
     \node at (4.3,0.5,0.5) {$t$};
 \end{tikzpicture}
 \end{center}
-
-The Hall voltage:
-\[
-\boxed{V_H = \frac{IB}{net}}
-\]
-
-where:
-\begin{itemize}
-    \item $n$ = charge carrier density
-    \item $e$ = elementary charge
-    \item $t$ = thickness of the conductor
-\end{itemize}
 
 The Hall coefficient:
 \[
@@ -5426,16 +5293,6 @@ Two parallel wires carrying currents exert magnetic forces on each other.
 \end{tikzpicture}
 \end{center}
 
-The force per unit length between two parallel wires:
-\[
-\boxed{\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}}
-\]
-
-\begin{itemize}
-    \item Currents in the \textbf{same direction}: wires \textbf{attract}
-    \item Currents in \textbf{opposite directions}: wires \textbf{repel}
-\end{itemize}
-
 \begin{example}
 Two parallel wires 10 cm apart carry currents of 5.0 A and 8.0 A in the same direction. Find the force per meter between them.
 
@@ -5734,11 +5591,6 @@ When a conductor moves through a magnetic field, an EMF is induced.
     \node at (1.5,-0.5) {Rails};
 \end{tikzpicture}
 \end{center}
-
-For a rod of length $L$ moving with velocity $v$ perpendicular to a magnetic field $B$:
-\[
-\boxed{\mathcal{E} = BLv}
-\]
 
 \textbf{Derivation using Faraday's Law:}
 \[
@@ -6279,8 +6131,6 @@ An \textbf{LC circuit} consists of an inductor and capacitor connected together,
 \begin{analogy}
 An LC circuit is like a swinging pendulum or a child on a swing. The capacitor stores energy as electric potential energy (like the swing at its highest point), and the inductor stores energy as magnetic energy (like the swing at its fastest point). The energy keeps converting back and forth between the two, creating perpetual oscillations --- just like the swing keeps going without any extra push!
 \end{analogy}
-
-An LC circuit consists of an inductor and capacitor with no resistance.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -7474,8 +7324,6 @@ Maxwell showed this equals the measured speed of light, proving that light itsel
 An accelerating charge is like dropping a stone into a pond. The stone (charge) disturbs the water (electromagnetic field) and sends ripples (EM waves) spreading outward in all directions. The faster and more violently you accelerate the charge (like shaking the stone up and down), the stronger the electromagnetic waves!
 \end{analogy}
 
-Electromagnetic waves are produced by accelerating charges.
-
 \begin{center}
 \begin{tikzpicture}[scale=0.7]
     % Antenna
@@ -7552,11 +7400,6 @@ The electric and magnetic field amplitudes are always in this fixed ratio.
 \begin{analogy}
 In an EM wave, $E$ and $B$ are always ``dance partners'' in a fixed ratio. If the electric field doubles, the magnetic field doubles too --- they always stay in perfect proportion. The speed of light $c$ is the ``exchange rate'' between the electric and magnetic aspects of the same wave!
 \end{analogy}
-
-For a plane electromagnetic wave:
-\[
-\boxed{\frac{E}{B} = c}
-\]
 
 or equivalently: $E = cB$
 
