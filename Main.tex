@@ -6,532 +6,1378 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{multicol}
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Sample Quiz 2 - Solutions}
-\lhead{PHYSICS 1101.100}
+\rhead{Chapters 7, 8, 9 \& 10 -- Exam Prep}
+\lhead{PHYSICS 1101 -- University of Minnesota}
 \rfoot{Page \thepage}
 
-\tcbuselibrary{theorems, skins}
+\tcbuselibrary{theorems, skins, breakable}
 
-\newtcolorbox{keybox}[1][]{
-  colback=yellow!10,
-  colframe=orange!75!black,
+% Box for problem statements (orange)
+\newtcolorbox{problembox}[1][]{
+  colback=orange!8,
+  colframe=orange!80!black,
   title=#1,
-  fonttitle=\bfseries
+  fonttitle=\bfseries,
+  breakable
 }
 
-\newtcolorbox{solutionbox}{
+% Box for solutions (blue)
+\newtcolorbox{solutionbox}[1][Solution]{
   colback=blue!5,
   colframe=blue!50!black,
-  title=Solution,
-  fonttitle=\bfseries
+  title=#1,
+  fonttitle=\bfseries,
+  breakable
 }
 
+% Box for key concepts (green)
+\newtcolorbox{conceptbox}[1][Key Concept]{
+  colback=green!8,
+  colframe=green!50!black,
+  title=#1,
+  fonttitle=\bfseries,
+  breakable
+}
+
+% Box for warnings (red)
+\newtcolorbox{warningbox}[1][Watch Out!]{
+  colback=red!5,
+  colframe=red!60!black,
+  title=#1,
+  fonttitle=\bfseries,
+  breakable
+}
+
+% Box for answers (yellow)
+\newtcolorbox{answerbox}[1][Answer Key]{
+  colback=yellow!10,
+  colframe=yellow!60!black,
+  title=#1,
+  fonttitle=\bfseries,
+  breakable
+}
+
+%----------------------------------------------
 \begin{document}
+%----------------------------------------------
 
 \begin{center}
-{\LARGE \textbf{PHYSICS 1101.100 -- Sample Quiz 2}}\\[0.5em]
-{\large Additional Practice Problems: Complete Solutions}
+{\LARGE \textbf{PHYSICS 1101 -- University of Minnesota}}\\[0.4em]
+{\Large \textbf{Chapters 7, 8, 9 \& 10 Exam Practice Guide}}\\[0.3em]
+{\large Rotational Motion $\cdot$ Equilibrium \& Elasticity $\cdot$ Momentum \& Collisions $\cdot$ Energy \& Work}\\[0.5em]
+\rule{0.9\linewidth}{0.4pt}\\[0.3em]
+{\normalsize \textit{Organized into \textbf{Part I: Questions} (attempt first),
+\textbf{Part II: Multiple Choice},
+\textbf{Part III: Solutions}, \textbf{Part IV: MC Answers}, and \textbf{Part V: Quick Reference}.}}
+\end{center}
+
+\vspace{0.5em}
+
+\begin{conceptbox}[How to Use This Guide]
+\begin{enumerate}
+  \item \textbf{Try every problem yourself first} --- cover up Part III and work each problem on paper.
+  \item \textbf{Answer the multiple choice} --- these test the ideas, not just the algebra.
+  \item \textbf{Read the solutions} --- every step has a plain-English explanation of the \emph{why}.
+  \item \textbf{Use the Quick-Reference table} in Part V before the exam.
+\end{enumerate}
+\end{conceptbox}
+
+\clearpage
+
+%##############################################
+\part*{PART I: PRACTICE PROBLEMS (Questions Only)}
+%##############################################
+
+\begin{center}
+\textit{Attempt every part before looking at the solutions in Part III.}
 \end{center}
 
 \vspace{1em}
 
-%=============================================
-\section*{Practice Problem A: Two-Spring System Variation}
-%=============================================
+%==============================================
+\section*{Problem 1: Shock Absorber Springs (Advanced)}
+%==============================================
 
-\begin{keybox}[Problem Statement]
-A diving board of length $L = 3.0$ m and mass $M = 25$ kg is supported by two springs. Spring 1 (with constant $k_1 = 8000$ N/m) is located at the left end, and Spring 2 (with constant $k_2 = 12000$ N/m) is located at a distance of 2.0 m from the left end. A diver of mass $m = 70$ kg stands at the right end of the board. Find the compression of each spring.
-\end{keybox}
+\begin{problembox}[Problem 1 -- Chapters 8 \& 10: Asymmetric Spring Suspension]
+A 1600 kg SUV has its center of mass $a = 0.80$ m behind the front axle and $b = 1.20$ m
+in front of the rear axle (wheelbase $L = 2.00$ m). The center of mass is also
+$d = 0.10$ m to the \emph{right} of the vehicle centerline. The front wheel track
+(distance between the two front wheels) is $W = 1.60$ m. The front-left spring has
+constant $k_L = 24{,}000$ N/m; the front-right spring has $k_R = 30{,}000$ N/m.
 
-\begin{solutionbox}
-\textbf{Step 1: Identify all forces and their positions}
+\begin{enumerate}[(a)]
+  \item Find the total vertical force $R_f$ on the front axle.
+        (\textit{Hint: take torques about the rear axle.})
+  \item Taking torques about the \emph{left} front wheel (left-right axis), find
+        the individual spring forces $F_R$ (right) and $F_L$ (left).
+  \item Find the compression of each spring ($x_L$ and $x_R$). Are they equal?
+  \item Find the total elastic potential energy stored in the two front springs.
+  \item When the SUV drives over a speed bump, the dynamic load on the front axle
+        momentarily \emph{doubles}. Find the new right-spring compression $x_R'$.
+        What percentage increase is this compared to the static value?
+\end{enumerate}
+\end{problembox}
 
-Let $\delta_1$ and $\delta_2$ be the compressions of springs 1 and 2.
+\vspace{1.5em}
 
-\begin{itemize}
-    \item Spring 1 force: $F_1 = k_1\delta_1$ at $x = 0$
-    \item Spring 2 force: $F_2 = k_2\delta_2$ at $x = 2.0$ m
-    \item Board weight: $W_{\text{board}} = Mg = (25)(9.8) = 245$ N at $x = 1.5$ m
-    \item Diver weight: $W_{\text{diver}} = mg = (70)(9.8) = 686$ N at $x = 3.0$ m
-\end{itemize}
+%==============================================
+\section*{Problem 2: Force on Elbow Joint (Advanced)}
+%==============================================
 
-\textbf{Step 2: Apply Force Equilibrium ($\sum F_y = 0$)}
-\begin{equation}
-k_1\delta_1 + k_2\delta_2 = 245 + 686 = 931 \text{ N}
-\end{equation}
+\begin{problembox}[Problem 2 -- Chapter 8: Tilted Forearm Equilibrium]
+A nurse holds a patient chart of mass $m_c = 2.5$ kg at the end of their forearm
+($m_{\text{arm}} = 1.5$ kg, length $L = 0.35$ m). The forearm is tilted at angle
+$\phi = 30^\circ$ \emph{below} horizontal (pointing slightly downward).
+The bicep muscle attaches at $d = 5.0$ cm from the elbow joint and pulls at
+$\beta = 80^\circ$ from the forearm axis (nearly perpendicular to the forearm).
+The forearm's center of mass is at its midpoint.
 
-\textbf{Step 3: Apply Torque Equilibrium ($\sum \tau = 0$ about left end)}
-\begin{align}
-k_2\delta_2(2.0) &= W_{\text{board}}(1.5) + W_{\text{diver}}(3.0)\\
-24000\delta_2 &= 367.5 + 2058 = 2425.5\\
-\delta_2 &= \boxed{0.101 \text{ m} = 10.1 \text{ cm}}
-\end{align}
+\begin{enumerate}[(a)]
+  \item Draw a careful free body diagram. Label the elbow joint, the forearm angle,
+        the muscle attachment point, and all forces.
+  \item Taking torques about the elbow joint, write and solve the torque equation
+        to find the bicep muscle force $F_B$.
+        (\textit{Hint: for a vertical weight $W$ at distance $r$ along a forearm tilted
+        $\phi$ below horizontal, the torque is $\tau = Wr\cos\phi$.})
+  \item Find the $x$- and $y$-components of the reaction force $\vec{R}$ at the
+        elbow joint, and then find its magnitude.
+  \item How would the bicep force change if the forearm were horizontal instead
+        ($\phi = 0^\circ$)? Show the calculation and explain why the force is larger
+        or smaller.
+\end{enumerate}
+\end{problembox}
 
-\textbf{Step 4: Solve for $\delta_1$}
-\begin{align}
-8000\delta_1 + 12000(0.101) &= 931\\
-8000\delta_1 &= 931 - 1212 = -281\\
-\delta_1 &= \boxed{-0.035 \text{ m}}
-\end{align}
+\vspace{1.5em}
 
-The negative sign indicates Spring 1 is in \textbf{tension} (stretched by 3.5 cm).
-\end{solutionbox}
+%==============================================
+\section*{Problem 3: Superman Rescue (Advanced -- 2D)}
+%==============================================
 
-\vspace{2em}
+\begin{problembox}[Problem 3 -- Chapters 9 \& 10: Two-Dimensional Rescue]
+Superman ($M = 90$ kg) is flying horizontally to the right at speed $u = 15.0$ m/s
+at height $H_S = 180$ m. He spots a person ($m = 70$ kg) who fell from a building of
+height $H_p = 200$ m and is currently at height $h = 80$ m, falling straight down.
+Superman immediately stops his powered flight and free-falls under gravity alone.
 
-%=============================================
-\section*{Practice Problem B: Variable-Force Stopping}
-%=============================================
+\begin{enumerate}[(a)]
+  \item Find the person's downward speed $v_p$ when she is at $h = 80$ m.
+  \item Find Superman's velocity just before he reaches the person at $h = 80$ m.
+        Give both horizontal ($v_{Sx}$) and vertical ($v_{Sy}$) components, and the
+        magnitude. (\textit{Superman's horizontal speed is unchanged; only the vertical
+        component is gained from falling.})
+  \item Just after Superman grabs the person, find their combined velocity components
+        $(v_{fx}, v_{fy})$ using \emph{conservation of momentum separately in $x$ and $y$}.
+        Then find the combined speed $v_f$.
+  \item How much work must Superman's muscles do to bring the pair to rest exactly at
+        ground level ($h = 0$)? Account for both the kinetic energy after the grab
+        and the work done by gravity over the remaining 80 m.
+\end{enumerate}
 
-\begin{keybox}[Problem Statement]
-A 1500 kg car traveling at 25 m/s needs to stop. The braking system applies a force that varies with position according to $F(x) = F_0 + bx$, where $F_0 = 5000$ N and $b = 200$ N/m. Using energy methods, find the stopping distance and compare it to constant-force braking with force $F_0$.
-\end{keybox}
+\noindent\textit{Use $g = 9.8$ m/s$^2$.}
+\end{problembox}
 
-\begin{solutionbox}
-\textbf{Step 1: Calculate Initial Kinetic Energy}
-\begin{equation}
-KE_i = \frac{1}{2}mv_0^2 = \frac{1}{2}(1500)(25)^2 = 468,750 \text{ J}
-\end{equation}
+\vspace{1.5em}
 
-\textbf{Step 2: Calculate Work by Variable Force}
-\begin{equation}
-W = -\int_0^{d}(F_0 + bx)\,dx = -\left(F_0 d + \frac{bd^2}{2}\right)
-\end{equation}
+%==============================================
+\section*{Problem 4: Forensic Car Crash (Chapter 9)}
+%==============================================
 
-\textbf{Step 3: Apply Work-Energy Theorem}
-\begin{align}
-F_0 d + \frac{bd^2}{2} &= 468,750\\
-5000d + 100d^2 &= 468,750\\
-d^2 + 50d - 4687.5 &= 0
-\end{align}
+\begin{problembox}[Problem 4 -- Chapter 9: 2D Momentum \& Collisions]
+A police officer reconstructs a T-bone collision at an intersection.
+Car~A ($m_A = 1500$ kg) was traveling \emph{east}; Car~B ($m_B = 1000$ kg)
+was traveling \emph{north}. They collide and lock together (perfectly inelastic
+collision). After the crash, the wreckage skids $d = 22.0$ m in a direction
+$\theta = 40^\circ$ north of east before stopping. The coefficient of kinetic
+friction is $\mu_k = 0.55$.
 
-\textbf{Step 4: Solve Quadratic}
-\begin{equation}
-d = \frac{-50 + \sqrt{2500 + 18750}}{2} = \frac{-50 + 145.8}{2} = \boxed{47.9 \text{ m}}
-\end{equation}
+\begin{enumerate}[(a)]
+  \item Use the work-energy theorem (friction does negative work) to find the speed
+        $v_0$ of the combined wreckage \emph{just after} the collision.
+  \item Apply conservation of momentum separately in the east direction and the north
+        direction to find the pre-crash speeds $v_A$ (Car~A) and $v_B$ (Car~B).
+  \item Car~A's driver claims to have been driving at the speed limit of 50 km/h.
+        Is this consistent with your answer? Show your work (convert m/s to km/h).
+  \item Calculate the kinetic energy \emph{lost} in the collision. What percentage
+        of the original kinetic energy was lost?
+\end{enumerate}
+\end{problembox}
 
-\textbf{Step 5: Constant-Force Comparison}
-\begin{equation}
-d_{\text{constant}} = \frac{KE_i}{F_0} = \frac{468,750}{5000} = \boxed{93.75 \text{ m}}
-\end{equation}
-\end{solutionbox}
+\vspace{1.5em}
+
+%==============================================
+\section*{Problem A: Two-Spring Diving Board}
+%==============================================
+
+\begin{problembox}[Problem A -- Chapter 8: Equilibrium]
+A diving board of length $L = 3.0$ m and mass $M = 25$ kg is supported by two springs.
+Spring~1 ($k_1 = 8000$ N/m) is at the left end ($x = 0$); Spring~2
+($k_2 = 12{,}000$ N/m) is at $x = 2.0$ m.
+A diver of mass $m = 70$ kg stands at the right end ($x = 3.0$ m).
+
+\begin{enumerate}[(a)]
+  \item Find the compression $\delta_2$ of Spring~2.
+  \item Find the compression $\delta_1$ of Spring~1. What does a negative value mean?
+\end{enumerate}
+\end{problembox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Problem B: Variable-Force Braking}
+%==============================================
+
+\begin{problembox}[Problem B -- Chapter 10: Work-Energy Theorem]
+A 1500 kg car traveling at $v_0 = 25$ m/s applies brakes.
+The braking force varies with position:
+$F(x) = F_0 + bx$, where $F_0 = 5000$ N and $b = 200$ N/m.
+
+\begin{enumerate}[(a)]
+  \item Use the work-energy theorem to find the stopping distance $d$.
+  \item Compare to constant-force braking with force $F_0$ alone.
+\end{enumerate}
+\end{problembox}
+
+\clearpage
+
+%##############################################
+\part*{PART II: CONCEPT CHECK -- Multiple Choice}
+%##############################################
+
+\begin{center}
+\textit{Circle the best answer. Answers with explanations are in Part IV.}\\[0.5em]
+\textit{Topics: Ch.~7 (Rotational Motion), Ch.~8 (Equilibrium \& Elasticity),
+Ch.~9 (Momentum \& Collisions), Ch.~10 (Energy \& Work).}
+\end{center}
 
 \vspace{1em}
 
-\begin{keybox}[Key Result]
+%==============================================
+\section*{Chapter 7: Rotational Motion}
+%==============================================
+
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, leftmargin=*, itemsep=1.2em]
+
+\item A solid disk and a hollow ring have the same mass and radius. They start from rest
+  and roll down an identical incline without slipping. Which reaches the bottom first?
+  \begin{enumerate}[(A)]
+    \item The hollow ring
+    \item The solid disk
+    \item They arrive at the same time
+    \item It depends on the angle of the incline
+  \end{enumerate}
+
+\item A figure skater pulls her arms inward during a spin. Ignoring friction, her
+  angular speed
+  \begin{enumerate}[(A)]
+    \item decreases, because her moment of inertia decreases
+    \item increases, because her moment of inertia decreases
+    \item stays the same, because no external torque acts
+    \item decreases, because energy is conserved
+  \end{enumerate}
+
+\item The moment of inertia of a thin rod of mass $M$ and length $L$ rotating about
+  its \emph{center} is $\frac{1}{12}ML^2$. What is it about one \emph{end}?
+  \begin{enumerate}[(A)]
+    \item $\frac{1}{6}ML^2$
+    \item $\frac{1}{4}ML^2$
+    \item $\frac{1}{3}ML^2$
+    \item $\frac{1}{2}ML^2$
+  \end{enumerate}
+
+\item A net torque of 12 N$\cdot$m acts on a wheel with moment of inertia
+  $I = 4$ kg$\cdot$m$^2$. The angular acceleration is
+  \begin{enumerate}[(A)]
+    \item 0.33 rad/s$^2$
+    \item 3 rad/s$^2$
+    \item 8 rad/s$^2$
+    \item 48 rad/s$^2$
+  \end{enumerate}
+
+\item A merry-go-round (radius $R = 2$ m, $I = 500$ kg$\cdot$m$^2$) spins freely at
+  $\omega = 1$ rad/s. A child of mass 40 kg jumps onto the rim. The new $\omega$ is
+  \emph{closest} to
+  \begin{enumerate}[(A)]
+    \item 0.76 rad/s
+    \item 0.86 rad/s
+    \item 1.0 rad/s
+    \item 1.25 rad/s
+  \end{enumerate}
+
+\item Which quantity is conserved when a system experiences no net external torque?
+  \begin{enumerate}[(A)]
+    \item Kinetic energy
+    \item Linear momentum
+    \item Angular momentum
+    \item Potential energy
+  \end{enumerate}
+
+\item A wheel starts from rest and accelerates uniformly at $\alpha = 2$ rad/s$^2$.
+  How many revolutions does it complete in the first 4 s?
+  \begin{enumerate}[(A)]
+    \item 2.55 rev
+    \item 3.14 rev
+    \item 5.09 rev
+    \item 8 rev
+  \end{enumerate}
+
+\item The rotational kinetic energy of a spinning object is
+  \begin{enumerate}[(A)]
+    \item $\frac{1}{2}Mv^2$
+    \item $\frac{1}{2}I\omega$
+    \item $\frac{1}{2}I\omega^2$
+    \item $I\alpha$
+  \end{enumerate}
+
+\end{enumerate}
+
+%==============================================
+\section*{Chapter 8: Equilibrium \& Elasticity}
+%==============================================
+
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, leftmargin=*, itemsep=1.2em, start=9]
+
+\item For a rigid body to be in static equilibrium, which conditions must \emph{both}
+  be satisfied?
+  \begin{enumerate}[(A)]
+    \item $\sum F = 0$ only
+    \item $\sum \tau = 0$ only
+    \item $\sum F = 0$ \textbf{and} $\sum \tau = 0$
+    \item The center of mass must be at the geometric center
+  \end{enumerate}
+
+\item When choosing a pivot point for a torque equation in a static equilibrium
+  problem, the best strategy is to
+  \begin{enumerate}[(A)]
+    \item always choose the geometric center of the object
+    \item choose the point where the most forces act
+    \item choose the point where an unknown force is applied, to eliminate it
+    \item choose the highest point of the object
+  \end{enumerate}
+
+\item A uniform plank (length 4 m, mass 20 kg) is supported at both ends.
+  A 60 kg person stands 1 m from the left end. The upward support force at the
+  \emph{left} end is
+  \begin{enumerate}[(A)]
+    \item 294 N
+    \item 441 N
+    \item 539 N
+    \item 686 N
+  \end{enumerate}
+
+\item A steel rod is stretched by a tensile stress of $2 \times 10^8$ Pa.
+  If Young's modulus for steel is $2 \times 10^{11}$ Pa, the strain is
+  \begin{enumerate}[(A)]
+    \item $1 \times 10^{-3}$
+    \item $4 \times 10^{19}$
+    \item $1 \times 10^{3}$
+    \item $1 \times 10^{-2}$
+  \end{enumerate}
+
+\item A ladder (length $L$, mass $m$) leans against a frictionless wall at angle
+  $\theta$ from the ground. The friction force from the ground on the ladder equals
+  \begin{enumerate}[(A)]
+    \item $mg\sin\theta$
+    \item $mg\tan\theta$
+    \item $\dfrac{mg}{2\tan\theta}$
+    \item $mg\cos\theta$
+  \end{enumerate}
+
+\item Which statement about the center of gravity is correct?
+  \begin{enumerate}[(A)]
+    \item It is always at the geometric center of an object
+    \item It is the point where the total gravitational torque is zero
+    \item It coincides with the center of mass near Earth's surface
+    \item Both B and C are correct
+  \end{enumerate}
+
+\item A spring ($k = 500$ N/m) is compressed by 0.04 m. The elastic potential energy
+  stored is
+  \begin{enumerate}[(A)]
+    \item 0.40 J
+    \item 0.80 J
+    \item 1.00 J
+    \item 20 J
+  \end{enumerate}
+
+\item A beam is in static equilibrium under several forces. If you shift the pivot
+  point to a different location along the beam, the torque equation
+  \begin{enumerate}[(A)]
+    \item gives a different physical result
+    \item is no longer valid
+    \item gives the same physical result (equilibrium is pivot-independent)
+    \item only works if the new pivot is at the center of mass
+  \end{enumerate}
+
+\end{enumerate}
+
+%==============================================
+\section*{Chapter 9: Momentum \& Collisions}
+%==============================================
+
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, leftmargin=*, itemsep=1.2em, start=17]
+
+\item The impulse delivered to an object equals
+  \begin{enumerate}[(A)]
+    \item the net force times the distance traveled
+    \item the change in the object's kinetic energy
+    \item the change in the object's momentum
+    \item the net force divided by the time interval
+  \end{enumerate}
+
+\item A 0.5 kg ball traveling at 10 m/s strikes a wall and bounces back at 8 m/s
+  (same direction reversed). The magnitude of the impulse is
+  \begin{enumerate}[(A)]
+    \item 1 N$\cdot$s
+    \item 5 N$\cdot$s
+    \item 9 N$\cdot$s
+    \item 10 N$\cdot$s
+  \end{enumerate}
+
+\item Which type of collision conserves \emph{both} momentum \emph{and} kinetic energy?
+  \begin{enumerate}[(A)]
+    \item Perfectly inelastic
+    \item Partially inelastic
+    \item Elastic
+    \item Explosive (objects push apart)
+  \end{enumerate}
+
+\item A 3 kg cart moving at 4 m/s collides and sticks to a stationary 1 kg cart.
+  Their combined speed after the collision is
+  \begin{enumerate}[(A)]
+    \item 1 m/s
+    \item 3 m/s
+    \item 4 m/s
+    \item 12 m/s
+  \end{enumerate}
+
+\item A 60 kg astronaut at rest fires a thruster that ejects 2 kg of gas at
+  40 m/s backward. The astronaut's recoil speed is \emph{closest} to
+  \begin{enumerate}[(A)]
+    \item 0.80 m/s
+    \item 1.22 m/s
+    \item 1.38 m/s
+    \item 2.00 m/s
+  \end{enumerate}
+
+\item In a perfectly inelastic collision between two objects of equal mass, one of
+  which is initially at rest, the fraction of kinetic energy \emph{lost} is
+  \begin{enumerate}[(A)]
+    \item 0\%
+    \item 25\%
+    \item 50\%
+    \item 75\%
+  \end{enumerate}
+
+\item A car of mass $m_1$ traveling north at speed $v_1$ collides with a car of mass
+  $m_2$ traveling east at speed $v_2$ and they stick together. The direction of the
+  wreckage after the crash is at angle $\phi$ north of east, where $\tan\phi$ equals
+  \begin{enumerate}[(A)]
+    \item $\dfrac{m_1 v_1}{m_2 v_2}$
+    \item $\dfrac{m_2 v_2}{m_1 v_1}$
+    \item $\dfrac{m_1}{m_2}$
+    \item $\dfrac{v_1}{v_2}$
+  \end{enumerate}
+
+\item A bullet of mass $m$ is fired horizontally at speed $v$ into a stationary
+  wooden block of mass $M$ hanging on a string (ballistic pendulum). The block (with
+  bullet embedded) swings upward. Which principle correctly finds the height $h$?
+  \begin{enumerate}[(A)]
+    \item Conservation of energy for the whole event: $\frac{1}{2}mv^2 = (M+m)gh$
+    \item Conservation of momentum then conservation of energy:
+          use $mv = (M+m)V$, then $\frac{1}{2}(M+m)V^2 = (M+m)gh$
+    \item Conservation of energy then conservation of momentum
+    \item Conservation of momentum alone
+  \end{enumerate}
+
+\end{enumerate}
+
+%==============================================
+\section*{Chapter 10: Energy \& Work}
+%==============================================
+
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, leftmargin=*, itemsep=1.2em, start=25]
+
+\item A force $F = 50$ N acts on a 10 kg box, pushing it 5 m along a frictionless
+  floor. The work done by $F$ is
+  \begin{enumerate}[(A)]
+    \item 10 J
+    \item 50 J
+    \item 250 J
+    \item 500 J
+  \end{enumerate}
+
+\item Which of the following forces does \emph{zero} work on an object moving in a
+  circle at constant speed?
+  \begin{enumerate}[(A)]
+    \item Gravity
+    \item The centripetal force
+    \item Friction
+    \item Air resistance
+  \end{enumerate}
+
+\item A 2 kg ball is dropped from rest from a height of 5 m. Just before hitting the
+  ground, its speed is \emph{closest} to (use $g = 10$ m/s$^2$)
+  \begin{enumerate}[(A)]
+    \item 7.1 m/s
+    \item 10 m/s
+    \item 14.1 m/s
+    \item 100 m/s
+  \end{enumerate}
+
+\item The work-energy theorem states that
+  \begin{enumerate}[(A)]
+    \item $W_{\text{net}} = \Delta PE$
+    \item $W_{\text{net}} = \Delta KE$
+    \item $W_{\text{net}} = \Delta KE + \Delta PE$
+    \item $W_{\text{net}} = \frac{1}{2}mv^2$
+  \end{enumerate}
+
+\item A variable force $F(x) = 3x^2$ N acts on an object from $x = 0$ to $x = 2$ m.
+  The work done is
+  \begin{enumerate}[(A)]
+    \item 6 J
+    \item 8 J
+    \item 12 J
+    \item 24 J
+  \end{enumerate}
+
+\item Power is defined as
+  \begin{enumerate}[(A)]
+    \item Force $\times$ distance
+    \item Energy $\times$ time
+    \item Work / time
+    \item Mass $\times$ acceleration
+  \end{enumerate}
+
+\item A 5 kg object is lifted 3 m at constant speed. The net work done on the object
+  is
+  \begin{enumerate}[(A)]
+    \item 147 J
+    \item 0 J
+    \item $-147$ J
+    \item 15 J
+  \end{enumerate}
+
+\item Two cars have the same kinetic energy. Car A has twice the mass of Car B.
+  The speed of Car A compared to Car B is
+  \begin{enumerate}[(A)]
+    \item twice as fast
+    \item half as fast
+    \item $\sqrt{2}$ times as fast
+    \item $1/\sqrt{2}$ times as fast
+  \end{enumerate}
+
+\end{enumerate}
+
+\clearpage
+
+%##############################################
+\part*{PART III: COMPLETE SOLUTIONS}
+%##############################################
+
 \begin{center}
-\begin{tabular}{lc}
+\textit{Each solution includes a plain-English explanation of the physics before the math.}
+\end{center}
+
+\vspace{1em}
+
+%==============================================
+\section*{Solution 1: Shock Absorber Springs (Advanced)}
+%==============================================
+
+\begin{solutionbox}[Solution 1(a) -- Total front-axle load]
+
+\textbf{Plain-English idea:} A car's weight is not split 50/50 front and back -- it
+depends on where the engine (center of mass) sits. We treat the car like a seesaw
+balanced between the two axles, and use torques to figure out what each axle holds.
+
+\smallskip
+\textbf{Step 1 -- Find the car's total weight.}
+\begin{equation}
+W = mg = (1600)(9.8) = 15{,}680\;\text{N}
+\end{equation}
+
+\textbf{Step 2 -- Take torques about the rear axle (eliminates the unknown rear force).}
+
+The center of mass is $b = 1.20$ m in front of the rear axle. The front axle is
+$L = 2.00$ m in front of the rear axle.
+\begin{equation}
+R_f \times L = W \times b \quad\Longrightarrow\quad R_f = W \times \frac{b}{L}
+= 15{,}680 \times \frac{1.20}{2.00} = \boxed{9{,}408\;\text{N}}
+\end{equation}
+\textit{The front axle carries 60\% of the weight because the CM is closer to the
+front (0.80 m from front vs.\ 1.20 m from rear).}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 1(b) -- Individual spring forces]
+
+\textbf{Plain-English idea:} Now we do the same trick left-to-right. The CM is
+slightly to the right of center, so the right spring holds more weight than the left.
+We take torques about the left front wheel to find the right-spring force.
+
+\smallskip
+\textbf{Step 1 -- Find the distances.}
+
+The half-track is $W/2 = 0.80$ m from center to each wheel. The CM is $d = 0.10$ m
+to the right of center, so:
+\begin{itemize}
+  \item Distance from \textbf{left} wheel to CM $= 0.80 + 0.10 = 0.90$ m (to the right)
+  \item Distance from \textbf{right} wheel to CM $= 0.80 - 0.10 = 0.70$ m (to the left)
+\end{itemize}
+
+\textbf{Step 2 -- Torques about the left front wheel (CCW positive):}
+\begin{align}
+F_R \times 1.60 &= R_f \times 0.90 \\
+F_R &= \frac{9{,}408 \times 0.90}{1.60} = \boxed{5{,}292\;\text{N (right spring)}}
+\end{align}
+
+\textbf{Step 3 -- Force balance for $F_L$:}
+\begin{equation}
+F_L = R_f - F_R = 9{,}408 - 5{,}292 = \boxed{4{,}116\;\text{N (left spring)}}
+\end{equation}
+\textit{The right spring holds about 28\% more force than the left -- because the
+heavy engine is offset to the right (e.g., passenger side).}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 1(c) -- Spring compressions]
+
+\textbf{Plain-English idea:} Hooke's Law ($x = F/k$) says: stiffer spring, less
+compression. The right spring is stiffer ($k_R > k_L$) but also carries more force.
+Let's see which effect wins!
+
+\begin{align}
+x_L &= \frac{F_L}{k_L} = \frac{4{,}116}{24{,}000} = \boxed{0.172\;\text{m} = 17.2\;\text{cm}} \\[4pt]
+x_R &= \frac{F_R}{k_R} = \frac{5{,}292}{30{,}000} = \boxed{0.176\;\text{m} = 17.6\;\text{cm}}
+\end{align}
+\textit{They are almost equal (difference of 4 mm) because the right spring is both
+stiffer and more loaded -- the two effects nearly cancel. This is no accident: spring
+rates are often matched to the load so all four corners sit level.}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 1(d) -- Elastic potential energy]
+
+\textbf{Plain-English idea:} Each compressed spring stores energy $U = \frac{1}{2}kx^2$.
+Add both springs together.
+
+\begin{align}
+U_L &= \frac{1}{2}(24{,}000)(0.172)^2 = 12{,}000 \times 0.02958 = 354.9\;\text{J} \\
+U_R &= \frac{1}{2}(30{,}000)(0.176)^2 = 15{,}000 \times 0.03098 = 464.6\;\text{J}
+\end{align}
+\begin{equation}
+U_{\text{total}} = 354.9 + 464.6 = \boxed{819.5\;\text{J} \approx 820\;\text{J}}
+\end{equation}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 1(e) -- Dynamic loading (doubled load)]
+
+\textbf{Plain-English idea:} When the car hits a bump, the road pushes up extra hard --
+engineers call this the ``dynamic load factor.'' If the force doubles, Hooke's Law
+$x = F/k$ says the compression doubles too (spring force is proportional to
+compression).
+
+\smallskip
+Under doubled front load: $F_R' = 2 \times 5{,}292 = 10{,}584$ N
+\begin{equation}
+x_R' = \frac{F_R'}{k_R} = \frac{10{,}584}{30{,}000} = \boxed{0.353\;\text{m} = 35.3\;\text{cm}}
+\end{equation}
+\textbf{Percentage increase:}
+\begin{equation}
+\frac{x_R' - x_R}{x_R} \times 100\% = \frac{0.353 - 0.176}{0.176} \times 100\% = \boxed{100\%}
+\end{equation}
+\textit{Exactly double! Because $F = kx$ is linear, doubling the force always doubles
+the compression. This is why engineers design suspension travel (maximum compression)
+to be at least twice the static compression.}
+
+\end{solutionbox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Solution 2: Force on Elbow Joint (Advanced)}
+%==============================================
+
+\begin{solutionbox}[Solution 2(a) -- Free Body Diagram]
+
+\textbf{Plain-English idea:} We draw all forces on the forearm, which acts like a
+lever (beam) balanced at the elbow. The tricky part here is that the forearm is
+tilted -- this changes the perpendicular distances (moment arms) that weights create.
+
+\smallskip
+Forces on the forearm (tilted $30^\circ$ below horizontal):
+\begin{itemize}
+  \item \textbf{Bicep force} $F_B$ -- at $\beta = 80^\circ$ from the forearm axis,
+        at $d = 0.05$ m from elbow. It pulls the forearm \emph{toward} the upper arm.
+  \item \textbf{Forearm weight} $W_{\text{arm}} = 1.5 \times 9.8 = 14.7$ N -- straight
+        down, at the midpoint ($L/2 = 0.175$ m from elbow along the forearm).
+  \item \textbf{Chart weight} $W_c = 2.5 \times 9.8 = 24.5$ N -- straight down,
+        at the far end ($L = 0.35$ m from elbow).
+  \item \textbf{Joint reaction} $\vec{R}$ -- at the elbow (direction unknown, to be found).
+\end{itemize}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 2(b) -- Torque equation and bicep force]
+
+\textbf{Plain-English idea:} Taking torques about the elbow eliminates the unknown
+joint force $\vec{R}$ (it has zero moment arm). For a vertical weight $W$ at distance
+$r$ along a forearm that is tilted $\phi$ below horizontal, the moment arm (the
+perpendicular distance from the elbow to the line of gravity) equals $r\cos\phi$.
+This is because the moment arm shrinks as the arm tilts further down.
+
+\smallskip
+\textbf{Torques about the elbow (CCW = +):}
+
+For the bicep, the component perpendicular to the forearm creates the torque:
+$\tau_B = F_B \sin\beta \times d = F_B \sin 80^\circ \times 0.05$ (CCW, $+$)
+
+For weights, the torque is $\tau = W \times r\cos\phi$ (CW, $-$):
+\begin{align}
+\tau_{\text{arm}} &= W_{\text{arm}} \times (L/2)\cos\phi = 14.7 \times 0.175 \times \cos 30^\circ
+= 14.7 \times 0.175 \times 0.866 = 2.23\;\text{N$\cdot$m}\\
+\tau_c &= W_c \times L\cos\phi = 24.5 \times 0.35 \times 0.866 = 7.43\;\text{N$\cdot$m}
+\end{align}
+
+\textbf{Set $\sum\tau = 0$:}
+\begin{align}
+F_B \sin 80^\circ \times 0.05 &= 2.23 + 7.43 = 9.66\;\text{N$\cdot$m} \\
+F_B \times 0.9848 \times 0.05 &= 9.66 \\
+0.04924\,F_B &= 9.66
+\end{align}
+\begin{equation}
+F_B = \frac{9.66}{0.04924} = \boxed{196\;\text{N}}
+\end{equation}
+\textit{About 44 lbs of bicep force to hold a chart that weighs only 5.5 lbs -- the
+short muscle attachment ($d = 5$ cm) creates a terrible mechanical disadvantage!}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 2(c) -- Elbow joint reaction force]
+
+\textbf{Plain-English idea:} Use $\sum F = 0$ in each direction. First we need to know
+the direction of the bicep force. The forearm points at $30^\circ$ below horizontal.
+The bicep pulls at $80^\circ$ from the forearm axis (toward the upper arm, upward-inward),
+so its direction is $80^\circ - 30^\circ = 50^\circ$ above horizontal.
+
+\smallskip
+\textbf{Bicep force components} (taking right = $+x$, up = $+y$):
+\begin{align}
+F_{B,x} &= -F_B \cos 50^\circ = -196 \times 0.6428 = -125.9\;\text{N (leftward)}\\
+F_{B,y} &= +F_B \sin 50^\circ = +196 \times 0.7660 = +150.1\;\text{N (upward)}
+\end{align}
+
+\textbf{Force balance $\sum F_x = 0$:}
+\begin{equation}
+R_x + F_{B,x} = 0 \quad\Longrightarrow\quad R_x = +125.9\;\text{N (rightward)}
+\end{equation}
+
+\textbf{Force balance $\sum F_y = 0$:}
+\begin{align}
+R_y + F_{B,y} - W_{\text{arm}} - W_c &= 0 \\
+R_y &= 14.7 + 24.5 - 150.1 = -110.9\;\text{N (downward)}
+\end{align}
+
+\textbf{Magnitude of joint reaction:}
+\begin{equation}
+|\vec{R}| = \sqrt{(125.9)^2 + (110.9)^2} = \sqrt{15{,}851 + 12{,}299}
+= \sqrt{28{,}150} = \boxed{167.8\;\text{N}}
+\end{equation}
+\textit{The joint force ($\approx 38$ lbs) is larger than the chart weight
+($\approx 5.5$ lbs) by a factor of 7 -- the skeleton takes a beating so the muscles
+can have short, powerful attachments.}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 2(d) -- Comparison with horizontal forearm]
+
+\textbf{Plain-English idea:} When the arm is tilted down, gravity's moment arm shrinks
+(by $\cos\phi$). Less torque from the weights means the muscle needs to produce less
+torque, so the muscle force is smaller.
+
+\smallskip
+For $\phi = 0^\circ$ (horizontal arm), $\cos 0^\circ = 1$:
+\begin{align}
+\tau_{\text{arm}}' &= 14.7 \times 0.175 \times 1 = 2.57\;\text{N$\cdot$m}\\
+\tau_c' &= 24.5 \times 0.35 \times 1 = 8.58\;\text{N$\cdot$m}
+\end{align}
+\begin{equation}
+F_B' = \frac{2.57 + 8.58}{0.04924} = \frac{11.15}{0.04924} = \boxed{226\;\text{N}}
+\end{equation}
+\textbf{Conclusion:} Horizontal arm requires $F_B' = 226$ N vs.\ $F_B = 196$ N when
+tilted at $30^\circ$ below. The tilted position requires \emph{less} force because
+the moment arms of the weights ($r\cos\phi$) are smaller. This is why it is easier to
+hold something with your arm angled downward slightly.
+
+\end{solutionbox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Solution 3: Superman Rescue (Advanced -- 2D)}
+%==============================================
+
+\begin{solutionbox}[Solution 3(a) -- Person's speed at $h = 80$ m]
+
+\textbf{Plain-English idea:} The person fell from $H_p = 200$ m and is now at $h = 80$ m.
+She has fallen $\Delta h = 120$ m. Gravity converted all that height into speed.
+Use energy conservation (no friction, no air resistance).
+
+\begin{equation}
+\frac{1}{2}mv_p^2 = mg\,\Delta h \quad\Longrightarrow\quad
+v_p = \sqrt{2g\,\Delta h} = \sqrt{2(9.8)(120)} = \sqrt{2352}
+= \boxed{48.5\;\text{m/s (downward)}}
+\end{equation}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 3(b) -- Superman's velocity at $h = 80$ m]
+
+\textbf{Plain-English idea:} After Superman stops his engines, he is like a projectile:
+his horizontal speed stays constant (no horizontal force), and gravity accelerates him
+downward from rest in the vertical direction. We treat the two directions separately.
+
+\smallskip
+Superman starts at $H_S = 180$ m with $v_{Sx,i} = 15.0$ m/s (right) and $v_{Sy,i} = 0$.
+He falls $\Delta h_S = 180 - 80 = 100$ m.
+
+\textbf{Horizontal component (unchanged):}
+\begin{equation}
+v_{Sx} = u = \boxed{15.0\;\text{m/s (rightward)}}
+\end{equation}
+
+\textbf{Vertical component (gained from free-fall):}
+\begin{equation}
+v_{Sy} = \sqrt{2g\,\Delta h_S} = \sqrt{2(9.8)(100)} = \sqrt{1960}
+= \boxed{44.3\;\text{m/s (downward)}}
+\end{equation}
+
+\textbf{Magnitude of Superman's speed:}
+\begin{equation}
+|v_S| = \sqrt{(15.0)^2 + (44.3)^2} = \sqrt{225 + 1962} = \sqrt{2187}
+= \boxed{46.8\;\text{m/s}}
+\end{equation}
+\textit{Superman is moving mostly downward (44 m/s) with a moderate sideways component
+(15 m/s). Like a skydiver who was drifting horizontally.}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 3(c) -- Combined velocity after the catch (2D momentum)]
+
+\textbf{Plain-English idea:} The catch is a 2D collision -- they stick together.
+Momentum is conserved \emph{independently} in each direction ($x$ and $y$). Think of
+it like two trains on perpendicular tracks colliding at a junction: we balance east-west
+and north-south momentum separately.
+
+\smallskip
+\textbf{Before the catch:}
+\begin{center}
+\begin{tabular}{lcc}
 \toprule
-\textbf{Braking Type} & \textbf{Stopping Distance}\\
+ & $x$ (rightward) & $y$ (downward positive) \\
 \midrule
-Variable Force ($F_0 + bx$) & 47.9 m\\
-Constant Force ($F_0$) & 93.75 m\\
+Superman ($M = 90$ kg) & $+15.0$ m/s & $+44.3$ m/s \\
+Person ($m = 70$ kg) & $0$ & $+48.5$ m/s \\
 \bottomrule
 \end{tabular}
 \end{center}
-\textbf{Conclusion:} Variable-force braking reduces stopping distance by \textbf{49\%}!
-\end{keybox}
 
-%=============================================
-\section*{Mastery Check: Practice Questions}
-%=============================================
+\textbf{$x$-momentum conservation:}
+\begin{equation}
+(M + m)\,v_{fx} = M(15.0) + m(0) = 90 \times 15.0 = 1350\;\text{kg$\cdot$m/s}
+\end{equation}
+\begin{equation}
+v_{fx} = \frac{1350}{90 + 70} = \frac{1350}{160} = \boxed{8.44\;\text{m/s (rightward)}}
+\end{equation}
 
-Test your understanding with these variations:
+\textbf{$y$-momentum conservation (downward positive):}
+\begin{align}
+(M + m)\,v_{fy} &= M(44.3) + m(48.5) = 90(44.3) + 70(48.5) \\
+&= 3987 + 3395 = 7382\;\text{kg$\cdot$m/s}
+\end{align}
+\begin{equation}
+v_{fy} = \frac{7382}{160} = \boxed{46.1\;\text{m/s (downward)}}
+\end{equation}
 
-\begin{enumerate}[label=\textbf{Q\arabic*.}]
-    \item What if the braking force were $F(x) = F_0 - bx$ (decreasing with distance)?
-    \item In Problem A, where should Spring 2 be placed to make both compressions equal?
-    \item If the car's mass doubled, how would the stopping distance change for each case?
+\textbf{Combined speed:}
+\begin{equation}
+v_f = \sqrt{(8.44)^2 + (46.1)^2} = \sqrt{71.2 + 2125.2} = \sqrt{2196.4}
+= \boxed{46.9\;\text{m/s}}
+\end{equation}
+\textit{The combined speed is close to the person's original falling speed -- she is
+much heavier than Superman's horizontal contribution.}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 3(d) -- Work by Superman's muscles]
+
+\textbf{Plain-English idea:} They are now at $h = 80$ m, moving at 46.9 m/s with a
+mix of downward and sideways speed. Superman must bring them to a complete stop at
+ground level. We use the work-energy theorem: the muscles, gravity, and the final
+zero-KE condition all connect.
+
+\smallskip
+\textbf{Step 1 -- KE just after the catch.}
+\begin{equation}
+KE_i = \frac{1}{2}(M+m)v_f^2 = \frac{1}{2}(160)(46.9)^2
+= 80 \times 2199.6 = 175{,}968\;\text{J}
+\end{equation}
+
+\textbf{Step 2 -- Work by gravity over the 80 m descent to ground.}
+\begin{equation}
+W_g = (M+m)\,g\,h = (160)(9.8)(80) = 125{,}440\;\text{J} \quad\text{(positive)}
+\end{equation}
+
+\textbf{Step 3 -- Work-energy theorem ($KE_f = 0$).}
+\begin{align}
+W_{\text{net}} &= KE_f - KE_i = 0 - 175{,}968 = -175{,}968\;\text{J} \\
+W_g + W_{\text{muscles}} &= -175{,}968 \\
+125{,}440 + W_{\text{muscles}} &= -175{,}968
+\end{align}
+\begin{equation}
+W_{\text{muscles}} = -175{,}968 - 125{,}440 = \boxed{-301{,}408\;\text{J} \approx -301\;\text{kJ}}
+\end{equation}
+\textit{Superman's muscles must absorb 301 kJ -- about the energy in a stick of
+dynamite! The negative sign means his muscles do braking (negative) work, removing
+energy from the system.}
+
+\end{solutionbox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Solution 4: Forensic Car Crash (Chapter 9)}
+%==============================================
+
+\begin{solutionbox}[Solution 4(a) -- Speed of wreckage just after crash]
+
+\textbf{Plain-English idea:} After the crash, the wreckage is sliding and friction is
+slowing it down. It starts with some speed $v_0$ and ends at rest after 22 m. Friction
+is removing the kinetic energy. This is the work-energy theorem with friction as the
+only net force.
+
+\smallskip
+\textbf{Combined mass:} $M_c = m_A + m_B = 1500 + 1000 = 2500$ kg
+
+\textbf{Work done by friction} (friction force = $\mu_k M_c g$, over distance $d$):
+\begin{equation}
+W_f = -\mu_k M_c g \times d = -0.55 \times 2500 \times 9.8 \times 22.0 = -296{,}450\;\text{J}
+\end{equation}
+
+\textbf{Work-energy theorem} ($KE_f = 0$):
+\begin{align}
+W_f &= KE_f - KE_i = 0 - \frac{1}{2}M_c v_0^2 \\
+\frac{1}{2}(2500)v_0^2 &= 296{,}450
+\end{align}
+\begin{equation}
+v_0 = \sqrt{\frac{2 \times 296{,}450}{2500}} = \sqrt{237.2} = \boxed{15.4\;\text{m/s}}
+\end{equation}
+\textit{The wreckage launched off at $\approx 55$ km/h just after impact -- that's how
+much energy was still in the system after the crash.}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 4(b) -- Pre-crash speeds from 2D momentum]
+
+\textbf{Plain-English idea:} Momentum is conserved in the collision (the crash is so
+fast that external forces like friction don't have time to act). We apply conservation
+separately in the East direction and the North direction -- two separate equations for
+two unknowns ($v_A$ and $v_B$). The wreckage moves at $\theta = 40^\circ$ north of
+east, so its velocity components are known.
+
+\smallskip
+\textbf{Wreckage velocity components just after crash:}
+\begin{align}
+v_{0x} &= v_0 \cos 40^\circ = 15.4 \times 0.7660 = 11.80\;\text{m/s (east)} \\
+v_{0y} &= v_0 \sin 40^\circ = 15.4 \times 0.6428 = 9.90\;\text{m/s (north)}
+\end{align}
+
+\textbf{East-direction momentum conservation:}
+
+Only Car~A had eastward momentum (Car~B was moving north):
+\begin{align}
+m_A v_A &= (m_A + m_B)\,v_{0x} \\
+1500\,v_A &= 2500 \times 11.80 = 29{,}500
+\end{align}
+\begin{equation}
+v_A = \frac{29{,}500}{1500} = \boxed{19.7\;\text{m/s (east)}}
+\end{equation}
+
+\textbf{North-direction momentum conservation:}
+
+Only Car~B had northward momentum:
+\begin{align}
+m_B v_B &= (m_A + m_B)\,v_{0y} \\
+1000\,v_B &= 2500 \times 9.90 = 24{,}750
+\end{align}
+\begin{equation}
+v_B = \frac{24{,}750}{1000} = \boxed{24.8\;\text{m/s (north)}}
+\end{equation}
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 4(c) -- Was Car A speeding?]
+
+\textbf{Plain-English idea:} We need to convert from m/s (physics units) to km/h
+(everyday units) and compare to the speed limit.
+
+\begin{equation}
+v_A = 19.7\;\text{m/s} \times \frac{3600\;\text{s/hr}}{1000\;\text{m/km}}
+= \boxed{70.9\;\text{km/h}}
+\end{equation}
+
+\textbf{Conclusion:} The speed limit was 50 km/h. Car A was traveling at 70.9 km/h --
+\textbf{over the speed limit by 42\%}. Car A's driver's claim is \textit{inconsistent}
+with the physical evidence.
+
+\end{solutionbox}
+
+\begin{solutionbox}[Solution 4(d) -- Kinetic energy lost in collision]
+
+\textbf{Plain-English idea:} In a perfectly inelastic collision, kinetic energy is NOT
+conserved (it converts to heat, sound, and permanent deformation -- that's the crumpling
+you see in crash-test videos). We calculate how much energy existed before vs.\ after.
+
+\smallskip
+\textbf{KE before collision:}
+\begin{align}
+KE_i &= \frac{1}{2}m_A v_A^2 + \frac{1}{2}m_B v_B^2 \\
+&= \frac{1}{2}(1500)(19.7)^2 + \frac{1}{2}(1000)(24.8)^2 \\
+&= 750 \times 388.1 + 500 \times 615.0 \\
+&= 291{,}075 + 307{,}500 = 598{,}575\;\text{J}
+\end{align}
+
+\textbf{KE just after collision (before friction):}
+\begin{equation}
+KE_f = \frac{1}{2}M_c v_0^2 = \frac{1}{2}(2500)(15.4)^2 = 1250 \times 237.2
+= 296{,}500\;\text{J}
+\end{equation}
+
+\textbf{Energy lost:}
+\begin{equation}
+\Delta KE_{\text{lost}} = 598{,}575 - 296{,}500 = \boxed{302{,}075\;\text{J} \approx 302\;\text{kJ}}
+\end{equation}
+\begin{equation}
+\text{Percentage lost} = \frac{302{,}075}{598{,}575} \times 100\% = \boxed{50.5\%}
+\end{equation}
+\textit{Over half the kinetic energy was absorbed by the crash! That energy went into
+bending metal and generating heat and sound -- which is exactly what crumple zones are
+designed to do to protect passengers.}
+
+\end{solutionbox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Solution A: Two-Spring Diving Board}
+%==============================================
+
+\begin{solutionbox}[Solution A -- Two-Spring System]
+
+\textbf{Plain-English idea:} The board is perfectly still -- all forces and all torques
+balance. Two equations (force balance and torque balance) give us our two unknowns.
+
+\smallskip
+\textbf{Forces:} $F_1 = 8000\,\delta_1$ (up) at $x=0$;
+$F_2 = 12{,}000\,\delta_2$ (up) at $x=2.0$ m;
+$W_B = 245$ N (down) at $x=1.5$ m; $W_D = 686$ N (down) at $x=3.0$ m.
+
+\textbf{Force balance:}
+\begin{equation}
+8000\,\delta_1 + 12{,}000\,\delta_2 = 931\;\text{N}
+\label{eq:forceA}
+\end{equation}
+
+\textbf{Torque balance about $x = 0$ (pivot at Spring 1 -- makes $F_1$ vanish):}
+\begin{align}
+12{,}000\,\delta_2 \times 2.0 &= 245 \times 1.5 + 686 \times 3.0 \\
+24{,}000\,\delta_2 &= 367.5 + 2058 = 2425.5
+\end{align}
+\begin{equation}
+\delta_2 = \frac{2425.5}{24{,}000} = \boxed{0.101\;\text{m} = 10.1\;\text{cm}}
+\end{equation}
+
+\textbf{Substitute into \eqref{eq:forceA}:}
+\begin{equation}
+\delta_1 = \frac{931 - 12{,}000(0.101)}{8000} = \frac{-281}{8000} = \boxed{-0.035\;\text{m}}
+\end{equation}
+
+\textit{Negative $\delta_1$: Spring 1 is in \textbf{tension} (stretched 3.5 cm).
+The heavy diver on the right tips the board so much that the left end rises.}
+
+\end{solutionbox}
+
+\vspace{1.5em}
+
+%==============================================
+\section*{Solution B: Variable-Force Braking}
+%==============================================
+
+\begin{solutionbox}[Solution B -- Variable Force, Stopping Distance]
+
+\textbf{Plain-English idea:} The braking force grows with distance. To find work from
+a changing force, integrate. Then use the work-energy theorem.
+
+\textbf{Initial KE:}
+\begin{equation}
+KE_i = \frac{1}{2}(1500)(25)^2 = 468{,}750\;\text{J}
+\end{equation}
+
+\textbf{Work by braking force:}
+\begin{equation}
+W = \int_0^{d}(5000 + 200x)\,dx = 5000d + 100d^2
+\end{equation}
+
+\textbf{Set $W = KE_i$, solve quadratic:}
+\begin{equation}
+100d^2 + 5000d - 468{,}750 = 0 \;\Rightarrow\; d^2 + 50d - 4687.5 = 0
+\end{equation}
+\begin{equation}
+d = \frac{-50 + \sqrt{2500 + 18750}}{2} = \frac{-50 + 145.8}{2} = \boxed{47.9\;\text{m}}
+\end{equation}
+
+\textbf{Constant-force comparison:}
+$d_{\text{const}} = KE_i / F_0 = 468{,}750 / 5000 = \boxed{93.75\;\text{m}}$
+
+\textit{Variable braking halves the stopping distance compared to constant braking.}
+
+\end{solutionbox}
+
+\clearpage
+
+%##############################################
+\part*{PART IV: MULTIPLE CHOICE ANSWER KEY}
+%##############################################
+
+\begin{answerbox}[Chapter 7 -- Rotational Motion Answers]
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{MC-\arabic*.}]
+  \item \textbf{B} -- Solid disk: lower $I = \frac{1}{2}MR^2$ rolls faster than ring ($MR^2$)
+  \item \textbf{B} -- $L = I\omega$ conserved; smaller $I$ $\Rightarrow$ larger $\omega$
+  \item \textbf{C} -- $\frac{1}{3}ML^2$: parallel-axis theorem $\frac{1}{12}ML^2 + M(\frac{L}{2})^2$
+  \item \textbf{B} -- $\alpha = \tau/I = 12/4 = 3$ rad/s$^2$
+  \item \textbf{A} -- $I_{\text{child}} = mR^2 = 40(4) = 160$ kg$\cdot$m$^2$; $\omega_f = 500/660 \approx 0.76$
+  \item \textbf{C} -- Angular momentum conserved (no net external torque)
+  \item \textbf{A} -- $\theta = \frac{1}{2}(2)(16) = 16$ rad $= 16/(2\pi) \approx 2.55$ rev
+  \item \textbf{C} -- $KE_{\text{rot}} = \frac{1}{2}I\omega^2$
 \end{enumerate}
+\end{multicols}
+\textbf{Key:} $\tau = I\alpha$, $L = I\omega$, $KE_{\text{rot}} = \tfrac{1}{2}I\omega^2$,
+$I_{\text{disk}} = \tfrac{1}{2}MR^2$, $I_{\text{ring}} = MR^2$, $I_{\text{rod,end}} = \tfrac{1}{3}ML^2$
+\end{answerbox}
 
-\end{document}
-```
+\vspace{0.8em}
 
----
-
-## �� Mastery Checklist
-
-Before your test, make sure you can:
-
-- [ ] Set up torque equilibrium equations with correct moment arms
-- [ ] Integrate variable forces to find work
-- [ ] Apply the work-energy theorem correctly
-- [ ] Solve quadratic equations from physics problems
-- [ ] Interpret negative values physically (tension vs. compression)
-- [ ] Compare results to build physical intuition
-
-Would you like me to create additional practice variations or explain any step in more detail?
-%=============================================
-\section*{Mastery Check: Detailed Solutions}
-%=============================================
-
-\begin{keybox}[Solutions to Practice Questions]
-\textbf{Q1. Decreasing Force $F(x) = F_0 - bx$}
-
-The work done becomes:
-\begin{equation}
-W = -\int_0^{d}(F_0 - bx)\,dx = -\left(F_0 d - \frac{bd^2}{2}\right)
-\end{equation}
-
-Setting $|W| = KE_i$:
-\begin{equation}
-5000d - 100d^2 = 468,750
-\end{equation}
-\begin{equation}
-100d^2 - 5000d + 468,750 = 0 \quad \Rightarrow \quad d^2 - 50d + 4687.5 = 0
-\end{equation}
-
-Using the quadratic formula:
-\begin{equation}
-d = \frac{50 \pm \sqrt{2500 - 18750}}{2} = \frac{50 \pm \sqrt{-16250}}{2}
-\end{equation}
-
-\textbf{Result:} No real solution! The decreasing force becomes too weak to stop the car. The force would reach zero at $x = F_0/b = 25$ m, but the car still has kinetic energy remaining.
-
-\vspace{1em}
-
-\textbf{Q2. Equal Compression Condition}
-
-For $\delta_1 = \delta_2 = \delta$, we need:
-\begin{equation}
-\frac{F_1}{k_1} = \frac{F_2}{k_2} \quad \Rightarrow \quad \frac{F_1}{F_2} = \frac{k_1}{k_2} = \frac{8000}{12000} = \frac{2}{3}
-\end{equation}
-
-Let Spring 2 be at distance $a$ from the left end. Using torque about Spring 1:
-\begin{equation}
-F_2 \cdot a = W_{\text{board}} \cdot \frac{L}{2} + W_{\text{diver}} \cdot L
-\end{equation}
-\begin{equation}
-F_2 \cdot a = (245)(1.5) + (686)(3.0) = 367.5 + 2058 = 2425.5 \text{ N·m}
-\end{equation}
-
-From force balance: $F_1 + F_2 = 931$ N, and with $F_1 = \frac{2}{3}F_2$:
-\begin{equation}
-\frac{2}{3}F_2 + F_2 = 931 \quad \Rightarrow \quad F_2 = 558.6 \text{ N}
-\end{equation}
-
-Therefore:
-\begin{equation}
-a = \frac{2425.5}{558.6} = \boxed{4.34 \text{ m}}
-\end{equation}
-
-\textbf{Note:} This is beyond the board length (3.0 m), so equal compression is \textbf{not physically achievable} with this configuration!
-
-\vspace{1em}
-
-\textbf{Q3. Doubled Mass Effect}
-
-If $m \to 2m = 3000$ kg:
-\begin{itemize}
-    \item $KE_i \to 2 \times 468,750 = 937,500$ J
-\end{itemize}
-
-\textit{Constant force case:}
-\begin{equation}
-d_{\text{constant}} = \frac{937,500}{5000} = \boxed{187.5 \text{ m}} \quad \text{(exactly doubled)}
-\end{equation}
-
-\textit{Variable force case:}
-\begin{equation}
-100d^2 + 5000d = 937,500 \quad \Rightarrow \quad d^2 + 50d - 9375 = 0
-\end{equation}
-\begin{equation}
-d = \frac{-50 + \sqrt{2500 + 37500}}{2} = \frac{-50 + 200}{2} = \boxed{75 \text{ m}}
-\end{equation}
-
-\textbf{Key Insight:} The variable force case increases by factor of $75/47.9 = 1.57$, \textit{less than doubled}, because the increasing force provides more braking at larger distances.
-\end{keybox}
-
-%=============================================
-\section*{Conceptual Understanding: Key Physics Principles}
-%=============================================
-
-\subsection*{Principle 1: Static Equilibrium}
-
-\begin{conceptbox}[Equilibrium Conditions]
-For any rigid body in static equilibrium:
-\begin{enumerate}
-    \item \textbf{Force Balance:} $\sum \vec{F} = 0$
-    \item \textbf{Torque Balance:} $\sum \vec{\tau} = 0$ (about \textit{any} point)
+\begin{answerbox}[Chapter 8 -- Equilibrium \& Elasticity Answers]
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, start=9]
+  \item \textbf{C} -- Both $\sum F=0$ and $\sum\tau=0$
+  \item \textbf{C} -- Pivot at unknown force eliminates it
+  \item \textbf{C} -- 539 N: torques about right end
+  \item \textbf{A} -- strain $= \sigma/E = (2\times10^8)/(2\times10^{11}) = 10^{-3}$
+  \item \textbf{C} -- $mg/(2\tan\theta)$: torque balance about base
+  \item \textbf{D} -- Both B and C correct
+  \item \textbf{A} -- $U = \frac{1}{2}(500)(0.04)^2 = 0.40$ J
+  \item \textbf{C} -- Equilibrium holds about any pivot
 \end{enumerate}
+\end{multicols}
+\textbf{Key:} $\sum F=0$, $\sum\tau=0$, $F=kx$, $U=\tfrac{1}{2}kx^2$,
+$E = \sigma/\epsilon$
+\end{answerbox}
 
-\textbf{Strategy for choosing pivot point:} Select the pivot at the location of an unknown force to eliminate it from the torque equation!
-\end{conceptbox}
+\vspace{0.8em}
+
+\begin{answerbox}[Chapter 9 -- Momentum \& Collisions Answers]
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, start=17]
+  \item \textbf{C} -- Impulse $= \Delta p = F\Delta t$
+  \item \textbf{C} -- $|J| = m|v_f - v_i| = 0.5(10+8) = 9$ N$\cdot$s
+  \item \textbf{C} -- Elastic collision: both $p$ and $KE$ conserved
+  \item \textbf{B} -- $v_f = \frac{3(4)}{3+1} = 3$ m/s (perfectly inelastic)
+  \item \textbf{C} -- $p_{\text{gas}} = 2(40) = 80$ kg$\cdot$m/s; $v_A = 80/(60-2) = 80/58 = 1.38$ m/s
+  \item \textbf{C} -- $v_f = v_i/2$; $KE_f = \tfrac{1}{2}(2m)(v_i/2)^2 = \tfrac{1}{4}mv_i^2 = \tfrac{1}{2}KE_i$; 50\% retained $\Rightarrow$ 50\% lost
+  \item \textbf{A} -- $p_{\text{north}} = m_1 v_1$; $p_{\text{east}} = m_2 v_2$; $\tan\phi = m_1 v_1/(m_2 v_2)$
+  \item \textbf{B} -- Use $mv = (M+m)V$ (collision), then $\frac{1}{2}(M+m)V^2 = (M+m)gh$ (swing)
+\end{enumerate}
+\end{multicols}
+\textbf{Key:} $J = \Delta p = F\Delta t$, $p = mv$, $\sum p_{\text{before}} = \sum p_{\text{after}}$,
+elastic: $KE$ conserved; inelastic: $KE$ not conserved
+\end{answerbox}
+
+\vspace{0.8em}
+
+\begin{answerbox}[Chapter 10 -- Energy \& Work Answers]
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{MC-\arabic*.}, start=25]
+  \item \textbf{C} -- $W = Fd = (50)(5) = 250$ J
+  \item \textbf{B} -- Centripetal force perpendicular to velocity: $W = Fd\cos90^\circ = 0$
+  \item \textbf{B} -- $v = \sqrt{2gh} = \sqrt{2(10)(5)} = 10$ m/s
+  \item \textbf{B} -- $W_{\text{net}} = \Delta KE$
+  \item \textbf{B} -- $\int_0^2 3x^2\,dx = [x^3]_0^2 = 8$ J
+  \item \textbf{C} -- Power = Work/time
+  \item \textbf{B} -- Constant speed: $\Delta KE = 0$, so $W_{\text{net}} = 0$
+  \item \textbf{D} -- $KE$ same: $M_A v_A^2 = M_B v_B^2$; $2v_A^2 = v_B^2$; $v_A = v_B/\sqrt{2}$
+\end{enumerate}
+\end{multicols}
+\textbf{Key:} $W = Fd\cos\theta$, $W = \int F\,dx$, $W_{\text{net}} = \Delta KE$,
+$KE = \tfrac{1}{2}mv^2$, $PE = mgh$
+\end{answerbox}
+
+\clearpage
+
+%##############################################
+\part*{PART V: QUICK REFERENCE \& STUDY TIPS}
+%##############################################
+
+\section*{Formula Summary Table}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.2]
-    % Board
-    \draw[thick, fill=brown!30] (0,0) rectangle (6,0.2);
-    
-    % Springs
-    \draw[thick, decorate, decoration={coil, segment length=3pt, amplitude=4pt}] (0.5,-0.8) -- (0.5,0);
-    \draw[thick, decorate, decoration={coil, segment length=3pt, amplitude=4pt}] (4,-0.8) -- (4,0);
-    
-    % Ground
-    \draw[thick] (-0.5,-0.8) -- (6.5,-0.8);
-    \fill[pattern=north east lines] (-0.5,-1) rectangle (6.5,-0.8);
-    
-    % Forces
-    \draw[->, thick, blue] (0.5,0.2) -- (0.5,1.2) node[above] {$F_1$};
-    \draw[->, thick, blue] (4,0.2) -- (4,1.5) node[above] {$F_2$};
-    \draw[->, thick, red] (3,-0.1) -- (3,-1.1) node[below] {$Mg$};
-    \draw[->, thick, red] (5.8,-0.1) -- (5.8,-1.5) node[below] {$mg$};
-    
-    % Labels
-    \node at (0.5,-1.1) {Spring 1};
-    \node at (4,-1.1) {Spring 2};
-    \draw[<->] (0,-1.5) -- (4,-1.5) node[midway, below] {$a$};
-    \draw[<->] (0,-2) -- (6,-2) node[midway, below] {$L$};
-    
-    % Pivot indicator
-    \draw[fill=green!50] (0.5,0) circle (0.1);
-    \node[green!50!black] at (0.5,0.5) {Pivot};
-\end{tikzpicture}
-\end{center}
-
-\subsection*{Principle 2: Work-Energy Theorem}
-
-\begin{conceptbox}[Work-Energy Theorem]
-\begin{equation}
-W_{\text{net}} = \Delta KE = KE_f - KE_i
-\end{equation}
-
-For a variable force $F(x)$:
-\begin{equation}
-W = \int_{x_i}^{x_f} F(x)\, dx
-\end{equation}
-
-\textbf{Sign Convention:}
-\begin{itemize}
-    \item Force in direction of motion: $W > 0$ (adds energy)
-    \item Force opposite to motion: $W < 0$ (removes energy)
-\end{itemize}
-\end{conceptbox}
-
-\subsection*{Principle 3: Spring Mechanics}
-
-\begin{conceptbox}[Hooke's Law and Spring Energy]
-\textbf{Hooke's Law:}
-\begin{equation}
-F_{\text{spring}} = -kx \quad \text{(restoring force)}
-\end{equation}
-\begin{equation}
-F_{\text{applied}} = kx \quad \text{(force needed to compress/stretch)}
-\end{equation}
-
-\textbf{Elastic Potential Energy:}
-\begin{equation}
-U_{\text{spring}} = \frac{1}{2}kx^2
-\end{equation}
-
-\textbf{Work to compress a spring:}
-\begin{equation}
-W = \int_0^{\delta} kx\, dx = \frac{1}{2}k\delta^2
-\end{equation}
-\end{conceptbox}
-
-%=============================================
-\section*{Problem-Solving Framework}
-%=============================================
-
-\begin{keybox}[Step-by-Step Strategy for Equilibrium Problems]
-\begin{enumerate}
-    \item \textbf{Draw a Free Body Diagram}
-    \begin{itemize}
-        \item Identify all forces (gravity, springs, applied forces)
-        \item Mark distances and positions clearly
-    \end{itemize}
-    
-    \item \textbf{Choose a Coordinate System}
-    \begin{itemize}
-        \item Define positive directions for forces
-        \item Choose a convenient pivot point for torques
-    \end{itemize}
-    
-    \item \textbf{Write Equilibrium Equations}
-    \begin{itemize}
-        \item $\sum F_y = 0$ (vertical force balance)
-        \item $\sum \tau = 0$ (torque balance about chosen pivot)
-    \end{itemize}
-    
-    \item \textbf{Solve the System}
-    \begin{itemize}
-        \item Use substitution or matrix methods
-        \item Check units at each step
-    \end{itemize}
-    
-    \item \textbf{Verify and Interpret}
-    \begin{itemize}
-        \item Do the answers make physical sense?
-        \item Check limiting cases
-    \end{itemize}
-\end{enumerate}
-\end{keybox}
-
-\begin{keybox}[Step-by-Step Strategy for Work-Energy Problems]
-\begin{enumerate}
-    \item \textbf{Identify Initial and Final States}
-    \begin{itemize}
-        \item What is the initial kinetic energy?
-        \item What is the final kinetic energy? (often zero for stopping problems)
-    \end{itemize}
-    
-    \item \textbf{Identify All Forces Doing Work}
-    \begin{itemize}
-        \item Is the force constant or variable?
-        \item What is the direction relative to motion?
-    \end{itemize}
-    
-    \item \textbf{Calculate Work}
-    \begin{itemize}
-        \item Constant force: $W = Fd\cos\theta$
-        \item Variable force: $W = \int F(x)\, dx$
-    \end{itemize}
-    
-    \item \textbf{Apply Work-Energy Theorem}
-    \begin{itemize}
-        \item Set $W_{\text{net}} = \Delta KE$
-        \item Solve for unknown (distance, velocity, etc.)
-    \end{itemize}
-\end{enumerate}
-\end{keybox}
-
-%=============================================
-\section*{Common Mistakes to Avoid}
-%=============================================
-
-\begin{warningbox}[Critical Errors on Exams]
-\begin{enumerate}
-    \item \textbf{Torque Sign Errors}
-    \begin{itemize}
-        \item Always use consistent sign convention (CCW = positive)
-        \item Double-check which forces create CW vs CCW rotation
-    \end{itemize}
-    
-    \item \textbf{Forgetting the Board's Weight}
-    \begin{itemize}
-        \item The board's weight acts at its center of mass ($L/2$)
-        \item Don't ignore it even when a person is also on the board
-    \end{itemize}
-    
-    \item \textbf{Integration Limits}
-    \begin{itemize}
-        \item For stopping problems: integrate from 0 to $d$ (stopping distance)
-        \item Watch the sign of the integrand
-    \end{itemize}
-    
-    \item \textbf{Quadratic Formula Errors}
-    \begin{itemize}
-        \item Always check: is $d^2 + 50d - 4687.5 = 0$ or $d^2 + 50d = 4687.5$?
-        \item Physical solutions must be positive
-    \end{itemize}
-    
-    \item \textbf{Unit Inconsistencies}
-    \begin{itemize}
-        \item Ensure all quantities are in SI units before calculating
-        \item N/m, kg, m/s, J must all be consistent
-    \end{itemize}
-\end{enumerate}
-\end{warningbox}
-
-%=============================================
-\section*{Quick Reference Formulas}
-%=============================================
-
-\begin{center}
+\renewcommand{\arraystretch}{1.4}
 \begin{tabular}{|l|c|l|}
 \hline
 \textbf{Concept} & \textbf{Formula} & \textbf{Units} \\
+\hline\hline
+\multicolumn{3}{|c|}{\textbf{Chapter 7 -- Rotational Motion}} \\
 \hline
+Torque & $\tau = rF\sin\theta$ & N$\cdot$m \\
 \hline
-Kinetic Energy & $KE = \frac{1}{2}mv^2$ & J (Joules) \\
+Newton's 2nd (rotational) & $\tau_{\text{net}} = I\alpha$ & \\
 \hline
-Spring Force & $F = kx$ & N (Newtons) \\
+$I$ -- solid disk & $I = \tfrac{1}{2}MR^2$ & kg$\cdot$m$^2$ \\
 \hline
-Spring Potential Energy & $U = \frac{1}{2}kx^2$ & J \\
+$I$ -- hollow ring & $I = MR^2$ & kg$\cdot$m$^2$ \\
+\hline
+$I$ -- rod (center) & $I = \tfrac{1}{12}ML^2$ & kg$\cdot$m$^2$ \\
+\hline
+$I$ -- rod (end) & $I = \tfrac{1}{3}ML^2$ & kg$\cdot$m$^2$ \\
+\hline
+Parallel-axis theorem & $I = I_{\text{cm}} + Md^2$ & kg$\cdot$m$^2$ \\
+\hline
+Angular momentum & $L = I\omega$ & kg$\cdot$m$^2$/s \\
+\hline
+Rotational KE & $KE_{\text{rot}} = \tfrac{1}{2}I\omega^2$ & J \\
+\hline\hline
+\multicolumn{3}{|c|}{\textbf{Chapter 8 -- Equilibrium \& Elasticity}} \\
+\hline
+Force equilibrium & $\sum \vec{F} = 0$ & \\
+\hline
+Torque equilibrium & $\sum \vec{\tau} = 0$ & \\
+\hline
+Hooke's Law & $F = kx$ & N \\
+\hline
+Spring potential energy & $U = \tfrac{1}{2}kx^2$ & J \\
+\hline
+Young's modulus & $E = \dfrac{\sigma}{\epsilon} = \dfrac{F/A}{\Delta L/L_0}$ & Pa \\
+\hline
+Stress & $\sigma = F/A$ & Pa \\
+\hline
+Strain & $\epsilon = \Delta L/L_0$ & (dimensionless) \\
+\hline\hline
+\multicolumn{3}{|c|}{\textbf{Chapter 9 -- Momentum \& Collisions}} \\
+\hline
+Linear momentum & $\vec{p} = m\vec{v}$ & kg$\cdot$m/s \\
+\hline
+Impulse-momentum & $\vec{J} = \Delta\vec{p} = \vec{F}\Delta t$ & N$\cdot$s \\
+\hline
+Conservation of momentum & $\sum \vec{p}_{\text{before}} = \sum \vec{p}_{\text{after}}$ & \\
+\hline
+Perfectly inelastic & $(m_1+m_2)v_f = m_1 v_1 + m_2 v_2$ & \\
+\hline
+Elastic collision (1D) & $v_1' = \dfrac{m_1-m_2}{m_1+m_2}v_1$, \; $v_2' = \dfrac{2m_1}{m_1+m_2}v_1$ & \\
+\hline\hline
+\multicolumn{3}{|c|}{\textbf{Chapter 10 -- Energy \& Work}} \\
+\hline
+Kinetic energy & $KE = \tfrac{1}{2}mv^2$ & J \\
+\hline
+Gravitational PE & $PE = mgh$ & J \\
 \hline
 Work (constant force) & $W = Fd\cos\theta$ & J \\
 \hline
-Work (variable force) & $W = \int F(x)\,dx$ & J \\
+Work (variable force) & $W = \displaystyle\int F(x)\,dx$ & J \\
 \hline
-Torque & $\tau = rF\sin\theta$ & N·m \\
+Work-energy theorem & $W_{\text{net}} = \Delta KE$ & \\
 \hline
-Weight & $W = mg$ & N \\
+Conservation of energy & $KE_i + PE_i = KE_f + PE_f$ & \\
 \hline
-Quadratic Formula & $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$ & -- \\
+Power & $P = W/t = Fv$ & W \\
+\hline
+Quadratic formula & $x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$ & \\
 \hline
 \end{tabular}
 \end{center}
 
-%=============================================
-\section*{Self-Assessment: Are You Ready?}
-%=============================================
+\section*{Common Exam Mistakes to Avoid}
 
-\begin{conceptbox}[Pre-Test Checklist]
-Rate yourself 1-5 on each skill (5 = completely confident):
+\begin{warningbox}[Top Mistakes on PHYSICS 1101 Exams]
+\begin{enumerate}
+  \item \textbf{Torque sign errors:} Always define CCW as $+$ and CW as $-$, and stick
+        to it throughout.
+  \item \textbf{Moment arms when arm is tilted:} For a vertical weight $W$ at distance
+        $r$ along a tilted beam, the moment arm is $r\cos\phi$ (not just $r$)!
+  \item \textbf{Momentum vs.\ energy in collisions:} Use \emph{momentum} for the
+        collision instant; use \emph{energy} before/after (e.g., ballistic pendulum swing).
+  \item \textbf{2D momentum:} Apply conservation separately in $x$ and $y$ -- do NOT add
+        the components before equating.
+  \item \textbf{Dynamic vs.\ static loads:} $F = kx$ is linear, so doubling load doubles
+        compression; tripling load triples compression.
+  \item \textbf{Unit conversions:} km/h to m/s: divide by 3.6. Always do this before
+        plugging into any formula.
+  \item \textbf{Integration limits:} Always integrate from 0 to $d$ (stopping distance)
+        for braking problems.
+  \item \textbf{Quadratic roots:} Physical answers (distance, speed) must be positive --
+        discard the negative root.
+\end{enumerate}
+\end{warningbox}
 
-\begin{tabular}{|p{10cm}|c|}
+\section*{Pre-Exam Self-Check}
+
+\begin{conceptbox}[Rate Yourself Before the Exam \quad(1 = not sure, 5 = very confident)]
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{11.5cm}|c|}
 \hline
-\textbf{Skill} & \textbf{Rating} \\
+\textbf{Skill} & \textbf{Rating /5} \\
 \hline
-I can draw accurate free body diagrams & \quad /5 \\
+I can use torques about a clever pivot to simplify equilibrium problems & \\
 \hline
-I can set up torque equations with correct signs & \quad /5 \\
+I can find moment arms when the lever is tilted at an angle & \\
 \hline
-I can solve systems of two equations & \quad /5 \\
+I can handle asymmetric loads (two separate torque analyses) & \\
 \hline
-I can integrate polynomial functions & \quad /5 \\
+I can apply conservation of momentum separately in $x$ and $y$ & \\
 \hline
-I can apply the work-energy theorem & \quad /5 \\
+I can distinguish elastic from inelastic collisions and know what is conserved & \\
 \hline
-I can solve quadratic equations & \quad /5 \\
+I can use the work-energy theorem with friction & \\
 \hline
-I can interpret physical meaning of results & \quad /5 \\
+I can find angular acceleration using $\tau_{\text{net}} = I\alpha$ & \\
+\hline
+I can apply conservation of angular momentum & \\
+\hline
+I can integrate a polynomial force to find work done & \\
+\hline
+I can solve a quadratic equation and pick the physical root & \\
+\hline
+I can convert between m/s and km/h confidently & \\
 \hline
 \end{tabular}
-
-\vspace{1em}
-\textbf{If any rating is below 4, review that section before the test!}
+\vspace{0.5em}
+\textbf{If any rating is below 4, re-read that section's solution and redo the problem!}
 \end{conceptbox}
-
-%=============================================
-\section*{Additional Practice: Challenge Problems}
-%=============================================
-
-\begin{solutionbox}
-\textbf{Challenge 1: Three-Spring System}
-
-A 4.0 m beam (mass 30 kg) is supported by three springs:
-\begin{itemize}
-    \item Spring A ($k_A = 6000$ N/m) at x = 0
-    \item Spring B ($k_B = 10000$ N/m) at x = 2.0 m
-    \item Spring C ($k_C = 8000$ N/m) at x = 4.0 m
-\end{itemize}
-
-A 50 kg mass is placed at x = 3.0 m. Find all three spring compressions.
-
-\textit{Hint: You need three equations - two torque equations (about different points) and one force equation.}
-\end{solutionbox}
-
-\begin{solutionbox}
-\textbf{Challenge 2: Velocity-Dependent Braking}
-
-A 2000 kg car traveling at 30 m/s experiences a braking force $F(v) = cv^2$ where $c = 50$ N·s²/m². 
-
-Find the stopping distance using $F = ma = m\frac{dv}{dt} = mv\frac{dv}{dx}$.
-
-\textit{Hint: Separate variables and integrate with respect to velocity.}
-\end{solutionbox}
 
 \vspace{2em}
 \begin{center}
-\fbox{\parbox{0.8\textwidth}{
+\fbox{\parbox{0.87\textwidth}{
 \centering
-\Large\textbf{Good Luck on Your Quiz!}\\[0.5em]
-\normalsize Remember: Draw diagrams, check units, and verify your answers make physical sense.
+\Large\textbf{Good Luck on Your Exam!}\\[0.5em]
+\normalsize Draw diagrams $\;\cdot\;$ Check units $\;\cdot\;$ Verify answers make physical sense\\
+\small PHYSICS 1101 -- University of Minnesota -- Chapters 7, 8, 9 \& 10
 }}
 \end{center}
 
