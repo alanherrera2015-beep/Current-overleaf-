@@ -2,6 +2,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows.meta}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
@@ -765,6 +767,73 @@ chart are pulling the other side down.
   \item \textbf{Elbow reaction} $\vec{R}$ -- the joint pushes back on the forearm
         (direction unknown; we will find it in part~(c)).
 \end{itemize}
+
+\smallskip
+\textbf{Free Body Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.1]
+  %--- FOREARM BEAM (tilted 30 deg below horizontal) --------------------
+  % Scale: 1 unit = 0.1 m  |  L = 3.5 units, d = 0.5 units, L/2 = 1.75 units
+  \draw[line width=8pt, brown!55!orange, line cap=round, opacity=0.80]
+      (0,0) -- +(-30:3.5);
+
+  %--- ELBOW JOINT (pivot) ----------------------------------------------
+  \filldraw[gray!40, draw=black!80, line width=0.5pt] (0,0) circle (0.22);
+  \node[left=5pt, font=\small\bfseries] at (0,0) {Elbow (pivot)};
+
+  %--- HORIZONTAL DASHED REFERENCE LINE ---------------------------------
+  \draw[gray!55, dashed, thin] (-0.7,0) -- (4.3,0);
+
+  %--- ANGLE phi (arc from horizontal down to forearm direction) ---------
+  \draw[thin, black!70] (1.25,0) arc (0:-30:1.25);
+  \node[right, font=\footnotesize, black!65] at (-15:1.50) {$\phi=30^{\circ}$};
+
+  %--- KEY COORDINATES --------------------------------------------------
+  \coordinate (Batt) at (-30:0.50);  % bicep attachment (d = 0.05 m)
+  \coordinate (CM)   at (-30:1.75);  % center of mass of forearm (L/2)
+  \coordinate (Tip)  at (-30:3.50);  % far end -- chart held here (L = 0.35 m)
+
+  %--- BICEP ATTACHMENT DOT ---------------------------------------------
+  \filldraw[red!70!black] (Batt) circle (0.09);
+  % Label the attachment below-left to avoid clash with beta arc
+  \node[below left=2pt, font=\footnotesize, black!65] at (Batt)
+      {$d{=}0.05\,\text{m}$};
+
+  %--- FORCE: BICEP F_B -------------------------------------------------
+  % Direction: beta = 80 deg counterclockwise from forearm axis (-30 deg)
+  % => F_B direction = -30 + 80 = +50 deg from horizontal
+  \draw[->, very thick, red!85!black]
+      (Batt) -- +(50:2.4)
+      node[above right, font=\small, red!80!black]
+      {$F_B$ (bicep)};
+
+  %--- ARC for angle beta -----------------------------------------------
+  \draw[thin, red!55] ($(Batt)+(-30:0.60)$) arc (-30:50:0.60);
+  \node[font=\footnotesize, red!65!black] at ($(Batt)+(10:0.82)$)
+      {$\beta{=}80^{\circ}$};
+
+  %--- FORCE: FOREARM WEIGHT W_arm (straight down from midpoint) --------
+  \draw[->, very thick, blue!80!black]
+      (CM) -- +(270:1.45)
+      node[below, font=\small, blue!80!black]
+      {$W_{\text{arm}}{=}14.7\,\text{N}$};
+
+  %--- FORCE: CHART WEIGHT W_c (straight down from tip) -----------------
+  \draw[->, very thick, green!55!black]
+      (Tip) -- +(270:1.85)
+      node[below, font=\small, green!55!black]
+      {$W_c{=}24.5\,\text{N}$};
+
+  %--- FORCE: ELBOW REACTION R (dashed; direction found in part c) ------
+  % Calculated in part (c): R_x = +125.9 N, R_y = -110.9 N => ~-41 deg
+  \draw[->, thick, dashed, violet!75!black]
+      (0,0) -- +(-41:1.30)
+      node[below right=1pt, font=\small, violet!70!black]
+      {$\vec{R}$ (find in part~c)};
+
+\end{tikzpicture}
+\end{center}
 
 \end{solutionbox}
 
