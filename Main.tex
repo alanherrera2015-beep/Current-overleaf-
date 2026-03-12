@@ -11,6 +11,8 @@
 
 \pagestyle{fancy}
 \fancyhf{}
+\setlength{\headheight}{13.59999pt}  % minimum required by fancyhdr
+\addtolength{\topmargin}{-1.59999pt} % compensate to preserve overall layout
 \rhead{Chapters 7, 8 \& 10 -- Exam Prep}
 \lhead{PHYSICS 1101}
 \rfoot{Page \thepage}
@@ -93,7 +95,7 @@ Every time you see a letter or symbol in a formula, it stands for a number with 
 Here is a cheat-sheet for the most common ones:
 
 \smallskip
-\begin{tabular}{cl}
+\begin{tabular}{cp{0.82\linewidth}}% p-column lets long descriptions wrap
   $m$ & mass -- how much \textbf{stuff} is in an object (kilograms, kg) \\
   $g$ & gravity pull -- always $9.8$ m/s$^2$ downward on Earth \\
   $W = mg$ & weight -- how hard gravity pulls the object (Newtons, N) \\
@@ -865,8 +867,8 @@ R_x + F_{B,x} = 0 \quad\Longrightarrow\quad R_x = -F_{B,x} = +125.9\;\text{N}
 \textbf{Step 4 -- Vertical force balance} ($\sum F_y = 0$):
 \begin{align}
 R_y + F_{B,y} - W_{\text{arm}} - W_c &= 0 \\
-R_y &= W_{\text{arm}} + W_c - F_{B,y} = 14.7 + 24.5 - 150.1 = \mathbf{-110.9\;\text{N}}
-\quad\textit{(downward)}
+R_y &= W_{\text{arm}} + W_c - F_{B,y} = 14.7 + 24.5 - 150.1 = \mathbf{-110.9\;\text{N}} \\
+&\quad\textit{(downward)}
 \end{align}
 \textit{Step by step: $14.7 + 24.5 = 39.2$. Then $39.2 - 150.1 = -110.9$ N.
 Negative means the joint pushes downward -- it has to push the forearm down because
@@ -924,7 +926,7 @@ downward -- not just more comfortable, but mechanically easier!
 \section*{Solution 3: Superman Rescue (Advanced -- 2D)}
 %==============================================
 
-\begin{solutionbox}[Solution 3(a) -- Person's speed at $h = 80\,\mathrm{m}$]
+\begin{solutionbox}[{Solution 3(a) -- Person's speed at $h = 80\,\mathrm{m}$}]
 
 \textbf{Plain-English idea:} When something falls, height (stored energy) turns into
 speed (moving energy). The higher it falls, the faster it goes. We use energy
@@ -961,7 +963,7 @@ Then $\sqrt{2352} \approx 48.5$ m/s. That is about 108 mph -- very fast!}
 
 \end{solutionbox}
 
-\begin{solutionbox}[Solution 3(b) -- Superman's velocity at h = 80 m]
+\begin{solutionbox}[{Solution 3(b) -- Superman's velocity at h = 80 m}]
 
 \textbf{Plain-English idea:} Once Superman turns off his flight power, he moves like
 a ball thrown sideways off a cliff -- his left-right (horizontal) speed stays the
@@ -1431,7 +1433,7 @@ Quadratic formula & $x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$ & \\
 
 \section*{Pre-Exam Self-Check}
 
-\begin{conceptbox}[Rate Yourself Before the Exam \quad(1 = not sure, 5 = very confident)]
+\begin{conceptbox}[{Rate Yourself Before the Exam \quad(1 = not sure, 5 = very confident)}]
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|p{11.5cm}|c|}
 \hline
