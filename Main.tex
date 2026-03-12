@@ -86,6 +86,36 @@
 \end{enumerate}
 \end{conceptbox}
 
+\vspace{1em}
+
+\begin{conceptbox}[Quick Guide to Math Symbols Used in This Document]
+Every time you see a letter or symbol in a formula, it stands for a number with units.
+Here is a cheat-sheet for the most common ones:
+
+\smallskip
+\begin{tabular}{cl}
+  $m$ & mass -- how much \textbf{stuff} is in an object (kilograms, kg) \\
+  $g$ & gravity pull -- always $9.8$ m/s$^2$ downward on Earth \\
+  $W = mg$ & weight -- how hard gravity pulls the object (Newtons, N) \\
+  $F$ & any force -- a push or a pull (Newtons, N) \\
+  $k$ & spring stiffness -- bigger $k$ means stiffer spring (N/m) \\
+  $x$ or $\delta$ & how much a spring is squished or stretched (meters, m) \\
+  $\tau$ & torque -- a \textbf{turning} or \textbf{spinning} force (N$\cdot$m) \\
+  $r$ & how far from the turning point a force is applied (meters, m) \\
+  $v$ & speed (meters per second, m/s) \\
+  $KE$ & kinetic energy -- energy of motion ($\frac{1}{2}mv^2$, Joules, J) \\
+  $PE$ & potential energy -- energy stored by height ($mgh$, Joules, J) \\
+  $W_{\text{work}}$ & work done by a force (Joules, J); \textit{note: $W$ by itself usually means weight ($mg$); context tells which meaning applies} \\
+  $\sqrt{\phantom{x}}$ & square root -- the number that, multiplied by itself, gives what's inside \\
+  $\sum$ & ``the sum of'' (add everything up) \\
+  $\Rightarrow$ & ``which gives us'' or ``therefore'' \\
+\end{tabular}
+
+\smallskip
+\textbf{Remember:} When you see $A = B$, both sides are equal. You can always multiply
+or divide \emph{both} sides by the same number without breaking the equation.
+\end{conceptbox}
+
 \clearpage
 
 %##############################################
@@ -484,110 +514,216 @@ Ch.~10 (Energy \& Work).}
 
 \begin{solutionbox}[Solution 1(a) -- Total front-axle load]
 
-\textbf{Plain-English idea:} A car's weight is not split 50/50 front and back -- it
-depends on where the engine (center of mass) sits. We treat the car like a seesaw
-balanced between the two axles, and use torques to figure out what each axle holds.
+\textbf{Plain-English idea:} Imagine sitting on a seesaw. If you scoot toward one
+end, that end drops -- it has to push up harder to stay balanced. A car's weight is
+not split 50/50 front and back; it depends on where the heavy engine sits. We will
+treat the car like a seesaw balanced between the two axles, and use \emph{torques}
+(spinning forces) to figure out how much each axle pushes up.
 
 \smallskip
+\textbf{What we know:}
+\begin{itemize}
+  \item $m = 1600$ kg \quad (how heavy the SUV is)
+  \item $g = 9.8$ m/s$^2$ \quad (Earth's gravity pull)
+  \item $b = 1.20$ m \quad (center of mass is 1.20 m in front of the rear axle)
+  \item $L = 2.00$ m \quad (total wheelbase -- distance from rear to front axle)
+\end{itemize}
+
 \textbf{Step 1 -- Find the car's total weight.}
-\begin{equation}
-W = mg = (1600)(9.8) = 15{,}680\;\text{N}
-\end{equation}
 
-\textbf{Step 2 -- Take torques about the rear axle (eliminates the unknown rear force).}
-
-The center of mass is $b = 1.20$ m in front of the rear axle. The front axle is
-$L = 2.00$ m in front of the rear axle.
+Weight = mass $\times$ gravity.
 \begin{equation}
-R_f \times L = W \times b \quad\Longrightarrow\quad R_f = W \times \frac{b}{L}
-= 15{,}680 \times \frac{1.20}{2.00} = \boxed{9{,}408\;\text{N}}
+W = m \times g = 1600 \times 9.8 = \boxed{15{,}680\;\text{N}}
 \end{equation}
-\textit{The front axle carries 60\% of the weight because the CM is closer to the
-front (0.80 m from front vs.\ 1.20 m from rear).}
+\textit{In plain words: the SUV weighs 15,680 Newtons. A Newton is about the weight
+of a small apple, so this is like stacking 15,680 apples on the car.}
+
+\textbf{Step 2 -- Take torques about the rear axle.}
+
+A \textbf{torque} is a turning force: torque $=$ force $\times$ distance from the pivot.
+We choose the rear axle as our pivot (turning point) because that makes the unknown
+rear-axle force disappear -- it has \emph{zero} distance from the pivot, so its
+torque is zero.
+
+Two torques must balance (since the car is not spinning):
+\begin{itemize}
+  \item \textbf{Clockwise torque} from car weight: $\;W \times b = 15{,}680 \times 1.20$
+  \item \textbf{Counterclockwise torque} from front axle push-up: $\;R_f \times L = R_f \times 2.00$
+\end{itemize}
+
+Setting them equal (balanced seesaw):
+\begin{equation}
+R_f \times L = W \times b
+\end{equation}
+\textit{In plain words: ``front axle force times its distance from pivot'' equals
+``car weight times its distance from pivot.''}
+
+Solve for $R_f$ by dividing both sides by $L$:
+\begin{equation}
+R_f = W \times \frac{b}{L} = 15{,}680 \times \frac{1.20}{2.00}
+= 15{,}680 \times 0.60 = \boxed{9{,}408\;\text{N}}
+\end{equation}
+\textit{In plain words: the fraction $\frac{1.20}{2.00} = 0.60$ means the center of
+mass is 60\% of the way from the rear axle to the front axle. So the front axle
+carries 60\% of the total weight. That is why $9{,}408 = 0.60 \times 15{,}680$.}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 1(b) -- Individual spring forces]
 
-\textbf{Plain-English idea:} Now we do the same trick left-to-right. The CM is
-slightly to the right of center, so the right spring holds more weight than the left.
-We take torques about the left front wheel to find the right-spring force.
+\textbf{Plain-English idea:} We just found how hard the two \emph{front} springs
+together push up (9,408 N). Now we do the same left-to-right seesaw trick to split
+that force between the \emph{left} spring and the \emph{right} spring. Because the
+center of mass is slightly to the right, the right spring has to push up harder.
 
 \smallskip
-\textbf{Step 1 -- Find the distances.}
-
-The half-track is $W/2 = 0.80$ m from center to each wheel. The CM is $d = 0.10$ m
-to the right of center, so:
+\textbf{What we know:}
 \begin{itemize}
-  \item Distance from \textbf{left} wheel to CM $= 0.80 + 0.10 = 0.90$ m (to the right)
-  \item Distance from \textbf{right} wheel to CM $= 0.80 - 0.10 = 0.70$ m (to the left)
+  \item $R_f = 9{,}408$ N \quad (total front-axle force, from part~(a))
+  \item $W = 1.60$ m \quad (track width -- distance between the two front wheels)
+  \item $d = 0.10$ m \quad (center of mass is 0.10 m to the \emph{right} of center)
 \end{itemize}
 
-\textbf{Step 2 -- Torques about the left front wheel (CCW positive):}
+\textbf{Step 1 -- Find the distances from each wheel to the center of mass (CM).}
+
+The half-track is $W/2 = 1.60/2 = 0.80$ m from center to each wheel. The CM is
+0.10 m to the right, so:
+\begin{itemize}
+  \item Left wheel to CM $= 0.80 + 0.10 = \mathbf{0.90}$ m
+        \textit{(the CM is farther from the left wheel, so the left spring works
+        like the short-side seat of a seesaw)}
+  \item Right wheel to CM $= 0.80 - 0.10 = \mathbf{0.70}$ m
+        \textit{(the CM is closer to the right wheel)}
+\end{itemize}
+
+\textbf{Step 2 -- Take torques about the left front wheel to find $F_R$.}
+
+Picking the left wheel as pivot eliminates $F_L$ (it is at the pivot, so its torque
+is zero). Balance the torques:
 \begin{align}
 F_R \times 1.60 &= R_f \times 0.90 \\
-F_R &= \frac{9{,}408 \times 0.90}{1.60} = \boxed{5{,}292\;\text{N (right spring)}}
+\intertext{\textit{(Right spring force $\times$ its distance from left wheel) = (Total front force $\times$ distance from left wheel to CM)}}
+F_R &= \frac{9{,}408 \times 0.90}{1.60} = \frac{8{,}467}{1.60} = \boxed{5{,}292\;\text{N (right spring)}}
 \end{align}
+\textit{In plain words: the right spring carries about 56\% of the front-axle load
+($5292/9408 \approx 0.56$) because the CM is closer to it.}
 
-\textbf{Step 3 -- Force balance for $F_L$:}
+\textbf{Step 3 -- Find $F_L$ using force balance.}
+
+All the upward spring forces must equal the total downward load:
 \begin{equation}
-F_L = R_f - F_R = 9{,}408 - 5{,}292 = \boxed{4{,}116\;\text{N (left spring)}}
+F_L + F_R = R_f \quad\Longrightarrow\quad F_L = R_f - F_R = 9{,}408 - 5{,}292 = \boxed{4{,}116\;\text{N (left spring)}}
 \end{equation}
-\textit{The right spring holds about 28\% more force than the left -- because the
-heavy engine is offset to the right (e.g., passenger side).}
+\textit{Check: $4116 + 5292 = 9408$ \checkmark. The right spring holds about 28\%
+more force than the left.}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 1(c) -- Spring compressions]
 
-\textbf{Plain-English idea:} Hooke's Law ($x = F/k$) says: stiffer spring, less
-compression. The right spring is stiffer ($k_R > k_L$) but also carries more force.
-Let's see which effect wins!
+\textbf{Plain-English idea:} Hooke's Law says the harder you push on a spring, the
+more it squishes. But a \emph{stiffer} spring squishes less for the same push. Think
+of a car spring vs.\ a mattress spring -- the car spring barely moves even under a
+huge force. The formula is:
+\[
+x = \frac{F}{k}
+\]
+\textit{In plain words: compression $x$ = (force pushing down) $\div$ (spring stiffness).
+Bigger force $\Rightarrow$ more squish. Bigger $k$ $\Rightarrow$ less squish.}
 
-\begin{align}
-x_L &= \frac{F_L}{k_L} = \frac{4{,}116}{24{,}000} = \boxed{0.172\;\text{m} = 17.2\;\text{cm}} \\[4pt]
-x_R &= \frac{F_R}{k_R} = \frac{5{,}292}{30{,}000} = \boxed{0.176\;\text{m} = 17.6\;\text{cm}}
-\end{align}
-\textit{They are almost equal (difference of 4 mm) because the right spring is both
-stiffer and more loaded -- the two effects nearly cancel. This is no accident: spring
-rates are often matched to the load so all four corners sit level.}
+\smallskip
+\textbf{Left spring} ($k_L = 24{,}000$ N/m, $F_L = 4{,}116$ N):
+\begin{equation}
+x_L = \frac{F_L}{k_L} = \frac{4{,}116}{24{,}000} = \boxed{0.172\;\text{m} = 17.2\;\text{cm}}
+\end{equation}
+\textit{Step by step: $4116 \div 24000 = 0.172$. Then $0.172 \times 100 = 17.2$ cm.}
+
+\textbf{Right spring} ($k_R = 30{,}000$ N/m, $F_R = 5{,}292$ N):
+\begin{equation}
+x_R = \frac{F_R}{k_R} = \frac{5{,}292}{30{,}000} = \boxed{0.176\;\text{m} = 17.6\;\text{cm}}
+\end{equation}
+\textit{Step by step: $5292 \div 30000 = 0.176$. Then $0.176 \times 100 = 17.6$ cm.}
+
+\textbf{Are they equal?} Almost! The difference is only $17.6 - 17.2 = 0.4$ cm (4 mm).
+Even though the right spring carries more force \emph{and} is stiffer, the two effects
+nearly cancel each other out. Engineers choose spring rates this way on purpose so the
+car sits level.
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 1(d) -- Elastic potential energy]
 
-\textbf{Plain-English idea:} Each compressed spring stores energy $U = \frac{1}{2}kx^2$.
-Add both springs together.
+\textbf{Plain-English idea:} A squished spring stores energy, just like a stretched
+rubber band stores energy. The formula is:
+\[
+U = \tfrac{1}{2} k x^2
+\]
+\textit{In plain words: energy stored = (half the stiffness) $\times$ (compression)$^2$.
+We square the compression because a spring that's squished twice as far stores
+\emph{four} times the energy (not just twice).}
 
-\begin{align}
-U_L &= \frac{1}{2}(24{,}000)(0.172)^2 = 12{,}000 \times 0.029584 = 355.0\;\text{J} \\
-U_R &= \frac{1}{2}(30{,}000)(0.176)^2 = 15{,}000 \times 0.030976 = 464.6\;\text{J}
-\end{align}
+\smallskip
+\textbf{Left spring:} $k_L = 24{,}000$ N/m, $x_L = 0.172$ m
+
+First, square the compression: $x_L^2 = 0.172^2 = 0.172 \times 0.172 = 0.029584\;\text{m}^2$
 \begin{equation}
-U_{\text{total}} = 355.0 + 464.6 = \boxed{819.6\;\text{J} \approx 820\;\text{J}}
+U_L = \tfrac{1}{2}(24{,}000)(0.172)^2 = 12{,}000 \times 0.029584 = \mathbf{355.0\;\text{J}}
 \end{equation}
+\textit{Step by step: $\frac{1}{2} \times 24000 = 12000$. Then $12000 \times 0.029584 = 355.0$ J.}
+
+\textbf{Right spring:} $k_R = 30{,}000$ N/m, $x_R = 0.176$ m
+
+First, square the compression: $x_R^2 = 0.176^2 = 0.176 \times 0.176 = 0.030976\;\text{m}^2$
+\begin{equation}
+U_R = \tfrac{1}{2}(30{,}000)(0.176)^2 = 15{,}000 \times 0.030976 = \mathbf{464.6\;\text{J}}
+\end{equation}
+\textit{Step by step: $\frac{1}{2} \times 30000 = 15000$. Then $15000 \times 0.030976 = 464.6$ J.}
+
+\textbf{Total energy (add both):}
+\begin{equation}
+U_{\text{total}} = U_L + U_R = 355.0 + 464.6 = \boxed{819.6\;\text{J} \approx 820\;\text{J}}
+\end{equation}
+\textit{That is enough energy to lift a 1 kg book about 82 m into the air -- stored
+in just two car springs!}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 1(e) -- Dynamic loading (doubled load)]
 
-\textbf{Plain-English idea:} When the car hits a bump, the road pushes up extra hard --
-engineers call this the ``dynamic load factor.'' If the force doubles, Hooke's Law
-$x = F/k$ says the compression doubles too (spring force is proportional to
-compression).
+\textbf{Plain-English idea:} When a car hits a speed bump, the road pushes the wheel
+upward extra hard for a moment -- this is called a ``dynamic load.'' If the total force
+on a spring doubles, Hooke's Law ($x = F/k$) tells us the compression doubles too.
+This is because the formula is a straight line: double the force, double the stretch.
 
 \smallskip
-Under doubled front load: $F_R' = 2 \times 5{,}292 = 10{,}584$ N
+\textbf{Step 1 -- Find the new right-spring force.}
+
+The dynamic load doubles the entire front axle, so the right spring force also doubles:
+\begin{equation}
+F_R' = 2 \times F_R = 2 \times 5{,}292 = 10{,}584\;\text{N}
+\end{equation}
+\textit{In plain words: the bump pushes up with twice as much force, so the spring
+is pushed down with twice as much force.}
+
+\textbf{Step 2 -- Find the new compression using Hooke's Law.}
 \begin{equation}
 x_R' = \frac{F_R'}{k_R} = \frac{10{,}584}{30{,}000} = \boxed{0.353\;\text{m} = 35.3\;\text{cm}}
 \end{equation}
-\textbf{Percentage increase:}
+\textit{Step by step: $10584 \div 30000 = 0.3528 \approx 0.353$ m.}
+
+\textbf{Step 3 -- Percentage increase.}
+
+\textit{``Percentage increase'' means: how much did it grow, compared to where it
+started, expressed as a percent?}
 \begin{equation}
-\frac{x_R' - x_R}{x_R} \times 100\% = \frac{0.353 - 0.176}{0.176} \times 100\% = \boxed{100\%}
+\text{Percentage increase} = \frac{x_R' - x_R}{x_R} \times 100\%
+= \frac{0.353 - 0.176}{0.176} \times 100\%
+= \frac{0.177}{0.176} \times 100\% \approx \boxed{100\%}
 \end{equation}
-\textit{Exactly double! Because $F = kx$ is linear, doubling the force always doubles
-the compression. This is why engineers design suspension travel (maximum compression)
-to be at least twice the static compression.}
+\textit{Exactly a 100\% increase, meaning it doubled! Because $F = kx$ is a straight
+line, doubling the force \emph{always} doubles the compression. Real car engineers
+design the suspension so it can travel at least twice the static compression -- so the
+spring does not hit its limit on a bump.}
 
 \end{solutionbox}
 
@@ -599,114 +735,186 @@ to be at least twice the static compression.}
 
 \begin{solutionbox}[Solution 2(a) -- Free Body Diagram]
 
-\textbf{Plain-English idea:} We draw all forces on the forearm, which acts like a
-lever (beam) balanced at the elbow. The tricky part here is that the forearm is
-tilted -- this changes the perpendicular distances (moment arms) that weights create.
+\textbf{Plain-English idea:} A free body diagram is like a cartoon showing every
+force that acts on one object (here, the forearm). We draw arrows for each push or
+pull. The forearm acts like a lever (think: a see-saw). The elbow is the pivot,
+the bicep muscle is the engine pulling one side, and the weights of the arm and
+chart are pulling the other side down.
 
 \smallskip
-Forces on the forearm (tilted $30^\circ$ below horizontal):
+\textbf{What we know (variable legend):}
 \begin{itemize}
-  \item \textbf{Bicep force} $F_B$ -- at $\beta = 80^\circ$ from the forearm axis,
-        at $d = 0.05$ m from elbow. It pulls the forearm \emph{toward} the upper arm.
-  \item \textbf{Forearm weight} $W_{\text{arm}} = 1.5 \times 9.8 = 14.7$ N -- straight
-        down, at the midpoint ($L/2 = 0.175$ m from elbow along the forearm).
-  \item \textbf{Chart weight} $W_c = 2.5 \times 9.8 = 24.5$ N -- straight down,
-        at the far end ($L = 0.35$ m from elbow).
-  \item \textbf{Joint reaction} $\vec{R}$ -- at the elbow (direction unknown, to be found).
+  \item $m_c = 2.5$ kg \quad (mass of chart)
+  \item $m_{\text{arm}} = 1.5$ kg \quad (mass of forearm)
+  \item $L = 0.35$ m \quad (length of forearm)
+  \item $\phi = 30^\circ$ \quad (angle the forearm tilts below horizontal)
+  \item $d = 0.05$ m \quad (how far the bicep attaches from the elbow)
+  \item $\beta = 80^\circ$ \quad (angle the bicep force makes with the forearm)
+\end{itemize}
+
+\textbf{Forces on the forearm (tilted $30^\circ$ below horizontal):}
+\begin{itemize}
+  \item \textbf{Bicep force} $F_B$ -- the muscle pulls the forearm upward from $d = 0.05$ m
+        from the elbow, at $\beta = 80^\circ$ from the forearm axis.
+  \item \textbf{Forearm weight} $W_{\text{arm}} = m_{\text{arm}} \times g = 1.5 \times 9.8 = 14.7$ N
+        -- pulls straight down from the arm's midpoint ($0.175$ m from elbow).
+  \item \textbf{Chart weight} $W_c = m_c \times g = 2.5 \times 9.8 = 24.5$ N
+        -- pulls straight down from the far end ($0.35$ m from elbow).
+  \item \textbf{Elbow reaction} $\vec{R}$ -- the joint pushes back on the forearm
+        (direction unknown; we will find it in part~(c)).
 \end{itemize}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 2(b) -- Torque equation and bicep force]
 
-\textbf{Plain-English idea:} Taking torques about the elbow eliminates the unknown
-joint force $\vec{R}$ (it has zero moment arm). For a vertical weight $W$ at distance
-$r$ along a forearm that is tilted $\phi$ below horizontal, the moment arm (the
-perpendicular distance from the elbow to the line of gravity) equals $r\cos\phi$.
-This is because the moment arm shrinks as the arm tilts further down.
+\textbf{Plain-English idea:} We take torques about the \emph{elbow joint}. Why the
+elbow? Because the unknown joint force $\vec{R}$ acts \emph{at} the elbow -- it is
+zero distance from the pivot, so its torque is zero. It disappears from the equation!
+That leaves us one equation with one unknown: $F_B$.
+
+\textbf{Key geometry fact:} When the forearm is tilted $\phi = 30^\circ$ below
+horizontal, a vertical (downward) weight at distance $r$ along the forearm creates a
+torque equal to $\tau = W \times r\cos\phi$. The $\cos\phi$ factor shrinks the torque
+because the forearm is no longer perfectly horizontal -- imagine laying a ruler flat
+vs.\ angled; a weight on the angled ruler has less turning effect.
 
 \smallskip
-\textbf{Torques about the elbow (CCW = +):}
+\textbf{Step 1 -- Calculate the torques from the two weights (both clockwise, negative):}
 
-For the bicep, the component perpendicular to the forearm creates the torque:
-$\tau_B = F_B \sin\beta \times d = F_B \sin 80^\circ \times 0.05$ (CCW, $+$)
-
-For weights, the torque is $\tau = W \times r\cos\phi$ (CW, $-$):
+For the \emph{forearm's own weight} (acts at midpoint, $L/2 = 0.175$ m from elbow):
 \begin{align}
-\tau_{\text{arm}} &= W_{\text{arm}} \times (L/2)\cos\phi = 14.7 \times 0.175 \times \cos 30^\circ
-= 14.7 \times 0.175 \times 0.866 = 2.23\;\text{N$\cdot$m}\\
-\tau_c &= W_c \times L\cos\phi = 24.5 \times 0.35 \times 0.866 = 7.43\;\text{N$\cdot$m}
+\tau_{\text{arm}} &= W_{\text{arm}} \times (L/2) \times \cos\phi \\
+&= 14.7 \times 0.175 \times \cos 30^\circ \\
+&= 14.7 \times 0.175 \times 0.866 \\
+&= \mathbf{2.23\;\text{N$\cdot$m}}
 \end{align}
+\textit{Step by step: $14.7 \times 0.175 = 2.5725$. Then $2.5725 \times 0.866 = 2.23$.}
 
-\textbf{Set $\sum\tau = 0$:}
+For the \emph{chart's weight} (acts at far end, $L = 0.35$ m from elbow):
 \begin{align}
-F_B \sin 80^\circ \times 0.05 &= 2.23 + 7.43 = 9.66\;\text{N$\cdot$m} \\
+\tau_c &= W_c \times L \times \cos\phi \\
+&= 24.5 \times 0.35 \times 0.866 \\
+&= \mathbf{7.43\;\text{N$\cdot$m}}
+\end{align}
+\textit{Step by step: $24.5 \times 0.35 = 8.575$. Then $8.575 \times 0.866 = 7.43$.}
+
+\textbf{Step 2 -- Set the total torque to zero (equilibrium):}
+
+The bicep pulls upward at angle $\beta = 80^\circ$ from the forearm axis. Only the
+component perpendicular to the forearm creates torque:
+\begin{align}
+F_B \times \sin\beta \times d &= \tau_{\text{arm}} + \tau_c \\
+F_B \times \sin 80^\circ \times 0.05 &= 2.23 + 7.43
+\end{align}
+\textit{In plain words: (bicep force) $\times$ (fraction pointing sideways) $\times$
+(distance from elbow) = (total clockwise torque from weights).}
+
+\textbf{Step 3 -- Solve for $F_B$:}
+
+Compute the left side coefficient: $\sin 80^\circ = 0.9848$, so:
+\begin{align}
 F_B \times 0.9848 \times 0.05 &= 9.66 \\
-0.04924\,F_B &= 9.66
+F_B \times 0.04924 &= 9.66
 \end{align}
+
+Divide both sides by $0.04924$:
 \begin{equation}
 F_B = \frac{9.66}{0.04924} = \boxed{196\;\text{N}}
 \end{equation}
-\textit{About 44 lbs of bicep force to hold a chart that weighs only 5.5 lbs -- the
-short muscle attachment ($d = 5$ cm) creates a terrible mechanical disadvantage!}
+\textit{In plain words: $9.66 \div 0.04924 = 196$. That is about 44 lbs of bicep
+force just to hold a chart weighing 5.5 lbs! The muscle attachment is only 5 cm
+from the elbow, creating a terrible mechanical disadvantage -- like trying to push
+a door open by pressing near the hinge instead of near the handle.}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 2(c) -- Elbow joint reaction force]
 
-\textbf{Plain-English idea:} Use $\sum F = 0$ in each direction. First we need to know
-the direction of the bicep force. The forearm points at $30^\circ$ below horizontal.
-The bicep pulls at $80^\circ$ from the forearm axis (toward the upper arm, upward-inward),
-so its direction is $80^\circ - 30^\circ = 50^\circ$ above horizontal.
+\textbf{Plain-English idea:} Now that we know the bicep force, we use the rule
+``all forces must balance'' ($\sum F = 0$). Whatever the muscles and weights push
+or pull, the elbow joint must push back with exactly the right force so the forearm
+does not fly off or collapse.
 
 \smallskip
-\textbf{Bicep force components} (taking right = $+x$, up = $+y$):
+\textbf{Step 1 -- Figure out the direction of the bicep force.}
+
+The forearm points $30^\circ$ below horizontal. The bicep pulls at $80^\circ$ from
+the forearm axis (upward toward the shoulder). So the bicep's direction from
+horizontal is $80^\circ - 30^\circ = 50^\circ$ above horizontal.
+
+\textbf{Step 2 -- Break bicep force into horizontal and vertical pieces.}
+
+(Right = $+x$, Up = $+y$)
 \begin{align}
-F_{B,x} &= -F_B \cos 50^\circ = -196 \times 0.6428 = -125.9\;\text{N (leftward)}\\
-F_{B,y} &= +F_B \sin 50^\circ = +196 \times 0.7660 = +150.1\;\text{N (upward)}
+F_{B,x} &= -F_B \cos 50^\circ = -196 \times 0.6428 = \mathbf{-125.9\;\text{N}}
+\quad\textit{(leftward)}\\
+F_{B,y} &= +F_B \sin 50^\circ = +196 \times 0.7660 = \mathbf{+150.1\;\text{N}}
+\quad\textit{(upward)}
 \end{align}
+\textit{Step by step for $x$: $\cos 50^\circ = 0.6428$, then $196 \times 0.6428 = 125.9$.
+Step by step for $y$: $\sin 50^\circ = 0.7660$, then $196 \times 0.7660 = 150.1$.}
 
-\textbf{Force balance $\sum F_x = 0$:}
+\textbf{Step 3 -- Horizontal force balance} ($\sum F_x = 0$, nothing else acts horizontally):
 \begin{equation}
-R_x + F_{B,x} = 0 \quad\Longrightarrow\quad R_x = +125.9\;\text{N (rightward)}
+R_x + F_{B,x} = 0 \quad\Longrightarrow\quad R_x = -F_{B,x} = +125.9\;\text{N}
+\quad\textit{(rightward)}
 \end{equation}
+\textit{The joint pushes right to cancel the bicep's leftward pull.}
 
-\textbf{Force balance $\sum F_y = 0$:}
+\textbf{Step 4 -- Vertical force balance} ($\sum F_y = 0$):
 \begin{align}
 R_y + F_{B,y} - W_{\text{arm}} - W_c &= 0 \\
-R_y &= 14.7 + 24.5 - 150.1 = -110.9\;\text{N (downward)}
+R_y &= W_{\text{arm}} + W_c - F_{B,y} = 14.7 + 24.5 - 150.1 = \mathbf{-110.9\;\text{N}}
+\quad\textit{(downward)}
 \end{align}
+\textit{Step by step: $14.7 + 24.5 = 39.2$. Then $39.2 - 150.1 = -110.9$ N.
+Negative means the joint pushes downward -- it has to push the forearm down because
+the powerful bicep is pulling it up too hard.}
 
-\textbf{Magnitude of joint reaction:}
-\begin{equation}
-|\vec{R}| = \sqrt{(125.9)^2 + (110.9)^2} = \sqrt{15{,}851 + 12{,}299}
-= \sqrt{28{,}150} = \boxed{167.8\;\text{N}}
-\end{equation}
-\textit{The joint force ($\approx 38$ lbs) is larger than the chart weight
-($\approx 5.5$ lbs) by a factor of 7 -- the skeleton takes a beating so the muscles
-can have short, powerful attachments.}
+\textbf{Step 5 -- Find the magnitude using the Pythagorean theorem.}
+
+The joint force has a rightward and a downward piece. To find the total magnitude,
+treat them like the legs of a right triangle ($a^2 + b^2 = c^2$):
+\begin{align}
+|\vec{R}| &= \sqrt{R_x^2 + R_y^2} = \sqrt{(125.9)^2 + (110.9)^2} \\
+&= \sqrt{15{,}851 + 12{,}299} \\
+&= \sqrt{28{,}150} = \boxed{167.8\;\text{N}}
+\end{align}
+\textit{Step by step: $125.9^2 = 15851$; $110.9^2 = 12299$; $15851 + 12299 = 28150$;
+$\sqrt{28150} \approx 167.8$ N.
+The joint force ($\approx 38$ lbs) is 7 times larger than the chart ($\approx 5.5$ lbs).}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 2(d) -- Comparison with horizontal forearm]
 
-\textbf{Plain-English idea:} When the arm is tilted down, gravity's moment arm shrinks
-(by $\cos\phi$). Less torque from the weights means the muscle needs to produce less
-torque, so the muscle force is smaller.
+\textbf{Plain-English idea:} When the arm tilts down, the weights do less turning.
+Think of it this way: if you lay a ruler flat and hang a weight on the end, it
+creates maximum turning force (torque). If you tilt the ruler downward, gravity
+is now pulling partly along the ruler rather than straight sideways -- it
+creates less turning force. Less turning force from the weights means the bicep
+does not have to work as hard.
 
 \smallskip
-For $\phi = 0^\circ$ (horizontal arm), $\cos 0^\circ = 1$:
+For $\phi = 0^\circ$ (horizontal arm), $\cos 0^\circ = 1$ (the maximum value):
 \begin{align}
 \tau_{\text{arm}}' &= 14.7 \times 0.175 \times 1 = 2.57\;\text{N$\cdot$m}\\
 \tau_c' &= 24.5 \times 0.35 \times 1 = 8.58\;\text{N$\cdot$m}
 \end{align}
+\textit{Notice $2.57 > 2.23$ and $8.58 > 7.43$ -- the horizontal arm creates bigger
+torques because $\cos 0^\circ = 1 > \cos 30^\circ = 0.866$.}
+
+Solve for $F_B'$ (same formula as before, same denominator $0.04924$):
 \begin{equation}
-F_B' = \frac{2.57 + 8.58}{0.04924} = \frac{11.15}{0.04924} = \boxed{226\;\text{N}}
+F_B' = \frac{\tau_{\text{arm}}' + \tau_c'}{0.04924} = \frac{2.57 + 8.58}{0.04924} = \frac{11.15}{0.04924} = \boxed{226\;\text{N}}
 \end{equation}
-\textbf{Conclusion:} Horizontal arm requires $F_B' = 226$ N vs.\ $F_B = 196$ N when
-tilted at $30^\circ$ below. The tilted position requires \emph{less} force because
-the moment arms of the weights ($r\cos\phi$) are smaller. This is why it is easier to
-hold something with your arm angled downward slightly.
+\textit{Step by step: $2.57 + 8.58 = 11.15$. Then $11.15 \div 0.04924 = 226$ N.}
+
+\textbf{Conclusion:} Horizontal arm requires $F_B' = 226$ N versus only $F_B = 196$ N
+when tilted $30^\circ$ down. The tilted arm needs \emph{less} bicep force (about 13\%
+less). So it is genuinely easier to hold something with your arm slightly angled
+downward -- not just more comfortable, but mechanically easier!
 
 \end{solutionbox}
 
@@ -718,127 +926,201 @@ hold something with your arm angled downward slightly.
 
 \begin{solutionbox}[Solution 3(a) -- Person's speed at $h = 80\,\mathrm{m}$]
 
-\textbf{Plain-English idea:} The person fell from $H_p = 200$ m and is now at $h = 80$ m.
-She has fallen $\Delta h = 120$ m. Gravity converted all that height into speed.
-Use energy conservation (no friction, no air resistance).
+\textbf{Plain-English idea:} When something falls, height (stored energy) turns into
+speed (moving energy). The higher it falls, the faster it goes. We use energy
+conservation: all the height energy becomes speed energy. No energy is lost (we
+ignore air resistance).
 
+\smallskip
+\textbf{What we know:}
+\begin{itemize}
+  \item Person started at $H_p = 200$ m and is now at $h = 80$ m.
+  \item She has fallen $\Delta h = 200 - 80 = 120$ m.
+  \item $g = 9.8$ m/s$^2$
+\end{itemize}
+
+\textbf{Energy conservation} (height energy $\to$ speed energy):
 \begin{equation}
-\frac{1}{2}mv_p^2 = mg\,\Delta h \quad\Longrightarrow\quad
-v_p = \sqrt{2g\,\Delta h} = \sqrt{2(9.8)(120)} = \sqrt{2352}
+\underbrace{\frac{1}{2}mv_p^2}_{\text{kinetic energy gained}} = \underbrace{mg\,\Delta h}_{\text{height energy lost}}
+\end{equation}
+\textit{In plain words: the energy she gained by falling equals the energy she had
+from being high up.}
+
+Divide both sides by $m$ (mass cancels!):
+\begin{equation}
+\frac{1}{2}v_p^2 = g\,\Delta h \quad\Longrightarrow\quad v_p^2 = 2g\,\Delta h
+\end{equation}
+
+Take the square root of both sides to find $v_p$:
+\begin{equation}
+v_p = \sqrt{2g\,\Delta h} = \sqrt{2 \times 9.8 \times 120} = \sqrt{2352}
 = \boxed{48.5\;\text{m/s (downward)}}
 \end{equation}
+\textit{Step by step: $2 \times 9.8 = 19.6$. Then $19.6 \times 120 = 2352$.
+Then $\sqrt{2352} \approx 48.5$ m/s. That is about 108 mph -- very fast!}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 3(b) -- Superman's velocity at h = 80 m]
 
-\textbf{Plain-English idea:} After Superman stops his engines, he is like a projectile:
-his horizontal speed stays constant (no horizontal force), and gravity accelerates him
-downward from rest in the vertical direction. We treat the two directions separately.
+\textbf{Plain-English idea:} Once Superman turns off his flight power, he moves like
+a ball thrown sideways off a cliff -- his left-right (horizontal) speed stays the
+same forever, while gravity pulls him faster and faster downward. We handle the two
+directions separately because they are completely independent.
 
 \smallskip
-Superman starts at $H_S = 180$ m with $v_{Sx,i} = 15.0$ m/s (right) and $v_{Sy,i} = 0$.
-He falls $\Delta h_S = 180 - 80 = 100$ m.
+\textbf{What we know:}
+\begin{itemize}
+  \item Superman starts at $H_S = 180$ m, falls to $h = 80$ m, so $\Delta h_S = 180 - 80 = 100$ m.
+  \item His initial horizontal speed $u = 15.0$ m/s (rightward).
+  \item His initial vertical speed $= 0$ (he was flying horizontally, not up or down).
+\end{itemize}
 
-\textbf{Horizontal component (unchanged):}
+\textbf{Horizontal component} (no horizontal force, so speed does not change):
 \begin{equation}
 v_{Sx} = u = \boxed{15.0\;\text{m/s (rightward)}}
 \end{equation}
+\textit{In plain words: without any sideways push or pull, the sideways speed stays
+the same -- just like a ball rolling on a frictionless table keeps going at the same
+speed.}
 
-\textbf{Vertical component (gained from free-fall):}
+\textbf{Vertical component} (same energy formula as part (a), starting from rest vertically):
 \begin{equation}
-v_{Sy} = \sqrt{2g\,\Delta h_S} = \sqrt{2(9.8)(100)} = \sqrt{1960}
+v_{Sy} = \sqrt{2g\,\Delta h_S} = \sqrt{2 \times 9.8 \times 100} = \sqrt{1960}
 = \boxed{44.3\;\text{m/s (downward)}}
 \end{equation}
+\textit{Step by step: $2 \times 9.8 = 19.6$. Then $19.6 \times 100 = 1960$.
+Then $\sqrt{1960} \approx 44.3$ m/s.}
 
-\textbf{Magnitude of Superman's speed:}
+\textbf{Total speed} (Pythagorean theorem -- the two speed components are at right angles):
 \begin{equation}
-|v_S| = \sqrt{(15.0)^2 + (44.3)^2} = \sqrt{225 + 1962.49} = \sqrt{2187.49}
-= \boxed{46.8\;\text{m/s}}
+|v_S| = \sqrt{v_{Sx}^2 + v_{Sy}^2} = \sqrt{(15.0)^2 + (44.3)^2}
+= \sqrt{225 + 1962} = \sqrt{2187} = \boxed{46.8\;\text{m/s}}
 \end{equation}
-\textit{Superman is moving mostly downward (44 m/s) with a moderate sideways component
-(15 m/s). Like a skydiver who was drifting horizontally.}
+\textit{Step by step: $15^2 = 225$; $44.3^2 \approx 1962$; $225 + 1962 = 2187$;
+$\sqrt{2187} \approx 46.8$ m/s. (Note: $44.3^2 = 1962.49$, rounded to $1962$ for brevity.)
+Superman is zooming mostly downward (44 m/s) with a smaller sideways drift (15 m/s).}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 3(c) -- Combined velocity after the catch (2D momentum)]
 
-\textbf{Plain-English idea:} The catch is a 2D collision -- they stick together.
-Momentum is conserved \emph{independently} in each direction ($x$ and $y$). Think of
-it like two trains on perpendicular tracks colliding at a junction: we balance east-west
-and north-south momentum separately.
+\textbf{Plain-English idea:} When Superman grabs the person, they stick together.
+This is like two ice skaters colliding and hugging -- they end up moving together.
+\emph{Momentum} (mass $\times$ velocity) cannot be created or destroyed. We conserve
+momentum \emph{separately} in the left-right direction and the up-down direction
+because the two directions do not mix.
+
+Think of it like billiard balls on a table: a ball moving sideways can only change
+the sideways speed of another ball, not its up-down speed.
 
 \smallskip
 \textbf{Before the catch:}
 \begin{center}
 \begin{tabular}{lcc}
 \toprule
- & $x$ (rightward) & $y$ (downward positive) \\
+ & $x$ (rightward $+$) & $y$ (downward $+$) \\
 \midrule
 Superman ($M = 90$ kg) & $+15.0$ m/s & $+44.3$ m/s \\
-Person ($m = 70$ kg) & $0$ & $+48.5$ m/s \\
+Person ($m = 70$ kg)   & $0$ m/s & $+48.5$ m/s \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\textbf{$x$-momentum conservation:}
-\begin{equation}
-(M + m)\,v_{fx} = M(15.0) + m(0) = 90 \times 15.0 = 1350\;\text{kg$\cdot$m/s}
-\end{equation}
-\begin{equation}
-v_{fx} = \frac{1350}{90 + 70} = \frac{1350}{160} = \boxed{8.44\;\text{m/s (rightward)}}
-\end{equation}
+\textbf{$x$-direction momentum conservation:}
 
-\textbf{$y$-momentum conservation (downward positive):}
+Total $x$-momentum before = Total $x$-momentum after
+\begin{equation}
+M \cdot v_{Sx} + m \cdot 0 = (M + m)\,v_{fx}
+\end{equation}
+\textit{In plain words: only Superman had horizontal momentum (the person was falling
+straight down). After the catch, both move together at $v_{fx}$.}
+\begin{equation}
+90 \times 15.0 = 160 \times v_{fx}
+\quad\Longrightarrow\quad
+v_{fx} = \frac{1350}{160} = \boxed{8.44\;\text{m/s (rightward)}}
+\end{equation}
+\textit{Step by step: $90 \times 15.0 = 1350$. Then $1350 \div 160 = 8.44$ m/s.}
+
+\textbf{$y$-direction momentum conservation (downward positive):}
+
+Total $y$-momentum before = Total $y$-momentum after
 \begin{align}
-(M + m)\,v_{fy} &= M(44.3) + m(48.5) = 90(44.3) + 70(48.5) \\
-&= 3987 + 3395 = 7382\;\text{kg$\cdot$m/s}
+M \cdot v_{Sy} + m \cdot v_{py} &= (M + m)\,v_{fy} \\
+90 \times 44.3 + 70 \times 48.5 &= 160 \times v_{fy} \\
+3987 + 3395 &= 160 \times v_{fy} \\
+7382 &= 160 \times v_{fy}
 \end{align}
 \begin{equation}
 v_{fy} = \frac{7382}{160} = \boxed{46.1\;\text{m/s (downward)}}
 \end{equation}
+\textit{Step by step: $90 \times 44.3 = 3987$; $70 \times 48.5 = 3395$;
+$3987 + 3395 = 7382$; $7382 \div 160 = 46.1$ m/s.}
 
-\textbf{Combined speed:}
+\textbf{Combined speed} (Pythagorean theorem again):
 \begin{equation}
-v_f = \sqrt{(8.44)^2 + (46.1)^2} = \sqrt{71.2 + 2125.2} = \sqrt{2196.4}
-= \boxed{46.9\;\text{m/s}}
+v_f = \sqrt{v_{fx}^2 + v_{fy}^2} = \sqrt{(8.44)^2 + (46.1)^2}
+= \sqrt{71.2 + 2125.2} = \sqrt{2196.4} = \boxed{46.9\;\text{m/s}}
 \end{equation}
-\textit{The combined speed is close to the person's original falling speed -- she is
-much heavier than Superman's horizontal contribution.}
+\textit{Step by step: $8.44^2 = 71.2$; $46.1^2 = 2125.2$; $71.2 + 2125.2 = 2196.4$;
+$\sqrt{2196.4} \approx 46.9$ m/s. They are still falling very fast -- mostly straight
+down. Superman has a lot of work to do!}
 
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 3(d) -- Work by Superman's muscles]
 
-\textbf{Plain-English idea:} They are now at $h = 80$ m, moving at 46.9 m/s with a
-mix of downward and sideways speed. Superman must bring them to a complete stop at
-ground level. We use the work-energy theorem: the muscles, gravity, and the final
-zero-KE condition all connect.
+\textbf{Plain-English idea:} Superman and the person are at 80 m, falling at 46.9 m/s.
+He must bring them to a \emph{complete stop} ($v = 0$) exactly at the ground ($h = 0$).
+We use the \textbf{work-energy theorem}: the total work done equals the change in
+kinetic energy. Both gravity (helping, pushing them down) and Superman's muscles
+(braking, slowing them down) do work during the remaining 80 m.
 
 \smallskip
-\textbf{Step 1 -- KE just after the catch.}
+\textbf{Step 1 -- Find the kinetic energy just after the catch.}
+
+Kinetic energy (KE) = $\frac{1}{2} \times \text{mass} \times \text{speed}^2$
 \begin{equation}
-KE_i = \frac{1}{2}(M+m)v_f^2 = \frac{1}{2}(160)(46.9)^2
-= 80 \times 2199.6 = 175{,}968\;\text{J}
+KE_i = \frac{1}{2}(M+m)v_f^2 = \frac{1}{2} \times 160 \times (46.9)^2
+\end{equation}
+\textit{Step by step: $46.9^2 = 46.9 \times 46.9 = 2199.6$. Then $\frac{1}{2} \times 160 = 80$.
+Then $80 \times 2199.6 = 175{,}968$ J.}
+\begin{equation}
+KE_i = 80 \times 2199.6 = \mathbf{175{,}968\;\text{J}}
 \end{equation}
 
-\textbf{Step 2 -- Work by gravity over the 80 m descent to ground.}
+\textbf{Step 2 -- Find the work done by gravity over the 80 m to the ground.}
+
+Gravity does \emph{positive} work as they fall (gravity acts downward and they move
+downward -- force and motion in the same direction):
 \begin{equation}
-W_g = (M+m)\,g\,h = (160)(9.8)(80) = 125{,}440\;\text{J} \quad\text{(positive)}
+W_g = (M+m)\,g\,h = 160 \times 9.8 \times 80 = \mathbf{125{,}440\;\text{J}}
+\end{equation}
+\textit{Step by step: $160 \times 9.8 = 1568$. Then $1568 \times 80 = 125{,}440$ J.}
+
+\textbf{Step 3 -- Apply the work-energy theorem.}
+
+At the end they are stopped: final $KE_f = 0$.
+
+The theorem says: total work done $=$ final KE $-$ initial KE
+\begin{equation}
+W_{\text{total}} = KE_f - KE_i = 0 - 175{,}968 = -175{,}968\;\text{J}
 \end{equation}
 
-\textbf{Step 3 -- Work-energy theorem ($KE_f = 0$).}
+Total work = gravity's work + muscle work:
 \begin{align}
-W_{\text{net}} &= KE_f - KE_i = 0 - 175{,}968 = -175{,}968\;\text{J} \\
 W_g + W_{\text{muscles}} &= -175{,}968 \\
 125{,}440 + W_{\text{muscles}} &= -175{,}968
 \end{align}
+
+Subtract $125{,}440$ from both sides:
 \begin{equation}
 W_{\text{muscles}} = -175{,}968 - 125{,}440 = \boxed{-301{,}408\;\text{J} \approx -301\;\text{kJ}}
 \end{equation}
-\textit{Superman's muscles must absorb 301 kJ -- about the energy in a stick of
-dynamite! The negative sign means his muscles do braking (negative) work, removing
-energy from the system.}
+\textit{In plain words: the negative sign means Superman's muscles do \emph{braking}
+work -- they remove energy from the system, like brakes on a car. He must absorb
+301,000 J, which is roughly the energy in a stick of dynamite! That is why
+Superman is a superhero.}
 
 \end{solutionbox}
 
@@ -850,36 +1132,66 @@ energy from the system.}
 
 \begin{solutionbox}[Solution A -- Two-Spring System]
 
-\textbf{Plain-English idea:} The board is perfectly still -- all forces and all torques
-balance. Two equations (force balance and torque balance) give us our two unknowns.
+\textbf{Plain-English idea:} The diving board is perfectly still -- nothing is moving
+or spinning. That means two things must be true at the same time:
+\begin{enumerate}
+  \item All upward forces must equal all downward forces (force balance).
+  \item All clockwise torques must equal all counterclockwise torques (torque balance).
+\end{enumerate}
+Two rules $\Rightarrow$ two equations $\Rightarrow$ we can solve for two unknowns
+($\delta_1$ and $\delta_2$).
 
 \smallskip
-\textbf{Forces:} $F_1 = 8000\,\delta_1$ (up) at $x=0$;
-$F_2 = 12{,}000\,\delta_2$ (up) at $x=2.0$ m;
-$W_B = 245$ N (down) at $x=1.5$ m; $W_D = 686$ N (down) at $x=3.0$ m.
+\textbf{Forces acting (using Hooke's Law, $F = kx$):}
+\begin{itemize}
+  \item Spring 1 pushes up: $F_1 = k_1 \delta_1 = 8000\,\delta_1$ \quad at $x = 0$
+  \item Spring 2 pushes up: $F_2 = k_2 \delta_2 = 12{,}000\,\delta_2$ \quad at $x = 2.0$ m
+  \item Board weight pulls down: $W_B = Mg = 25 \times 9.8 = 245$ N \quad at $x = 1.5$ m (center)
+  \item Diver weight pulls down: $W_D = mg = 70 \times 9.8 = 686$ N \quad at $x = 3.0$ m
+\end{itemize}
 
-\textbf{Force balance:}
+\textbf{Force balance} (up $=$ down):
 \begin{equation}
-8000\,\delta_1 + 12{,}000\,\delta_2 = 931\;\text{N}
+8000\,\delta_1 + 12{,}000\,\delta_2 = 245 + 686 = 931\;\text{N}
 \label{eq:forceA}
 \end{equation}
+\textit{In plain words: total spring push-up equals total weight push-down.}
 
-\textbf{Torque balance about $x = 0$ (pivot at Spring 1 -- makes $F_1$ vanish):}
+\textbf{Torque balance about $x = 0$ (Spring~1's location as pivot).}
+
+Choosing Spring~1 as the pivot makes $F_1$ vanish (it is at the pivot, distance = 0).
+Now we only have three torques to balance:
 \begin{align}
-12{,}000\,\delta_2 \times 2.0 &= 245 \times 1.5 + 686 \times 3.0 \\
+\underbrace{12{,}000\,\delta_2 \times 2.0}_{\text{Spring 2 torque (CCW)}}
+&= \underbrace{245 \times 1.5}_{\text{board weight torque (CW)}}
++ \underbrace{686 \times 3.0}_{\text{diver torque (CW)}} \\
 24{,}000\,\delta_2 &= 367.5 + 2058 = 2425.5
 \end{align}
+\textit{Step by step: $245 \times 1.5 = 367.5$; $686 \times 3.0 = 2058$;
+$367.5 + 2058 = 2425.5$.}
+
+Divide both sides by $24{,}000$:
 \begin{equation}
 \delta_2 = \frac{2425.5}{24{,}000} = \boxed{0.101\;\text{m} = 10.1\;\text{cm}}
 \end{equation}
+\textit{Step by step: $2425.5 \div 24000 = 0.10106 \approx 0.101$ m.}
 
-\textbf{Substitute into \eqref{eq:forceA}:}
+\textbf{Substitute $\delta_2$ into the force balance} (Equation~\ref{eq:forceA}):
+\begin{align}
+8000\,\delta_1 &= 931 - 12{,}000 \times 0.101 \\
+8000\,\delta_1 &= 931 - 1212 = -281
+\end{align}
 \begin{equation}
-\delta_1 = \frac{931 - 12{,}000(0.101)}{8000} = \frac{-281}{8000} = \boxed{-0.035\;\text{m}}
+\delta_1 = \frac{-281}{8000} = \boxed{-0.035\;\text{m} = -3.5\;\text{cm}}
 \end{equation}
+\textit{Step by step: $12000 \times 0.101 = 1212$; $931 - 1212 = -281$;
+$-281 \div 8000 = -0.0351$ m.}
 
-\textit{Negative $\delta_1$: Spring 1 is in \textbf{tension} (stretched 3.5 cm).
-The heavy diver on the right tips the board so much that the left end rises.}
+\textbf{What does negative $\delta_1$ mean?} Normally a spring is compressed (squished).
+A negative value means Spring~1 is being \emph{stretched} (pulled apart) instead!
+The heavy diver at the far right tips the board so far that the left end lifts up,
+stretching Spring~1. A spring can only do this if it is bolted down (attached on
+both ends) -- otherwise the board just lifts off.
 
 \end{solutionbox}
 
@@ -891,31 +1203,78 @@ The heavy diver on the right tips the board so much that the left end rises.}
 
 \begin{solutionbox}[Solution B -- Variable Force Stopping Distance]
 
-\textbf{Plain-English idea:} The braking force grows with distance. To find work from
-a changing force, integrate. Then use the work-energy theorem.
+\textbf{Plain-English idea:} The brakes get stronger as the car slides farther -- maybe
+the brakes heat up and grip better. To find the work done by a force that \emph{changes},
+we use calculus (integration). Think of it like adding up many tiny rectangles under a
+graph of force vs.\ distance. Then the work-energy theorem connects work to speed change.
 
-\textbf{Initial KE:}
+\smallskip
+\textbf{What we know:}
+\begin{itemize}
+  \item Mass: $m = 1500$ kg; initial speed: $v_0 = 25$ m/s; final speed: $0$ (stopped)
+  \item Braking force: $F(x) = F_0 + bx = 5000 + 200x$ (grows with distance $x$)
+\end{itemize}
+
+\textbf{Step 1 -- Initial kinetic energy.}
 \begin{equation}
-KE_i = \frac{1}{2}(1500)(25)^2 = 468{,}750\;\text{J}
+KE_i = \frac{1}{2}mv_0^2 = \frac{1}{2} \times 1500 \times 25^2
+= 750 \times 625 = \mathbf{468{,}750\;\text{J}}
+\end{equation}
+\textit{Step by step: $25^2 = 625$; $\frac{1}{2} \times 1500 = 750$; $750 \times 625 = 468{,}750$ J.}
+
+\textbf{Step 2 -- Work done by the braking force (using integration).}
+
+Work $=$ area under the force-distance graph. For $F(x) = 5000 + 200x$:
+\begin{equation}
+W = \int_0^{d}(5000 + 200x)\,dx
+\end{equation}
+\textit{In plain words: we add up (integrate) the force for every tiny slice of distance,
+from the start ($x=0$) to the stopping point ($x=d$). Integrating $5000$ gives $5000d$.
+Integrating $200x$ gives $100x^2$ (use the power rule: $\int x\,dx = \frac{x^2}{2}$,
+so $\int 200x\,dx = 200 \cdot \frac{x^2}{2} = 100x^2$):}
+\begin{equation}
+W = 5000d + 100d^2
 \end{equation}
 
-\textbf{Work by braking force:}
+\textbf{Step 3 -- Set work equal to initial KE (all KE is removed by braking).}
 \begin{equation}
-W = \int_0^{d}(5000 + 200x)\,dx = 5000d + 100d^2
+5000d + 100d^2 = 468{,}750
 \end{equation}
 
-\textbf{Set $W = KE_i$, solve quadratic:}
+Rearrange to standard quadratic form ($ax^2 + bx + c = 0$). Divide everything by 100:
 \begin{equation}
-100d^2 + 5000d - 468{,}750 = 0 \;\Rightarrow\; d^2 + 50d - 4687.5 = 0
+d^2 + 50d - 4687.5 = 0
 \end{equation}
+\textit{Here $a = 1$, $b = 50$, $c = -4687.5$.}
+
+\textbf{Step 4 -- Use the quadratic formula.}
+
+The quadratic formula solves $ax^2 + bx + c = 0$:
+\[
+d = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+\textit{The $\pm$ gives two solutions. We always pick the \emph{positive} one (negative
+distance makes no physical sense).}
+\begin{align}
+d &= \frac{-50 + \sqrt{50^2 - 4(1)(-4687.5)}}{2(1)} \\
+&= \frac{-50 + \sqrt{2500 + 18750}}{2} \\
+&= \frac{-50 + \sqrt{21250}}{2}
+\end{align}
+\textit{Step by step: $50^2 = 2500$; $4 \times 4687.5 = 18750$; $2500 + 18750 = 21250$;
+$\sqrt{21250} \approx 145.8$.}
 \begin{equation}
-d = \frac{-50 + \sqrt{2500 + 18750}}{2} = \frac{-50 + 145.8}{2} = \boxed{47.9\;\text{m}}
+d = \frac{-50 + 145.8}{2} = \frac{95.8}{2} = \boxed{47.9\;\text{m}}
 \end{equation}
 
-\textbf{Constant-force comparison:}
-$d_{\text{const}} = KE_i / F_0 = 468{,}750 / 5000 = \boxed{93.75\;\text{m}}$
+\textbf{Step 5 -- Compare to constant braking (force $= F_0 = 5000$ N only).}
 
-\textit{Variable braking halves the stopping distance compared to constant braking.}
+With constant force, work $= F_0 \times d_{\text{const}}$. Set equal to KE:
+\begin{equation}
+d_{\text{const}} = \frac{KE_i}{F_0} = \frac{468{,}750}{5000} = \boxed{93.75\;\text{m}}
+\end{equation}
+\textit{The variable braking stops the car in 47.9 m versus 93.75 m for constant
+braking -- \emph{half the distance}! The growing braking force (brakes getting stronger)
+does much more work in the same distance, removing energy faster.}
 
 \end{solutionbox}
 
@@ -928,17 +1287,17 @@ $d_{\text{const}} = KE_i / F_0 = 468{,}750 / 5000 = \boxed{93.75\;\text{m}}$
 \begin{answerbox}[Chapter 7 -- Rotational Motion Answers]
 \begin{multicols}{2}
 \begin{enumerate}[label=\textbf{MC-\arabic*.}]
-  \item \textbf{B} -- Solid disk: lower $I = \frac{1}{2}MR^2$ rolls faster than ring ($MR^2$)
-  \item \textbf{B} -- $L = I\omega$ conserved; smaller $I$ $\Rightarrow$ larger $\omega$
-  \item \textbf{C} -- $\frac{1}{3}ML^2$: parallel-axis theorem $\frac{1}{12}ML^2 + M(\frac{L}{2})^2$
-  \item \textbf{B} -- $\alpha = \tau/I = 12/4 = 3$ rad/s$^2$
-  \item \textbf{A} -- $I_{\text{child}} = mR^2 = 40(4) = 160$ kg$\cdot$m$^2$; $\omega_f = 500/660 \approx 0.76$
-  \item \textbf{C} -- Angular momentum conserved (no net external torque)
-  \item \textbf{A} -- $\theta = \frac{1}{2}(2)(16) = 16$ rad $= 16/(2\pi) \approx 2.55$ rev
-  \item \textbf{C} -- $KE_{\text{rot}} = \frac{1}{2}I\omega^2$
+  \item \textbf{B} -- Solid disk: lower $I = \frac{1}{2}MR^2$ vs.\ ring ($MR^2$); less rotational inertia means it accelerates faster
+  \item \textbf{B} -- $L = I\omega$ is conserved; arms in $\Rightarrow$ smaller $I$ $\Rightarrow$ larger $\omega$ (spins faster)
+  \item \textbf{C} -- $\frac{1}{3}ML^2$: use parallel-axis theorem: $\frac{1}{12}ML^2 + M\!\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2$
+  \item \textbf{B} -- $\alpha = \tau/I = 12/4 = 3$ rad/s$^2$ (Newton's 2nd law for rotation)
+  \item \textbf{A} -- $I_{\text{child}} = mR^2 = 40 \times 4 = 160$ kg$\cdot$m$^2$; $\omega_f = I_i\omega_i/(I_i+I_{\text{child}}) = 500/660 \approx 0.76$ rad/s
+  \item \textbf{C} -- Angular momentum conserved when net external torque $= 0$
+  \item \textbf{A} -- $\theta = \frac{1}{2}\alpha t^2 = \frac{1}{2}(2)(4)^2 = 16$ rad; $16 \div (2\pi) \approx 2.55$ rev
+  \item \textbf{C} -- $KE_{\text{rot}} = \frac{1}{2}I\omega^2$ (compare to $\frac{1}{2}mv^2$ for linear KE)
 \end{enumerate}
 \end{multicols}
-\textbf{Key:} $\tau = I\alpha$, $L = I\omega$, $KE_{\text{rot}} = \tfrac{1}{2}I\omega^2$,
+\textbf{Key formulas:} $\tau = I\alpha$, $L = I\omega$, $KE_{\text{rot}} = \tfrac{1}{2}I\omega^2$,
 $I_{\text{disk}} = \tfrac{1}{2}MR^2$, $I_{\text{ring}} = MR^2$, $I_{\text{rod,end}} = \tfrac{1}{3}ML^2$
 \end{answerbox}
 
@@ -947,17 +1306,17 @@ $I_{\text{disk}} = \tfrac{1}{2}MR^2$, $I_{\text{ring}} = MR^2$, $I_{\text{rod,en
 \begin{answerbox}[Chapter 8 -- Equilibrium \& Elasticity Answers]
 \begin{multicols}{2}
 \begin{enumerate}[label=\textbf{MC-\arabic*.}, start=9]
-  \item \textbf{C} -- Both $\sum F=0$ and $\sum\tau=0$
-  \item \textbf{C} -- Pivot at unknown force eliminates it
-  \item \textbf{C} -- 539 N: torques about right end
-  \item \textbf{A} -- strain $= \sigma/E = (2\times10^8)/(2\times10^{11}) = 10^{-3}$
-  \item \textbf{C} -- $mg/(2\tan\theta)$: torque balance about base
-  \item \textbf{D} -- Both B and C correct
-  \item \textbf{A} -- $U = \frac{1}{2}(500)(0.04)^2 = 0.40$ J
-  \item \textbf{C} -- Equilibrium holds about any pivot
+  \item \textbf{C} -- Need \emph{both} $\sum F=0$ (no sliding) and $\sum\tau=0$ (no spinning)
+  \item \textbf{C} -- Putting pivot at unknown force $\Rightarrow$ that force's torque $= 0$, eliminating it
+  \item \textbf{C} -- 539 N: take torques about right end; $F_L \times 4 = 60(9.8)(3) + 20(9.8)(2)$
+  \item \textbf{A} -- strain $= \sigma/E = (2\times10^8)/(2\times10^{11}) = 10^{-3}$ (Numerator $\div$ denominator)
+  \item \textbf{C} -- $mg/(2\tan\theta)$: torque balance about the base gives this result
+  \item \textbf{D} -- Both B and C are correct (center of gravity $=$ center of mass near Earth's surface)
+  \item \textbf{A} -- $U = \frac{1}{2}kx^2 = \frac{1}{2}(500)(0.04)^2 = 250 \times 0.0016 = 0.40$ J
+  \item \textbf{C} -- Equilibrium holds about any pivot point you choose
 \end{enumerate}
 \end{multicols}
-\textbf{Key:} $\sum F=0$, $\sum\tau=0$, $F=kx$, $U=\tfrac{1}{2}kx^2$,
+\textbf{Key formulas:} $\sum F=0$, $\sum\tau=0$, $F=kx$, $U=\tfrac{1}{2}kx^2$,
 $E = \sigma/\epsilon$
 \end{answerbox}
 
@@ -966,17 +1325,17 @@ $E = \sigma/\epsilon$
 \begin{answerbox}[Chapter 10 -- Energy \& Work Answers]
 \begin{multicols}{2}
 \begin{enumerate}[label=\textbf{MC-\arabic*.}, start=17]
-  \item \textbf{C} -- $W = Fd = (50)(5) = 250$ J
-  \item \textbf{B} -- Centripetal force perpendicular to velocity: $W = Fd\cos90^\circ = 0$
-  \item \textbf{B} -- $v = \sqrt{2gh} = \sqrt{2(10)(5)} = 10$ m/s
-  \item \textbf{B} -- $W_{\text{net}} = \Delta KE$
-  \item \textbf{B} -- $\int_0^2 3x^2\,dx = [x^3]_0^2 = 8$ J
-  \item \textbf{C} -- Power = Work/time
-  \item \textbf{B} -- Constant speed: $\Delta KE = 0$, so $W_{\text{net}} = 0$
-  \item \textbf{D} -- $KE$ same: $M_A v_A^2 = M_B v_B^2$; $2v_A^2 = v_B^2$; $v_A = v_B/\sqrt{2}$
+  \item \textbf{C} -- $W = Fd = 50 \times 5 = 250$ J (force times distance, same direction)
+  \item \textbf{B} -- Centripetal force always points toward center, perpendicular to motion: $W = Fd\cos90^\circ = 0$
+  \item \textbf{B} -- $v = \sqrt{2gh} = \sqrt{2(10)(5)} = \sqrt{100} = 10$ m/s
+  \item \textbf{B} -- $W_{\text{net}} = \Delta KE$ (the work-energy theorem)
+  \item \textbf{B} -- $\int_0^2 3x^2\,dx = \left[x^3\right]_0^2 = 2^3 - 0^3 = 8$ J
+  \item \textbf{C} -- Power = Work/time (how fast you do work, in Watts)
+  \item \textbf{B} -- Constant speed means $\Delta KE = 0$, so $W_{\text{net}} = 0$; lift force equals weight
+  \item \textbf{D} -- $KE$ same: $\frac{1}{2}M_A v_A^2 = \frac{1}{2}M_B v_B^2$; $2v_A^2 = v_B^2$; $v_A = v_B/\sqrt{2}$
 \end{enumerate}
 \end{multicols}
-\textbf{Key:} $W = Fd\cos\theta$, $W = \int F\,dx$, $W_{\text{net}} = \Delta KE$,
+\textbf{Key formulas:} $W = Fd\cos\theta$, $W = \int F\,dx$, $W_{\text{net}} = \Delta KE$,
 $KE = \tfrac{1}{2}mv^2$, $PE = mgh$
 \end{answerbox}
 
