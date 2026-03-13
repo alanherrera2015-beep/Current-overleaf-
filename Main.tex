@@ -2,6 +2,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows.meta, decorations.pathmorphing, decorations.markings}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
@@ -571,6 +573,103 @@ carries 60\% of the total weight. That is why $9{,}408 = 0.60 \times 15{,}680$.}
 
 \end{solutionbox}
 
+\begin{solutionbox}[Solution 1 -- Free Body Diagrams]
+
+\textbf{Diagram (a): Side view -- axle-load torque balance}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.2]
+  % Scale: 1 unit = 1 m  (scaled 1.2x for readability)
+  % Rear axle at x=0, Front axle at x=2.0, CM at x=1.20 from rear
+  %--- CAR BODY (rectangle) -------------------------------------------
+  \draw[line width=6pt, gray!50, line cap=round] (0,0) -- (2.0,0);
+  \draw[rounded corners=4pt, fill=gray!18, draw=gray!60]
+      (-0.2,0) rectangle (2.2,0.55);
+
+  %--- REAR AXLE (pivot) -----------------------------------------------
+  \filldraw[gray!40, draw=black!80] (0,0) circle (0.11);
+  \node[below left=2pt, font=\small\bfseries] at (0,0) {Rear axle (pivot)};
+
+  %--- FRONT AXLE -------------------------------------------------------
+  \filldraw[gray!40, draw=black!80] (2.0,0) circle (0.11);
+  \node[below right=2pt, font=\small\bfseries] at (2.0,0) {Front axle};
+
+  %--- CENTER OF MASS MARKER --------------------------------------------
+  \filldraw[orange!80!black] (1.20,0.0) circle (0.07);
+  \node[above=3pt, font=\footnotesize, orange!80!black] at (1.20,0.60)
+      {\textbf{CM}};
+  \draw[orange!70!black, dashed, thin] (1.20,0) -- (1.20,0.57);
+
+  %--- DIMENSION LINES (placed above car body to avoid clash with weight) ---
+  \draw[<->, thin, black!55] (0,0.80) -- node[above,font=\footnotesize]{$b{=}1.20\,\text{m}$} (1.20,0.80);
+  \draw[<->, thin, black!55] (1.20,0.80) -- node[above,font=\footnotesize]{$a{=}0.80\,\text{m}$} (2.0,0.80);
+  \draw[<->, thin, black!30] (0,1.05) -- node[above,font=\footnotesize]{$L{=}2.00\,\text{m}$} (2.0,1.05);
+
+  %--- WEIGHT W (downward at CM) ----------------------------------------
+  \draw[->, very thick, blue!80!black]
+      (1.20,0) -- +(0,-1.30)
+      node[below, font=\small, blue!80!black]{$W{=}15{,}680\,\text{N}$};
+
+  %--- REAR AXLE FORCE R_r (upward, dashed -- not asked) ---------------
+  \draw[->, thick, dashed, violet!60!black]
+      (0,0) -- +(0,1.50)
+      node[above, font=\small, violet!60!black]{$R_r$};
+
+  %--- FRONT AXLE FORCE R_f (upward, what we solve for) ----------------
+  \draw[->, very thick, red!80!black]
+      (2.0,0) -- +(0,1.50)
+      node[above, font=\small, red!80!black]{$R_f{=}9{,}408\,\text{N}$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.4em}
+\textbf{Diagram (b): Front view -- left/right spring force split}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.2]
+  % Scale: 1 unit = 1 m. Total track W=1.60m; center at 0.80m
+  %--- AXLE BAR --------------------------------------------------------
+  \draw[line width=5pt, gray!50, line cap=round] (0,0) -- (1.60,0);
+
+  %--- LEFT WHEEL DOT --------------------------------------------------
+  \filldraw[gray!40, draw=black!80] (0,0) circle (0.09);
+  \node[below left=2pt, font=\small\bfseries] at (0,0) {Left wheel};
+
+  %--- RIGHT WHEEL DOT -------------------------------------------------
+  \filldraw[gray!40, draw=black!80] (1.60,0) circle (0.09);
+  \node[below right=2pt, font=\small\bfseries] at (1.60,0) {Right wheel};
+
+  %--- CENTERLINE (dashed) ---------------------------------------------
+  \draw[gray!40, dashed, thin] (0.80,-0.50) -- (0.80,1.35)
+      node[above, font=\footnotesize, gray!55]{center};
+
+  %--- CENTER OF MASS (offset 0.10 m to the right) --------------------
+  \filldraw[orange!80!black] (0.90,0) circle (0.07);
+  \node[right=3pt, font=\footnotesize, orange!80!black] at (0.90,0){\textbf{CM}};
+
+  %--- DIMENSION LINES -------------------------------------------------
+  \draw[<->, thin, black!55] (0,-0.45) -- node[below,font=\footnotesize]{$0.90\,\text{m}$} (0.90,-0.45);
+  \draw[<->, thin, black!55] (0.90,-0.45) -- node[below,font=\footnotesize]{$0.70\,\text{m}$} (1.60,-0.45);
+
+  %--- FRONT-AXLE LOAD R_f (downward at CM) ----------------------------
+  \draw[->, very thick, blue!80!black]
+      (0.90,0) -- +(0,-1.20)
+      node[below, font=\small, blue!80!black]{$R_f{=}9{,}408\,\text{N}$};
+
+  %--- LEFT SPRING FORCE F_L (upward) ----------------------------------
+  \draw[->, very thick, green!55!black]
+      (0,0) -- +(0,1.35)
+      node[above left=1pt, font=\small, green!55!black]{$F_L{=}4{,}116\,\text{N}$};
+
+  %--- RIGHT SPRING FORCE F_R (upward) ---------------------------------
+  \draw[->, very thick, red!80!black]
+      (1.60,0) -- +(0,1.35)
+      node[above right=1pt, font=\small, red!80!black]{$F_R{=}5{,}292\,\text{N}$};
+\end{tikzpicture}
+\end{center}
+
+\end{solutionbox}
+
 \begin{solutionbox}[Solution 1(b) -- Individual spring forces]
 
 \textbf{Plain-English idea:} We just found how hard the two \emph{front} springs
@@ -766,6 +865,73 @@ chart are pulling the other side down.
         (direction unknown; we will find it in part~(c)).
 \end{itemize}
 
+\smallskip
+\textbf{Free Body Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.1]
+  %--- FOREARM BEAM (tilted 30 deg below horizontal) --------------------
+  % Scale: 1 unit = 0.1 m  |  L = 3.5 units, d = 0.5 units, L/2 = 1.75 units
+  \draw[line width=8pt, brown!55!orange, line cap=round, opacity=0.80]
+      (0,0) -- +(-30:3.5);
+
+  %--- ELBOW JOINT (pivot) ----------------------------------------------
+  \filldraw[gray!40, draw=black!80, line width=0.5pt] (0,0) circle (0.22);
+  \node[left=5pt, font=\small\bfseries] at (0,0) {Elbow (pivot)};
+
+  %--- HORIZONTAL DASHED REFERENCE LINE ---------------------------------
+  \draw[gray!55, dashed, thin] (-0.7,0) -- (4.3,0);
+
+  %--- ANGLE phi (arc from horizontal down to forearm direction) ---------
+  \draw[thin, black!70] (1.25,0) arc (0:-30:1.25);
+  \node[right, font=\footnotesize, black!65] at (-15:1.50) {$\phi=30^{\circ}$};
+
+  %--- KEY COORDINATES --------------------------------------------------
+  \coordinate (Batt) at (-30:0.50);  % bicep attachment (d = 0.05 m)
+  \coordinate (CM)   at (-30:1.75);  % center of mass of forearm (L/2)
+  \coordinate (Tip)  at (-30:3.50);  % far end -- chart held here (L = 0.35 m)
+
+  %--- BICEP ATTACHMENT DOT ---------------------------------------------
+  \filldraw[red!70!black] (Batt) circle (0.09);
+  % Label the attachment below-left to avoid clash with beta arc
+  \node[below left=2pt, font=\footnotesize, black!65] at (Batt)
+      {$d{=}0.05\,\text{m}$};
+
+  %--- FORCE: BICEP F_B -------------------------------------------------
+  % Direction: beta = 80 deg counterclockwise from forearm axis (-30 deg)
+  % => F_B direction = -30 + 80 = +50 deg from horizontal
+  \draw[->, very thick, red!85!black]
+      (Batt) -- +(50:2.4)
+      node[above right, font=\small, red!80!black]
+      {$F_B$ (bicep)};
+
+  %--- ARC for angle beta -----------------------------------------------
+  \draw[thin, red!55] ($(Batt)+(-30:0.60)$) arc (-30:50:0.60);
+  \node[font=\footnotesize, red!65!black] at ($(Batt)+(10:0.82)$)
+      {$\beta{=}80^{\circ}$};
+
+  %--- FORCE: FOREARM WEIGHT W_arm (straight down from midpoint) --------
+  \draw[->, very thick, blue!80!black]
+      (CM) -- +(270:1.45)
+      node[below, font=\small, blue!80!black]
+      {$W_{\text{arm}}{=}14.7\,\text{N}$};
+
+  %--- FORCE: CHART WEIGHT W_c (straight down from tip) -----------------
+  \draw[->, very thick, green!55!black]
+      (Tip) -- +(270:1.85)
+      node[below, font=\small, green!55!black]
+      {$W_c{=}24.5\,\text{N}$};
+
+  %--- FORCE: ELBOW REACTION R (dashed; direction found in part c) ------
+  % Calculated in part (c): R_x = +125.9 N, R_y = -110.9 N => ~-41 deg
+  \draw[->, thick, dashed, violet!75!black]
+      (0,0) -- +(-41:1.30)
+      node[below right=1pt, font=\small, violet!70!black]
+      {$\vec{R}$ (find in part~c)};
+
+\end{tikzpicture}
+\end{center}
+
 \end{solutionbox}
 
 \begin{solutionbox}[Solution 2(b) -- Torque equation and bicep force]
@@ -925,6 +1091,79 @@ downward -- not just more comfortable, but mechanically easier!
 %==============================================
 \section*{Solution 3: Superman Rescue (Advanced -- 2D)}
 %==============================================
+
+\begin{solutionbox}[Solution 3 -- Scenario Diagram]
+
+\textbf{Scene Setup:} The diagram below shows the initial positions and velocities.
+Superman starts flying rightward at $H_S = 180$ m, while the person is falling
+straight down and is currently at $h = 80$ m (having fallen from $H_p = 200$ m).
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=0.032]
+  % Scale: 1 unit = 1 m, but scaled by 0.032 so 200m -> 6.4 cm on page
+  % Ground at y=0, heights in metres
+
+  %--- GROUND LINE -------------------------------------------------------
+  \fill[brown!40!gray!30] (-30,0) rectangle (220,-8);
+  \draw[thick, brown!60!black] (-30,0) -- (220,0);
+  \node[right, font=\footnotesize] at (210,-4) {Ground ($h{=}0$)};
+
+  %--- HEIGHT AXIS (dashed) ----------------------------------------------
+  \draw[gray!50, dashed, thin] (0,-5) -- (0,220);
+  \node[above, font=\footnotesize, gray!60] at (0,215) {$h$};
+
+  %--- HEIGHT TICK MARKS ------------------------------------------------
+  \foreach \y/\lbl in {80/80, 180/180, 200/200}{
+    \draw[gray!40, thin] (-4,\y) -- (4,\y);
+    \node[left, font=\scriptsize, gray!55] at (-5,\y) {\lbl~m};
+  }
+
+  %--- BUILDING (person fell from here) ---------------------------------
+  \fill[gray!30, draw=gray!60, line width=0.6pt] (170,0) rectangle (210,200);
+  \node[font=\scriptsize, text width=40pt, align=center] at (190,100)
+      {Building\\$H_p{=}200\,\text{m}$};
+
+  %--- PERSON (falling at h=80m) ----------------------------------------
+  % body as circle + stick
+  \filldraw[red!70!black] (170,80) circle (5);
+  \draw[red!70!black, line width=1.2pt] (170,75) -- (170,55) -- (160,40) ;
+  \draw[red!70!black, line width=1.2pt] (170,55) -- (180,40);
+  \draw[red!70!black, line width=1.2pt] (170,75) -- (158,60);
+  \draw[red!70!black, line width=1.2pt] (170,75) -- (182,60);
+  % Person velocity arrow (downward)
+  \draw[->, ultra thick, red!80!black] (170,78) -- +(0,-45)
+      node[right, font=\small, red!80!black]{$v_p{=}48.5\,\text{m/s}$\,\(\downarrow\)};
+  % Person label
+  \node[left=5pt, font=\small\bfseries, red!70!black] at (165,80) {Person};
+  \node[left=5pt, font=\scriptsize, red!60!black] at (165,72) {$m{=}70\,\text{kg}$};
+
+  %--- SUPERMAN (at h=180m, moving right) --------------------------------
+  \filldraw[blue!70!black] (30,180) circle (5);
+  \draw[blue!70!black, line width=1.2pt] (30,175) -- (30,155);
+  \draw[blue!70!black, line width=1.2pt] (30,165) -- (18,155);
+  \draw[blue!70!black, line width=1.2pt] (30,165) -- (42,155);
+  \draw[blue!70!black, line width=1.2pt] (30,155) -- (18,138);
+  \draw[blue!70!black, line width=1.2pt] (30,155) -- (42,138);
+  % Superman horizontal velocity (rightward)
+  \draw[->, ultra thick, blue!80!black] (35,180) -- +(50,0)
+      node[right, font=\small, blue!80!black]{$u{=}15.0\,\text{m/s}$\,\(\rightarrow\)};
+  % Superman label
+  \node[left=5pt, font=\small\bfseries, blue!70!black] at (25,180) {Superman};
+  \node[left=5pt, font=\scriptsize, blue!60!black] at (25,172) {$M{=}90\,\text{kg}$};
+  \node[left=5pt, font=\scriptsize, blue!60!black] at (25,164) {$H_S{=}180\,\text{m}$};
+
+  %--- CATCH POINT (both at h=80m) --------------------------------------
+  \draw[orange!80!black, dashed, thick] (-20,80) -- (210,80)
+      node[right, font=\footnotesize, orange!70!black]{$h{=}80\,\text{m}$ (catch!)};
+
+  %--- SUPERMAN PATH (parabola arrow) -----------------------------------
+  \draw[->, dashed, blue!40, thick]
+      (35,180) .. controls (80,180) and (130,150) .. (170,80);
+  \node[font=\scriptsize, blue!40] at (120,150) {Superman's path};
+\end{tikzpicture}
+\end{center}
+
+\end{solutionbox}
 
 \begin{solutionbox}[{Solution 3(a) -- Person's speed at $h = 80\,\mathrm{m}$}]
 
@@ -1144,6 +1383,69 @@ Two rules $\Rightarrow$ two equations $\Rightarrow$ we can solve for two unknown
 ($\delta_1$ and $\delta_2$).
 
 \smallskip
+\textbf{Free Body Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.1]
+  % Scale: 1 unit = 1 m. Board from x=0 to x=3.0m.
+
+  %--- BOARD (horizontal beam) ------------------------------------------
+  \draw[line width=7pt, cyan!40!gray, line cap=round] (0,0) -- (3.0,0);
+
+  %--- x-axis dimension arrows ------------------------------------------
+  \draw[<->, thin, black!50] (0,-0.50) -- node[below,font=\footnotesize]{$1.5\,\text{m}$} (1.5,-0.50);
+  \draw[<->, thin, black!50] (1.5,-0.50) -- node[below,font=\footnotesize]{$0.5\,\text{m}$} (2.0,-0.50);
+  \draw[<->, thin, black!50] (2.0,-0.50) -- node[below,font=\footnotesize]{$1.0\,\text{m}$} (3.0,-0.50);
+  \draw[<->, thin, black!30] (0,-0.85) -- node[below,font=\footnotesize]{$L{=}3.0\,\text{m}$} (3.0,-0.85);
+
+  %--- PIVOT DOT at x=0 ------------------------------------------------
+  \filldraw[gray!40, draw=black!80] (0,0) circle (0.07);
+  \node[above=4pt, font=\footnotesize\bfseries] at (0,0.04) {$x{=}0$};
+
+  %--- SPRING 1 (at x=0): STRETCHED downward (F_1 downward, delta1 < 0) --
+  % Spring coil drawn below board
+  \draw[decoration={coil, aspect=0.4, segment length=3pt, amplitude=4pt},
+        decorate, red!80!black, line width=0.7pt] (0,-0.12) -- (0,-0.65);
+  % Force arrow: downward (spring is pulling board down because it's stretched)
+  \draw[->, very thick, red!80!black] (0,0) -- (0,-1.30);
+  \node[below=2pt, font=\small, red!80!black] at (0,-1.30)
+      {$F_1\!\downarrow$ (stretched)};
+  \node[below=16pt, font=\small, red!80!black] at (0,-1.30)
+      {$\delta_1{=}{-}3.5\,\text{cm}$};
+
+  %--- SPRING 2 (at x=2.0m): COMPRESSED upward ----------------------------
+  \draw[decoration={coil, aspect=0.4, segment length=3pt, amplitude=4pt},
+        decorate, green!60!black, line width=0.7pt] (2.0,-0.12) -- (2.0,-0.65);
+  \draw[->, very thick, green!55!black] (2.0,0) -- (2.0,1.35);
+  \node[above=2pt, font=\small, green!55!black] at (2.0,1.35)
+      {$F_2\!\uparrow$};
+  \node[above=16pt, font=\small, green!55!black] at (2.0,1.35)
+      {$\delta_2{=}10.1\,\text{cm}$};
+
+  %--- BOARD WEIGHT W_B (at center x=1.5m) --------------------------------
+  \draw[->, very thick, blue!80!black]
+      (1.5,0) -- (1.5,-1.30)
+      node[below, font=\small, blue!80!black]
+      {$W_B{=}245\,\text{N}$};
+  \node[above=3pt, font=\footnotesize, black!60] at (1.5,0.04) {$x{=}1.5\,\text{m}$};
+
+  %--- DIVER WEIGHT W_D (at x=3.0m) ----------------------------------------
+  \draw[->, very thick, violet!75!black]
+      (3.0,0) -- (3.0,-1.60)
+      node[below, font=\small, violet!75!black]
+      {$W_D{=}686\,\text{N}$};
+  \node[above=3pt, font=\footnotesize, black!60] at (3.0,0.04) {$x{=}3.0\,\text{m}$};
+
+  %--- SPRING 2 position label -------------------------------------------
+  \node[above=3pt, font=\footnotesize, black!60] at (2.0,0.04) {$x{=}2.0\,\text{m}$};
+\end{tikzpicture}
+\end{center}
+
+\smallskip
+\textbf{Note:} Spring~1 is \emph{stretched} (pulled downward, $\delta_1 < 0$) because
+the diver tips the board so far right that the left end lifts up.
+
+\smallskip
 \textbf{Forces acting (using Hooke's Law, $F = kx$):}
 \begin{itemize}
   \item Spring 1 pushes up: $F_1 = k_1 \delta_1 = 8000\,\delta_1$ \quad at $x = 0$
@@ -1209,6 +1511,58 @@ both ends) -- otherwise the board just lifts off.
 the brakes heat up and grip better. To find the work done by a force that \emph{changes},
 we use calculus (integration). Think of it like adding up many tiny rectangles under a
 graph of force vs.\ distance. Then the work-energy theorem connects work to speed change.
+
+\smallskip
+\textbf{Force vs.\ Distance Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=1.0]
+  % Scale: x-axis 1 unit = 10 m; y-axis 1 unit = 4000 N
+  % F(x) = 5000 + 200x
+  % F(0)   = 5000  N  -> (0,    1.25)
+  % F(47.9)= 14580 N  -> (4.79, 3.645)
+
+  %--- SHADED AREA under F(x) from 0 to d = 47.9 m ----------------------
+  \fill[orange!25] (0,0) -- (0,1.25) -- (4.79,3.645) -- (4.79,0) -- cycle;
+
+  %--- AXES ---------------------------------------------------------------
+  \draw[->, thick] (0,0) -- (5.8,0) node[right, font=\small]{$x$ (m)};
+  \draw[->, thick] (0,0) -- (0,4.3) node[above, font=\small]{$F(x)$ (N)};
+
+  %--- x TICK MARKS -------------------------------------------------------
+  \foreach \xv/\xlab in {1/10, 2/20, 3/30, 4/40, 4.79/47.9}{
+    \draw[thin] (\xv,-0.07) -- (\xv,0.07);
+    \node[below, font=\scriptsize] at (\xv,0) {\xlab};
+  }
+
+  %--- y TICK MARKS -------------------------------------------------------
+  \foreach \yv/\ylab in {1.25/5000, 2.0/8000, 3.0/12000, 4.0/16000}{
+    \draw[thin] (-0.07,\yv) -- (0.07,\yv);
+    \node[left, font=\scriptsize] at (0,\yv) {\ylab};
+  }
+
+  %--- F(x) = 5000 + 200x LINE -------------------------------------------
+  \draw[very thick, red!80!black] (0,1.25) -- (4.79,3.645)
+      node[right, font=\small, red!80!black] {$F(x){=}5000{+}200x$};
+
+  %--- CONSTANT FORCE F0 (reference, dashed) ----------------------------
+  \draw[thick, dashed, blue!70!black] (0,1.25) -- (5.4,1.25)
+      node[right, font=\small, blue!70!black] {$F_0{=}5000\,\text{N}$};
+
+  %--- STOPPING DISTANCE d = 47.9 m (vertical dashed) -------------------
+  \draw[dashed, orange!60!black, thin] (4.79,0) -- (4.79,3.645);
+  \node[below, font=\footnotesize, orange!70!black] at (4.79,-0.15)
+      {$d{=}47.9\,\text{m}$};
+
+  %--- AREA LABEL --------------------------------------------------------
+  \node[font=\footnotesize, black!65] at (2.2,0.90)
+      {Work $= \int_0^d F\,dx = 468{,}750\,\text{J}$};
+\end{tikzpicture}
+\end{center}
+
+\textit{The orange shaded area equals the work done by the variable brakes from $x=0$
+to $d=47.9$ m. The blue dashed line shows constant braking ($F_0=5000$ N), which would
+need $93.75$ m to stop.}
 
 \smallskip
 \textbf{What we know:}
