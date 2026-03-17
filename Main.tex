@@ -1040,10 +1040,11 @@ Multiple interacting objects & Additive system energy; convenient & Must track a
 % ══════════════════════════════════════════════════════════════
 
 \begin{warnbox}
-\textbf{Exam Format:} 20~questions~$\times$~5~points~each~$=\mathbf{100}$~\textbf{points.}
-For every topic, \textbf{Question~A} is standard university difficulty and
-\textbf{Question~B} is the harder variant.  Show all work; partial credit is awarded
-for correct reasoning with arithmetic errors.
+\textbf{Exam Format:} Each topic contains \textbf{one standard question} (Question~A)
+and \textbf{three difficult questions} (Questions~B, C, D), worth \textbf{5~points each}.
+Show \emph{all} numerical substitutions step by step; partial credit is awarded
+for correct reasoning even with arithmetic errors.
+A bonus \textbf{Ski Slope} section appears at the end.
 \end{warnbox}
 
 % ── Chapter 7 ─────────────────────────────────────────────────
@@ -1060,16 +1061,30 @@ for correct reasoning with arithmetic errors.
         Calculate the torque about the bolt.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 2.4-m horizontal beam is pinned at its left end (pivot).
+        A 2.4-m horizontal beam is pinned at its left end.
         Three forces act on it:
         \begin{itemize}[leftmargin=1.5em]
-          \item $F_1 = 80$\,N \emph{downward} at $x = 0.60$\,m from the pin,
-          \item $F_2 = 120$\,N directed \emph{$50^\circ$ above the horizontal}
-                (rightward and upward) at $x = 1.50$\,m,
+          \item $F_1 = 80$\,N \emph{downward} at $x = 0.60$\,m,
+          \item $F_2 = 120$\,N at $50^\circ$ above horizontal (rightward/upward)
+                at $x = 1.50$\,m,
           \item $F_3 = 50$\,N \emph{downward} at $x = 2.40$\,m.
         \end{itemize}
-        (a) Compute the net torque about the pin (CCW\,$=$\,positive).
-        (b) State the resulting direction of rotation.
+        (a) Find the net torque about the pin (CCW\,$=$\,positive).
+        (b) State the resulting rotation direction.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A uniform 3.0-m horizontal rod (mass 4.0\,kg) is pivoted at its centre.
+        A 12\,N downward force is applied 0.80\,m to the right of the pivot, and
+        an unknown perpendicular force $F$ is applied at the right end.
+        (a) Find $F$ for rotational equilibrium.
+        (b) Find the net torque if $F$ is reduced to 5.0\,N.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A disc ($I = 0.60$\,kg$\cdot$m$^2$, radius $r = 0.30$\,m) starts from rest.
+        A constant tangential force of 9.0\,N acts at the rim.
+        (a) Find the angular acceleration $\alpha$.
+        (b) Find $\omega$ after 4.0\,s.
+        (c) Find the total angle rotated in 4.0\,s.
 
 \end{enumerate}
 \end{planbox}
@@ -1077,20 +1092,49 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{1\Alph*.}]
 
-  \item \[
-          \tau = rF\sin\theta = (0.45)(60)\sin 40^\circ
-               = 27\times 0.643 \approx \mathbf{17.4\text{ N{\cdot}m}}
+  \item \textit{Rationale: $\tau = rF\sin\theta$ projects the force onto the
+        direction perpendicular to the moment arm.}
+        \[
+          \tau = rF\sin\theta = (0.45\,\mathrm{m})(60\,\mathrm{N})\sin 40^\circ
+               = (27)(0.6428) \approx \mathbf{17.4\text{ N{\cdot}m}}
         \]
 
-  \item Only the \emph{vertical component} of each force creates torque about the
-        left-end pin.
+  \item \textit{Rationale: Only force components perpendicular to the beam create
+        torque about the pin. Resolve $F_2$ vertically. CCW\,$=$\,positive.}
         \begin{align*}
           \tau_1 &= -(80)(0.60) = -48.0\text{ N{\cdot}m}\\
-          \tau_2 &= +(120\sin 50^\circ)(1.50) = +(91.9)(1.50) = +137.9\text{ N{\cdot}m}\\
+          \tau_2 &= +(120\sin 50^\circ)(1.50)
+                  = +(120\times 0.7660)(1.50)
+                  = +(91.92)(1.50) = +137.9\text{ N{\cdot}m}\\
           \tau_3 &= -(50)(2.40) = -120.0\text{ N{\cdot}m}\\
           \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\text{ N{\cdot}m}}
         \end{align*}
-        Negative net torque $\Rightarrow$ the beam rotates \textbf{clockwise}.
+        Negative $\Rightarrow$ \textbf{clockwise} rotation.
+
+  \item \textit{Rationale: The rod's weight acts at the pivot, giving zero torque.
+        Set $\sum\tau = 0$ about the pivot for part (a); compute the residual for
+        part (b).}\\[4pt]
+        (a) Moment arms: $r_{12} = 0.80$\,m; $r_F = 1.50$\,m (right end from centre).
+        \[
+          F(1.50) - (12)(0.80) = 0
+          \;\Rightarrow\; F = \frac{9.6}{1.50} = \mathbf{6.4\text{ N}}
+        \]
+        (b) With $F = 5.0$\,N:
+        \[
+          \tau_{\rm net} = (5.0)(1.50) - (12)(0.80) = 7.5 - 9.6 = \mathbf{-2.1\text{ N{\cdot}m (CW)}}
+        \]
+
+  \item \textit{Rationale: Newton's 2nd law for rotation $\tau = I\alpha$ gives
+        $\alpha$; constant-$\alpha$ kinematics give $\omega$ and $\theta$.}\\[4pt]
+        (a)
+        \[
+          \tau = rF = (0.30\,\mathrm{m})(9.0\,\mathrm{N}) = 2.70\text{ N{\cdot}m}
+          \;\Rightarrow\; \alpha = \frac{\tau}{I} = \frac{2.70}{0.60} = \mathbf{4.5\text{ rad/s}^2}
+        \]
+        (b) $\omega = \omega_0 + \alpha t = 0 + (4.5)(4.0) = \mathbf{18.0\text{ rad/s}}$
+
+        (c) $\theta = \tfrac{1}{2}\alpha t^2 = \tfrac{1}{2}(4.5)(4.0)^2
+                    = \tfrac{1}{2}(4.5)(16) = \mathbf{36.0\text{ rad}}$
 
 \end{enumerate}
 \end{keybox}
@@ -1101,19 +1145,26 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{2\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        Four masses sit on a light horizontal rod:
-        3.0\,kg at $x=0$; 5.0\,kg at $x=1.2$\,m; 2.0\,kg at $x=2.8$\,m;
-        4.0\,kg at $x=4.0$\,m.
-        Find the $x$-coordinate of the center of gravity.
+        Four masses on a rod: 3.0\,kg at $x=0$; 5.0\,kg at $x=1.2$\,m;
+        2.0\,kg at $x=2.8$\,m; 4.0\,kg at $x=4.0$\,m.
+        Find $x_{\rm CG}$.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform 2.0-m, 8.0-kg plank has a 12\,kg block clamped at its left end
-        ($x=0$) and a 5.0\,kg block at $x=1.6$\,m.
-        \begin{enumerate}[label=(\alph*)]
-          \item Find the $x$-coordinate of the center of gravity of the entire system.
-          \item The plank rests on two vertical supports at $x=0.60$\,m and
-                $x=1.80$\,m.  Find both normal forces.
-        \end{enumerate}
+        A uniform 2.0-m, 8.0-kg plank has a 12\,kg block at $x=0$ and a
+        5.0\,kg block at $x=1.6$\,m.
+        (a) Find $x_{\rm CG}$ of the system.
+        (b) Two supports at $x=0.60$\,m and $x=1.80$\,m: find both normal forces.
+
+  \item \textbf{[5 pts --- Difficult]}
+        An L-shaped thin plate: Piece~1 (3.0\,kg) spans $0\le x\le2.0$\,m,
+        $0\le y\le1.0$\,m; Piece~2 (2.0\,kg) spans $0\le x\le1.0$\,m,
+        $1.0\le y\le3.0$\,m.
+        Find the CG of the composite plate.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A uniform disc (6.0\,kg, radius 0.50\,m) has a circular hole
+        (radius 0.10\,m) cut out, centred at $x=0.30$\,m from the disc centre.
+        Using the negative-mass method, find the new $x_{\rm CG}$.
 
 \end{enumerate}
 \end{planbox}
@@ -1121,25 +1172,50 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{2\Alph*.}]
 
-  \item \[
+  \item \textit{Rationale: $x_{\rm CG}=\tfrac{\sum m_i x_i}{\sum m_i}$ is the
+        mass-weighted average position.}
+        \[
           x_{\rm CG}=\frac{(3.0)(0)+(5.0)(1.2)+(2.0)(2.8)+(4.0)(4.0)}{14.0}
+                    =\frac{0+6.0+5.6+16.0}{14.0}
                     =\frac{27.6}{14.0}\approx\mathbf{1.97\text{ m}}
         \]
 
-  \item (a) Beam CG at $x=1.0$\,m (geometric center).
+  \item \textit{Rationale: Treat each piece as a point mass at its own geometric
+        centre. Use $\sum\tau=0$ about one support to isolate the other normal force.}\\[4pt]
+        (a) Plank CG at $x=1.0$\,m:
         \[
-          x_{\rm CG}=\frac{(12)(0)+(8)(1.0)+(5)(1.6)}{25}=\frac{16}{25}
-                    =\mathbf{0.64\text{ m}}
+          x_{\rm CG}=\frac{(12)(0)+(8)(1.0)+(5)(1.6)}{25}
+                    =\frac{0+8.0+8.0}{25}=\frac{16.0}{25}=\mathbf{0.64\text{ m}}
         \]
-        (b) Let $N_1$ = support at $x=0.60$\,m; $N_2$ = support at $x=1.80$\,m.\\
-        $\sum F_y=0$: $N_1+N_2=(25)(9.8)=245$\,N.\\
-        Torques about $x=0.60$\,m (CCW\,$=$\,positive):
+        (b) $\sum F_y=0$: $N_1+N_2=(25)(9.8)=245$\,N.\\
+        Torques about $x=0.60$\,m (CCW\,$=$\,pos.):
         \begin{align*}
-          +(12)(9.8)(0.60)-(8)(9.8)(0.40)-(5)(9.8)(1.0)+N_2(1.20)&=0\\
-          70.6-31.4-49.0+1.20\,N_2&=0\\
-          N_2=\frac{9.80}{1.20}\approx\mathbf{8.2\text{ N}};\quad
-          N_1=245-8.2\approx\mathbf{237\text{ N}}
+          +(12)(9.8)(0.60)&-(8)(9.8)(0.40)-(5)(9.8)(1.00)+N_2(1.20)=0\\
+          70.56&-31.36-49.0+1.20N_2=0\\
+          1.20N_2&=9.80\;\Rightarrow\;N_2=\frac{9.80}{1.20}\approx\mathbf{8.2\text{ N}}
         \end{align*}
+        $N_1=245-8.2\approx\mathbf{237\text{ N}}$
+
+  \item \textit{Rationale: Locate each piece's CG at its geometric centre; apply
+        the weighted-average formula for $x$ and $y$ independently.}\\[4pt]
+        Piece-1 CG: $(1.0,\,0.5)$;\quad Piece-2 CG: $(0.5,\,2.0)$.
+        \begin{align*}
+          x_{\rm CG}&=\frac{(3.0)(1.0)+(2.0)(0.5)}{5.0}
+                     =\frac{3.0+1.0}{5.0}=\mathbf{0.80\text{ m}}\\[4pt]
+          y_{\rm CG}&=\frac{(3.0)(0.5)+(2.0)(2.0)}{5.0}
+                     =\frac{1.5+4.0}{5.0}=\frac{5.5}{5.0}=\mathbf{1.10\text{ m}}
+        \end{align*}
+
+  \item \textit{Rationale: Subtract the cut-out disc (treated as negative mass)
+        from the intact disc using the CG formula.}\\[4pt]
+        $\sigma=M/(\pi R^2)=6.0/(\pi\times(0.50)^2)=6.0/(\pi\times0.25)=6.0/0.7854\approx7.639$\,kg/m$^2$;\quad
+        $m_h=\sigma\pi r_h^2=7.639\times\pi\times(0.10)^2=7.639\times0.03142\approx0.2400$\,kg.
+        \[
+          x_{\rm CG}=\frac{M(0)-m_h(0.30)}{M-m_h}
+                    =\frac{(6.0)(0)-(0.2400)(0.30)}{6.0-0.2400}
+                    =\frac{-0.0720}{5.760}\approx\mathbf{-0.0125\text{ m}}
+        \]
+        The CG shifts $12.5$\,mm away from the hole.
 
 \end{enumerate}
 \end{keybox}
@@ -1153,19 +1229,32 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{3\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A uniform 5.0-m, 20-kg horizontal beam is hinged to a wall at its left end.
-        A cable runs from the right end up to the wall, making $35^\circ$ above the beam.
+        A uniform 5.0-m, 20-kg horizontal beam is hinged at its left end.
+        A cable runs from the right end at $35^\circ$ above the beam.
         A 50\,kg sign hangs from the right end.
-        Find (a) the cable tension $T$, (b) the horizontal hinge-force component
-        $H_x$, and (c) the vertical hinge-force component $H_y$.
+        Find (a) tension $T$, (b) $H_x$, and (c) $H_y$.
 
   \item \textbf{[5 pts --- Difficult]}
-        A non-uniform 4.5-m ladder (mass 14\,kg, CG at 2.0\,m from the bottom)
-        leans against a smooth (frictionless) wall, making $70^\circ$ with the floor
-        ($\mu_s = 0.38$).  A 80\,kg worker stands 3.5\,m up the ladder.
-        (a) Find the wall normal force $N_w$, the floor normal force $N_f$, and
-        the floor friction force $f$.
-        (b) Verify that the ladder does not slip.
+        A non-uniform 4.5-m ladder (14\,kg, CG at 2.0\,m from the base) leans
+        against a frictionless wall at $70^\circ$ from the floor ($\mu_s=0.38$).
+        An 80-kg worker stands 3.5\,m up the ladder.
+        (a) Find $N_w$, $N_f$, and $f$.
+        (b) Verify the ladder does not slip.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A uniform 1.2-m, 4.0-kg shelf is hinged at its left end.
+        A vertical wire supports the right end.
+        A 10\,kg box sits 0.80\,m from the wall.
+        (a) Find wire tension $T_w$.
+        (b) Find the hinge reaction force (magnitude and direction).
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 6.0-m, 25-kg uniform boom is hinged at the wall (lower left) and held
+        by a \emph{horizontal} cable at the right end.
+        The boom makes $55^\circ$ above horizontal.  A 60-kg load hangs from
+        the right end.
+        (a) Find the cable tension.
+        (b) Find the hinge force magnitude.
 
 \end{enumerate}
 \end{planbox}
@@ -1173,31 +1262,68 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{3\Alph*.}]
 
-  \item Torques about hinge:
+  \item \textit{Rationale: Choose the hinge as pivot to eliminate unknown hinge
+        forces from the torque equation; then use $\sum F=0$ for the components.}
         \[
           T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\text{ N{\cdot}m}
         \]
         \[
-          T=\frac{2940}{5.0\sin35^\circ}=\frac{2940}{2.868}\approx\mathbf{1025\text{ N}}
+          T=\frac{2940}{5.0\times\sin35^\circ}=\frac{2940}{5.0\times0.5736}
+           =\frac{2940}{2.868}\approx\mathbf{1025\text{ N}}
         \]
         \[
-          H_x=T\cos35^\circ=1025(0.819)\approx\mathbf{840\text{ N}}\text{ (toward wall)}
+          H_x=T\cos35^\circ=(1025)(0.8192)\approx\mathbf{840\text{ N (toward wall)}}
         \]
         \[
-          H_y=(20+50)(9.8)-T\sin35^\circ=686-588\approx\mathbf{98\text{ N}}\text{ (upward)}
+          H_y=(20+50)(9.8)-T\sin35^\circ=686-(1025)(0.5736)=686-588\approx\mathbf{98\text{ N (up)}}
         \]
 
-  \item Pivot at base of ladder; horizontal distance from base to load
-        $= (\text{distance along ladder})\cos70^\circ$:
+  \item \textit{Rationale: Pivot at the base of the ladder; the moment arm for each
+        load equals (distance along ladder)$\times\cos70^\circ$.}
         \begin{align*}
-          N_w(4.5\sin70^\circ)
+          N_w\times(4.5\sin70^\circ)
             &=(14)(9.8)(2.0\cos70^\circ)+(80)(9.8)(3.5\cos70^\circ)\\
-          N_w(4.23)&=93.8+939.1=1032.9\\
-          N_w&\approx\mathbf{244\text{ N}}
+          N_w\times(4.5\times0.9397)
+            &=(14\times9.8\times2.0\times0.3420)+(80\times9.8\times3.5\times0.3420)\\
+          N_w\times4.229
+            &=93.74+939.1=1032.8\\
+          N_w&=\frac{1032.8}{4.229}\approx\mathbf{244\text{ N}}
         \end{align*}
-        $\sum F_y=0$: $N_f=(14+80)(9.8)=\mathbf{921\text{ N}}$;\quad
-        $\sum F_x=0$: $f=N_w=\mathbf{244\text{ N}}$.\\[3pt]
-        Check: $f_{\max}=\mu_s N_f=0.38(921)=350\text{ N}>244\text{ N}\;\checkmark$\; (no slip).
+        $\sum F_y$: $N_f=(94)(9.8)=\mathbf{921\text{ N}}$;\quad
+        $\sum F_x$: $f=N_w=\mathbf{244\text{ N}}$.\\[3pt]
+        Check: $f_{\max}=\mu_s N_f=(0.38)(921)=350\text{ N}>244\text{ N}\;\checkmark$
+
+  \item \textit{Rationale: Pivot at the hinge to find $T_w$ directly; then close
+        the force balance to find the hinge reaction.}
+        \[
+          T_w(1.2)=(4.0)(9.8)(0.60)+(10)(9.8)(0.80)=23.52+78.40=101.9\text{ N{\cdot}m}
+        \]
+        \[
+          T_w=\frac{101.9}{1.2}\approx\mathbf{84.9\text{ N (upward)}}
+        \]
+        $\sum F_y$: $H_y=(14)(9.8)-84.9=137.2-84.9\approx52.3\text{ N (up)}$;
+        $H_x=0$.
+        \[
+          |\vec{H}|=52.3\text{ N (vertically upward)}
+        \]
+
+  \item \textit{Rationale: The horizontal cable's torque arm about the hinge is
+        the boom's vertical height. Pivot at the hinge.}
+        \begin{align*}
+          h_{\rm end}&=6.0\sin55^\circ=6.0\times0.8192=4.915\text{ m}\\
+          T_c\times4.915
+            &=(25)(9.8)(3.0\cos55^\circ)+(60)(9.8)(6.0\cos55^\circ)\\
+            &=(25\times9.8\times3.0\times0.5736)+(60\times9.8\times6.0\times0.5736)\\
+            &=420.7+2023.3=2444\text{ N{\cdot}m}
+        \end{align*}
+        \[
+          T_c=\frac{2444}{4.915}\approx\mathbf{497\text{ N}}
+        \]
+        $H_x=497$\,N;\quad $H_y=(25+60)(9.8)=833$\,N.
+        \[
+          |\vec{H}|=\sqrt{497^2+833^2}=\sqrt{247\,009+693\,889}
+                  =\sqrt{940\,898}\approx\mathbf{970\text{ N}}
+        \]
 
 \end{enumerate}
 \end{keybox}
@@ -1209,15 +1335,27 @@ for correct reasoning with arithmetic errors.
 
   \item \textbf{[5 pts --- Standard]}
         A uniform rectangular block is 0.90\,m tall and 0.40\,m wide.
-        At what angle $\theta$ from the vertical does the block begin to tip over its
-        lower edge when the surface it rests on is slowly tilted?
+        At what angle $\theta$ from the vertical does the block tip when the
+        surface is slowly tilted?
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform solid cylinder (radius $R=0.15$\,m, height $H=0.60$\,m) stands upright
-        on an inclined surface.
-        (a) At what critical incline angle $\alpha_{\rm tip}$ does the cylinder tip?
-        (b) At what angle $\alpha_{\rm slide}$ does it slide if $\mu_s=0.28$?
-        (c) Which event occurs first?  Justify numerically.
+        A uniform solid cylinder ($R=0.15$\,m, $H=0.60$\,m) on an inclined surface
+        ($\mu_s=0.28$).
+        (a) Find $\alpha_{\rm tip}$; (b) find $\alpha_{\rm slide}$;
+        (c) which event occurs first?
+
+  \item \textbf{[5 pts --- Difficult]}
+        A uniform rectangular crate (80\,kg, width 0.60\,m, height 1.40\,m)
+        on a floor ($\mu_s=0.45$). A horizontal push $F$ at height $h=1.10$\,m.
+        (a) Minimum $F$ to tip. (b) Minimum $F$ to slide. (c) Which mode first?
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 0.50-m-tall, 0.20-m-wide uniform block sits on a turntable accelerating
+        at $\alpha_T=2.0$\,rad/s$^2$.  The block's CG is 0.35\,m from the axis
+        ($\mu_s=0.55$).
+        (a) Find the critical $\omega_c$ at which the block tips about its outer edge.
+        (b) Find $\omega_{\rm slide}$.
+        (c) Which occurs first?
 
 \end{enumerate}
 \end{planbox}
@@ -1225,26 +1363,50 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{4\Alph*.}]
 
-  \item CG is $\tfrac{H}{2}=0.45$\,m above the base and $\tfrac{W}{2}=0.20$\,m from the
-        lower edge.
+  \item \textit{Rationale: Tipping occurs when the CG projects directly over the
+        lower edge: $\tan\theta_{\rm tip}=(W/2)/(H/2)$.}
         \[
-          \tan\theta_{\rm tip}=\frac{0.20}{0.45}=0.444
-          \;\Rightarrow\;\theta_{\rm tip}=\arctan(0.444)\approx\mathbf{24.0^\circ}
+          \tan\theta_{\rm tip}=\frac{0.20}{0.45}=0.4444
+          \;\Rightarrow\;\theta_{\rm tip}=\arctan(0.4444)\approx\mathbf{24.0^\circ}
         \]
 
-  \item (a) The CG is at height $H/2=0.30$\,m and $R=0.15$\,m from the lower edge.
+  \item \textit{Rationale: Tipping angle from geometry of CG vs.\ edge; sliding
+        angle from the friction condition $\tan\alpha=\mu_s$.}\\[4pt]
+        (a) CG at $H/2=0.30$\,m; $R=0.15$\,m from lower edge:
         \[
-          \tan\alpha_{\rm tip}=\frac{R}{H/2}=\frac{0.15}{0.30}=0.500
+          \tan\alpha_{\rm tip}=\frac{0.15}{0.30}=0.500
           \;\Rightarrow\;\alpha_{\rm tip}\approx\mathbf{26.6^\circ}
+        \]
+        (b) $\tan\alpha_{\rm slide}=0.28\;\Rightarrow\;\alpha_{\rm slide}\approx\mathbf{15.6^\circ}$
+
+        (c) $15.6^\circ<26.6^\circ\;\Rightarrow$ the cylinder \textbf{slides before tipping}.
+
+  \item \textit{Rationale: For tipping, torques about the front lower edge;
+        for sliding, $F=\mu_s mg$.}\\[4pt]
+        (a)
+        \[
+          F_{\rm tip}(1.10)=mg(0.30)=(80)(9.8)(0.30)=235.2\text{ N{\cdot}m}
+          \;\Rightarrow\;F_{\rm tip}=\frac{235.2}{1.10}\approx\mathbf{214\text{ N}}
+        \]
+        (b) $F_{\rm slide}=\mu_s mg=(0.45)(80)(9.8)=\mathbf{353\text{ N}}$
+
+        (c) $214\text{ N}<353\text{ N}\;\Rightarrow$ the crate \textbf{tips first}.
+
+  \item \textit{Rationale: On a turntable the centripetal force $m\omega^2 r$ acts
+        horizontally; tipping occurs when this ``outward push'' rotates the resultant
+        past the outer edge; sliding when $m\omega^2 r=\mu_s mg$.}\\[4pt]
+        (a)
+        \[
+          \frac{m\omega_c^2 r}{mg}=\frac{W/2}{H/2}=\frac{0.10}{0.25}=0.400
+          \;\Rightarrow\;\omega_c^2=\frac{(0.400)(9.8)}{0.35}=11.20
+          \;\Rightarrow\;\omega_c\approx\mathbf{3.35\text{ rad/s}}
         \]
         (b)
         \[
-          \tan\alpha_{\rm slide}=\mu_s=0.28
-          \;\Rightarrow\;\alpha_{\rm slide}\approx\mathbf{15.6^\circ}
+          \omega_{\rm slide}=\sqrt{\frac{\mu_s g}{r}}=\sqrt{\frac{(0.55)(9.8)}{0.35}}
+                            =\sqrt{15.40}\approx\mathbf{3.92\text{ rad/s}}
         \]
-        (c) $\alpha_{\rm slide}=15.6^\circ < \alpha_{\rm tip}=26.6^\circ$: the cylinder
-        \textbf{slides before tipping} because static friction is overcome before the CG
-        passes beyond the lower edge.
+        (c) $3.35<3.92\;\Rightarrow$ the block \textbf{tips first}.
 
 \end{enumerate}
 \end{keybox}
@@ -1255,20 +1417,26 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{5\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A vertical spring ($k=360$\,N/m) is compressed 0.14\,m from its natural length
-        and launches a 0.25\,kg ball straight upward.
-        Find the maximum height the ball rises \emph{above the point of release}.
-        (Ignore air resistance.)
+        A vertical spring ($k=360$\,N/m) compressed 0.14\,m launches a 0.25\,kg
+        ball upward.  Find the max height above the release point (no air resistance).
 
   \item \textbf{[5 pts --- Difficult]}
-        Two springs are connected in \emph{series}: $k_1=250$\,N/m and $k_2=400$\,N/m.
-        A 5.0\,kg block is attached to the free end and allowed to reach static equilibrium.
-        \begin{enumerate}[label=(\alph*)]
-          \item Find the effective spring constant $k_{\rm eff}$.
-          \item Find the total equilibrium extension.
-          \item Find the extension of each individual spring.
-          \item Find the elastic PE stored in each spring.
-        \end{enumerate}
+        Two springs in series ($k_1=250$\,N/m, $k_2=400$\,N/m); 5.0\,kg block
+        hangs at equilibrium.
+        (a) $k_{\rm eff}$; (b) total extension;
+        (c) extension of each; (d) elastic PE in each.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Springs $k_A=200$\,N/m and $k_B=300$\,N/m in parallel, the combination
+        in series with $k_C=600$\,N/m; 4.0\,kg block hangs from the end.
+        (a) Overall $k_{\rm eff}$; (b) total elongation;
+        (c) force in each spring.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A spring ($k=500$\,N/m) hangs from the ceiling with a 2.0\,kg mass.
+        The mass is pulled 0.20\,m below equilibrium and released from rest.
+        (a) Equilibrium extension; (b) amplitude;
+        (c) maximum speed; (d) maximum elastic PE.
 
 \end{enumerate}
 \end{planbox}
@@ -1276,27 +1444,80 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{5\Alph*.}]
 
-  \item Energy conservation: $\tfrac{1}{2}kx^2 = mgh$
+  \item \textit{Rationale: At maximum height $v=0$; all elastic PE converts to
+        gravitational PE: $\tfrac{1}{2}kx^2=mgh$.}
         \[
-          h=\frac{kx^2}{2mg}=\frac{(360)(0.14)^2}{2(0.25)(9.8)}
-           =\frac{7.06}{4.90}\approx\mathbf{1.44\text{ m}}
+          h=\frac{kx^2}{2mg}
+           =\frac{(360)(0.14)^2}{2(0.25)(9.8)}
+           =\frac{360\times0.0196}{4.90}
+           =\frac{7.056}{4.90}\approx\mathbf{1.44\text{ m}}
         \]
 
-  \item (a) $\dfrac{1}{k_{\rm eff}}=\dfrac{1}{250}+\dfrac{1}{400}=0.0065
-             \;\Rightarrow\;k_{\rm eff}\approx\mathbf{153.8\text{ N/m}}$
-
-        (b) $x_{\rm tot}=\dfrac{mg}{k_{\rm eff}}=\dfrac{(5.0)(9.8)}{153.8}
-            \approx\mathbf{0.319\text{ m}}$
-
-        (c) Springs in series carry the same force $F=mg=49$\,N:
+  \item \textit{Rationale: Series springs share the same tension but different
+        extensions; $1/k_{\rm eff}=1/k_1+1/k_2$.}\\[4pt]
+        (a)
         \[
-          x_1=\frac{49}{250}=\mathbf{0.196\text{ m}};\quad
-          x_2=\frac{49}{400}=\mathbf{0.123\text{ m}}
-          \quad\bigl(x_1+x_2=0.319\text{ m}\;\checkmark\bigr)
+          \frac{1}{k_{\rm eff}}=\frac{1}{250}+\frac{1}{400}
+                               =0.004000+0.002500=0.006500
+          \;\Rightarrow\;k_{\rm eff}=\frac{1}{0.006500}\approx\mathbf{153.8\text{ N/m}}
+        \]
+        (b)
+        \[
+          x_{\rm tot}=\frac{mg}{k_{\rm eff}}=\frac{(5.0)(9.8)}{153.8}
+                     =\frac{49.0}{153.8}\approx\mathbf{0.319\text{ m}}
+        \]
+        (c) Both carry $F=mg=(5.0)(9.8)=49.0$\,N:
+        \[
+          x_1=\frac{49.0}{250}=\mathbf{0.196\text{ m}};\quad
+          x_2=\frac{49.0}{400}=\mathbf{0.123\text{ m}}
+          \quad(0.196+0.123=0.319\;\checkmark)
+        \]
+        (d)
+        \[
+          U_1=\tfrac{1}{2}(250)(0.196)^2=125\times0.03842=\mathbf{4.80\text{ J}};\quad
+          U_2=\tfrac{1}{2}(400)(0.123)^2=200\times0.01513=\mathbf{3.03\text{ J}}
         \]
 
-        (d) $U_1=\tfrac{1}{2}(250)(0.196)^2\approx\mathbf{4.80\text{ J}}$;\quad
-            $U_2=\tfrac{1}{2}(400)(0.123)^2\approx\mathbf{3.00\text{ J}}$
+  \item \textit{Rationale: Parallel springs have the same extension; add constants.
+        Series combo carries the same force throughout; the parallel springs split
+        the force proportionally to their $k$ values.}\\[4pt]
+        (a)
+        \[
+          k_{\rm par}=200+300=500\text{ N/m};\quad
+          \frac{1}{k_{\rm eff}}=\frac{1}{500}+\frac{1}{600}
+                               =\frac{6+5}{3000}=\frac{11}{3000}
+          \;\Rightarrow\;k_{\rm eff}=\frac{3000}{11}\approx\mathbf{272.7\text{ N/m}}
+        \]
+        (b)
+        \[
+          x_{\rm tot}=\frac{(4.0)(9.8)}{272.7}=\frac{39.2}{272.7}\approx\mathbf{0.144\text{ m}}
+        \]
+        (c) $F_C=mg=39.2$\,N.\quad $A$ and $B$ share 39.2\,N:
+        \[
+          F_A=\frac{200}{500}(39.2)=\mathbf{15.7\text{ N}};\quad
+          F_B=\frac{300}{500}(39.2)=\mathbf{23.5\text{ N}}
+          \quad(15.7+23.5=39.2\;\checkmark)
+        \]
+
+  \item \textit{Rationale: At equilibrium $kx_0=mg$. SHM amplitude equals the
+        pull-down distance; max speed occurs at equilibrium (all PE $\to$ KE in SHM).}\\[4pt]
+        (a)
+        \[
+          x_0=\frac{mg}{k}=\frac{(2.0)(9.8)}{500}=\frac{19.6}{500}=\mathbf{0.0392\text{ m}}
+        \]
+        (b) Amplitude $A=\mathbf{0.20\text{ m}}$
+
+        (c)
+        \[
+          v_{\max}=A\omega=A\sqrt{\frac{k}{m}}
+                 =(0.20)\sqrt{\frac{500}{2.0}}
+                 =(0.20)(15.81)\approx\mathbf{3.16\text{ m/s}}
+        \]
+        (d) Maximum spring PE at lowest point ($x_0+A$ below natural length):
+        \[
+          x_{\rm bot}=0.0392+0.20=0.2392\text{ m};\quad
+          U_{\max}=\tfrac{1}{2}(500)(0.2392)^2=250\times0.05722\approx\mathbf{14.3\text{ J}}
+        \]
 
 \end{enumerate}
 \end{keybox}
@@ -1307,20 +1528,27 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{6\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        The forearm (mass 1.4\,kg, CG 13\,cm from the elbow) is held horizontal while
-        carrying a 3.5\,kg weight in the hand 33\,cm from the elbow.
-        The bicep inserts 4.0\,cm from the elbow and pulls straight up.
-        (a) Find the bicep tension $F_B$.
-        (b) Find the elbow joint reaction force (magnitude and direction).
+        Forearm (1.4\,kg, CG 13\,cm from elbow) horizontal, holding 3.5\,kg
+        weight at 33\,cm.  Bicep inserts 4.0\,cm from elbow.
+        (a) Find $F_B$; (b) find elbow joint reaction.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 70-kg person bends forward at the waist so that the upper body
-        (weight 430\,N, CG 38\,cm along the spine from the lumbar pivot) makes
-        $35^\circ$ with the horizontal.
-        The erector spinae muscle pulls \emph{perpendicular to the spine} at
-        6.0\,cm from the lumbar pivot.
-        (a) Find the back-muscle force $F_m$.
-        (b) Find the magnitude of the lumbar-joint reaction force.
+        Person bends forward: upper body (430\,N, CG 38\,cm along spine from
+        lumbar pivot) at $35^\circ$ above horizontal.
+        Erector spinae pulls perp.\ to spine at 6.0\,cm from pivot.
+        (a) Find $F_m$; (b) find lumbar joint reaction force magnitude.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Achilles tendon inserts 4.5\,cm behind ankle (pivot); ball of foot is
+        12\,cm in front of ankle.  A 70-kg person stands on tiptoe on one foot.
+        (a) Find the Achilles tendon force.
+        (b) Find the ankle joint reaction force.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A person holds a 15-kg bucket at arm's length (0.70\,m from shoulder).
+        Deltoid inserts 15\,cm from shoulder at $15^\circ$ to humerus.
+        Arm (4.0\,kg) has CG 33\,cm from shoulder.
+        (a) Find $F_D$; (b) find shoulder joint reaction magnitude.
 
 \end{enumerate}
 \end{planbox}
@@ -1328,30 +1556,60 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{6\Alph*.}]
 
-  \item (a) Torques about elbow:
+  \item \textit{Rationale: Pivot at the elbow joint; $\sum\tau=0$ gives the muscle
+        force; $\sum F_y=0$ gives the joint reaction.}\\[4pt]
+        (a)
         \[
-          F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)=1.78+11.32=13.10\text{ N{\cdot}m}
+          F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)
+                    =1.783+11.319=13.10\text{ N{\cdot}m}
         \]
         \[
-          F_B=\frac{13.10}{0.040}\approx\mathbf{328\text{ N}}\text{ (upward)}
+          F_B=\frac{13.10}{0.040}\approx\mathbf{328\text{ N (upward)}}
         \]
-        (b) $\sum F_y=0$:\quad
-            $F_B - J - (1.4+3.5)(9.8)=0\;\Rightarrow\;J=328-48.0\approx
-            \mathbf{280\text{ N}}\text{ (downward on forearm)}$
+        (b) $\sum F_y=0$:
+        \[
+          J=F_B-(1.4+3.5)(9.8)=328-(4.9)(9.8)=328-48.0\approx\mathbf{280\text{ N (downward)}}
+        \]
 
-  \item (a) Component of upper-body weight \emph{perpendicular} to spine:
-            $W_\perp=430\cos35^\circ=352$\,N.\\
-        Torques about lumbar pivot:
+  \item \textit{Rationale: The weight component perpendicular to the spine creates
+        torque about the lumbar joint. Pivot at the lumbar joint.}\\[4pt]
+        (a) $W_\perp=430\cos35^\circ=430\times0.8192=352.3$\,N.
         \[
-          F_m(0.060)=352(0.38)=133.8\text{ N{\cdot}m}
-          \;\Rightarrow\;F_m\approx\mathbf{2230\text{ N}}
+          F_m(0.060)=(352.3)(0.38)=133.9\text{ N{\cdot}m}
+          \;\Rightarrow\;F_m=\frac{133.9}{0.060}\approx\mathbf{2232\text{ N}}
         \]
-        (b) Force balance on upper body (spine-axis components):\\
-        Along spine (compressive): $R_{\parallel}=430\sin35^\circ\approx247$\,N.\\
-        Perpendicular: $R_{\perp}=F_m-430\cos35^\circ=2230-352=1878$\,N.
+        (b) $R_\parallel=430\sin35^\circ=430\times0.5736=246.6$\,N;\quad
+            $R_\perp=F_m-W_\perp=2232-352.3=1879.7$\,N.
         \[
-          |\vec{R}|=\sqrt{247^2+1878^2}\approx\mathbf{1894\text{ N}}
-          \;\bigl(\approx 2.8\times\text{body weight}\bigr)
+          |\vec{R}|=\sqrt{246.6^2+1879.7^2}
+                  =\sqrt{60\,812+3\,533\,271}\approx\mathbf{1896\text{ N}}
+        \]
+
+  \item \textit{Rationale: The ground pushes up at the ball of the foot; the
+        Achilles tendon pulls up at the heel; pivot at the ankle.}
+        \[
+          F_A(0.045)=N_{\rm floor}(0.12);\quad N_{\rm floor}=(70)(9.8)=686\text{ N}
+        \]
+        \[
+          F_A=\frac{(686)(0.12)}{0.045}=\frac{82.32}{0.045}\approx\mathbf{1829\text{ N}}
+        \]
+        $\sum F_y=0$: $J=F_A-N_{\rm floor}=1829-686\approx\mathbf{1143\text{ N}}$
+
+  \item \textit{Rationale: Pivot at shoulder; the deltoid torque arm is
+        $r_\perp=0.15\sin15^\circ$ (perpendicular to humerus).}\\[4pt]
+        (a)
+        \[
+          F_D(0.15\sin15^\circ)=(4.0)(9.8)(0.33)+(15)(9.8)(0.70)
+                               =12.94+102.9=115.8\text{ N{\cdot}m}
+        \]
+        \[
+          F_D=\frac{115.8}{0.15\times0.2588}=\frac{115.8}{0.03882}\approx\mathbf{2983\text{ N}}
+        \]
+        (b) $J_y=F_D\sin15^\circ-(4.0+15)(9.8)=(2983)(0.2588)-186.2=772-186=586$\,N;\\
+            $J_x=F_D\cos15^\circ=(2983)(0.9659)=2881$\,N.
+        \[
+          |\vec{J}|=\sqrt{586^2+2881^2}=\sqrt{343\,396+8\,300\,161}
+                  \approx\sqrt{8\,643\,557}\approx\mathbf{2940\text{ N}}
         \]
 
 \end{enumerate}
@@ -1366,17 +1624,28 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{7\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A 15\,kg box is dragged 6.0\,m along a horizontal floor by a rope that makes
-        $28^\circ$ above the horizontal (tension $T=70$\,N; $\mu_k=0.20$).
-        Find (a) the work done by $T$, (b) the work done by kinetic friction, and
-        (c) the net work done on the box.
+        A 15\,kg box is dragged 6.0\,m along a horizontal floor by a rope at
+        $28^\circ$ ($T=70$\,N; $\mu_k=0.20$).
+        Find (a) work by $T$, (b) work by friction, (c) net work.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 3.0\,kg block is pushed up a \emph{frictionless} $30^\circ$ incline by a
-        \emph{horizontal} force $F$ at constant speed over $d=2.0$\,m along the incline.
-        (a) Find $F$.
-        (b) Calculate $W_F$, $W_{\rm grav}$, and $W_N$.
-        (c) Verify that $W_{\rm net}=0$ (consistent with constant speed).
+        A 3.0\,kg block is pushed up a frictionless $30^\circ$ incline by a
+        horizontal force $F$ at constant speed over $d=2.0$\,m.
+        (a) Find $F$; (b) find $W_F$, $W_{\rm grav}$, $W_N$;
+        (c) verify $W_{\rm net}=0$.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A variable force $F(x)=6x^2-4x$\,(N) acts on a 2.0-kg particle moving
+        from $x=1.0$\,m to $x=4.0$\,m.
+        (a) Find the work done; (b) if $v_0=3.0$\,m/s at $x=1.0$\,m,
+        find the speed at $x=4.0$\,m.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 500-kg elevator rises 30\,m at constant speed.
+        A 300-kg counterweight descends on the other side of the pulley.
+        (a) Net work by gravity on the system;
+        (b) work by the motor cable tension;
+        (c) minimum motor power if the rise takes 25\,s.
 
 \end{enumerate}
 \end{planbox}
@@ -1384,32 +1653,65 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{7\Alph*.}]
 
-  \item (a) $W_T=Td\cos28^\circ=(70)(6.0)(0.883)\approx\mathbf{371\text{ J}}$
-
-        (b) $N=mg-T\sin28^\circ=(15)(9.8)-70(0.469)=147-32.9=114.1$\,N;\quad
-            $f_k=\mu_k N=22.8$\,N.
+  \item \textit{Rationale: $W=Fd\cos\phi$ where $\phi$ is the angle between force
+        and displacement. Friction opposes motion ($\phi=180^\circ$ for friction).}\\[4pt]
+        (a)
         \[
-          W_f=-f_k\,d=-(22.8)(6.0)\approx\mathbf{-137\text{ J}}
+          W_T=(70)(6.0)\cos28^\circ=(70)(6.0)(0.8829)=\mathbf{370.8\text{ J}}
         \]
+        (b) $N=mg-T\sin28^\circ=(15)(9.8)-70(0.4695)=147.0-32.9=114.1$\,N;
+            $f_k=(0.20)(114.1)=22.82$\,N.
+        \[
+          W_f=-(22.82)(6.0)=\mathbf{-136.9\text{ J}}
+        \]
+        (c) $W_{\rm net}=370.8-136.9=\mathbf{234\text{ J}}$
 
-        (c) $W_{\rm net}=W_T+W_f=371-137=\mathbf{234\text{ J}}$
-
-  \item (a) Constant speed on frictionless incline: $\sum F_\parallel=0$.
+  \item \textit{Rationale: Constant speed $\Rightarrow\sum F=0$ along incline.
+        Each work term is force $\times$ displacement $\times\cos\phi$.}\\[4pt]
+        (a)
         \[
           F\cos30^\circ=mg\sin30^\circ
-          \;\Rightarrow\;F=mg\tan30^\circ=(3.0)(9.8)(0.577)\approx\mathbf{17.0\text{ N}}
+          \;\Rightarrow\;F=(3.0)(9.8)\tan30^\circ=(29.4)(0.5774)=\mathbf{16.97\text{ N}}
         \]
-        (b) $F$ is horizontal; displacement is along the incline at $30^\circ$:
+        (b)
         \[
-          W_F=Fd\cos30^\circ=(17.0)(2.0)(0.866)\approx\mathbf{+29.4\text{ J}}
-        \]
-        \[
-          W_{\rm grav}=-mgd\sin30^\circ=-(3.0)(9.8)(2.0)(0.500)=\mathbf{-29.4\text{ J}}
+          W_F=(16.97)(2.0)\cos30^\circ=(16.97)(2.0)(0.8660)\approx\mathbf{+29.4\text{ J}}
         \]
         \[
-          W_N=0\text{ J}\quad\text{(perpendicular to displacement)}
+          W_{\rm grav}=-(3.0)(9.8)(2.0)\sin30^\circ=-(29.4)(2.0)(0.500)=\mathbf{-29.4\text{ J}}
         \]
-        (c) $W_{\rm net}=29.4-29.4+0=\mathbf{0\text{ J}}\;\checkmark\;\;(\Delta K=0)$
+        \[
+          W_N=0\text{ J}\quad(\vec{N}\perp\vec{d})
+        \]
+        (c) $W_{\rm net}=29.4-29.4+0=\mathbf{0\text{ J}}\;\checkmark$
+
+  \item \textit{Rationale: For variable force, $W=\int F(x)\,dx$; then apply
+        the Work--Energy Theorem.}\\[4pt]
+        (a)
+        \begin{align*}
+          W&=\int_1^4(6x^2-4x)\,dx=\Bigl[2x^3-2x^2\Bigr]_1^4\\
+           &=\bigl(2(64)-2(16)\bigr)-\bigl(2(1)-2(1)\bigr)=(128-32)-(0)=\mathbf{96\text{ J}}
+        \end{align*}
+        (b)
+        \[
+          96=\tfrac{1}{2}(2.0)v_f^2-\tfrac{1}{2}(2.0)(3.0)^2=v_f^2-9
+          \;\Rightarrow\;v_f=\sqrt{105}\approx\mathbf{10.25\text{ m/s}}
+        \]
+
+  \item \textit{Rationale: At constant speed the motor must compensate for the
+        net gravitational work done against the system.}\\[4pt]
+        (a)
+        \begin{align*}
+          W_{\rm grav,elev}&=-(500)(9.8)(30)=-147\,000\text{ J}\\
+          W_{\rm grav,CW}  &=+(300)(9.8)(30)=+88\,200\text{ J}\\
+          W_{\rm grav,net} &=88\,200-147\,000=\mathbf{-58\,800\text{ J}}
+        \end{align*}
+        (b) $W_{\rm motor}=-W_{\rm grav,net}=\mathbf{+58\,800\text{ J}}$
+
+        (c)
+        \[
+          P_{\min}=\frac{58\,800}{25}=\mathbf{2352\text{ W}}
+        \]
 
 \end{enumerate}
 \end{keybox}
@@ -1420,14 +1722,23 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{8\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A 1200-kg car travelling at 25\,m/s applies a constant 8000-N braking force.
-        Using the Work--Energy Theorem, find the stopping distance.
+        A 1200-kg car at 25\,m/s applies an 8000-N braking force.
+        Find the stopping distance.
 
   \item \textbf{[5 pts --- Difficult]}
-        In an Atwood-style machine, block~$A$ (4.0\,kg) rests on a rough horizontal
-        surface ($\mu_k=0.30$) and is connected by a massless string over a frictionless
-        pulley to block~$B$ (2.5\,kg) hanging vertically.
-        Starting from rest, find the speed of both blocks after $B$ has descended 1.2\,m.
+        Atwood machine: block $A$ (4.0\,kg) on a rough table ($\mu_k=0.30$),
+        connected to block $B$ (2.5\,kg) hanging vertically.
+        Find the speed after $B$ descends 1.2\,m from rest.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 0.40-kg ball is thrown horizontally from a 20-m cliff at 8.0\,m/s.
+        Use the Work--Energy Theorem to find the impact speed; verify with
+        kinematics.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 2.0-kg block slides down a frictionless curved ramp from $h=3.5$\,m,
+        then along a rough horizontal surface ($\mu_k=0.25$).
+        How far from the ramp base does it stop?
 
 \end{enumerate}
 \end{planbox}
@@ -1435,22 +1746,47 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{8\Alph*.}]
 
-  \item $W_{\rm net}=\Delta K\;\Rightarrow\;-F_{\rm brake}\,d = 0-\tfrac{1}{2}mv^2$
+  \item \textit{Rationale: $W_{\rm net}=\Delta K$; the car stops so $K_f=0$.}
         \[
-          d=\frac{mv^2}{2F_{\rm brake}}=\frac{(1200)(25)^2}{2(8000)}
-           =\frac{750\,000}{16\,000}\approx\mathbf{46.9\text{ m}}
+          -F_{\rm brake}\,d=0-\tfrac{1}{2}mv^2
+          \;\Rightarrow\;d=\frac{mv^2}{2F_{\rm brake}}
+          =\frac{(1200)(25)^2}{2(8000)}
+          =\frac{750\,000}{16\,000}\approx\mathbf{46.9\text{ m}}
         \]
 
-  \item Apply $W_{\rm net}=\Delta K$ to the two-body system:
+  \item \textit{Rationale: Apply $W_{\rm net}=\Delta K$ to the combined two-body
+        system; gravity on $B$ does positive work, friction on $A$ does negative work.}
         \begin{align*}
-          W_{\rm net} &= m_B g\,d - \mu_k m_A g\,d
-                       = (2.5)(9.8)(1.2)-(0.30)(4.0)(9.8)(1.2)\\
-                      &= 29.4-14.1 = 15.3\text{ J}
+          W_{\rm net}&=(2.5)(9.8)(1.2)-(0.30)(4.0)(9.8)(1.2)\\
+                     &=29.4-14.11=15.29\text{ J}
         \end{align*}
         \[
-          \tfrac{1}{2}(m_A+m_B)v^2=15.3
-          \;\Rightarrow\;v^2=\frac{2(15.3)}{6.5}=4.71
+          \tfrac{1}{2}(6.5)v^2=15.29
+          \;\Rightarrow\;v^2=\frac{2\times15.29}{6.5}=4.704
           \;\Rightarrow\;v\approx\mathbf{2.17\text{ m/s}}
+        \]
+
+  \item \textit{Rationale: Only gravity does work (no air resistance). Height
+        fallen is 20\,m regardless of horizontal travel.}
+        \[
+          W_{\rm net}=mgh=(0.40)(9.8)(20)=78.4\text{ J}
+        \]
+        \[
+          \tfrac{1}{2}mv_f^2=\tfrac{1}{2}(0.40)(8.0)^2+78.4=12.8+78.4=91.2\text{ J}
+        \]
+        \[
+          v_f=\sqrt{\frac{2(91.2)}{0.40}}=\sqrt{456}\approx\mathbf{21.4\text{ m/s}}
+        \]
+        \emph{Check}: $v_y^2=2(9.8)(20)=392$;\;$v_x^2=(8.0)^2=64$;\;$v_f=\sqrt{64+392}=\sqrt{456}=21.4$\,m/s\;\checkmark
+
+  \item \textit{Rationale: Frictionless ramp converts all gravitational PE to KE at
+        the base; friction then dissipates that KE on the flat.}
+        \[
+          K_{\rm base}=(2.0)(9.8)(3.5)=68.6\text{ J};\quad
+          f_k=(0.25)(2.0)(9.8)=4.90\text{ N}
+        \]
+        \[
+          d=\frac{K_{\rm base}}{f_k}=\frac{68.6}{4.90}=\mathbf{14.0\text{ m}}
         \]
 
 \end{enumerate}
@@ -1462,18 +1798,24 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{9\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A spring ($k=250$\,N/m) compressed 0.16\,m launches a 0.30\,kg ball vertically
-        upward.
-        Find the maximum height above the launch point.  (Ignore air resistance.)
+        A spring ($k=250$\,N/m) compressed 0.16\,m launches a 0.30\,kg ball
+        vertically.  Find the max height.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 2.0\,kg block on a frictionless horizontal surface is attached to a horizontal
-        spring ($k=600$\,N/m) at its natural length and given a speed of 4.0\,m/s at $x=0$.
-        \begin{enumerate}[label=(\alph*)]
-          \item Find the maximum spring compression $x_{\rm max}$.
-          \item Find the block's speed when the spring is compressed by 0.12\,m.
-          \item What fraction of the initial KE is stored as elastic PE at $x=0.12$\,m?
-        \end{enumerate}
+        A 2.0-kg block on a frictionless surface is attached to a spring
+        ($k=600$\,N/m) at natural length and given $v_0=4.0$\,m/s.
+        (a) Find $x_{\rm max}$; (b) find $v$ at $x=0.12$\,m;
+        (c) fraction of initial KE stored as spring PE at $x=0.12$\,m.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Pendulum: $L=1.4$\,m, $m=0.60$\,kg, released from $\theta=40^\circ$.
+        (a) Speed at bottom; (b) tension at bottom;
+        (c) angle at which speed equals half the max speed.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 1.5-kg block compressed 0.15\,m against a spring ($k=800$\,N/m) on a
+        frictionless floor is released onto a rough $25^\circ$ incline ($\mu_k=0.18$).
+        How far up the incline does it travel?
 
 \end{enumerate}
 \end{planbox}
@@ -1481,31 +1823,61 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{9\Alph*.}]
 
-  \item $\tfrac{1}{2}kx^2=mgh$
+  \item \textit{Rationale: All elastic PE $\to$ gravitational PE at peak; $v=0$
+        there: $\tfrac{1}{2}kx^2=mgh$.}
         \[
           h=\frac{kx^2}{2mg}=\frac{(250)(0.16)^2}{2(0.30)(9.8)}
-           =\frac{6.40}{5.88}\approx\mathbf{1.09\text{ m}}
+           =\frac{250\times0.0256}{5.88}=\frac{6.40}{5.88}\approx\mathbf{1.09\text{ m}}
         \]
 
-  \item (a) All KE converts to elastic PE at maximum compression:
+  \item \textit{Rationale: Frictionless surface $\Rightarrow$ energy conserved:
+        $K+U_{\rm sp}=\text{const}$.}\\[4pt]
+        (a) At max compression $v=0$: all KE $\to$ spring PE.
         \[
-          \tfrac{1}{2}mv^2=\tfrac{1}{2}kx_{\rm max}^2
-          \;\Rightarrow\;x_{\rm max}=v\sqrt{\frac{m}{k}}
-          =4.0\sqrt{\frac{2.0}{600}}\approx\mathbf{0.231\text{ m}}
+          x_{\rm max}=v_0\sqrt{\frac{m}{k}}=4.0\sqrt{\frac{2.0}{600}}
+                     =4.0\times0.05774\approx\mathbf{0.231\text{ m}}
+        \]
+        (b)
+        \[
+          \tfrac{1}{2}mv_1^2=\tfrac{1}{2}(2.0)(4.0)^2-\tfrac{1}{2}(600)(0.12)^2
+                            =16.0-4.32=11.68\text{ J}
+          \;\Rightarrow\;v_1=\sqrt{11.68}\approx\mathbf{3.42\text{ m/s}}
+        \]
+        (c) $4.32/16.0=0.270\;\Rightarrow\;\mathbf{27.0\%}$
+
+  \item \textit{Rationale: Height drop from angle $\theta$ is $L(1-\cos\theta)$;
+        at the bottom apply radial Newton's 2nd law for tension.}\\[4pt]
+        (a) $\Delta h=(1.4)(1-\cos40^\circ)=(1.4)(0.2340)=0.3276$\,m
+        \[
+          v=\sqrt{2g\Delta h}=\sqrt{2(9.8)(0.3276)}=\sqrt{6.421}\approx\mathbf{2.53\text{ m/s}}
+        \]
+        (b)
+        \[
+          T=m\!\left(g+\frac{v^2}{L}\right)
+           =(0.60)\!\left(9.8+\frac{6.421}{1.4}\right)
+           =(0.60)(9.8+4.586)
+           =(0.60)(14.39)\approx\mathbf{8.63\text{ N}}
+        \]
+        (c) $v=v_{\max}/2=1.265$\,m/s:
+        \[
+          \cos\theta=1-\frac{v^2}{2gL}=1-\frac{(1.265)^2}{2(9.8)(1.4)}
+                   =1-\frac{1.600}{27.44}=1-0.0583=0.9417
+          \;\Rightarrow\;\theta\approx\mathbf{19.7^\circ}
         \]
 
-        (b) Energy conservation at $x=0.12$\,m:
+  \item \textit{Rationale: Spring PE converts to KE on the flat, then is dissipated
+        by friction and gravity as the block climbs. Set $K_f=0$.}
         \[
-          \tfrac{1}{2}mv_1^2=\tfrac{1}{2}mv_0^2-\tfrac{1}{2}kx^2
-          =\tfrac{1}{2}(2.0)(16)-\tfrac{1}{2}(600)(0.12)^2
-          =16-4.32=11.68\text{ J}
+          U_{\rm sp}=\tfrac{1}{2}(800)(0.15)^2=400\times0.0225=9.0\text{ J}
         \]
         \[
-          v_1=\sqrt{\frac{2(11.68)}{2.0}}=\sqrt{11.68}\approx\mathbf{3.42\text{ m/s}}
+          9.0=mgd(\sin25^\circ+\mu_k\cos25^\circ)
+             =(1.5)(9.8)d(0.4226+0.18\times0.9063)
+             =14.7d(0.5857)=8.609d
         \]
-
-        (c) $\dfrac{U_{\rm sp}}{K_i}=\dfrac{4.32}{16}=0.270$ $\Rightarrow$
-            $\mathbf{27\%}$ of the initial KE is stored as elastic PE.
+        \[
+          d=\frac{9.0}{8.609}\approx\mathbf{1.05\text{ m}}
+        \]
 
 \end{enumerate}
 \end{keybox}
@@ -1516,13 +1888,27 @@ for correct reasoning with arithmetic errors.
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{10\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A 5.0\,kg ball is released from rest at $h_i=8.0$\,m on a frictionless curved
-        ramp.  Using conservation of energy, find its speed at $h_f=2.5$\,m.
+        A 5.0-kg ball released from rest at $h_i=8.0$\,m on a frictionless ramp.
+        Find its speed at $h_f=2.5$\,m.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 2.0\,kg block starts from rest and slides 5.0\,m down a $40^\circ$ incline
-        ($\mu_k=0.15$).  It then immediately contacts a spring ($k=1200$\,N/m) on a
-        horizontal surface ($\mu_k=0.20$).  Find the maximum spring compression $x_c$.
+        A 2.0-kg block slides 5.0\,m down a $40^\circ$ incline ($\mu_k=0.15$),
+        then contacts a spring ($k=1200$\,N/m) on a horizontal surface
+        ($\mu_k=0.20$).  Find the maximum spring compression.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 0.50-kg ball is thrown upward at $v_0=18$\,m/s.  Air resistance provides
+        a constant opposing force of 1.2\,N.
+        (a) Find the maximum height;
+        (b) find the return speed;
+        (c) compare KE at launch and on return.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 3.0-kg block slides from rest down a frictionless ramp from $h=4.0$\,m,
+        compresses a spring ($k=2000$\,N/m) at the base, then bounces back and is
+        caught by a sticky pad that absorbs 5.0\,J.
+        (a) Find the maximum spring compression;
+        (b) find the height $H_f$ at which the block is caught.
 
 \end{enumerate}
 \end{planbox}
@@ -1530,39 +1916,208 @@ for correct reasoning with arithmetic errors.
 \begin{keybox}
 \begin{enumerate}[leftmargin=1.5em, label=\textbf{10\Alph*.}]
 
-  \item $K_f+U_f=K_i+U_i\;\Rightarrow\;\tfrac{1}{2}mv^2=mg(h_i-h_f)$
+  \item \textit{Rationale: No friction $\Rightarrow$ mechanical energy is conserved:
+        $K_i+U_i=K_f+U_f$. With $v_i=0$, all initial PE converts to KE and
+        remaining PE.}
         \[
-          v=\sqrt{2g(h_i-h_f)}=\sqrt{2(9.8)(8.0-2.5)}=\sqrt{107.8}
-           \approx\mathbf{10.4\text{ m/s}}
+          v=\sqrt{2g(h_i-h_f)}=\sqrt{2(9.8)(8.0-2.5)}=\sqrt{2\times9.8\times5.5}
+           =\sqrt{107.8}\approx\mathbf{10.4\text{ m/s}}
         \]
 
-  \item \textbf{Step 1 --- KE at bottom of incline.}\\
-        $\Delta h=5.0\sin40^\circ=3.21$\,m;\quad
-        $N_1=mg\cos40^\circ=(2.0)(9.8)(0.766)=15.0$\,N.
+  \item \textit{Rationale: Gravitational PE minus incline friction loss gives KE at
+        the ramp base; that KE minus horizontal friction loss goes into spring PE.}\\[4pt]
+        \textbf{Step 1 --- KE at ramp base:}
         \[
-          \Delta E_{{\rm th},1}=\mu_k N_1(5.0)=(0.15)(15.0)(5.0)=11.3\text{ J}
+          \Delta h=(5.0)\sin40^\circ=(5.0)(0.6428)=3.214\text{ m}
         \]
         \[
-          K_1=mg\,\Delta h-\Delta E_{{\rm th},1}=(2.0)(9.8)(3.21)-11.3
-              =62.9-11.3=51.6\text{ J}
+          N_1=mg\cos40^\circ=(2.0)(9.8)(0.7660)=15.01\text{ N}
+        \]
+        \[
+          W_{f1}=(0.15)(15.01)(5.0)=11.26\text{ J}
+        \]
+        \[
+          K_1=(2.0)(9.8)(3.214)-11.26=62.99-11.26=51.73\text{ J}
+        \]
+        \textbf{Step 2 --- spring compression:}
+        \[
+          51.73=600\,x_c^2+(0.20)(2.0)(9.8)x_c=600\,x_c^2+3.92\,x_c
+        \]
+        \[
+          600\,x_c^2+3.92\,x_c-51.73=0
+        \]
+        \[
+          x_c=\frac{-3.92+\sqrt{3.92^2+4(600)(51.73)}}{1200}
+             =\frac{-3.92+\sqrt{124\,167}}{1200}
+             =\frac{-3.92+352.4}{1200}\approx\mathbf{0.290\text{ m}}
         \]
 
-        \textbf{Step 2 --- spring compression (horizontal friction + spring).}\\
-        At maximum compression $v=0$;\quad
-        $\Delta E_{{\rm th},2}=\mu_k mg\,x_c=(0.20)(2.0)(9.8)x_c=3.92\,x_c$.
+  \item \textit{Rationale: Air resistance does negative work both up and down,
+        reducing total mechanical energy each way.}\\[4pt]
+        (a) Net upward force opposes motion: $(mg+F_{\rm air})H=\tfrac{1}{2}mv_0^2$
         \[
-          K_1=\tfrac{1}{2}kx_c^2+\Delta E_{{\rm th},2}
-          \;\Rightarrow\;51.6=600\,x_c^2+3.92\,x_c
+          H=\frac{81.0}{(0.50)(9.8)+1.2}=\frac{81.0}{6.10}\approx\mathbf{13.3\text{ m}}
+        \]
+        (b) Net downward force drives return:
+        \[
+          \tfrac{1}{2}mv_{\rm ret}^2=(mg-F_{\rm air})H=\bigl((0.50)(9.8)-1.2\bigr)(13.3)
+          =(3.70)(13.3)=49.21\text{ J}
         \]
         \[
-          600\,x_c^2+3.92\,x_c-51.6=0
+          v_{\rm ret}=\sqrt{\frac{2(49.21)}{0.50}}=\sqrt{196.8}\approx\mathbf{14.0\text{ m/s}}
         \]
-        Quadratic formula (positive root):
+        (c) $K_{\rm launch}=81.0$\,J;\quad$K_{\rm return}=49.2$\,J;\quad
+            return KE is $49.2/81.0\approx60.7\%$ of launch KE.
+
+  \item \textit{Rationale: Track each energy conversion step: gravity $\to$ KE
+        $\to$ spring PE $\to$ KE again, then subtract the pad collision loss.}\\[4pt]
+        (a) Frictionless ramp; $K_{\rm base}=mgh=(3.0)(9.8)(4.0)=117.6$\,J.
         \[
-          x_c=\frac{-3.92+\sqrt{3.92^2+4(600)(51.6)}}{1200}
-             =\frac{-3.92+\sqrt{123\,855}}{1200}
-             =\frac{-3.92+351.9}{1200}
-             \approx\mathbf{0.290\text{ m}}
+          x_c=\sqrt{\frac{2K_{\rm base}}{k}}=\sqrt{\frac{2(117.6)}{2000}}
+             =\sqrt{0.1176}\approx\mathbf{0.343\text{ m}}
+        \]
+        (b) Spring returns full $117.6$\,J; pad absorbs 5.0\,J:
+        \[
+          K_f=117.6-5.0=112.6\text{ J};\quad
+          H_f=\frac{K_f}{mg}=\frac{112.6}{29.4}\approx\mathbf{3.83\text{ m}}
+        \]
+
+\end{enumerate}
+\end{keybox}
+
+% ── Bonus: Ski Slope ──────────────────────────────────────────
+\section{Bonus Topic: Ski Slope Problems}
+
+\begin{warnbox}
+\textbf{Ski Slope Scenario.}
+A skier navigates a mountain course: a steep descent, a flat transition, a
+jump ramp, and a snowdrift.  These questions integrate work, energy,
+friction, and projectile motion.  Each question is worth \textbf{5 points}.
+\end{warnbox}
+
+\subsection{Topic 11 --- Ski Slope: Energy on an Incline}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{11\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        A 70-kg skier starts from rest on a 120-m slope at $30^\circ$
+        ($\mu_k=0.08$).
+        (a) Find the net force along the slope.
+        (b) Find the speed at the bottom.
+
+  \item \textbf{[5 pts --- Difficult]}
+        After reaching the bottom from 11A at speed $v_1$, the skier travels
+        80\,m on a flat section ($\mu_k=0.08$), then takes a frictionless 15-m
+        ramp at $25^\circ$.
+        (a) Speed at the end of the flat section.
+        (b) Launch speed at the top of the ramp.
+        (c) Maximum height above the ramp base after the jump.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 70-kg skier starts from rest on a $35^\circ$ slope ($\mu_k=0.10$),
+        travels 90\,m, then hits a snowdrift modelled as a spring ($k=8000$\,N/m).
+        (a) Speed just before the snowdrift.
+        (b) Maximum compression of the snowdrift.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A 65-kg skier descends $h=180$\,m vertically over a path of length
+        $L=350$\,m ($\mu_k=0.12$ average).
+        (a) Show $\bar\theta=\arcsin(h/L)\approx31.0^\circ$.
+        (b) Total friction work.
+        (c) Finish-line speed.
+        (d) Average power dissipated by friction if the run takes 48\,s.
+
+\end{enumerate}
+\end{planbox}
+
+\begin{keybox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{11\Alph*.}]
+
+  \item \textit{Rationale: Along the slope, the gravity component drives the skier
+        while kinetic friction resists; apply Newton's 2nd law, then the
+        Work--Energy Theorem.}\\[4pt]
+        (a)
+        \[
+          F_{\rm net}=mg(\sin30^\circ-\mu_k\cos30^\circ)
+                     =(70)(9.8)(0.500-0.08\times0.8660)
+                     =(686)(0.500-0.0693)
+                     =(686)(0.4307)\approx\mathbf{295\text{ N}}
+        \]
+        (b)
+        \[
+          W_{\rm net}=F_{\rm net}\times d=(295)(120)=35\,400\text{ J}
+        \]
+        \[
+          v_1=\sqrt{\frac{2\times35\,400}{70}}=\sqrt{1011}\approx\mathbf{31.8\text{ m/s}}
+        \]
+
+  \item \textit{Rationale: Track KE through each segment using energy conservation
+        with friction losses.}\\[4pt]
+        (a) Flat friction loss:
+        $W_f=(0.08)(70)(9.8)(80)=(0.08)(686)(80)=4390$\,J.
+        \[
+          K_{\rm flat}=\tfrac{1}{2}(70)(31.8)^2-4390=35\,345-4390=30\,955\text{ J}
+        \]
+        \[
+          v_{\rm flat}=\sqrt{\frac{2\times30\,955}{70}}=\sqrt{884.4}\approx\mathbf{29.7\text{ m/s}}
+        \]
+        (b) Ramp height: $h_r=(15)\sin25^\circ=(15)(0.4226)=6.339$\,m.
+        \[
+          K_{\rm launch}=30\,955-(70)(9.8)(6.339)=30\,955-4349=26\,606\text{ J}
+        \]
+        \[
+          v_{\rm launch}=\sqrt{\frac{2\times26\,606}{70}}=\sqrt{760.2}\approx\mathbf{27.6\text{ m/s}}
+        \]
+        (c) Vertical launch component: $v_{y0}=(27.6)\sin25^\circ=(27.6)(0.4226)=11.66$\,m/s.
+        \[
+          H=\frac{v_{y0}^2}{2g}=\frac{(11.66)^2}{19.6}=\frac{135.9}{19.6}\approx\mathbf{6.93\text{ m}}
+        \]
+
+  \item \textit{Rationale: Net work along the slope gives KE; that KE fully
+        compresses the spring ($v=0$ at maximum compression).}\\[4pt]
+        (a)
+        \[
+          W_{\rm net}=(70)(9.8)(90)(\sin35^\circ-\mu_k\cos35^\circ)
+                     =(686)(90)(0.5736-0.10\times0.8192)
+                     =(686)(90)(0.4917)=30\,361\text{ J}
+        \]
+        \[
+          v=\sqrt{\frac{2\times30\,361}{70}}=\sqrt{867.5}\approx\mathbf{29.4\text{ m/s}}
+        \]
+        (b)
+        \[
+          x_c=v\sqrt{\frac{m}{k}}=29.4\sqrt{\frac{70}{8000}}
+             =29.4\times0.09354\approx\mathbf{2.75\text{ m}}
+        \]
+
+  \item \textit{Rationale: Global energy balance; the average slope angle links
+        the vertical drop to the path length. Friction uses the average normal force.}\\[4pt]
+        (a)
+        \[
+          \sin\bar\theta=\frac{h}{L}=\frac{180}{350}=0.5143
+          \;\Rightarrow\;\bar\theta=\arcsin(0.5143)\approx\mathbf{31.0^\circ}
+        \]
+        $\cos\bar\theta=\sqrt{1-0.5143^2}=\sqrt{0.7355}\approx0.8576$
+
+        (b)
+        \[
+          W_{\rm friction}=\mu_k mg\cos\bar\theta\cdot L
+                          =(0.12)(65)(9.8)(0.8576)(350)
+                          =(0.12)(546.7)(350)
+                          =0.12\times191\,345\approx\mathbf{22\,961\text{ J}}
+        \]
+        (c)
+        \[
+          K_f=mgh-W_{\rm friction}=(65)(9.8)(180)-22\,961
+             =114\,660-22\,961=91\,699\text{ J}
+        \]
+        \[
+          v_f=\sqrt{\frac{2\times91\,699}{65}}=\sqrt{2821.5}\approx\mathbf{53.1\text{ m/s}}
+        \]
+        (d)
+        \[
+          P_{\rm friction}=\frac{W_{\rm friction}}{t}=\frac{22\,961}{48}\approx\mathbf{478\text{ W}}
         \]
 
 \end{enumerate}
