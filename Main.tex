@@ -39,31 +39,21 @@
 \newtcolorbox{gapbox}{colback=gapcolor,colframe=red!60!black,
   title=\textbf{Skill Gap Analysis},fonttitle=\bfseries,breakable}
 \newtcolorbox{planbox}{colback=plancolor,colframe=green!55!black,
-  title=\textbf{Personalized Study Plan},fonttitle=\bfseries,breakable}
+  title=\textbf{Practice Problems},fonttitle=\bfseries,breakable}
 \newtcolorbox{keybox}{colback=keycolor,colframe=gray!55!black,
-  title=\textbf{Answer Key},fonttitle=\bfseries,breakable}
+  title=\textbf{Solutions},fonttitle=\bfseries,breakable}
 \newtcolorbox{warnbox}{colback=warnbg,colframe=orange!70!black,
   title=\textbf{Important},fonttitle=\bfseries,breakable}
 
 % ── Page style ─────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{SAT Math Diagnostic}
-\lhead{SAT Math Section 2 \& 3 --- Advanced Math / Problem Solving}
+\rhead{Exam Experts College Physics}
+\lhead{Chapters 7, 8 \& 10}
 \cfoot{\thepage}
-
-% ── Confidence scale macro ─────────────────────────────────────
-\newcommand{\confscale}{%
-  \hfill
-  \textbf{1}\,\small(no knowledge)\normalsize\quad
-  \textbf{2}\,\small(minimal)\normalsize\quad
-  \textbf{3}\,\small(partial)\normalsize\quad
-  \textbf{4}\,\small(mostly confident)\normalsize\quad
-  \textbf{5}\,\small(mastered)\normalsize}
 
 % ── Blank helpers ──────────────────────────────────────────────
 \newcommand{\blank}[1][3cm]{\underline{\hspace{#1}}}
-\newcommand{\circleone}{$\bigcirc$\,1\quad$\bigcirc$\,2\quad$\bigcirc$\,3\quad$\bigcirc$\,4\quad$\bigcirc$\,5}
 
 % ══════════════════════════════════════════════════════════════
 \begin{document}
@@ -71,1782 +61,976 @@
 
 % ── Title page ────────────────────────────────────────────────
 \begin{center}
-  {\LARGE\bfseries SAT Skills Mastery Diagnostic}\\[0.4cm]
-  {\large\bfseries Section 4: SAT Math Section 2 --- Advanced Math}\\[0.2cm]
-  {\large\bfseries Section 5: SAT Math Section 3 --- Problem Solving and Data Analysis}\\[0.3cm]
-  {\normalsize Quadratics $\cdot$ Polynomials $\cdot$ Rationals $\cdot$ Radicals $\cdot$ Exponentials $\cdot$ Functions}\\
-  {\normalsize Ratios $\cdot$ Percentages $\cdot$ Unit Conversions $\cdot$ Statistics $\cdot$ Probability $\cdot$ Data Analysis}\\[0.2cm]
+  {\LARGE\bfseries Exam Experts College Physics: Chapters 7, 8 \& 10}\\[0.4cm]
+  {\large\bfseries Rotational Motion $\cdot$ Equilibrium and Elasticity $\cdot$ Energy and Work}\\[0.3cm]
   \rule{\linewidth}{0.6pt}
 \end{center}
-
-\vspace{0.3cm}
-
-\begin{instructbox}
-\textbf{Purpose:}  This diagnostic is designed to help you \emph{identify knowledge gaps
-before studying}, so that you can focus your limited review time on the SAT math skills
-that need the most attention.
-
-\bigskip
-\textbf{How to use this document:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Step 1 --- Pre-Diagnostic Self-Rating (Section 3):}  Before answering any
-        questions, rate your confidence on each SAT math skill using the 1--5 scale.
-        Be honest --- this is for your benefit only.
-  \item \textbf{Step 2 --- Diagnostic Knowledge Check (Sections 4 \& 5):}  Answer every
-        question \emph{without} referring to your notes, calculator, or textbook.  Leave
-        blanks rather than guessing randomly.
-  \item \textbf{Step 3 --- Self-Score and Gap Analysis:}  Use the Answer Key to score each
-        subsection (10 points each), then transfer your scores to the Skill Gap Analysis table.
-  \item \textbf{Step 4 --- Build Your Study Plan:}  Any subsection where you scored below
-        70\% (\textless\,7/10) is a priority gap.  Fill in the personalized study plan
-        to target those areas first.
-  \item \textbf{Step 5 --- Post-Activity Re-Rating:}  After completing your focused review,
-        return to Section 3 and re-rate yourself to measure your growth.
-\end{enumerate}
-
-\bigskip
-\textbf{Time estimate:}  60--80 minutes (diagnostic portion); additional time for study plan.
-\end{instructbox}
 
 \tableofcontents
 \newpage
 
 % ══════════════════════════════════════════════════════════════
-% PRE-DIAGNOSTIC SELF-RATING
+\part{Chapter 7: Rotational Motion}
 % ══════════════════════════════════════════════════════════════
-\section{Pre-Diagnostic Self-Rating Checklist}
 
-\begin{selfbox}
-Rate your \emph{current} confidence for each SAT math skill below.  Circle one number per row.
+\section{Introduction to Torque (Section 7.3)}
 
-\vspace{0.2cm}
-\textbf{Scale:}\confscale
+\begin{diagbox}{1. Introduction to Torque}
+
+\textbf{Definition:} \emph{Torque} (symbol $\tau$) is the rotational analog of force.  It measures how effectively a force causes an object to rotate about a pivot point.
+
+\vspace{0.3cm}
+\textbf{General formula:}
+\[
+  \tau = r\,F\sin\theta
+\]
+where $r$ is the distance from the pivot to the point of force application, $F$ is the force magnitude, and $\theta$ is the angle between $\vec{r}$ and $\vec{F}$.
+
+\vspace{0.3cm}
+\textbf{Units:} newton-meters (N$\cdot$m).
+
+\vspace{0.3cm}
+\textbf{Sign convention:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Counterclockwise (CCW)} torques are \textbf{positive} ($+$).
+  \item \textbf{Clockwise (CW)} torques are \textbf{negative} ($-$).
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Types of Torque Calculations}
+
+\begin{diagbox}{1.1 Types of Torque Calculations}
+
+\textbf{Case 1 --- Perpendicular force} ($\theta = 90^\circ$):
+\[
+  \tau = rF
+\]
+\emph{Example:} A 20\,N force perpendicular to a 0.3\,m wrench gives $\tau = (0.3)(20) = 6$\,N$\cdot$m.
 
 \vspace{0.4cm}
+\textbf{Case 2 --- Force at an angle $\theta$:}
+\[
+  \tau = rF\sin\theta
+\]
+\emph{Example:} A 20\,N force at $30^\circ$ on a 0.3\,m wrench gives $\tau = (0.3)(20)\sin 30^\circ = 3$\,N$\cdot$m.
+
+\vspace{0.4cm}
+\textbf{Case 3 --- Using the moment arm:}
+\[
+  \tau = d_\perp F
+\]
+where $d_\perp = r\sin\theta$ is the perpendicular distance from the pivot to the line of action.
+
+\vspace{0.4cm}
+\textbf{Case 4 --- Net torque:}
+\[
+  \tau_{\rm net} = \sum_i \tau_i
+\]
+Each torque is signed before summing.
+
+\end{diagbox}
+
+\subsection{Key Properties of Torque}
+
+\begin{diagbox}{1.2 Key Properties of Torque}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Torque depends on the pivot point.}  The same force produces different torques for different pivot choices.
+  \item \textbf{Maximum torque} is achieved when the force is applied perpendicular to the lever arm ($\theta = 90^\circ$).
+  \item \textbf{Zero torque} results when $\theta = 0^\circ$ or $180^\circ$.
+  \item \textbf{Longer lever arm $\Rightarrow$ larger torque} for the same force.
+  \item \textbf{Newton's second law for rotation:}
+        \[
+          \tau_{\rm net} = I\alpha
+        \]
+        where $I$ is the moment of inertia and $\alpha$ is the angular acceleration.
+\end{enumerate}
+
+\end{diagbox}
+
+\newpage
+
+\section{Gravitational Torque and the Center of Gravity (Section 7.4)}
+
+\begin{diagbox}{2. Gravitational Torque and the Center of Gravity}
+
+The entire gravitational force on an extended object can be treated as acting at a single point: the \textbf{center of gravity} (CG).
+
+\vspace{0.3cm}
+\textbf{Gravitational torque} about a pivot at horizontal position $x_0$:
+\[
+  \tau_{\rm grav} = (x_{\rm CG} - x_0)\,M g
+\]
+where $M$ is the total mass and $x_{\rm CG}$ is the CG's horizontal coordinate.
+
+\end{diagbox}
+
+\subsection{Finding the Center of Gravity}
+
+\begin{diagbox}{2.1 Finding the Center of Gravity}
+
+For a system of particles with masses $m_1, m_2, \ldots$ at positions $x_1, x_2, \ldots$:
+\[
+  x_{\rm CG} = \frac{\sum_i m_i\,x_i}{\sum_i m_i}
+  \qquad
+  y_{\rm CG} = \frac{\sum_i m_i\,y_i}{\sum_i m_i}
+\]
+
+\textbf{Worked example:}
 \begin{center}
-\renewcommand{\arraystretch}{1.55}
-\begin{longtable}{|p{0.38\linewidth}|c|c|c|c|c|c|}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Skill / Knowledge Area} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5}
-  & \parbox[c]{1.4cm}{\centering\textbf{Post-\\Review}} \\
+\textbf{Mass} & \textbf{Value (kg)} & \textbf{Position (m)} \\
 \hline
-\endhead
-% ── Advanced Math ──────────────────────────────────────────────
-Solve quadratic equations by factoring and the quadratic formula & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+$m_1$ & 2.0 & 0.0 \\
+$m_2$ & 3.0 & 1.0 \\
+$m_3$ & 1.0 & 2.0 \\
 \hline
-Complete the square and write quadratics in vertex form & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\end{tabular}
+\end{center}
+\[
+  x_{\rm CG} = \frac{(2.0)(0.0)+(3.0)(1.0)+(1.0)(2.0)}{6.0} = \frac{5}{6} \approx 0.83\text{ m}
+\]
+
+\textbf{Tip:} For a uniform symmetric object (rod, disk), the CG is at the geometric center.
+
+\end{diagbox}
+
+\subsection{Key Properties of Center of Gravity}
+
+\begin{diagbox}{2.2 Key Properties of Center of Gravity}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Unique point:} Every object has exactly one center of gravity (in a uniform field).
+  \item \textbf{Need not lie within the object:} For a hollow ring or boomerang, the CG is in empty space.
+  \item \textbf{Stability criterion:} An object supported at a single point is in equilibrium when the support is directly below (or above) the CG.
+  \item \textbf{CG vs.\ CM:} In a uniform gravitational field, the center of gravity and center of mass coincide.
+  \item \textbf{Composite objects:} The CG of a composite object can be found by treating each part as a point mass at its own CG.
+\end{enumerate}
+
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+\part{Chapter 8: Equilibrium and Elasticity}
+% ══════════════════════════════════════════════════════════════
+
+\section{Torque and Static Equilibrium (Section 8.1)}
+
+\begin{diagbox}{3. Torque and Static Equilibrium}
+
+An object is in \textbf{static equilibrium} when both translational and rotational conditions hold:
+
+\vspace{0.3cm}
+\textbf{Condition 1 --- Translational equilibrium:}
+\[
+  \sum F_x = 0 \quad\text{and}\quad \sum F_y = 0
+\]
+
+\textbf{Condition 2 --- Rotational equilibrium:}
+\[
+  \sum \tau = 0 \quad\text{(about any chosen pivot)}
+\]
+
+\vspace{0.4cm}
+\textbf{Problem-solving strategy:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Draw a free-body diagram with all forces and their points of application.
+  \item Choose a pivot strategically (where an unknown force acts, to eliminate it).
+  \item Write $\sum\tau = 0$ about the pivot.
+  \item Write $\sum F_x = 0$ and $\sum F_y = 0$.
+  \item Solve the system of equations.
+\end{enumerate}
+
+\vspace{0.4cm}
+\textbf{Worked example:} A uniform 4.0-m, 10-kg beam rests on a pivot at its left end.  A 30-kg block sits 3.0\,m from the left end.  Find upward force $F$ at the right end.
+
+Taking the pivot at the left end:
+\[
+  F(4.0) - (10)(9.8)(2.0) - (30)(9.8)(3.0) = 0
+  \;\Rightarrow\;
+  F = \frac{196+882}{4} \approx 270\text{ N}
+\]
+
+\end{diagbox}
+
+\section{Stability and Balance (Section 8.2)}
+
+\begin{diagbox}{4. Stability and Balance}
+
+\textbf{Stable equilibrium:}  A small displacement raises the CG and produces a restoring torque.
+
+\textbf{Unstable equilibrium:}  A small displacement lowers the CG and causes further departure.
+
+\textbf{Neutral equilibrium:}  A displacement does not change the CG height; no restoring or destabilizing torque.
+
+\vspace{0.4cm}
+\textbf{Tipping condition:}  An object tips when its CG moves outside the \emph{base of support}.
+
+\end{diagbox}
+
+\subsection{Factors Affecting Stability}
+
+\begin{diagbox}{4.1 Factors Affecting Stability}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Width of the base of support:} A wider base makes tipping less likely.
+  \item \textbf{Height of the center of gravity:} A lower CG increases stability.
+  \item \textbf{Position of the CG over the base:} Maximum stability when CG is above the center of the base.
+  \item \textbf{Dynamic stability:} Moving objects can maintain balance through gyroscopic effects.
+\end{enumerate}
+
+\vspace{0.4cm}
+\textbf{Example:} A 1.2-m-tall crate (CG at 0.6\,m, base width 0.4\,m) tips when tilted at angle $\theta$:
+\[
+  \tan\theta_{\rm tip} = \frac{0.2\text{ m}}{0.6\text{ m}} \approx 0.333
+  \;\Rightarrow\;
+  \theta_{\rm tip} \approx 18.4^\circ
+\]
+
+\end{diagbox}
+
+\section{Springs and Hooke's Law (Section 8.3)}
+
+\begin{diagbox}{5. Springs and Hooke's Law}
+
+\textbf{Hooke's Law:}
+\[
+  F_{\rm sp} = -k\,x
+\]
+\begin{itemize}[leftmargin=1.5em]
+  \item $k$ = spring constant (N/m)
+  \item $x$ = displacement from natural (equilibrium) length
+  \item Negative sign: restoring force opposes displacement
+\end{itemize}
+
+\textbf{Example:} Spring with $k = 200$\,N/m stretched 0.05\,m: $|F_{\rm sp}| = (200)(0.05) = 10$\,N.
+
+\begin{warnbox}
+Hooke's Law holds only within the \textbf{elastic limit}.  Beyond this limit the spring is permanently deformed.
+\end{warnbox}
+
+\end{diagbox}
+
+\subsection{Graphical Interpretation of Hooke's Law}
+
+\begin{diagbox}{5.1 Graphical Interpretation of Hooke's Law}
+
+On a graph of applied force $F$ vs.\ displacement $x$:
+\begin{itemize}[leftmargin=1.5em]
+  \item The relationship is \textbf{linear} for an ideal spring.
+  \item The \textbf{slope} equals the spring constant $k$.
+  \item The \textbf{area under the curve} equals the elastic potential energy stored: $U_{\rm sp} = \tfrac{1}{2}kx^2$.
+  \item Beyond the elastic limit, the graph curves.
+\end{itemize}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|l|}
 \hline
-Interpret the discriminant and classify roots of a quadratic & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\textbf{Graph feature} & \textbf{Physical meaning} \\
 \hline
-Factor polynomials (GCF, grouping, difference of squares, sum/difference of cubes) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+Slope $= k$ & Spring stiffness (N/m) \\
+Area under curve to $x$ & Work done / elastic PE = $\tfrac{1}{2}kx^2$ \\
+Linear region & Valid range of Hooke's Law \\
+Deviation from linearity & Beyond elastic limit \\
 \hline
-Apply polynomial long division and the Remainder Theorem & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Simplify rational expressions and solve rational equations & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Simplify expressions with radical and rational exponents & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Solve radical equations and identify extraneous solutions & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Solve exponential equations using properties of exponents & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Model exponential growth and decay situations & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Evaluate, compose, and find inverses of functions & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Identify features of quadratic/polynomial graphs (vertex, zeros, end behavior) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-% ── Problem Solving and Data Analysis ─────────────────────────
-Set up and solve proportion, rate, and ratio problems & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Solve percentage increase, decrease, and percent-of problems & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Convert between units using dimensional analysis & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Read and interpret data from tables, bar charts, and histograms & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Interpret scatterplots and equations of lines of best fit & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Calculate experimental, theoretical, and conditional probability & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Distinguish between sampling methods and evaluate sources of bias & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Calculate and interpret mean, median, mode, range, and IQR & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-Evaluate statistical claims from observational studies and experiments & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
-\hline
-\end{longtable}
+\end{tabular}
 \end{center}
 
-\vspace{0.2cm}
-\textbf{Pre-Rating Total (sum of circled numbers):} \blank[2cm] / 105
-\quad\textbf{Post-Rating Total:} \blank[2cm] / 105
-\end{selfbox}
-
-\newpage
-
-% ══════════════════════════════════════════════════════════════
-% SECTION 4 — SAT MATH SECTION 2: ADVANCED MATH DIAGNOSTIC
-% ══════════════════════════════════════════════════════════════
-\setcounter{section}{3}
-\section{SAT Math Section 2: Advanced Math Diagnostic}
-
-% ── 4.1 ───────────────────────────────────────────────────────
-\subsection{Quadratic Expressions and Equations}
-
-\begin{diagbox}{4.1 Quadratic Expressions and Equations --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}]
-
-  \item Solve by factoring: $x^2 - 5x + 6 = 0$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item The solutions of $x^2 + 4x - 12 = 0$ are $x = $ \blank[1.5cm] and $x = $ \blank[1.5cm].
-        \hfill\textit{(1 pt)}
-
-  \item Use the quadratic formula to solve $2x^2 - 3x - 2 = 0$. \quad $x = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item If the discriminant $b^2 - 4ac = 0$, the equation has:
-        \quad$\bigcirc$\,A\;two distinct real solutions
-        \quad$\bigcirc$\,B\;one repeated real solution
-        \quad$\bigcirc$\,C\;no real solutions
-        \quad$\bigcirc$\,D\;two complex solutions
-        \hfill\textit{(1 pt)}
-
-  \item Write $f(x) = x^2 - 6x + 11$ in vertex form $f(x) = (x - h)^2 + k$.
-        \quad $f(x) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item The vertex of $y = -2(x + 3)^2 + 5$ is at $(\blank[1cm],\, \blank[1cm])$ and the parabola opens \blank[2cm].
-        \hfill\textit{(1 pt)}
-
-  \item For which value(s) of $k$ does $x^2 + kx + 9 = 0$ have exactly one real solution?
-        \quad $k = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A ball's height (in feet) after $t$ seconds is $h(t) = -16t^2 + 64t$. At what time does it reach maximum height? \quad $t = $ \blank[1.5cm] seconds
-        \hfill\textit{(1 pt)}
-
-  \item True or False: Every quadratic with a negative discriminant has two imaginary solutions.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Complete the square: $x^2 + 8x + \blank[1.5cm] = (x + \blank[1.5cm])^2$
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-% ── 4.2 ───────────────────────────────────────────────────────
-\subsection{Polynomial Operations and Factoring}
-
-\begin{diagbox}{4.2 Polynomial Operations and Factoring --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=11]
-
-  \item Factor completely: $6x^2 - 9x = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Factor: $x^2 - 16 = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Factor: $x^3 - 8 = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Multiply: $(x + 3)(x^2 - 3x + 9) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Divide: $\dfrac{x^3 - 2x^2 + 3x - 1}{x - 1} = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item The Remainder Theorem: when $p(x)$ is divided by $(x - a)$, the remainder equals \blank[3cm]. Find the remainder when $p(x) = x^3 - 4x + 2$ is divided by $(x - 2)$: \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item Factor by grouping: $x^3 + 2x^2 - 3x - 6 = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Which of the following is a factor of $x^2 + 5x + 6$?
-        \quad$\bigcirc$\,A\;$(x - 2)$
-        \quad$\bigcirc$\,B\;$(x + 3)$
-        \quad$\bigcirc$\,C\;$(x - 6)$
-        \quad$\bigcirc$\,D\;$(x + 1)$
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $(3x^2 - x + 4) - (x^2 + 2x - 1) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: A polynomial of degree $n$ has exactly $n$ roots (counting multiplicity) in the complex number system.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
 \end{diagbox}
 
 \newpage
 
-% ── 4.3 ───────────────────────────────────────────────────────
-\subsection{Rational Expressions and Equations}
+\section{Forces and Torques in the Body (Section 8.5) --- \textsc{Bio}}
 
-\begin{diagbox}{4.3 Rational Expressions and Equations --- 10 Points}
+\begin{diagbox}{6. Forces and Torques in the Body (BIO)}
 
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=21]
-
-  \item Simplify: $\dfrac{x^2 - 4}{x^2 - 4x + 4} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\dfrac{x^2 + 5x + 6}{x^2 - x - 6} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Add: $\dfrac{3}{x+1} + \dfrac{2}{x-1} = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\dfrac{2}{x-3} = \dfrac{5}{x+1}$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\dfrac{x}{x-2} + 1 = \dfrac{4}{x-2}$. Check for extraneous solutions.
-        \quad $x = $ \blank[2cm] (extraneous? \blank[1.5cm])
-        \hfill\textit{(1 pt)}
-
-  \item Write $\dfrac{1}{x} - \dfrac{1}{y}$ as a single fraction: \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item A rational expression is undefined when \blank[5cm].
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\dfrac{\frac{2}{x}}{\frac{4}{x^2}} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Which values must be excluded from the domain of $\dfrac{x+3}{x^2-x-6}$?
-        \quad$\bigcirc$\,A\;$x=3$ only
-        \quad$\bigcirc$\,B\;$x=-2$ only
-        \quad$\bigcirc$\,C\;$x=3$ and $x=-2$
-        \quad$\bigcirc$\,D\;$x=-3$ and $x=2$
-        \hfill\textit{(1 pt)}
-
-  \item Multiply: $\dfrac{x^2-9}{x+2} \cdot \dfrac{x+2}{x-3} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
+The human musculoskeletal system functions as a collection of \textbf{levers}: rigid bones rotate about pivot joints.
 
 \vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
+\textbf{Lever elements:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Effort} $F_E$: force applied by muscle.
+  \item \textbf{Load} $F_L$: force being overcome.
+  \item \textbf{Fulcrum}: the joint (pivot point).
+\end{itemize}
+
+\textbf{Mechanical advantage:} $\displaystyle\text{MA} = \frac{d_E}{d_L} = \frac{F_L}{F_E}$
+
 \end{diagbox}
 
-% ── 4.4 ───────────────────────────────────────────────────────
-\subsection{Radical and Rational Exponents}
+\subsection{Types of Levers in the Body}
+
+\begin{diagbox}{6.1 Types of Levers in the Body}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|p{3cm}|p{3.5cm}|p{4cm}|}
+\hline
+\textbf{Class} & \textbf{Arrangement} & \textbf{Body Example} & \textbf{Key Feature} \\
+\hline
+\textbf{1st Class} & Fulcrum between effort and load & Head nodding: neck muscles (effort), skull weight (load), atlas vertebra (fulcrum) & Can have MA $>1$ or $<1$; changes force direction \\
+\hline
+\textbf{2nd Class} & Load between fulcrum and effort & Rising on tiptoe: ball of foot (fulcrum), body weight (load), calf/Achilles tendon (effort) & MA $>1$; effort arm $>$ load arm \\
+\hline
+\textbf{3rd Class} & Effort between fulcrum and load & Forearm curl: elbow (fulcrum), bicep $\approx$5\,cm from joint (effort), hand/weight $\approx$35\,cm (load) & MA $<1$; trades force for speed and range \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\textbf{Why muscles exert large forces:}  Most body levers are 3rd-class (MA $\approx 0.14$), so the muscle must exert about 7$\times$ the load force.
 
-\begin{diagbox}{4.4 Radical and Rational Exponents --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=31]
-
-  \item Rewrite $\sqrt[3]{x^2}$ using a rational exponent: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $x^{3/4} \cdot x^{1/4} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\dfrac{x^{5/3}}{x^{2/3}} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Evaluate: $27^{2/3} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\sqrt{50} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\sqrt{18} + \sqrt{8} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\sqrt{2x + 3} = 5$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\sqrt{x - 1} = x - 3$. Check for extraneous solutions. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: $x^{-1/2} = \dfrac{1}{\sqrt{x}}$ for all $x > 0$.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Rationalize the denominator: $\dfrac{3}{\sqrt{5}} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-\newpage
-
-% ── 4.5 ───────────────────────────────────────────────────────
-\subsection{Exponential Functions and Equations}
-
-\begin{diagbox}{4.5 Exponential Functions and Equations --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=41]
-
-  \item Solve: $2^x = 64$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $3^{x+1} = 27$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\left(\dfrac{2^3}{2^5}\right)^2 = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A colony of bacteria doubles every hour. Starting with 200 bacteria, how many are there after 5 hours?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item If $f(t) = 500 \cdot (0.9)^t$, find $f(2)$.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item The function $f(x) = 4 \cdot 2^x$ represents:
-        \quad$\bigcirc$\,A\;Linear growth
-        \quad$\bigcirc$\,B\;Exponential growth
-        \quad$\bigcirc$\,C\;Exponential decay
-        \quad$\bigcirc$\,D\;Quadratic growth
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $5^{2x-1} = 5^{x+3}$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A radioactive substance has a half-life of 10 years. Starting with 800 grams, how many grams remain after 30 years?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: The graph of $y = b^x$ (where $b > 1$) always passes through $(0,\, 1)$.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Rewrite $8^{4/3}$ as a single power of 2: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-% ── 4.6 ───────────────────────────────────────────────────────
-\subsection{Functions and Function Notation}
-
-\begin{diagbox}{4.6 Functions and Function Notation --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=51]
-
-  \item If $f(x) = 3x - 5$, find $f(4)$. \quad $f(4) = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item If $g(x) = x^2 + 2$, find $g(-3)$. \quad $g(-3) = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item If $f(x) = 2x + 1$ and $g(x) = x - 3$, find $f(g(x))$.
-        \quad Answer: \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item What is the domain of $h(x) = \sqrt{x - 4}$?
-        \quad$\bigcirc$\,A\;$x < 4$
-        \quad$\bigcirc$\,B\;$x \leq 4$
-        \quad$\bigcirc$\,C\;$x \geq 4$
-        \quad$\bigcirc$\,D\;all real numbers
-        \hfill\textit{(1 pt)}
-
-  \item Find the inverse of $f(x) = 2x + 6$.
-        \quad $f^{-1}(x) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item If $f(x) = x^2 - 1$, find $f(x + 1)$.
-        \quad $f(x+1) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item A linear function $f$ passes through $(1,\,5)$ and $(2,\,9)$. Find $f(x)$.
-        \quad $f(x) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: The vertical line test determines whether a relation is a function.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item What value of $x$ is NOT in the domain of $f(x) = \dfrac{1}{x+3}$?
-        \quad $x = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item Using $f(1)=3$, $f(2)=1$, $f(3)=4$, $f(4)=2$, find $(f \circ f)(2)$.
-        \quad $(f \circ f)(2) = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-\newpage
-
-% ── 4.7 ───────────────────────────────────────────────────────
-\subsection{Quadratic and Polynomial Functions}
-
-\begin{diagbox}{4.7 Quadratic and Polynomial Functions --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=61]
-
-  \item Find the zeros of $f(x) = x^2 - 3x - 10$.
-        \quad $x = $ \blank[1.5cm] and $x = $ \blank[1.5cm]
-        \hfill\textit{(1 pt)}
-
-  \item The axis of symmetry of $y = ax^2 + bx + c$ is $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Find the vertex of $f(x) = 2x^2 - 8x + 5$ using the vertex formula.
-        \quad Vertex: $(\blank[1.5cm],\, \blank[1.5cm])$
-        \hfill\textit{(1 pt)}
-
-  \item The end behavior of $f(x) = -3x^4 + x^2 - 7$ as $x \to \pm\infty$ is:
-        \quad$\bigcirc$\,A\;$f(x) \to +\infty$
-        \quad$\bigcirc$\,B\;$f(x) \to -\infty$
-        \quad$\bigcirc$\,C\;$f(x) \to 0$
-        \quad$\bigcirc$\,D\;alternates
-        \hfill\textit{(1 pt)}
-
-  \item Write a degree-3 polynomial with leading coefficient 2 and roots $x = -1, 1, 4$:
-        \quad $f(x) = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item A degree-4 polynomial can have at most how many turning points?
-        \quad Answer: \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: If $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item A parabola opens downward when the leading coefficient $a$ is:
-        \quad$\bigcirc$\,A\;positive
-        \quad$\bigcirc$\,B\;zero
-        \quad$\bigcirc$\,C\;negative
-        \quad$\bigcirc$\,D\;undefined
-        \hfill\textit{(1 pt)}
-
-  \item For $f(x) = (x-2)^2(x+5)$, at which $x$-value does the graph \emph{touch} but not cross the $x$-axis?
-        \quad $x = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item What is the range of $y = x^2 - 4x + 3$?
-        \quad$\bigcirc$\,A\;$y \geq -1$
-        \quad$\bigcirc$\,B\;$y \geq 1$
-        \quad$\bigcirc$\,C\;$y \geq 3$
-        \quad$\bigcirc$\,D\;all real numbers
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-% ── 4.8 ───────────────────────────────────────────────────────
-\subsection{Exponential Functions and Equations}
-
-\begin{diagbox}{4.8 Exponential Functions and Equations --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=71]
-
-  \item In $f(t) = A \cdot b^t$, $A$ represents the \blank[3cm] value and $b > 1$ is the \blank[3cm] factor.
-        \hfill\textit{(1 pt)}
-
-  \item Rewrite $4^x = 2^{10}$ in one base and solve for $x$: \quad $x = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item A company's revenue grows 15\% per year. Write an expression for revenue after $t$ years if current revenue is \$200{,}000: \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item An exponential function eventually \blank[3cm] (outgrows/trails) any linear function.
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\left(\dfrac{1}{2}\right)^x = 8$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A drug is metabolized so 25\% is eliminated each hour. Write the amount remaining after $t$ hours if the initial dose is 400 mg: \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Which function represents exponential decay?
-        \quad$\bigcirc$\,A\;$y = 3 \cdot 2^x$
-        \quad$\bigcirc$\,B\;$y = 2 \cdot (0.8)^x$
-        \quad$\bigcirc$\,C\;$y = x^2$
-        \quad$\bigcirc$\,D\;$y = 5x - 2$
-        \hfill\textit{(1 pt)}
-
-  \item The horizontal asymptote of $y = 3 \cdot 2^x + 4$ is $y = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: An exponential function and its inverse (logarithmic function) are reflections over the line $y = x$.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item If $f(x) = 5 \cdot (0.5)^x$, find $f(3)$. \quad $f(3) = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-\newpage
-
-% ── 4.9 ───────────────────────────────────────────────────────
-\subsection{Radical and Rational Expressions}
-
-\begin{diagbox}{4.9 Radical and Rational Expressions --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=81]
-
-  \item Simplify: $\sqrt{72} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Multiply: $\sqrt{3} \cdot \sqrt{12} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\dfrac{\sqrt{x^6}}{\sqrt{x^2}} = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Rationalize the denominator: $\dfrac{6}{2 + \sqrt{3}} = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\sqrt{3x + 1} = x - 1$. Check for extraneous solutions.
-        \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Simplify: $\dfrac{2x^2 - 8}{x - 2} = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
-
-  \item Subtract: $\dfrac{5}{x} - \dfrac{3}{x+2} = $ \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-  \item Solve: $\dfrac{3}{x} + \dfrac{1}{2} = \dfrac{7}{x}$. \quad $x = $ \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Which expression is equivalent to $\sqrt[4]{x^3}$?
-        \quad$\bigcirc$\,A\;$x^{4/3}$
-        \quad$\bigcirc$\,B\;$x^{3/4}$
-        \quad$\bigcirc$\,C\;$x^{1/4}$
-        \quad$\bigcirc$\,D\;$x^3$
-        \hfill\textit{(1 pt)}
-
-  \item True or False: Squaring both sides of a radical equation can introduce extraneous solutions.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
 \end{diagbox}
 
 \newpage
 
 % ══════════════════════════════════════════════════════════════
-% SECTION 5 — SAT MATH SECTION 3: PROBLEM SOLVING AND DATA ANALYSIS
+\part{Chapter 10: Energy and Work}
 % ══════════════════════════════════════════════════════════════
-\section{SAT Math Section 3: Problem Solving and Data Analysis}
 
-% ── 5.1 ───────────────────────────────────────────────────────
-\subsection{Ratios, Rates, and Proportions}
+\section{The Basic Energy Model (Section 10.1)}
 
-\begin{diagbox}{5.1 Ratios, Rates, and Proportions --- 10 Points}
+\begin{diagbox}{7. The Basic Energy Model}
 
-\textbf{Directions:} Answer each question. A calculator is permitted.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=91]
-
-  \item The ratio of boys to girls in a class is $3 : 5$. If there are 30 girls, how many boys are there?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A car travels 270 miles in 4.5 hours. What is its average speed?
-        \quad Answer: \blank[3cm] mph
-        \hfill\textit{(1 pt)}
-
-  \item Solve for $x$: $\dfrac{4}{7} = \dfrac{x}{28}$. \quad $x = $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item A recipe uses 2 cups of flour for every 3 cups of sugar. For 9 cups of sugar, how many cups of flour are needed?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A map has scale 1 inch : 50 miles. Two cities are 3.5 inches apart. What is the actual distance?
-        \quad Answer: \blank[3cm] miles
-        \hfill\textit{(1 pt)}
-
-  \item A worker earns \$180 for 8 hours. At the same rate, how much for 15 hours?
-        \quad Answer: \$\blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item In a shelter the ratio of cats to dogs is $2 : 7$. If there are 63 dogs, what is the total number of animals?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Pipe A fills a tank in 6 hours; Pipe B in 4 hours. What fraction of the tank do they fill together in 1 hour?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: If $a : b = c : d$, then $ad = bc$.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Train A covers 480 km in 3 hours; Train B covers 360 km in 2.5 hours. Which is faster and by how much?
-        \quad Answer: \blank[5cm]
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
+\textbf{Energy} is the capacity of a system to do work or cause change.
 
 \vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
+\textbf{Mechanical energy forms:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Kinetic energy} $K = \tfrac{1}{2}mv^2$
+  \item \textbf{Gravitational PE} $U_g = mgy$
+  \item \textbf{Elastic PE} $U_{\rm sp} = \tfrac{1}{2}kx^2$
+\end{itemize}
+
+\textbf{Non-mechanical:} Thermal energy $E_{\rm th}$ (microscopic KE/PE of atoms).
+
+\textbf{Master energy equation (preview):}
+\[
+  K_f + U_f + \Delta E_{\rm th} = K_i + U_i + W_{\rm ext}
+\]
+
 \end{diagbox}
 
-% ── 5.2 ───────────────────────────────────────────────────────
-\subsection{Percentages}
+\subsection{System and Environment}
 
-\begin{diagbox}{5.2 Percentages --- 10 Points}
+\begin{diagbox}{7.1 System and Environment}
 
-\textbf{Directions:} Answer each question. A calculator is permitted.
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{System:} the objects under study.
+  \item \textbf{Environment:} everything outside the system.
+  \item Energy transfers via \emph{work} (mechanical) or \emph{heat} (thermal).
+\end{itemize}
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=101]
+\textbf{Isolated system:} no energy enters or leaves; total energy is conserved.
 
-  \item What is 35\% of 240? \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\textbf{Choosing the system wisely} simplifies problems: including interacting objects avoids internal forces in the energy equation.
 
-  \item A jacket priced at \$80 is 25\% off. What is the sale price?
-        \quad Answer: \$\blank[3cm]
-        \hfill\textit{(1 pt)}
+\end{diagbox}
 
-  \item A price increases from \$50 to \$65. What is the percentage increase?
-        \quad Answer: \blank[3cm]\%
-        \hfill\textit{(1 pt)}
+\section{Work (Section 10.2)}
 
-  \item After a 20\% decrease, a price is \$64. What was the original price?
-        \quad Answer: \$\blank[3cm]
-        \hfill\textit{(1 pt)}
+\begin{diagbox}{8. Work}
 
-  \item A student scored 78 out of 120. What percentage did the student earn? (Round to the nearest whole percent.)
-        \quad Answer: \blank[3cm]\%
-        \hfill\textit{(1 pt)}
+\textbf{Work} is energy transferred by a force over a displacement:
+\[
+  W = F\,d\cos\theta
+\]
+where $\theta$ is the angle between $\vec{F}$ and $\vec{d}$.
 
-  \item An investment of \$1{,}000 earns 6\% simple interest per year. What is the total after 3 years?
-        \quad Answer: \$\blank[3cm]
-        \hfill\textit{(1 pt)}
+\textbf{Sign:}
+\begin{itemize}[leftmargin=1.5em]
+  \item $W > 0$: force component in direction of motion (energy added).
+  \item $W < 0$: force component opposite to motion (energy removed).
+  \item $W = 0$: force perpendicular to motion.
+\end{itemize}
 
-  \item If 40\% of students are in grade 10 and there are 200 tenth-graders, what is the total enrollment?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\textbf{Units:} joules (J); $1\,\text{J} = 1\,\text{N}\cdot\text{m}$.
 
-  \item A value increases by 10\% and then decreases by 10\%. The net result is:
-        \quad$\bigcirc$\,A\;the same as the original
-        \quad$\bigcirc$\,B\;1\% less than the original
-        \quad$\bigcirc$\,C\;1\% more than the original
-        \quad$\bigcirc$\,D\;10\% less than the original
-        \hfill\textit{(1 pt)}
+\textbf{Example:} 50-N force at $37^\circ$ over 4.0\,m: $W = (50)(4.0)\cos37^\circ \approx 160$\,J.
 
-  \item What percent of 80 is 12? \quad Answer: \blank[3cm]\%
-        \hfill\textit{(1 pt)}
+\end{diagbox}
 
-  \item True or False: A 50\% decrease followed by a 50\% increase returns to the original value.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
+\subsection{Work Done by Gravity on an Incline}
 
-\end{enumerate}
+\begin{diagbox}{8.1 Work Done by Gravity on an Incline}
 
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
+\[
+  W_{\rm grav} = mg\,d\sin\alpha = mg\,\Delta y
+\]
+where $\Delta y = d\sin\alpha$ is the vertical drop (positive downward).
+
+\textbf{Key insight:} Work by gravity depends only on vertical displacement, not path.  Gravity is a \emph{conservative} force.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Motion} & \textbf{Work by gravity} \\
+\hline
+Down the incline & $+mgd\sin\alpha > 0$ \\
+Up the incline   & $-mgd\sin\alpha < 0$ \\
+Horizontal       & $0$ \\
+\hline
+\end{tabular}
+\end{center}
+
 \end{diagbox}
 
 \newpage
 
-% ── 5.3 ───────────────────────────────────────────────────────
-\subsection{Unit Conversions}
+\section{Kinetic Energy (Section 10.3)}
 
-\begin{diagbox}{5.3 Unit Conversions --- 10 Points}
+\begin{diagbox}{9. Kinetic Energy}
 
-\textbf{Directions:} Answer each question. A calculator is permitted. Conversion facts given as needed.
+\textbf{Kinetic energy:}
+\[
+  K = \tfrac{1}{2}mv^2
+\]
+\textbf{Units:} joules (J).  Always $K \geq 0$.
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=111]
-
-  \item Convert 5.5 kilometers to meters.
-        \quad Answer: \blank[3cm] meters
-        \hfill\textit{(1 pt)}
-
-  \item Convert 3 hours 45 minutes to minutes only.
-        \quad Answer: \blank[3cm] minutes
-        \hfill\textit{(1 pt)}
-
-  \item A car gets 30 miles per gallon. Convert to km/L. (1 mile $\approx$ 1.609 km; 1 gal $\approx$ 3.785 L)
-        \quad Answer: \blank[3cm] km/L
-        \hfill\textit{(1 pt)}
-
-  \item A room is 12 feet $\times$ 15 feet. Find its area in square yards. (1 yd $=$ 3 ft)
-        \quad Answer: \blank[3cm] sq yards
-        \hfill\textit{(1 pt)}
-
-  \item Convert 72\textdegree F to Celsius using $C = \tfrac{5}{9}(F - 32)$.
-        \quad Answer: \blank[3cm]\textdegree C
-        \hfill\textit{(1 pt)}
-
-  \item A machine produces 240 items per hour. How many items per minute?
-        \quad Answer: \blank[3cm] items/min
-        \hfill\textit{(1 pt)}
-
-  \item Convert 2.5 meters to centimeters.
-        \quad Answer: \blank[3cm] cm
-        \hfill\textit{(1 pt)}
-
-  \item A recipe requires 750 mL of milk. How many liters is this?
-        \quad Answer: \blank[3cm] L
-        \hfill\textit{(1 pt)}
-
-  \item Which correctly sets up the conversion from feet/second to miles/hour? (1 mi $=$ 5280 ft)
-        \quad$\bigcirc$\,A\;$\times\dfrac{1\,\text{mi}}{5280\,\text{ft}} \times \dfrac{3600\,\text{s}}{1\,\text{hr}}$
-        \quad$\bigcirc$\,B\;$\times\dfrac{5280\,\text{ft}}{1\,\text{mi}} \times \dfrac{1\,\text{hr}}{3600\,\text{s}}$
-        \quad$\bigcirc$\,C\;$\div 3600$
-        \quad$\bigcirc$\,D\;$\times 5280$
-        \hfill\textit{(1 pt)}
-
-  \item True or False: In dimensional analysis, units in both numerator and denominator cancel.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
 \end{diagbox}
 
-% ── 5.4 ───────────────────────────────────────────────────────
-\subsection{Data Interpretation: Tables and Graphs}
+\subsection{Understanding Kinetic Energy}
 
-\begin{diagbox}{5.4 Data Interpretation: Tables and Graphs --- 10 Points}
+\begin{diagbox}{9.1 Understanding Kinetic Energy}
 
-\textbf{Directions:} Use the data provided to answer each question. A calculator is permitted.
+\begin{itemize}[leftmargin=1.5em]
+  \item KE is a \emph{scalar}, always non-negative.
+  \item KE depends on the reference frame.
+  \item \textbf{Doubling the mass} doubles the KE.
+  \item \textbf{Doubling the speed} \emph{quadruples} the KE.
+\end{itemize}
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=121]
+\textbf{Example:} 2-kg ball at 3\,m/s vs.\ 6\,m/s:
+\[
+  K_1 = \tfrac{1}{2}(2)(9) = 9\text{ J}; \quad K_2 = \tfrac{1}{2}(2)(36) = 36\text{ J} = 4K_1
+\]
 
-  \item Monthly sales: Jan=120, Feb=145, Mar=130, Apr=160. Find the mean.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Test score frequencies: 60--69: 4 students; 70--79: 12; 80--89: 9; 90--100: 5. How many scored below 80?
-        \quad Answer: \blank[3cm] students
-        \hfill\textit{(1 pt)}
-
-  \item In a two-way table, 25 of 40 students who studied passed; 5 of 20 who did not study passed. What is the probability a randomly selected student who passed had studied?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A pie chart shows: Housing 35\%, Food 25\%, Transport 20\%, Other 20\%. If total budget is \$4{,}000, how much is spent on food?
-        \quad Answer: \$\blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A histogram has bar heights 5, 8, 12, 7, 3 for intervals 10--19, 20--29, 30--39, 40--49, 50--59. Which interval has the highest frequency?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Table: $x$: 1, 2, 3, 4; $y$: 3, 7, 11, 15. What is the rate of change?
-        \quad Answer: \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item A line graph shows temperature rising from $60^\circ$F Monday to $80^\circ$F Friday at a constant rate. What is the average daily increase?
-        \quad Answer: \blank[3cm]\textdegree F/day
-        \hfill\textit{(1 pt)}
-
-  \item True or False: A bar graph and a histogram are identical in structure and use.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item 30 out of 80 students prefer math over reading. What fraction is that in simplest form?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item Which graph type is most appropriate for showing change in a quantity over time?
-        \quad$\bigcirc$\,A\;Pie chart
-        \quad$\bigcirc$\,B\;Bar graph
-        \quad$\bigcirc$\,C\;Line graph
-        \quad$\bigcirc$\,D\;Histogram
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
 \end{diagbox}
 
-\newpage
+\subsection{The \texorpdfstring{$v^2$}{v\texttwosuperior} Dependence: Why It Matters}
 
-% ── 5.5 ───────────────────────────────────────────────────────
-\subsection{Scatterplots and Line of Best Fit}
+\begin{diagbox}{9.2 The $v^2$ Dependence: Why It Matters}
 
-\begin{diagbox}{5.5 Scatterplots and Line of Best Fit --- 10 Points}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Braking distance} $\propto v^2$: doubling speed quadruples stopping distance.
+  \item \textbf{Wind power} scales as $v^3$.
+  \item \textbf{Crash energy} at 60\,mph is four times that at 30\,mph.
+\end{itemize}
 
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
+\begin{warnbox}
+\textbf{Common mistake:} Writing $K = \tfrac{1}{2}mv$ (forgetting to square $v$).  Check units: $\text{kg}\cdot(\text{m/s})^2 = \text{J}$.
+\end{warnbox}
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=131]
-
-  \item A scatterplot shows that as hours studied increases, test scores also increase. This is a \blank[3cm] correlation.
-        \hfill\textit{(1 pt)}
-
-  \item A line of best fit: $\hat{y} = 2.5x + 10$ ($x$ = hours studied). Predict the score for 8 hours.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item In $\hat{y} = 2.5x + 10$, the slope 2.5 means for each additional hour studied, the predicted score increases by \blank[2cm] points.
-        \hfill\textit{(1 pt)}
-
-  \item The $y$-intercept of a line of best fit represents:
-        \quad$\bigcirc$\,A\;The rate of change
-        \quad$\bigcirc$\,B\;The predicted value when $x = 0$
-        \quad$\bigcirc$\,C\;The correlation coefficient
-        \quad$\bigcirc$\,D\;The residual
-        \hfill\textit{(1 pt)}
-
-  \item A correlation coefficient of $r = -0.92$ indicates a \blank[3cm] negative correlation.
-        \hfill\textit{(1 pt)}
-
-  \item A residual is the difference between the \blank[3cm] value and the \blank[3cm] value.
-        \hfill\textit{(1 pt)}
-
-  \item Which value of $r$ indicates the strongest linear relationship?
-        \quad$\bigcirc$\,A\;$r = 0.2$
-        \quad$\bigcirc$\,B\;$r = -0.8$
-        \quad$\bigcirc$\,C\;$r = 0.5$
-        \quad$\bigcirc$\,D\;$r = -0.95$
-        \hfill\textit{(1 pt)}
-
-  \item True or False: A correlation between two variables proves causation.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Using $\hat{y} = 3x - 5$, find the predicted value when $x = 7$.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
-
-  \item A scatterplot with no apparent pattern has a correlation closest to:
-        \quad$\bigcirc$\,A\;$r = 1$
-        \quad$\bigcirc$\,B\;$r = -1$
-        \quad$\bigcirc$\,C\;$r = 0$
-        \quad$\bigcirc$\,D\;$r = 0.5$
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
 \end{diagbox}
 
-% ── 5.6 ───────────────────────────────────────────────────────
-\subsection{Probability}
+\subsection{The Work--Energy Theorem}
 
-\begin{diagbox}{5.6 Probability --- 10 Points}
+\begin{diagbox}{9.3 The Work--Energy Theorem}
 
-\textbf{Directions:} Answer each question. A calculator is permitted.
+\[
+  W_{\rm net} = \Delta K = \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2
+\]
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=141]
+\textbf{Derivation (1D, constant force):}  From kinematics $v_f^2 = v_i^2 + 2a\Delta x$, multiply by $\tfrac{1}{2}m$:
+\[
+  \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2 = ma\,\Delta x = F_{\rm net}\,\Delta x = W_{\rm net}
+\]
 
-  \item A bag has 4 red, 6 blue, and 2 green marbles. What is the probability of drawing a red marble?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\textbf{Note:} Only the \emph{net} work from all forces equals $\Delta K$.
 
-  \item A fair coin is flipped and a fair die is rolled. What is the probability of getting heads and a 4?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\end{diagbox}
 
-  \item From a 52-card deck, what is the probability of drawing a king?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\subsection{Kinetic Energy and the Work--Energy Theorem on Inclines}
 
-  \item Events $A$ and $B$ are mutually exclusive. $P(A) = 0.3$, $P(B) = 0.4$. Find $P(A \text{ or } B)$.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\begin{diagbox}{9.4 Kinetic Energy and the Work--Energy Theorem on Inclines}
 
-  \item 60\% of students like math, 45\% like science, and 30\% like both. What percent like math or science?
-        \quad Answer: \blank[3cm]\%
-        \hfill\textit{(1 pt)}
+\textbf{Setup:} Mass $m$ slides distance $d$ down frictionless incline at angle $\alpha$.
 
-  \item If $P(A) = 0.5$ and $P(B \mid A) = 0.4$, find $P(A \text{ and } B)$.
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+Work by gravity: $W_g = mgd\sin\alpha$; normal force does zero work.
 
-  \item A box has 5 red and 3 blue chips. Two chips drawn without replacement. What is the probability both are red?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\[
+  W_{\rm net} = mgd\sin\alpha = \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2
+\]
 
-  \item True or False: The sum of all probabilities in a sample space must equal 1.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
+Starting from rest ($v_i = 0$): $v_f = \sqrt{2gd\sin\alpha}$.
 
-  \item A bag has chips numbered 1--10. What is the probability of drawing a number greater than 6?
-        \quad Answer: \blank[3cm]
-        \hfill\textit{(1 pt)}
+\textbf{Example:} 5-kg block from rest down 4.0-m, $30^\circ$ frictionless ramp:
+\[
+  v_f = \sqrt{2(9.8)(4.0)(0.5)} = \sqrt{39.2} \approx 6.3\text{ m/s}
+\]
 
-  \item Events $A$ and $B$ are independent when $P(A \text{ and } B) = $ \blank[4cm]
-        \hfill\textit{(1 pt)}
+\end{diagbox}
 
+\subsection{Multiple Objects and Kinetic Energy}
+
+\begin{diagbox}{9.5 Multiple Objects and Kinetic Energy}
+
+Total KE of a system:
+\[
+  K_{\rm total} = \sum_i \tfrac{1}{2}m_i v_i^2
+\]
+
+For a connected system: $W_{\rm net,\,ext} = \Delta K_{\rm total}$ (internal forces contribute zero net work).
+
+\textbf{Example (Atwood machine):} $m_1 = 3$\,kg, $m_2 = 5$\,kg, released from rest; each moves 1.0\,m:
+\[
+  W_{\rm net} = (m_2 - m_1)g\,d = (2)(9.8)(1.0) = 19.6\text{ J}
+\]
+\[
+  \tfrac{1}{2}(8)v^2 = 19.6\text{ J} \;\Rightarrow\; v = \sqrt{4.9} \approx 2.2\text{ m/s}
+\]
+
+\end{diagbox}
+
+\subsection{Common Mistakes with Kinetic Energy}
+
+\begin{diagbox}{9.6 Common Mistakes with Kinetic Energy}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Forgetting to square speed:} $K \neq \tfrac{1}{2}mv$; use $K = \tfrac{1}{2}mv^2$.
+  \item \textbf{Treating KE as a vector:} KE is a scalar, always $\geq 0$.
+  \item \textbf{Applying theorem to one force:} Must sum work from \emph{all} forces.
+  \item \textbf{Ignoring friction:} Friction does negative work and reduces $\Delta K$.
+  \item \textbf{Confusing KE and momentum:} $K = \tfrac{1}{2}mv^2 \neq p = mv$.
+  \item \textbf{Wrong units:} Speed must be in m/s, mass in kg, for KE in joules.
 \end{enumerate}
 
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\subsection{Kinetic Energy in Context: Real-World Numbers}
+
+\begin{diagbox}{9.7 Kinetic Energy in Context: Real-World Numbers}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Object} & \textbf{Mass (kg)} & \textbf{Speed (m/s)} & \textbf{KE (J)} \\
+\hline
+Baseball (pitch) & 0.145 & 40 & 116 \\
+Person walking & 70 & 1.4 & 69 \\
+Car at 60\,mph & 1200 & 26.8 & $4.3\times10^5$ \\
+Bullet & 0.010 & 900 & 4050 \\
+Jumbo jet & $3.6\times10^5$ & 250 & $1.1\times10^{10}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The car's KE at highway speed is $\sim$100$\times$ a baseball pitch, despite being much slower, because mass matters too.
+
 \end{diagbox}
 
 \newpage
 
-% ── 5.7 ───────────────────────────────────────────────────────
-\subsection{Statistical Inference and Sampling}
+\subsection{Practice Problems: Kinetic Energy (Section 10.3)}
 
-\begin{diagbox}{5.7 Statistical Inference and Sampling --- 10 Points}
+\begin{planbox}
 
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{P\arabic*.}]
 
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=151]
+  \item A 2.0-kg ball is thrown horizontally at 15\,m/s.  What is its kinetic energy?
 
-  \item A \blank[3cm] sample gives every member of the population an equal chance of being selected.
-        \hfill\textit{(1 pt)}
+  \item A 1500-kg car has $K = 2.7\times10^5$\,J.  What is its speed?
 
-  \item A researcher surveys one class to represent the whole school. This is an example of \blank[3cm] bias.
-        \hfill\textit{(1 pt)}
+  \item A 0.5-kg hockey puck slides at 8.0\,m/s and is stopped by a 2.0-N friction force.  Find the stopping distance using the Work--Energy Theorem.
 
-  \item A poll of 400 adults finds 52\% exercise daily, margin of error $\pm 4\%$. What is the range for the true population percentage?
-        \quad From \blank[2cm]\% to \blank[2cm]\%
-        \hfill\textit{(1 pt)}
+  \item Two objects have the same kinetic energy.  Object A has mass $m$ and speed $v$.  Object B has mass $4m$.  What is the speed of object B?
 
-  \item As sample size increases, the margin of error generally:
-        \quad$\bigcirc$\,A\;increases
-        \quad$\bigcirc$\,B\;decreases
-        \quad$\bigcirc$\,C\;stays the same
-        \quad$\bigcirc$\,D\;becomes negative
-        \hfill\textit{(1 pt)}
+  \item A 10-kg block starts from rest and slides 5.0\,m down a frictionless $25^\circ$ incline.  Find its final speed.
 
-  \item A \blank[3cm] randomly assigns subjects to treatment groups to establish causation.
-        \hfill\textit{(1 pt)}
+  \item A net force of 40\,N acts on an 8.0-kg object over 3.0\,m.  If the initial speed is 2.0\,m/s, find the final speed.
 
-  \item \blank[3cm] sampling divides the population into subgroups then randomly selects from each.
-        \hfill\textit{(1 pt)}
+  \item A bullet of mass 0.012\,kg embeds in a 1.0-kg block (initially at rest).  The block then slides 0.80\,m with $\mu_k = 0.25$.  Find the speed of the bullet--block system just after impact.
 
-  \item A study finds eating breakfast correlates with higher grades. The valid conclusion is:
-        \quad$\bigcirc$\,A\;Breakfast causes higher grades
-        \quad$\bigcirc$\,B\;Higher grades cause breakfast
-        \quad$\bigcirc$\,C\;There is an association between breakfast and grades
-        \quad$\bigcirc$\,D\;All students should eat breakfast
-        \hfill\textit{(1 pt)}
-
-  \item True or False: A larger sample always produces a more accurate estimate than a smaller sample.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Voluntary response bias occurs when:
-        \quad$\bigcirc$\,A\;The researcher selects subjects deliberately
-        \quad$\bigcirc$\,B\;Only those who choose to participate respond
-        \quad$\bigcirc$\,C\;The sample is too large
-        \quad$\bigcirc$\,D\;All members of the population are included
-        \hfill\textit{(1 pt)}
-
-  \item A 95\% confidence interval means that approximately \blank[2cm]\% of such intervals would contain the true population parameter if the study were repeated many times.
-        \hfill\textit{(1 pt)}
+  \item Compare the KE of (a) a 1500-kg car at 20\,m/s and (b) a 3000-kg truck at 10\,m/s.  Which is larger?
 
 \end{enumerate}
 
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
+\end{planbox}
 
-% ── 5.8 ───────────────────────────────────────────────────────
-\subsection{Measures of Center and Spread}
-
-\begin{diagbox}{5.8 Measures of Center and Spread --- 10 Points}
-
-\textbf{Directions:} Answer each question. A calculator is permitted.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=161]
-
-  \item Find the mean of $\{4, 7, 9, 3, 7\}$.
-        \quad Mean $= $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item Find the median of $\{2, 5, 8, 11, 14, 17\}$.
-        \quad Median $= $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item Find the mode of $\{3, 5, 5, 7, 8, 5, 9\}$.
-        \quad Mode $= $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item Find the range of $\{12, 7, 22, 15, 9\}$.
-        \quad Range $= $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item A data set has mean 50 and standard deviation 5. What does a standard deviation of 5 indicate?
-        \quad$\bigcirc$\,A\;Half the values are above 50
-        \quad$\bigcirc$\,B\;Most values lie within 5 units of the mean
-        \quad$\bigcirc$\,C\;The maximum value is 55
-        \quad$\bigcirc$\,D\;The data is skewed
-        \hfill\textit{(1 pt)}
-
-  \item Adding an outlier much larger than the rest most affects which measure of center?
-        \quad$\bigcirc$\,A\;Median
-        \quad$\bigcirc$\,B\;Mode
-        \quad$\bigcirc$\,C\;Mean
-        \quad$\bigcirc$\,D\;Range
-        \hfill\textit{(1 pt)}
-
-  \item Data set A: $\{10, 10, 10, 10\}$; Data set B: $\{5, 9, 11, 15\}$. Which has the greater standard deviation?
-        \quad Answer: Data set \blank[1cm]
-        \hfill\textit{(1 pt)}
-
-  \item Find the IQR of $\{2, 4, 5, 7, 9, 10, 13\}$.
-        \quad IQR $= $ \blank[2cm]
-        \hfill\textit{(1 pt)}
-
-  \item True or False: For a perfectly symmetric distribution, the mean equals the median.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item Which measure of spread is most resistant to outliers?
-        \quad$\bigcirc$\,A\;Range
-        \quad$\bigcirc$\,B\;Standard deviation
-        \quad$\bigcirc$\,C\;IQR
-        \quad$\bigcirc$\,D\;Variance
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-\newpage
-
-% ── 5.9 ───────────────────────────────────────────────────────
-\subsection{Evaluating Statistical Claims: Observational Studies and Experiments}
-
-\begin{diagbox}{5.9 Evaluating Statistical Claims: Observational Studies and Experiments --- 10 Points}
-
-\textbf{Directions:} Answer each question without notes or a calculator unless indicated.
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{Q\arabic*.}, start=171]
-
-  \item An observational study \blank[2cm] (can/cannot) establish causation because researchers do not \blank[3cm] variables.
-        \hfill\textit{(1 pt)}
-
-  \item A randomized controlled experiment is used to establish \blank[3cm] between variables.
-        \hfill\textit{(1 pt)}
-
-  \item A \blank[3cm] variable is one that is not accounted for but may explain the relationship between two observed variables.
-        \hfill\textit{(1 pt)}
-
-  \item Which of the following is an example of an observational study?
-        \quad$\bigcirc$\,A\;Randomly assigning patients to a drug or placebo
-        \quad$\bigcirc$\,B\;Tracking students' diet and grades without intervention
-        \quad$\bigcirc$\,C\;Testing a new teaching method on one selected class
-        \quad$\bigcirc$\,D\;Conducting a census of all school employees
-        \hfill\textit{(1 pt)}
-
-  \item In a double-blind study, neither the \blank[3cm] nor the \blank[3cm] knows who received the treatment.
-        \hfill\textit{(1 pt)}
-
-  \item A study finds that umbrella carriers are more likely to be in traffic accidents. A likely confounding variable is \blank[4cm].
-        \hfill\textit{(1 pt)}
-
-  \item The placebo effect refers to improvements in outcomes due to \blank[5cm] rather than the actual treatment.
-        \hfill\textit{(1 pt)}
-
-  \item True or False: If a study uses a random sample from the population, its results can be generalized to that broader population.
-        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
-        \hfill\textit{(1 pt)}
-
-  \item A study of 50 students finds those sleeping 8 hours earn higher grades. The best conclusion is:
-        \quad$\bigcirc$\,A\;All students should sleep 8 hours
-        \quad$\bigcirc$\,B\;Sleep causes higher grades
-        \quad$\bigcirc$\,C\;In this sample, more sleep is associated with higher grades
-        \quad$\bigcirc$\,D\;Sleep has no effect on grades
-        \hfill\textit{(1 pt)}
-
-  \item Results of a randomized experiment support inferring \blank[3cm], while observational study results can only establish \blank[3cm].
-        \hfill\textit{(1 pt)}
-
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Score:} \blank[1cm] / 10
-\end{diagbox}
-
-\newpage
-
-% ══════════════════════════════════════════════════════════════
-% ANSWER KEY
-% ══════════════════════════════════════════════════════════════
-\section{Answer Key}
+\subsection{Solutions: Kinetic Energy (Section 10.3)}
 
 \begin{keybox}
 
-Use this key to self-score.  Award full credit when all required components are present.
-\textit{Steps shown below; verify by substituting your answer back into the original problem.}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{P\arabic*.}]
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.1 Quadratic Expressions and Equations}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.}]
-  \item \textbf{$x = 2$ and $x = 3$.}
-        Factor: $x^2-5x+6=(x-2)(x-3)=0$.
-        Verify: $(2)^2-5(2)+6=4-10+6=0$\checkmark;\; $(3)^2-5(3)+6=9-15+6=0$\checkmark.
-  \item \textbf{$x = -6$ and $x = 2$.}
-        Factor: $x^2+4x-12=(x+6)(x-2)=0$.
-        Verify: $(-6)^2+4(-6)-12=36-24-12=0$\checkmark;\; $(2)^2+4(2)-12=0$\checkmark.
-  \item \textbf{$x = 2$ and $x = -\tfrac{1}{2}$.}
-        Quadratic formula: $x=\dfrac{3\pm\sqrt{(-3)^2-4(2)(-2)}}{2(2)}=\dfrac{3\pm\sqrt{9+16}}{4}=\dfrac{3\pm5}{4}$;\;
-        $x=\tfrac{8}{4}=2$ or $x=\tfrac{-2}{4}=-\tfrac{1}{2}$.
-        Verify: $2(4)-3(2)-2=0$\checkmark;\; $2(\tfrac{1}{4})+\tfrac{3}{2}-2=\tfrac{1}{2}+\tfrac{3}{2}-2=0$\checkmark.
-  \item \textbf{B --- one repeated real solution.}
-        When $b^2-4ac=0$, the formula gives $x=\dfrac{-b\pm0}{2a}=\dfrac{-b}{2a}$ (one value).
-  \item \textbf{$f(x)=(x-3)^2+2$.}
-        Complete the square: $x^2-6x+11=(x^2-6x+9)+2=(x-3)^2+2$.
-        Verify: expand $(x-3)^2+2=x^2-6x+9+2=x^2-6x+11$\checkmark.
-  \item \textbf{Vertex $(-3,\,5)$; opens \textit{downward}.}
-        $y=-2(x+3)^2+5$ is vertex form $a(x-h)^2+k$; $h=-3$, $k=5$, $a=-2<0$.
-  \item \textbf{$k=\pm6$.}
-        For one real solution set discriminant $=0$: $k^2-4(1)(9)=0 \Rightarrow k^2=36 \Rightarrow k=\pm6$.
-        Verify: $k=6$: $36-36=0$\checkmark.
-  \item \textbf{$t=2$ seconds.}
-        Vertex at $t=-\dfrac{64}{2(-16)}=\dfrac{64}{32}=2$.
-        Verify: $h(1)=-16+64=48$;\; $h(2)=-64+128=64$;\; $h(3)=48$ --- maximum is at $t=2$\checkmark.
-  \item \textbf{True.}
-        A negative discriminant ($b^2-4ac<0$) yields two complex conjugate roots $\dfrac{-b\pm i\sqrt{4ac-b^2}}{2a}$.
-  \item \textbf{16;\; 4.}  $\left(\dfrac{8}{2}\right)^2=16$;\; $x^2+8x+16=(x+4)^2$.
-        Verify: $(x+4)^2=x^2+8x+16$\checkmark.
-\end{enumerate}
+  \item \textbf{$K = 225$\,J.} \quad $K = \tfrac{1}{2}(2.0)(15)^2 = 225$\,J.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.2 Polynomial Operations and Factoring}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=11]
-  \item \textbf{$3x(2x-3)$.}
-        GCF of $6x^2$ and $9x$ is $3x$; $6x^2-9x=3x(2x-3)$.
-        Verify: $3x\cdot2x-3x\cdot3=6x^2-9x$\checkmark.
-  \item \textbf{$(x+4)(x-4)$.}
-        Difference of squares: $a^2-b^2=(a+b)(a-b)$;\; $x^2-16=(x+4)(x-4)$.
-        Verify: $(x+4)(x-4)=x^2-4x+4x-16=x^2-16$\checkmark.
-  \item \textbf{$(x-2)(x^2+2x+4)$.}
-        Difference of cubes: $a^3-b^3=(a-b)(a^2+ab+b^2)$;\; $x^3-8=(x-2)(x^2+2x+4)$.
-        Verify: $(x-2)(x^2+2x+4)=x^3+2x^2+4x-2x^2-4x-8=x^3-8$\checkmark.
-  \item \textbf{$x^3+27$.}
-        Sum of cubes: $(x+3)(x^2-3x+9)=x^3-3x^2+9x+3x^2-9x+27=x^3+27$\checkmark.
-  \item \textbf{$x^2-x+2+\dfrac{1}{x-1}$.}
-        Long division: $x^3-2x^2+3x-1=(x-1)(x^2-x+2)+1$;\; divide to get quotient $x^2-x+2$, remainder $1$.
-        Verify (multiply back): $(x-1)(x^2-x+2)+1=x^3-x^2+2x-x^2+x-2+1=x^3-2x^2+3x-1$\checkmark.
-  \item \textbf{$p(a)$;\; remainder $=2$.}
-        Remainder Theorem: remainder when $p(x)\div(x-a)$ equals $p(a)$.
-        $p(2)=2^3-4(2)+2=8-8+2=2$.
-  \item \textbf{$(x+2)(x^2-3)$.}
-        Factor by grouping: $x^3+2x^2-3x-6=x^2(x+2)-3(x+2)=(x^2-3)(x+2)$.
-        Verify: $(x+2)(x^2-3)=x^3-3x+2x^2-6=x^3+2x^2-3x-6$\checkmark.
-  \item \textbf{B --- $(x+3)$.}
-        $x^2+5x+6=(x+2)(x+3)$; the factors are $(x+2)$ and $(x+3)$.
-  \item \textbf{$2x^2-3x+5$.}
-        $(3x^2-x+4)-(x^2+2x-1)=3x^2-x^2-x-2x+4+1=2x^2-3x+5$.
-  \item \textbf{True.} Fundamental Theorem of Algebra: every degree-$n$ polynomial has exactly $n$ roots (counting multiplicity) in $\mathbb{C}$.
-\end{enumerate}
+  \item \textbf{$v \approx 19.0$\,m/s.} \quad $v = \sqrt{2K/m} = \sqrt{2(2.7\times10^5)/1500} = \sqrt{360} \approx 19.0$\,m/s.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.3 Rational Expressions and Equations}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=21]
-  \item \textbf{$\dfrac{x+2}{x-2}$.}
-        Factor: $\dfrac{(x+2)(x-2)}{(x-2)^2}=\dfrac{x+2}{x-2}$, $x\neq2$.
-        Verify (with $x=4$): $\dfrac{4+2}{4-2}=3$ and $\dfrac{16-4}{16-16+4}=\dfrac{12}{4}=3$\checkmark.
-  \item \textbf{$\dfrac{x+3}{x-3}$.}
-        Factor numerator: $x^2+5x+6=(x+2)(x+3)$; denominator: $x^2-x-6=(x-3)(x+2)$.
-        $\dfrac{(x+2)(x+3)}{(x-3)(x+2)}=\dfrac{x+3}{x-3}$, $x\neq-2,\,3$.
-        Verify (with $x=0$): $\dfrac{0+3}{0-3}=-1$ and $\dfrac{0+0+6}{0-0-6}=-1$\checkmark.
-  \item \textbf{$\dfrac{5x-1}{(x+1)(x-1)}$.}
-        LCD $=(x+1)(x-1)$:\; $\dfrac{3(x-1)+2(x+1)}{(x+1)(x-1)}=\dfrac{3x-3+2x+2}{(x+1)(x-1)}=\dfrac{5x-1}{(x+1)(x-1)}$.
-  \item \textbf{$x=\dfrac{17}{3}$.}
-        Cross-multiply: $2(x+1)=5(x-3)\Rightarrow 2x+2=5x-15\Rightarrow 17=3x\Rightarrow x=\dfrac{17}{3}$.
-        Verify: $\dfrac{2}{\frac{17}{3}-3}=\dfrac{2}{\frac{8}{3}}=\dfrac{6}{8}=\dfrac{3}{4}$ and $\dfrac{5}{\frac{17}{3}+1}=\dfrac{5}{\frac{20}{3}}=\dfrac{15}{20}=\dfrac{3}{4}$\checkmark.
-  \item \textbf{$x=3$ (valid solution).}
-        Multiply both sides by $(x-2)$: $x+(x-2)=4\Rightarrow 2x-2=4\Rightarrow x=3$.
-        Check denominator: $x-2=3-2=1\neq0$, so $x=3$ is \textbf{not} extraneous.
-        Verify: $\dfrac{3}{1}+1=4=\dfrac{4}{1}$\checkmark.
-  \item \textbf{$\dfrac{y-x}{xy}$.}
-        LCD $=xy$:\; $\dfrac{1}{x}-\dfrac{1}{y}=\dfrac{y}{xy}-\dfrac{x}{xy}=\dfrac{y-x}{xy}$\checkmark.
-  \item \textbf{The denominator equals zero.}
-  \item \textbf{$\dfrac{x}{2}$.}
-        $\dfrac{2/x}{4/x^2}=\dfrac{2}{x}\cdot\dfrac{x^2}{4}=\dfrac{2x^2}{4x}=\dfrac{x}{2}$, $x\neq0$.
-  \item \textbf{C --- $x=3$ and $x=-2$.}
-        $x^2-x-6=(x-3)(x+2)=0\Rightarrow x=3$ or $x=-2$; both excluded from domain.
-  \item \textbf{$x+3$.}
-        $\dfrac{x^2-9}{x+2}\cdot\dfrac{x+2}{x-3}=\dfrac{(x+3)(x-3)}{x+2}\cdot\dfrac{x+2}{x-3}=x+3$, $x\neq2,\,3$.
-\end{enumerate}
+  \item \textbf{$d = 8.0$\,m.} \quad $K_i = f_k\,d \Rightarrow \tfrac{1}{2}(0.5)(8)^2 = (2.0)d \Rightarrow d = 16/2 = 8.0$\,m.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.4 Radical and Rational Exponents}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=31]
-  \item \textbf{$x^{2/3}$.}  $\sqrt[3]{x^2}=x^{2/3}$ (definition of rational exponent: $\sqrt[n]{x^m}=x^{m/n}$).
-  \item \textbf{$x$.}  $x^{3/4}\cdot x^{1/4}=x^{3/4+1/4}=x^{4/4}=x^1=x$.
-  \item \textbf{$x$.}  $\dfrac{x^{5/3}}{x^{2/3}}=x^{5/3-2/3}=x^{3/3}=x^1=x$.
-  \item \textbf{$9$.}  $27^{2/3}=(27^{1/3})^2=3^2=9$. Verify: $9^{3/2}=(9^{1/2})^3=3^3=27$\checkmark.
-  \item \textbf{$5\sqrt{2}$.}  $\sqrt{50}=\sqrt{25\cdot2}=5\sqrt{2}$.  Verify: $(5\sqrt{2})^2=50$\checkmark.
-  \item \textbf{$5\sqrt{2}$.}  $\sqrt{18}+\sqrt{8}=\sqrt{9\cdot2}+\sqrt{4\cdot2}=3\sqrt{2}+2\sqrt{2}=5\sqrt{2}$.
-  \item \textbf{$x=11$.}  Square both sides: $2x+3=25\Rightarrow 2x=22\Rightarrow x=11$.
-        Verify: $\sqrt{2(11)+3}=\sqrt{25}=5$\checkmark.
-  \item \textbf{$x=5$;\; $x=2$ is extraneous.}
-        Square: $x-1=(x-3)^2=x^2-6x+9\Rightarrow x^2-7x+10=0\Rightarrow(x-5)(x-2)=0$.
-        Check $x=5$: $\sqrt{4}=2=5-3$\checkmark.\; Check $x=2$: $\sqrt{1}=1\neq2-3=-1$\,(extraneous).
-  \item \textbf{True.}  $x^{-1/2}=\dfrac{1}{x^{1/2}}=\dfrac{1}{\sqrt{x}}$ for all $x>0$.
-  \item \textbf{$\dfrac{3\sqrt{5}}{5}$.}
-        Multiply numerator and denominator by $\sqrt{5}$: $\dfrac{3}{\sqrt{5}}\cdot\dfrac{\sqrt{5}}{\sqrt{5}}=\dfrac{3\sqrt{5}}{5}$.
-        Verify: $\left(\dfrac{3\sqrt{5}}{5}\right)\cdot\dfrac{\sqrt{5}}{1}=\dfrac{3\cdot5}{5}=3=\dfrac{3}{\sqrt{5}}\cdot\sqrt{5}$\checkmark.
-\end{enumerate}
+  \item \textbf{$v_B = v/2$.} \quad $\tfrac{1}{2}mv^2 = \tfrac{1}{2}(4m)v_B^2 \Rightarrow v_B^2 = v^2/4 \Rightarrow v_B = v/2$.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.5 Exponential Functions and Equations}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=41]
-  \item \textbf{$x=6$.}  $2^x=64=2^6\Rightarrow x=6$.  Verify: $2^6=64$\checkmark.
-  \item \textbf{$x=2$.}  $3^{x+1}=27=3^3\Rightarrow x+1=3\Rightarrow x=2$.  Verify: $3^3=27$\checkmark.
-  \item \textbf{$\dfrac{1}{16}$.}
-        $\left(\dfrac{2^3}{2^5}\right)^2=(2^{3-5})^2=(2^{-2})^2=2^{-4}=\dfrac{1}{2^4}=\dfrac{1}{16}$.
-  \item \textbf{$6400$ bacteria.}  Doubles every hour for 5 hours: $200\cdot2^5=200\cdot32=6400$.
-  \item \textbf{$f(2)=405$.}  $f(2)=500\cdot(0.9)^2=500\cdot0.81=405$.
-        Verify: $(0.9)^2=0.81$;\; $500\times0.81=405$\checkmark.
-  \item \textbf{B --- Exponential growth.}  Base $b=2>1$ in $f(x)=4\cdot2^x$, so the function grows.
-  \item \textbf{$x=4$.}  Equal bases: $5^{2x-1}=5^{x+3}\Rightarrow 2x-1=x+3\Rightarrow x=4$.
-        Verify: $5^{2(4)-1}=5^7=5^{4+3}=5^7$\checkmark.
-  \item \textbf{$100$ grams.}  30 years $=$ 3 half-lives: $800\cdot\left(\tfrac{1}{2}\right)^3=\dfrac{800}{8}=100$.
-  \item \textbf{True.}  $b^0=1$ for any base $b\neq0$, so the graph passes through $(0,1)$.
-  \item \textbf{$2^4=16$.}  $8^{4/3}=(2^3)^{4/3}=2^{3\cdot(4/3)}=2^4=16$.
-\end{enumerate}
+  \item \textbf{$v_f \approx 6.4$\,m/s.} \quad $W_g = (10)(9.8)(5.0)\sin25^\circ \approx 207$\,J; $v_f = \sqrt{2(207)/10} \approx 6.4$\,m/s.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.6 Functions and Function Notation}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=51]
-  \item \textbf{$f(4)=7$.}  Substitute $x=4$: $f(4)=3(4)-5=12-5=7$.
-  \item \textbf{$g(-3)=11$.}  Substitute $x=-3$: $g(-3)=(-3)^2+2=9+2=11$.
-  \item \textbf{$f(g(x))=2x-5$.}
-        Inner first: $g(x)=x-3$.  Then $f(g(x))=f(x-3)=2(x-3)+1=2x-6+1=2x-5$.
-        Verify (with $x=0$): $g(0)=-3$;\; $f(-3)=-6+1=-5$;\; $2(0)-5=-5$\checkmark.
-  \item \textbf{C --- $x\geq4$.}
-        $\sqrt{x-4}$ requires $x-4\geq0\Rightarrow x\geq4$.
-  \item \textbf{$f^{-1}(x)=\dfrac{x-6}{2}$.}
-        Set $y=2x+6$, swap $x\leftrightarrow y$: $x=2y+6\Rightarrow y=\dfrac{x-6}{2}$.
-        Verify: $f(f^{-1}(x))=2\cdot\dfrac{x-6}{2}+6=x-6+6=x$\checkmark.
-  \item \textbf{$f(x+1)=x^2+2x$.}
-        $f(x+1)=(x+1)^2-1=x^2+2x+1-1=x^2+2x$.
-        Verify (with $x=1$): $f(2)=4-1=3$;\; $1^2+2(1)=3$\checkmark.
-  \item \textbf{$f(x)=4x+1$.}
-        Slope $m=\dfrac{9-5}{2-1}=4$;\; $y-5=4(x-1)\Rightarrow y=4x+1$.
-        Verify: $f(1)=5$\checkmark;\; $f(2)=9$\checkmark.
-  \item \textbf{True.}  The vertical line test: if any vertical line intersects the graph more than once, the relation is not a function.
-  \item \textbf{$x=-3$.}  Set denominator $=0$: $x+3=0\Rightarrow x=-3$.
-  \item \textbf{$(f\circ f)(2)=3$.}
-        Step 1: $f(2)=1$ (from table).  Step 2: $f(1)=3$.  So $(f\circ f)(2)=3$.
-\end{enumerate}
+  \item \textbf{$v_f \approx 5.8$\,m/s.} \quad $\tfrac{1}{2}mv_f^2 = \tfrac{1}{2}(8)(4) + (40)(3) = 16+120 = 136$\,J; $v_f = \sqrt{2(136)/8} = \sqrt{34} \approx 5.8$\,m/s.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.7 Quadratic and Polynomial Functions}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=61]
-  \item \textbf{$x=5$ and $x=-2$.}
-        Factor: $x^2-3x-10=(x-5)(x+2)=0$.
-        Verify: $f(5)=25-15-10=0$\checkmark;\; $f(-2)=4+6-10=0$\checkmark.
-  \item \textbf{$x=-\dfrac{b}{2a}$.}  Axis of symmetry formula for $y=ax^2+bx+c$.
-  \item \textbf{Vertex $(2,\,-3)$.}
-        $x_v=-\dfrac{-8}{2(2)}=\dfrac{8}{4}=2$;\; $f(2)=2(4)-8(2)+5=8-16+5=-3$.
-        Verify: $f(2)=2(2-2)^2+(-3)=-3$\checkmark.
-  \item \textbf{B --- $f(x)\to-\infty$.}
-        Leading term $-3x^4$: even degree, negative coefficient $\Rightarrow$ both ends go to $-\infty$.
-  \item \textbf{$f(x)=2(x+1)(x-1)(x-4)$.}
-        Roots $-1,1,4$ with leading coefficient 2: $f(x)=2(x-(-1))(x-1)(x-4)$.
-        Verify: each root gives $f=0$\checkmark.
-  \item \textbf{3 turning points.}  A degree-$n$ polynomial has at most $n-1$ turning points; $4-1=3$.
-  \item \textbf{True (Factor Theorem).}  If $f(a)=0$ then $(x-a)$ is a factor.
-  \item \textbf{C --- negative.}  Parabola opens downward when leading coefficient $a<0$.
-  \item \textbf{$x=2$ (touches, does not cross).}
-        $f(x)=(x-2)^2(x+5)$: the factor $(x-2)^2$ has even multiplicity 2, so the graph touches the $x$-axis at $x=2$.
-  \item \textbf{A --- $y\geq-1$.}
-        Complete the square: $y=(x-2)^2-1$; vertex $(2,-1)$, opens upward.
-        Verify minimum: $f(2)=0-0+3\text{ or }(2-2)^2-1=-1$\checkmark; range $y\geq-1$.
-\end{enumerate}
+  \item \textbf{$v \approx 1.97$\,m/s.} \quad Friction work: $W_f = -(0.25)(1.0)(9.8)(0.80) = -1.96$\,J. Setting $\tfrac{1}{2}(1.012)v^2 = 1.96$\,J: $v \approx 1.97$\,m/s.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.8 Exponential Functions and Equations}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=71]
-  \item \textbf{Initial (starting) value; growth factor.}
-        In $f(t)=A\cdot b^t$: $A$ is the value at $t=0$ (initial); $b>1$ means exponential growth.
-  \item \textbf{$x=5$.}
-        Rewrite: $4^x=(2^2)^x=2^{2x}=2^{10}\Rightarrow 2x=10\Rightarrow x=5$.
-        Verify: $4^5=1024=2^{10}$\checkmark.
-  \item \textbf{$R(t)=200{,}000\cdot(1.15)^t$.}
-        15\% annual growth: multiply by $(1+0.15)=1.15$ each year.
-  \item \textbf{Outgrows.}  Exponential growth eventually outpaces any polynomial (including linear) growth.
-  \item \textbf{$x=-3$.}
-        $\left(\tfrac{1}{2}\right)^x=8\Rightarrow 2^{-x}=2^3\Rightarrow -x=3\Rightarrow x=-3$.
-        Verify: $\left(\tfrac{1}{2}\right)^{-3}=2^3=8$\checkmark.
-  \item \textbf{$A(t)=400\cdot(0.75)^t$.}
-        25\% eliminated each hour means 75\% remains; base $=1-0.25=0.75$.
-  \item \textbf{B --- $y=2\cdot(0.8)^x$.}  Exponential decay requires base $0<b<1$; only $0.8$ satisfies this.
-  \item \textbf{$y=4$.}
-        As $x\to\infty$, $3\cdot2^x\to\infty$; but the graph of $y=3\cdot2^x+4$ has horizontal asymptote at $y=4$ (the $+4$ shift).
-  \item \textbf{True.}  $f(x)=b^x$ and $g(x)=\log_b x$ are reflections over $y=x$ (inverse functions).
-  \item \textbf{$f(3)=0.625$.}
-        $f(3)=5\cdot(0.5)^3=5\cdot\tfrac{1}{8}=\tfrac{5}{8}=0.625$.
-\end{enumerate}
+  \item \textbf{Car KE is larger.} \quad Car: $K = \tfrac{1}{2}(1500)(400) = 3.0\times10^5$\,J. Truck: $K = \tfrac{1}{2}(3000)(100) = 1.5\times10^5$\,J.  The car's KE is twice the truck's.
 
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{4.9 Radical and Rational Expressions}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=81]
-  \item \textbf{$6\sqrt{2}$.}  $\sqrt{72}=\sqrt{36\cdot2}=6\sqrt{2}$.  Verify: $(6\sqrt{2})^2=36\cdot2=72$\checkmark.
-  \item \textbf{$6$.}  $\sqrt{3}\cdot\sqrt{12}=\sqrt{36}=6$.  Verify: $6^2=36=3\cdot12$\checkmark.
-  \item \textbf{$x^2$.}  $\dfrac{\sqrt{x^6}}{\sqrt{x^2}}=\dfrac{x^3}{x}=x^2$, $x>0$.
-  \item \textbf{$12-6\sqrt{3}$.}
-        Multiply by conjugate: $\dfrac{6}{2+\sqrt{3}}\cdot\dfrac{2-\sqrt{3}}{2-\sqrt{3}}=\dfrac{6(2-\sqrt{3})}{4-3}=\dfrac{12-6\sqrt{3}}{1}=12-6\sqrt{3}$.
-  \item \textbf{$x=5$;\; $x=0$ is extraneous.}
-        Square both sides: $3x+1=(x-1)^2=x^2-2x+1\Rightarrow x^2-5x=0\Rightarrow x(x-5)=0$.
-        Check $x=0$: $\sqrt{1}=1\neq0-1=-1$\,(extraneous).
-        Check $x=5$: $\sqrt{16}=4=5-1=4$\checkmark.
-  \item \textbf{$2(x+2)$.}
-        $\dfrac{2x^2-8}{x-2}=\dfrac{2(x^2-4)}{x-2}=\dfrac{2(x+2)(x-2)}{x-2}=2(x+2)$, $x\neq2$.
-        Verify (with $x=3$): $\dfrac{18-8}{1}=10$ and $2(3+2)=10$\checkmark.
-  \item \textbf{$\dfrac{2x+10}{x(x+2)}$.}
-        LCD $=x(x+2)$:\; $\dfrac{5(x+2)-3x}{x(x+2)}=\dfrac{5x+10-3x}{x(x+2)}=\dfrac{2x+10}{x(x+2)}$.
-  \item \textbf{$x=8$.}
-        $\dfrac{3}{x}+\dfrac{1}{2}=\dfrac{7}{x}\Rightarrow\dfrac{1}{2}=\dfrac{7}{x}-\dfrac{3}{x}=\dfrac{4}{x}\Rightarrow x=8$.
-        Verify: $\dfrac{3}{8}+\dfrac{1}{2}=\dfrac{3}{8}+\dfrac{4}{8}=\dfrac{7}{8}=\dfrac{7}{8}$\checkmark.
-  \item \textbf{B --- $x^{3/4}$.}  $\sqrt[4]{x^3}=x^{3/4}$ by the rational-exponent rule.
-  \item \textbf{True.}  Squaring can introduce values that satisfy the squared equation but not the original (extraneous solutions).
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.1 Ratios, Rates, and Proportions}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=91]
-  \item \textbf{18 boys.}
-        $\dfrac{3}{5}=\dfrac{b}{30}\Rightarrow b=\dfrac{3\cdot30}{5}=18$.
-        Verify: ratio $18:30=3:5$\checkmark.
-  \item \textbf{60 mph.}  $\dfrac{270\text{ mi}}{4.5\text{ h}}=60$ mph.
-  \item \textbf{$x=16$.}
-        $\dfrac{4}{7}=\dfrac{x}{28}\Rightarrow x=\dfrac{4\times28}{7}=16$.
-        Verify: $\dfrac{4}{7}=\dfrac{16}{28}=\dfrac{4}{7}$\checkmark.
-  \item \textbf{6 cups of flour.}
-        Ratio $\tfrac{2\text{ flour}}{3\text{ sugar}}$; for 9 cups sugar: $\dfrac{2}{3}=\dfrac{f}{9}\Rightarrow f=6$.
-  \item \textbf{175 miles.}  $3.5\text{ in}\times50\text{ mi/in}=175$ miles.
-  \item \textbf{\$337.50.}
-        Rate: $\$180\div8=\$22.50$/hr;\; $15\times\$22.50=\$337.50$.
-  \item \textbf{81 animals.}
-        $\dfrac{\text{cats}}{\text{dogs}}=\dfrac{2}{7}$;\; $63\div7=9$ per part;\; cats $=2\times9=18$;\; total $=18+63=81$.
-  \item \textbf{$\dfrac{5}{12}$ of the tank per hour.}
-        $\dfrac{1}{6}+\dfrac{1}{4}=\dfrac{2}{12}+\dfrac{3}{12}=\dfrac{5}{12}$.
-  \item \textbf{True.}  Cross-multiplication property: $\dfrac{a}{b}=\dfrac{c}{d}\Rightarrow ad=bc$.
-  \item \textbf{Train A faster by 16 km/h.}
-        A: $480\div3=160$ km/h;\; B: $360\div2.5=144$ km/h;\; difference $=16$ km/h.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.2 Percentages}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=101]
-  \item \textbf{84.}  $0.35\times240=84$.  Verify: $\tfrac{84}{240}=0.35=35\%$\checkmark.
-  \item \textbf{\$60.}  Discount $=0.25\times\$80=\$20$;\; sale price $=\$80-\$20=\$60$.
-  \item \textbf{30\%.}  $\dfrac{65-50}{50}\times100=\dfrac{15}{50}\times100=30\%$.
-  \item \textbf{\$80.}  $p\times0.80=64\Rightarrow p=\dfrac{64}{0.80}=\$80$.
-        Verify: $80\times0.80=64$\checkmark.
-  \item \textbf{65\%.}  $\dfrac{78}{120}\times100=65\%$.
-  \item \textbf{\$1{,}180.}
-        Simple interest $=\$1000\times0.06\times3=\$180$;\; total $=\$1000+\$180=\$1{,}180$.
-  \item \textbf{500 students.}  $0.40\times T=200\Rightarrow T=\dfrac{200}{0.40}=500$.
-  \item \textbf{B --- 1\% less than the original.}
-        $100\times1.10\times0.90=100\times0.99=99$;\; $1\%$ less.
-  \item \textbf{15\%.}  $\dfrac{12}{80}\times100=15\%$.
-  \item \textbf{False.}
-        $x\times0.50=0.5x$;\; $0.5x\times1.50=0.75x$ (only $75\%$ of original, a $25\%$ decrease).
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.3 Unit Conversions}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=111]
-  \item \textbf{5{,}500 meters.}  $5.5\text{ km}\times1000\text{ m/km}=5{,}500$ m.
-  \item \textbf{225 minutes.}  $3\times60+45=180+45=225$ min.
-  \item \textbf{$\approx12.8$ km/L.}
-        $\dfrac{30\text{ mi}}{\text{gal}}\times\dfrac{1.609\text{ km}}{1\text{ mi}}\times\dfrac{1\text{ gal}}{3.785\text{ L}}=\dfrac{30\times1.609}{3.785}\approx12.8$ km/L.
-  \item \textbf{20 sq yards.}
-        Area $=12\times15=180$ sq ft;\; $1\text{ yd}=3\text{ ft}\Rightarrow1\text{ sq yd}=9\text{ sq ft}$;\; $180\div9=20$ sq yd.
-  \item \textbf{$\approx22.2^\circ$C.}
-        $C=\dfrac{5}{9}(72-32)=\dfrac{5}{9}(40)=\dfrac{200}{9}\approx22.2^\circ$C.
-  \item \textbf{4 items/min.}  $240\text{ items/hr}\div60=4$ items/min.
-  \item \textbf{250 cm.}  $2.5\text{ m}\times100\text{ cm/m}=250$ cm.
-  \item \textbf{0.75 L.}  $750\text{ mL}\div1000=0.75$ L.
-  \item \textbf{A.}  Multiply by $\dfrac{1\text{ mi}}{5280\text{ ft}}\times\dfrac{3600\text{ s}}{1\text{ hr}}$ to cancel ft and s, leaving mi/hr.
-  \item \textbf{True.}  Dimensional analysis relies on cancelling matching units in numerator and denominator.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.4 Data Interpretation: Tables and Graphs}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=121]
-  \item \textbf{138.75.}  Mean $=\dfrac{120+145+130+160}{4}=\dfrac{555}{4}=138.75$.
-  \item \textbf{16 students.}  Below 80: $4\,(\text{60--69})+12\,(\text{70--79})=16$.
-  \item \textbf{$\dfrac{5}{6}$.}
-        Total passed $=25+5=30$;\; $P(\text{studied}\mid\text{passed})=\dfrac{25}{30}=\dfrac{5}{6}$.
-  \item \textbf{\$1{,}000.}  Food $=25\%\times\$4000=0.25\times4000=\$1{,}000$.
-  \item \textbf{30--39.}  That bar has height 12, the tallest.
-  \item \textbf{Rate of change $=4$.}
-        $\Delta y/\Delta x=(7-3)/(2-1)=4$ (constant for all pairs: $(11-7)/1=4$, etc.).
-  \item \textbf{$5^\circ$F/day.}  Total rise $=80-60=20^\circ$F over 4 days (Mon\to Fri): $20\div4=5^\circ$F/day.
-  \item \textbf{False.}  Bar graphs display categorical data; histograms display continuous data in intervals.
-  \item \textbf{$\dfrac{3}{8}$.}  $\dfrac{30}{80}=\dfrac{3}{8}$ (simplify by dividing by 10).
-  \item \textbf{C --- Line graph.}  Line graphs show change in a quantity over time.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.5 Scatterplots and Line of Best Fit}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=131]
-  \item \textbf{Positive.}  Both variables increase together $\Rightarrow$ positive correlation.
-  \item \textbf{30.}  Substitute $x=8$: $\hat{y}=2.5(8)+10=20+10=30$.
-  \item \textbf{2.5 points.}  The slope of the line of best fit represents the average change in $\hat{y}$ per 1-unit increase in $x$.
-  \item \textbf{B --- The predicted value when $x=0$.}  The $y$-intercept is the $\hat{y}$ value when $x=0$.
-  \item \textbf{Strong.}  $|r|=0.92$ is close to 1, indicating a strong correlation.
-  \item \textbf{Observed (actual); predicted.}  Residual $=y_{\text{obs}}-\hat{y}$.
-  \item \textbf{D --- $r=-0.95$.}  The strongest relationship has $|r|$ closest to 1; $|-0.95|=0.95$ is largest.
-  \item \textbf{False.}  Correlation measures association; only a controlled experiment can establish causation.
-  \item \textbf{16.}  Substitute $x=7$: $\hat{y}=3(7)-5=21-5=16$.
-  \item \textbf{C --- $r=0$.}  No apparent pattern $\Rightarrow$ no linear relationship $\Rightarrow r\approx0$.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.6 Probability}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=141]
-  \item \textbf{$\dfrac{1}{3}$.}  $P(\text{red})=\dfrac{4}{4+6+2}=\dfrac{4}{12}=\dfrac{1}{3}$.
-  \item \textbf{$\dfrac{1}{12}$.}  Independent events: $P(\text{H})\times P(\text{4})=\dfrac{1}{2}\times\dfrac{1}{6}=\dfrac{1}{12}$.
-  \item \textbf{$\dfrac{1}{13}$.}  4 kings in 52 cards: $\dfrac{4}{52}=\dfrac{1}{13}$.
-  \item \textbf{0.7.}  Mutually exclusive: $P(A\cup B)=P(A)+P(B)=0.3+0.4=0.7$.
-  \item \textbf{75\%.}  Inclusion-exclusion: $P(M\cup S)=0.60+0.45-0.30=0.75=75\%$.
-  \item \textbf{0.2.}  Multiplication rule: $P(A\cap B)=P(A)\cdot P(B\mid A)=0.5\times0.4=0.2$.
-  \item \textbf{$\dfrac{5}{14}$.}
-        Without replacement: $P(\text{both red})=\dfrac{5}{8}\times\dfrac{4}{7}=\dfrac{20}{56}=\dfrac{5}{14}$.
-  \item \textbf{True.}  By the probability axioms, $\sum P(\text{all outcomes})=1$.
-  \item \textbf{$\dfrac{2}{5}$.}  Numbers $>6$: $\{7,8,9,10\}$;\; $P=\dfrac{4}{10}=\dfrac{2}{5}$.
-  \item \textbf{$P(A)\cdot P(B)$.}  Independence definition: $P(A\cap B)=P(A)\cdot P(B)$.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.7 Statistical Inference and Sampling}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=151]
-  \item \textbf{Random (simple random).}  Every member has an equal chance of selection.
-  \item \textbf{Convenience bias.}  Surveying one class (easy to access) may not represent the whole school.
-  \item \textbf{48\% to 56\%.}  $52\%-4\%=48\%$;\; $52\%+4\%=56\%$.
-  \item \textbf{B --- Decreases.}  Larger sample $\Rightarrow$ smaller standard error $\Rightarrow$ smaller margin of error.
-  \item \textbf{Randomized controlled experiment (RCT).}  Random assignment allows causal inference.
-  \item \textbf{Stratified sampling.}  Population divided into subgroups (strata); random sample drawn from each.
-  \item \textbf{C --- There is an association between breakfast and grades.}
-        Observational studies can only establish association, not causation.
-  \item \textbf{True} (generally, when the sample is also representative; a larger biased sample is not more accurate).
-  \item \textbf{B --- Only those who choose to participate respond.}
-        Voluntary response bias: self-selected responders are not representative.
-  \item \textbf{95.}  A 95\% confidence interval means 95\% of such intervals (from many repetitions) contain the true parameter.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.8 Measures of Center and Spread}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=161]
-  \item \textbf{Mean $=6$.}  $\dfrac{4+7+9+3+7}{5}=\dfrac{30}{5}=6$.
-  \item \textbf{Median $=9.5$.}
-        Ordered: $\{2,5,8,11,14,17\}$ (6 values);\; median $=\dfrac{8+11}{2}=\dfrac{19}{2}=9.5$.
-  \item \textbf{Mode $=5$.}  5 appears 3 times in $\{3,5,5,7,8,5,9\}$ — more than any other value.
-  \item \textbf{Range $=15$.}  Max $-$ min $=22-7=15$.
-  \item \textbf{B --- Most values lie within 5 units of the mean.}
-        Standard deviation measures typical distance from the mean.
-  \item \textbf{C --- Mean.}  The mean shifts toward the outlier; median and mode are resistant.
-  \item \textbf{B --- Data set B has greater spread.}
-        Data set A $=\{10,10,10,10\}$ has SD $=0$;\; Data set B has non-zero spread.
-  \item \textbf{IQR $=6$.}
-        Ordered: $\{2,4,5,7,9,10,13\}$; median (Q2) $=7$;\; lower half $\{2,4,5\}$: Q1 $=4$;\;
-        upper half $\{9,10,13\}$: Q3 $=10$;\; IQR $=10-4=6$.
-  \item \textbf{True.}  In a symmetric distribution, the mean and median coincide.
-  \item \textbf{C --- IQR.}  IQR uses only the middle 50\% of data, so it is unaffected by extreme values.
-\end{enumerate}
-
-% ────────────────────────────────────────────────────────────────
-\hrulefill
-\subsection*{5.9 Evaluating Statistical Claims: Observational Studies and Experiments}
-\begin{enumerate}[leftmargin=1.5em,label=\textbf{Q\arabic*.},start=171]
-  \item \textbf{Cannot; manipulate (control).}
-        Observational studies have no intervention, so researchers cannot control variables.
-  \item \textbf{Causation.}
-        Random assignment in an RCT rules out confounders, supporting causal conclusions.
-  \item \textbf{Confounding (lurking).}
-        A confounding variable is associated with both the explanatory and response variables.
-  \item \textbf{B --- Tracking students' diet and grades without intervention.}
-        No manipulation of diet = observational.
-  \item \textbf{Participant (subject); researcher (experimenter).}
-        Neither knows the treatment assignment in a double-blind study.
-  \item \textbf{Weather/rainfall (or urban density).}
-        Rain causes people to carry umbrellas AND increases traffic accidents.
-  \item \textbf{Belief in the treatment (psychological expectation of improvement).}
-        The placebo effect is an improvement due to expectation, not actual treatment.
-  \item \textbf{True.}  Random sampling supports generalization to the broader population.
-  \item \textbf{C --- In this sample, more sleep is associated with higher grades.}
-        Small observational study $\Rightarrow$ association only, limited generalizability.
-  \item \textbf{Causation; association.}
-        Experiments $\Rightarrow$ causation;\; observational studies $\Rightarrow$ association only.
 \end{enumerate}
 
 \end{keybox}
 
 \newpage
 
-% ══════════════════════════════════════════════════════════════
-% SKILL GAP ANALYSIS
-% ══════════════════════════════════════════════════════════════
-\section{Skill Gap Analysis}
+\section{Potential Energy (Section 10.4)}
 
-\begin{gapbox}
+\begin{diagbox}{10. Potential Energy}
 
-\textbf{Directions:} After scoring each subsection, record your scores below.
-A score $<$7/10 (\textless\,70\%) marks a \textbf{priority gap} requiring focused review.
+\textbf{Potential energy} (PE or $U$) is energy stored in a system due to position or configuration within a \emph{conservative} force field.
 
-\vspace{0.4cm}
+\end{diagbox}
+
+\subsection{Gravitational Potential Energy}
+
+\begin{diagbox}{10.1 Gravitational Potential Energy}
+
+Near Earth's surface:
+\[
+  U_g = mgy
+\]
+\[
+  \Delta U_g = mg\,\Delta y = mg(y_f - y_i)
+\]
+\begin{itemize}[leftmargin=1.5em]
+  \item $\Delta U_g > 0$: object moved upward.
+  \item $\Delta U_g < 0$: object moved downward.
+\end{itemize}
+
+\end{diagbox}
+
+\subsubsection{Choosing the Reference Level}
+
+\begin{diagbox}{10.1.1 Choosing the Reference Level}
+
+The reference level ($y = 0$) is arbitrary:
+\begin{itemize}[leftmargin=1.5em]
+  \item Common choices: ground level, lowest point of motion, initial position.
+  \item \textbf{Only $\Delta U_g$ matters}; the reference level cancels in the final answer.
+\end{itemize}
+
+\textbf{Example:} 3-kg ball 2.0\,m above floor. Reference at floor: $U_g = (3)(9.8)(2.0) = 58.8$\,J. Reference at ball: $U_g = 0$.  Both give $\Delta U_g = -58.8$\,J when ball reaches floor.
+
+\end{diagbox}
+
+\subsubsection{Gravitational PE on Inclines}
+
+\begin{diagbox}{10.1.2 Gravitational PE on Inclines}
+
+Object at distance $s$ along a ramp of angle $\alpha$:
+\[
+  U_g = mgs\sin\alpha = mgh \quad\text{where } h = s\sin\alpha
+\]
+PE depends only on vertical height $h$, not on path length along ramp.
+
+\textbf{Example:} 5-kg crate 3.0\,m up a $20^\circ$ ramp:
+\[
+  h = 3.0\sin20^\circ = 1.03\text{ m}, \quad U_g = (5)(9.8)(1.03) \approx 50.3\text{ J}
+\]
+
+\end{diagbox}
+
+\subsection{Elastic (Spring) Potential Energy}
+
+\begin{diagbox}{10.2 Elastic (Spring) Potential Energy}
+
+\[
+  U_{\rm sp} = \tfrac{1}{2}kx^2
+\]
+\begin{itemize}[leftmargin=1.5em]
+  \item Always $U_{\rm sp} \geq 0$ (compressed or stretched).
+  \item Maximum at maximum compression/extension; zero at natural length.
+\end{itemize}
+
+\textbf{Example:} $k = 500$\,N/m, compressed 0.10\,m: $U_{\rm sp} = \tfrac{1}{2}(500)(0.01) = 2.5$\,J.
+
+\end{diagbox}
+
+\subsection{Relationship Between Work and Potential Energy}
+
+\begin{diagbox}{10.3 Relationship Between Work and Potential Energy}
+
+For any \textbf{conservative force}:
+\[
+  W_c = -\Delta U
+\]
+Work done by a conservative force equals the \emph{decrease} in PE.
+
+\textbf{Gravity:} $W_{\rm grav} = -\Delta U_g = mg(y_i - y_f)$
+
+\textbf{Spring:} $W_{\rm sp} = -\Delta U_{\rm sp}$
+
+\begin{warnbox}
+Only conservative forces have associated PE.  Friction is non-conservative --- it permanently converts mechanical energy to thermal energy.
+\end{warnbox}
+
+\end{diagbox}
+
+\newpage
+
+\section{Thermal Energy (Section 10.5)}
+
+\begin{diagbox}{11. Thermal Energy}
+
+\textbf{Thermal energy} $E_{\rm th}$: microscopic KE and PE of atoms/molecules (manifests as temperature).
+
+\textbf{From friction:}
+\[
+  \Delta E_{\rm th} = f_k\,d \quad\text{where } f_k = \mu_k\,n
+\]
+
+This energy is permanently converted from mechanical energy and is not recoverable.
+
+\end{diagbox}
+
+\subsection{Why Thermal Energy Is Different}
+
+\begin{diagbox}{11.1 Why Thermal Energy Is Different}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Irreversible:} Friction converts ordered mechanical energy to disordered thermal energy.
+  \item \textbf{Not a PE:} $E_{\rm th}$ cannot be stored and recovered like $U_g$ or $U_{\rm sp}$.
+  \item \textbf{Always positive:} $\Delta E_{\rm th} = f_k d \geq 0$; friction never adds mechanical energy.
+  \item \textbf{Second Law:} Irreversibility reflects increasing entropy.
+\end{enumerate}
+
+\begin{warnbox}
+With friction, \emph{mechanical energy is not conserved}:
+\[
+  K_f + U_f = K_i + U_i - \Delta E_{\rm th}
+\]
+Total energy (mechanical + thermal) is still conserved.
+\end{warnbox}
+
+\end{diagbox}
+
+\subsection{Thermal Energy and Stopping Distance}
+
+\begin{diagbox}{11.2 Thermal Energy and Stopping Distance}
+
+A car of mass $m$ braking from $v_0$ to rest:
+\[
+  \Delta E_{\rm th} = K_i = \tfrac{1}{2}mv_0^2
+\]
+Also $\Delta E_{\rm th} = \mu_k\,mg\,d$, so:
+\[
+  d = \frac{v_0^2}{2\mu_k g}
+\]
+
+\textbf{Stopping distance scales as $v_0^2$:} doubling speed quadruples stopping distance.
+
+\textbf{Example:} $\mu_k = 0.70$, $v_0 = 25$\,m/s:
+\[
+  d = \frac{625}{2(0.70)(9.8)} \approx 45.6\text{ m}
+\]
+
+\end{diagbox}
+
+\newpage
+
+\section{Conservation of Energy (Section 10.6)}
+
+\begin{diagbox}{12. Conservation of Energy}
+
+\textbf{Law of Conservation of Energy:} The total energy of an isolated system is constant.
+
+\[
+  \Delta K + \Delta U_g + \Delta U_{\rm sp} + \Delta E_{\rm th} = W_{\rm ext}
+\]
+
+\end{diagbox}
+
+\subsection{The Master Energy Equation}
+
+\begin{diagbox}{12.1 The Master Energy Equation}
+
+\[
+  \boxed{K_f + U_f + \Delta E_{\rm th} = K_i + U_i + W_{\rm ext}}
+\]
+
 \begin{center}
-\renewcommand{\arraystretch}{2.0}
-\begin{longtable}{|p{5.5cm}|c|p{6.0cm}|}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|}
 \hline
-\textbf{Skill Area} & \textbf{Score /10}
-  & \textbf{Priority Gap?\newline Items Missed} \\
+\textbf{Term} & \textbf{Meaning} \\
 \hline
-\endhead
-4.1 --- Quadratic Expressions and Equations & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.2 --- Polynomial Operations and Factoring & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.3 --- Rational Expressions and Equations & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.4 --- Radical and Rational Exponents & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.5 --- Exponential Functions and Equations & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.6 --- Functions and Function Notation & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.7 --- Quadratic and Polynomial Functions & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.8 --- Exponential Functions and Equations & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-4.9 --- Radical and Rational Expressions & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.1 --- Ratios, Rates, and Proportions & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.2 --- Percentages & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.3 --- Unit Conversions & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.4 --- Data Interpretation: Tables and Graphs & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.5 --- Scatterplots and Line of Best Fit & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.6 --- Probability & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.7 --- Statistical Inference and Sampling & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.8 --- Measures of Center and Spread & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-5.9 --- Evaluating Statistical Claims & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.8cm] \\
-\hline
-\textbf{TOTAL} & \textbf{\blank[1cm] / 180} & \\
-\hline
-\end{longtable}
-\end{center}
-
-\vspace{0.4cm}
-
-\textbf{Overall Performance Interpretation:}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|c|p{4.5cm}|p{7cm}|}
-\hline
-\textbf{Total Score} & \textbf{Performance Level} & \textbf{Recommended Action} \\
-\hline
-162--180 & Strong command of material & Light review; focus on specific missed items \\
-\hline
-126--161 & Solid foundation; some gaps present & Review flagged subsections; rework missed items \\
-\hline
-90--125  & Moderate knowledge gaps & Systematic review of all flagged sections \\
-\hline
-$<$90    & Significant gaps identified & Full re-study using study guides start-to-finish \\
+$K_f$ & Final kinetic energy \\
+$U_f$ & Final potential energy ($U_g + U_{\rm sp}$) \\
+$\Delta E_{\rm th}$ & Thermal energy from friction ($\geq 0$) \\
+$K_i$ & Initial kinetic energy \\
+$U_i$ & Initial potential energy \\
+$W_{\rm ext}$ & Work by external agent \\
 \hline
 \end{tabular}
 \end{center}
 
-\vspace{0.4cm}
-
-\textbf{My top 3 priority skill gaps are:}
-\begin{enumerate}
-  \item \blank[10cm]
-  \item \blank[10cm]
-  \item \blank[10cm]
-\end{enumerate}
-
-\end{gapbox}
-
-\newpage
-
-% ══════════════════════════════════════════════════════════════
-% PERSONALIZED STUDY PLAN
-% ══════════════════════════════════════════════════════════════
-\section{Personalized Study Plan}
-
-\begin{planbox}
-
-Use this template to build a targeted review plan based on the skill gaps identified above.
-List only the subsections where you scored \textless\,70\% (\textless\,7/10).
-
-\vspace{0.4cm}
-
-\begin{center}
-\renewcommand{\arraystretch}{2.2}
-\begin{longtable}{|p{3.0cm}|p{2.8cm}|p{2.8cm}|p{2.3cm}|p{1.9cm}|}
-\hline
-\textbf{Priority Skill Gap} & \textbf{Resource / Section to Review}
-  & \textbf{Specific Concepts to Master} & \textbf{Target Study Date} & \textbf{Done?} \\
-\hline
-\endhead
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
-\hline
-\end{longtable}
-\end{center}
-
-\vspace{0.4cm}
-
-\textbf{Recommended resources for each gap area:}
-\begin{itemize}[leftmargin=2em]
-  \item \textbf{4.1 Quadratic Expressions and Equations} $\rightarrow$
-        Khan Academy: Quadratics; \textit{The Official SAT Study Guide}, Advanced Math chapter
-  \item \textbf{4.2 Polynomial Operations and Factoring} $\rightarrow$
-        Khan Academy: Polynomials; College Board SAT practice problems
-  \item \textbf{4.3 Rational Expressions and Equations} $\rightarrow$
-        Khan Academy: Rational expressions; SAT practice tests (Advanced Math)
-  \item \textbf{4.4 Radical and Rational Exponents} $\rightarrow$
-        Khan Academy: Radicals \& rational exponents; SAT skill drills
-  \item \textbf{4.5 \& 4.8 Exponential Functions and Equations} $\rightarrow$
-        Khan Academy: Exponential functions; Official SAT Math guide
-  \item \textbf{4.6 Functions and Function Notation} $\rightarrow$
-        Khan Academy: Functions; \textit{Official SAT Study Guide} function problems
-  \item \textbf{4.7 Quadratic and Polynomial Functions} $\rightarrow$
-        Khan Academy: Polynomial graphs; SAT practice tests
-  \item \textbf{4.9 Radical and Rational Expressions} $\rightarrow$
-        Khan Academy: Radical expressions; rational equation practice sets
-  \item \textbf{5.1 Ratios, Rates, and Proportions} $\rightarrow$
-        Khan Academy: Ratios \& proportions; College Board SAT Problem Solving module
-  \item \textbf{5.2 Percentages} $\rightarrow$
-        Khan Academy: Percentages; Official SAT Math practice
-  \item \textbf{5.3 Unit Conversions} $\rightarrow$
-        Khan Academy: Unit conversion \& dimensional analysis practice
-  \item \textbf{5.4 Data Interpretation} $\rightarrow$
-        Khan Academy: Data interpretation; SAT data analysis problems
-  \item \textbf{5.5 Scatterplots and Line of Best Fit} $\rightarrow$
-        Khan Academy: Scatter plots; Official SAT Practice tests
-  \item \textbf{5.6 Probability} $\rightarrow$
-        Khan Academy: Probability; SAT probability problem sets
-  \item \textbf{5.7 Statistical Inference and Sampling} $\rightarrow$
-        Khan Academy: Sampling \& inference; SAT statistics section
-  \item \textbf{5.8 Measures of Center and Spread} $\rightarrow$
-        Khan Academy: Statistics; \textit{Official SAT Study Guide}
-  \item \textbf{5.9 Evaluating Statistical Claims} $\rightarrow$
-        Khan Academy: Study design; SAT statistics \& data analysis practice
+\textbf{Special cases:}
+\begin{itemize}[leftmargin=1.5em]
+  \item No friction, no external work: $K_f + U_f = K_i + U_i$.
+  \item With friction, no external work: $K_f + U_f + \Delta E_{\rm th} = K_i + U_i$.
+  \item No friction, with external work: $K_f + U_f = K_i + U_i + W_{\rm ext}$.
 \end{itemize}
 
-\vspace{0.4cm}
+\end{diagbox}
 
-\begin{tcolorbox}[colback=blue!4!white,colframe=blue!60!black,title=\textbf{After Your Review Session},fonttitle=\bfseries,breakable]
+\subsection{Problem-Solving Strategy}
+
+\begin{diagbox}{12.2 Problem-Solving Strategy}
+
 \begin{enumerate}[leftmargin=1.5em]
-  \item Return to \textbf{Section 3} and complete the \emph{Post-Review} column of the
-        Self-Rating Checklist.
-  \item Compare pre- and post-review totals.  A gain of $\geq$10 points indicates
-        meaningful knowledge growth.
-  \item Rework the specific diagnostic questions you missed the first time.
-  \item If any gap area still scores $<$7/10 on re-attempt, schedule an additional
-        review session or seek help from a tutor.
+  \item \textbf{Define the system.} Include all objects whose energy changes.
+  \item \textbf{Identify initial and final states.} Draw diagrams for each.
+  \item \textbf{Choose a reference level} for gravitational PE.
+  \item \textbf{Identify energy forms} present at each state: $K$, $U_g$, $U_{\rm sp}$.
+  \item \textbf{Check for friction.} Compute $\Delta E_{\rm th} = f_k d$ if present.
+  \item \textbf{Check for external work.}  Add $W_{\rm ext}$ if an external agent acts.
+  \item \textbf{Apply the master energy equation} and solve.
+  \item \textbf{Check units and reasonableness.}
 \end{enumerate}
-\end{tcolorbox}
 
-\end{planbox}
+\end{diagbox}
 
-\vspace{1cm}
+\subsection{Worked Examples: No Friction}
+
+\begin{diagbox}{12.3 Worked Examples: No Friction}
+
+\textbf{Example A --- Ball dropped from rest:}
+
+A 2-kg ball dropped from $h = 5$\,m.  Find speed just before impact.
+\[
+  mgh = \tfrac{1}{2}mv_f^2 \;\Rightarrow\; v_f = \sqrt{2gh} = \sqrt{2(9.8)(5)} \approx 9.9\text{ m/s}
+\]
+
+\vspace{0.4cm}
+\textbf{Example B --- Spring launching a block:}
+
+Spring ($k = 800$\,N/m) compressed 0.15\,m releases a 0.5-kg block.  Find the block's speed.
+\[
+  \tfrac{1}{2}kx^2 = \tfrac{1}{2}mv^2 \;\Rightarrow\; v = x\sqrt{k/m} = 0.15\sqrt{1600} = 6.0\text{ m/s}
+\]
+
+\vspace{0.4cm}
+\textbf{Example C --- Ball on frictionless ramp:}
+
+3-kg ball from rest at top of 4.0-m-high frictionless ramp.
+\[
+  v = \sqrt{2gh} = \sqrt{2(9.8)(4.0)} \approx 8.9\text{ m/s}
+\]
+
+\end{diagbox}
+
+\subsection{Worked Examples: With Friction}
+
+\begin{diagbox}{12.4 Worked Examples: With Friction}
+
+\textbf{Example D --- Block on rough ramp:}
+
+4-kg block slides 6.0\,m down a $30^\circ$ ramp ($\mu_k = 0.20$) from rest.
+
+$h = 6\sin30^\circ = 3.0$\,m; $n = mg\cos30^\circ = 33.9$\,N; $f_k = (0.20)(33.9) = 6.78$\,N.
+
+$\Delta E_{\rm th} = (6.78)(6.0) = 40.7$\,J.
+
+\[
+  \tfrac{1}{2}(4)v^2 = mgh - \Delta E_{\rm th} = 117.6 - 40.7 = 76.9\text{ J}
+  \;\Rightarrow\; v = \sqrt{38.45} \approx 6.2\text{ m/s}
+\]
+
+\vspace{0.4cm}
+\textbf{Example E --- Object stopped by friction:}
+
+1.5-kg box at 5.0\,m/s; $\mu_k = 0.35$.
+\[
+  \tfrac{1}{2}(1.5)(25) = (0.35)(1.5)(9.8)d \;\Rightarrow\; d \approx 3.6\text{ m}
+\]
+
+\end{diagbox}
+
+\subsection{Worked Examples: With External Work}
+
+\begin{diagbox}{12.5 Worked Examples: With External Work}
+
+\textbf{Example F --- Motor lifts a crate:}
+
+Motor does 2400\,J lifting a 50-kg crate 4.0\,m from rest to rest.
+\[
+  W_{\rm ext} = \Delta U_g + \Delta E_{\rm th} \;\Rightarrow\; 2400 = (50)(9.8)(4.0) + \Delta E_{\rm th}
+  \;\Rightarrow\; \Delta E_{\rm th} = 440\text{ J}
+\]
+Efficiency: $1960/2400 \approx 81.7\%$.
+
+\vspace{0.4cm}
+\textbf{Example G --- Cyclist over two hills:}
+
+80-kg cyclist (bike included) coasts over a 5.0-m descent then up a 3.0-m hill.  Friction: $\Delta E_{\rm th} = 120$\,J.  Initial speed: 8.0\,m/s.
+\[
+  K_f = K_i + Mg\Delta h - \Delta E_{\rm th}
+      = \tfrac{1}{2}(80)(64) + (80)(9.8)(2) - 120
+      = 2560 + 1568 - 120 = 4008\text{ J}
+\]
+\[
+  v_f = \sqrt{2(4008)/80} \approx 10.0\text{ m/s}
+\]
+
+\end{diagbox}
+
+\subsection{Energy Bar Charts}
+
+\begin{diagbox}{12.6 Energy Bar Charts}
+
+\textbf{Energy bar charts} (LOL diagrams) visualize the master energy equation.  Each bar represents an energy form; heights must balance.
+
+\textbf{Drawing procedure:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Draw initial and final bar sets separated by a process region.
+  \item Label bars: $K$, $U_g$, $U_{\rm sp}$, $E_{\rm th}$.
+  \item Include a $W_{\rm ext}$ bar in the process region if needed.
+  \item Total initial energy $+$ $W_{\rm ext}$ $=$ total final energy.
+\end{enumerate}
+
+\textbf{Example (frictionless ramp):} Initial: tall $U_g$, zero $K$. Final: zero $U_g$, tall $K$ (equal height). \\
+\textbf{Example (with friction):} Initial: tall $U_g$. Final: shorter $K$ + positive $E_{\rm th}$. $U_{g,i} = K_f + \Delta E_{\rm th}$.
+
+\end{diagbox}
+
+\subsection{When to Use Energy Methods vs.\ Newton's Laws}
+
+\begin{diagbox}{12.7 When to Use Energy Methods vs.\ Newton's Laws}
 
 \begin{center}
-\textbf{\Large You identified your gaps.  Now you own them.}\\[0.4cm]
-\textit{Targeted practice beats passive re-reading every time.  Good luck on the SAT!}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|p{4.8cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Situation} & \textbf{Energy Methods} & \textbf{Newton's Laws} \\
+\hline
+Known positions; want speed & \textbf{Preferred} -- one equation & Requires kinematics; harder \\
+\hline
+Non-constant force (spring, curved path) & \textbf{Preferred} -- PE handles it & Requires calculus \\
+\hline
+Want force or acceleration at a point & Difficult & \textbf{Preferred} \\
+\hline
+Complex or unknown path & \textbf{Preferred} -- path independence & Very difficult \\
+\hline
+Need time information & Cannot give time directly & \textbf{Preferred} \\
+\hline
+Multiple interacting objects & Additive system energy; convenient & Must track all interaction forces \\
+\hline
+\end{tabular}
 \end{center}
+
+\begin{warnbox}
+\textbf{Rule of thumb:} Use energy methods when the problem involves \emph{positions and speeds}.  Use Newton's Laws when it involves \emph{forces, accelerations, or time}.
+\end{warnbox}
+
+\end{diagbox}
 
 \end{document}
