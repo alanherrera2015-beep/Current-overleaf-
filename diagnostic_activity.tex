@@ -1,0 +1,2173 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{needspace}
+\usepackage{microtype}
+\setlength{\headheight}{14.5pt}
+\setlength{\emergencystretch}{5em}
+\hbadness=10000
+
+% ── Color palette ──────────────────────────────────────────────
+\definecolor{selfcolor}{RGB}{230,245,255}
+\definecolor{diagcolor}{RGB}{255,250,230}
+\definecolor{gapcolor}{RGB}{255,235,235}
+\definecolor{plancolor}{RGB}{235,255,235}
+\definecolor{keycolor}{RGB}{245,245,245}
+\definecolor{warnbg}{RGB}{255,240,220}
+\definecolor{infobg}{RGB}{220,235,255}
+
+% ── tcolorbox environments ─────────────────────────────────────
+\newtcolorbox{instructbox}{colback=infobg,colframe=blue!60!black,
+  title=\textbf{Instructions},fonttitle=\bfseries,breakable}
+\newtcolorbox{selfbox}{colback=selfcolor,colframe=blue!50!black,
+  title=\textbf{Pre-Diagnostic Self-Rating},fonttitle=\bfseries,breakable}
+\newtcolorbox{diagbox}[1]{colback=diagcolor,colframe=olive!70!black,
+  title=\textbf{#1},fonttitle=\bfseries,breakable,before={\needspace{6\baselineskip}}}
+\newtcolorbox{gapbox}{colback=gapcolor,colframe=red!60!black,
+  title=\textbf{Skill Gap Analysis},fonttitle=\bfseries,breakable}
+\newtcolorbox{planbox}{colback=plancolor,colframe=green!55!black,
+  title=\textbf{Personalized Study Plan},fonttitle=\bfseries,breakable}
+\newtcolorbox{keybox}{colback=keycolor,colframe=gray!55!black,
+  title=\textbf{Answer Key},fonttitle=\bfseries,breakable}
+\newtcolorbox{warnbox}{colback=warnbg,colframe=orange!70!black,
+  title=\textbf{Important},fonttitle=\bfseries,breakable}
+
+% ── Page style ─────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Diagnostic Activity}
+\lhead{Med Surg 2 / ATI Exam Review --- Weeks 6--12}
+\cfoot{\thepage}
+
+% ── Confidence scale macro ─────────────────────────────────────
+\newcommand{\confscale}{%
+  \hfill
+  \textbf{1}\,\small(no knowledge)\normalsize\quad
+  \textbf{2}\,\small(minimal)\normalsize\quad
+  \textbf{3}\,\small(partial)\normalsize\quad
+  \textbf{4}\,\small(mostly confident)\normalsize\quad
+  \textbf{5}\,\small(mastered)\normalsize}
+
+% ── Blank helpers ──────────────────────────────────────────────
+\newcommand{\blank}[1][3cm]{\underline{\hspace{#1}}}
+\newcommand{\circleone}{$\bigcirc$\,1\quad$\bigcirc$\,2\quad$\bigcirc$\,3\quad$\bigcirc$\,4\quad$\bigcirc$\,5}
+
+% ══════════════════════════════════════════════════════════════
+\begin{document}
+% ══════════════════════════════════════════════════════════════
+
+% ── Title page ────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Comprehensive Diagnostic Activity}\\[0.4cm]
+  {\large\bfseries with Skill Gap Identification}\\[0.3cm]
+  {\large Weeks 6, 7, 8, 10, 11 \& 12}\\[0.1cm]
+  {\normalsize Coagulation Disorders $\cdot$ Oncological Emergencies $\cdot$ GI/Endocrine}\\
+  {\normalsize Nervous System $\cdot$ Trauma/SCI $\cdot$ Burns/Fluids/ABGs $\cdot$ End-of-Life Care}\\[0.3cm]
+  {\normalsize ATI / NCLEX Exam Preparation}\\[0.2cm]
+  \rule{\linewidth}{0.6pt}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{instructbox}
+\textbf{Purpose:}  This activity is designed to help you \emph{identify knowledge gaps
+before studying}, so that you can focus your limited review time where it matters most.
+
+\bigskip
+\textbf{How to use this document:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Step 1 --- Pre-Diagnostic Self-Rating (Section 1):}  Before looking at any
+        notes, rate your confidence on each skill area using the 1--5 scale.  Be honest ---
+        no one else will see this.
+  \item \textbf{Step 2 --- Diagnostic Knowledge Check (all diagnostic sections):}  Answer every
+        question \emph{without} referring to your notes or textbook.  Leave blanks rather
+        than guessing randomly.
+  \item \textbf{Step 3 --- Self-Score and Gap Analysis:}  Use the Answer Key
+        to score each section, then transfer your scores into the Skill Gap
+        Analysis table.
+  \item \textbf{Step 4 --- Build Your Study Plan:}  Any section where you
+        scored below 70\% (\textless\,7/10) is a priority gap.  Fill in the personalized
+        study plan to target those areas.
+  \item \textbf{Step 5 --- Post-Activity Re-Rating:}  After completing your focused review,
+        return to Section 1 and re-rate yourself.  Compare your before and after scores to
+        measure growth.
+\end{enumerate}
+
+\bigskip
+\textbf{Time estimate:}  50--70 minutes (diagnostic portion); varies based on study plan depth.
+\end{instructbox}
+
+\tableofcontents
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 1 — PRE-DIAGNOSTIC SELF-RATING
+% ══════════════════════════════════════════════════════════════
+\section{Pre-Diagnostic Self-Rating Checklist}
+
+\begin{selfbox}
+Rate your \emph{current} confidence for each skill area below.  Circle one number per row.
+
+\vspace{0.2cm}
+\textbf{Scale:}\confscale
+
+\vspace{0.4cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.55}
+\begin{longtable}{|p{0.38\linewidth}|c|c|c|c|c|c|}
+\hline
+\textbf{Skill / Knowledge Area} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5}
+  & \parbox[c]{1.4cm}{\centering\textbf{Post-\\Review}} \\
+\hline
+\endhead
+% ── Week 6: Coagulation Disorders / Oncological Emergencies ─────
+Describe the pathophysiology of DIC and identify triggers \& priority interventions & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate HIT from thrombocytopenia and explain heparin management & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify prophylaxis, assessment, and management of DVT/PE & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe nursing management for hemophilia A \& B & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Recognize and manage Tumor Lysis Syndrome (TLS) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify signs and interventions for SVCS, spinal cord compression, and hypercalcemia of malignancy & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+% ── Week 7: GI/Endocrine ─────────────────────────────────────
+Recall the ``I GET SMASHED'' mnemonic for pancreatitis causes & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Apply Ranson's Criteria to assess pancreatitis severity & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate acute vs.\ chronic pancreatitis & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Recognize clinical manifestations of pancreatic cancer & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate acute vs.\ acalculous cholecystitis & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe TPN indications, components, and administration & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify and prevent TPN complications (CLABSI, refeeding) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+% ── Week 8: Complex Nervous System Problems ─────────────────────
+Apply the BE-FAST mnemonic and differentiate ischemic vs.\ hemorrhagic stroke & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe tPA eligibility criteria and nursing responsibilities & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Recognize post-craniotomy nursing priorities for brain tumor patients & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate epidural, subdural, and intracerebral hematomas & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Use the GCS to assess level of consciousness in TBI & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify priority nursing management for increased ICP & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+% ── Week 10: Trauma, MCI \& Spinal Cord Injuries ────────────────
+Perform a primary survey (ABCDE) and secondary survey (AMPLE) in trauma & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Classify hemorrhagic shock Classes I--IV and identify nursing responses & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify life-threatening thoracic injuries (``Deadly Dozen'') & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Apply START triage categories (Red/Yellow/Green/Black) in MCI & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe SCI levels (C1--T1, T2--L1, L2--S1) and functional implications & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate spinal shock from neurogenic shock and manage autonomic dysreflexia & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+% ── Week 11: Burns/Fluids/ABGs ───────────────────────────────
+Classify burns by depth (superficial through full-thickness) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Estimate TBSA using the Rule of Nines & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Calculate fluid resuscitation using the Parkland Formula & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe burn phases and priority nursing management & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate IV fluid types (isotonic, hypotonic, hypertonic) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Interpret arterial blood gas (ABG) values & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Identify key electrolyte imbalances and nursing interventions & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+% ── Week 12: End of Life ─────────────────────────────────────
+Differentiate palliative care and hospice care & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe ethical/legal frameworks in EOL care (advance directives, POLST) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Recognize clinical signs of approaching death & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe symptom management at EOL (pain, dyspnea, secretions) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Explain family-centered EOL care & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Perform postmortem nursing care and documentation & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+\end{longtable}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{Pre-Rating Total (sum of circled numbers):} \blank[2cm] / 190
+\quad\textbf{Post-Rating Total:} \blank[2cm] / 190
+\end{selfbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 6 — COAGULATION DISORDERS / ONCOLOGICAL EMERGENCIES
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 2 ─────────────────────────────────────────────────
+\section{Week 6: Coagulation Disorders --- DIC, HIT, DVT/PE \& Hemophilia}
+
+\begin{diagbox}{Coagulation Disorders --- 10 Points}
+
+\textbf{Directions:} Fill in each blank or circle the correct answer without using notes.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.}]
+
+  \item DIC (Disseminated Intravascular Coagulation) is characterized by simultaneous
+        \blank[3cm] and \blank[3cm] throughout the vasculature.
+        Common triggers include: \blank[3cm], \blank[3cm], and \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item In DIC, lab findings show: PT/PTT \blank[2cm] (elevated/decreased),
+        platelet count \blank[2cm] (elevated/decreased), fibrinogen \blank[2cm]
+        (elevated/decreased), and D-dimer \blank[2cm] (elevated/decreased).
+        \hfill\textit{(1 pt)}
+
+  \item The priority nursing intervention in DIC is to treat the
+        \blank[4cm] cause.  Two blood products commonly administered are
+        \blank[3cm] and \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Heparin-Induced Thrombocytopenia (HIT) occurs when heparin binds to
+        \blank[4cm], forming antibodies that cause paradoxical
+        \blank[3cm] (clotting/bleeding).
+        \hfill\textit{(1 pt)}
+
+  \item When HIT is suspected, the nurse should:
+        \begin{enumerate}[label=\alph*.]
+          \item \blank[6cm] (stop/continue) all heparin products
+          \item Switch to a non-heparin anticoagulant such as \blank[4cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item The three components of Virchow's Triad (risk factors for DVT/PE) are:
+        \blank[3.5cm], \blank[3.5cm], and \blank[3.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Classic signs of pulmonary embolism include (list three):
+        \blank[3.5cm], \blank[3.5cm], \blank[3.5cm].
+        The priority nursing intervention is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item DVT prophylaxis measures include (list two pharmacological and two non-pharmacological):
+        \begin{multicols}{2}
+        \begin{itemize}[leftmargin=1em]
+          \item Pharm 1: \blank[3cm]
+          \item Pharm 2: \blank[3cm]
+          \item Non-pharm 1: \blank[3cm]
+          \item Non-pharm 2: \blank[3cm]
+        \end{itemize}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item Hemophilia A is a deficiency of clotting factor \blank[2cm], while
+        Hemophilia B is a deficiency of factor \blank[2cm].  Both are
+        \blank[3cm]-linked recessive disorders.
+        \hfill\textit{(1 pt)}
+
+  \item A patient with hemophilia presents with hemarthrosis (joint bleeding).
+        The priority nursing intervention is:
+        $\bigcirc$\,Apply heat and perform range-of-motion exercises
+        $\bigcirc$\,Immobilize the joint, apply ice, and administer factor replacement
+        $\bigcirc$\,Administer aspirin for pain relief
+        $\bigcirc$\,Encourage weight-bearing to prevent contractures
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 6 --- Coagulation Disorders Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 3 ─────────────────────────────────────────────────
+\section{Week 6: Oncological Emergencies \& NGN Practice}
+
+\begin{diagbox}{Oncological Emergencies \& NGN Practice --- 10 Points}
+
+\textbf{Directions:} Fill in each blank or circle the correct answer without using notes.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=11]
+
+  \item Tumor Lysis Syndrome (TLS) occurs when \blank[5cm] are rapidly
+        destroyed, releasing intracellular contents.  The four classic electrolyte
+        abnormalities are: hyper\blank[2cm], hyper\blank[2cm],
+        hyper\blank[2cm], and hypo\blank[2cm].
+        \hfill\textit{(1 pt)}
+
+  \item The priority nursing interventions for TLS include:
+        aggressive IV \blank[3cm], administration of \blank[3cm]
+        (to lower uric acid), and monitoring \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Superior Vena Cava Syndrome (SVCS) presents with: facial/neck
+        \blank[3cm], distended neck veins, and \blank[3cm] on bending forward.
+        The most common underlying cause is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item The emergency treatment for SVCS may include radiation therapy to
+        \blank[4cm] the tumor or corticosteroids to reduce
+        \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Malignant Spinal Cord Compression (MSCC) presents with back
+        \blank[3cm] (symptom), \blank[3cm] weakness, and possible
+        \blank[3cm].  The nurse's immediate action is:
+        \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Hypercalcemia of malignancy occurs because tumor cells either directly
+        destroy \blank[3cm] or secrete \blank[4cm]
+        (a PTH-related protein).  Classic signs include ``bones, groans, stones, and
+        \blank[2cm].''
+        \hfill\textit{(1 pt)}
+
+  \item Treatment for hypercalcemia of malignancy includes:
+        IV \blank[3cm] (fluid), \blank[3cm] (bisphosphonate),
+        and \blank[3cm] (loop diuretic to promote calcium excretion).
+        \hfill\textit{(1 pt)}
+
+  \item \textbf{NGN Case:} A patient receiving chemotherapy for leukemia develops Temp 38.2\textdegree C,
+        uric acid 9.8 mg/dL, K$^+$ 6.2 mEq/L, and creatinine 2.1 mg/dL.
+        The nurse recognizes this as:
+        $\bigcirc$\,Septic shock
+        $\bigcirc$\,Tumor Lysis Syndrome
+        $\bigcirc$\,Hypercalcemia of malignancy
+        $\bigcirc$\,SVCS
+        \hfill\textit{(1 pt)}
+
+  \item For the patient above, the priority nursing intervention FIRST is:
+        $\bigcirc$\,Administer potassium chloride IV
+        $\bigcirc$\,Initiate aggressive IV hydration and cardiac monitoring
+        $\bigcirc$\,Prepare for emergent dialysis
+        $\bigcirc$\,Administer calcium gluconate
+        \hfill\textit{(1 pt)}
+
+  \item True or False: Patients with thrombocytopenia (platelet count \textless\,50{,}000/mm$^3$)
+        should be placed on bleeding precautions and should avoid intramuscular injections,
+        aspirin, and NSAIDs.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 6 --- Oncological Emergencies Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 7 — GI/ENDOCRINE DISORDERS
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 4 ─────────────────────────────────────────────────
+\section{Week 7: Acute Pancreatitis}
+
+\begin{diagbox}{Acute Pancreatitis --- 10 Points}
+
+\textbf{Directions:} Fill in each blank or circle the correct answer without using notes.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=21]
+
+  \item The mnemonic for common causes of acute pancreatitis is
+        \textbf{``I GET SMASHED.''}  List what each letter stands for:
+        \begin{multicols}{2}
+        \begin{itemize}[leftmargin=1em]
+          \item I = \blank[3.5cm]
+          \item G = \blank[3.5cm]
+          \item E = \blank[3.5cm]
+          \item T = \blank[3.5cm]
+          \item S = \blank[3.5cm]
+          \item M = \blank[3.5cm]
+          \item A = \blank[3.5cm]
+          \item S = \blank[3.5cm]
+          \item H = \blank[3.5cm]
+          \item E = \blank[3.5cm]
+          \item D = \blank[3.5cm]
+        \end{itemize}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item The two most common causes of acute pancreatitis are
+        \blank[3.5cm] and \blank[3.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item The hallmark symptom is \blank[3cm] pain that radiates to the
+        \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Grey-Turner's sign (flank bruising) and Cullen's sign (periumbilical bruising)
+        indicate \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item The diagnostic lab values most specific for acute pancreatitis are elevated
+        serum \blank[2.5cm] and \blank[2.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Complete Ranson's Criteria (circle or fill in):
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{5.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{On Admission} & \textbf{At 48 Hours} \\
+  \hline
+  Age $>$ \blank[1.5cm] years & Hematocrit drop $>$ \blank[1.5cm]\% \\
+  \hline
+  WBC $>$ \blank[1.5cm] /mm$^3$ & BUN rise $>$ \blank[1.5cm] mg/dL \\
+  \hline
+  Blood glucose $>$ \blank[1.5cm] mg/dL & Ca$^{2+}$ $<$ \blank[1.5cm] mg/dL \\
+  \hline
+  LDH $>$ \blank[1.5cm] IU/L & PaO$_2$ $<$ \blank[1.5cm] mmHg \\
+  \hline
+  AST $>$ \blank[1.5cm] IU/L & Base deficit $>$ \blank[1.5cm] mEq/L \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(1 pt)}
+
+  \item The preferred IV fluid for resuscitation in acute pancreatitis is
+        \blank[3cm].  Target urine output is \blank[2cm] mL/kg/hr.
+        \hfill\textit{(1 pt)}
+
+  \item A patient with acute pancreatitis develops a persistent fever, leukocytosis,
+        and a CT showing gas in the pancreatic tissue.  This suggests the complication
+        of \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item In \emph{mild} acute pancreatitis, oral feeding should be restarted as soon as
+        nausea/vomiting resolve.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+  \item The pancreatic pseudocyst that fails to resolve spontaneously may require
+        \blank[5cm] drainage.
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 7 --- Acute Pancreatitis Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 5 ─────────────────────────────────────────────────
+\section{Week 7: Chronic Pancreatitis \& Pancreatic Cancer}
+
+\begin{diagbox}{Chronic Pancreatitis \& Pancreatic Cancer --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=31]
+
+  \item Chronic pancreatitis most commonly results from long-term
+        \blank[3cm] use.
+        \hfill\textit{(1 pt)}
+
+  \item The classic triad of chronic pancreatitis consists of: chronic abdominal
+        \blank[3cm], \blank[3cm] (fatty stools), and \blank[3cm] mellitus.
+        \hfill\textit{(1 pt)}
+
+  \item Steatorrhea in chronic pancreatitis results from deficiency of pancreatic
+        \blank[4cm] enzymes.
+        \hfill\textit{(1 pt)}
+
+  \item Pancreatic enzyme replacement (pancrelipase) should be taken
+        \blank[5cm] (timing relative to meals).
+        \hfill\textit{(1 pt)}
+
+  \item The most common location of pancreatic adenocarcinoma is the
+        \blank[3cm] of the pancreas.
+        \hfill\textit{(1 pt)}
+
+  \item Painless obstructive \blank[3cm] is a classic early warning sign of
+        pancreatic cancer.
+        \hfill\textit{(1 pt)}
+
+  \item The Whipple procedure (pancreaticoduodenectomy) removes the head of the
+        pancreas, the \blank[3cm], and the \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item The serum tumor marker associated with pancreatic cancer is
+        \blank[2cm].
+        \hfill\textit{(1 pt)}
+
+  \item A patient with pancreatic cancer presents with clay-colored stools, dark
+        urine, and jaundice.  This triad suggests \blank[3cm] obstruction and is
+        caused by blockage of the \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Post-Whipple, the priority nursing assessment includes monitoring blood
+        glucose for \blank[4cm] and observing drain output for signs of
+        \blank[4cm] leak.
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 7 --- Chronic Pancreatitis Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 6 ─────────────────────────────────────────────────
+\section{Week 7: Cholecystitis}
+
+\begin{diagbox}{Cholecystitis --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=41]
+
+  \item The most common cause of acute cholecystitis is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Risk factors for gallstones follow the \textbf{``5 F's''}:
+        \blank[2.5cm], \blank[2.5cm], \blank[2.5cm], \blank[2.5cm],
+        and \blank[2.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Murphy's sign is described as \blank[5cm] and is elicited by
+        \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Biliary colic presents as: sudden severe pain in the
+        \blank[3cm] quadrant, often radiating to the
+        \blank[3cm], lasting \blank[2cm] hours.
+        \hfill\textit{(1 pt)}
+
+  \item The preferred diagnostic imaging test for cholecystitis is
+        \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Acalculous cholecystitis (no gallstones present) most commonly occurs in
+        \blank[5cm] patients (name two populations).
+        \hfill\textit{(1 pt)}
+
+  \item The definitive treatment for symptomatic cholelithiasis is
+        \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Post-laparoscopic cholecystectomy, the nurse monitors for referred pain to
+        the \blank[3cm] caused by CO$_2$ insufflation, and monitors drain
+        output for signs of \blank[3cm] leak.
+        \hfill\textit{(1 pt)}
+
+  \item Charcot's Triad (fever, jaundice, RUQ pain) in a patient with cholecystitis
+        suggests the complication of \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Pre-operatively, nursing management for acute cholecystitis includes:
+        NPO status, IV \blank[2.5cm], and the analgesic of choice is
+        \blank[3cm] (avoid morphine due to sphincter of Oddi spasm).
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 7 --- Cholecystitis Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 7 ─────────────────────────────────────────────────
+\section{Week 7: Total Parenteral Nutrition (TPN)}
+
+\begin{diagbox}{Total Parenteral Nutrition (TPN) --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=51]
+
+  \item TPN is indicated when the GI tract is \blank[4cm] or
+        \blank[4cm].  List two clinical indications:
+        \blank[4cm] and \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item TPN must be infused through a \blank[3cm] venous catheter (e.g.,
+        PICC or CVC) because of its high \blank[3cm] (osmolarity).
+        \hfill\textit{(1 pt)}
+
+  \item The three macronutrient components of TPN are: \blank[2cm]
+        (carbohydrates), \blank[2cm] (amino acids/proteins), and
+        \blank[3cm] (lipid emulsion).
+        \hfill\textit{(1 pt)}
+
+  \item The most common metabolic complication of TPN is
+        \blank[3cm].  Monitor blood glucose every \blank[2cm] hours
+        initially.
+        \hfill\textit{(1 pt)}
+
+  \item Refeeding syndrome occurs when TPN is started in severely malnourished
+        patients and is characterized by a dangerous drop in serum
+        \blank[2.5cm] (electrolyte).
+        \hfill\textit{(1 pt)}
+
+  \item The nurse must change TPN tubing every \blank[2cm] hours and the
+        central line dressing every \blank[2cm] days per protocol to prevent
+        \blank[3cm] (infection).
+        \hfill\textit{(1 pt)}
+
+  \item TPN should never be abruptly discontinued because this can cause
+        \blank[4cm].  Taper the rate over \blank[2cm] hours.
+        \hfill\textit{(1 pt)}
+
+  \item A patient on TPN develops fever, chills, and hypotension.  Blood cultures
+        drawn from the central line are positive.  This complication is called
+        \blank[4cm] (CLABSI).
+        \hfill\textit{(1 pt)}
+
+  \item Lipid emulsions are generally contraindicated when serum triglycerides
+        exceed \blank[2cm] mg/dL.
+        \hfill\textit{(1 pt)}
+
+  \item True or False: Regular insulin may be added directly to the TPN bag
+        when persistently needed.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 7 --- TPN Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 8 ─────────────────────────────────────────────────
+\section{Week 7: NGN Unfolding Case Study --- GI Disorders}
+
+\begin{diagbox}{NGN Case Study: GI Disorders --- 10 Points}
+
+\noindent\textbf{Case:} A 52-year-old male with a history of alcohol use disorder is admitted
+with severe epigastric pain radiating to the back, nausea, vomiting $\times$2 days, and a
+serum lipase of 4{,}200 U/L (normal $<$160 U/L).  Vital signs: T 38.4\textdegree C,
+HR 112, BP 96/60, RR 22, SpO$_2$ 94\% on room air.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=61]
+
+  \item Which priority nursing assessment should the nurse perform \textbf{FIRST}?
+        \begin{enumerate}[label=$\bigcirc$]
+          \item Obtain IV access and draw labs
+          \item Assess pain level using a validated scale
+          \item Assess airway, breathing, and circulation (ABCs)
+          \item Insert urinary catheter to monitor output
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item The nurse anticipates which fluid resuscitation order?
+        \begin{enumerate}[label=$\bigcirc$]
+          \item D5W at 50 mL/hr
+          \item Lactated Ringer's at 250--500 mL/hr (aggressive hydration)
+          \item Normal saline at 30 mL/hr
+          \item Albumin 5\% infusion
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item After 48 hours, the patient has: WBC 18{,}000/mm$^3$, BUN 28 mg/dL,
+        glucose 240 mg/dL, and Ca$^{2+}$ 7.2 mg/dL.  Based on Ranson's Criteria,
+        this score indicates:
+        \begin{enumerate}[label=$\bigcirc$]
+          \item Mild pancreatitis (score 0--2)
+          \item Moderate pancreatitis (score 3--4)
+          \item Severe pancreatitis (score $\geq$5)
+          \item Insufficient data to score
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item New findings: absent bowel sounds, rigid abdomen, T 39.2\textdegree C,
+        WBC 22{,}000/mm$^3$.  The priority concern is the development of
+        \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item The physician orders enteral nutrition via nasojejunal tube rather than TPN.
+        The nurse's rationale for preferring enteral over parenteral nutrition is:
+        \blank[6cm].
+        \hfill\textit{(1 pt)}
+
+  \item Identify \textbf{two} nursing interventions for the patient's respiratory
+        status (SpO$_2$ 94\%, RR 22):
+        \begin{enumerate}[label=\alph*.]
+          \item \blank[7cm]
+          \item \blank[7cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item Three days later, CT reveals a pancreatic pseudocyst.  The nurse educates
+        the patient that this may resolve spontaneously within \blank[2cm] weeks
+        or require \blank[4cm] if it enlarges or causes symptoms.
+        \hfill\textit{(1 pt)}
+
+  \item Prior to discharge, the \textbf{MOST important} teaching to prevent
+        recurrence is:
+        \begin{enumerate}[label=$\bigcirc$]
+          \item Take pancreatic enzymes with every meal
+          \item Completely abstain from alcohol and follow a low-fat diet
+          \item Avoid all dairy products permanently
+          \item Take omeprazole daily to reduce gastric acid
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item One week post-discharge, the patient calls reporting clay-colored stools,
+        jaundice, and dark urine.  The nurse advises \blank[5cm] because
+        these symptoms suggest \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Using SBAR, the nurse communicates the patient's respiratory deterioration
+        to the physician.  In the \textbf{Assessment} component, the nurse should
+        state: \blank[8cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 7 --- NGN Case Study Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 8 — COMPLEX NERVOUS SYSTEM PROBLEMS
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 9 ─────────────────────────────────────────────────
+\section{Week 8: Stroke (CVA) \& Brain Tumors}
+
+\begin{diagbox}{Stroke (CVA) \& Brain Tumors --- 10 Points}
+
+\textbf{Directions:} Fill in each blank or circle the correct answer without using notes.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=71]
+
+  \item The BE-FAST mnemonic for stroke recognition stands for:
+        B = \blank[3cm], E = \blank[3cm], F = \blank[3cm],
+        A = \blank[3cm], S = \blank[3cm], T = \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item An ischemic stroke results from \blank[4cm], while a hemorrhagic
+        stroke results from \blank[4cm].  The most important early
+        diagnostic test is \blank[3cm] to differentiate the two.
+        \hfill\textit{(1 pt)}
+
+  \item tPA (alteplase) is indicated for ischemic stroke if given within
+        \blank[2cm] hours of symptom onset.  Two absolute contraindications
+        for tPA are: \blank[4cm] and \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Before administering tPA, the nurse must verify the blood pressure is
+        below \blank[3cm] mmHg.  After tPA, the nurse monitors for the
+        complication of \blank[4cm] and avoids \blank[3cm]
+        for 24 hours (anticoagulants/antiplatelets).
+        \hfill\textit{(1 pt)}
+
+  \item Match the stroke risk factor to its category:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{4cm}|p{1.5cm}|p{5cm}|}
+  \hline
+  \textbf{Risk Factor} & \textbf{Match} & \textbf{Category} \\
+  \hline
+  Hypertension         & \blank[1.2cm] & A.\ Modifiable \\
+  \hline
+  Age $>$55            & \blank[1.2cm] & B.\ Non-modifiable \\
+  \hline
+  Atrial fibrillation  & \blank[1.2cm] & A.\ Modifiable \\
+  \hline
+  Family history       & \blank[1.2cm] & B.\ Non-modifiable \\
+  \hline
+  Smoking              & \blank[1.2cm] & A.\ Modifiable \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(1 pt)}
+
+  \item A patient with a right-hemisphere ischemic stroke is most likely to
+        exhibit: \blank[4cm] (which side) hemiplegia, \blank[3cm]
+        (expressive/receptive) speech changes if any, and
+        \blank[4cm] (left/right) spatial neglect.
+        \hfill\textit{(1 pt)}
+
+  \item The most common primary brain tumor in adults is \blank[4cm].
+        Classic presenting symptoms of increased intracranial pressure (ICP) include
+        the Cushing's Triad: \blank[3cm], \blank[3cm],
+        and \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item After a craniotomy, the nurse positions the patient:
+        $\bigcirc$\,Flat in bed to prevent bleeding
+        $\bigcirc$\,Head of bed elevated 30--45\textdegree\ and in neutral alignment
+        $\bigcirc$\,Trendelenburg to improve cerebral perfusion
+        $\bigcirc$\,On the operative side to reduce brain shift
+        \hfill\textit{(1 pt)}
+
+  \item Post-craniotomy assessment priorities include monitoring for signs of
+        increasing ICP.  List three assessment findings indicating rising ICP:
+        \blank[3.5cm], \blank[3.5cm], \blank[3.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item True or False: In a patient with a brain tumor and increased ICP,
+        the nurse should administer hypotonic IV fluids (e.g., D5W) to maintain
+        adequate cerebral hydration.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 8 --- Stroke \& Brain Tumors Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 10 ────────────────────────────────────────────────
+\section{Week 8: Traumatic Brain Injury (TBI) \& NGN Practice}
+
+\begin{diagbox}{TBI \& NGN Practice: Nervous System --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=81]
+
+  \item Complete the table comparing hematoma types:
+
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
+  \hline
+  \textbf{Type} & \textbf{Vessel Involved} & \textbf{CT Appearance} & \textbf{Classic Presentation} \\
+  \hline
+  Epidural & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  Subdural & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  Intracerebral & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item The Glasgow Coma Scale (GCS) scores three components.  Complete the table:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{4cm}|p{2cm}|p{5cm}|}
+  \hline
+  \textbf{Component} & \textbf{Max Score} & \textbf{Best Response} \\
+  \hline
+  Eye Opening      & \blank[1.5cm] & \blank[4.5cm] \\
+  \hline
+  Verbal Response  & \blank[1.5cm] & \blank[4.5cm] \\
+  \hline
+  Motor Response   & \blank[1.5cm] & \blank[4.5cm] \\
+  \hline
+  \multicolumn{2}{|l|}{\textbf{Total GCS Range}} & Severe TBI: GCS $\leq$\blank[1.2cm]; Moderate: \blank[1.2cm]--\blank[1.2cm]; Mild: \blank[1.2cm]--\blank[1.2cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Nursing interventions to reduce ICP include (list four):
+        \begin{enumerate}[label=\arabic*.]
+          \item \blank[6cm]
+          \item \blank[6cm]
+          \item \blank[6cm]
+          \item \blank[6cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item \textbf{NGN Case:} A 28-year-old male is brought in after a motorcycle accident
+        (no helmet).  He was unconscious at the scene, regained consciousness briefly,
+        then became unresponsive again (``lucid interval'').  CT shows a biconvex
+        hyperdense lesion.  This presentation is most consistent with:
+        $\bigcirc$\,Subdural hematoma
+        $\bigcirc$\,Epidural hematoma
+        $\bigcirc$\,Intracerebral hemorrhage
+        $\bigcirc$\,Diffuse axonal injury
+        \hfill\textit{(1 pt)}
+
+  \item For the patient above, the nurse's priority assessment is to monitor
+        for \blank[4cm] syndrome (herniation).  The classic triad of
+        herniation includes: \blank[3cm], \blank[3cm], and \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item The nurse is caring for a patient post-TBI with GCS 7.  The priority
+        nursing concern is:
+        $\bigcirc$\,Risk for falls
+        $\bigcirc$\,Ineffective airway clearance / inability to protect airway
+        $\bigcirc$\,Impaired skin integrity
+        $\bigcirc$\,Deficient knowledge regarding injury
+        \hfill\textit{(1 pt)}
+
+  \item True or False: Mannitol (an osmotic diuretic) is used in TBI to reduce
+        cerebral edema by drawing fluid from brain tissue into the vascular space.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+  \item A TBI patient develops bradycardia, hypertension, and irregular respirations.
+        The nurse recognizes this as \blank[4cm] Triad, indicating
+        \blank[4cm], and the priority action is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 8 --- TBI \& NGN Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 10 — TRAUMA, MASS CASUALTY \& SPINAL CORD INJURIES
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 11 ────────────────────────────────────────────────
+\section{Week 10: Trauma Overview \& Hemorrhagic Shock}
+
+\begin{diagbox}{Trauma Overview, Primary Survey \& Hemorrhagic Shock --- 10 Points}
+
+\textbf{Directions:} Fill in each blank or circle the correct answer without using notes.
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=91]
+
+  \item The primary survey in trauma follows the \textbf{ABCDE} mnemonic.  Fill in each component:
+        A = \blank[3cm], B = \blank[3cm], C = \blank[3cm],
+        D = \blank[3cm], E = \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item The secondary survey uses the \textbf{AMPLE} history mnemonic:
+        A = \blank[3cm], M = \blank[3cm], P = \blank[3cm],
+        L = \blank[3cm], E = \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Complete the hemorrhagic shock classification table:
+
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+  \hline
+  \textbf{Class} & \textbf{Blood Loss} & \textbf{HR} & \textbf{BP} & \textbf{Mental Status} \\
+  \hline
+  I   & Up to \blank[1.2cm]\% & \blank[1.2cm] & Normal & \blank[2.5cm] \\
+  \hline
+  II  & \blank[1.2cm]--30\%   & \blank[1.2cm] & Normal--$\downarrow$ & \blank[2.5cm] \\
+  \hline
+  III & \blank[1.2cm]--40\%   & \blank[1.2cm] & $\downarrow$ & \blank[2.5cm] \\
+  \hline
+  IV  & $>$\blank[1.2cm]\%   & \blank[1.2cm] & $\downarrow\downarrow$ & \blank[2.5cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item In hemorrhagic shock, the \textbf{1:1:1} resuscitation ratio refers to
+        \blank[2.5cm] : \blank[2.5cm] : \blank[2.5cm]
+        (packed RBCs : FFP : platelets).  This approach is called
+        \blank[4cm] resuscitation.
+        \hfill\textit{(1 pt)}
+
+  \item Tension pneumothorax is a life-threatening thoracic injury.  Classic signs include:
+        tracheal deviation to the \blank[2cm] (affected/unaffected) side,
+        absent breath sounds, \blank[3cm] vein distension, and
+        hypotension.  Emergency treatment is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Name \textbf{four} other ``Deadly Dozen'' thoracic injuries:
+        \begin{multicols}{2}
+        \begin{enumerate}[label=\arabic*.]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+        \end{enumerate}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item Cardiac tamponade presents with Beck's Triad:
+        \blank[3cm], \blank[3cm], and \blank[3cm].
+        Emergency treatment is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item A patient post-trauma develops tachycardia, absent breath sounds on the left,
+        decreased oxygen saturation, and bowel sounds in the chest.
+        The nurse suspects \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item True or False: In hypovolemic/hemorrhagic shock, normal saline is the preferred
+        initial resuscitation fluid over lactated Ringer's because it is closer to normal
+        blood plasma composition.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 10 --- Trauma \& Hemorrhagic Shock Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 12 ────────────────────────────────────────────────
+\section{Week 10: MCI, Spinal Cord Injuries \& NGN Practice}
+
+\begin{diagbox}{MCI Triage, Spinal Cord Injuries \& NGN Practice --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=101]
+
+  \item The START triage system uses four color categories.  Match the category to its criteria:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{2cm}|p{1.5cm}|p{7cm}|}
+  \hline
+  \textbf{Color} & \textbf{Match} & \textbf{Criteria} \\
+  \hline
+  Red    & \blank[1.2cm] & A.\ Non-ambulatory; respirations $>$30 or $<$10; capillary refill $>$2 sec; or \emph{unable} to follow commands \\
+  \hline
+  Yellow & \blank[1.2cm] & B.\ Ambulatory (walking wounded); minor injuries \\
+  \hline
+  Green  & \blank[1.2cm] & C.\ No respirations after repositioning; deceased or unsalvageable \\
+  \hline
+  Black  & \blank[1.2cm] & D.\ Non-ambulatory; injuries serious but survivable with delayed care \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Complete the SCI level and functional implications table:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{2.5cm}|p{4.5cm}|p{4.5cm}|}
+  \hline
+  \textbf{SCI Level} & \textbf{Typical Deficits} & \textbf{Breathing/Functional Implications} \\
+  \hline
+  C1--C4  & \blank[4cm] & \blank[4cm] \\
+  \hline
+  C5--T1  & \blank[4cm] & \blank[4cm] \\
+  \hline
+  T2--L1  & \blank[4cm] & \blank[4cm] \\
+  \hline
+  L2--S1  & \blank[4cm] & \blank[4cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Spinal shock presents with: \blank[3cm] of reflexes below the injury,
+        \blank[3cm], and \blank[3cm].  It resolves when
+        \blank[4cm] returns (typically within weeks).
+        \hfill\textit{(1 pt)}
+
+  \item Neurogenic shock, which can occur with SCI above \blank[2cm] (vertebral level),
+        is characterized by: bradycardia and \blank[3cm] (hypotension/hypertension)
+        due to loss of \blank[4cm] tone.
+        \hfill\textit{(1 pt)}
+
+  \item Autonomic dysreflexia (AD) is a life-threatening emergency that occurs in SCI
+        at or above \blank[2cm].  Classic symptoms include severe
+        \blank[3cm], bradycardia, diaphoresis above the injury, and
+        flushing.  The nurse's \textbf{FIRST} action is:
+        $\bigcirc$\,Administer antihypertensive medication
+        $\bigcirc$\,Sit the patient upright and identify/remove the triggering stimulus
+        $\bigcirc$\,Place the patient supine with legs elevated
+        $\bigcirc$\,Increase IV fluid rate
+        \hfill\textit{(1 pt)}
+
+  \item The most common triggers of autonomic dysreflexia include (list two):
+        \blank[4cm] and \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item \textbf{NGN Case:} During an MCI drill, 50 patients are triaged.  A victim is found
+        unconscious, not breathing.  The responder repositions the airway; breathing does
+        not resume.  Using START triage, this patient is categorized as:
+        $\bigcirc$\,Red (immediate)
+        $\bigcirc$\,Yellow (delayed)
+        $\bigcirc$\,Green (minor)
+        $\bigcirc$\,Black (expectant/deceased)
+        \hfill\textit{(1 pt)}
+
+  \item An ambulatory patient at the MCI scene with a laceration on the arm and no
+        respiratory distress is categorized as:
+        $\bigcirc$\,Red
+        $\bigcirc$\,Yellow
+        $\bigcirc$\,Green
+        $\bigcirc$\,Black
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 10 --- MCI \& SCI Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 11 — BURNS / FLUIDS / ABGs
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 13 ────────────────────────────────────────────────
+\section{Week 11: Burns --- Classification, TBSA \& Fluid Resuscitation}
+
+\begin{diagbox}{Burns: Classification, Rule of Nines \& Parkland Formula --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=111]
+
+  \item Complete the burn depth classification table:
+
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
+  \hline
+  \textbf{Depth} & \textbf{Layers Involved} & \textbf{Appearance} & \textbf{Sensation} \\
+  \hline
+  Superficial (1st degree) & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  Partial thickness -- Superficial (2nd degree) & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  Partial thickness -- Deep (2nd degree) & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  Full thickness (3rd degree) & \blank[3cm] & \blank[3cm] & \blank[2cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Using the Rule of Nines, assign the \%TBSA to each body region:
+        \begin{multicols}{2}
+        \begin{itemize}[leftmargin=1em]
+          \item Head and neck = \blank[1.5cm]\%
+          \item Each arm = \blank[1.5cm]\%
+          \item Anterior trunk = \blank[1.5cm]\%
+          \item Posterior trunk = \blank[1.5cm]\%
+          \item Each leg = \blank[1.5cm]\%
+          \item Perineum = \blank[1.5cm]\%
+        \end{itemize}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item A patient weighing \textbf{80 kg} has burns to the entire anterior trunk and
+        both entire arms.  Calculate the TBSA: \blank[2cm]\%.
+        Using the Parkland Formula (4 mL $\times$ kg $\times$ \%TBSA), the
+        \textbf{total 24-hour fluid} requirement is \blank[3cm] mL.
+        \hfill\textit{(1 pt)}
+
+  \item Of that total volume, \blank[1.5cm]\% is given in the \textbf{first 8 hours}
+        (from time of burn, not admission) and \blank[1.5cm]\% in the next 16 hours.
+        \hfill\textit{(1 pt)}
+
+  \item The preferred resuscitation fluid in the Parkland Formula is
+        \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Name the \textbf{three zones} of burn injury and describe each:
+        \begin{enumerate}[label=\arabic*.]
+          \item Zone of \blank[2.5cm]: \blank[5cm]
+          \item Zone of \blank[2.5cm]: \blank[5cm]
+          \item Zone of \blank[2.5cm]: \blank[5cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+  \item Signs of inhalation injury include (select all that apply / list three):
+        \blank[3.5cm], \blank[3.5cm], \blank[3.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Circumferential full-thickness burns to an extremity may require
+        \blank[4cm] to relieve compartment syndrome.
+        \hfill\textit{(1 pt)}
+
+  \item Electrical burns require continuous \blank[3cm] monitoring because
+        of the risk of \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 11 --- Burns Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 14 ────────────────────────────────────────────────
+\section{Week 11: Burn Phases \& Fluids/Electrolytes}
+
+\begin{diagbox}{Burn Phases, Nursing Management \& IV Fluid Types --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=121]
+
+  \item Complete the burn phases table:
+
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{2.8cm}|p{3cm}|p{5.5cm}|}
+  \hline
+  \textbf{Phase} & \textbf{Time Frame} & \textbf{Priority Nursing Focus} \\
+  \hline
+  Emergent / Resuscitative & \blank[2.5cm] & \blank[5cm] \\
+  \hline
+  Acute / Intermediate & \blank[2.5cm] & \blank[5cm] \\
+  \hline
+  Rehabilitative & \blank[2.5cm] & \blank[5cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item The metabolic response to a major burn results in a \emph{hyper}metabolic
+        state.  Nutritional support should begin within \blank[2cm] hours;
+        the preferred route is \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item Curling's ulcer is a stress ulcer that occurs as a complication of major
+        burns.  Prevention includes administration of \blank[3cm]
+        and/or \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Classify each IV fluid solution as \emph{isotonic}, \emph{hypotonic}, or
+        \emph{hypertonic} and state one clinical indication:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{3.5cm}|p{2.5cm}|p{5cm}|}
+  \hline
+  \textbf{Solution} & \textbf{Tonicity} & \textbf{Clinical Use / Indication} \\
+  \hline
+  Normal Saline (0.9\% NaCl)   & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  Lactated Ringer's (LR)       & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  0.45\% NaCl (half-normal)    & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  D5W                          & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  3\% NaCl                     & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  D5 0.9\% NaCl                & \blank[2cm] & \blank[4.5cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Match the electrolyte imbalance to its clinical sign:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|p{4cm}|p{1.5cm}|p{6cm}|}
+  \hline
+  \textbf{Imbalance} & \textbf{Match} & \textbf{Clinical Sign / Symptom} \\
+  \hline
+  Hypokalemia    & \blank[1.2cm] & A.\ Chvostek's / Trousseau's sign; tetany \\
+  \hline
+  Hyperkalemia   & \blank[1.2cm] & B.\ Peaked T-waves; fatal arrhythmia \\
+  \hline
+  Hyponatremia   & \blank[1.2cm] & C.\ Muscle weakness; U-waves on ECG; constipation \\
+  \hline
+  Hypocalcemia   & \blank[1.2cm] & D.\ Confusion, seizures, cerebral edema \\
+  \hline
+  Hypernatremia  & \blank[1.2cm] & E.\ Extreme thirst, dry mucous membranes, confusion \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item A post-burn patient in the emergent phase develops oliguria despite fluid
+        resuscitation.  The priority nursing action is \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item During burn fluid resuscitation, the target urine output for adults is
+        \blank[2cm]--\blank[2cm] mL/hr.
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 11 --- Burn Phases Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 15 ────────────────────────────────────────────────
+\section{Week 11: ABG Interpretation}
+
+\begin{diagbox}{Arterial Blood Gas (ABG) Interpretation --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=131]
+
+  \item Complete the normal ABG reference values:
+        \begin{multicols}{2}
+        \begin{itemize}[leftmargin=1em]
+          \item pH: \blank[2.5cm]
+          \item PaCO$_2$: \blank[2.5cm] mmHg
+          \item HCO$_3^-$: \blank[2.5cm] mEq/L
+          \item PaO$_2$: \blank[2.5cm] mmHg
+          \item SaO$_2$: \blank[2.5cm]\%
+        \end{itemize}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item Use the ROME mnemonic to complete:
+        \textbf{R}espiratory \textbf{O}pposite --- if pH is \blank[1.5cm],
+        PaCO$_2$ is \blank[1.5cm].
+        \textbf{M}etabolic \textbf{E}qual --- if pH is \blank[1.5cm],
+        HCO$_3^-$ is \blank[1.5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Interpret the following ABGs (state: acid/base disorder, respiratory or
+        metabolic, compensated/uncompensated, and likely cause):
+
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.9}
+  \begin{tabular}{|c|c|c|p{2.5cm}|p{3.8cm}|}
+  \hline
+  \textbf{pH} & \textbf{PaCO$_2$} & \textbf{HCO$_3^-$} & \textbf{Interpretation} & \textbf{Likely Cause} \\
+  \hline
+  7.28 & 55 mmHg & 25 mEq/L & \blank[2.2cm] & \blank[3.8cm] \\
+  \hline
+  7.50 & 30 mmHg & 23 mEq/L & \blank[2.2cm] & \blank[3.8cm] \\
+  \hline
+  7.30 & 38 mmHg & 18 mEq/L & \blank[2.2cm] & \blank[3.8cm] \\
+  \hline
+  7.48 & 40 mmHg & 30 mEq/L & \blank[2.2cm] & \blank[3.8cm] \\
+  \hline
+  7.36 & 50 mmHg & 28 mEq/L & \blank[2.2cm] & \blank[3.8cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(5 pts)}
+
+  \item A burn patient on mechanical ventilation has pH 7.52 and PaCO$_2$ 28 mmHg.
+        The ventilator adjustment needed is to
+        $\bigcirc$\,increase \quad$\bigcirc$\,decrease
+        the respiratory rate.
+        \hfill\textit{(1 pt)}
+
+  \item A patient with prolonged nasogastric suctioning develops pH 7.52,
+        PaCO$_2$ 46 mmHg, HCO$_3^-$ 34 mEq/L.  This is
+        \blank[3cm] \blank[3cm] with \blank[3cm] compensation.
+        The nurse anticipates replacement of \blank[2.5cm] (electrolyte).
+        \hfill\textit{(1 pt)}
+
+  \item A patient with a heroin overdose has pH 7.22, PaCO$_2$ 68 mmHg,
+        HCO$_3^-$ 26 mEq/L.  The priority nursing intervention is
+        \blank[6cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 11 --- ABG Interpretation Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% WEEK 12 — END OF LIFE CARE
+% ══════════════════════════════════════════════════════════════
+
+% ── SECTION 16 ────────────────────────────────────────────────
+\section{Week 12: EOL Care Concepts \& Ethical/Legal Frameworks}
+
+\begin{diagbox}{End-of-Life Care: Concepts, Philosophy \& Ethics --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=141]
+
+  \item Palliative care differs from hospice care because palliative care
+        $\bigcirc$\,can begin at any illness stage alongside curative treatment
+        $\bigcirc$\,requires a prognosis of $\leq$6 months
+        $\bigcirc$\,focuses only on pain control
+        $\bigcirc$\,is only available in inpatient settings.
+        \hfill\textit{(1 pt)}
+
+  \item For hospice eligibility, a patient must have a prognosis of
+        \blank[2cm] months or less if the disease follows its natural course,
+        and must choose to \blank[5cm] (forgo curative treatment).
+        \hfill\textit{(1 pt)}
+
+  \item Match the legal/ethical document to its description:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{4.5cm}|p{1.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Document / Concept} & \textbf{Match} & \textbf{Description} \\
+  \hline
+  Advance Directive             & \blank[1.2cm] & A.\ Documents specific medical wishes while patient has decision-making capacity \\
+  \hline
+  Living Will                   & \blank[1.2cm] & B.\ Designates a surrogate decision-maker \\
+  \hline
+  Durable Power of Attorney for Healthcare & \blank[1.2cm] & C.\ Physician order specifying resuscitation wishes; immediately actionable \\
+  \hline
+  DNR / DNAR / AND order        & \blank[1.2cm] & D.\ Umbrella term for documents directing future medical care \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item A patient's family demands ``full code'' status, but the patient has a valid
+        documented DNR.  The nurse's \textbf{FIRST} action is:
+        $\bigcirc$\,Override the DNR and honor the family's wishes
+        $\bigcirc$\,Advocate for the patient's documented wishes; involve the ethics committee if needed
+        $\bigcirc$\,Contact risk management only
+        $\bigcirc$\,Remove the DNR order from the chart
+        \hfill\textit{(1 pt)}
+
+  \item The \textbf{principle of double effect} in EOL care means:
+        \blank[8cm].
+        \hfill\textit{(1 pt)}
+
+  \item \textbf{Futile treatment} is defined as: \blank[6cm].
+        \hfill\textit{(1 pt)}
+
+  \item True or False: Ethically and legally, \emph{withholding} treatment and
+        \emph{withdrawing} treatment are equivalent when the patient lacks decision-making
+        capacity and has an advance directive.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+  \item Which cultural consideration is \textbf{MOST} important when providing EOL care?
+        $\bigcirc$\,Assume all families want full disclosure of the terminal prognosis
+        $\bigcirc$\,Assess individual cultural and spiritual beliefs and preferences
+        $\bigcirc$\,Always defer to the eldest male family member
+        $\bigcirc$\,Provide standardized education regardless of background
+        \hfill\textit{(1 pt)}
+
+  \item POLST (Physician Orders for Life-Sustaining Treatment) differs from an advance
+        directive in that POLST: \blank[6cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 12 --- EOL Care Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 17 ────────────────────────────────────────────────
+\section{Week 12: Recognizing Approaching Death}
+
+\begin{diagbox}{Recognizing Approaching Death --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=151]
+
+  \item Match each sign of approaching death to its expected time before death:
+
+  \vspace{0.2cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|p{5cm}|p{1.5cm}|p{4.5cm}|}
+  \hline
+  \textbf{Sign} & \textbf{Match} & \textbf{Time Frame} \\
+  \hline
+  Withdrawal from activities, sleeping more & \blank[1.2cm] & A.\ Hours before death \\
+  \hline
+  Mottling of knees/feet, oliguria & \blank[1.2cm] & B.\ Days before death \\
+  \hline
+  Decreased oral intake, social withdrawal & \blank[1.2cm] & C.\ Weeks before death \\
+  \hline
+  Cheyne-Stokes respirations, fixed dilated pupils & \blank[1.2cm] & D.\ Minutes before death \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(2 pts)}
+
+  \item Mottling (livedo reticularis) is a bluish-purple skin discoloration caused by
+        \blank[4cm] and typically begins at the \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Cheyne-Stokes respirations are characterized by \blank[5cm].
+        This pattern indicates \blank[4cm].
+        \hfill\textit{(1 pt)}
+
+  \item The ``death rattle'' (noisy, gurgling respirations) is caused by
+        \blank[5cm].  The appropriate nursing intervention is
+        \blank[5cm] (not suctioning, which is distressing).
+        \hfill\textit{(1 pt)}
+
+  \item True or False: Decreased oral intake and refusal to eat in a terminally ill
+        patient represents neglect and requires aggressive nutritional intervention.
+        \quad$\bigcirc$\,True \quad$\bigcirc$\,False
+        \hfill\textit{(1 pt)}
+
+  \item Hearing is believed to be the \blank[2cm] (last/first) sense lost.
+        Therefore, the nurse should instruct family members to \blank[5cm]
+        at the bedside.
+        \hfill\textit{(1 pt)}
+
+  \item Oliguria and anuria in the actively dying patient result from
+        \blank[4cm].  The nurse should consider \blank[3cm]
+        (continuing/discontinuing) IV fluids if they are causing discomfort such as
+        edema or increased secretions.
+        \hfill\textit{(1 pt)}
+
+  \item List \textbf{four} signs that death has just occurred:
+        \begin{multicols}{2}
+        \begin{enumerate}[label=\arabic*.]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+        \end{enumerate}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item The nurse's \textbf{immediate} action after recognizing a patient has died is:
+        \blank[6cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 12 --- Approaching Death Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ── SECTION 18 ────────────────────────────────────────────────
+\section{Week 12: Symptom Management \& Postmortem Care}
+
+\begin{diagbox}{Symptom Management at End of Life \& Postmortem Care --- 10 Points}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=161]
+
+  \item The first-line drug class for moderate-to-severe pain at EOL is
+        \blank[3cm].  The principle of double effect justifies doses that
+        may \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Terminal dyspnea is best managed with low-dose \blank[3cm]
+        (reduces air-hunger sensation); benzodiazepines such as \blank[3cm]
+        are added for associated anxiety.
+        \hfill\textit{(1 pt)}
+
+  \item Palliative sedation is defined as \blank[6cm] and is considered
+        ethically appropriate when \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item List \textbf{four} non-pharmacological comfort measures at EOL:
+        \begin{multicols}{2}
+        \begin{enumerate}[label=\arabic*.]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+          \item \blank[4cm]
+        \end{enumerate}
+        \end{multicols}
+        \hfill\textit{(1 pt)}
+
+  \item Family-centered EOL care includes preparing families by explaining signs
+        of approaching death, facilitating presence at \blank[3cm], and
+        ensuring \blank[3cm] needs (spiritual, cultural, emotional) are addressed.
+        \hfill\textit{(1 pt)}
+
+  \item After a patient's death, the nurse's \textbf{FIRST} action is to
+        \blank[4cm], then notify \blank[3cm].
+        \hfill\textit{(1 pt)}
+
+  \item Postmortem care includes: close the patient's \blank[2cm], position
+        in \blank[3cm] alignment, remove all tubes and lines unless
+        \blank[4cm], and allow family \blank[4cm] time with the body.
+        \hfill\textit{(1 pt)}
+
+  \item Rigor mortis begins approximately \blank[2cm]--\blank[2cm] hours
+        after death and is caused by \blank[5cm].
+        \hfill\textit{(1 pt)}
+
+  \item Algor mortis refers to \blank[4cm]; body temperature decreases by
+        approximately \blank[2cm]\textdegree F per hour after death.
+        \hfill\textit{(1 pt)}
+
+  \item A newly bereaved family member is crying loudly and expressing anger at the
+        healthcare team.  The \textbf{BEST} nursing response is:
+        \blank[8cm].
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Week 12 --- Symptom Management Score:} \blank[1cm] / 10
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 13 — ANSWER KEY
+% ══════════════════════════════════════════════════════════════
+\section{Answer Key}
+
+\begin{keybox}
+
+Use this key to self-score.  Award full credit only when all required components are present.
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 6: Coagulation Disorders --- DIC, HIT, DVT/PE \& Hemophilia}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.}]
+  \item Simultaneous clotting (thrombosis) and bleeding (hemorrhage); triggers include sepsis, trauma, obstetric complications (abruptio placentae), malignancy, transfusion reactions
+  \item PT/PTT elevated; platelet count decreased; fibrinogen decreased; D-dimer elevated
+  \item Underlying (precipitating) cause; Fresh Frozen Plasma (FFP) and cryoprecipitate (or platelets); also accept packed RBCs
+  \item Platelet factor 4 (PF4); thrombosis (paradoxical clotting/thrombosis)
+  \item (a) Stop (immediately discontinue) all heparin products including heparin flushes; (b) Argatroban, bivalirudin, or fondaparinux (direct thrombin inhibitors/Factor Xa inhibitors)
+  \item Venous stasis; endothelial injury; hypercoagulability (increased coagulability)
+  \item Any three: sudden dyspnea; pleuritic chest pain; tachycardia; hemoptysis; hypoxia; anxiety; Priority: supplemental O$_2$, notify provider, prepare anticoagulation
+  \item Pharmacological: LMWH (enoxaparin/heparin); antiplatelet agents (aspirin); Non-pharmacological: sequential compression devices (SCDs/TEDs); early ambulation; leg exercises
+  \item Factor VIII; Factor IX; X-linked (sex-linked)
+  \item Second option: Immobilize joint, apply ice, administer factor replacement
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 6: Oncological Emergencies \& NGN Practice}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=11]
+  \item Cancer cells; hyperkalemia; hyperphosphatemia; hyperuricemia; hypocalcemia
+  \item IV hydration (0.9\% NS); allopurinol or rasburicase; cardiac/renal monitoring and electrolytes
+  \item Edema (facial/neck edema); headache worsening; lung cancer (or mediastinal tumors/lymphoma)
+  \item Shrink/reduce; inflammation/edema (accept: decrease edema)
+  \item Pain; extremity (leg/arm); paralysis/bowel/bladder changes; notify provider immediately and keep patient flat/log roll; administer corticosteroids per order
+  \item Bone (osteolysis); PTHrP (parathyroid hormone-related protein); psychosis (or moans)
+  \item Normal saline (NS); bisphosphonate (zoledronic acid/pamidronate); furosemide (Lasix)
+  \item B --- Tumor Lysis Syndrome
+  \item B --- Initiate aggressive IV hydration and cardiac monitoring
+  \item True
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 7: Acute Pancreatitis}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=21]
+  \item I=Idiopathic; G=Gallstones; E=Ethanol/Alcohol; T=Trauma; S=Steroids;
+        M=Mumps/Viral; A=Autoimmune; S=Scorpion sting; H=Hyperlipidemia/Hypercalcemia;
+        E=ERCP; D=Drugs (e.g., azathioprine, thiazides)
+  \item Gallstones (biliary); Alcohol use
+  \item Epigastric (upper abdominal); back (or left flank)
+  \item Retroperitoneal hemorrhage (severe necrotizing pancreatitis)
+  \item Serum lipase and serum amylase (lipase more specific)
+  \item Admission: Age $>$55 yr; WBC $>$16{,}000/mm$^3$; Glucose $>$200 mg/dL;
+        LDH $>$350 IU/L; AST $>$250 IU/L.\quad
+        48 h: Hct drop $>$10\%; BUN rise $>$5 mg/dL; Ca$^{2+}$ $<$8 mg/dL;
+        PaO$_2$ $<$60 mmHg; Base deficit $>$4 mEq/L
+  \item Lactated Ringer's (LR); 0.5--1 mL/kg/hr
+  \item Infected pancreatic necrosis (necrotizing pancreatitis with superinfection)
+  \item True
+  \item Endoscopic or surgical (percutaneous) drainage
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 7: Chronic Pancreatitis \& Pancreatic Cancer}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=31]
+  \item Alcohol (chronic alcohol use)
+  \item Chronic abdominal pain; steatorrhea (fatty/oily stools); diabetes mellitus
+  \item Exocrine (lipase, amylase, protease) enzymes
+  \item With each meal and snack (with fat-containing food); take with first bite
+  \item Head (approximately 70\% of cases)
+  \item Jaundice (obstructive/painless jaundice)
+  \item Duodenum; common bile duct (and sometimes the gallbladder)
+  \item CA 19-9 (carbohydrate antigen 19-9)
+  \item Biliary obstruction; common bile duct (or ampulla of Vater)
+  \item Hypoglycemia/hyperglycemia (glycemic instability); pancreatic anastomotic leak
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 7: Cholecystitis}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=41]
+  \item Cholelithiasis (gallstones)
+  \item Fat; Female; Fertile (or Forty); Fair (or Flatulent); Forty (age-based F may vary):
+        accept: obese/overweight, female, multiparous/fertile, fair-skinned, 40+ years
+  \item Inspiratory arrest/cessation due to RUQ pain on deep palpation beneath the right
+        costal margin during deep inspiration; the examiner presses under the right costal
+        margin while the patient inhales
+  \item Right upper quadrant (RUQ); right shoulder / right scapula; 1--5 hours
+  \item Abdominal ultrasound
+  \item Critically ill / ICU patients; post-surgical/trauma patients; patients on TPN
+  \item Laparoscopic cholecystectomy
+  \item Right shoulder (or right scapula); bile
+  \item Ascending cholangitis (bacterial infection of the bile duct)
+  \item IV antibiotics; ketorolac or NSAIDs (avoid morphine; meperidine sometimes used)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 7: TPN}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=51]
+  \item Non-functional / cannot be used / bowel obstruction or short-gut syndrome;
+        any two: severe pancreatitis, Crohn's disease with obstruction, post-surgical
+        ileus $>$7 days, high-output fistula, severe malabsorption
+  \item Central (central venous catheter / CVC / PICC); high osmolarity (hypertonic)
+  \item Dextrose; amino acids (protein); lipid emulsion (fat)
+  \item Hyperglycemia; every 4--6 hours (per protocol)
+  \item Phosphorus (phosphate; also potassium and magnesium can drop)
+  \item Every 24 hours; every 5--7 days; CLABSI (central line-associated bloodstream
+        infection)
+  \item Rebound hypoglycemia; 1--2 hours (taper gradually)
+  \item Central line-associated bloodstream infection (CLABSI)
+  \item 400 mg/dL (accept 400--500 mg/dL)
+  \item True
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 7: NGN Case Study --- GI Disorders}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=61]
+  \item C --- Assess ABCs first
+  \item B --- Aggressive hydration with LR at 250--500 mL/hr
+  \item B --- Moderate pancreatitis (elevated glucose, low Ca, elevated BUN/WBC = $\geq$3
+        Ranson's criteria points)
+  \item Infected pancreatic necrosis / sepsis / peritonitis
+  \item Enteral nutrition maintains gut barrier integrity, reduces bacterial translocation,
+        and is associated with fewer infectious complications than TPN
+  \item (a) Elevate HOB 30--45°; apply supplemental O$_2$ via nasal cannula;
+        (b) Monitor SpO$_2$ continuously; assess for pleural effusion; prepare for
+        possible intubation
+  \item 4--6 weeks; endoscopic or surgical drainage
+  \item B --- Complete alcohol abstinence and low-fat diet
+  \item Go to the emergency department immediately (call 911); obstructive jaundice /
+        biliary obstruction / ascending cholangitis
+  \item The nurse states the clinical interpretation and urgency: e.g., ``I believe the
+        patient is developing respiratory failure due to complications of pancreatitis and
+        needs immediate evaluation.''
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 8: Stroke (CVA) \& Brain Tumors}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=71]
+  \item B=Balance (sudden loss); E=Eyes (sudden vision changes); F=Face drooping; A=Arm weakness; S=Speech difficulty; T=Time to call 911
+  \item Occlusion of a cerebral artery (thrombus or embolus); rupture of a cerebral blood vessel; noncontrast CT scan of the head
+  \item 3--4.5 hours; any two: hemorrhagic stroke; recent major surgery ($<$14 days); active bleeding; BP $>$185/110; prior ICH; recent head trauma
+  \item Below 185/110 mmHg; hemorrhagic transformation (intracranial bleeding); anticoagulants/antiplatelets (e.g., aspirin, heparin)
+  \item Hypertension--A; Age $>$55--B; Atrial fibrillation--A; Family history--B; Smoking--A
+  \item Left-sided hemiplegia; minimal or no aphasia (right hemisphere is non-dominant for language); left-sided spatial neglect
+  \item Glioblastoma multiforme (GBM) or glioma; hypertension (widened pulse pressure), bradycardia, irregular respirations (Cushing's Triad)
+  \item Second option: HOB elevated 30--45° in neutral alignment
+  \item Any three: decreasing LOC/GCS; unequal or unreactive pupils; Cushing's Triad; projectile vomiting; severe headache; posturing (decerebrate/decorticate)
+  \item False (hypotonic fluids worsen cerebral edema; isotonic or hypertonic saline is used)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 8: Traumatic Brain Injury (TBI) \& NGN Practice}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=81]
+  \item Epidural: middle meningeal artery; biconvex (lens-shaped) hyperdense; lucid interval then rapid deterioration.
+        Subdural: bridging veins; crescent-shaped; gradual onset (acute) or insidious (chronic).
+        Intracerebral: brain parenchyma vessels; scattered hyperdense areas; focal neurological deficits.
+  \item Eye: 4 (spontaneous); Verbal: 5 (oriented); Motor: 6 (obeys commands); Severe TBI: $\leq$8; Moderate: 9--12; Mild: 13--15
+  \item Any four: HOB 30--45° neutral alignment; avoid hip flexion; administer osmotic diuretics (mannitol) per order; limit stimulation/cluster care; avoid Valsalva; monitor ICP if monitored; controlled ventilation (target PaCO$_2$ 35--40); maintain MAP; administer corticosteroids per order
+  \item B --- Epidural hematoma (lucid interval + biconvex lesion)
+  \item Transtentorial herniation (uncal herniation); fixed dilated ipsilateral pupil (blown pupil); contralateral hemiparesis; decreased LOC
+  \item B --- Ineffective airway clearance / inability to protect airway
+  \item True
+  \item Cushing's Triad; transtentorial herniation / severe increased ICP; notify provider immediately; prepare for emergent intervention (mannitol, hyperventilation, surgery)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 10: Trauma Overview \& Hemorrhagic Shock}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=91]
+  \item A=Airway (with C-spine protection); B=Breathing; C=Circulation (hemorrhage control); D=Disability (neuro/GCS); E=Exposure (undress patient/environment control)
+  \item A=Allergies; M=Medications; P=Past medical/surgical history; L=Last meal; E=Events leading to injury
+  \item Class I: up to 15\%; HR normal/slight $\uparrow$; BP normal; alert/normal.
+        Class II: 15--30\%; HR $>$100; BP normal-low; anxious/mildly confused.
+        Class III: 30--40\%; HR $>$120; BP decreased; confused/agitated.
+        Class IV: $>$40\%; HR $>$140; BP severely low; lethargic/unconscious
+  \item Packed RBCs : Fresh Frozen Plasma (FFP) : Platelets (1:1:1); damage control (hemostatic) resuscitation
+  \item Unaffected (contralateral/opposite); jugular (JVD); needle decompression (needle thoracocentesis), followed by chest tube
+  \item Any four from the Deadly Dozen: open pneumothorax; hemothorax; flail chest; cardiac tamponade; aortic disruption (traumatic aortic injury); diaphragmatic rupture; tracheal/bronchial injury; pulmonary contusion; esophageal rupture; myocardial contusion; simple pneumothorax; rib fractures
+  \item Muffled heart sounds; jugular venous distension (JVD); hypotension; pericardiocentesis (emergency needle aspiration of pericardial sac)
+  \item Diaphragmatic (traumatic diaphragmatic) hernia/rupture with bowel herniation into chest
+  \item False (LR is preferred over NS in hemorrhagic shock; lower risk of hyperchloremic acidosis)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 10: MCI Triage, Spinal Cord Injuries \& NGN Practice}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=101]
+  \item Red--A; Yellow--D; Green--B; Black--C
+  \item C1--C4: quadriplegia (tetraplegia), all four limbs affected; ventilator-dependent (C1--C3), possible ventilator-free with C4.
+        C5--T1: quadriplegia with some arm/hand function; independent breathing.
+        T2--L1: paraplegia; full arm function; bowel/bladder dysfunction.
+        L2--S1: incomplete paraplegia; bowel/bladder/sexual dysfunction; lower extremity weakness
+  \item Loss (flaccid paralysis); urinary retention; loss of bowel/bladder function; bulbocavernosus reflex
+  \item T6 (accept T4--T6); hypotension; sympathetic nervous system (vasomotor)
+  \item T6 (accept T4); hypertension; second option: sit patient upright and identify/remove triggering stimulus
+  \item Bladder distension (full bladder); bowel impaction; skin irritation/pressure ulcer; tight clothing
+  \item D --- Black (expectant/deceased; no breathing after airway repositioning)
+  \item C --- Green (ambulatory/walking wounded with minor injuries)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 11: Burns --- Classification, TBSA \& Parkland}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=111]
+  \item Superficial: epidermis only; dry/red/no blisters; painful.
+        Partial-thickness superficial: epidermis + superficial dermis; red/moist/blisters; very painful.
+        Partial-thickness deep: epidermis + deep dermis; pale/mottled; less painful (nerve damage).
+        Full-thickness: all skin layers (may include fat/muscle); dry/leathery/white-brown; painless.
+  \item Head/neck = 9\%; Each arm = 9\%; Anterior trunk = 18\%; Posterior trunk = 18\%;
+        Each leg = 18\%; Perineum = 1\%
+  \item TBSA = 36\% (anterior trunk 18\% + each arm 9\%$\times$2).
+        Total fluid = 4 $\times$ 80 $\times$ 36 = 11{,}520 mL
+  \item 50\% in first 8 hours; 50\% in next 16 hours
+  \item Lactated Ringer's (LR)
+  \item Coagulation (central zone; irreversible cell death);
+        Stasis (middle zone; potentially salvageable with intervention);
+        Hyperemia (outer zone; inflammatory; will recover)
+  \item Any three: singed nasal hairs; carbonaceous sputum; hoarseness/stridor; facial burns;
+        burns in enclosed space; respiratory distress
+  \item Escharotomy
+  \item Cardiac monitoring (telemetry/ECG); ventricular arrhythmias (V-fib)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 11: Burn Phases, Nursing Management \& IV Fluids}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=121]
+  \item Emergent: first 24--72 h; airway management, fluid resuscitation, pain control.
+        Acute/Intermediate: days 2 through wound closure; wound care, infection prevention, nutrition.
+        Rehabilitative: wound closure through full recovery; physical therapy, scar management, psychosocial support.
+  \item Within 6 hours of injury; enteral (nasogastric or nasojejunal) nutrition preferred
+  \item H$_2$-receptor blockers (e.g., famotidine) and/or proton pump inhibitors (PPIs)
+  \item NS: isotonic; volume replacement, medication administration.
+        LR: isotonic; burn resuscitation, surgical hydration.
+        0.45\% NaCl: hypotonic; free water replacement, hypernatremia treatment.
+        D5W: isotonic in bag (hypotonic in body); free water/caloric supplement, drug dilution.
+        3\% NaCl: hypertonic; severe symptomatic hyponatremia, cerebral edema.
+        D5 0.9\% NaCl: hypertonic; maintenance fluid with dextrose.
+  \item Hypokalemia--C; Hyperkalemia--B; Hyponatremia--D; Hypocalcemia--A; Hypernatremia--E
+  \item Notify the provider; assess fluid balance; adjust fluid rate; check for signs of
+        renal failure or inadequate resuscitation
+  \item 30--50 mL/hr (adults; 1 mL/kg/hr in children)
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 11: ABG Interpretation}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=131]
+  \item pH 7.35--7.45; PaCO$_2$ 35--45 mmHg; HCO$_3^-$ 22--26 mEq/L;
+        PaO$_2$ 80--100 mmHg; SaO$_2$ $\geq$95\%
+  \item ROME: if pH is low/acidosis, PaCO$_2$ is high; if pH is high/alkalosis,
+        PaCO$_2$ is low; ME = if pH is low, HCO$_3^-$ is low; if pH is high,
+        HCO$_3^-$ is high
+  \item Row 1 (7.28/55/25): Uncompensated respiratory acidosis; hypoventilation (COPD, opioids,
+        sedation). Row 2 (7.50/30/23): Uncompensated respiratory alkalosis; hyperventilation
+        (anxiety, pain, hypoxia). Row 3 (7.30/38/18): Uncompensated metabolic acidosis;
+        DKA, diarrhea, sepsis. Row 4 (7.48/40/30): Uncompensated metabolic alkalosis;
+        vomiting, NG suction, excess NaHCO$_3$. Row 5 (7.36/50/28): Compensated respiratory
+        acidosis (partially compensated); COPD with renal compensation.
+  \item Decrease (reduce RR to allow PaCO$_2$ to rise and correct alkalosis)
+  \item Metabolic alkalosis with respiratory compensation;
+        chloride (KCl or NaCl replacement)
+  \item Prepare for airway management / assisted ventilation; administer naloxone (Narcan)
+        per order
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 12: EOL Concepts \& Ethical/Legal Frameworks}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=141]
+  \item First option: can begin at any illness stage alongside curative treatment
+  \item 6 months; elect comfort/palliative care only (forgo curative treatment)
+  \item Advance Directive--D; Living Will--A; DPAHC--B; DNR/DNAR--C
+  \item Second option: Advocate for patient's documented wishes; involve ethics committee
+  \item Giving a medication (e.g., high-dose opioids) to relieve suffering where a secondary
+        effect (hastening death) is possible but not intended
+  \item Treatment that provides no reasonable benefit to the patient and may prolong suffering
+  \item True
+  \item Second option: Assess individual cultural and spiritual beliefs and preferences
+  \item POLST is an actual physician's order (immediately actionable) rather than a patient
+        document; it travels with the patient across care settings
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 12: Recognizing Approaching Death}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=151]
+  \item Withdrawal/sleeping more--C; Mottling/oliguria--B;
+        Decreased oral intake--C (weeks); Cheyne-Stokes/fixed pupils--A/D
+        (accept: Cheyne-Stokes = hours, fixed pupils = minutes/at death)
+  \item Peripheral circulatory failure / slowing of blood flow; knees, feet, or ankles
+  \item Cycles of apnea alternating with crescendo-decrescendo breaths; decreased cerebral
+        perfusion / brainstem compromise
+  \item Relaxation of oropharyngeal muscles pooling of secretions the patient can no longer
+        clear; reposition patient (lateral/semi-prone); gentle oral suctioning only if
+        distressing; anticholinergic medications (e.g., glycopyrrolate)
+  \item False (it is a normal part of the dying process; forced feeding is inappropriate)
+  \item Last; continue speaking gently and share positive words/memories
+  \item Decreased renal perfusion / multi-organ failure; consider discontinuing IV fluids if
+        causing peripheral edema or increased secretions
+  \item Any four: absence of heartbeat/pulse; cessation of respirations; fixed dilated pupils;
+        jaw relaxation; loss of skin color/pallor; mottling; absence of bowel/bladder function
+  \item Verify absence of pulse/respirations; notify the attending physician/provider;
+        document the time of death
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────────
+\hrulefill
+\subsection*{Week 12: Symptom Management \& Postmortem Care}
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},start=161]
+  \item Opioids (morphine is first-line); shorten life as a secondary/unintended effect when
+        intent is comfort
+  \item Morphine (low dose); lorazepam (or midazolam)
+  \item Use of sedating medications to reduce consciousness to relieve refractory suffering at
+        end of life; when symptom burden is refractory to all other treatments and the patient
+        or surrogate consents
+  \item Any four: mouth care / oral moistening; repositioning for comfort; music therapy;
+        therapeutic touch / massage; calm/quiet environment; aromatherapy; familiar voices
+  \item The time of death; spiritual/religious
+  \item Pronounce/confirm/verify death; the attending physician (provider) and notify family
+  \item Eyes; supine with head slightly elevated; autopsy/medical examiner is not required;
+        private uninterrupted
+  \item 2--6 hours; depletion of ATP causing actin-myosin cross-bridge lock
+  \item Post-mortem cooling of the body; approximately 1--1.5\textdegree F per hour
+  \item Acknowledge the family's grief and emotions with empathy; allow them to express
+        feelings without judgment; offer presence and support
+\end{enumerate}
+
+\end{keybox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 14 — SKILL GAP ANALYSIS
+% ══════════════════════════════════════════════════════════════
+\section{Skill Gap Analysis}
+
+\begin{gapbox}
+
+\textbf{Directions:} After scoring each section using the Answer Key, record
+your scores below.  A score $<$7/10 (\textless\,70\%) marks a \textbf{priority gap} that
+requires focused review.
+
+\vspace{0.4cm}
+\begin{center}
+\renewcommand{\arraystretch}{2.0}
+\begin{longtable}{|p{6cm}|c|p{5.5cm}|}
+\hline
+\textbf{Week / Skill Area} & \textbf{Score /10}
+  & \textbf{Priority Gap?\newline Specific Items Missed} \\
+\hline
+\endhead
+Week 6 --- Coagulation Disorders (DIC, HIT, DVT/PE, Hemophilia) & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 6 --- Oncological Emergencies (TLS, SVCS, SCC, Hypercalcemia) & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 7 --- Acute Pancreatitis & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 7 --- Chronic Pancreatitis / Pancreatic Cancer & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 7 --- Cholecystitis & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 7 --- TPN & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 7 --- NGN Case Study: GI & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 8 --- Stroke (CVA) \& Brain Tumors & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 8 --- TBI \& Nervous System NGN & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 10 --- Trauma Overview \& Hemorrhagic Shock & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 10 --- MCI Triage \& Spinal Cord Injuries & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 11 --- Burns: Classification / TBSA / Parkland & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 11 --- Burn Phases / Fluids \& Electrolytes & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 11 --- ABG Interpretation & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 12 --- EOL Concepts \& Ethics & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 12 --- Recognizing Approaching Death & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+Week 12 --- Symptom Management / Postmortem & \blank[1cm] & $\bigcirc$\,Yes\quad$\bigcirc$\,No \newline Items: \blank[4.5cm] \\
+\hline
+\textbf{TOTAL} & \textbf{\blank[1cm] / 170} & \\
+\hline
+\end{longtable}
+\end{center}
+
+\vspace{0.4cm}
+
+\textbf{Overall Performance Interpretation:}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|p{4.5cm}|p{7cm}|}
+\hline
+\textbf{Total Score} & \textbf{Performance Level} & \textbf{Recommended Action} \\
+\hline
+153--170 & Strong command of material & Light review; focus on missed specifics \\
+\hline
+119--152 & Solid foundation; gaps present & Review flagged sections; rework missed items \\
+\hline
+85--118  & Moderate knowledge gaps & Systematic review of all flagged sections \\
+\hline
+$<$85    & Significant gaps identified & Full re-study; use study guides start-to-finish \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+
+\textbf{My top 3 priority skill gaps are:}
+\begin{enumerate}
+  \item \blank[10cm]
+  \item \blank[10cm]
+  \item \blank[10cm]
+\end{enumerate}
+
+\end{gapbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 15 — PERSONALIZED STUDY PLAN
+% ══════════════════════════════════════════════════════════════
+\section{Personalized Study Plan}
+
+\begin{planbox}
+
+Use this template to build a targeted review plan based on the skill gaps identified in
+the Skill Gap Analysis.  List only the sections where you scored \textless\,70\% (\textless\,7/10).
+
+\vspace{0.4cm}
+
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\begin{longtable}{|p{3.0cm}|p{2.8cm}|p{2.8cm}|p{2.3cm}|p{1.9cm}|}
+\hline
+\textbf{Priority Skill Gap} & \textbf{Resource / Section to Review}
+  & \textbf{Specific Concepts to Master} & \textbf{Target Study Date} & \textbf{Done?} \\
+\hline
+\endhead
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\blank[3cm] & \blank[2.8cm] & \blank[2.8cm] & \blank[2.2cm] & $\bigcirc$ \\
+\hline
+\end{longtable}
+\end{center}
+
+\vspace{0.4cm}
+
+\textbf{Recommended resources for each gap area:}
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Week 6 --- Coagulation Disorders (DIC, HIT, DVT/PE, Hemophilia)} $\rightarrow$
+        \texttt{main.tex} hematology section; ATI Med-Surg Hematology module; ACC/AHA DVT/PE guidelines
+  \item \textbf{Week 6 --- Oncological Emergencies (TLS, SVCS, SCC, Hypercalcemia)} $\rightarrow$
+        ATI Oncology module; ONS clinical practice resources; \texttt{main.tex} oncology section
+  \item \textbf{Week 7 --- Acute Pancreatitis / Chronic Pancreatitis / Pancreatic Cancer} $\rightarrow$
+        \texttt{main.tex} GI sections; ATI Med-Surg GI/Endocrine module
+  \item \textbf{Week 7 --- Cholecystitis} $\rightarrow$
+        \texttt{main.tex} biliary sections; ATI Med-Surg Hepatic/Biliary module
+  \item \textbf{Week 7 --- TPN} $\rightarrow$
+        \texttt{main.tex} TPN section; ATI Nutrition module
+  \item \textbf{Week 8 --- Stroke (CVA) \& Brain Tumors} $\rightarrow$
+        ATI Med-Surg Neurological module; AHA Stroke Guidelines; tPA eligibility checklist
+  \item \textbf{Week 8 --- TBI \& Nervous System NGN} $\rightarrow$
+        ATI Med-Surg Neurological module; GCS reference card; \texttt{main.tex} neuro section
+  \item \textbf{Week 10 --- Trauma \& Hemorrhagic Shock} $\rightarrow$
+        ATI Med-Surg Emergency/Trauma module; ATLS primary survey reference; EAST trauma guidelines
+  \item \textbf{Week 10 --- MCI Triage \& Spinal Cord Injuries} $\rightarrow$
+        ATI Med-Surg Emergency module; START triage algorithm; \texttt{main.tex} SCI section
+  \item \textbf{Week 11 --- Burns} $\rightarrow$
+        ATI Med-Surg Integumentary module; Parkland Formula reference card
+  \item \textbf{Week 11 --- Fluids \& Electrolytes} $\rightarrow$
+        ATI Fluid \& Electrolytes module; IV fluid tonicity chart
+  \item \textbf{Week 11 --- ABGs} $\rightarrow$
+        ROME mnemonic reference; ATI ABG interpretation module
+  \item \textbf{Week 12 --- EOL / Ethical Frameworks} $\rightarrow$
+        \texttt{main.tex} EOL section; ATI End-of-Life module; ANA position statements
+  \item \textbf{Week 12 --- Recognizing Death / Postmortem} $\rightarrow$
+        \texttt{main.tex} EOL section; ATI palliative/hospice module
+\end{itemize}
+
+\vspace{0.4cm}
+
+\begin{tcolorbox}[colback=blue!4!white,colframe=blue!60!black,title=\textbf{After Your Review Session},fonttitle=\bfseries,breakable]
+\begin{enumerate}[leftmargin=1.5em]
+  \item Return to \textbf{Section 1} and complete the \emph{Post-Review} column of the
+        Self-Rating Checklist.
+  \item Compare pre- and post-review totals.  A gain of $\geq$10 points indicates
+        meaningful knowledge acquisition.
+  \item Rework the specific diagnostic questions you missed the first time.
+  \item If any gap area still scores $<$7/10 on re-attempt, schedule an additional
+        review session or seek clarification from your instructor.
+\end{enumerate}
+\end{tcolorbox}
+
+\end{planbox}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{\Large You identified your gaps.  Now you own them.}\\[0.4cm]
+\textit{Targeted practice beats passive re-reading every time.  Good luck on your exam!}
+\end{center}
+
+\end{document}
