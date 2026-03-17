@@ -15,7 +15,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb}
 \usepackage{needspace}
-\usepackage{microtype}
+\usepackage[expansion=false]{microtype}
 \setlength{\headheight}{14.5pt}
 \setlength{\emergencystretch}{5em}
 \hbadness=10000
@@ -1096,18 +1096,18 @@ A bonus \textbf{Ski Slope} section appears at the end.
         direction perpendicular to the moment arm.}
         \[
           \tau = rF\sin\theta = (0.45\,\mathrm{m})(60\,\mathrm{N})\sin 40^\circ
-               = (27)(0.6428) \approx \mathbf{17.4\text{ N{\cdot}m}}
+               = (27)(0.6428) \approx \mathbf{17.4\,\mathrm{N{\cdot}m}}
         \]
 
   \item \textit{Rationale: Only force components perpendicular to the beam create
         torque about the pin. Resolve $F_2$ vertically. CCW\,$=$\,positive.}
         \begin{align*}
-          \tau_1 &= -(80)(0.60) = -48.0\text{ N{\cdot}m}\\
+          \tau_1 &= -(80)(0.60) = -48.0\,\mathrm{N{\cdot}m}\\
           \tau_2 &= +(120\sin 50^\circ)(1.50)
                   = +(120\times 0.7660)(1.50)
-                  = +(91.92)(1.50) = +137.9\text{ N{\cdot}m}\\
-          \tau_3 &= -(50)(2.40) = -120.0\text{ N{\cdot}m}\\
-          \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\text{ N{\cdot}m}}
+                  = +(91.92)(1.50) = +137.9\,\mathrm{N{\cdot}m}\\
+          \tau_3 &= -(50)(2.40) = -120.0\,\mathrm{N{\cdot}m}\\
+          \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\,\mathrm{N{\cdot}m}}
         \end{align*}
         Negative $\Rightarrow$ \textbf{clockwise} rotation.
 
@@ -1121,14 +1121,14 @@ A bonus \textbf{Ski Slope} section appears at the end.
         \]
         (b) With $F = 5.0$\,N:
         \[
-          \tau_{\rm net} = (5.0)(1.50) - (12)(0.80) = 7.5 - 9.6 = \mathbf{-2.1\text{ N{\cdot}m (CW)}}
+          \tau_{\rm net} = (5.0)(1.50) - (12)(0.80) = 7.5 - 9.6 = \mathbf{-2.1\,\mathrm{N{\cdot}m\,(CW)}}
         \]
 
   \item \textit{Rationale: Newton's 2nd law for rotation $\tau = I\alpha$ gives
         $\alpha$; constant-$\alpha$ kinematics give $\omega$ and $\theta$.}\\[4pt]
         (a)
         \[
-          \tau = rF = (0.30\,\mathrm{m})(9.0\,\mathrm{N}) = 2.70\text{ N{\cdot}m}
+          \tau = rF = (0.30\,\mathrm{m})(9.0\,\mathrm{N}) = 2.70\,\mathrm{N{\cdot}m}
           \;\Rightarrow\; \alpha = \frac{\tau}{I} = \frac{2.70}{0.60} = \mathbf{4.5\text{ rad/s}^2}
         \]
         (b) $\omega = \omega_0 + \alpha t = 0 + (4.5)(4.0) = \mathbf{18.0\text{ rad/s}}$
@@ -1265,7 +1265,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
   \item \textit{Rationale: Choose the hinge as pivot to eliminate unknown hinge
         forces from the torque equation; then use $\sum F=0$ for the components.}
         \[
-          T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\text{ N{\cdot}m}
+          T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\,\mathrm{N{\cdot}m}
         \]
         \[
           T=\frac{2940}{5.0\times\sin35^\circ}=\frac{2940}{5.0\times0.5736}
@@ -1296,7 +1296,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
   \item \textit{Rationale: Pivot at the hinge to find $T_w$ directly; then close
         the force balance to find the hinge reaction.}
         \[
-          T_w(1.2)=(4.0)(9.8)(0.60)+(10)(9.8)(0.80)=23.52+78.40=101.9\text{ N{\cdot}m}
+          T_w(1.2)=(4.0)(9.8)(0.60)+(10)(9.8)(0.80)=23.52+78.40=101.9\,\mathrm{N{\cdot}m}
         \]
         \[
           T_w=\frac{101.9}{1.2}\approx\mathbf{84.9\text{ N (upward)}}
@@ -1314,7 +1314,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
           T_c\times4.915
             &=(25)(9.8)(3.0\cos55^\circ)+(60)(9.8)(6.0\cos55^\circ)\\
             &=(25\times9.8\times3.0\times0.5736)+(60\times9.8\times6.0\times0.5736)\\
-            &=420.7+2023.3=2444\text{ N{\cdot}m}
+            &=420.7+2023.3=2444\,\mathrm{N{\cdot}m}
         \end{align*}
         \[
           T_c=\frac{2444}{4.915}\approx\mathbf{497\text{ N}}
@@ -1385,7 +1385,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
         for sliding, $F=\mu_s mg$.}\\[4pt]
         (a)
         \[
-          F_{\rm tip}(1.10)=mg(0.30)=(80)(9.8)(0.30)=235.2\text{ N{\cdot}m}
+          F_{\rm tip}(1.10)=mg(0.30)=(80)(9.8)(0.30)=235.2\,\mathrm{N{\cdot}m}
           \;\Rightarrow\;F_{\rm tip}=\frac{235.2}{1.10}\approx\mathbf{214\text{ N}}
         \]
         (b) $F_{\rm slide}=\mu_s mg=(0.45)(80)(9.8)=\mathbf{353\text{ N}}$
@@ -1561,7 +1561,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
         (a)
         \[
           F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)
-                    =1.783+11.319=13.10\text{ N{\cdot}m}
+                    =1.783+11.319=13.10\,\mathrm{N{\cdot}m}
         \]
         \[
           F_B=\frac{13.10}{0.040}\approx\mathbf{328\text{ N (upward)}}
@@ -1575,7 +1575,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
         torque about the lumbar joint. Pivot at the lumbar joint.}\\[4pt]
         (a) $W_\perp=430\cos35^\circ=430\times0.8192=352.3$\,N.
         \[
-          F_m(0.060)=(352.3)(0.38)=133.9\text{ N{\cdot}m}
+          F_m(0.060)=(352.3)(0.38)=133.9\,\mathrm{N{\cdot}m}
           \;\Rightarrow\;F_m=\frac{133.9}{0.060}\approx\mathbf{2232\text{ N}}
         \]
         (b) $R_\parallel=430\sin35^\circ=430\times0.5736=246.6$\,N;\quad
@@ -1600,7 +1600,7 @@ A bonus \textbf{Ski Slope} section appears at the end.
         (a)
         \[
           F_D(0.15\sin15^\circ)=(4.0)(9.8)(0.33)+(15)(9.8)(0.70)
-                               =12.94+102.9=115.8\text{ N{\cdot}m}
+                               =12.94+102.9=115.8\,\mathrm{N{\cdot}m}
         \]
         \[
           F_D=\frac{115.8}{0.15\times0.2588}=\frac{115.8}{0.03882}\approx\mathbf{2983\text{ N}}
