@@ -15,7 +15,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb}
 \usepackage{needspace}
-\usepackage{microtype}
+\usepackage[expansion=false]{microtype}
 \setlength{\headheight}{14.5pt}
 \setlength{\emergencystretch}{5em}
 \hbadness=10000
@@ -1079,16 +1079,16 @@ for correct reasoning with arithmetic errors.
 
   \item \[
           \tau = rF\sin\theta = (0.45)(60)\sin 40^\circ
-               = 27\times 0.643 \approx \mathbf{17.4\text{ N{\cdot}m}}
+               = 27\times 0.643 \approx \mathbf{17.4\,\mathrm{N{\cdot}m}}
         \]
 
   \item Only the \emph{vertical component} of each force creates torque about the
         left-end pin.
         \begin{align*}
-          \tau_1 &= -(80)(0.60) = -48.0\text{ N{\cdot}m}\\
-          \tau_2 &= +(120\sin 50^\circ)(1.50) = +(91.9)(1.50) = +137.9\text{ N{\cdot}m}\\
-          \tau_3 &= -(50)(2.40) = -120.0\text{ N{\cdot}m}\\
-          \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\text{ N{\cdot}m}}
+          \tau_1 &= -(80)(0.60) = -48.0\,\mathrm{N{\cdot}m}\\
+          \tau_2 &= +(120\sin 50^\circ)(1.50) = +(91.9)(1.50) = +137.9\,\mathrm{N{\cdot}m}\\
+          \tau_3 &= -(50)(2.40) = -120.0\,\mathrm{N{\cdot}m}\\
+          \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\,\mathrm{N{\cdot}m}}
         \end{align*}
         Negative net torque $\Rightarrow$ the beam rotates \textbf{clockwise}.
 
@@ -1175,7 +1175,7 @@ for correct reasoning with arithmetic errors.
 
   \item Torques about hinge:
         \[
-          T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\text{ N{\cdot}m}
+          T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\,\mathrm{N{\cdot}m}
         \]
         \[
           T=\frac{2940}{5.0\sin35^\circ}=\frac{2940}{2.868}\approx\mathbf{1025\text{ N}}
@@ -1330,7 +1330,7 @@ for correct reasoning with arithmetic errors.
 
   \item (a) Torques about elbow:
         \[
-          F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)=1.78+11.32=13.10\text{ N{\cdot}m}
+          F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)=1.78+11.32=13.10\,\mathrm{N{\cdot}m}
         \]
         \[
           F_B=\frac{13.10}{0.040}\approx\mathbf{328\text{ N}}\text{ (upward)}
@@ -1343,7 +1343,7 @@ for correct reasoning with arithmetic errors.
             $W_\perp=430\cos35^\circ=352$\,N.\\
         Torques about lumbar pivot:
         \[
-          F_m(0.060)=352(0.38)=133.8\text{ N{\cdot}m}
+          F_m(0.060)=352(0.38)=133.8\,\mathrm{N{\cdot}m}
           \;\Rightarrow\;F_m\approx\mathbf{2230\text{ N}}
         \]
         (b) Force balance on upper body (spine-axis components):\\
