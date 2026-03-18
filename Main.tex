@@ -774,6 +774,376 @@ Ubiquitylation & H2BK120ub & Elongation; promotes H3K4 methylation \\
 
 \end{diagbox}
 
+% ────────────────────────────────────────────────────────────
+\section{Gene Regulation in Prokaryotes}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Introduction to Gene Regulation}
+
+\begin{diagbox}{25. Introduction to Gene Regulation in Prokaryotes}
+
+\textbf{Gene regulation} means the level of gene expression can vary under different conditions.
+
+\vspace{0.3cm}
+\textbf{Unregulated (constitutive) genes:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Constant levels of expression.
+  \item Encode proteins continuously necessary for organism survival.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Why regulate genes?} Encoded proteins are produced \emph{only when required}, saving cellular resources.
+
+\vspace{0.3cm}
+\textbf{Gene regulation is important for:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Metabolism} --- enzymes needed to metabolize certain sugars are made only when those sugars are present.
+  \item \textbf{Cell division} --- proteins needed for cell division are made only when cells are preparing to divide.
+  \item \textbf{Stress response} --- proteins produced when bacteria encounter heat shock or osmotic shock.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Levels at which gene expression can be regulated:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Transcriptional level} (most common in bacteria)
+  \item \textbf{Translational level}
+  \item \textbf{Post-transcriptional level} (e.g.\ mRNA stability and degradation rate)
+  \item \textbf{Post-translational level}
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Two main types of regulatory proteins act at the transcriptional level:}
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Protein} & \textbf{Binds} & \textbf{Effect} & \textbf{Type of control} \\
+\midrule
+Repressor & DNA & Inhibits transcription & Negative control \\
+Activator & DNA & Increases transcription & Positive control \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{Effector molecules} bind to regulatory proteins but not directly to DNA.
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Inducers} --- bind activators or block repressors $\Rightarrow$ increase transcription.
+  \item \textbf{Corepressors} --- bind repressors and enhance repression $\Rightarrow$ decrease transcription.
+  \item \textbf{Inhibitors} --- block activators $\Rightarrow$ decrease transcription.
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{The lac Operon: Structure and Components}
+
+\begin{diagbox}{26. The lac Operon: Structure and Components}
+
+\textbf{Operon:} a regulatory unit consisting of a cluster of structural genes under the control of a single promoter.
+
+\vspace{0.3cm}
+\textbf{DNA regulatory elements of the lac operon:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Promoter (lacP)} --- RNA polymerase binding site.
+  \item \textbf{Operator (lacO)} --- binding site for the lac repressor protein.
+  \item \textbf{CAP site} --- binding site for Catabolite Activator Protein (CAP).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Structural genes and their protein products:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{lacZ} --- encodes $\beta$-galactosidase.
+    \begin{itemize}
+      \item Cleaves lactose into glucose + galactose.
+      \item Also converts lactose to \textbf{allolactose} (an isomer; the true inducer).
+    \end{itemize}
+  \item \textbf{lacY} --- encodes lactose permease (membrane protein for lactose transport).
+  \item \textbf{lacA} --- encodes galactoside transacetylase (prevents toxic build-up by attaching acetyl groups).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{The lacI gene:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \emph{Not} considered part of the lac operon; has its own promoter (the \textit{i} promoter).
+  \item Constitutively expressed at low levels.
+  \item Encodes the \textbf{lac repressor protein} (only a small amount is needed).
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Negative Control: The lac Repressor}
+
+\begin{diagbox}{27. Negative Control: The lac Repressor (Inducible)}
+
+The lac operon uses \textbf{inducible, negative control}:
+
+\vspace{0.2cm}
+\textbf{No lactose present (operon OFF):}
+\begin{enumerate}[leftmargin=1.5em]
+  \item No inducer (allolactose) is present.
+  \item Lac repressor binds the operator (lacO).
+  \item RNA polymerase cannot transcribe the operon $\Rightarrow$ \textbf{operon repressed}.
+  \item Result: lac proteins are not synthesized (no lactose to process).
+\end{enumerate}
+
+\vspace{0.2cm}
+\textbf{Lactose present (operon ON):}
+\begin{enumerate}[leftmargin=1.5em]
+  \item A small amount of lactose enters and is converted to \textbf{allolactose} by $\beta$-galactosidase.
+  \item Allolactose binds to the lac repressor $\Rightarrow$ repressor changes conformation.
+  \item Repressor can no longer bind the operator.
+  \item RNA polymerase transcribes the operon $\Rightarrow$ \textbf{operon induced}.
+  \item lacZ, lacY, lacA proteins are synthesized to metabolize lactose.
+\end{enumerate}
+
+\vspace{0.2cm}
+\textbf{The cycle of induction and repression:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Lactose is depleted $\Rightarrow$ allolactose decreases $\Rightarrow$ allolactose released from repressor $\Rightarrow$ repressor binds operator $\Rightarrow$ operon turned off.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Important lac mutants:}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Mutant} & \textbf{Defect} & \textbf{Phenotype} \\
+\midrule
+$\text{I}^-$ & No repressor made & Operon always ON (constitutive) \\
+$\text{I}^S$ & Super repressor; cannot bind allolactose & Operon always OFF \\
+$\text{Z}^-$ & No functional $\beta$-galactosidase & Cannot cleave lactose \\
+$\text{Y}^-$ & No functional permease & Cannot import lactose \\
+$\text{A}^-$ & No transacetylase & Cannot acetylate galactosides \\
+$\text{O}^c$ & Operator mutant; repressor cannot bind & Constitutive transcription \\
+$\text{P}^-$ & Promoter mutant; RNA pol binds weakly & Reduced/no transcription \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{Merozygote (partial diploid) analysis:}
+\begin{itemize}[leftmargin=1.5em]
+  \item A bacterium receiving an F$'$ factor carrying \textit{lacI}$^+$ will have two copies of the lacI gene.
+  \item Even if the chromosome carries \textit{lacI}$^-$, the F$'$-encoded repressor is \textbf{diffusible} and can travel to the operator $\Rightarrow$ \textbf{repressor acts in trans}.
+  \item This demonstrates the repressor is a \textbf{trans}-acting, diffusible protein.
+  \item The operator (O$^c$) mutant is only constitutive when it is in \textit{cis} with the structural genes, demonstrating the operator acts \textbf{in cis}.
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Positive Control: CAP and Catabolite Repression}
+
+\begin{diagbox}{28. Positive Control: CAP and Catabolite Repression}
+
+The lac operon is also regulated by \textbf{catabolite repression} (positive control mechanism).
+
+\vspace{0.3cm}
+\textbf{Key concept --- diauxic growth:} when lactose and glucose are both present, \textit{E.~coli} uses glucose first. Only when glucose is depleted does catabolite repression lift and the lac operon become fully expressed.
+
+\vspace{0.3cm}
+\textbf{Effector molecule:} \textbf{cyclic AMP (cAMP)}
+\begin{itemize}[leftmargin=1.5em]
+  \item Enzyme \textbf{adenylyl cyclase} converts ATP $\rightarrow$ cAMP.
+  \item Glucose \textbf{inhibits} adenylyl cyclase $\Rightarrow$ low cAMP levels when glucose is present.
+  \item When glucose is absent, adenylyl cyclase is active $\Rightarrow$ high cAMP levels.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Catabolite Activator Protein (CAP):}
+\begin{itemize}[leftmargin=1.5em]
+  \item cAMP binds CAP $\Rightarrow$ cAMP--CAP complex forms.
+  \item cAMP--CAP complex binds the \textbf{CAP site} near the lac promoter.
+  \item This \textbf{increases transcription} (positive control).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Summary of all combinations:}
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Glucose} & \textbf{Lactose} & \textbf{cAMP level} & \textbf{Transcription} \\
+\midrule
+Absent  & Present & High & High (CAP active + repressor off) \\
+Absent  & Absent  & High & Low (CAP active, but repressor on) \\
+Present & Present & Low  & Low (CAP inactive, repressor off) \\
+Present & Absent  & Low  & Very low (CAP inactive + repressor on) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{diagbox}
+
+\subsection{The trp Operon: Repressible Regulation}
+
+\begin{diagbox}{29. The trp Operon: Repressible Regulation}
+
+The \textbf{trp operon} controls biosynthesis of the amino acid \textbf{tryptophan}.
+
+\vspace{0.3cm}
+\textbf{Structural genes:} \textit{trpE}, \textit{trpD}, \textit{trpC}, \textit{trpB}, \textit{trpA} --- encode enzymes for tryptophan biosynthesis.
+
+\vspace{0.3cm}
+\textbf{Regulatory genes:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textit{trpR} --- encodes the trp \textbf{repressor protein} (functions in repression).
+  \item \textit{trpL} --- encodes a short \textbf{leader peptide} (functions in attenuation).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Low tryptophan (operon ON):}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Tryptophan does not bind to the trp repressor.
+  \item Repressor cannot bind the operator.
+  \item RNA polymerase transcribes the entire operon.
+  \item Tryptophan biosynthesis enzymes are produced.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{High tryptophan (operon OFF --- repressible):}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Tryptophan acts as a \textbf{corepressor} (effector molecule): it binds to the trp repressor.
+  \item The tryptophan--repressor complex binds the operator.
+  \item Transcription is inhibited.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Contrast with lac operon:}
+\begin{itemize}[leftmargin=1.5em]
+  \item lac operon: \textbf{inducible} (effector molecule \emph{inactivates} repressor).
+  \item trp operon: \textbf{repressible} (effector molecule \emph{activates} repressor).
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Attenuation of the trp Operon}
+
+\begin{diagbox}{30. Attenuation of the trp Operon}
+
+\textbf{Attenuation} is a second mechanism regulating the trp operon that operates \textbf{independently of and in addition to} repression.
+
+\vspace{0.3cm}
+\textbf{Key principle:} In bacteria, transcription and translation are \textbf{coupled} (occur simultaneously). The ribosome translates the mRNA as it is being transcribed.
+
+\vspace{0.3cm}
+\textbf{Mechanism:}
+\begin{itemize}[leftmargin=1.5em]
+  \item The \textbf{attenuator} is a sequence in the \textit{trpL} (leader) region.
+  \item Transcription begins, and the \textit{trpL} leader peptide contains two Trp codons.
+  \item The leader mRNA can form alternative stem-loop secondary structures (hairpins):
+    \begin{itemize}
+      \item \textbf{Terminator hairpin} (structures 3--4): leads to premature transcription termination (attenuation).
+      \item \textbf{Antiterminator hairpin} (structures 2--3): allows transcription to continue.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{High tryptophan:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Tryptophanyl-tRNA (charged) is abundant.
+  \item Ribosome translates the leader peptide rapidly, without stalling.
+  \item Terminator hairpin forms $\Rightarrow$ transcription terminates at the attenuator $\Rightarrow$ structural genes NOT transcribed.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Low tryptophan:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Tryptophanyl-tRNA (charged) is scarce.
+  \item Ribosome stalls at the Trp codons in the leader sequence.
+  \item Antiterminator hairpin forms $\Rightarrow$ transcription continues into the structural genes $\Rightarrow$ tryptophan biosynthesis enzymes produced.
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Translational Regulation}
+
+\begin{diagbox}{31. Translational Regulation in Bacteria}
+
+Gene expression in bacteria can also be regulated at the \textbf{translational level}.
+
+\vspace{0.3cm}
+\textbf{Translational repressors:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Regulatory proteins that recognize specific sequences within the mRNA.
+  \item Generally act to \textbf{inhibit translation initiation}.
+  \item Two mechanisms:
+    \begin{enumerate}[leftmargin=1.5em]
+      \item Binding near the \textbf{Shine--Dalgarno sequence} and/or start codon $\Rightarrow$ sterically hinders ribosome from initiating translation.
+      \item Binding outside the Shine--Dalgarno/start codon region $\Rightarrow$ conformational change in mRNA that also prevents initiation.
+    \end{enumerate}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Antisense RNA:}
+\begin{itemize}[leftmargin=1.5em]
+  \item A second way to regulate translation.
+  \item \textbf{Antisense RNA} is an RNA strand complementary to a strand of mRNA (the ``sense'' strand).
+  \item When antisense RNA base-pairs with the mRNA, it prevents ribosome binding and translation.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Osmoregulation in \textit{E.~coli} (antisense RNA example):}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{ompF} gene: encodes \textbf{OmpF}, a porin (outer membrane channel protein) that allows passage of small molecules and ions; important for controlling membrane permeability during osmoregulation.
+  \item \textbf{Low osmolarity:} ompF protein is preferentially produced.
+  \item \textbf{High osmolarity:} expression of the \textit{micF} gene is induced.
+    \begin{itemize}
+      \item The \textit{micF} RNA is \textbf{antisense} to the ompF mRNA; it does not encode a polypeptide.
+      \item micF RNA base-pairs with ompF mRNA by hydrogen bonding.
+      \item Double-stranded RNA structure blocks ompF mRNA translation $\Rightarrow$ ompF protein synthesis decreases.
+    \end{itemize}
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Post-translational Regulation and Feedback Inhibition}
+
+\begin{diagbox}{32. Post-translational Regulation and Feedback Inhibition}
+
+\textbf{Post-translational regulation} controls protein activity \emph{after} the protein has been synthesized.
+
+\vspace{0.3cm}
+\textbf{Covalent modifications:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Irreversible:} proteolytic processing, attachment of prosthetic groups, sugars, or lipids.
+  \item \textbf{Reversible} (transiently affect function):
+    \begin{itemize}
+      \item Phosphorylation ($-\mathrm{PO_4}$)
+      \item Acetylation ($-\mathrm{COCH_3}$)
+      \item Methylation ($-\mathrm{CH_3}$)
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Feedback inhibition:}
+\begin{itemize}[leftmargin=1.5em]
+  \item A common mechanism to regulate \textbf{metabolic enzymes}.
+  \item The \textbf{final product} of a biosynthetic pathway inhibits an enzyme that acts \textbf{early} in the pathway.
+  \item Prevents over-accumulation of the final product.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Allosteric enzymes:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Enzymes regulated by feedback inhibition are often \textbf{allosteric}: they contain two distinct binding sites.
+    \begin{itemize}
+      \item \textbf{Catalytic site} --- binds the substrate.
+      \item \textbf{Regulatory site} --- binds the final product of the pathway (allosteric inhibitor).
+    \end{itemize}
+  \item Binding of the final product to the regulatory site changes the enzyme's conformation and reduces catalytic activity.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Classic example --- isoleucine biosynthesis:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Threonine $\xrightarrow{\text{Enzyme 1}}$ $\cdots$ $\rightarrow$ Isoleucine.
+  \item Isoleucine is the final product and acts as an \textbf{allosteric inhibitor} of Enzyme~1 (the first step).
+  \item When isoleucine accumulates, it shuts down its own production (feedback inhibition).
+\end{itemize}
+
+\end{diagbox}
+
 \newpage
 % ══════════════════════════════════════════════════════════════
 \part{Comprehensive University-Level Practice Exam}
@@ -1114,6 +1484,112 @@ partial credit is awarded for correct reasoning.
         (a) Explain why combinatorial control allows a small number of transcription factors to generate a large number of distinct gene-expression patterns.
         (b) Two transcription factors, TF-A and TF-B, each weakly activate a gene individually, but together they activate it 20-fold. Propose a molecular explanation for this synergy.
         (c) In a cell-fate decision, the gene \textit{MyoD} is activated in muscle precursors but not in liver precursors. Both cell types express TF-A. Identify what additional regulatory logic could account for this cell-type specificity.
+
+\end{enumerate}
+\end{planbox}
+
+\section{Gene Regulation in Prokaryotes Exam Problems}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Topic 23 --- The lac Operon: Negative and Positive Control}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{23\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Describe the components of the \textit{E.~coli} lac operon.
+        (a) Name and give the function of each DNA regulatory element (promoter, operator, CAP site).
+        (b) Name the three structural genes and the proteins they encode.
+        (c) What is the role of the \textit{lacI} gene and why is it not considered part of the lac operon?
+
+  \item \textbf{[5 pts --- Difficult]}
+        A researcher isolates the following \textit{E.~coli} lac mutants and measures $\beta$-galactosidase activity:
+        Strain~1: $\text{I}^-\,\text{O}^+\,\text{Z}^+$ (no inducer added);
+        Strain~2: $\text{I}^+\,\text{O}^c\,\text{Z}^+$ (no inducer added);
+        Strain~3: $\text{I}^S\,\text{O}^+\,\text{Z}^+$ (excess IPTG added).
+        (a) Predict the $\beta$-galactosidase activity (high, low, or none) for each strain and explain why.
+        (b) For Strain~2, if the researcher introduces an F$'$ plasmid carrying $\text{I}^+\,\text{O}^+$ into the cell, predict whether the chromosomal lac operon will be expressed constitutively or regulated. Explain using the concepts of \textit{cis} and \textit{trans} action.
+        (c) Why is $\text{I}^S$ dominant over $\text{I}^+$?
+
+  \item \textbf{[5 pts --- Difficult]}
+        Explain the phenomenon of diauxic growth in \textit{E.~coli}.
+        (a) Describe the molecular basis for catabolite repression at the level of cAMP and the CAP protein.
+        (b) Draw a table summarising lac operon transcription levels under the four possible glucose/lactose combinations.
+        (c) A mutant \textit{E.~coli} strain has a deletion of the gene encoding adenylyl cyclase. Predict the effect on lac operon expression in medium containing lactose only (no glucose). Explain your reasoning at the molecular level.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Compare inducible versus repressible operons using the lac and trp operons as examples.
+        (a) Define negative and positive control in the context of transcriptional regulation.
+        (b) In both operons, the effector molecule is not DNA-binding. Explain the role of effector molecules in each operon and how they alter repressor/activator activity.
+        (c) Predict the expression state of each operon under the following conditions:
+        (i) lac operon: glucose absent, lactose absent;
+        (ii) lac operon: glucose absent, lactose present;
+        (iii) trp operon: tryptophan absent;
+        (iv) trp operon: tryptophan present.
+
+\end{enumerate}
+\end{planbox}
+
+\subsection{Topic 24 --- The trp Operon and Attenuation}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{24\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Describe the organisation of the trp operon in \textit{E.~coli}.
+        (a) List the structural and regulatory genes of the trp operon and their functions.
+        (b) Explain why the trp operon is described as a repressible operon.
+        (c) What molecular event must occur for the trp repressor to become active?
+
+  \item \textbf{[5 pts --- Difficult]}
+        Explain the mechanism of attenuation in the trp operon.
+        (a) Why is the coupling of transcription and translation essential for attenuation to work in bacteria?
+        (b) Describe the two competing RNA secondary structures (antiterminator and terminator hairpins) and explain how the ribosome's position on the leader mRNA determines which structure forms.
+        (c) In a cell with high tryptophan levels, trace the molecular events from initial transcription to premature termination.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A \textit{trpR} null mutation (no functional trp repressor) is introduced into \textit{E.~coli}.
+        (a) Predict the level of trp operon expression at both low and high tryptophan concentrations, considering only the repression mechanism.
+        (b) However, attenuation is still functional in this mutant. How does attenuation alone limit trp operon expression at high tryptophan levels?
+        (c) Explain why having two separate mechanisms (repression and attenuation) provides a more finely tuned response than either mechanism alone.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Compare and contrast negative control of the lac operon (via the lac repressor) with negative control of the trp operon (via the trp repressor).
+        (a) In both cases, a repressor protein binds the operator to block transcription. What is the key difference in the role of the effector molecule in each system?
+        (b) The term ``inducible'' applies to the lac operon and ``repressible'' applies to the trp operon. Justify these terms based on the direction of the regulatory response.
+        (c) Propose an experiment using a \textit{lacO}$^c$ mutation to demonstrate that operator mutations act \textit{in cis}. What result would confirm \textit{cis} action?
+
+\end{enumerate}
+\end{planbox}
+
+\subsection{Topic 25 --- Translational and Post-translational Regulation}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{25\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Distinguish between transcriptional, translational, and post-translational regulation.
+        (a) Give one specific example of translational regulation in bacteria, naming the regulatory molecule and the target mRNA.
+        (b) Define feedback inhibition and identify its key molecular feature (allosteric enzyme).
+        (c) In the isoleucine biosynthesis pathway, which enzyme is the target of feedback inhibition, what is the inhibitor, and what is the molecular consequence?
+
+  \item \textbf{[5 pts --- Difficult]}
+        The \textit{ompF}/\textit{micF} system in \textit{E.~coli} is a classic example of translational regulation by antisense RNA.
+        (a) Explain why osmoregulation is essential for bacterial survival.
+        (b) Describe step by step how high osmolarity leads to inhibition of ompF protein synthesis via the micF antisense RNA mechanism.
+        (c) Why is antisense RNA an effective regulatory mechanism? Include in your answer the nature of the interaction between micF RNA and ompF mRNA.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Translational repressor proteins can block translation by two distinct binding strategies.
+        (a) Describe both mechanisms, specifying which region of the mRNA is targeted in each case and the molecular consequence.
+        (b) A researcher makes a mutation in the Shine--Dalgarno sequence of a bacterial mRNA, changing it so that a translational repressor can no longer bind. Predict the effect on translation of this mRNA in the presence and absence of the repressor protein.
+        (c) Compare the speed and reversibility of translational regulation versus transcriptional regulation. Under what physiological circumstances would translational regulation be advantageous?
+
+  \item \textbf{[5 pts --- Difficult]}
+        Post-translational regulation controls enzyme activity via covalent modification and feedback inhibition.
+        (a) Distinguish between reversible and irreversible covalent modifications, giving two examples of each.
+        (b) An allosteric enzyme catalyses the first committed step of a biosynthetic pathway. Explain why inhibiting the \textbf{first} committed step is metabolically more efficient than inhibiting a later step in the pathway.
+        (c) In a biosynthetic pathway with two branches both leading from the same intermediate, how could the organism regulate flux through each branch independently? Describe a mechanism involving isoenzymes or cumulative feedback inhibition.
 
 \end{enumerate}
 \end{planbox}
@@ -1650,6 +2126,203 @@ verification.
           \textbf{Muscle precursors} express \textbf{MyoD co-activators} (e.g.\ E-proteins as heterodimerisation partners) and have the \textit{MyoD} locus in a permissive chromatin state (H3K4me3 $+$ NFR at the \textit{MyoD} enhancer).
           \textbf{Liver precursors} express \textbf{ID proteins} (inhibitors of differentiation) that sequester E-proteins, preventing MyoD heterodimerisation, and the \textit{MyoD} locus is in a repressive state (H3K27me3, Polycomb).
           Therefore, TF-A alone is insufficient; the full activating combination (TF-A + MyoD + E-protein) is only assembled in muscle precursors.
+  \end{enumerate}
+
+\end{enumerate}
+\end{keybox}
+
+\section{Gene Regulation in Prokaryotes Solutions}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Topic 23 --- The lac Operon: Negative and Positive Control}
+
+\begin{keybox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{23\Alph*.}]
+
+  \item \textit{Rationale:} The lac operon structure is foundational; every element has a specific, testable function.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{DNA regulatory elements:}
+          \textbf{Promoter (lacP)} --- RNA polymerase binding site; transcription begins here.
+          \textbf{Operator (lacO)} --- binding site for the lac repressor; located between the promoter and structural genes.
+          \textbf{CAP site} --- binding site for the cAMP--CAP complex; located upstream of the promoter.
+    \item \textbf{Structural genes and products:}
+          \textit{lacZ} encodes $\beta$-galactosidase (cleaves lactose; also produces allolactose).
+          \textit{lacY} encodes lactose permease (membrane transporter for lactose).
+          \textit{lacA} encodes galactoside transacetylase (prevents toxic accumulation of lactose analogues).
+    \item The \textit{lacI} gene is \textbf{not} part of the operon because it has its own promoter (the \textit{i} promoter) and is constitutively expressed independently of the lac operon regulatory signals. It encodes the lac repressor, which is produced continuously at low levels.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Mutant analysis reveals the molecular logic of cis-acting operators versus trans-acting repressors.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Strain 1} ($\text{I}^-\,\text{O}^+\,\text{Z}^+$, no inducer): \textbf{High} activity.
+          No repressor is made $\Rightarrow$ operator is always unoccupied $\Rightarrow$ constitutive transcription.
+          \textbf{Strain 2} ($\text{I}^+\,\text{O}^c\,\text{Z}^+$, no inducer): \textbf{High} activity.
+          Repressor is made but cannot bind the mutant operator $\Rightarrow$ constitutive transcription.
+          \textbf{Strain 3} ($\text{I}^S\,\text{O}^+\,\text{Z}^+$, + IPTG): \textbf{None/Very low}.
+          The super repressor ($\text{I}^S$) cannot bind allolactose (or IPTG) $\Rightarrow$ always binds the operator $\Rightarrow$ transcription is permanently blocked regardless of inducer.
+    \item The chromosomal lac operon will be \textbf{regulated normally}.
+          The F$'$-encoded $\text{I}^+$ produces functional lac repressor that is diffusible (acts \textit{in trans}) and can bind the chromosomal operator.
+          However, the chromosomal $\text{O}^c$ mutation is \textit{cis}-acting and only affects the structural genes on the same DNA molecule. The F$'$ carries a wild-type operator, so the F$'$ operon is regulated; the chromosomal operon remains constitutive because its own operator is mutant.
+    \item $\text{I}^S$ is \textbf{dominant} over $\text{I}^+$ because the super repressor protein cannot bind allolactose. Even when inducer is present, the $\text{I}^S$ repressor remains bound to the operator on \emph{both} the chromosome and the F$'$ $\Rightarrow$ all lac operons in the cell are permanently repressed. One $\text{I}^S$ allele is sufficient to silence all copies.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Diauxic growth demonstrates glucose-mediated catabolite repression via cAMP-CAP; adenylyl cyclase mutants eliminate positive control.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Catabolite repression:}
+          Glucose inhibits adenylyl cyclase $\Rightarrow$ low cAMP.
+          Low cAMP means the cAMP--CAP complex cannot form and does not bind the CAP site $\Rightarrow$ RNA polymerase binds the lac promoter inefficiently $\Rightarrow$ low transcription even if lactose is present (repressor removed).
+          When glucose is depleted, adenylyl cyclase activity rises $\Rightarrow$ cAMP increases $\Rightarrow$ cAMP--CAP forms $\Rightarrow$ binds CAP site $\Rightarrow$ stimulates transcription of the lac operon.
+    \item \textbf{Expression levels under four glucose/lactose combinations:}
+          \begin{center}
+          \begin{tabular}{lll}
+          \toprule
+          Glucose & Lactose & Transcription \\
+          \midrule
+          Absent  & Present & High (CAP active, repressor off) \\
+          Absent  & Absent  & Low (CAP active, repressor on) \\
+          Present & Present & Low (CAP inactive, repressor off) \\
+          Present & Absent  & Very low (CAP inactive, repressor on) \\
+          \bottomrule
+          \end{tabular}
+          \end{center}
+    \item In a strain lacking adenylyl cyclase, no cAMP is produced $\Rightarrow$ cAMP--CAP complex cannot form $\Rightarrow$ CAP site is unoccupied $\Rightarrow$ \textbf{lac operon is expressed at very low levels even in the presence of lactose (no glucose)}.
+          Although the repressor is inactivated by allolactose, the absence of CAP activation means transcription is reduced to basal (leaky) levels. This demonstrates that both negative control (repressor removal) \emph{and} positive control (CAP activation) are required for full lac operon expression.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Comparing lac (inducible/negative) and trp (repressible/negative) operons reveals the versatility of the repressor-based strategy.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Negative control:} a repressor protein inhibits transcription by binding the operator; removing the repressor (or preventing its binding) activates the operon.
+          \textbf{Positive control:} an activator protein stimulates transcription when it binds to DNA (e.g.\ CAP at the CAP site); removal of the activator decreases transcription.
+    \item \textbf{lac operon (inducible):} Allolactose (inducer) binds the lac repressor $\Rightarrow$ conformational change $\Rightarrow$ repressor cannot bind operator $\Rightarrow$ transcription ON. The effector \emph{inactivates} the repressor.
+          \textbf{trp operon (repressible):} Tryptophan (corepressor) binds the trp aporepressor $\Rightarrow$ conformational change $\Rightarrow$ repressor--corepressor complex binds operator $\Rightarrow$ transcription OFF. The effector \emph{activates} the repressor.
+    \item Expression predictions:
+          (i) lac, glucose absent/lactose absent: \textbf{Low} (CAP active, repressor ON $\Rightarrow$ no transcription; basal leaky level).
+          (ii) lac, glucose absent/lactose present: \textbf{High} (CAP active + repressor OFF $\Rightarrow$ full transcription).
+          (iii) trp, tryptophan absent: \textbf{High} (trp repressor inactive $\Rightarrow$ operator unoccupied $\Rightarrow$ full transcription; also attenuation is reduced).
+          (iv) trp, tryptophan present: \textbf{Low} (trp repressor--corepressor complex binds operator + attenuation terminates early transcripts).
+  \end{enumerate}
+
+\end{enumerate}
+\end{keybox}
+
+\subsection{Topic 24 --- The trp Operon and Attenuation}
+
+\begin{keybox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{24\Alph*.}]
+
+  \item \textit{Rationale:} Knowing gene names, protein functions, and the mechanism of repressibility is essential for any exam on prokaryotic regulation.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Structural genes:} \textit{trpE}, \textit{trpD}, \textit{trpC}, \textit{trpB}, \textit{trpA} --- encode enzymes for the biosynthesis of tryptophan from chorismate.
+          \textbf{Regulatory genes:} \textit{trpR} (encodes the trp aporepressor, inactive without corepressor; functions in repression) and \textit{trpL} (encodes the leader peptide, which functions in attenuation).
+    \item The trp operon is \textbf{repressible} because it is normally ON (transcribed when tryptophan is absent) but is turned OFF when tryptophan accumulates. The final product of the pathway (tryptophan) \emph{represses} its own synthesis, preventing wasteful over-production.
+    \item For the trp repressor to become active: tryptophan (the corepressor) must bind to the inactive trp aporepressor protein $\Rightarrow$ conformational change $\Rightarrow$ the repressor--tryptophan complex gains affinity for the operator and binds it $\Rightarrow$ blocks RNA polymerase progression.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Attenuation exploits bacterial transcription--translation coupling; the key is understanding how ribosome position dictates RNA folding.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Coupling is essential} because the ribosome must be able to physically occlude specific segments of the nascent leader mRNA to influence which secondary structure forms. In eukaryotes, transcription occurs in the nucleus and translation occurs in the cytoplasm, so this coupling is impossible and attenuation of this type does not occur.
+    \item The leader mRNA contains four regions (1, 2, 3, 4) that can form alternative stem-loops:
+          \textbf{Antiterminator (2--3 hairpin):} forms when the ribosome stalls at the Trp codons in region~1, exposing region~2 to pair with region~3 $\Rightarrow$ transcription continues.
+          \textbf{Terminator (3--4 hairpin):} forms when the ribosome translates the leader rapidly (abundant Trp-tRNA), causing region~3 to be covered and region~3 to pair with region~4 instead $\Rightarrow$ $\rho$-independent transcription termination.
+    \item \textbf{High tryptophan, step-by-step:}
+          (i) Tryptophanyl-tRNA is abundant.
+          (ii) RNA polymerase transcribes the leader (\textit{trpL}) region; the ribosome immediately begins translating.
+          (iii) The ribosome translates region~1 rapidly without stalling (abundant Trp-tRNA fills Trp codons).
+          (iv) The ribosome occupies region~2, preventing the 2--3 antiterminator hairpin from forming.
+          (v) Regions 3 and 4 are free to form the terminator (3--4) hairpin.
+          (vi) The terminator hairpin causes RNA polymerase to pause and fall off the template $\Rightarrow$ transcription terminates in the leader region before reaching structural genes.
+  \end{enumerate}
+
+  \item \textit{Rationale:} This question tests understanding of two independent layers of regulation and their functional synergy.
+  \begin{enumerate}[label=\arabic*.]
+    \item With a \textit{trpR} null mutation, the repressor mechanism is non-functional.
+          \textbf{Low Trp:} operon is \textbf{fully expressed} (no repressor to block operator; attenuation also does not occur because ribosome stalls $\Rightarrow$ antiterminator forms).
+          \textbf{High Trp:} operon would be \textbf{constitutively derepressed} by the repression mechanism alone (repressor non-functional) but \textbf{partially reduced by attenuation} (terminator hairpin forms $\Rightarrow$ some transcripts terminate early). The result is intermediate (elevated but not maximal) expression at high Trp.
+    \item Attenuation alone at high Trp: loaded Trp-tRNA allows rapid leader-peptide translation $\Rightarrow$ terminator hairpin forms $\Rightarrow$ most transcripts terminate in the attenuator region $\Rightarrow$ fewer full-length trp mRNAs are produced $\Rightarrow$ reduced tryptophan biosynthesis even without a functional repressor.
+    \item \textbf{Two-mechanism advantage:} repression provides a ``coarse'' off-switch (reduces transcription 70--80-fold), while attenuation provides fine-tuned modulation in response to intracellular tryptophan levels on a continuous scale (up to 8--10-fold additional regulation). Together they can reduce expression $\approx$700-fold between fully induced and fully repressed states, providing a much wider dynamic range than either mechanism alone.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Comparing both operons illuminates the versatility of repressor-based regulation and the distinction between inducible and repressible systems.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Key difference in effector molecule role:}
+          \textit{lac operon:} allolactose (inducer) binds the lac repressor and \emph{reduces} its affinity for the operator $\Rightarrow$ operon turned ON.
+          \textit{trp operon:} tryptophan (corepressor) binds the trp aporepressor and \emph{increases} its affinity for the operator $\Rightarrow$ operon turned OFF.
+          In both cases, the repressor cannot bind DNA by itself when conditions do not require the response.
+    \item \textbf{Inducible} (lac): the default state is OFF (repressor blocks transcription); an inducer molecule \emph{induces} (turns on) expression by removing the repressor. Useful for genes whose products are needed only when a substrate is present.
+          \textbf{Repressible} (trp): the default state is ON (repressor inactive, transcription proceeds); accumulation of the end product \emph{represses} expression. Useful for biosynthetic genes whose products must be made unless they are already abundant.
+    \item \textbf{Experimental design:} Construct a merozygote: one DNA molecule carries $\text{O}^c\,\text{Z}^+$; the other (F$'$) carries $\text{O}^+\,\text{Z}^-$.
+          If the operator acts \textit{in cis}, only the structural genes on the same chromosome as $\text{O}^c$ (i.e.\ $\text{Z}^+$) will be expressed constitutively, even in the absence of inducer.
+          The $\text{Z}^-$ gene on the F$'$ (associated with wild-type O$^+$) will remain regulated (expressed only in the presence of inducer).
+          \textbf{Confirming result:} $\beta$-galactosidase ($\text{Z}^+$) activity is constitutive (high without inducer); permease or other proteins from the F$'$ operon are inducible. This proves the operator affects only genes in \textit{cis} on the same DNA molecule.
+  \end{enumerate}
+
+\end{enumerate}
+\end{keybox}
+
+\subsection{Topic 25 --- Translational and Post-translational Regulation}
+
+\begin{keybox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{25\Alph*.}]
+
+  \item \textit{Rationale:} Distinguishing three levels of regulation and understanding feedback inhibition as an allosteric mechanism is essential for cellular physiology questions.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Transcriptional regulation} controls \emph{whether} and \emph{how much} mRNA is made (e.g.\ lac operon repressor).
+          \textbf{Translational regulation} controls whether existing mRNA is translated into protein (e.g.\ translational repressors, antisense RNA).
+          \textbf{Post-translational regulation} controls the activity or stability of an already-made protein (e.g.\ phosphorylation, feedback inhibition).
+          \textbf{Example of translational regulation:} the micF antisense RNA blocks translation of ompF mRNA in \textit{E.~coli} under high-osmolarity conditions.
+    \item \textbf{Feedback inhibition:} the final product of a biosynthetic pathway inhibits an enzyme that acts early in the pathway (usually the first committed step), preventing over-production of the product.
+          Key molecular feature: the enzyme must be \textbf{allosteric} --- it contains a catalytic site (binds substrate) and a separate regulatory (allosteric) site (binds inhibitor).
+    \item \textbf{Isoleucine pathway:}
+          Target enzyme: \textbf{threonine deaminase} (Enzyme~1, catalyses the first committed step, converting threonine to $\alpha$-ketobutyrate).
+          Inhibitor: \textbf{isoleucine} (the final product).
+          Consequence: when isoleucine accumulates, it binds the allosteric/regulatory site of threonine deaminase $\Rightarrow$ conformational change $\Rightarrow$ reduced catalytic activity $\Rightarrow$ less flux through the pathway $\Rightarrow$ isoleucine production decreases until levels fall.
+  \end{enumerate}
+
+  \item \textit{Rationale:} The ompF/micF system is a model for understanding antisense-RNA-based translational control and osmoregulation.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Osmoregulation:} Bacteria live in environments where solute concentration can change rapidly between hypotonic and hypertonic conditions. Without osmoregulation, cells would swell (burst) in hypotonic conditions or shrink (lose turgor) in hypertonic conditions. Bacteria must control membrane permeability to maintain internal water balance and survive.
+    \item \textbf{Step-by-step mechanism at high osmolarity:}
+          (i) High osmolarity is sensed by the cell (via the EnvZ/OmpR two-component system).
+          (ii) The \textit{micF} gene is transcribed; micF RNA is produced.
+          (iii) micF RNA is \textbf{antisense} to the 5$'$ end of the ompF mRNA --- their sequences are complementary.
+          (iv) micF RNA base-pairs with the ompF mRNA by Watson--Crick hydrogen bonding, forming a double-stranded RNA (dsRNA) duplex in the region of the Shine--Dalgarno sequence and/or start codon of ompF mRNA.
+          (v) The ribosome cannot bind the blocked Shine--Dalgarno/start codon region $\Rightarrow$ translation initiation is prevented.
+          (vi) The micF:ompF RNA duplex is also targeted for degradation by RNase~III (in some contexts) $\Rightarrow$ further reducing ompF mRNA levels.
+          (vii) Result: ompF protein synthesis decreases $\Rightarrow$ outer membrane becomes less permeable $\Rightarrow$ water loss is minimised under hypertonic stress.
+    \item \textbf{Effectiveness of antisense RNA:}
+          (i) \textbf{Speed} --- does not require de novo protein synthesis; the RNA is rapidly transcribed and acts immediately.
+          (ii) \textbf{Specificity} --- base-pairing is highly sequence-specific (complementary to the target mRNA), ensuring only the correct mRNA is regulated.
+          (iii) \textbf{Nature of interaction:} micF RNA is \emph{complementary} to the ompF mRNA at the 5$'$ untranslated region (near the Shine--Dalgarno sequence); they form a stable dsRNA structure via Watson--Crick base-pairing that blocks ribosome access to the start codon.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Understanding two translational repressor mechanisms and comparing translational vs.\ transcriptional regulation reveals their complementary roles.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Mechanism 1 --- Shine--Dalgarno/start codon binding:} The translational repressor protein binds directly to the Shine--Dalgarno sequence and/or AUG start codon region of the mRNA. The ribosome's 16S rRNA cannot pair with the Shine--Dalgarno sequence $\Rightarrow$ 30S ribosomal subunit cannot assemble the initiation complex $\Rightarrow$ translation does not initiate.
+          \textbf{Mechanism 2 --- Distal binding with conformational change:} The repressor binds outside the Shine--Dalgarno/start codon region. This induces a conformational change in the mRNA secondary structure that sequesters the Shine--Dalgarno sequence in a stem-loop $\Rightarrow$ ribosome access is blocked indirectly $\Rightarrow$ translation initiation is prevented.
+    \item \textbf{Mutant Shine--Dalgarno:} The translational repressor can no longer bind the mRNA.
+          \textbf{In the absence of repressor:} the mutation in the Shine--Dalgarno sequence may also reduce ribosome binding efficiency $\Rightarrow$ basal translation may be reduced compared to wild-type.
+          \textbf{In the presence of repressor:} since the repressor cannot bind, the mRNA is \textbf{translated at an unregulated (constitutive) level}; the regulatory response is abolished. The mRNA will be translated regardless of the physiological signal that normally triggers translational repression.
+    \item \textbf{Translational vs.\ transcriptional regulation:}
+          Translational regulation acts on \emph{existing} mRNA $\Rightarrow$ \textbf{faster response} (no need to wait for new transcription).
+          Transcriptional regulation is \emph{slower} but more energy-efficient long-term (no wasted mRNA synthesis).
+          Translational regulation is generally \textbf{reversible} (repressor dissociates when the regulatory signal disappears); transcriptional regulation is similarly reversible but operates more slowly.
+          \textbf{Physiological advantage:} translational regulation is advantageous when a \textbf{rapid response} is required (e.g.\ sudden osmotic stress, heat shock) where waiting for transcription would be too slow, or when the same mRNA must be regulated differently in different cellular compartments or conditions.
+  \end{enumerate}
+
+  \item \textit{Rationale:} Post-translational control via covalent modification and allosteric feedback inhibition is the fastest level of metabolic fine-tuning.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Irreversible modifications:}
+          (1) Proteolytic cleavage (e.g.\ zymogen activation: trypsinogen $\rightarrow$ trypsin).
+          (2) Attachment of prosthetic groups, lipids, or sugars (e.g.\ lipid anchoring, glycosylation).
+          \textbf{Reversible modifications:}
+          (1) Phosphorylation ($-\mathrm{PO_4}$, added by kinases, removed by phosphatases).
+          (2) Acetylation ($-\mathrm{COCH_3}$, added by acetyltransferases, removed by deacetylases).
+    \item \textbf{Why inhibit the first committed step:}
+          If a later enzyme in the pathway is inhibited, intermediates before that enzyme still accumulate, consuming ATP and precursors unnecessarily and possibly causing metabolic imbalances.
+          Inhibiting the \textbf{first committed step} prevents all intermediates from accumulating; the entire metabolic flux through the pathway is stopped at the very beginning $\Rightarrow$ maximum energy conservation and no build-up of potentially toxic intermediates.
+    \item \textbf{Branched pathways --- isoenzyme or cumulative feedback inhibition:}
+          \textbf{Isoenzymes:} Two distinct enzymes (isoenzymes) catalyse the same first committed step; each isoenzyme is specifically inhibited by the end product of only one branch. This allows each branch to be independently regulated without cross-inhibition.
+          \textbf{Cumulative feedback inhibition:} Each end product \emph{partially} inhibits the common enzyme; when both end products accumulate, their partial inhibitory effects are additive (cumulative), achieving complete inhibition of the shared first step. This allows proportional regulation: if only one end product accumulates, flux through the pathway is only partially reduced, maintaining production of the other product.
   \end{enumerate}
 
 \end{enumerate}
