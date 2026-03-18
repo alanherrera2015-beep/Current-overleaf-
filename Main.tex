@@ -48,8 +48,8 @@
 % ── Page style ─────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Exam Experts College Physics}
-\lhead{Chapters 7, 8 \& 10}
+\rhead{Genetics: Chromosome Organization \& Biotechnology}
+\lhead{Genetics Study Guide}
 \cfoot{\thepage}
 
 % ── Blank helpers ──────────────────────────────────────────────
@@ -61,978 +61,718 @@
 
 % ── Title page ────────────────────────────────────────────────
 \begin{center}
-  {\LARGE\bfseries Exam Experts College Physics: Chapters 7, 8 \& 10}\\[0.4cm]
-  {\large\bfseries Rotational Motion $\cdot$ Equilibrium and Elasticity $\cdot$ Energy and Work}\\[0.3cm]
+  {\LARGE\bfseries Genetics: Chromosome Organization \& Biotechnology}\\[0.4cm]
+  {\large\bfseries Chromosome Structure $\cdot$ Chromatin Compaction $\cdot$ Biotechnology Tools}\\[0.3cm]
   \rule{\linewidth}{0.6pt}
 \end{center}
 
 \tableofcontents
 \newpage
 
+\part{Genetics: Chromosome Organization \& Biotechnology}
 % ══════════════════════════════════════════════════════════════
-\part{Chapter 7: Rotational Motion}
-% ══════════════════════════════════════════════════════════════
 
-\section{Introduction to Torque (Section 7.3)}
+% ────────────────────────────────────────────────────────────
+\section{Chromosome Organization}
+% ────────────────────────────────────────────────────────────
 
-\begin{diagbox}{1. Introduction to Torque}
+\subsection{Introduction to Chromosomes and the Genome}
 
-\textbf{Definition:} \emph{Torque} (symbol $\tau$) is the rotational analog of force.  It measures how effectively a force causes an object to rotate about a pivot point.
+\begin{diagbox}{1. Introduction to Chromosomes and the Genome}
 
-\vspace{0.3cm}
-\textbf{General formula:}
-\[
-  \tau = r\,F\sin\theta
-\]
-where $r$ is the distance from the pivot to the point of force application, $F$ is the force magnitude, and $\theta$ is the angle between $\vec{r}$ and $\vec{F}$.
-
-\vspace{0.3cm}
-\textbf{Units:} newton-meters (N$\cdot$m).
-
-\vspace{0.3cm}
-\textbf{Sign convention:}
+\textbf{Chromosomes} are structures that contain the genetic material.
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Counterclockwise (CCW)} torques are \textbf{positive} ($+$).
-  \item \textbf{Clockwise (CW)} torques are \textbf{negative} ($-$).
+  \item They are complexes of \textbf{DNA and proteins}.
 \end{itemize}
 
-\end{diagbox}
+\vspace{0.3cm}
+The \textbf{genome} comprises \emph{all} the genetic material that an organism possesses.
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Bacterial genome:} a single circular chromosome.
+  \item \textbf{Eukaryotic genome:} a complete set of nuclear chromosomes.
+  \item Eukaryotes also possess a \textbf{mitochondrial genome}.
+  \item Plants additionally possess a \textbf{chloroplast genome}.
+\end{itemize}
 
-\subsection{Types of Torque Calculations}
-
-\begin{diagbox}{1.1 Types of Torque Calculations}
-
-\textbf{Case 1 --- Perpendicular force} ($\theta = 90^\circ$):
-\[
-  \tau = rF
-\]
-\emph{Example:} A 20\,N force perpendicular to a 0.3\,m wrench gives $\tau = (0.3)(20) = 6$\,N$\cdot$m.
-
-\vspace{0.4cm}
-\textbf{Case 2 --- Force at an angle $\theta$:}
-\[
-  \tau = rF\sin\theta
-\]
-\emph{Example:} A 20\,N force at $30^\circ$ on a 0.3\,m wrench gives $\tau = (0.3)(20)\sin 30^\circ = 3$\,N$\cdot$m.
-
-\vspace{0.4cm}
-\textbf{Case 3 --- Using the moment arm:}
-\[
-  \tau = d_\perp F
-\]
-where $d_\perp = r\sin\theta$ is the perpendicular distance from the pivot to the line of action.
-
-\vspace{0.4cm}
-\textbf{Case 4 --- Net torque:}
-\[
-  \tau_{\rm net} = \sum_i \tau_i
-\]
-Each torque is signed before summing.
+\vspace{0.3cm}
+\textbf{Main function} of genetic material: store the information required to produce an organism.
 
 \end{diagbox}
 
-\subsection{Key Properties of Torque}
+\subsection{Organization of Eukaryotic Chromosomes}
 
-\begin{diagbox}{1.2 Key Properties of Torque}
+\begin{diagbox}{2. Organization of Eukaryotic Chromosomes}
 
+Eukaryotic species contain \textbf{one or more sets of chromosomes} (several different linear chromosomes).
+\begin{itemize}[leftmargin=1.5em]
+  \item Humans have \textbf{2 sets of 23 chromosomes} (46 total in the diploid genome: 6{,}200~Mbp).
+  \item Each chromosome contains a \textbf{single, linear molecule of DNA} (tens to hundreds of millions of bp; a few hundred to several thousand genes).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Lower eukaryotes} (e.g.\ yeast, \textit{Saccharomyces cerevisiae}):
+\begin{itemize}[leftmargin=1.5em]
+  \item Genes are relatively small; few, short introns.
+  \item Genome $\approx$ 12~Mbp, organised in 16 chromosomes.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Higher eukaryotes} (e.g.\ mammals):
+\begin{itemize}[leftmargin=1.5em]
+  \item Genes are long and tend to have many introns (100 to $>$10{,}000~bp).
+  \item Diploid human genome: 6{,}200~Mbp in 46 chromosomes.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Four essential chromosomal elements:}
 \begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Torque depends on the pivot point.}  The same force produces different torques for different pivot choices.
-  \item \textbf{Maximum torque} is achieved when the force is applied perpendicular to the lever arm ($\theta = 90^\circ$).
-  \item \textbf{Zero torque} results when $\theta = 0^\circ$ or $180^\circ$.
-  \item \textbf{Longer lever arm $\Rightarrow$ larger torque} for the same force.
-  \item \textbf{Newton's second law for rotation:}
-        \[
-          \tau_{\rm net} = I\alpha
-        \]
-        where $I$ is the moment of inertia and $\alpha$ is the angular acceleration.
+  \item \textbf{Origins of replication} --- interspersed every $\sim$100{,}000~bp.
+  \item \textbf{Centromere} --- recognition site for kinetochore proteins.
+  \item \textbf{Telomeres} --- specialised sequences at both ends of the linear chromosome.
+  \item \textbf{Repetitive sequences} --- near centromeric/telomeric regions and throughout.
 \end{enumerate}
 
 \end{diagbox}
 
-\newpage
+\subsection{Genome Sizes and Repetitive Sequences}
 
-\section{Gravitational Torque and the Center of Gravity (Section 7.4)}
+\begin{diagbox}{3. Genome Sizes and Repetitive Sequences}
 
-\begin{diagbox}{2. Gravitational Torque and the Center of Gravity}
-
-The entire gravitational force on an extended object can be treated as acting at a single point: the \textbf{center of gravity} (CG).
+\textbf{Genome size} is \emph{not} simply related to organismal complexity (C-value paradox).
+Eukaryotic species generally have more DNA than bacteria but vary substantially among themselves.
 
 \vspace{0.3cm}
-\textbf{Gravitational torque} about a pivot at horizontal position $x_0$:
-\[
-  \tau_{\rm grav} = (x_{\rm CG} - x_0)\,M g
-\]
-where $M$ is the total mass and $x_{\rm CG}$ is the CG's horizontal coordinate.
+\textbf{Difference in size is due to repetitive DNA, not extra genes.}
+
+\vspace{0.3cm}
+\textbf{Three categories of repetitive sequences:}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Category} & \textbf{Copy Number} & \textbf{Examples} \\
+\hline
+Unique (non-repetitive) & Once or a few times & Structural genes, intergenic regions; 41\% of human genome \\
+\hline
+Moderately repetitive & Hundreds to thousands & rRNA genes, histones, regulatory sequences, transposable elements \\
+\hline
+Highly repetitive & Tens of thousands to millions & Short sequences (a few to several hundred nt each) \\
+\hline
+\end{tabular}
+\end{center}
 
 \end{diagbox}
 
-\subsection{Finding the Center of Gravity}
+\subsection{Chromosome Territories}
 
-\begin{diagbox}{2.1 Finding the Center of Gravity}
+\begin{diagbox}{4. Chromosome Territories}
 
-For a system of particles with masses $m_1, m_2, \ldots$ at positions $x_1, x_2, \ldots$:
+During interphase, chromosomes occupy \textbf{distinct regions (territories)} within the nucleus.
+\begin{itemize}[leftmargin=1.5em]
+  \item Particular chromosomes preferentially occupy specific nuclear regions.
+  \item This spatial organisation is non-random and influences gene regulation.
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Nucleosomes and Chromatin Structure}
+
+\begin{diagbox}{5. Nucleosomes and Chromatin Structure}
+
+The DNA--protein complex is called \textbf{chromatin}.
+
+\vspace{0.3cm}
+\textbf{Nucleosome} --- the repeating structural unit of eukaryotic chromatin:
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Histone octamer:} two copies each of H2A, H2B, H3, and H4 (core histones).
+  \item \textbf{146~bp} of DNA wrapped $\sim$1.65 times around the octamer.
+  \item \textbf{Linker histone H1} binds DNA in the linker region between nucleosomes.
+  \item Non-histone proteins also associate with chromatin.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Five types of histones:}
+\begin{itemize}[leftmargin=1.5em]
+  \item H2A, H2B, H3, H4 --- \emph{core histones} (two of each per octamer).
+  \item H1 --- \emph{linker histone} (binds between nucleosomes).
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Heterochromatin versus Euchromatin}
+
+\begin{diagbox}{6. Heterochromatin versus Euchromatin}
+
+The compaction level of interphase chromosomes is \emph{not} completely uniform.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Feature} & \textbf{Heterochromatin} & \textbf{Euchromatin} \\
+\hline
+Compaction & Tightly compacted & Less condensed \\
+\hline
+Transcription & Inactive (in general) & Transcriptionally active \\
+\hline
+Protein access & Little to no access & DNA accessible to proteins \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{diagbox}
+
+\subsection{Levels of Chromatin Compaction}
+
+\begin{diagbox}{7. Levels of Chromatin Compaction Leading to a Metaphase Chromosome}
+
+Eukaryotic chromosomal DNA undergoes successive levels of compaction:
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{2~nm} --- DNA double helix.
+  \item \textbf{11~nm} --- DNA wrapping around nucleosomes (``beads on a string'').
+  \item \textbf{30~nm} --- Zig-zag (solenoid) structure via histone H1 and non-histone proteins.
+  \item \textbf{300~nm} --- Radial loop domains: MARs (matrix attachment regions) bind the nuclear matrix.
+  \item \textbf{700~nm} --- Radial loops more compacted.
+  \item \textbf{1{,}400~nm} --- Metaphase chromosome; protein filaments (scaffold) give the chromosome its shape.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{DNase~I} cuts chromatin into repeating units containing $\sim$200~bp of DNA, demonstrating the nucleosomal repeat unit.
+
+\end{diagbox}
+
+\subsection{Condensin and Cohesin}
+
+\begin{diagbox}{8. Condensin and Cohesin}
+
+Two multiprotein complexes organise metaphase chromosomes, both containing \textbf{SMC proteins} (Structural Maintenance of Chromosomes) that use ATP energy to alter chromosome structure.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
+\hline
+\textbf{Complex} & \textbf{Timing} & \textbf{Function} \\
+\hline
+Condensin & Cytoplasmic in interphase; enters nucleus at mitosis & Chromosome condensation; compacts radial loops \\
+\hline
+Cohesin & Present during S phase onward & Sister chromatid cohesion; also regulates transcription \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{Cornelia de Lange Syndrome (CdLS; MIM~122470):} caused by mutations in cohesin complex genes.
+Hallmarks: craniofacial dysmorphisms (synophrys, arched eyebrows, thin downturned upper lip, long philtrum), hirsutism,
+intellectual disability, microcephaly, growth retardation, and limb anomalies (micromelia, oligodactyly, phocomelia).
+
+\end{diagbox}
+
+\subsection{Bacterial Chromosome Organization}
+
+\begin{diagbox}{9. Bacterial Chromosome Organization}
+
+Bacterial chromosomal DNA is typically a \textbf{circular molecule}.
+\begin{itemize}[leftmargin=1.5em]
+  \item \textit{Escherichia coli}: $\sim$4.6~million bp.
+  \item \textit{Haemophilus influenzae}: $\sim$1.8~million bp.
+  \item Contains thousands of genes, mostly protein-encoding (\textbf{structural genes}).
+  \item Non-transcribed DNA between genes = \textbf{intergenic regions}.
+  \item \textbf{One origin of replication.}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{The nucleoid:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Region of the cell where the bacterial chromosome resides.
+  \item \emph{Not} bounded by a membrane (no nucleus).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Compaction via loop domains:}
+\begin{itemize}[leftmargin=1.5em]
+  \item DNA must be compacted $\sim$1{,}000-fold to fit inside the cell.
+  \item \textit{E.\ coli} forms 50--100 loop domains, each containing 40{,}000--80{,}000~bp.
+  \item Micro-domain number varies with chromosome size and species.
+\end{itemize}
+
+\end{diagbox}
+
+\newpage
+% ────────────────────────────────────────────────────────────
+\section{Biotechnology}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Introduction to Biotechnology}
+
+\begin{diagbox}{10. Introduction to Biotechnology}
+
+\textbf{Biotechnology:} technologies that involve the use of living organisms,
+or their products, to benefit humans.
+
+\vspace{0.3cm}
+\textbf{Common uses of microorganisms:}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|p{8cm}|}
+\hline
+\textbf{Application} & \textbf{Examples} \\
+\hline
+Production of medicines & Antibiotics, vitamins; human insulin in recombinant \textit{E.\ coli} \\
+\hline
+Food fermentation & Cheese, yogurt, vinegar, wine, beer \\
+\hline
+Biological control & Plant disease, insect pest, weed control \\
+\hline
+Symbiotic nitrogen fixation & Prevention of frost formation \\
+\hline
+Bioremediation & Cleanup of petroleum hydrocarbons and synthetic pollutants \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{Human insulin:}
+\begin{itemize}[leftmargin=1.5em]
+  \item A hormone consisting of two polypeptide chains (A and B).
+  \item Regulates glucose uptake into fat and muscle cells; produced by $\beta$~cells of the pancreas.
+  \item Persons with insulin-dependent diabetes cannot synthesise enough insulin.
+  \item Synthesised in recombinant \textit{E.\ coli} for therapeutic use.
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Gene Knockouts and RNA Interference}
+
+\begin{diagbox}{11. Gene Knockouts and RNA Interference (RNAi)}
+
+\textbf{Gene knockouts (KO):}
+\begin{itemize}[leftmargin=1.5em]
+  \item Used to study how loss of gene function affects an organism.
+  \item The genomic DNA is perturbed to \emph{permanently prevent} expression of a specific gene.
+  \item No mRNA or protein product from the knocked-out gene.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{RNA interference (RNAi) --- gene knockdown:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Double-stranded RNA (dsRNA) results in \textbf{sequence-specific gene silencing}.
+  \item The target mRNA is degraded post-transcriptionally.
+  \item The gene is still present; mRNA is made but degraded.
+  \item Useful for transient, post-transcriptional knockdown.
+\end{itemize}
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Feature} & \textbf{Knockout} & \textbf{Knockdown (RNAi)} \\
+\hline
+Gene present? & No & Yes \\
+mRNA produced? & No & Yes (then degraded) \\
+Protein produced? & No & No (or reduced) \\
+Permanence & Permanent & Transient \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{diagbox}
+
+\subsection{Gene Cloning}
+
+\begin{diagbox}{12. Gene Cloning}
+
+\textbf{Gene cloning:} isolating and producing many copies of a gene.
+
+\vspace{0.3cm}
+\textbf{Two DNA molecules required:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Chromosomal (genomic) DNA} --- source of the gene of interest.
+  \item \textbf{Vector (plasmid) DNA} --- carrier for the insert; replicates independently of host chromosome.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Vector features (example: pMSH6-MYC):}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Bacterial origin of replication} (\textit{ori}) for replication in bacteria.
+  \item \textbf{Antibiotic resistance gene} (e.g.\ ampicillin resistance --- \textit{amp}$^R$) for selection.
+  \item \textbf{ARSH4 + CEN6} for replication and maintenance in yeast.
+  \item \textbf{Leucine marker} ($LEU2$) for yeast selection in leucine-deficient medium.
+  \item \textbf{Shuttle vector:} can replicate in both bacteria and yeast.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Steps in gene cloning:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Extract and purify genomic DNA from the organism of interest.
+  \item Digest both chromosomal DNA and vector with the same restriction enzyme.
+  \item Ligate the insert into the vector $\Rightarrow$ \textbf{recombinant vector}.
+  \item Transform \textbf{competent cells} (cells capable of taking up DNA).
+  \item Select transformants on antibiotic plates.
+  \item Identify recombinant clones by \textbf{blue-white screening} (lacZ).
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Blue-white screening (LacZ):}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Blue colonies:} vector re-circularised without insert; lacZ intact; $\beta$-galactosidase cleaves X-gal $\Rightarrow$ blue pigment.
+  \item \textbf{White colonies:} insert disrupts lacZ $\Rightarrow$ no $\beta$-galactosidase activity $\Rightarrow$ no blue pigment.
+  \item Select \emph{white} colonies to find recombinant plasmids.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Amplification:} a single bacterium harbouring a plasmid gives rise to millions of cells overnight ($\sim$25--50 plasmid copies per cell; division every 20~min).
+
+\end{diagbox}
+
+\subsection{Restriction Enzymes}
+
+\begin{diagbox}{13. Restriction Enzymes}
+
+\textbf{Restriction endonucleases (restriction enzymes):}
+\begin{itemize}[leftmargin=1.5em]
+  \item Naturally produced by many bacteria to protect against foreign DNA (bacteriophages).
+  \item Cleave DNA at specific \textbf{palindromic recognition sequences}.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Palindromic sequences:} the sequence on one strand (read 5$'\!\to\!$3$'$) is identical to the complementary strand read in the opposite direction.
+
+\vspace{0.3cm}
+\textbf{EcoRI example:}
 \[
-  x_{\rm CG} = \frac{\sum_i m_i\,x_i}{\sum_i m_i}
+  5'\text{-}\underbrace{\texttt{G\,A\,A\,T\,T\,C}}_{\text{EcoRI site}}\text{-}3'
   \qquad
-  y_{\rm CG} = \frac{\sum_i m_i\,y_i}{\sum_i m_i}
+  3'\text{-}\underbrace{\texttt{C\,T\,T\,A\,A\,G}}_{}  \text{-}5'
 \]
-
-\textbf{Worked example:}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Mass} & \textbf{Value (kg)} & \textbf{Position (m)} \\
-\hline
-$m_1$ & 2.0 & 0.0 \\
-$m_2$ & 3.0 & 1.0 \\
-$m_3$ & 1.0 & 2.0 \\
-\hline
-\end{tabular}
-\end{center}
-\[
-  x_{\rm CG} = \frac{(2.0)(0.0)+(3.0)(1.0)+(1.0)(2.0)}{6.0} = \frac{5}{6} \approx 0.83\text{ m}
-\]
-
-\textbf{Tip:} For a uniform symmetric object (rod, disk), the CG is at the geometric center.
-
-\end{diagbox}
-
-\subsection{Key Properties of Center of Gravity}
-
-\begin{diagbox}{2.2 Key Properties of Center of Gravity}
-
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Unique point:} Every object has exactly one center of gravity (in a uniform field).
-  \item \textbf{Need not lie within the object:} For a hollow ring or boomerang, the CG is in empty space.
-  \item \textbf{Stability criterion:} An object supported at a single point is in equilibrium when the support is directly below (or above) the CG.
-  \item \textbf{CG vs.\ CM:} In a uniform gravitational field, the center of gravity and center of mass coincide.
-  \item \textbf{Composite objects:} The CG of a composite object can be found by treating each part as a point mass at its own CG.
-\end{enumerate}
-
-\end{diagbox}
-
-\newpage
-
-% ══════════════════════════════════════════════════════════════
-\part{Chapter 8: Equilibrium and Elasticity}
-% ══════════════════════════════════════════════════════════════
-
-\section{Torque and Static Equilibrium (Section 8.1)}
-
-\begin{diagbox}{3. Torque and Static Equilibrium}
-
-An object is in \textbf{static equilibrium} when both translational and rotational conditions hold:
+Cuts between G and A on each strand, generating \textbf{sticky (cohesive) ends}.
 
 \vspace{0.3cm}
-\textbf{Condition 1 --- Translational equilibrium:}
-\[
-  \sum F_x = 0 \quad\text{and}\quad \sum F_y = 0
-\]
-
-\textbf{Condition 2 --- Rotational equilibrium:}
-\[
-  \sum \tau = 0 \quad\text{(about any chosen pivot)}
-\]
-
-\vspace{0.4cm}
-\textbf{Problem-solving strategy:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Draw a free-body diagram with all forces and their points of application.
-  \item Choose a pivot strategically (where an unknown force acts, to eliminate it).
-  \item Write $\sum\tau = 0$ about the pivot.
-  \item Write $\sum F_x = 0$ and $\sum F_y = 0$.
-  \item Solve the system of equations.
-\end{enumerate}
-
-\vspace{0.4cm}
-\textbf{Worked example:} A uniform 4.0-m, 10-kg beam rests on a pivot at its left end.  A 30-kg block sits 3.0\,m from the left end.  Find upward force $F$ at the right end.
-
-Taking the pivot at the left end:
-\[
-  F(4.0) - (10)(9.8)(2.0) - (30)(9.8)(3.0) = 0
-  \;\Rightarrow\;
-  F = \frac{196+882}{4} \approx 270\text{ N}
-\]
-
-\end{diagbox}
-
-\section{Stability and Balance (Section 8.2)}
-
-\begin{diagbox}{4. Stability and Balance}
-
-\textbf{Stable equilibrium:}  A small displacement raises the CG and produces a restoring torque.
-
-\textbf{Unstable equilibrium:}  A small displacement lowers the CG and causes further departure.
-
-\textbf{Neutral equilibrium:}  A displacement does not change the CG height; no restoring or destabilizing torque.
-
-\vspace{0.4cm}
-\textbf{Tipping condition:}  An object tips when its CG moves outside the \emph{base of support}.
-
-\end{diagbox}
-
-\subsection{Factors Affecting Stability}
-
-\begin{diagbox}{4.1 Factors Affecting Stability}
-
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Width of the base of support:} A wider base makes tipping less likely.
-  \item \textbf{Height of the center of gravity:} A lower CG increases stability.
-  \item \textbf{Position of the CG over the base:} Maximum stability when CG is above the center of the base.
-  \item \textbf{Dynamic stability:} Moving objects can maintain balance through gyroscopic effects.
-\end{enumerate}
-
-\vspace{0.4cm}
-\textbf{Example:} A 1.2-m-tall crate (CG at 0.6\,m, base width 0.4\,m) tips when tilted at angle $\theta$:
-\[
-  \tan\theta_{\rm tip} = \frac{0.2\text{ m}}{0.6\text{ m}} \approx 0.333
-  \;\Rightarrow\;
-  \theta_{\rm tip} \approx 18.4^\circ
-\]
-
-\end{diagbox}
-
-\section{Springs and Hooke's Law (Section 8.3)}
-
-\begin{diagbox}{5. Springs and Hooke's Law}
-
-\textbf{Hooke's Law:}
-\[
-  F_{\rm sp} = -k\,x
-\]
+\textbf{Generating compatible ends:}
 \begin{itemize}[leftmargin=1.5em]
-  \item $k$ = spring constant (N/m)
-  \item $x$ = displacement from natural (equilibrium) length
-  \item Negative sign: restoring force opposes displacement
+  \item Both insert and vector digested with the same enzyme $\Rightarrow$ complementary overhangs.
+  \item DNA ligase seals the nick to form a \textbf{recombinant molecule}.
 \end{itemize}
 
-\textbf{Example:} Spring with $k = 200$\,N/m stretched 0.05\,m: $|F_{\rm sp}| = (200)(0.05) = 10$\,N.
-
-\begin{warnbox}
-Hooke's Law holds only within the \textbf{elastic limit}.  Beyond this limit the spring is permanently deformed.
-\end{warnbox}
-
 \end{diagbox}
 
-\subsection{Graphical Interpretation of Hooke's Law}
+\subsection{Polymerase Chain Reaction (PCR)}
 
-\begin{diagbox}{5.1 Graphical Interpretation of Hooke's Law}
+\begin{diagbox}{14. Polymerase Chain Reaction (PCR)}
 
-On a graph of applied force $F$ vs.\ displacement $x$:
-\begin{itemize}[leftmargin=1.5em]
-  \item The relationship is \textbf{linear} for an ideal spring.
-  \item The \textbf{slope} equals the spring constant $k$.
-  \item The \textbf{area under the curve} equals the elastic potential energy stored: $U_{\rm sp} = \tfrac{1}{2}kx^2$.
-  \item Beyond the elastic limit, the graph curves.
-\end{itemize}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Graph feature} & \textbf{Physical meaning} \\
-\hline
-Slope $= k$ & Spring stiffness (N/m) \\
-Area under curve to $x$ & Work done / elastic PE = $\tfrac{1}{2}kx^2$ \\
-Linear region & Valid range of Hooke's Law \\
-Deviation from linearity & Beyond elastic limit \\
-\hline
-\end{tabular}
-\end{center}
-
-\end{diagbox}
-
-\newpage
-
-\section{Forces and Torques in the Body (Section 8.5) --- \textsc{Bio}}
-
-\begin{diagbox}{6. Forces and Torques in the Body (BIO)}
-
-The human musculoskeletal system functions as a collection of \textbf{levers}: rigid bones rotate about pivot joints.
+\textbf{PCR:} a method to amplify a specific DNA sequence \emph{without} vectors or host cells.
 
 \vspace{0.3cm}
-\textbf{Lever elements:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Effort} $F_E$: force applied by muscle.
-  \item \textbf{Load} $F_L$: force being overcome.
-  \item \textbf{Fulcrum}: the joint (pivot point).
-\end{itemize}
-
-\textbf{Mechanical advantage:} $\displaystyle\text{MA} = \frac{d_E}{d_L} = \frac{F_L}{F_E}$
-
-\end{diagbox}
-
-\subsection{Types of Levers in the Body}
-
-\begin{diagbox}{6.1 Types of Levers in the Body}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|c|p{3cm}|p{3.5cm}|p{4cm}|}
-\hline
-\textbf{Class} & \textbf{Arrangement} & \textbf{Body Example} & \textbf{Key Feature} \\
-\hline
-\textbf{1st Class} & Fulcrum between effort and load & Head nodding: neck muscles (effort), skull weight (load), atlas vertebra (fulcrum) & Can have MA $>1$ or $<1$; changes force direction \\
-\hline
-\textbf{2nd Class} & Load between fulcrum and effort & Rising on tiptoe: ball of foot (fulcrum), body weight (load), calf/Achilles tendon (effort) & MA $>1$; effort arm $>$ load arm \\
-\hline
-\textbf{3rd Class} & Effort between fulcrum and load & Forearm curl: elbow (fulcrum), bicep $\approx$5\,cm from joint (effort), hand/weight $\approx$35\,cm (load) & MA $<1$; trades force for speed and range \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.4cm}
-\textbf{Why muscles exert large forces:}  Most body levers are 3rd-class (MA $\approx 0.14$), so the muscle must exert about 7$\times$ the load force.
-
-\end{diagbox}
-
-\newpage
-
-% ══════════════════════════════════════════════════════════════
-\part{Chapter 10: Energy and Work}
-% ══════════════════════════════════════════════════════════════
-
-\section{The Basic Energy Model (Section 10.1)}
-
-\begin{diagbox}{7. The Basic Energy Model}
-
-\textbf{Energy} is the capacity of a system to do work or cause change.
+\textbf{Required starting materials:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Template DNA} --- contains the region to be amplified.
+  \item \textbf{Two oligonucleotide primers} ($\sim$15--20~nt) complementary to each end of the target.
+  \item \textbf{Deoxynucleoside triphosphates (dNTPs)} --- precursors for DNA synthesis.
+  \item \textbf{Taq polymerase} --- thermostable DNA polymerase from \textit{Thermus aquaticus}; survives high-temperature denaturation steps.
+\end{enumerate}
 
 \vspace{0.3cm}
-\textbf{Mechanical energy forms:}
+\textbf{The three steps of each PCR cycle:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Denaturation} ($\sim$94--96$^\circ$C) --- strands separate.
+  \item \textbf{Annealing} ($\sim$50--65$^\circ$C) --- primers bind to complementary template.
+  \item \textbf{Extension/Synthesis} ($\sim$72$^\circ$C) --- Taq extends from each primer.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Amplification:}
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Kinetic energy} $K = \tfrac{1}{2}mv^2$
-  \item \textbf{Gravitational PE} $U_g = mgy$
-  \item \textbf{Elastic PE} $U_{\rm sp} = \tfrac{1}{2}kx^2$
+  \item 20 cycles $\Rightarrow$ $2^{20} \approx 1{,}000{,}000$-fold increase.
+  \item 30 cycles $\Rightarrow$ $2^{30} \approx 1{,}000{,}000{,}000$-fold increase.
 \end{itemize}
-
-\textbf{Non-mechanical:} Thermal energy $E_{\rm th}$ (microscopic KE/PE of atoms).
-
-\textbf{Master energy equation (preview):}
-\[
-  K_f + U_f + \Delta E_{\rm th} = K_i + U_i + W_{\rm ext}
-\]
 
 \end{diagbox}
 
-\subsection{System and Environment}
+\subsection{Site-Directed Mutagenesis}
 
-\begin{diagbox}{7.1 System and Environment}
+\begin{diagbox}{15. Site-Directed Mutagenesis}
 
+\textbf{Site-directed mutagenesis:} alters the sequence of a cloned gene at a \emph{specific, defined position}.
+
+\vspace{0.3cm}
+\textbf{Procedure:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Denature the vector + insert to single-stranded DNA.
+  \item Anneal a synthetic primer containing the desired mutation (creates a mismatch).
+  \item Extend to produce a heteroduplex containing one mutant strand.
+  \item Transform into bacteria; identify mutant by DNA sequencing.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Uses:} study how specific mutations affect:
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{System:} the objects under study.
-  \item \textbf{Environment:} everything outside the system.
-  \item Energy transfers via \emph{work} (mechanical) or \emph{heat} (thermal).
+  \item Gene expression.
+  \item Protein function.
+  \item Organismal phenotype.
 \end{itemize}
-
-\textbf{Isolated system:} no energy enters or leaves; total energy is conserved.
-
-\textbf{Choosing the system wisely} simplifies problems: including interacting objects avoids internal forces in the energy equation.
 
 \end{diagbox}
 
-\section{Work (Section 10.2)}
+\subsection{Gel Electrophoresis and Molecular Blotting Techniques}
 
-\begin{diagbox}{8. Work}
+\begin{diagbox}{16. Gel Electrophoresis and Molecular Blotting Techniques}
 
-\textbf{Work} is energy transferred by a force over a displacement:
-\[
-  W = F\,d\cos\theta
-\]
-where $\theta$ is the angle between $\vec{F}$ and $\vec{d}$.
-
-\textbf{Sign:}
+\textbf{Gel electrophoresis} separates DNA (or RNA/protein) by size in an electric field.
 \begin{itemize}[leftmargin=1.5em]
-  \item $W > 0$: force component in direction of motion (energy added).
-  \item $W < 0$: force component opposite to motion (energy removed).
-  \item $W = 0$: force perpendicular to motion.
+  \item Negatively charged DNA migrates from the negative electrode (cathode) toward the positive electrode (anode) (``run to red!'').
+  \item Smaller fragments migrate faster through the gel matrix.
+  \item \textbf{Ethidium bromide} (or safer alternatives) intercalates into DNA and fluoresces under UV light.
 \end{itemize}
 
-\textbf{Units:} joules (J); $1\,\text{J} = 1\,\text{N}\cdot\text{m}$.
+\vspace{0.3cm}
+\textbf{Topology and migration rate (slowest to fastest):}
+\[
+  \text{Nicked circle} > \text{Linear} > \text{Supercoiled}
+\]
 
-\textbf{Example:} 50-N force at $37^\circ$ over 4.0\,m: $W = (50)(4.0)\cos37^\circ \approx 160$\,J.
+\vspace{0.3cm}
+\textbf{Electrophoretic Mobility Shift Assay (EMSA):}
+\begin{itemize}[leftmargin=1.5em]
+  \item Detects protein--DNA interactions.
+  \item A protein bound to a labelled DNA fragment slows its migration (``shift'').
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Western blot:} detects a specific protein.
+\begin{enumerate}[leftmargin=1.5em]
+  \item Proteins separated by SDS-PAGE.
+  \item Transferred to nylon membrane.
+  \item Primary antibody binds the target protein.
+  \item Secondary antibody (linked to alkaline phosphatase) binds the primary antibody.
+  \item Addition of XP (5-bromo-4-chloro-3-indolyl phosphate) $\Rightarrow$ dark purple band.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Northern blot:} detects a specific RNA (mRNA).
+\begin{enumerate}[leftmargin=1.5em]
+  \item mRNA isolated and separated by gel electrophoresis.
+  \item Blotted to nylon membrane.
+  \item Hybridised with a labelled DNA probe complementary to the target mRNA.
+  \item Labelled bands appear where complementary mRNA is present.
+\end{enumerate}
 
 \end{diagbox}
 
-\subsection{Work Done by Gravity on an Incline}
+% ────────────────────────────────────────────────────────────
+\section{Gene Regulation in Eukaryotes}
+% ────────────────────────────────────────────────────────────
 
-\begin{diagbox}{8.1 Work Done by Gravity on an Incline}
+\subsection{Why Gene Regulation Is Necessary}
 
-\[
-  W_{\rm grav} = mg\,d\sin\alpha = mg\,\Delta y
-\]
-where $\Delta y = d\sin\alpha$ is the vertical drop (positive downward).
+\begin{diagbox}{17. Why Gene Regulation Is Necessary}
 
-\textbf{Key insight:} Work by gravity depends only on vertical displacement, not path.  Gravity is a \emph{conservative} force.
+Gene regulation is necessary to ensure:
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Expression of genes in an accurate pattern} during the various developmental stages of the life cycle.
+  \begin{itemize}[leftmargin=1.5em]
+    \item Some genes are only expressed during \textbf{embryonic stages}; others only in the adult.
+  \end{itemize}
+  \item \textbf{Differences among distinct cell types.}
+  \begin{itemize}[leftmargin=1.5em]
+    \item Nerve and muscle cells look different because of \textbf{gene regulation}, not differences in DNA content.
+    \item All somatic cells carry the same genome; cell identity arises from which genes are expressed.
+  \end{itemize}
+\end{enumerate}
 
-\begin{center}
+\vspace{0.3cm}
+\textbf{Levels at which eukaryotic gene expression can be regulated:}
+\begin{itemize}[leftmargin=1.5em]
+  \item Transcriptional regulation (most common and best studied)
+  \item RNA processing (splicing, capping, polyadenylation)
+  \item RNA stability / degradation
+  \item Translational regulation
+  \item Post-translational modification
+\end{itemize}
+
+\end{diagbox}
+
+\subsection{Transcription Factors}
+
+\begin{diagbox}{18. Transcription Factors}
+
+\textbf{Transcription factors} are proteins that influence the ability of RNA polymerase to transcribe a given gene.
+
+\vspace{0.3cm}
+\textbf{Two main types:}
+
 \renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Motion} & \textbf{Work by gravity} \\
-\hline
-Down the incline & $+mgd\sin\alpha > 0$ \\
-Up the incline   & $-mgd\sin\alpha < 0$ \\
-Horizontal       & $0$ \\
-\hline
-\end{tabular}
-\end{center}
-
-\end{diagbox}
-
-\newpage
-
-\section{Kinetic Energy (Section 10.3)}
-
-\begin{diagbox}{9. Kinetic Energy}
-
-\textbf{Kinetic energy:}
-\[
-  K = \tfrac{1}{2}mv^2
-\]
-\textbf{Units:} joules (J).  Always $K \geq 0$.
-
-\end{diagbox}
-
-\subsection{Understanding Kinetic Energy}
-
-\begin{diagbox}{9.1 Understanding Kinetic Energy}
-
-\begin{itemize}[leftmargin=1.5em]
-  \item KE is a \emph{scalar}, always non-negative.
-  \item KE depends on the reference frame.
-  \item \textbf{Doubling the mass} doubles the KE.
-  \item \textbf{Doubling the speed} \emph{quadruples} the KE.
-\end{itemize}
-
-\textbf{Example:} 2-kg ball at 3\,m/s vs.\ 6\,m/s:
-\[
-  K_1 = \tfrac{1}{2}(2)(9) = 9\text{ J}; \quad K_2 = \tfrac{1}{2}(2)(36) = 36\text{ J} = 4K_1
-\]
-
-\end{diagbox}
-
-\subsection{The \texorpdfstring{$v^2$}{v\texttwosuperior} Dependence: Why It Matters}
-
-\begin{diagbox}{9.2 The $v^2$ Dependence: Why It Matters}
-
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Braking distance} $\propto v^2$: doubling speed quadruples stopping distance.
-  \item \textbf{Wind power} scales as $v^3$.
-  \item \textbf{Crash energy} at 60\,mph is four times that at 30\,mph.
-\end{itemize}
-
-\begin{warnbox}
-\textbf{Common mistake:} Writing $K = \tfrac{1}{2}mv$ (forgetting to square $v$).  Check units: $\text{kg}\cdot(\text{m/s})^2 = \text{J}$.
-\end{warnbox}
-
-\end{diagbox}
-
-\subsection{The Work--Energy Theorem}
-
-\begin{diagbox}{9.3 The Work--Energy Theorem}
-
-\[
-  W_{\rm net} = \Delta K = \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2
-\]
-
-\textbf{Derivation (1D, constant force):}  From kinematics $v_f^2 = v_i^2 + 2a\Delta x$, multiply by $\tfrac{1}{2}m$:
-\[
-  \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2 = ma\,\Delta x = F_{\rm net}\,\Delta x = W_{\rm net}
-\]
-
-\textbf{Note:} Only the \emph{net} work from all forces equals $\Delta K$.
-
-\end{diagbox}
-
-\subsection{Kinetic Energy and the Work--Energy Theorem on Inclines}
-
-\begin{diagbox}{9.4 Kinetic Energy and the Work--Energy Theorem on Inclines}
-
-\textbf{Setup:} Mass $m$ slides distance $d$ down frictionless incline at angle $\alpha$.
-
-Work by gravity: $W_g = mgd\sin\alpha$; normal force does zero work.
-
-\[
-  W_{\rm net} = mgd\sin\alpha = \tfrac{1}{2}mv_f^2 - \tfrac{1}{2}mv_i^2
-\]
-
-Starting from rest ($v_i = 0$): $v_f = \sqrt{2gd\sin\alpha}$.
-
-\textbf{Example:} 5-kg block from rest down 4.0-m, $30^\circ$ frictionless ramp:
-\[
-  v_f = \sqrt{2(9.8)(4.0)(0.5)} = \sqrt{39.2} \approx 6.3\text{ m/s}
-\]
-
-\end{diagbox}
-
-\subsection{Multiple Objects and Kinetic Energy}
-
-\begin{diagbox}{9.5 Multiple Objects and Kinetic Energy}
-
-Total KE of a system:
-\[
-  K_{\rm total} = \sum_i \tfrac{1}{2}m_i v_i^2
-\]
-
-For a connected system: $W_{\rm net,\,ext} = \Delta K_{\rm total}$ (internal forces contribute zero net work).
-
-\textbf{Example (Atwood machine):} $m_1 = 3$\,kg, $m_2 = 5$\,kg, released from rest; each moves 1.0\,m:
-\[
-  W_{\rm net} = (m_2 - m_1)g\,d = (2)(9.8)(1.0) = 19.6\text{ J}
-\]
-\[
-  \tfrac{1}{2}(8)v^2 = 19.6\text{ J} \;\Rightarrow\; v = \sqrt{4.9} \approx 2.2\text{ m/s}
-\]
-
-\end{diagbox}
-
-\subsection{Common Mistakes with Kinetic Energy}
-
-\begin{diagbox}{9.6 Common Mistakes with Kinetic Energy}
-
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Forgetting to square speed:} $K \neq \tfrac{1}{2}mv$; use $K = \tfrac{1}{2}mv^2$.
-  \item \textbf{Treating KE as a vector:} KE is a scalar, always $\geq 0$.
-  \item \textbf{Applying theorem to one force:} Must sum work from \emph{all} forces.
-  \item \textbf{Ignoring friction:} Friction does negative work and reduces $\Delta K$.
-  \item \textbf{Confusing KE and momentum:} $K = \tfrac{1}{2}mv^2 \neq p = mv$.
-  \item \textbf{Wrong units:} Speed must be in m/s, mass in kg, for KE in joules.
-\end{enumerate}
-
-\end{diagbox}
-
-\subsection{Kinetic Energy in Context: Real-World Numbers}
-
-\begin{diagbox}{9.7 Kinetic Energy in Context: Real-World Numbers}
-
 \begin{center}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|l|c|c|c|}
+\begin{tabular}{|l|p{4.5cm}|p{5cm}|}
 \hline
-\textbf{Object} & \textbf{Mass (kg)} & \textbf{Speed (m/s)} & \textbf{KE (J)} \\
+\textbf{Type} & \textbf{Examples} & \textbf{Function} \\
 \hline
-Baseball (pitch) & 0.145 & 40 & 116 \\
-Person walking & 70 & 1.4 & 69 \\
-Car at 60\,mph & 1200 & 26.8 & $4.3\times10^5$ \\
-Bullet & 0.010 & 900 & 4050 \\
-Jumbo jet & $3.6\times10^5$ & 250 & $1.1\times10^{10}$ \\
+General (basal) transcription factors & TFIIB, TFIID, TFIIE, TFIIF, TFIIH & Required for binding of RNA pol~II to the core promoter and progression to elongation; necessary for \textbf{basal transcription} \\
+\hline
+Regulatory transcription factors & Activators, repressors & Regulate the \textbf{rate} of transcription of target genes; influence ability of RNA pol to begin transcription of a specific gene; 2--3\% of human genes encode transcription factors \\
 \hline
 \end{tabular}
 \end{center}
 
-The car's KE at highway speed is $\sim$100$\times$ a baseball pitch, despite being much slower, because mass matters too.
+\vspace{0.3cm}
+\textbf{TFIID} recognises the \textbf{TATA box} (core promoter element $\sim$25~bp upstream of TSS) via its TBP (TATA-box binding protein) subunit.
+The pre-initiation complex (PIC) assembled from general TFs plus RNA pol~II is required for basal transcription.
 
 \end{diagbox}
 
-\newpage
+\subsection{Regulatory Transcription Factors: Activators and Repressors}
 
-\subsection{Practice Problems: Kinetic Energy (Section 10.3)}
+\begin{diagbox}{19. Regulatory Transcription Factors}
 
-\begin{planbox}
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{P\arabic*.}]
-
-  \item A 2.0-kg ball is thrown horizontally at 15\,m/s.  What is its kinetic energy?
-
-  \item A 1500-kg car has $K = 2.7\times10^5$\,J.  What is its speed?
-
-  \item A 0.5-kg hockey puck slides at 8.0\,m/s and is stopped by a 2.0-N friction force.  Find the stopping distance using the Work--Energy Theorem.
-
-  \item Two objects have the same kinetic energy.  Object A has mass $m$ and speed $v$.  Object B has mass $4m$.  What is the speed of object B?
-
-  \item A 10-kg block starts from rest and slides 5.0\,m down a frictionless $25^\circ$ incline.  Find its final speed.
-
-  \item A net force of 40\,N acts on an 8.0-kg object over 3.0\,m.  If the initial speed is 2.0\,m/s, find the final speed.
-
-  \item A bullet of mass 0.012\,kg embeds in a 1.0-kg block (initially at rest).  The block then slides 0.80\,m with $\mu_k = 0.25$.  Find the speed of the bullet--block system just after impact.
-
-  \item Compare the KE of (a) a 1500-kg car at 20\,m/s and (b) a 3000-kg truck at 10\,m/s.  Which is larger?
-
-\end{enumerate}
-
-\end{planbox}
-
-\subsection{Solutions: Kinetic Energy (Section 10.3)}
-
-\begin{keybox}
-
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{P\arabic*.}]
-
-  \item \textbf{$K = 225$\,J.} \quad $K = \tfrac{1}{2}(2.0)(15)^2 = 225$\,J.
-
-  \item \textbf{$v \approx 19.0$\,m/s.} \quad $v = \sqrt{2K/m} = \sqrt{2(2.7\times10^5)/1500} = \sqrt{360} \approx 19.0$\,m/s.
-
-  \item \textbf{$d = 8.0$\,m.} \quad $K_i = f_k\,d \Rightarrow \tfrac{1}{2}(0.5)(8)^2 = (2.0)d \Rightarrow d = 16/2 = 8.0$\,m.
-
-  \item \textbf{$v_B = v/2$.} \quad $\tfrac{1}{2}mv^2 = \tfrac{1}{2}(4m)v_B^2 \Rightarrow v_B^2 = v^2/4 \Rightarrow v_B = v/2$.
-
-  \item \textbf{$v_f \approx 6.4$\,m/s.} \quad $W_g = (10)(9.8)(5.0)\sin25^\circ \approx 207$\,J; $v_f = \sqrt{2(207)/10} \approx 6.4$\,m/s.
-
-  \item \textbf{$v_f \approx 5.8$\,m/s.} \quad $\tfrac{1}{2}mv_f^2 = \tfrac{1}{2}(8)(4) + (40)(3) = 16+120 = 136$\,J; $v_f = \sqrt{2(136)/8} = \sqrt{34} \approx 5.8$\,m/s.
-
-  \item \textbf{$v \approx 1.97$\,m/s.} \quad Friction work: $W_f = -(0.25)(1.0)(9.8)(0.80) = -1.96$\,J. Setting $\tfrac{1}{2}(1.012)v^2 = 1.96$\,J: $v \approx 1.97$\,m/s.
-
-  \item \textbf{Car KE is larger.} \quad Car: $K = \tfrac{1}{2}(1500)(400) = 3.0\times10^5$\,J. Truck: $K = \tfrac{1}{2}(3000)(100) = 1.5\times10^5$\,J.  The car's KE is twice the truck's.
-
-\end{enumerate}
-
-\end{keybox}
-
-\newpage
-
-\section{Potential Energy (Section 10.4)}
-
-\begin{diagbox}{10. Potential Energy}
-
-\textbf{Potential energy} (PE or $U$) is energy stored in a system due to position or configuration within a \emph{conservative} force field.
-
-\end{diagbox}
-
-\subsection{Gravitational Potential Energy}
-
-\begin{diagbox}{10.1 Gravitational Potential Energy}
-
-Near Earth's surface:
-\[
-  U_g = mgy
-\]
-\[
-  \Delta U_g = mg\,\Delta y = mg(y_f - y_i)
-\]
+\textbf{Gene activation:}
 \begin{itemize}[leftmargin=1.5em]
-  \item $\Delta U_g > 0$: object moved upward.
-  \item $\Delta U_g < 0$: object moved downward.
+  \item A regulatory protein that \textbf{increases} the rate of transcription is an \textbf{activator}.
+  \item The DNA sequence an activator binds is called an \textbf{enhancer}.
+  \item Enhancers can be located thousands of bp upstream, downstream, or within introns.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Gene repression:}
+\begin{itemize}[leftmargin=1.5em]
+  \item A regulatory protein that \textbf{decreases} the rate of transcription is a \textbf{repressor}.
+  \item The DNA sequence a repressor binds is called a \textbf{silencer}.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Domain structure of regulatory transcription factors:}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{DNA-binding domain} --- recognises and binds specific DNA sequences (motifs: helix-turn-helix, zinc finger, leucine zipper, helix-loop-helix).
+  \item \textbf{Activation (or repression) domain} --- interacts with co-activators/co-repressors or the basal transcription machinery.
 \end{itemize}
 
 \end{diagbox}
 
-\subsubsection{Choosing the Reference Level}
+\subsection{Combinatorial Control of Gene Expression}
 
-\begin{diagbox}{10.1.1 Choosing the Reference Level}
+\begin{diagbox}{20. Combinatorial Control}
 
-The reference level ($y = 0$) is arbitrary:
-\begin{itemize}[leftmargin=1.5em]
-  \item Common choices: ground level, lowest point of motion, initial position.
-  \item \textbf{Only $\Delta U_g$ matters}; the reference level cancels in the final answer.
-\end{itemize}
+\textbf{Combinatorial control} refers to the cooperative action of multiple regulatory proteins in determining whether a gene is transcribed.
 
-\textbf{Example:} 3-kg ball 2.0\,m above floor. Reference at floor: $U_g = (3)(9.8)(2.0) = 58.8$\,J. Reference at ball: $U_g = 0$.  Both give $\Delta U_g = -58.8$\,J when ball reaches floor.
-
-\end{diagbox}
-
-\subsubsection{Gravitational PE on Inclines}
-
-\begin{diagbox}{10.1.2 Gravitational PE on Inclines}
-
-Object at distance $s$ along a ramp of angle $\alpha$:
-\[
-  U_g = mgs\sin\alpha = mgh \quad\text{where } h = s\sin\alpha
-\]
-PE depends only on vertical height $h$, not on path length along ramp.
-
-\textbf{Example:} 5-kg crate 3.0\,m up a $20^\circ$ ramp:
-\[
-  h = 3.0\sin20^\circ = 1.03\text{ m}, \quad U_g = (5)(9.8)(1.03) \approx 50.3\text{ J}
-\]
-
-\end{diagbox}
-
-\subsection{Elastic (Spring) Potential Energy}
-
-\begin{diagbox}{10.2 Elastic (Spring) Potential Energy}
-
-\[
-  U_{\rm sp} = \tfrac{1}{2}kx^2
-\]
-\begin{itemize}[leftmargin=1.5em]
-  \item Always $U_{\rm sp} \geq 0$ (compressed or stretched).
-  \item Maximum at maximum compression/extension; zero at natural length.
-\end{itemize}
-
-\textbf{Example:} $k = 500$\,N/m, compressed 0.10\,m: $U_{\rm sp} = \tfrac{1}{2}(500)(0.01) = 2.5$\,J.
-
-\end{diagbox}
-
-\subsection{Relationship Between Work and Potential Energy}
-
-\begin{diagbox}{10.3 Relationship Between Work and Potential Energy}
-
-For any \textbf{conservative force}:
-\[
-  W_c = -\Delta U
-\]
-Work done by a conservative force equals the \emph{decrease} in PE.
-
-\textbf{Gravity:} $W_{\rm grav} = -\Delta U_g = mg(y_i - y_f)$
-
-\textbf{Spring:} $W_{\rm sp} = -\Delta U_{\rm sp}$
-
-\begin{warnbox}
-Only conservative forces have associated PE.  Friction is non-conservative --- it permanently converts mechanical energy to thermal energy.
-\end{warnbox}
-
-\end{diagbox}
-
-\newpage
-
-\section{Thermal Energy (Section 10.5)}
-
-\begin{diagbox}{11. Thermal Energy}
-
-\textbf{Thermal energy} $E_{\rm th}$: microscopic KE and PE of atoms/molecules (manifests as temperature).
-
-\textbf{From friction:}
-\[
-  \Delta E_{\rm th} = f_k\,d \quad\text{where } f_k = \mu_k\,n
-\]
-
-This energy is permanently converted from mechanical energy and is not recoverable.
-
-\end{diagbox}
-
-\subsection{Why Thermal Energy Is Different}
-
-\begin{diagbox}{11.1 Why Thermal Energy Is Different}
-
+\vspace{0.3cm}
+\textbf{Mechanisms that contribute to combinatorial control:}
 \begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Irreversible:} Friction converts ordered mechanical energy to disordered thermal energy.
-  \item \textbf{Not a PE:} $E_{\rm th}$ cannot be stored and recovered like $U_g$ or $U_{\rm sp}$.
-  \item \textbf{Always positive:} $\Delta E_{\rm th} = f_k d \geq 0$; friction never adds mechanical energy.
-  \item \textbf{Second Law:} Irreversibility reflects increasing entropy.
+  \item \textbf{Multiple activators binding at a single gene's enhancer region} --- additive or synergistic effects on transcription.
+  \item \textbf{Regulatory proteins altering nucleosomes} near the promoter --- loosening or tightening chromatin to permit or block RNA pol access.
+  \item \textbf{DNA methylation} at CpG islands --- can prevent binding of an activator protein or recruit proteins that compact chromatin.
+  \item \textbf{Chromatin compaction} --- recruitment of histone deacetylases or methyltransferases by repressors condenses chromatin.
 \end{enumerate}
 
-\begin{warnbox}
-With friction, \emph{mechanical energy is not conserved}:
-\[
-  K_f + U_f = K_i + U_i - \Delta E_{\rm th}
-\]
-Total energy (mechanical + thermal) is still conserved.
-\end{warnbox}
+\vspace{0.3cm}
+\textbf{Key concept:} The same gene can be regulated differently in different cell types depending on which combination of transcription factors is present.
 
 \end{diagbox}
 
-\subsection{Thermal Energy and Stopping Distance}
+\subsection{Mediator Complex}
 
-\begin{diagbox}{11.2 Thermal Energy and Stopping Distance}
+\begin{diagbox}{21. The Mediator Complex}
 
-A car of mass $m$ braking from $v_0$ to rest:
-\[
-  \Delta E_{\rm th} = K_i = \tfrac{1}{2}mv_0^2
-\]
-Also $\Delta E_{\rm th} = \mu_k\,mg\,d$, so:
-\[
-  d = \frac{v_0^2}{2\mu_k g}
-\]
+The \textbf{Mediator} is a large multi-subunit coactivator complex that serves as a \textbf{bridge} between regulatory transcription factors and the basal transcription machinery (RNA pol~II~+ general TFs).
 
-\textbf{Stopping distance scales as $v_0^2$:} doubling speed quadruples stopping distance.
-
-\textbf{Example:} $\mu_k = 0.70$, $v_0 = 25$\,m/s:
-\[
-  d = \frac{625}{2(0.70)(9.8)} \approx 45.6\text{ m}
-\]
+\vspace{0.3cm}
+\begin{itemize}[leftmargin=1.5em]
+  \item Activators bound to enhancers contact Mediator subunits.
+  \item Mediator in turn contacts the PIC assembled at the core promoter.
+  \item \textbf{DNA looping} brings distant enhancers into proximity with the promoter (cohesin facilitates stable loops).
+  \item Mediator stimulates phosphorylation of the RNA pol~II C-terminal domain (CTD), triggering promoter clearance and elongation.
+\end{itemize}
 
 \end{diagbox}
 
-\newpage
+\subsection{Chromatin Remodeling and Histone Modifications}
 
-\section{Conservation of Energy (Section 10.6)}
+\begin{diagbox}{22. Chromatin Remodeling and Histone Modifications}
 
-\begin{diagbox}{12. Conservation of Energy}
+\textbf{ATP-dependent chromatin remodeling complexes} (e.g.\ SWI/SNF) use ATP hydrolysis to:
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Slide} nucleosomes along DNA.
+  \item \textbf{Eject} nucleosomes, creating nucleosome-free regions (NFRs) at promoters.
+  \item \textbf{Exchange} histone variants (e.g.\ H2A.Z).
+\end{itemize}
 
-\textbf{Law of Conservation of Energy:} The total energy of an isolated system is constant.
+\vspace{0.3cm}
+\textbf{Covalent histone modifications (histone code):}
 
-\[
-  \Delta K + \Delta U_g + \Delta U_{\rm sp} + \Delta E_{\rm th} = W_{\rm ext}
-\]
-
-\end{diagbox}
-
-\subsection{The Master Energy Equation}
-
-\begin{diagbox}{12.1 The Master Energy Equation}
-
-\[
-  \boxed{K_f + U_f + \Delta E_{\rm th} = K_i + U_i + W_{\rm ext}}
-\]
-
+\renewcommand{\arraystretch}{1.4}
 \begin{center}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|l|p{5.5cm}|}
 \hline
-\textbf{Term} & \textbf{Meaning} \\
+\textbf{Modification} & \textbf{Residue(s)} & \textbf{Effect} \\
 \hline
-$K_f$ & Final kinetic energy \\
-$U_f$ & Final potential energy ($U_g + U_{\rm sp}$) \\
-$\Delta E_{\rm th}$ & Thermal energy from friction ($\geq 0$) \\
-$K_i$ & Initial kinetic energy \\
-$U_i$ & Initial potential energy \\
-$W_{\rm ext}$ & Work by external agent \\
+Acetylation (HAT) & H3K9ac, H3K27ac & Neutralises $+$ charge $\Rightarrow$ loosens DNA–histone interaction; marks \textbf{active} chromatin \\
+\hline
+Deacetylation (HDAC) & H3K9, H3K27 & Restores $+$ charge; promotes chromatin compaction; repression \\
+\hline
+Methylation & H3K4me3 & Active promoters \\
+ & H3K27me3 & Polycomb repression \\
+ & H3K9me3 & Constitutive heterochromatin \\
+\hline
+Phosphorylation & H3S10 & Chromosome condensation during mitosis \\
+\hline
+Ubiquitylation & H2BK120ub & Elongation; promotes H3K4 methylation \\
 \hline
 \end{tabular}
 \end{center}
 
-\textbf{Special cases:}
+\vspace{0.3cm}
+\textbf{Epigenetic inheritance:} Some histone modifications are maintained through DNA replication, allowing stable inheritance of gene expression states.
+
+\end{diagbox}
+
+\subsection{DNA Methylation}
+
+\begin{diagbox}{23. DNA Methylation}
+
+\textbf{DNA methylation} in mammals occurs predominantly on the \textbf{cytosine} of \textbf{CpG dinucleotides} (forming 5-methylcytosine, 5mC).
+
+\vspace{0.3cm}
+\textbf{Enzymes:}
 \begin{itemize}[leftmargin=1.5em]
-  \item No friction, no external work: $K_f + U_f = K_i + U_i$.
-  \item With friction, no external work: $K_f + U_f + \Delta E_{\rm th} = K_i + U_i$.
-  \item No friction, with external work: $K_f + U_f = K_i + U_i + W_{\rm ext}$.
+  \item \textbf{DNMT3A / DNMT3B} (de novo methyltransferases) --- establish new methylation patterns.
+  \item \textbf{DNMT1} (maintenance methyltransferase) --- copies methylation patterns to the daughter strand after replication (hemi-methylated $\to$ fully methylated).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Consequences of CpG methylation:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Prevents activator binding} at promoters → gene silencing.
+  \item \textbf{Recruits methyl-CpG binding proteins} (e.g.\ MeCP2) that attract HDACs → chromatin compaction.
+  \item \textbf{CpG islands} (clusters of CpGs near promoters) are usually \emph{unmethylated} at active genes; hypermethylation in cancer silences tumour-suppressor genes.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Genomic imprinting} is a biological process where only one parental allele is expressed; the silenced allele is marked by DNA methylation plus H3K27me3.
+
+\end{diagbox}
+
+\subsection{Insulator Sequences}
+
+\begin{diagbox}{24. Insulator Sequences}
+
+\textbf{Insulators} (boundary elements) are DNA sequences that \textbf{block} the effect of an enhancer on a gene if placed \textbf{between} them.
+
+\vspace{0.3cm}
+\textbf{Two functions of insulators:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Enhancer blocking} --- prevent an enhancer from activating a gene on the other side of the insulator.
+  \item \textbf{Barrier activity} --- prevent the spread of heterochromatin into adjacent active chromatin domains.
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{CTCF} (CCCTC-binding factor) is the major vertebrate insulator-binding protein.
+\begin{itemize}[leftmargin=1.5em]
+  \item CTCF bound at two sites flanking a gene can form a \textbf{chromatin loop domain}, insulating the gene from surrounding regulatory influences.
+  \item Together with \textbf{cohesin}, CTCF organises the genome into \textbf{topologically associating domains (TADs)}.
 \end{itemize}
 
 \end{diagbox}
-
-\subsection{Problem-Solving Strategy}
-
-\begin{diagbox}{12.2 Problem-Solving Strategy}
-
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Define the system.} Include all objects whose energy changes.
-  \item \textbf{Identify initial and final states.} Draw diagrams for each.
-  \item \textbf{Choose a reference level} for gravitational PE.
-  \item \textbf{Identify energy forms} present at each state: $K$, $U_g$, $U_{\rm sp}$.
-  \item \textbf{Check for friction.} Compute $\Delta E_{\rm th} = f_k d$ if present.
-  \item \textbf{Check for external work.}  Add $W_{\rm ext}$ if an external agent acts.
-  \item \textbf{Apply the master energy equation} and solve.
-  \item \textbf{Check units and reasonableness.}
-\end{enumerate}
-
-\end{diagbox}
-
-\subsection{Worked Examples: No Friction}
-
-\begin{diagbox}{12.3 Worked Examples: No Friction}
-
-\textbf{Example A --- Ball dropped from rest:}
-
-A 2-kg ball dropped from $h = 5$\,m.  Find speed just before impact.
-\[
-  mgh = \tfrac{1}{2}mv_f^2 \;\Rightarrow\; v_f = \sqrt{2gh} = \sqrt{2(9.8)(5)} \approx 9.9\text{ m/s}
-\]
-
-\vspace{0.4cm}
-\textbf{Example B --- Spring launching a block:}
-
-Spring ($k = 800$\,N/m) compressed 0.15\,m releases a 0.5-kg block.  Find the block's speed.
-\[
-  \tfrac{1}{2}kx^2 = \tfrac{1}{2}mv^2 \;\Rightarrow\; v = x\sqrt{k/m} = 0.15\sqrt{1600} = 6.0\text{ m/s}
-\]
-
-\vspace{0.4cm}
-\textbf{Example C --- Ball on frictionless ramp:}
-
-3-kg ball from rest at top of 4.0-m-high frictionless ramp.
-\[
-  v = \sqrt{2gh} = \sqrt{2(9.8)(4.0)} \approx 8.9\text{ m/s}
-\]
-
-\end{diagbox}
-
-\subsection{Worked Examples: With Friction}
-
-\begin{diagbox}{12.4 Worked Examples: With Friction}
-
-\textbf{Example D --- Block on rough ramp:}
-
-4-kg block slides 6.0\,m down a $30^\circ$ ramp ($\mu_k = 0.20$) from rest.
-
-$h = 6\sin30^\circ = 3.0$\,m; $n = mg\cos30^\circ = 33.9$\,N; $f_k = (0.20)(33.9) = 6.78$\,N.
-
-$\Delta E_{\rm th} = (6.78)(6.0) = 40.7$\,J.
-
-\[
-  \tfrac{1}{2}(4)v^2 = mgh - \Delta E_{\rm th} = 117.6 - 40.7 = 76.9\text{ J}
-  \;\Rightarrow\; v = \sqrt{38.45} \approx 6.2\text{ m/s}
-\]
-
-\vspace{0.4cm}
-\textbf{Example E --- Object stopped by friction:}
-
-1.5-kg box at 5.0\,m/s; $\mu_k = 0.35$.
-\[
-  \tfrac{1}{2}(1.5)(25) = (0.35)(1.5)(9.8)d \;\Rightarrow\; d \approx 3.6\text{ m}
-\]
-
-\end{diagbox}
-
-\subsection{Worked Examples: With External Work}
-
-\begin{diagbox}{12.5 Worked Examples: With External Work}
-
-\textbf{Example F --- Motor lifts a crate:}
-
-Motor does 2400\,J lifting a 50-kg crate 4.0\,m from rest to rest.
-\[
-  W_{\rm ext} = \Delta U_g + \Delta E_{\rm th} \;\Rightarrow\; 2400 = (50)(9.8)(4.0) + \Delta E_{\rm th}
-  \;\Rightarrow\; \Delta E_{\rm th} = 440\text{ J}
-\]
-Efficiency: $1960/2400 \approx 81.7\%$.
-
-\vspace{0.4cm}
-\textbf{Example G --- Cyclist over two hills:}
-
-80-kg cyclist (bike included) coasts over a 5.0-m descent then up a 3.0-m hill.  Friction: $\Delta E_{\rm th} = 120$\,J.  Initial speed: 8.0\,m/s.
-\[
-  K_f = K_i + Mg\Delta h - \Delta E_{\rm th}
-      = \tfrac{1}{2}(80)(64) + (80)(9.8)(2) - 120
-      = 2560 + 1568 - 120 = 4008\text{ J}
-\]
-\[
-  v_f = \sqrt{2(4008)/80} \approx 10.0\text{ m/s}
-\]
-
-\end{diagbox}
-
-\subsection{Energy Bar Charts}
-
-\begin{diagbox}{12.6 Energy Bar Charts}
-
-\textbf{Energy bar charts} (LOL diagrams) visualize the master energy equation.  Each bar represents an energy form; heights must balance.
-
-\textbf{Drawing procedure:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Draw initial and final bar sets separated by a process region.
-  \item Label bars: $K$, $U_g$, $U_{\rm sp}$, $E_{\rm th}$.
-  \item Include a $W_{\rm ext}$ bar in the process region if needed.
-  \item Total initial energy $+$ $W_{\rm ext}$ $=$ total final energy.
-\end{enumerate}
-
-\textbf{Example (frictionless ramp):} Initial: tall $U_g$, zero $K$. Final: zero $U_g$, tall $K$ (equal height). \\
-\textbf{Example (with friction):} Initial: tall $U_g$. Final: shorter $K$ + positive $E_{\rm th}$. $U_{g,i} = K_f + \Delta E_{\rm th}$.
-
-\end{diagbox}
-
-\subsection{When to Use Energy Methods vs.\ Newton's Laws}
-
-\begin{diagbox}{12.7 When to Use Energy Methods vs.\ Newton's Laws}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|p{4.8cm}|p{4.5cm}|p{4.5cm}|}
-\hline
-\textbf{Situation} & \textbf{Energy Methods} & \textbf{Newton's Laws} \\
-\hline
-Known positions; want speed & \textbf{Preferred} -- one equation & Requires kinematics; harder \\
-\hline
-Non-constant force (spring, curved path) & \textbf{Preferred} -- PE handles it & Requires calculus \\
-\hline
-Want force or acceleration at a point & Difficult & \textbf{Preferred} \\
-\hline
-Complex or unknown path & \textbf{Preferred} -- path independence & Very difficult \\
-\hline
-Need time information & Cannot give time directly & \textbf{Preferred} \\
-\hline
-Multiple interacting objects & Additive system energy; convenient & Must track all interaction forces \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{warnbox}
-\textbf{Rule of thumb:} Use energy methods when the problem involves \emph{positions and speeds}.  Use Newton's Laws when it involves \emph{forces, accelerations, or time}.
-\end{warnbox}
-
-\end{diagbox}
-
 
 \newpage
 % ══════════════════════════════════════════════════════════════
@@ -1042,383 +782,341 @@ Multiple interacting objects & Additive system energy; convenient & Must track a
 \begin{warnbox}
 \textbf{Exam Format:} Each topic contains \textbf{one standard question} (Question~A)
 and \textbf{three difficult questions} (Questions~B, C, D), worth \textbf{5~points each}.
-Show \emph{all} numerical substitutions step by step; partial credit is awarded
-for correct reasoning even with arithmetic errors.
-A bonus \textbf{Ski Slope} section appears at the end.
+Provide complete, mechanistic explanations and include relevant molecular diagrams or pathways where appropriate;
+partial credit is awarded for correct reasoning.
 \end{warnbox}
 
-% ── Chapter 7 ─────────────────────────────────────────────────
-\section{Chapter 7 Exam Problems: Rotational Motion}
+\section{Genetics Exam Problems: Chromosome Organization \& Biotechnology}
+% ────────────────────────────────────────────────────────────
 
-\subsection{Topic 1 --- Torque}
+\subsection{Topic 12 --- Nucleosomes and Chromatin Structure}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{1\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{12\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A mechanic applies a 60\,N force at the end of a 0.45-m wrench handle,
-        directed at $40^\circ$ with respect to the handle.
-        Calculate the torque about the bolt.
+        Describe the composition of a nucleosome core particle, including the number and types of histone proteins present and the amount of DNA wrapped around it.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 2.4-m horizontal beam is pinned at its left end.
-        Three forces act on it:
-        \begin{itemize}[leftmargin=1.5em]
-          \item $F_1 = 80$\,N \emph{downward} at $x = 0.60$\,m,
-          \item $F_2 = 120$\,N at $50^\circ$ above horizontal (rightward/upward)
-                at $x = 1.50$\,m,
-          \item $F_3 = 50$\,N \emph{downward} at $x = 2.40$\,m.
-        \end{itemize}
-        (a) Find the net torque about the pin (CCW\,$=$\,positive).
-        (b) State the resulting rotation direction.
+        A researcher treats isolated nuclei with increasing concentrations of DNase~I and separates the digestion products by gel electrophoresis.
+        (a) What band pattern (in base pairs) is expected at low DNase~I concentrations, and why?
+        (b) What structural feature of chromatin explains this pattern?
+        (c) What happens to the pattern at very high DNase~I concentrations, and what does this imply about nuclease-sensitive sites?
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform 3.0-m horizontal rod (mass 4.0\,kg) is pivoted at its centre.
-        A 12\,N downward force is applied 0.80\,m to the right of the pivot, and
-        an unknown perpendicular force $F$ is applied at the right end.
-        (a) Find $F$ for rotational equilibrium.
-        (b) Find the net torque if $F$ is reduced to 5.0\,N.
+        Histone H1 is described as a ``linker histone.''
+        (a) Where precisely does H1 bind relative to the nucleosome core?
+        (b) How does H1 binding contribute to the formation of the 30-nm fibre?
+        (c) If H1 is experimentally removed from chromatin, predict the structural consequence and its effect on gene transcription.
 
   \item \textbf{[5 pts --- Difficult]}
-        A disc ($I = 0.60$\,kg$\cdot$m$^2$, radius $r = 0.30$\,m) starts from rest.
-        A constant tangential force of 9.0\,N acts at the rim.
-        (a) Find the angular acceleration $\alpha$.
-        (b) Find $\omega$ after 4.0\,s.
-        (c) Find the total angle rotated in 4.0\,s.
+        A eukaryotic chromosome contains 150~million base pairs of DNA.
+        (a) How many nucleosome core particles are present, given that 146~bp wraps each octamer and the linker DNA averages 54~bp per nucleosome?
+        (b) If the DNA contour length before packaging is $L_0$ and the 11-nm fibre is $\sim$6-fold shorter, estimate the compaction at the nucleosome level.
+        (c) What additional compaction is achieved by forming the 30-nm fibre from the 11-nm fibre?
 
 \end{enumerate}
 \end{planbox}
 
-\subsection{Topic 2 --- Center of Gravity}
+\subsection{Topic 13 --- Levels of Chromatin Compaction}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{2\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{13\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        Four masses on a rod: 3.0\,kg at $x=0$; 5.0\,kg at $x=1.2$\,m;
-        2.0\,kg at $x=2.8$\,m; 4.0\,kg at $x=4.0$\,m.
-        Find $x_{\rm CG}$.
+        List the six successive levels of chromatin compaction from the DNA double helix to the metaphase chromosome, including the diameter at each level.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform 2.0-m, 8.0-kg plank has a 12\,kg block at $x=0$ and a
-        5.0\,kg block at $x=1.6$\,m.
-        (a) Find $x_{\rm CG}$ of the system.
-        (b) Two supports at $x=0.60$\,m and $x=1.80$\,m: find both normal forces.
+        Compare and contrast heterochromatin and euchromatin with respect to:
+        (a) degree of compaction during interphase,
+        (b) transcriptional activity,
+        (c) histone modification patterns,
+        (d) accessibility to transcription factors.
 
   \item \textbf{[5 pts --- Difficult]}
-        An L-shaped thin plate: Piece~1 (3.0\,kg) spans $0\le x\le2.0$\,m,
-        $0\le y\le1.0$\,m; Piece~2 (2.0\,kg) spans $0\le x\le1.0$\,m,
-        $1.0\le y\le3.0$\,m.
-        Find the CG of the composite plate.
+        Matrix attachment regions (MARs) anchor chromatin loops to the nuclear matrix.
+        (a) Explain how the formation of radial loop domains contributes to DNA compaction.
+        (b) If an average loop in a human chromosome contains 100{,}000~bp, and a given chromosome has 300 such loops, calculate the total DNA length in that chromosome.
+        (c) Explain how loop domain organisation might influence the regulation of adjacent genes.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform disc (6.0\,kg, radius 0.50\,m) has a circular hole
-        (radius 0.10\,m) cut out, centred at $x=0.30$\,m from the disc centre.
-        Using the negative-mass method, find the new $x_{\rm CG}$.
+        During the cell cycle, chromatin transitions between interphase and metaphase states.
+        (a) Describe the role of condensin in chromosome condensation, including where condensin localises during interphase versus mitosis.
+        (b) Explain how SMC proteins use ATP to compact chromosomes.
+        (c) What would be the consequence for cell division if condensin function were abolished?
 
 \end{enumerate}
 \end{planbox}
 
-% ── Chapter 8 ─────────────────────────────────────────────────
-\section{Chapter 8 Exam Problems: Equilibrium and Elasticity}
-
-\subsection{Topic 3 --- Static Equilibrium}
+\subsection{Topic 14 --- Genome Size and Repetitive Sequences}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{3\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{14\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A uniform 5.0-m, 20-kg horizontal beam is hinged at its left end.
-        A cable runs from the right end at $35^\circ$ above the beam.
-        A 50\,kg sign hangs from the right end.
-        Find (a) tension $T$, (b) $H_x$, and (c) $H_y$.
+        Define the three major categories of repetitive sequences in eukaryotic genomes (unique, moderately repetitive, highly repetitive), and give one example of each.
 
   \item \textbf{[5 pts --- Difficult]}
-        A non-uniform 4.5-m ladder (14\,kg, CG at 2.0\,m from the base) leans
-        against a frictionless wall at $70^\circ$ from the floor ($\mu_s=0.38$).
-        An 80-kg worker stands 3.5\,m up the ladder.
-        (a) Find $N_w$, $N_f$, and $f$.
-        (b) Verify the ladder does not slip.
+        Two closely related salamander species differ twofold in genome size yet have a similar gene number.
+        (a) What is the name of the paradox that describes the lack of correlation between genome size and organismal complexity?
+        (b) What type of DNA is primarily responsible for the difference in genome size?
+        (c) Propose two mechanisms by which repetitive sequences accumulate in a genome.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform 1.2-m, 4.0-kg shelf is hinged at its left end.
-        A vertical wire supports the right end.
-        A 10\,kg box sits 0.80\,m from the wall.
-        (a) Find wire tension $T_w$.
-        (b) Find the hinge reaction force (magnitude and direction).
+        Compare the genomes of \textit{Saccharomyces cerevisiae} and \textit{Homo sapiens} with respect to:
+        (a) genome size (Mbp),
+        (b) chromosome number (haploid),
+        (c) typical intron frequency and length,
+        (d) percentage of unique (non-repetitive) sequences.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 6.0-m, 25-kg uniform boom is hinged at the wall (lower left) and held
-        by a \emph{horizontal} cable at the right end.
-        The boom makes $55^\circ$ above horizontal.  A 60-kg load hangs from
-        the right end.
-        (a) Find the cable tension.
-        (b) Find the hinge force magnitude.
+        Every eukaryotic chromosome requires four functional elements.
+        (a) Name and describe the function of each element.
+        (b) Explain what would happen to a chromosome lacking a functional centromere during mitosis.
+        (c) Why are telomeres essential for the long-term stability of linear chromosomes?
 
 \end{enumerate}
 \end{planbox}
 
-\subsection{Topic 4 --- Stability}
+\subsection{Topic 15 --- Bacterial Chromosome Organization}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{4\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{15\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A uniform rectangular block is 0.90\,m tall and 0.40\,m wide.
-        At what angle $\theta$ from the vertical does the block tip when the
-        surface is slowly tilted?
+        Describe the structure of the bacterial nucleoid, including its location, boundary, and how the bacterial chromosome differs from eukaryotic chromosomes in shape and number.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform solid cylinder ($R=0.15$\,m, $H=0.60$\,m) on an inclined surface
-        ($\mu_s=0.28$).
-        (a) Find $\alpha_{\rm tip}$; (b) find $\alpha_{\rm slide}$;
-        (c) which event occurs first?
+        The \textit{E.\ coli} genome is approximately 4.6~Mbp of circular dsDNA.
+        (a) If fully extended (0.34~nm per bp), what would be the contour length of this DNA?
+        (b) The \textit{E.\ coli} cell is $\sim$2~$\mu$m long. By approximately how many-fold must the DNA be compacted?
+        (c) Describe two structural mechanisms that achieve this compaction in bacteria.
 
   \item \textbf{[5 pts --- Difficult]}
-        A uniform rectangular crate (80\,kg, width 0.60\,m, height 1.40\,m)
-        on a floor ($\mu_s=0.45$). A horizontal push $F$ at height $h=1.10$\,m.
-        (a) Minimum $F$ to tip. (b) Minimum $F$ to slide. (c) Which mode first?
+        Bacteria form loop domains (micro-domains) within the nucleoid.
+        (a) For \textit{E.\ coli} with 50--100 loops, each containing 40{,}000--80{,}000~bp, verify that the total DNA is consistent with a 4.6~Mbp genome.
+        (b) What proteins anchor the base of each loop domain in bacteria?
+        (c) How does the loop domain organisation in bacteria compare to the radial loop organisation in eukaryotes?
 
   \item \textbf{[5 pts --- Difficult]}
-        A 0.50-m-tall, 0.20-m-wide uniform block sits on a turntable accelerating
-        at $\alpha_T=2.0$\,rad/s$^2$.  The block's CG is 0.35\,m from the axis
-        ($\mu_s=0.55$).
-        (a) Find the critical $\omega_c$ at which the block tips about its outer edge.
-        (b) Find $\omega_{\rm slide}$.
-        (c) Which occurs first?
+        Condensin and cohesin are SMC-containing complexes found in both bacteria and eukaryotes.
+        (a) Distinguish between the primary functions of condensin and cohesin.
+        (b) Cohesin has been implicated in gene regulation beyond its structural role.  Explain the mechanism by which cohesin facilitates enhancer--promoter interactions.
+        (c) A patient presents with Cornelia de Lange Syndrome. Name the protein complex affected and describe three clinical features of this disorder.
 
 \end{enumerate}
 \end{planbox}
 
-\subsection{Topic 5 --- Hooke's Law and Springs}
+\subsection{Topic 16 --- Restriction Enzymes and Gene Cloning}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{5\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{16\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A vertical spring ($k=360$\,N/m) compressed 0.14\,m launches a 0.25\,kg
-        ball upward.  Find the max height above the release point (no air resistance).
+        Define a restriction endonuclease. What is a palindromic recognition sequence? Write the EcoRI recognition sequence and indicate where it cuts on both strands.
 
   \item \textbf{[5 pts --- Difficult]}
-        Two springs in series ($k_1=250$\,N/m, $k_2=400$\,N/m); 5.0\,kg block
-        hangs at equilibrium.
-        (a) $k_{\rm eff}$; (b) total extension;
-        (c) extension of each; (d) elastic PE in each.
+        A researcher wishes to clone the human \textit{BRCA1} gene into a bacterial vector.
+        (a) Describe the full experimental workflow from genomic DNA extraction to obtaining white colonies harbouring the recombinant plasmid.
+        (b) Why are competent cells required for transformation, and how are successfully transformed cells identified?
+        (c) What is blue-white screening, and which enzyme activity is responsible for the blue colour?
 
   \item \textbf{[5 pts --- Difficult]}
-        Springs $k_A=200$\,N/m and $k_B=300$\,N/m in parallel, the combination
-        in series with $k_C=600$\,N/m; 4.0\,kg block hangs from the end.
-        (a) Overall $k_{\rm eff}$; (b) total elongation;
-        (c) force in each spring.
+        A shuttle vector for yeast and bacteria must contain specific elements.
+        (a) List the four functional elements this vector must carry, specifying which elements are required for each host organism.
+        (b) Why is the yeast $LEU2$ gene useful as a selectable marker?
+        (c) Explain the difference between using an antibiotic resistance marker (for bacteria) and an auxotrophic marker (for yeast).
 
   \item \textbf{[5 pts --- Difficult]}
-        A spring ($k=500$\,N/m) hangs from the ceiling with a 2.0\,kg mass.
-        The mass is pulled 0.20\,m below equilibrium and released from rest.
-        (a) Equilibrium extension; (b) amplitude;
-        (c) maximum speed; (d) maximum elastic PE.
+        Human chromosomal DNA digested with EcoRI generates thousands of fragments.
+        (a) Explain why only one fragment typically inserts into a given vector molecule.
+        (b) After transformation, how does antibiotic selection ensure that only cells harbouring the vector are recovered?
+        (c) A plasmid vector replicates to 25--50 copies per cell. After 20 cell divisions overnight, estimate the total number of plasmid copies per millilitre of culture if the starting density is one cell/mL.
 
 \end{enumerate}
 \end{planbox}
 
-\subsection{Topic 6 --- Forces and Torques in the Body}
+\subsection{Topic 17 --- Polymerase Chain Reaction (PCR)}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{6\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{17\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        Forearm (1.4\,kg, CG 13\,cm from elbow) horizontal, holding 3.5\,kg
-        weight at 33\,cm.  Bicep inserts 4.0\,cm from elbow.
-        (a) Find $F_B$; (b) find elbow joint reaction.
+        List the four starting materials required for PCR and state the purpose of each. Identify the three temperature steps of a single PCR cycle and the approximate temperature for each step.
 
   \item \textbf{[5 pts --- Difficult]}
-        Person bends forward: upper body (430\,N, CG 38\,cm along spine from
-        lumbar pivot) at $35^\circ$ above horizontal.
-        Erector spinae pulls perp.\ to spine at 6.0\,cm from pivot.
-        (a) Find $F_m$; (b) find lumbar joint reaction force magnitude.
+        A researcher starts with a single copy of a target DNA and performs 30 PCR cycles.
+        (a) Calculate the theoretical number of copies after 30 cycles.
+        (b) In practice, the actual yield is lower than the theoretical maximum. Propose two reasons for this discrepancy.
+        (c) Why is a thermostable DNA polymerase (Taq) necessary, and what organism is it derived from?
 
   \item \textbf{[5 pts --- Difficult]}
-        Achilles tendon inserts 4.5\,cm behind ankle (pivot); ball of foot is
-        12\,cm in front of ankle.  A 70-kg person stands on tiptoe on one foot.
-        (a) Find the Achilles tendon force.
-        (b) Find the ankle joint reaction force.
+        PCR is used in forensic analysis to amplify a 500-bp target locus from a trace biological sample.
+        (a) What prior knowledge is essential before designing the primers?
+        (b) A primer is 18~nt long and has 60\% GC content. Calculate the approximate melting temperature ($T_m$) using the formula $T_m = 4(G+C) + 2(A+T)$ in degrees Celsius.
+        (c) Explain what happens if the annealing temperature is set too low versus too high.
 
   \item \textbf{[5 pts --- Difficult]}
-        A person holds a 15-kg bucket at arm's length (0.70\,m from shoulder).
-        Deltoid inserts 15\,cm from shoulder at $15^\circ$ to humerus.
-        Arm (4.0\,kg) has CG 33\,cm from shoulder.
-        (a) Find $F_D$; (b) find shoulder joint reaction magnitude.
+        Site-directed mutagenesis uses a modified PCR strategy.
+        (a) Describe the molecular steps by which a specific point mutation is introduced into a cloned gene.
+        (b) How is the mutant clone identified after the procedure?
+        (c) Propose an experiment to determine whether the introduced mutation alters the protein's enzymatic activity.
 
 \end{enumerate}
 \end{planbox}
 
-% ── Chapter 10 ────────────────────────────────────────────────
-\section{Chapter 10 Exam Problems: Energy and Work}
-
-\subsection{Topic 7 --- Work}
+\subsection{Topic 18 --- Gel Electrophoresis and Molecular Blotting}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{7\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{18\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A 15\,kg box is dragged 6.0\,m along a horizontal floor by a rope at
-        $28^\circ$ ($T=70$\,N; $\mu_k=0.20$).
-        Find (a) work by $T$, (b) work by friction, (c) net work.
+        Explain the principle of agarose gel electrophoresis for separating DNA. Why does DNA migrate toward the positive electrode, and what property of the DNA molecule determines how fast it migrates?
 
   \item \textbf{[5 pts --- Difficult]}
-        A 3.0\,kg block is pushed up a frictionless $30^\circ$ incline by a
-        horizontal force $F$ at constant speed over $d=2.0$\,m.
-        (a) Find $F$; (b) find $W_F$, $W_{\rm grav}$, $W_N$;
-        (c) verify $W_{\rm net}=0$.
+        A plasmid preparation contains three topological forms: supercoiled, nicked circular, and linear.
+        (a) Rank these forms from slowest to fastest migration on an agarose gel and explain why.
+        (b) How would the addition of ethidium bromide during electrophoresis alter the relative migration of supercoiled DNA?
+        (c) Describe how a 1-kb DNA ladder (molecular weight standard) is used to estimate the size of an unknown fragment.
 
   \item \textbf{[5 pts --- Difficult]}
-        A variable force $F(x)=6x^2-4x$\,(N) acts on a 2.0-kg particle moving
-        from $x=1.0$\,m to $x=4.0$\,m.
-        (a) Find the work done; (b) if $v_0=3.0$\,m/s at $x=1.0$\,m,
-        find the speed at $x=4.0$\,m.
+        A scientist uses EMSA (Electrophoretic Mobility Shift Assay) to study the binding of a transcription factor to a promoter sequence.
+        (a) Describe the experimental setup and expected result when the transcription factor is absent versus present.
+        (b) How can EMSA be used to determine the dissociation constant ($K_D$) of the protein--DNA interaction?
+        (c) What control experiment should be performed to confirm that the observed shift is specific to the protein of interest?
 
   \item \textbf{[5 pts --- Difficult]}
-        A 500-kg elevator rises 30\,m at constant speed.
-        A 300-kg counterweight descends on the other side of the pulley.
-        (a) Net work by gravity on the system;
-        (b) work by the motor cable tension;
-        (c) minimum motor power if the rise takes 25\,s.
+        A researcher performs a Northern blot and a Western blot simultaneously on tissue samples from brain and intestinal cells.
+        (a) Describe the steps for each blotting technique, from sample preparation to signal detection.
+        (b) In the Northern blot, a $\beta$-globin probe produces a signal in the brain lane but not the intestinal lane. In the Western blot, the $\beta$-globin antibody produces a signal in the brain lane only. Interpret both results.
+        (c) A band appears in the Northern blot at a larger size than expected. Propose two explanations.
 
 \end{enumerate}
 \end{planbox}
 
-\subsection{Topic 8 --- Kinetic Energy and the Work--Energy Theorem}
+\subsection{Topic 19 --- Gene Knockouts and RNA Interference}
 
 \begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{8\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{19\Alph*.}]
 
   \item \textbf{[5 pts --- Standard]}
-        A 1200-kg car at 25\,m/s applies an 8000-N braking force.
-        Find the stopping distance.
+        Define gene knockout and RNA interference (RNAi). For each, state whether the gene, mRNA, and protein are present or absent.
 
   \item \textbf{[5 pts --- Difficult]}
-        Atwood machine: block $A$ (4.0\,kg) on a rough table ($\mu_k=0.30$),
-        connected to block $B$ (2.5\,kg) hanging vertically.
-        Find the speed after $B$ descends 1.2\,m from rest.
+        A researcher wishes to study the function of a gene (Gene~X) that is suspected to be essential for cell cycle progression.
+        (a) Compare the use of a complete knockout versus RNAi knockdown for studying Gene~X function, including potential pitfalls of each approach.
+        (b) Describe the molecular mechanism by which double-stranded RNA (dsRNA) triggers sequence-specific mRNA degradation in RNAi.
+        (c) Design an experiment using RNAi to determine whether Gene~X is required for entry into S phase.
 
   \item \textbf{[5 pts --- Difficult]}
-        A 0.40-kg ball is thrown horizontally from a 20-m cliff at 8.0\,m/s.
-        Use the Work--Energy Theorem to find the impact speed; verify with
-        kinematics.
+        Recombinant \textit{E.\ coli} is used to produce human insulin.
+        (a) Describe the molecular steps required to engineer \textit{E.\ coli} to synthesise human insulin, starting from the human insulin mRNA.
+        (b) Why is a bacterial system used rather than mammalian cells for insulin production?
+        (c) Human insulin consists of two polypeptide chains (A and B) connected by disulfide bonds. What post-translational challenge arises when producing insulin in bacteria, and how is it overcome?
 
   \item \textbf{[5 pts --- Difficult]}
-        A 2.0-kg block slides down a frictionless curved ramp from $h=3.5$\,m,
-        then along a rough horizontal surface ($\mu_k=0.25$).
-        How far from the ramp base does it stop?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 9 --- Potential Energy}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{9\Alph*.}]
-
-  \item \textbf{[5 pts --- Standard]}
-        A spring ($k=250$\,N/m) compressed 0.16\,m launches a 0.30\,kg ball
-        vertically.  Find the max height.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 2.0-kg block on a frictionless surface is attached to a spring
-        ($k=600$\,N/m) at natural length and given $v_0=4.0$\,m/s.
-        (a) Find $x_{\rm max}$; (b) find $v$ at $x=0.12$\,m;
-        (c) fraction of initial KE stored as spring PE at $x=0.12$\,m.
-
-  \item \textbf{[5 pts --- Difficult]}
-        Pendulum: $L=1.4$\,m, $m=0.60$\,kg, released from $\theta=40^\circ$.
-        (a) Speed at bottom; (b) tension at bottom;
-        (c) angle at which speed equals half the max speed.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 1.5-kg block compressed 0.15\,m against a spring ($k=800$\,N/m) on a
-        frictionless floor is released onto a rough $25^\circ$ incline ($\mu_k=0.18$).
-        How far up the incline does it travel?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 10 --- Conservation of Energy}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{10\Alph*.}]
-
-  \item \textbf{[5 pts --- Standard]}
-        A 5.0-kg ball released from rest at $h_i=8.0$\,m on a frictionless ramp.
-        Find its speed at $h_f=2.5$\,m.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 2.0-kg block slides 5.0\,m down a $40^\circ$ incline ($\mu_k=0.15$),
-        then contacts a spring ($k=1200$\,N/m) on a horizontal surface
-        ($\mu_k=0.20$).  Find the maximum spring compression.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 0.50-kg ball is thrown upward at $v_0=18$\,m/s.  Air resistance provides
-        a constant opposing force of 1.2\,N.
-        (a) Find the maximum height;
-        (b) find the return speed;
-        (c) compare KE at launch and on return.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 3.0-kg block slides from rest down a frictionless ramp from $h=4.0$\,m,
-        compresses a spring ($k=2000$\,N/m) at the base, then bounces back and is
-        caught by a sticky pad that absorbs 5.0\,J.
-        (a) Find the maximum spring compression;
-        (b) find the height $H_f$ at which the block is caught.
-
-\end{enumerate}
-\end{planbox}
-
-% ── Bonus: Ski Slope ──────────────────────────────────────────
-\section{Bonus Topic: Ski Slope Problems}
-
-\begin{warnbox}
-\textbf{Ski Slope Scenario.}
-A skier navigates a mountain course: a steep descent, a flat transition, a
-jump ramp, and a snowdrift.  These questions integrate work, energy,
-friction, and projectile motion.  Each question is worth \textbf{5 points}.
-\end{warnbox}
-
-\subsection{Topic 11 --- Ski Slope: Energy on an Incline}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{11\Alph*.}]
-
-  \item \textbf{[5 pts --- Standard]}
-        A 70-kg skier starts from rest on a 120-m slope at $30^\circ$
-        ($\mu_k=0.08$).
-        (a) Find the net force along the slope.
-        (b) Find the speed at the bottom.
-
-  \item \textbf{[5 pts --- Difficult]}
-        After reaching the bottom from 11A at speed $v_1$, the skier travels
-        80\,m on a flat section ($\mu_k=0.08$), then takes a frictionless 15-m
-        ramp at $25^\circ$.
-        (a) Speed at the end of the flat section.
-        (b) Launch speed at the top of the ramp.
-        (c) Maximum height above the ramp base after the jump.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 70-kg skier starts from rest on a $35^\circ$ slope ($\mu_k=0.10$),
-        travels 90\,m, then hits a snowdrift modelled as a spring ($k=8000$\,N/m).
-        (a) Speed just before the snowdrift.
-        (b) Maximum compression of the snowdrift.
-
-  \item \textbf{[5 pts --- Difficult]}
-        A 65-kg skier descends $h=180$\,m vertically over a path of length
-        $L=350$\,m ($\mu_k=0.12$ average).
-        (a) Show $\bar\theta=\arcsin(h/L)\approx31.0^\circ$.
-        (b) Total friction work.
-        (c) Finish-line speed.
-        (d) Average power dissipated by friction if the run takes 48\,s.
+        Mutations in the \textbf{cohesin} complex cause Cornelia de Lange Syndrome (CdLS).
+        (a) The cohesin complex normally promotes enhancer--promoter looping. Explain how loss of this function leads to altered gene expression patterns.
+        (b) CdLS displays variable expressivity. Propose a molecular explanation for why different mutations in the same cohesin subunit can produce varying degrees of clinical severity.
+        (c) A child is diagnosed with CdLS. Genetic testing reveals a \textit{de novo} missense mutation in the \textit{NIPBL} gene encoding the cohesin loader. Explain the role of NIPBL in cohesin function and why a de~novo mutation would cause disease.
 
 \end{enumerate}
 \end{planbox}
 
 
+% ── Gene Regulation in Eukaryotes Exam Problems ─────────────────────────────
+\section{Gene Regulation in Eukaryotes Exam Problems}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Topic 20 --- Transcription Factors and Gene Activation}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{20\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Distinguish between \textbf{general transcription factors} and \textbf{regulatory transcription factors}.
+        Name two general transcription factors and state their functions in assembling the pre-initiation complex.
+
+  \item \textbf{[5 pts --- Difficult]}
+        The \textit{BRCA1} gene is transcribed only in certain cell types, even though all cells carry the same gene.
+        (a) Explain how the same DNA sequence can be transcribed in one cell type but silenced in another.
+        (b) Describe the role of activators, enhancers, and the Mediator complex in driving BRCA1 transcription in a cell where it is expressed.
+        (c) Explain how \textbf{DNA looping} brings a distal enhancer into functional contact with the BRCA1 promoter, and identify which protein complexes stabilise this loop.
+
+  \item \textbf{[5 pts --- Difficult]}
+        A researcher finds a transcription factor with two functional domains: a zinc-finger DNA-binding domain and an acidic activation domain.
+        (a) Explain the role of each domain in activating transcription.
+        (b) When the activation domain is deleted, transcription is reduced to basal levels. Explain why.
+        (c) The same DNA-binding domain fused to a repression domain silences the gene. Propose the molecular mechanism of repression.
+
+  \item \textbf{[5 pts --- Difficult]}
+        An insulator sequence is inserted between an upstream enhancer and a target gene.
+        (a) Predict and explain the effect on transcription.
+        (b) Describe the role of \textbf{CTCF} and \textbf{cohesin} in insulator function and TAD (topologically associating domain) organisation.
+        (c) Loss-of-function mutations in CTCF are associated with cancer. Propose two mechanisms by which loss of CTCF could dysregulate gene expression and contribute to oncogenesis.
+
+\end{enumerate}
+\end{planbox}
+
+\subsection{Topic 21 --- Chromatin Remodeling and Histone Modifications}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{21\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Define \textbf{chromatin remodeling}. Describe \textbf{two} distinct mechanisms by which ATP-dependent remodeling complexes alter nucleosome positioning.
+
+  \item \textbf{[5 pts --- Difficult]}
+        H3K27me3 and H3K4me3 are histone modifications found at different genes in embryonic stem cells.
+        (a) Which modification marks active promoters, and which marks Polycomb-repressed genes? Explain how each mark is interpreted by reader proteins.
+        (b) Some developmental genes carry both H3K27me3 and H3K4me3 simultaneously (``bivalent chromatin''). What is the significance of bivalency for cell differentiation?
+        (c) A drug that inhibits the enzyme EZH2 (H3K27 methyltransferase) is used as a cancer therapy. Explain its mechanism of action and why it might specifically kill certain cancer cells.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Histone acetyltransferases (HATs) and histone deacetylases (HDACs) have opposing functions.
+        (a) Explain how acetylation of histone H3 lysine~9 (H3K9ac) increases transcription at a nearby gene.
+        (b) An HDAC inhibitor is used in an experiment. Predict its effect on heterochromatin and on the transcription of previously silenced genes.
+        (c) A repressor protein binds a silencer element and recruits an HDAC complex. Trace the sequence of molecular events from HDAC recruitment to transcriptional silencing.
+
+  \item \textbf{[5 pts --- Difficult]}
+        The SWI/SNF chromatin remodeling complex is mutated in $\sim$20\% of human cancers.
+        (a) Explain how loss of SWI/SNF function could prevent the transcription of tumour-suppressor genes.
+        (b) Propose a strategy using a small-molecule drug to restore tumour-suppressor gene expression in a SWI/SNF-deficient cancer cell, without correcting the mutation.
+        (c) SWI/SNF can both activate and repress genes depending on context. Explain how the same complex can have opposing effects.
+
+\end{enumerate}
+\end{planbox}
+
+\subsection{Topic 22 --- DNA Methylation and Epigenetic Regulation}
+
+\begin{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{22\Alph*.}]
+
+  \item \textbf{[5 pts --- Standard]}
+        Describe \textbf{DNA methylation} in mammals.
+        (a) On which nucleotide and sequence context does it typically occur?
+        (b) Distinguish between DNMT1, DNMT3A, and DNMT3B in terms of function.
+
+  \item \textbf{[5 pts --- Difficult]}
+        The promoter of a tumour-suppressor gene contains a CpG island.
+        (a) In normal cells, this CpG island is unmethylated. Explain why unmethylated CpG islands are typically associated with active transcription.
+        (b) In cancer cells, the CpG island is hypermethylated. Describe two molecular mechanisms by which hypermethylation silences the gene.
+        (c) A DNA methyltransferase inhibitor (e.g.\ 5-azacytidine) is administered. Explain its mechanism and predict the effect on expression of the tumour-suppressor gene.
+
+  \item \textbf{[5 pts --- Difficult]}
+        Genomic imprinting results in monoallelic gene expression depending on parental origin.
+        (a) Explain how DNA methylation and histone modifications cooperate to silence one parental allele.
+        (b) The \textit{IGF2} gene is normally expressed only from the paternal allele. If the imprinting control region (ICR) loses its methylation on the paternal allele, predict the effect on \textit{IGF2} expression and phenotype.
+        (c) Why is genomic imprinting described as an \textbf{epigenetic} phenomenon rather than a genetic one?
+
+  \item \textbf{[5 pts --- Difficult]}
+        \textbf{Combinatorial control} means that multiple transcription factors act together to regulate a gene.
+        (a) Explain why combinatorial control allows a small number of transcription factors to generate a large number of distinct gene-expression patterns.
+        (b) Two transcription factors, TF-A and TF-B, each weakly activate a gene individually, but together they activate it 20-fold. Propose a molecular explanation for this synergy.
+        (c) In a cell-fate decision, the gene \textit{MyoD} is activated in muscle precursors but not in liver precursors. Both cell types express TF-A. Identify what additional regulatory logic could account for this cell-type specificity.
+
+\end{enumerate}
+\end{planbox}
 
 \newpage
 % ══════════════════════════════════════════════════════════════
@@ -1428,748 +1126,533 @@ friction, and projectile motion.  Each question is worth \textbf{5 points}.
 \begin{warnbox}
 \textbf{Study Tip:} Attempt all questions in the Practice Exam before consulting
 this Answer Key.  For each solution, the \textit{Rationale} explains the
-physical reasoning; the numbered steps show every substitution for partial-credit
+reasoning; the numbered steps show every substitution for partial-credit
 verification.
 \end{warnbox}
 
-% ── Chapter 7 Solutions: Rotational Motion ───────────────────────────────────────────────
-\section{Chapter 7 Solutions: Rotational Motion}
+\section{Genetics Solutions: Chromosome Organization \& Biotechnology}
+% ────────────────────────────────────────────────────────────
 
-\subsection{Topic 1 --- Torque}
+\subsection{Topic 12 --- Nucleosomes and Chromatin Structure}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{1\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{12\Alph*.}]
 
-  \item \textit{Rationale: $\tau = rF\sin\theta$ projects the force onto the
-        direction perpendicular to the moment arm.}
-        \[
-          \tau = rF\sin\theta = (0.45\,\mathrm{m})(60\,\mathrm{N})\sin 40^\circ
-               = (27)(0.6428) \approx \mathbf{17.4\,\mathrm{N{\cdot}m}}
-        \]
+  \item \textit{Rationale: The nucleosome core particle has a precisely defined composition and DNA wrap length that must be memorised.}
 
-  \item \textit{Rationale: Only force components perpendicular to the beam create
-        torque about the pin. Resolve $F_2$ vertically. CCW\,$=$\,positive.}
-        \begin{align*}
-          \tau_1 &= -(80)(0.60) = -48.0\,\mathrm{N{\cdot}m}\\
-          \tau_2 &= +(120\sin 50^\circ)(1.50)
-                  = +(120\times 0.7660)(1.50)
-                  = +(91.92)(1.50) = +137.9\,\mathrm{N{\cdot}m}\\
-          \tau_3 &= -(50)(2.40) = -120.0\,\mathrm{N{\cdot}m}\\
-          \tau_{\rm net} &= -48.0+137.9-120.0 = \mathbf{-30.1\,\mathrm{N{\cdot}m}}
-        \end{align*}
-        Negative $\Rightarrow$ \textbf{clockwise} rotation.
+        A nucleosome core particle consists of:
+        \begin{itemize}[leftmargin=1.5em]
+          \item A \textbf{histone octamer}: two copies each of H2A, H2B, H3, and H4 (8 histone molecules total).
+          \item \textbf{146~bp} of double-stranded DNA wrapped $\approx$1.65 times around the octamer.
+          \item The linker histone H1 (not part of the core) binds the DNA where it enters and exits the octamer.
+        \end{itemize}
 
-  \item \textit{Rationale: The rod's weight acts at the pivot, giving zero torque.
-        Set $\sum\tau = 0$ about the pivot for part (a); compute the residual for
-        part (b).}\\[4pt]
-        (a) Moment arms: $r_{12} = 0.80$\,m; $r_F = 1.50$\,m (right end from centre).
-        \[
-          F(1.50) - (12)(0.80) = 0
-          \;\Rightarrow\; F = \frac{9.6}{1.50} = \mathbf{6.4\text{ N}}
-        \]
-        (b) With $F = 5.0$\,N:
-        \[
-          \tau_{\rm net} = (5.0)(1.50) - (12)(0.80) = 7.5 - 9.6 = \mathbf{-2.1\,\mathrm{N{\cdot}m\,(CW)}}
-        \]
+  \item \textit{Rationale: DNase~I preferentially cleaves linker DNA (between nucleosomes), revealing the $\sim$200-bp nucleosomal repeat unit.}
 
-  \item \textit{Rationale: Newton's 2nd law for rotation $\tau = I\alpha$ gives
-        $\alpha$; constant-$\alpha$ kinematics give $\omega$ and $\theta$.}\\[4pt]
-        (a)
-        \[
-          \tau = rF = (0.30\,\mathrm{m})(9.0\,\mathrm{N}) = 2.70\,\mathrm{N{\cdot}m}
-          \;\Rightarrow\; \alpha = \frac{\tau}{I} = \frac{2.70}{0.60} = \mathbf{4.5\text{ rad/s}^2}
-        \]
-        (b) $\omega = \omega_0 + \alpha t = 0 + (4.5)(4.0) = \mathbf{18.0\text{ rad/s}}$
+        (a) At low DNase~I concentrations, a \textbf{ladder pattern} of bands at multiples of $\sim$200~bp (200, 400, 600, 800~bp, etc.) is expected because DNase~I cuts predominantly in the linker regions between nucleosomes.
 
-        (c) $\theta = \tfrac{1}{2}\alpha t^2 = \tfrac{1}{2}(4.5)(4.0)^2
-                    = \tfrac{1}{2}(4.5)(16) = \mathbf{36.0\text{ rad}}$
+        (b) The ladder reflects the regular spacing of nucleosomes: each repeat unit is $\sim$200~bp (146~bp core + $\sim$54~bp linker).
+
+        (c) At very high DNase~I concentrations, even the DNA within the core particle is accessible at \textbf{nuclease-hypersensitive sites}, yielding a faint smear with a predominant $\sim$146-bp protected fragment (the core particle DNA). This demonstrates that the linker region and certain regulatory regions are more exposed than the tightly wrapped core DNA.
+
+  \item \textit{Rationale: H1 bridges adjacent nucleosomes and drives formation of the 30-nm fibre.}
+
+        (a) H1 binds to the \textbf{linker DNA} at the entry/exit points of DNA on the nucleosome core, securing the last few bp of DNA on the octamer.
+
+        (b) H1 promotes the \textbf{zig-zag (30-nm) fibre} by bridging neighbouring nucleosomes and neutralising the negatively charged linker DNA, allowing nucleosomes to stack.
+
+        (c) Removal of H1 causes \textbf{decompaction} of the 30-nm fibre back to the 11-nm ``beads on a string'' state. Genes in these regions become more accessible to transcription factors, leading to \textbf{increased transcriptional activity}.
+
+  \item \textit{Rationale: Each nucleosome occupies 146 + 54 = 200~bp; total nucleosome number = total bp / 200. Compaction ratios follow from geometry.}
+
+        (a) Number of nucleosomes $= \dfrac{150{,}000{,}000\;\text{bp}}{200\;\text{bp/nucleosome}} = \mathbf{750{,}000}$ nucleosomes.
+
+        (b) The DNA contour length $= 150\times10^6\;\text{bp} \times 0.34\;\text{nm/bp} = 51\;\text{mm}$.
+        At the 11-nm (nucleosome array) level, the DNA is $\sim$6-fold compacted, giving a fibre length of $\approx\mathbf{8.5\;\text{mm}}$.
+
+        (c) The 30-nm fibre further compacts the 11-nm fibre by $\approx$\textbf{6-fold} (i.e.\ from 11-nm to 30-nm diameter accompanies a $\sim$6$\times$ linear compaction), yielding a total compaction of $\approx$36-fold over naked DNA at this stage.
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 2 --- Center of Gravity}
+\subsection{Topic 13 --- Levels of Chromatin Compaction}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{2\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{13\Alph*.}]
 
-  \item \textit{Rationale: $x_{\rm CG}=\tfrac{\sum m_i x_i}{\sum m_i}$ is the
-        mass-weighted average position.}
-        \[
-          x_{\rm CG}=\frac{(3.0)(0)+(5.0)(1.2)+(2.0)(2.8)+(4.0)(4.0)}{14.0}
-                    =\frac{0+6.0+5.6+16.0}{14.0}
-                    =\frac{27.6}{14.0}\approx\mathbf{1.97\text{ m}}
-        \]
+  \item \textit{Rationale: The six compaction levels must be memorised with their characteristic dimensions.}
 
-  \item \textit{Rationale: Treat each piece as a point mass at its own geometric
-        centre. Use $\sum\tau=0$ about one support to isolate the other normal force.}\\[4pt]
-        (a) Plank CG at $x=1.0$\,m:
-        \[
-          x_{\rm CG}=\frac{(12)(0)+(8)(1.0)+(5)(1.6)}{25}
-                    =\frac{0+8.0+8.0}{25}=\frac{16.0}{25}=\mathbf{0.64\text{ m}}
-        \]
-        (b) $\sum F_y=0$: $N_1+N_2=(25)(9.8)=245$\,N.\\
-        Torques about $x=0.60$\,m (CCW\,$=$\,pos.):
-        \begin{align*}
-          +(12)(9.8)(0.60)&-(8)(9.8)(0.40)-(5)(9.8)(1.00)+N_2(1.20)=0\\
-          70.56&-31.36-49.0+1.20N_2=0\\
-          1.20N_2&=9.80\;\Rightarrow\;N_2=\frac{9.80}{1.20}\approx\mathbf{8.2\text{ N}}
-        \end{align*}
-        $N_1=245-8.2\approx\mathbf{237\text{ N}}$
+        \begin{enumerate}[leftmargin=1.5em, label=\arabic*.]
+          \item \textbf{2~nm} --- DNA double helix.
+          \item \textbf{11~nm} --- Nucleosome arrays (``beads on a string'').
+          \item \textbf{30~nm} --- Zig-zag/solenoid fibre (H1 and non-histone proteins).
+          \item \textbf{300~nm} --- Radial loop domains (MARs anchor loops to nuclear matrix).
+          \item \textbf{700~nm} --- Further compacted radial loops.
+          \item \textbf{1{,}400~nm} --- Metaphase chromosome (protein scaffold maintains shape).
+        \end{enumerate}
 
-  \item \textit{Rationale: Locate each piece's CG at its geometric centre; apply
-        the weighted-average formula for $x$ and $y$ independently.}\\[4pt]
-        Piece-1 CG: $(1.0,\,0.5)$;\quad Piece-2 CG: $(0.5,\,2.0)$.
-        \begin{align*}
-          x_{\rm CG}&=\frac{(3.0)(1.0)+(2.0)(0.5)}{5.0}
-                     =\frac{3.0+1.0}{5.0}=\mathbf{0.80\text{ m}}\\[4pt]
-          y_{\rm CG}&=\frac{(3.0)(0.5)+(2.0)(2.0)}{5.0}
-                     =\frac{1.5+4.0}{5.0}=\frac{5.5}{5.0}=\mathbf{1.10\text{ m}}
-        \end{align*}
+  \item \textit{Rationale: Heterochromatin and euchromatin differ fundamentally in compaction and accessibility.}
 
-  \item \textit{Rationale: Subtract the cut-out disc (treated as negative mass)
-        from the intact disc using the CG formula.}\\[4pt]
-        $\sigma=M/(\pi R^2)=6.0/(\pi\times(0.50)^2)=6.0/(\pi\times0.25)=6.0/0.7854\approx7.639$\,kg/m$^2$;\quad
-        $m_h=\sigma\pi r_h^2=7.639\times\pi\times(0.10)^2=7.639\times0.03142\approx0.2400$\,kg.
-        \[
-          x_{\rm CG}=\frac{M(0)-m_h(0.30)}{M-m_h}
-                    =\frac{(6.0)(0)-(0.2400)(0.30)}{6.0-0.2400}
-                    =\frac{-0.0720}{5.760}\approx\mathbf{-0.0125\text{ m}}
-        \]
-        The CG shifts $12.5$\,mm away from the hole.
+        (a) \textbf{Heterochromatin} is tightly compacted during interphase; \textbf{euchromatin} is less condensed.
+
+        (b) Heterochromatin is transcriptionally \textbf{inactive}; euchromatin is transcriptionally \textbf{active}.
+
+        (c) Heterochromatin is enriched in \textbf{repressive marks} (e.g.\ H3K9me3, H3K27me3) and \textbf{hypoacetylated} histones. Euchromatin carries \textbf{activating marks} (e.g.\ H3K4me3, H3K27ac) and \textbf{hyperacetylated} histones.
+
+        (d) Heterochromatin is largely \textbf{inaccessible} to transcription factors and RNA polymerase; euchromatin DNA is \textbf{accessible}.
+
+  \item \textit{Rationale: Loop domain size $\times$ loop number = total DNA; loops isolate gene regulatory domains.}
+
+        (a) MARs tether the base of each chromatin loop to the nuclear matrix. Each loop therefore forms a miniature compacted domain, contributing an additional $\sim$10-fold compaction over the 30-nm fibre.
+
+        (b) Total DNA $= 300\;\text{loops} \times 100{,}000\;\text{bp/loop} \times 0.34\;\text{nm/bp} = 10.2\;\text{mm}$.
+
+        (c) Because each loop is a \textbf{topologically isolated domain}, regulatory elements (enhancers, silencers) within one loop act primarily on genes within the same loop. This prevents inappropriate cross-activation of genes in adjacent loops and enables precise spatial gene regulation.
+
+  \item \textit{Rationale: Condensin drives mitotic compaction; loss of function prevents cells from segregating chromosomes.}
+
+        (a) During interphase, condensin resides in the \textbf{cytoplasm}. At the onset of mitosis (prophase), condensin is imported into the nucleus, binds chromosomes, and \textbf{compacts the radial loop domains} into the highly condensed metaphase chromosome.
+
+        (b) SMC proteins form a ring-like structure with a hinge domain and two ATPase heads. ATP hydrolysis drives \textbf{conformational changes} that entrap and actively compact DNA strands, reducing their length.
+
+        (c) Without condensin, chromosomes \textbf{fail to condense properly}, resulting in tangled chromosomes that cannot be correctly attached to spindle fibres. The outcome is \textbf{mitotic arrest} and/or \textbf{chromosome mis-segregation}, leading to aneuploidy and cell death.
 
 \end{enumerate}
 \end{keybox}
 
-% ── Chapter 8 Solutions: Equilibrium and Elasticity ───────────────────────────────────────────────
-\section{Chapter 8 Solutions: Equilibrium and Elasticity}
-
-\subsection{Topic 3 --- Static Equilibrium}
+\subsection{Topic 14 --- Genome Size and Repetitive Sequences}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{3\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{14\Alph*.}]
 
-  \item \textit{Rationale: Choose the hinge as pivot to eliminate unknown hinge
-        forces from the torque equation; then use $\sum F=0$ for the components.}
-        \[
-          T\sin35^\circ(5.0)=(20)(9.8)(2.5)+(50)(9.8)(5.0)=490+2450=2940\,\mathrm{N{\cdot}m}
-        \]
-        \[
-          T=\frac{2940}{5.0\times\sin35^\circ}=\frac{2940}{5.0\times0.5736}
-           =\frac{2940}{2.868}\approx\mathbf{1025\text{ N}}
-        \]
-        \[
-          H_x=T\cos35^\circ=(1025)(0.8192)\approx\mathbf{840\text{ N (toward wall)}}
-        \]
-        \[
-          H_y=(20+50)(9.8)-T\sin35^\circ=686-(1025)(0.5736)=686-588\approx\mathbf{98\text{ N (up)}}
-        \]
+  \item \textit{Rationale: Three categories must be defined by copy number, and an example provided for each.}
 
-  \item \textit{Rationale: Pivot at the base of the ladder; the moment arm for each
-        load equals (distance along ladder)$\times\cos70^\circ$.}
-        \begin{align*}
-          N_w\times(4.5\sin70^\circ)
-            &=(14)(9.8)(2.0\cos70^\circ)+(80)(9.8)(3.5\cos70^\circ)\\
-          N_w\times(4.5\times0.9397)
-            &=(14\times9.8\times2.0\times0.3420)+(80\times9.8\times3.5\times0.3420)\\
-          N_w\times4.229
-            &=93.74+939.1=1032.8\\
-          N_w&=\frac{1032.8}{4.229}\approx\mathbf{244\text{ N}}
-        \end{align*}
-        $\sum F_y$: $N_f=(94)(9.8)=\mathbf{921\text{ N}}$;\quad
-        $\sum F_x$: $f=N_w=\mathbf{244\text{ N}}$.\\[3pt]
-        Check: $f_{\max}=\mu_s N_f=(0.38)(921)=350\text{ N}>244\text{ N}\;\checkmark$
+        \begin{itemize}[leftmargin=1.5em]
+          \item \textbf{Unique (non-repetitive)}: present once or a few times; comprises structural genes and intergenic sequences ($\sim$41\% of human genome). \textit{Example}: the $\beta$-globin gene.
+          \item \textbf{Moderately repetitive}: present hundreds to thousands of times. \textit{Example}: rRNA genes, histone genes, transposable elements (e.g.\ SINEs, LINEs).
+          \item \textbf{Highly repetitive}: present tens of thousands to millions of times; each copy is short. \textit{Example}: satellite DNA (simple tandem repeats near centromeres).
+        \end{itemize}
 
-  \item \textit{Rationale: Pivot at the hinge to find $T_w$ directly; then close
-        the force balance to find the hinge reaction.}
-        \[
-          T_w(1.2)=(4.0)(9.8)(0.60)+(10)(9.8)(0.80)=23.52+78.40=101.9\,\mathrm{N{\cdot}m}
-        \]
-        \[
-          T_w=\frac{101.9}{1.2}\approx\mathbf{84.9\text{ N (upward)}}
-        \]
-        $\sum F_y$: $H_y=(14)(9.8)-84.9=137.2-84.9\approx52.3\text{ N (up)}$;
-        $H_x=0$.
-        \[
-          |\vec{H}|=52.3\text{ N (vertically upward)}
-        \]
+  \item \textit{Rationale: The C-value paradox is a classic genetics concept; repetitive DNA explains size differences.}
 
-  \item \textit{Rationale: The horizontal cable's torque arm about the hinge is
-        the boom's vertical height. Pivot at the hinge.}
-        \begin{align*}
-          h_{\rm end}&=6.0\sin55^\circ=6.0\times0.8192=4.915\text{ m}\\
-          T_c\times4.915
-            &=(25)(9.8)(3.0\cos55^\circ)+(60)(9.8)(6.0\cos55^\circ)\\
-            &=(25\times9.8\times3.0\times0.5736)+(60\times9.8\times6.0\times0.5736)\\
-            &=420.7+2023.3=2444\,\mathrm{N{\cdot}m}
-        \end{align*}
-        \[
-          T_c=\frac{2444}{4.915}\approx\mathbf{497\text{ N}}
-        \]
-        $H_x=497$\,N;\quad $H_y=(25+60)(9.8)=833$\,N.
-        \[
-          |\vec{H}|=\sqrt{497^2+833^2}=\sqrt{247\,009+693\,889}
-                  =\sqrt{940\,898}\approx\mathbf{970\text{ N}}
-        \]
+        (a) The \textbf{C-value paradox}: genome size (C-value) does not correlate simply with gene number or organismal complexity.
+
+        (b) \textbf{Repetitive DNA sequences} (primarily highly and moderately repetitive) account for the size difference.
+
+        (c) Two mechanisms:
+        \begin{itemize}[leftmargin=1.5em]
+          \item \textbf{Transposon amplification}: transposable elements replicate and insert themselves at new genomic locations, increasing copy number.
+          \item \textbf{Unequal crossing over (recombination)}: misaligned homologous chromosomes recombine unequally, expanding tandem repeat arrays.
+        \end{itemize}
+
+  \item \textit{Rationale: Quantitative comparison of yeast and human genomes.}
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Feature} & \textbf{\textit{S.\ cerevisiae}} & \textbf{\textit{H.\ sapiens}} \\
+        \hline
+        Genome size & $\sim$12~Mbp & $\sim$3{,}100~Mbp (haploid) \\
+        \hline
+        Haploid chromosome no. & 16 & 23 \\
+        \hline
+        Introns & Very few, short ($<$500~bp) & Many, long (100 to $>$10{,}000~bp) \\
+        \hline
+        Unique sequences & $\sim$70\% & $\sim$41\% \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+  \item \textit{Rationale: Centromere, telomere, origin, and sequence element functions on linear chromosomes.}
+
+        (a) The four elements:
+        \begin{enumerate}[leftmargin=1.5em]
+          \item \textbf{Origins of replication} --- initiation sites for DNA replication ($\sim$every 100{,}000~bp in eukaryotes).
+          \item \textbf{Centromere} --- site of kinetochore assembly; essential for correct attachment to the mitotic spindle.
+          \item \textbf{Telomeres} --- repetitive sequences at both ends that protect chromosomes from exonucleolytic degradation and prevent end-joining.
+          \item \textbf{Repetitive sequences} --- contribute to structural domains and, in some cases, gene regulation.
+        \end{enumerate}
+
+        (b) A chromosome lacking a centromere cannot attach to the spindle, and \textbf{fails to segregate} to daughter cells. It is typically lost within a few cell divisions.
+
+        (c) Because linear chromosomes cannot be fully replicated at their ends by conventional DNA polymerases (the ``end-replication problem''), telomeres provide a buffer of repetitive sequence. Telomerase replenishes these sequences. Without telomeres, chromosomes \textbf{shorten with each division}, eventually losing essential genes, triggering DNA damage responses and cellular senescence or apoptosis.
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 4 --- Stability}
+\subsection{Topic 15 --- Bacterial Chromosome Organization}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{4\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{15\Alph*.}]
 
-  \item \textit{Rationale: Tipping occurs when the CG projects directly over the
-        lower edge: $\tan\theta_{\rm tip}=(W/2)/(H/2)$.}
-        \[
-          \tan\theta_{\rm tip}=\frac{0.20}{0.45}=0.4444
-          \;\Rightarrow\;\theta_{\rm tip}=\arctan(0.4444)\approx\mathbf{24.0^\circ}
-        \]
+  \item \textit{Rationale: The nucleoid is the defining feature of prokaryotic chromosome organisation.}
 
-  \item \textit{Rationale: Tipping angle from geometry of CG vs.\ edge; sliding
-        angle from the friction condition $\tan\alpha=\mu_s$.}\\[4pt]
-        (a) CG at $H/2=0.30$\,m; $R=0.15$\,m from lower edge:
-        \[
-          \tan\alpha_{\rm tip}=\frac{0.15}{0.30}=0.500
-          \;\Rightarrow\;\alpha_{\rm tip}\approx\mathbf{26.6^\circ}
-        \]
-        (b) $\tan\alpha_{\rm slide}=0.28\;\Rightarrow\;\alpha_{\rm slide}\approx\mathbf{15.6^\circ}$
+        The bacterial chromosome resides in the \textbf{nucleoid} region --- an irregular, electron-dense area within the cytoplasm. It is \textbf{not enclosed by a membrane}. The bacterial chromosome is typically a single, \textbf{circular double-stranded DNA} molecule (unlike the multiple linear chromosomes of eukaryotes), and bacteria generally have \textbf{one chromosome} (though some have two, e.g.\ \textit{Vibrio cholerae}).
 
-        (c) $15.6^\circ<26.6^\circ\;\Rightarrow$ the cylinder \textbf{slides before tipping}.
+  \item \textit{Rationale: Contour length and fold-compaction calculations.}
 
-  \item \textit{Rationale: For tipping, torques about the front lower edge;
-        for sliding, $F=\mu_s mg$.}\\[4pt]
-        (a)
-        \[
-          F_{\rm tip}(1.10)=mg(0.30)=(80)(9.8)(0.30)=235.2\,\mathrm{N{\cdot}m}
-          \;\Rightarrow\;F_{\rm tip}=\frac{235.2}{1.10}\approx\mathbf{214\text{ N}}
-        \]
-        (b) $F_{\rm slide}=\mu_s mg=(0.45)(80)(9.8)=\mathbf{353\text{ N}}$
+        (a) Contour length $= 4.6\times10^6\;\text{bp} \times 0.34\;\text{nm/bp} = 1.564\;\text{mm} \approx \mathbf{1.6\;\text{mm}}$.
 
-        (c) $214\text{ N}<353\text{ N}\;\Rightarrow$ the crate \textbf{tips first}.
+        (b) Cell length $\approx 2\;\mu\text{m} = 0.002\;\text{mm}$. Compaction $= 1.564 / 0.002 \approx \mathbf{780}$-fold (conventionally stated as $\sim$1{,}000-fold).
 
-  \item \textit{Rationale: On a turntable the centripetal force $m\omega^2 r$ acts
-        horizontally; tipping occurs when this ``outward push'' rotates the resultant
-        past the outer edge; sliding when $m\omega^2 r=\mu_s mg$.}\\[4pt]
-        (a)
-        \[
-          \frac{m\omega_c^2 r}{mg}=\frac{W/2}{H/2}=\frac{0.10}{0.25}=0.400
-          \;\Rightarrow\;\omega_c^2=\frac{(0.400)(9.8)}{0.35}=11.20
-          \;\Rightarrow\;\omega_c\approx\mathbf{3.35\text{ rad/s}}
-        \]
-        (b)
-        \[
-          \omega_{\rm slide}=\sqrt{\frac{\mu_s g}{r}}=\sqrt{\frac{(0.55)(9.8)}{0.35}}
-                            =\sqrt{15.40}\approx\mathbf{3.92\text{ rad/s}}
-        \]
-        (c) $3.35<3.92\;\Rightarrow$ the block \textbf{tips first}.
+        (c) Two mechanisms:
+        \begin{itemize}[leftmargin=1.5em]
+          \item \textbf{DNA supercoiling}: negative supercoils are introduced by DNA gyrase, compacting the circular chromosome.
+          \item \textbf{Nucleoid-associated proteins (NAPs)}: proteins such as HU, H-NS, and IHF bind and bend DNA, organising it into loop domains analogous to eukaryotic MARs.
+        \end{itemize}
+
+  \item \textit{Rationale: Verify loop domain arithmetic; compare with eukaryotic radial loops.}
+
+        (a) With 50 loops $\times$ 80{,}000~bp/loop $= 4.0$~Mbp; with 100 loops $\times$ 40{,}000~bp/loop $= 4.0$~Mbp. Both bracket the 4.6-Mbp genome with intermediate values. \textbf{Verified.}
+
+        (b) In bacteria, loop domain bases are anchored by \textbf{nucleoid-associated proteins} (e.g.\ HU, H-NS, MukBEF --- an SMC complex) and by \textbf{RNA molecules} that tether DNA loops.
+
+        (c) Both bacteria (loop domains) and eukaryotes (radial loop domains) organise chromosomal DNA into topologically isolated loop structures. Key differences: eukaryotic loops are anchored to the \textbf{nuclear matrix} via MARs; bacterial loops are anchored to the \textbf{nucleoid core} by proteins and RNA. Eukaryotic loops are larger and more numerous.
+
+  \item \textit{Rationale: Condensin compacts; cohesin coheres and regulates; NIPBL loads cohesin.}
+
+        (a) \textbf{Condensin} drives chromosome \emph{condensation} (compaction of radial loops at mitosis). \textbf{Cohesin} maintains \emph{cohesion} between sister chromatids from S phase until anaphase; it also facilitates transcriptional regulation by promoting enhancer--promoter looping.
+
+        (b) Cohesin forms a ring-shaped SMC complex that topologically entraps two DNA strands. When an enhancer and a promoter are each located within the same cohesin-encircled loop, direct interaction is facilitated, activating transcription. Loss of cohesin impairs these \textbf{enhancer--promoter contacts}, dysregulating developmental gene expression.
+
+        (c) Cornelia de Lange Syndrome hallmarks: (i) craniofacial features --- synophrys (fused eyebrows), arched eyebrows, thin downturned upper lip, long philtrum; (ii) \textbf{intellectual disability} and microcephaly; (iii) \textbf{growth retardation} and limb anomalies (oligodactyly, micromelia, or phocomelia).
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 5 --- Hooke's Law and Springs}
+\subsection{Topic 16 --- Restriction Enzymes and Gene Cloning}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{5\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{16\Alph*.}]
 
-  \item \textit{Rationale: At maximum height $v=0$; all elastic PE converts to
-        gravitational PE: $\tfrac{1}{2}kx^2=mgh$.}
-        \[
-          h=\frac{kx^2}{2mg}
-           =\frac{(360)(0.14)^2}{2(0.25)(9.8)}
-           =\frac{360\times0.0196}{4.90}
-           =\frac{7.056}{4.90}\approx\mathbf{1.44\text{ m}}
-        \]
+  \item \textit{Rationale: Definition and palindrome recognition are foundational concepts.}
 
-  \item \textit{Rationale: Series springs share the same tension but different
-        extensions; $1/k_{\rm eff}=1/k_1+1/k_2$.}\\[4pt]
-        (a)
+        A \textbf{restriction endonuclease} is an enzyme produced by bacteria that recognises and cleaves specific short DNA sequences, protecting the cell from foreign DNA. A \textbf{palindromic sequence} reads identically on both strands in the 5$'\!\to\!$3$'$ direction. EcoRI recognition and cleavage:
         \[
-          \frac{1}{k_{\rm eff}}=\frac{1}{250}+\frac{1}{400}
-                               =0.004000+0.002500=0.006500
-          \;\Rightarrow\;k_{\rm eff}=\frac{1}{0.006500}\approx\mathbf{153.8\text{ N/m}}
+          5'\!\text{-}\mathbf{G} \downarrow \text{AATTC-}3'
+          \qquad
+          3'\!\text{-CTTAA} \uparrow \mathbf{G}\text{-}5'
         \]
-        (b)
-        \[
-          x_{\rm tot}=\frac{mg}{k_{\rm eff}}=\frac{(5.0)(9.8)}{153.8}
-                     =\frac{49.0}{153.8}\approx\mathbf{0.319\text{ m}}
-        \]
-        (c) Both carry $F=mg=(5.0)(9.8)=49.0$\,N:
-        \[
-          x_1=\frac{49.0}{250}=\mathbf{0.196\text{ m}};\quad
-          x_2=\frac{49.0}{400}=\mathbf{0.123\text{ m}}
-          \quad(0.196+0.123=0.319\;\checkmark)
-        \]
-        (d)
-        \[
-          U_1=\tfrac{1}{2}(250)(0.196)^2=125\times0.03842=\mathbf{4.80\text{ J}};\quad
-          U_2=\tfrac{1}{2}(400)(0.123)^2=200\times0.01513=\mathbf{3.03\text{ J}}
-        \]
+        Cleavage between G and A on each strand generates 4-nt 5$'$ sticky ends (\texttt{AATT}).
 
-  \item \textit{Rationale: Parallel springs have the same extension; add constants.
-        Series combo carries the same force throughout; the parallel springs split
-        the force proportionally to their $k$ values.}\\[4pt]
-        (a)
-        \[
-          k_{\rm par}=200+300=500\text{ N/m};\quad
-          \frac{1}{k_{\rm eff}}=\frac{1}{500}+\frac{1}{600}
-                               =\frac{6+5}{3000}=\frac{11}{3000}
-          \;\Rightarrow\;k_{\rm eff}=\frac{3000}{11}\approx\mathbf{272.7\text{ N/m}}
-        \]
-        (b)
-        \[
-          x_{\rm tot}=\frac{(4.0)(9.8)}{272.7}=\frac{39.2}{272.7}\approx\mathbf{0.144\text{ m}}
-        \]
-        (c) $F_C=mg=39.2$\,N.\quad $A$ and $B$ share 39.2\,N:
-        \[
-          F_A=\frac{200}{500}(39.2)=\mathbf{15.7\text{ N}};\quad
-          F_B=\frac{300}{500}(39.2)=\mathbf{23.5\text{ N}}
-          \quad(15.7+23.5=39.2\;\checkmark)
-        \]
+  \item \textit{Rationale: The complete cloning workflow integrates multiple molecular techniques.}
 
-  \item \textit{Rationale: At equilibrium $kx_0=mg$. SHM amplitude equals the
-        pull-down distance; max speed occurs at equilibrium (all PE $\to$ KE in SHM).}\\[4pt]
-        (a)
-        \[
-          x_0=\frac{mg}{k}=\frac{(2.0)(9.8)}{500}=\frac{19.6}{500}=\mathbf{0.0392\text{ m}}
-        \]
-        (b) Amplitude $A=\mathbf{0.20\text{ m}}$
+        (a) Workflow: (i) Extract and purify genomic DNA from human cells. (ii) Digest genomic DNA and plasmid vector with EcoRI. (iii) Mix digested fragments and vector; add T4 DNA ligase to join compatible ends. (iv) Transform competent \textit{E.\ coli} cells with ligation mixture. (v) Plate on ampicillin-containing agar with X-gal and IPTG. (vi) Select \textbf{white colonies} (recombinant plasmids have disrupted \textit{lacZ}). (vii) Pick white colonies, extract plasmid, verify insert by PCR and sequencing.
 
-        (c)
-        \[
-          v_{\max}=A\omega=A\sqrt{\frac{k}{m}}
-                 =(0.20)\sqrt{\frac{500}{2.0}}
-                 =(0.20)(15.81)\approx\mathbf{3.16\text{ m/s}}
-        \]
-        (d) Maximum spring PE at lowest point ($x_0+A$ below natural length):
-        \[
-          x_{\rm bot}=0.0392+0.20=0.2392\text{ m};\quad
-          U_{\max}=\tfrac{1}{2}(500)(0.2392)^2=250\times0.05722\approx\mathbf{14.3\text{ J}}
-        \]
+        (b) \textbf{Competent cells} have been chemically or electrically treated to allow plasmid DNA uptake. Successfully transformed cells are identified by \textbf{growth on ampicillin} (only cells harbouring the $amp^R$ plasmid survive).
+
+        (c) \textbf{Blue-white screening}: lacZ-encoded \textbf{$\beta$-galactosidase} cleaves X-gal into a blue product. An insert disrupts lacZ $\Rightarrow$ no $\beta$-galactosidase $\Rightarrow$ \textbf{white colony} (recombinant). Uninterrupted lacZ $\Rightarrow$ \textbf{blue colony} (re-circularised vector).
+
+  \item \textit{Rationale: Shuttle vectors must carry host-specific elements for two different organisms.}
+
+        (a) The four elements:
+        \begin{center}
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Element} & \textbf{Function} & \textbf{Host} \\
+        \hline
+        Bacterial \textit{ori} & Replication in bacteria & Bacteria \\
+        $amp^R$ & Selection in bacteria & Bacteria \\
+        ARSH4 + CEN6 & Replication \& maintenance in yeast & Yeast \\
+        $LEU2$ & Selection in yeast & Yeast \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        (b) $LEU2$ encodes an enzyme in leucine biosynthesis. Yeast strains used as hosts carry a \textit{leu2} deletion (auxotrophic); they cannot grow on leucine-deficient medium \emph{unless} they carry the $LEU2$ plasmid. Growth on $-$Leu medium \textbf{selects for cells harbouring the plasmid}.
+
+        (c) \textbf{Antibiotic resistance} (e.g.\ $amp^R$) kills cells that lack the plasmid and is used in bacteria. \textbf{Auxotrophic markers} complement a nutritional deficiency and allow growth on selective medium lacking the nutrient; they are preferred in yeast because yeast are naturally resistant to most antibiotics at useful concentrations.
+
+  \item \textit{Rationale: Probabilistic insertion, antibiotic selection, and copy-number amplification.}
+
+        (a) With thousands of genomic fragments and only one vector molecule per ligation event, the probability that any given fragment encounters and ligates into a given vector molecule is very low. Additionally, the ligation conditions are designed so that \textbf{one insert enters one vector}: at low insert:vector molar ratios, re-ligation of a single insert per vector is statistically favoured.
+
+        (b) Only bacteria that have taken up a plasmid acquire the $amp^R$ gene and can produce $\beta$-lactamase, which inactivates ampicillin. Cells without the plasmid \textbf{die in ampicillin medium}.
+
+        (c) Starting: 1 cell/mL. After 20 divisions: $2^{20} = 1{,}048{,}576$ cells/mL $\approx \mathbf{10^6}$ cells/mL.
+        Plasmid copies/cell $\approx 37$ (midpoint of 25--50). Total copies/mL $\approx 10^6 \times 37 \approx \mathbf{3.7\times10^7}$ copies/mL.
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 6 --- Forces and Torques in the Body}
+\subsection{Topic 17 --- Polymerase Chain Reaction (PCR)}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{6\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{17\Alph*.}]
 
-  \item \textit{Rationale: Pivot at the elbow joint; $\sum\tau=0$ gives the muscle
-        force; $\sum F_y=0$ gives the joint reaction.}\\[4pt]
-        (a)
+  \item \textit{Rationale: PCR components and cycle steps are foundational knowledge.}
+
+        \textbf{Four starting materials:}
+        \begin{enumerate}[leftmargin=1.5em]
+          \item \textbf{Template DNA} --- provides the sequence to amplify.
+          \item \textbf{Two primers} (15--20~nt each) --- define the boundaries of the amplified region; must be complementary to the flanking sequences.
+          \item \textbf{dNTPs} (dATP, dTTP, dGTP, dCTP) --- building blocks for new DNA strands.
+          \item \textbf{Taq polymerase} --- thermostable DNA polymerase; synthesises the new strand from primers.
+        \end{enumerate}
+
+        \textbf{Three steps per cycle:}
+        \begin{enumerate}[leftmargin=1.5em]
+          \item \textbf{Denaturation} $\sim$94--96$^\circ$C --- hydrogen bonds broken; strands separate.
+          \item \textbf{Annealing} $\sim$50--65$^\circ$C --- primers bind complementary template.
+          \item \textbf{Extension} $\sim$72$^\circ$C --- Taq extends primers 5$'\!\to\!$3$'$.
+        \end{enumerate}
+
+  \item \textit{Rationale: Exponential amplification formula; practical vs.\ theoretical yield.}
+
+        (a) After 30 cycles: $2^{30} = 1{,}073{,}741{,}824 \approx \mathbf{10^9}$ copies.
+
+        (b) Practical yields are lower because: (i) \textbf{Taq polymerase efficiency} is not 100\% per extension step; (ii) \textbf{primer competition and non-specific annealing} reduce productive amplification; (iii) \textbf{dNTP and primer depletion} in later cycles limit the reaction; (iv) \textbf{product inhibition} (double-stranded product must re-denature).
+
+        (c) Taq polymerase is isolated from \textit{Thermus aquaticus}, a bacterium that thrives in hot springs ($\sim$70--75$^\circ$C). It remains active at the \textbf{denaturation temperature} ($\sim$95$^\circ$C) used in PCR, unlike mesophilic DNA polymerases which are irreversibly denatured.
+
+  \item \textit{Rationale: Primer design and melting temperature calculation.}
+
+        (a) The \textbf{DNA sequence flanking the target locus} must be known, because primers must be complementary to these flanking sequences. Without prior sequence knowledge, primers cannot be designed.
+
+        (b) The primer is 18~nt; 60\% GC $\Rightarrow$ G+C $= 0.60\times18 = 10.8\approx11$; A+T $= 7$.
         \[
-          F_B(0.040)=(1.4)(9.8)(0.13)+(3.5)(9.8)(0.33)
-                    =1.783+11.319=13.10\,\mathrm{N{\cdot}m}
-        \]
-        \[
-          F_B=\frac{13.10}{0.040}\approx\mathbf{328\text{ N (upward)}}
-        \]
-        (b) $\sum F_y=0$:
-        \[
-          J=F_B-(1.4+3.5)(9.8)=328-(4.9)(9.8)=328-48.0\approx\mathbf{280\text{ N (downward)}}
+          T_m = 4(11) + 2(7) = 44 + 14 = \mathbf{58^\circ\text{C}}
         \]
 
-  \item \textit{Rationale: The weight component perpendicular to the spine creates
-        torque about the lumbar joint. Pivot at the lumbar joint.}\\[4pt]
-        (a) $W_\perp=430\cos35^\circ=430\times0.8192=352.3$\,N.
-        \[
-          F_m(0.060)=(352.3)(0.38)=133.9\,\mathrm{N{\cdot}m}
-          \;\Rightarrow\;F_m=\frac{133.9}{0.060}\approx\mathbf{2232\text{ N}}
-        \]
-        (b) $R_\parallel=430\sin35^\circ=430\times0.5736=246.6$\,N;\quad
-            $R_\perp=F_m-W_\perp=2232-352.3=1879.7$\,N.
-        \[
-          |\vec{R}|=\sqrt{246.6^2+1879.7^2}
-                  =\sqrt{60\,812+3\,533\,271}\approx\mathbf{1896\text{ N}}
-        \]
+        (c) \textbf{Too low annealing temperature}: primers bind \textbf{non-specifically} to partially complementary sites elsewhere in the genome $\Rightarrow$ multiple non-specific bands. \textbf{Too high annealing temperature}: primers \textbf{fail to bind} (even correct sites), reducing or abolishing amplification.
 
-  \item \textit{Rationale: The ground pushes up at the ball of the foot; the
-        Achilles tendon pulls up at the heel; pivot at the ankle.}
-        \[
-          F_A(0.045)=N_{\rm floor}(0.12);\quad N_{\rm floor}=(70)(9.8)=686\text{ N}
-        \]
-        \[
-          F_A=\frac{(686)(0.12)}{0.045}=\frac{82.32}{0.045}\approx\mathbf{1829\text{ N}}
-        \]
-        $\sum F_y=0$: $J=F_A-N_{\rm floor}=1829-686\approx\mathbf{1143\text{ N}}$
+  \item \textit{Rationale: Site-directed mutagenesis is an application of PCR-based methods.}
 
-  \item \textit{Rationale: Pivot at shoulder; the deltoid torque arm is
-        $r_\perp=0.15\sin15^\circ$ (perpendicular to humerus).}\\[4pt]
-        (a)
-        \[
-          F_D(0.15\sin15^\circ)=(4.0)(9.8)(0.33)+(15)(9.8)(0.70)
-                               =12.94+102.9=115.8\,\mathrm{N{\cdot}m}
-        \]
-        \[
-          F_D=\frac{115.8}{0.15\times0.2588}=\frac{115.8}{0.03882}\approx\mathbf{2983\text{ N}}
-        \]
-        (b) $J_y=F_D\sin15^\circ-(4.0+15)(9.8)=(2983)(0.2588)-186.2=772-186=586$\,N;\\
-            $J_x=F_D\cos15^\circ=(2983)(0.9659)=2881$\,N.
-        \[
-          |\vec{J}|=\sqrt{586^2+2881^2}=\sqrt{343\,396+8\,300\,161}
-                  \approx\sqrt{8\,643\,557}\approx\mathbf{2940\text{ N}}
-        \]
+        (a) Steps: (i) Denature the cloned insert + vector to single-stranded DNA. (ii) Anneal a synthetic primer containing the desired mutation (creating a 1--3 nt mismatch at the mutation site). (iii) Extend the primer using Taq (or a high-fidelity polymerase) to copy the full plasmid. (iv) Treat with \textit{Dpn}I (which digests methylated, parental DNA) to eliminate the wild-type template. (v) Transform into bacteria; individual colonies carry plasmids.
+
+        (b) The mutant clone is identified by \textbf{DNA sequencing} of the insert, confirming the desired mutation and the absence of unintended mutations.
+
+        (c) Experimental strategy: (i) Express the wild-type and mutant proteins in a suitable expression system. (ii) Purify both proteins. (iii) Measure enzyme activity using a standard \textbf{biochemical assay} (e.g.\ substrate consumption or product formation over time). (iv) Compare kinetic parameters ($k_{\rm cat}$, $K_M$) between wild-type and mutant. (v) Include a \textbf{catalytic-dead mutant control} (known active-site residue mutated) as a negative control.
 
 \end{enumerate}
 \end{keybox}
 
-% ── Chapter 10 Solutions: Energy and Work ───────────────────────────────────────────────
-\section{Chapter 10 Solutions: Energy and Work}
-
-\subsection{Topic 7 --- Work}
+\subsection{Topic 18 --- Gel Electrophoresis and Molecular Blotting}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{7\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{18\Alph*.}]
 
-  \item \textit{Rationale: $W=Fd\cos\phi$ where $\phi$ is the angle between force
-        and displacement. Friction opposes motion ($\phi=180^\circ$ for friction).}\\[4pt]
-        (a)
-        \[
-          W_T=(70)(6.0)\cos28^\circ=(70)(6.0)(0.8829)=\mathbf{370.8\text{ J}}
-        \]
-        (b) $N=mg-T\sin28^\circ=(15)(9.8)-70(0.4695)=147.0-32.9=114.1$\,N;
-            $f_k=(0.20)(114.1)=22.82$\,N.
-        \[
-          W_f=-(22.82)(6.0)=\mathbf{-136.9\text{ J}}
-        \]
-        (c) $W_{\rm net}=370.8-136.9=\mathbf{234\text{ J}}$
+  \item \textit{Rationale: Charge and size are the two key properties governing gel electrophoresis of DNA.}
 
-  \item \textit{Rationale: Constant speed $\Rightarrow\sum F=0$ along incline.
-        Each work term is force $\times$ displacement $\times\cos\phi$.}\\[4pt]
-        (a)
-        \[
-          F\cos30^\circ=mg\sin30^\circ
-          \;\Rightarrow\;F=(3.0)(9.8)\tan30^\circ=(29.4)(0.5774)=\mathbf{16.97\text{ N}}
-        \]
-        (b)
-        \[
-          W_F=(16.97)(2.0)\cos30^\circ=(16.97)(2.0)(0.8660)\approx\mathbf{+29.4\text{ J}}
-        \]
-        \[
-          W_{\rm grav}=-(3.0)(9.8)(2.0)\sin30^\circ=-(29.4)(2.0)(0.500)=\mathbf{-29.4\text{ J}}
-        \]
-        \[
-          W_N=0\text{ J}\quad(\vec{N}\perp\vec{d})
-        \]
-        (c) $W_{\rm net}=29.4-29.4+0=\mathbf{0\text{ J}}\;\checkmark$
+        DNA is negatively charged due to the phosphate backbone. In an electric field, it migrates from the \textbf{negative electrode (cathode) toward the positive electrode (anode)} (``run to red''). In agarose, smaller fragments migrate faster through the gel matrix because they encounter less resistance; larger fragments are retarded. \textbf{Size} (number of base pairs, for linear dsDNA) determines migration rate.
 
-  \item \textit{Rationale: For variable force, $W=\int F(x)\,dx$; then apply
-        the Work--Energy Theorem.}\\[4pt]
-        (a)
-        \begin{align*}
-          W&=\int_1^4(6x^2-4x)\,dx=\Bigl[2x^3-2x^2\Bigr]_1^4\\
-           &=\bigl(2(64)-2(16)\bigr)-\bigl(2(1)-2(1)\bigr)=(128-32)-(0)=\mathbf{96\text{ J}}
-        \end{align*}
-        (b)
-        \[
-          96=\tfrac{1}{2}(2.0)v_f^2-\tfrac{1}{2}(2.0)(3.0)^2=v_f^2-9
-          \;\Rightarrow\;v_f=\sqrt{105}\approx\mathbf{10.25\text{ m/s}}
-        \]
+  \item \textit{Rationale: Topology determines effective hydrodynamic size.}
 
-  \item \textit{Rationale: At constant speed the motor must compensate for the
-        net gravitational work done against the system.}\\[4pt]
-        (a)
-        \begin{align*}
-          W_{\rm grav,elev}&=-(500)(9.8)(30)=-147\,000\text{ J}\\
-          W_{\rm grav,CW}  &=+(300)(9.8)(30)=+88\,200\text{ J}\\
-          W_{\rm grav,net} &=88\,200-147\,000=\mathbf{-58\,800\text{ J}}
-        \end{align*}
-        (b) $W_{\rm motor}=-W_{\rm grav,net}=\mathbf{+58\,800\text{ J}}$
+        (a) Migration order (slowest to fastest): $\mathbf{\text{Nicked circle} > \text{Linear} > \text{Supercoiled}}$.
+        Nicked circles are relaxed and migrate slowly due to their large effective radius. Linear DNA migrates at an intermediate rate. Supercoiled DNA is compact and migrates fastest.
 
-        (c)
-        \[
-          P_{\min}=\frac{58\,800}{25}=\mathbf{2352\text{ W}}
-        \]
+        (b) Ethidium bromide intercalates into DNA, reducing the negative supercoiling of supercoiled DNA. At low concentrations, EtBr reduces (then eliminates) negative supercoils, converting supercoiled to a more relaxed form. At saturating concentrations, EtBr introduces positive supercoils, causing the formerly fast-migrating supercoiled band to slow down and migrate \textbf{slower than linear} DNA.
+
+        (c) A 1-kb ladder contains DNA fragments at known sizes (e.g.\ 100, 200, 500, 1{,}000, 2{,}000, 3{,}000~bp). After electrophoresis, plot \textbf{log(size) vs.\ migration distance} for ladder bands to construct a standard curve. Read off the migration distance of the unknown fragment and interpolate its size from the standard curve.
+
+  \item \textit{Rationale: EMSA detects protein--DNA interaction via reduced mobility.}
+
+        (a) Without protein: the labelled DNA fragment migrates as a single band at its expected position. With protein: the protein--DNA complex has a higher molecular mass and migrates \textbf{more slowly}, appearing as a shifted band higher in the gel (``shift'').
+
+        (b) To determine $K_D$: add increasing concentrations of the transcription factor to a fixed amount of labelled DNA. At each concentration, quantify the fraction of DNA in the shifted (bound) versus free band. The $K_D$ equals the protein concentration at which \textbf{50\% of the DNA is bound} (half-shifted).
+
+        (c) \textbf{Specificity control}: (i) Compete the interaction with unlabelled specific DNA (cold competitor) at increasing concentrations --- the shift should disappear. (ii) Add excess unlabelled \emph{non-specific} DNA --- the shift should remain. (iii) Use a mutated probe that lacks the binding site --- no shift should be observed.
+
+  \item \textit{Rationale: Northern detects RNA, Western detects protein; both use hybridisation/antibody-based detection.}
+
+        (a) \textbf{Northern blot}: isolate mRNA $\to$ separate by agarose gel electrophoresis under denaturing conditions $\to$ blot to nylon membrane $\to$ hybridise with labelled DNA probe complementary to target mRNA $\to$ wash off non-specific probe $\to$ detect labelled bands by autoradiography or fluorescence.
+        \textbf{Western blot}: separate proteins by SDS-PAGE $\to$ transfer to nitrocellulose or PVDF membrane $\to$ block with non-specific protein $\to$ add primary antibody (binds target protein) $\to$ add secondary antibody conjugated to alkaline phosphatase $\to$ add XP substrate $\to$ detect dark purple band.
+
+        (b) \textbf{Northern}: $\beta$-globin mRNA is present in brain cells but absent in intestinal cells; brain cells \textbf{express} the $\beta$-globin gene while intestinal cells do \textbf{not}. \textbf{Western}: $\beta$-globin protein is present in brain but not intestinal cells, consistent with the mRNA expression data. Together they confirm tissue-specific expression at both RNA and protein levels.
+
+        (c) Two explanations for an oversized Northern band: (i) \textbf{Alternative splicing} of the $\beta$-globin pre-mRNA in this tissue retains an intron, producing a larger transcript. (ii) The probe detects a \textbf{related but larger transcript} from a homologous gene (cross-hybridisation).
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 8 --- Kinetic Energy and the Work--Energy Theorem}
+\subsection{Topic 19 --- Gene Knockouts and RNA Interference}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{8\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{19\Alph*.}]
 
-  \item \textit{Rationale: $W_{\rm net}=\Delta K$; the car stops so $K_f=0$.}
-        \[
-          -F_{\rm brake}\,d=0-\tfrac{1}{2}mv^2
-          \;\Rightarrow\;d=\frac{mv^2}{2F_{\rm brake}}
-          =\frac{(1200)(25)^2}{2(8000)}
-          =\frac{750\,000}{16\,000}\approx\mathbf{46.9\text{ m}}
-        \]
+  \item \textit{Rationale: Distinguish knockout (permanent, DNA-level) from knockdown (transient, RNA-level).}
 
-  \item \textit{Rationale: Apply $W_{\rm net}=\Delta K$ to the combined two-body
-        system; gravity on $B$ does positive work, friction on $A$ does negative work.}
-        \begin{align*}
-          W_{\rm net}&=(2.5)(9.8)(1.2)-(0.30)(4.0)(9.8)(1.2)\\
-                     &=29.4-14.11=15.29\text{ J}
-        \end{align*}
-        \[
-          \tfrac{1}{2}(6.5)v^2=15.29
-          \;\Rightarrow\;v^2=\frac{2\times15.29}{6.5}=4.704
-          \;\Rightarrow\;v\approx\mathbf{2.17\text{ m/s}}
-        \]
+        \begin{center}
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{} & \textbf{Gene present?} & \textbf{mRNA?} & \textbf{Protein?} \\
+        \hline
+        Gene knockout & No & No & No \\
+        \hline
+        RNAi knockdown & Yes & No (degraded) & No (or greatly reduced) \\
+        \hline
+        \end{tabular}
+        \end{center}
 
-  \item \textit{Rationale: Only gravity does work (no air resistance). Height
-        fallen is 20\,m regardless of horizontal travel.}
-        \[
-          W_{\rm net}=mgh=(0.40)(9.8)(20)=78.4\text{ J}
-        \]
-        \[
-          \tfrac{1}{2}mv_f^2=\tfrac{1}{2}(0.40)(8.0)^2+78.4=12.8+78.4=91.2\text{ J}
-        \]
-        \[
-          v_f=\sqrt{\frac{2(91.2)}{0.40}}=\sqrt{456}\approx\mathbf{21.4\text{ m/s}}
-        \]
-        \emph{Check}: $v_y^2=2(9.8)(20)=392$;\;$v_x^2=(8.0)^2=64$;\;$v_f=\sqrt{64+392}=\sqrt{456}=21.4$\,m/s\;\checkmark
+  \item \textit{Rationale: RNAi mechanism is RISC-mediated cleavage; experimental design integrates multiple techniques.}
 
-  \item \textit{Rationale: Frictionless ramp converts all gravitational PE to KE at
-        the base; friction then dissipates that KE on the flat.}
-        \[
-          K_{\rm base}=(2.0)(9.8)(3.5)=68.6\text{ J};\quad
-          f_k=(0.25)(2.0)(9.8)=4.90\text{ N}
-        \]
-        \[
-          d=\frac{K_{\rm base}}{f_k}=\frac{68.6}{4.90}=\mathbf{14.0\text{ m}}
-        \]
+        (a) \textbf{Complete knockout} permanently eliminates gene function, but may be lethal if the gene is essential, preventing study of its role in later processes. \textbf{RNAi knockdown} reduces (not eliminates) gene expression transiently and can be conditionally induced, but incomplete knockdown may allow residual protein function; off-target silencing is also a concern.
+
+        (b) Mechanism of RNAi:
+        \begin{enumerate}[leftmargin=1.5em]
+          \item Exogenous or endogenous \textbf{dsRNA} is processed by the RNase~III enzyme \textbf{Dicer} into short interfering RNA (siRNA) duplexes of $\sim$21--23~nt.
+          \item siRNA is incorporated into the \textbf{RISC} (RNA-Induced Silencing Complex).
+          \item The passenger strand is discarded; the guide strand remains and directs RISC to the \textbf{complementary mRNA}.
+          \item The RISC endonuclease (Argonaute/Slicer) \textbf{cleaves} the target mRNA, which is then degraded.
+        \end{enumerate}
+
+        (c) Experimental design: (i) Design siRNA complementary to the Gene~X mRNA. (ii) Transfect into synchronised cells at G1. (iii) Add BrdU and monitor entry into S phase (BrdU incorporation). (iv) Compare BrdU-positive cells in siRNA-treated versus control (scrambled siRNA) cells. (v) Verify knockdown by RT-qPCR and Western blot for Gene~X mRNA and protein. (vi) A \textbf{decrease in BrdU incorporation} in Gene~X-depleted cells indicates that Gene~X is required for S phase entry.
+
+  \item \textit{Rationale: Recombinant insulin production involves reverse genetics and expression systems.}
+
+        (a) Steps: (i) Isolate mRNA for human insulin (or A/B chain mRNAs) from pancreatic $\beta$~cells. (ii) Use \textbf{reverse transcriptase} to synthesise cDNA. (iii) Amplify the insulin cDNA by \textbf{PCR} with appropriate primers. (iv) Clone the cDNA into a bacterial \textbf{expression vector} containing a strong promoter (e.g.\ $T7$ or \textit{lac}). (v) Transform into \textit{E.\ coli}; induce expression. (vi) Purify the expressed insulin protein.
+
+        (b) Bacteria are preferred because: they grow rapidly and cheaply; they can produce large quantities of recombinant protein; the biology is well-understood; and scale-up is straightforward.
+
+        (c) \textbf{Challenge}: \textit{E.\ coli} lacks the machinery to form \textbf{disulfide bonds} in the cytoplasm and does not process proinsulin to mature insulin (proinsulin has a connecting C peptide). \textbf{Solution}: Produce the A and B chains separately, then chemically or enzymatically fold and oxidise them to form the correct disulfide bonds in vitro; alternatively, express proinsulin in the periplasm (oxidising environment) and cleave the C-peptide enzymatically.
+
+  \item \textit{Rationale: Cohesin-mediated gene regulation and disease mechanism.}
+
+        (a) Cohesin forms loops that juxtapose enhancers and promoters, activating specific developmental genes. Loss of cohesin disrupts these loops $\Rightarrow$ enhancers can no longer reach their target promoters $\Rightarrow$ \textbf{reduced expression of genes} normally activated by those enhancers. This leads to dysregulation of multiple developmental pathways simultaneously.
+
+        (b) Different missense mutations alter the cohesin complex to varying degrees: a mutation in a non-critical residue may only \textbf{partially impair} the protein-interaction surface of the ring, causing mild dysregulation. A mutation at a critical ATPase or hinge residue causes \textbf{severe loss of function}. Additionally, dominant-negative effects, haploinsufficiency, and genetic background modifiers contribute to variable expressivity.
+
+        (c) \textbf{NIPBL} (Nipped-B-like) is the \textbf{cohesin loader}; it recruits the cohesin ring to chromosomes at specific loading sites (especially replication forks and gene regulatory elements). Without functional NIPBL, cohesin is not efficiently loaded onto chromosomes, reducing the number of active enhancer--promoter loops and impairing gene regulation. A \textit{de~novo} mutation means the patient has a \textbf{new (non-inherited) mutation} not present in either parent; because CdLS is typically caused by heterozygous loss-of-function mutations (\textbf{haploinsufficiency}), a single defective copy of \textit{NIPBL} is sufficient to cause the syndrome.
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 9 --- Potential Energy}
+% ── Gene Regulation in Eukaryotes Answer Key ─────────────────────────────────
+\section{Gene Regulation in Eukaryotes Solutions}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Topic 20 --- Transcription Factors and Gene Activation}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{9\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{20\Alph*.}]
 
-  \item \textit{Rationale: All elastic PE $\to$ gravitational PE at peak; $v=0$
-        there: $\tfrac{1}{2}kx^2=mgh$.}
-        \[
-          h=\frac{kx^2}{2mg}=\frac{(250)(0.16)^2}{2(0.30)(9.8)}
-           =\frac{250\times0.0256}{5.88}=\frac{6.40}{5.88}\approx\mathbf{1.09\text{ m}}
-        \]
+  \item \textit{Rationale:} General TFs assemble the PIC at every gene; regulatory TFs are gene- or cell-type-specific.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{General transcription factors} (TFIIB, TFIID, TFIIE, TFIIF, TFIIH) are required at all RNA pol~II–transcribed genes.
+          They assemble into the \textbf{pre-initiation complex (PIC)} at the core promoter.
+          TFIID recognises the TATA box; TFIIB bridges TFIID to RNA pol~II; TFIIH unwinds DNA at the TSS and phosphorylates the CTD to initiate elongation.
+    \item \textbf{Regulatory transcription factors} (activators, repressors) are expressed in specific cell types or conditions.
+          They bind \textbf{enhancers} or \textbf{silencers} and modulate PIC assembly or activity, thereby controlling the \emph{rate} of transcription of a specific gene.
+  \end{enumerate}
 
-  \item \textit{Rationale: Frictionless surface $\Rightarrow$ energy conserved:
-        $K+U_{\rm sp}=\text{const}$.}\\[4pt]
-        (a) At max compression $v=0$: all KE $\to$ spring PE.
-        \[
-          x_{\rm max}=v_0\sqrt{\frac{m}{k}}=4.0\sqrt{\frac{2.0}{600}}
-                     =4.0\times0.05774\approx\mathbf{0.231\text{ m}}
-        \]
-        (b)
-        \[
-          \tfrac{1}{2}mv_1^2=\tfrac{1}{2}(2.0)(4.0)^2-\tfrac{1}{2}(600)(0.12)^2
-                            =16.0-4.32=11.68\text{ J}
-          \;\Rightarrow\;v_1=\sqrt{11.68}\approx\mathbf{3.42\text{ m/s}}
-        \]
-        (c) $4.32/16.0=0.270\;\Rightarrow\;\mathbf{27.0\%}$
+  \item \textit{Rationale:} Cell-type-specific expression reflects combinatorial control; DNA looping mediated by Mediator + cohesin brings distal regulatory elements into proximity with the promoter.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Same DNA, different transcription factors present:} Each cell type expresses a distinct combination of regulatory TFs. Only cells expressing the correct activators for the BRCA1 enhancer will transcribe the gene.
+    \item \textbf{Activator-Mediator-PIC axis:} Activators bound at the BRCA1 enhancer recruit Mediator via protein--protein interactions; Mediator contacts the PIC; TFIIH phosphorylates RNA pol~II CTD $\Rightarrow$ elongation.
+    \item \textbf{DNA looping:} Cohesin (loaded by NIPBL) extruded loops until encountering CTCF-bound sites; the enhancer and promoter are brought within a loop, placing them in the same transcription compartment. Cohesin + CTCF stabilise the loop, while Mediator bridges the enhancer-bound activator to the PIC at the promoter.
+  \end{enumerate}
 
-  \item \textit{Rationale: Height drop from angle $\theta$ is $L(1-\cos\theta)$;
-        at the bottom apply radial Newton's 2nd law for tension.}\\[4pt]
-        (a) $\Delta h=(1.4)(1-\cos40^\circ)=(1.4)(0.2340)=0.3276$\,m
-        \[
-          v=\sqrt{2g\Delta h}=\sqrt{2(9.8)(0.3276)}=\sqrt{6.421}\approx\mathbf{2.53\text{ m/s}}
-        \]
-        (b)
-        \[
-          T=m\!\left(g+\frac{v^2}{L}\right)
-           =(0.60)\!\left(9.8+\frac{6.421}{1.4}\right)
-           =(0.60)(9.8+4.586)
-           =(0.60)(14.39)\approx\mathbf{8.63\text{ N}}
-        \]
-        (c) $v=v_{\max}/2=1.265$\,m/s:
-        \[
-          \cos\theta=1-\frac{v^2}{2gL}=1-\frac{(1.265)^2}{2(9.8)(1.4)}
-                   =1-\frac{1.600}{27.44}=1-0.0583=0.9417
-          \;\Rightarrow\;\theta\approx\mathbf{19.7^\circ}
-        \]
+  \item \textit{Rationale:} Modular domain structure of transcription factors allows independent DNA binding and activation.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Zinc-finger domain:} Coordinates Zn$^{2+}$ ions to maintain a $\alpha$-helix that inserts into the DNA major groove, conferring sequence-specific binding.
+          \textbf{Acidic activation domain:} Intrinsically disordered; contacts Mediator subunits and/or TFIID, stimulating PIC assembly and pol~II CTD phosphorylation.
+    \item Without the activation domain the factor can still occupy the enhancer but \textbf{cannot recruit Mediator or stimulate PIC assembly}, so transcription falls to basal levels set by general TFs alone.
+    \item Fusion of a repression domain (e.g.\ recruiting HDAC or co-repressor NuRD): HDAC deacetylates H3K9/H3K27 near the promoter $\Rightarrow$ chromatin compacts $\Rightarrow$ nucleosomes occlude the TATA box $\Rightarrow$ TFIID cannot bind $\Rightarrow$ no PIC $\Rightarrow$ gene silenced.
+  \end{enumerate}
 
-  \item \textit{Rationale: Spring PE converts to KE on the flat, then is dissipated
-        by friction and gravity as the block climbs. Set $K_f=0$.}
-        \[
-          U_{\rm sp}=\tfrac{1}{2}(800)(0.15)^2=400\times0.0225=9.0\text{ J}
-        \]
-        \[
-          9.0=mgd(\sin25^\circ+\mu_k\cos25^\circ)
-             =(1.5)(9.8)d(0.4226+0.18\times0.9063)
-             =14.7d(0.5857)=8.609d
-        \]
-        \[
-          d=\frac{9.0}{8.609}\approx\mathbf{1.05\text{ m}}
-        \]
+  \item \textit{Rationale:} CTCF/cohesin-dependent insulation is mechanistically linked to TAD boundaries; its loss disrupts enhancer--promoter specificity.
+  \begin{enumerate}[label=\arabic*.]
+    \item The insulator \textbf{blocks enhancer-to-promoter communication}: if CTCF is bound between them, the enhancer's effect cannot cross the boundary, reducing transcription of the target gene to basal levels.
+    \item \textbf{CTCF} binds its 19-bp consensus motif at insulator sites; \textbf{cohesin} (loaded by NIPBL) is recruited to CTCF-bound sites and extrudes a chromatin loop until stalling.
+          Two convergently oriented CTCF sites anchor a stable loop domain (TAD), keeping regulatory elements and genes within each TAD insulated from those in neighbouring TADs.
+    \item \textbf{Mechanism 1 --- Enhancer hijacking:} Loss of a CTCF boundary allows an oncogene promoter to come under the influence of an enhancer from a neighbouring TAD, driving constitutive oncogene expression.
+          \textbf{Mechanism 2 --- Silencer escape:} A tumour-suppressor gene previously insulated from a repressive domain becomes exposed to that domain, leading to its silencing.
+  \end{enumerate}
 
 \end{enumerate}
 \end{keybox}
 
-\subsection{Topic 10 --- Conservation of Energy}
+\subsection{Topic 21 --- Chromatin Remodeling and Histone Modifications}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{10\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{21\Alph*.}]
 
-  \item \textit{Rationale: No friction $\Rightarrow$ mechanical energy is conserved:
-        $K_i+U_i=K_f+U_f$. With $v_i=0$, all initial PE converts to KE and
-        remaining PE.}
-        \[
-          v=\sqrt{2g(h_i-h_f)}=\sqrt{2(9.8)(8.0-2.5)}=\sqrt{2\times9.8\times5.5}
-           =\sqrt{107.8}\approx\mathbf{10.4\text{ m/s}}
-        \]
+  \item \textit{Rationale:} ATP-dependent remodelers alter nucleosome position or composition without removing histones permanently.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{Chromatin remodeling} is the ATP-dependent repositioning or restructuring of nucleosomes to regulate DNA accessibility.
+    \item \textbf{Mechanism 1 --- Nucleosome sliding:} The remodeler (e.g.\ SWI/SNF) uses ATP hydrolysis to generate torsional stress that transiently detaches DNA from the histone octamer; DNA threads around the octamer, shifting its position by 10--50~bp and exposing new DNA.
+    \item \textbf{Mechanism 2 --- Nucleosome ejection:} The remodeler completely displaces the octamer, creating a nucleosome-free region (NFR) over the promoter, allowing TFIID and other TFs to bind.
+  \end{enumerate}
 
-  \item \textit{Rationale: Gravitational PE minus incline friction loss gives KE at
-        the ramp base; that KE minus horizontal friction loss goes into spring PE.}\\[4pt]
-        \textbf{Step 1 --- KE at ramp base:}
-        \[
-          \Delta h=(5.0)\sin40^\circ=(5.0)(0.6428)=3.214\text{ m}
-        \]
-        \[
-          N_1=mg\cos40^\circ=(2.0)(9.8)(0.7660)=15.01\text{ N}
-        \]
-        \[
-          W_{f1}=(0.15)(15.01)(5.0)=11.26\text{ J}
-        \]
-        \[
-          K_1=(2.0)(9.8)(3.214)-11.26=62.99-11.26=51.73\text{ J}
-        \]
-        \textbf{Step 2 --- spring compression:}
-        \[
-          51.73=600\,x_c^2+(0.20)(2.0)(9.8)x_c=600\,x_c^2+3.92\,x_c
-        \]
-        \[
-          600\,x_c^2+3.92\,x_c-51.73=0
-        \]
-        \[
-          x_c=\frac{-3.92+\sqrt{3.92^2+4(600)(51.73)}}{1200}
-             =\frac{-3.92+\sqrt{124\,167}}{1200}
-             =\frac{-3.92+352.4}{1200}\approx\mathbf{0.290\text{ m}}
-        \]
+  \item \textit{Rationale:} Bivalent chromatin keeps developmental genes poised for rapid activation or repression during differentiation.
+  \begin{enumerate}[label=\arabic*.]
+    \item \textbf{H3K4me3} marks \textbf{active promoters}; read by PHD-finger proteins (e.g.\ TFIID subunit TAF3) that stabilise PIC assembly.
+          \textbf{H3K27me3} marks \textbf{Polycomb-repressed genes}; read by PRC1 (Polycomb repressive complex 1) via its chromobox (CBX) subunit, which compacts chromatin and inhibits transcription elongation.
+    \item \textbf{Bivalency (H3K4me3 + H3K27me3)} keeps genes in a \textbf{poised state}: lowly transcribed but ready for rapid activation (loss of H3K27me3 by KDM6A/B) or permanent silencing (loss of H3K4me3). This is essential for the orderly activation of lineage-specific genes during embryogenesis.
+    \item \textbf{EZH2 inhibition} (e.g.\ tazemetostat) blocks H3K27 trimethylation $\Rightarrow$ reduces Polycomb repression of tumour-suppressor genes $\Rightarrow$ re-expression of anti-proliferative genes.
+          It is particularly effective in cancers that harbour \textit{EZH2} gain-of-function mutations or in PRC2-addicted (e.g.\ diffuse large B-cell lymphoma) tumours that rely on H3K27me3 for silencing tumour suppressors.
+  \end{enumerate}
 
-  \item \textit{Rationale: Air resistance does negative work both up and down,
-        reducing total mechanical energy each way.}\\[4pt]
-        (a) Net upward force opposes motion: $(mg+F_{\rm air})H=\tfrac{1}{2}mv_0^2$
-        \[
-          H=\frac{81.0}{(0.50)(9.8)+1.2}=\frac{81.0}{6.10}\approx\mathbf{13.3\text{ m}}
-        \]
-        (b) Net downward force drives return:
-        \[
-          \tfrac{1}{2}mv_{\rm ret}^2=(mg-F_{\rm air})H=\bigl((0.50)(9.8)-1.2\bigr)(13.3)
-          =(3.70)(13.3)=49.21\text{ J}
-        \]
-        \[
-          v_{\rm ret}=\sqrt{\frac{2(49.21)}{0.50}}=\sqrt{196.8}\approx\mathbf{14.0\text{ m/s}}
-        \]
-        (c) $K_{\rm launch}=81.0$\,J;\quad$K_{\rm return}=49.2$\,J;\quad
-            return KE is $49.2/81.0\approx60.7\%$ of launch KE.
+  \item \textit{Rationale:} Acetylation neutralises lysine charge, reducing DNA–histone affinity and recruiting bromodomain-containing activators.
+  \begin{enumerate}[label=\arabic*.]
+    \item H3K9 acetylation neutralises the $+$ charge of lysine's $\varepsilon$-amino group $\Rightarrow$ reduces electrostatic interaction with the $-$ charged DNA phosphate backbone $\Rightarrow$ chromatin opens.
+          Additionally, \textbf{bromodomain-containing proteins} (e.g.\ BRD4, TAF1) read H3K9ac and recruit co-activator complexes and Mediator.
+    \item \textbf{HDAC inhibitor} (e.g.\ vorinostat/SAHA): HDACs can no longer remove acetyl groups $\Rightarrow$ global hyperacetylation of histones $\Rightarrow$ heterochromatin decondenses $\Rightarrow$ genes previously silenced by HDAC-mediated deacetylation become accessible to RNA pol~II and are transcribed.
+    \item Repressor binds silencer $\to$ recruits HDAC complex $\to$ HDAC removes acetyl groups from H3K9 (and H3K27) $\to$ HMT (e.g.\ G9a) methylates H3K9me2/3 $\to$ HP1 reads H3K9me3 (chromodomain) and oligomerises $\to$ chromatin compacts $\to$ RNA pol~II cannot access the promoter $\to$ transcription silenced.
+  \end{enumerate}
 
-  \item \textit{Rationale: Track each energy conversion step: gravity $\to$ KE
-        $\to$ spring PE $\to$ KE again, then subtract the pad collision loss.}\\[4pt]
-        (a) Frictionless ramp; $K_{\rm base}=mgh=(3.0)(9.8)(4.0)=117.6$\,J.
-        \[
-          x_c=\sqrt{\frac{2K_{\rm base}}{k}}=\sqrt{\frac{2(117.6)}{2000}}
-             =\sqrt{0.1176}\approx\mathbf{0.343\text{ m}}
-        \]
-        (b) Spring returns full $117.6$\,J; pad absorbs 5.0\,J:
-        \[
-          K_f=117.6-5.0=112.6\text{ J};\quad
-          H_f=\frac{K_f}{mg}=\frac{112.6}{29.4}\approx\mathbf{3.83\text{ m}}
-        \]
+  \item \textit{Rationale:} SWI/SNF is a tumour suppressor; its loss impairs accessibility of proliferation-limiting genes.
+  \begin{enumerate}[label=\arabic*.]
+    \item Without SWI/SNF, nucleosomes are not repositioned at tumour-suppressor gene promoters $\Rightarrow$ TFIID cannot access the TATA box $\Rightarrow$ no PIC $\Rightarrow$ no transcription of e.g.\ \textit{CDKN2A} (p16$^{\text{INK4A}}$), \textit{RB1}, or \textit{PTEN} $\Rightarrow$ uncontrolled cell proliferation.
+    \item \textbf{Strategy --- exploit synthetic lethality:} SWI/SNF-deficient cells become dependent on the parallel EZH2 (PRC2) pathway for survival. Inhibiting EZH2 (e.g.\ with tazemetostat) re-activates tumour-suppressor genes and selectively kills SWI/SNF$^{-}$ cancer cells while sparing normal cells that retain SWI/SNF and can compensate.
+    \item Context-dependency arises from \textbf{subunit composition}: SWI/SNF exists as multiple sub-complexes (BAF, PBAF, ncBAF) with different subunits that recruit either co-activators or co-repressors.
+          For example, ARID1A-containing BAF activates enhancers, while PBRM1-containing PBAF represses certain loci.
+          Which genes are activated vs.\ repressed therefore depends on which SWI/SNF sub-complex variant is present.
+  \end{enumerate}
 
 \end{enumerate}
 \end{keybox}
 
-% ── Bonus Solutions: Ski Slope Problems ───────────────────────────────────────────────
-\section{Bonus Solutions: Ski Slope Problems}
-
-\subsection{Topic 11 --- Ski Slope: Energy on an Incline}
+\subsection{Topic 22 --- DNA Methylation and Epigenetic Regulation}
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{11\Alph*.}]
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{22\Alph*.}]
 
-  \item \textit{Rationale: Along the slope, the gravity component drives the skier
-        while kinetic friction resists; apply Newton's 2nd law, then the
-        Work--Energy Theorem.}\\[4pt]
-        (a)
-        \[
-          F_{\rm net}=mg(\sin30^\circ-\mu_k\cos30^\circ)
-                     =(70)(9.8)(0.500-0.08\times0.8660)
-                     =(686)(0.500-0.0693)
-                     =(686)(0.4307)\approx\mathbf{295\text{ N}}
-        \]
-        (b)
-        \[
-          W_{\rm net}=F_{\rm net}\times d=(295)(120)=35\,400\text{ J}
-        \]
-        \[
-          v_1=\sqrt{\frac{2\times35\,400}{70}}=\sqrt{1011}\approx\mathbf{31.8\text{ m/s}}
-        \]
+  \item \textit{Rationale:} DNA methylation in mammals = 5-methylcytosine at CpG sites, maintained through replication by DNMT1.
+  \begin{enumerate}[label=\arabic*.]
+    \item DNA methylation occurs on \textbf{cytosine} residues within \textbf{CpG dinucleotides}, producing \textbf{5-methylcytosine (5mC)}.
+          CpG sites on both strands are methylated in a symmetrical pattern (each CpG on one strand is paired with a CpG on the complementary strand, read in the 5$'\to$3$'$ direction).
+    \item \textbf{DNMT3A / DNMT3B:} \emph{de novo} methyltransferases --- add methyl groups to previously unmethylated CpGs during development.
+          \textbf{DNMT1:} maintenance methyltransferase --- recognises hemi-methylated DNA (one strand methylated after replication) and methylates the new daughter strand, preserving the methylation pattern after each round of replication.
+  \end{enumerate}
 
-  \item \textit{Rationale: Track KE through each segment using energy conservation
-        with friction losses.}\\[4pt]
-        (a) Flat friction loss:
-        $W_f=(0.08)(70)(9.8)(80)=(0.08)(686)(80)=4390$\,J.
-        \[
-          K_{\rm flat}=\tfrac{1}{2}(70)(31.8)^2-4390=35\,345-4390=30\,955\text{ J}
-        \]
-        \[
-          v_{\rm flat}=\sqrt{\frac{2\times30\,955}{70}}=\sqrt{884.4}\approx\mathbf{29.7\text{ m/s}}
-        \]
-        (b) Ramp height: $h_r=(15)\sin25^\circ=(15)(0.4226)=6.339$\,m.
-        \[
-          K_{\rm launch}=30\,955-(70)(9.8)(6.339)=30\,955-4349=26\,606\text{ J}
-        \]
-        \[
-          v_{\rm launch}=\sqrt{\frac{2\times26\,606}{70}}=\sqrt{760.2}\approx\mathbf{27.6\text{ m/s}}
-        \]
-        (c) Vertical launch component: $v_{y0}=(27.6)\sin25^\circ=(27.6)(0.4226)=11.66$\,m/s.
-        \[
-          H=\frac{v_{y0}^2}{2g}=\frac{(11.66)^2}{19.6}=\frac{135.9}{19.6}\approx\mathbf{6.93\text{ m}}
-        \]
+  \item \textit{Rationale:} CpG island methylation silences genes by steric exclusion and recruitment of chromatin-condensing complexes.
+  \begin{enumerate}[label=\arabic*.]
+    \item Unmethylated CpG islands are bound by \textbf{CpG-binding proteins} (e.g.\ CFP1/CXXC1) that recruit H3K4 methyltransferases (SET1/COMPASS) $\Rightarrow$ H3K4me3 $\Rightarrow$ open chromatin, allowing TF and TFIID binding.
+    \item \textbf{Mechanism 1 --- Steric exclusion:} 5mC directly prevents binding of transcription factors (e.g.\ SP1, E2F) whose binding sites overlap CpG motifs.
+          \textbf{Mechanism 2 --- MBD recruitment:} Methyl-CpG binding domain proteins (MeCP2, MBD2) bind 5mC and recruit HDAC/NuRD complexes $\Rightarrow$ deacetylation + H3K9 methylation $\Rightarrow$ heterochromatin $\Rightarrow$ silencing.
+    \item \textbf{5-Azacytidine} (azacitidine) is incorporated into DNA in place of cytosine during replication.
+          It forms a covalent adduct with DNMT1, trapping and degrading the enzyme $\Rightarrow$ DNMT1 cannot maintain methylation during subsequent replication $\Rightarrow$ passive demethylation over cell divisions $\Rightarrow$ CpG island becomes unmethylated $\Rightarrow$ tumour-suppressor gene is re-expressed.
+  \end{enumerate}
 
-  \item \textit{Rationale: Net work along the slope gives KE; that KE fully
-        compresses the spring ($v=0$ at maximum compression).}\\[4pt]
-        (a)
-        \[
-          W_{\rm net}=(70)(9.8)(90)(\sin35^\circ-\mu_k\cos35^\circ)
-                     =(686)(90)(0.5736-0.10\times0.8192)
-                     =(686)(90)(0.4917)=30\,361\text{ J}
-        \]
-        \[
-          v=\sqrt{\frac{2\times30\,361}{70}}=\sqrt{867.5}\approx\mathbf{29.4\text{ m/s}}
-        \]
-        (b)
-        \[
-          x_c=v\sqrt{\frac{m}{k}}=29.4\sqrt{\frac{70}{8000}}
-             =29.4\times0.09354\approx\mathbf{2.75\text{ m}}
-        \]
+  \item \textit{Rationale:} Imprinting is allele-specific silencing determined by parental origin; it is epigenetic because the DNA sequence is identical on both alleles.
+  \begin{enumerate}[label=\arabic*.]
+    \item The \textbf{imprinting control region (ICR)} is differentially methylated between parental alleles (established in the germline by DNMT3A/3L).
+          On the silenced allele, ICR methylation recruits MBD proteins + HDACs + H3K9 methyltransferases (e.g.\ G9a), generating compacted heterochromatin that spreads across the imprinted gene cluster.
+          Cohesin + CTCF on the active allele (where the ICR is unmethylated) can insulate the gene from repressive marks.
+    \item Normally, the paternal \textit{IGF2} is expressed because the paternal ICR is methylated, which \textbf{blocks CTCF binding} at the ICR, allowing the downstream enhancer to loop to \textit{IGF2}.
+          If the paternal ICR loses methylation, CTCF binds $\Rightarrow$ the enhancer is redirected to the non-coding RNA \textit{H19} $\Rightarrow$ \textit{IGF2} on the paternal allele is \textbf{silenced} $\Rightarrow$ biallelic silencing $\Rightarrow$ growth deficiency (Silver--Russell syndrome phenotype).
+    \item Imprinting is \textbf{epigenetic} because the maternal and paternal alleles have \emph{identical DNA sequences} but differ in methylation and histone modification; these marks are erased and re-established in the germline each generation, not encoded in the nucleotide sequence.
+  \end{enumerate}
 
-  \item \textit{Rationale: Global energy balance; the average slope angle links
-        the vertical drop to the path length. Friction uses the average normal force.}\\[4pt]
-        (a)
-        \[
-          \sin\bar\theta=\frac{h}{L}=\frac{180}{350}=0.5143
-          \;\Rightarrow\;\bar\theta=\arcsin(0.5143)\approx\mathbf{31.0^\circ}
-        \]
-        $\cos\bar\theta=\sqrt{1-0.5143^2}=\sqrt{0.7355}\approx0.8576$
-
-        (b)
-        \[
-          W_{\rm friction}=\mu_k mg\cos\bar\theta\cdot L
-                          =(0.12)(65)(9.8)(0.8576)(350)
-                          =(0.12)(546.7)(350)
-                          =0.12\times191\,345\approx\mathbf{22\,961\text{ J}}
-        \]
-        (c)
-        \[
-          K_f=mgh-W_{\rm friction}=(65)(9.8)(180)-22\,961
-             =114\,660-22\,961=91\,699\text{ J}
-        \]
-        \[
-          v_f=\sqrt{\frac{2\times91\,699}{65}}=\sqrt{2821.5}\approx\mathbf{53.1\text{ m/s}}
-        \]
-        (d)
-        \[
-          P_{\rm friction}=\frac{W_{\rm friction}}{t}=\frac{22\,961}{48}\approx\mathbf{478\text{ W}}
-        \]
+  \item \textit{Rationale:} Combinatorial logic enables a small TF vocabulary to specify many cell states; synergy arises from cooperative recruitment of co-activators.
+  \begin{enumerate}[label=\arabic*.]
+    \item If there are $n$ transcription factors and each can be either ON or OFF, there are $2^n$ possible combinations.
+          Even with 10 TFs, this gives 1{,}024 distinct patterns of gene expression.
+          Because different target genes require different TF combinations, a limited TF repertoire can specify a large number of distinct transcriptional states.
+    \item \textbf{Synergy (20-fold vs.\ additive $\sim$2-fold):}
+          TF-A alone weakly recruits Mediator sub-complex~A; TF-B alone weakly recruits co-activator~B.
+          When both are present simultaneously, their activation domains contact \emph{different} surfaces of Mediator in a cooperative manner, stabilising Mediator binding to the enhancer and dramatically accelerating PIC assembly $\Rightarrow$ superadditive (synergistic) transcription.
+    \item \textbf{Cell-type specificity:} Both cell types express TF-A, but:
+          \textbf{Muscle precursors} express \textbf{MyoD co-activators} (e.g.\ E-proteins as heterodimerisation partners) and have the \textit{MyoD} locus in a permissive chromatin state (H3K4me3 $+$ NFR at the \textit{MyoD} enhancer).
+          \textbf{Liver precursors} express \textbf{ID proteins} (inhibitors of differentiation) that sequester E-proteins, preventing MyoD heterodimerisation, and the \textit{MyoD} locus is in a repressive state (H3K27me3, Polycomb).
+          Therefore, TF-A alone is insufficient; the full activating combination (TF-A + MyoD + E-protein) is only assembled in muscle precursors.
+  \end{enumerate}
 
 \end{enumerate}
 \end{keybox}
-
 
 \end{document}
