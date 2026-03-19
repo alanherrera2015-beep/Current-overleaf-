@@ -145,11 +145,11 @@ bolts holding the girder.
     node[above] {$R_x$};
   \draw[->,thick,green!50!black] (0,1.0) -- (0,2.3)
     node[left] {$R_y$};
-  % Dimension lines
-  \draw[<->,gray!65,thin] (0,0.45) -- (2.5,0.45);
-  \node[below,gray!65] at (1.25,0.4) {$L/2$};
-  \draw[<->,gray!65,thin] (0,0.1) -- (5.0,0.1);
-  \node[below,gray!65] at (2.5,0.05) {$L = 9\,\mathrm{ft}$};
+  % Dimension lines (placed below weight arrows to avoid crossing them)
+  \draw[<->,gray!65,thin] (0,-1.15) -- (2.5,-1.15);
+  \node[below,gray!65] at (1.25,-1.20) {$L/2$};
+  \draw[<->,gray!65,thin] (0,-1.55) -- (5.0,-1.55);
+  \node[below,gray!65] at (2.5,-1.60) {$L = 9\,\mathrm{ft}$};
 \end{tikzpicture}
 \end{center}
 
@@ -326,10 +326,10 @@ an angle of $2^\circ$ to the horizontal spine.
   % Weight W: downward at shoulder (x=8)
   \draw[->,thick,red!60!black] (8,0) -- (8,-1.60)
     node[below] {$W$};
-  % Dimension lines
-  \draw[<->,gray!65,thin] (0,-0.75) -- (5.33,-0.75);
-  \node[below,gray!65] at (2.67,-0.80) {$\tfrac{2}{3}L$};
-  \draw[<->,gray!65,thin] (0,-1.30) -- (8,-1.30);
+  % Dimension lines (endpoints offset from force-arrow axes to avoid overlap)
+  \draw[<->,gray!65,thin] (0.25,-0.75) -- (5.33,-0.75);
+  \node[below,gray!65] at (2.79,-0.80) {$\tfrac{2}{3}L$};
+  \draw[<->,gray!65,thin] (0.25,-1.30) -- (7.75,-1.30);
   \node[below,gray!65] at (4.0,-1.35) {$L$};
 \end{tikzpicture}
 \end{center}
@@ -459,53 +459,53 @@ angles.
   \draw[very thick, gray!60] (0,0) circle (1.5);
   \node[gray!65] at (1.1,1.1) {Pipe wall};
   % Ball positions: equilateral triangle, vertices at 0 deg, 120 deg, 240 deg
-  % A = focus ball at right (0 deg): (1.5, 0)
-  % B = upper-left (120 deg): (-0.75, 1.299)
-  % C = lower-left (240 deg): (-0.75, -1.299)
-  \coordinate (A) at (1.5,0);
-  \coordinate (B) at (-0.75,1.299);
-  \coordinate (C) at (-0.75,-1.299);
+  % ballA = focus ball at right (0 deg): (1.5, 0)
+  % ballB = upper-left (120 deg): (-0.75, 1.299)
+  % ballC = lower-left (240 deg): (-0.75, -1.299)
+  \coordinate (ballA) at (1.5,0);
+  \coordinate (ballB) at (-0.75,1.299);
+  \coordinate (ballC) at (-0.75,-1.299);
   % Triangle sides (the three springs)
-  \draw[thick, blue!60!black] (A) -- (B);
-  \draw[thick, blue!60!black] (B) -- (C) node[midway,left,blue!60!black] {spring};
-  \draw[thick, blue!60!black] (C) -- (A);
+  \draw[thick, blue!60!black] (ballA) -- (ballB);
+  \draw[thick, blue!60!black] (ballB) -- (ballC) node[midway,left,blue!60!black] {spring};
+  \draw[thick, blue!60!black] (ballC) -- (ballA);
   \node[above right, blue!60!black] at (0.3,0.75) {spring};
   \node[below right, blue!60!black] at (0.3,-0.75) {spring};
   % All three balls
-  \filldraw[blue!80!black] (A) circle (3.5pt);
-  \filldraw[blue!70!black] (B) circle (3pt);
-  \filldraw[blue!70!black] (C) circle (3pt);
-  \node[above right=3pt] at (A) {ball A};
+  \filldraw[blue!80!black] (ballA) circle (3.5pt);
+  \filldraw[blue!70!black] (ballB) circle (3pt);
+  \filldraw[blue!70!black] (ballC) circle (3pt);
+  \node[above right=3pt] at (ballA) {ball A};
   % Center of pipe
   \filldraw[gray] (0,0) circle (1.5pt);
   % Dashed radial line from center through focus ball A
   \draw[dashed,gray!60] (0,0) -- (1.85,0);
   \node[below right,gray!60] at (1.85,-0.08) {\tiny radial};
   % Normal force N: pipe wall pushes ball A radially inward (leftward)
-  \draw[->,thick,green!50!black] (1.5,0) -- (0.62,0)
+  \draw[->,thick,green!50!black] (ballA) -- (0.62,0)
     node[above] {$N$};
   % Spring force on A from spring AB (compressed, pushes A away from B)
   % Direction: 30 deg below radial = angle -30 deg
-  \draw[->,thick,red!60!black] (1.5,0)
+  \draw[->,thick,red!60!black] (ballA)
     -- ++({0.55*cos(-30)},{0.55*sin(-30)})
     node[below right,red!60!black] {$F_s$};
   % Spring force on A from spring AC (compressed, pushes A away from C)
   % Direction: 30 deg above radial = angle +30 deg
-  \draw[->,thick,red!60!black] (1.5,0)
+  \draw[->,thick,red!60!black] (ballA)
     -- ++({0.55*cos(30)},{0.55*sin(30)})
     node[above right,red!60!black] {$F_s$};
   % Arc: 30 deg between upper spring force and radial (from 0 to +30 deg)
-  \draw[orange!80!black] (1.5,0) ++(0.38,0)
+  \draw[orange!80!black] (ballA) ++(0.38,0)
     arc[start angle=0,end angle=30,radius=0.38];
-  \node[orange!80!black] at (1.92,0.09) {$30^\circ$};
+  \node[orange!80!black] at (2.10,0.22) {$30^\circ$};
   % Arc: 30 deg between lower spring force and radial (from 0 to -30 deg)
-  \draw[orange!80!black] (1.5,0) ++(0.38,0)
+  \draw[orange!80!black] (ballA) ++(0.38,0)
     arc[start angle=0,end angle=-30,radius=0.38];
-  \node[orange!80!black] at (1.92,-0.09) {$30^\circ$};
+  \node[orange!80!black] at (2.10,-0.22) {$30^\circ$};
   % Interior 60 deg angle at ball A
   % Spring directions from A: toward B at angle 150 deg, toward C at angle 210 deg
   % Arc from 150 to 210 deg, centered at A, radius 0.30
-  \draw[purple!70!black] (1.5,0) ++({0.3*cos(150)},{0.3*sin(150)})
+  \draw[purple!70!black] (ballA) ++({0.3*cos(150)},{0.3*sin(150)})
     arc[start angle=150,end angle=210,radius=0.3];
   \node[purple!70!black] at (1.05,0) {$60^\circ$};
   % Radius label
