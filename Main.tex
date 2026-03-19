@@ -48,8 +48,8 @@
 % ── Page style ─────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Genetics: Chromosome Organization \& Biotechnology}
-\lhead{Genetics Study Guide}
+\rhead{Physics: Static Equilibrium \& Torque}
+\lhead{University Physics Problem Set}
 \cfoot{\thepage}
 
 % ── Blank helpers ──────────────────────────────────────────────
@@ -61,2162 +61,434 @@
 
 % ── Title page ────────────────────────────────────────────────
 \begin{center}
-  {\LARGE\bfseries Genetics: Chromosome Organization \& Biotechnology}\\[0.4cm]
-  {\large\bfseries Chromosome Structure $\cdot$ Chromatin Compaction $\cdot$ Biotechnology Tools}\\[0.3cm]
+  {\LARGE\bfseries University Physics: Static Equilibrium \& Torque}\\[0.4cm]
+  {\large\bfseries Applied Problems with Complete Solutions}\\[0.3cm]
   \rule{\linewidth}{0.6pt}
 \end{center}
 
 \tableofcontents
 \newpage
 
-\part{Genetics: Chromosome Organization \& Biotechnology}
-% ══════════════════════════════════════════════════════════════
+\part{Static Equilibrium Problems}
 
-% ────────────────────────────────────────────────────────────
-\section{Chromosome Organization}
-% ────────────────────────────────────────────────────────────
+% ════════════════════════════════════════════════════════════════
+\section{Problem 1: The Flag-Raising Girder}
+% ════════════════════════════════════════════════════════════════
 
-\subsection{Introduction to Chromosomes and the Genome}
+\begin{planbox}
+\textbf{Problem Statement}
 
-\begin{diagbox}{1. Introduction to Chromosomes and the Genome}
+You are managing a new office building when the 10~lb automatic flag raising system attached to the end of a
+horizontal girder fails. The maintenance technician for the building volunteers to climb out onto the girder
+wearing a safety harness and go to its end to fix the mechanism. Will you approve the technician's plan?
 
-\textbf{Chromosomes} are structures that contain the genetic material.
-\begin{itemize}[leftmargin=1.5em]
-  \item They are complexes of \textbf{DNA and proteins}.
-\end{itemize}
+A quick review of the building's plans shows that the girder is a 120~lb aluminum I-beam that is very strong and
+rigid. One end of the girder is bolted to the wall of the building. Nine feet away, the other end of the girder is
+supported by a strong, lightweight cable. The cable goes up from the end of the girder furthest from the
+building at an angle of $30^\circ$ to the girder until it reaches the vertical wall where it is bolted. The
+technician weighs 150~lbs including equipment. From the specifications of the building, the bolts attaching
+both the cable and the girder to the building have been tested to hold a force of 500~lbs. First you check to
+see if the bolts attaching the cable to the building will hold. If that is safe, then you do the same for the
+bolts holding the girder.
+\end{planbox}
 
-\vspace{0.3cm}
-The \textbf{genome} comprises \emph{all} the genetic material that an organism possesses.
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Bacterial genome:} a single circular chromosome.
-  \item \textbf{Eukaryotic genome:} a complete set of nuclear chromosomes.
-  \item Eukaryotes also possess a \textbf{mitochondrial genome}.
-  \item Plants additionally possess a \textbf{chloroplast genome}.
-\end{itemize}
+% ─────────────────────────────────────────────────────────────
+\subsection{Diagram \& Setup}
+% ─────────────────────────────────────────────────────────────
 
-\vspace{0.3cm}
-\textbf{Main function} of genetic material: store the information required to produce an organism.
-
-\end{diagbox}
-
-\subsection{Organization of Eukaryotic Chromosomes}
-
-\begin{diagbox}{2. Organization of Eukaryotic Chromosomes}
-
-Eukaryotic species contain \textbf{one or more sets of chromosomes} (several different linear chromosomes).
-\begin{itemize}[leftmargin=1.5em]
-  \item Humans have \textbf{2 sets of 23 chromosomes} (46 total in the diploid genome: 6{,}200~Mbp).
-  \item Each chromosome contains a \textbf{single, linear molecule of DNA} (tens to hundreds of millions of bp; a few hundred to several thousand genes).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Lower eukaryotes} (e.g.\ yeast, \textit{Saccharomyces cerevisiae}):
-\begin{itemize}[leftmargin=1.5em]
-  \item Genes are relatively small; few, short introns.
-  \item Genome $\approx$ 12~Mbp, organised in 16 chromosomes.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Higher eukaryotes} (e.g.\ mammals):
-\begin{itemize}[leftmargin=1.5em]
-  \item Genes are long and tend to have many introns (100 to $>$10{,}000~bp).
-  \item Diploid human genome: 6{,}200~Mbp in 46 chromosomes.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Four essential chromosomal elements:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Origins of replication} --- interspersed every $\sim$100{,}000~bp.
-  \item \textbf{Centromere} --- recognition site for kinetochore proteins.
-  \item \textbf{Telomeres} --- specialised sequences at both ends of the linear chromosome.
-  \item \textbf{Repetitive sequences} --- near centromeric/telomeric regions and throughout.
-\end{enumerate}
-
-\end{diagbox}
-
-\subsection{Genome Sizes and Repetitive Sequences}
-
-\begin{diagbox}{3. Genome Sizes and Repetitive Sequences}
-
-\textbf{Genome size} is \emph{not} simply related to organismal complexity (C-value paradox).
-Eukaryotic species generally have more DNA than bacteria but vary substantially among themselves.
-
-\vspace{0.3cm}
-\textbf{Difference in size is due to repetitive DNA, not extra genes.}
-
-\vspace{0.3cm}
-\textbf{Three categories of repetitive sequences:}
-
-\renewcommand{\arraystretch}{1.4}
+\begin{diagbox}{Free-Body Diagram --- Girder}
 \begin{center}
-\begin{tabular}{|l|p{5cm}|p{5cm}|}
-\hline
-\textbf{Category} & \textbf{Copy Number} & \textbf{Examples} \\
-\hline
-Unique (non-repetitive) & Once or a few times & Structural genes, intergenic regions; 41\% of human genome \\
-\hline
-Moderately repetitive & Hundreds to thousands & rRNA genes, histones, regulatory sequences, transposable elements \\
-\hline
-Highly repetitive & Tens of thousands to millions & Short sequences (a few to several hundred nt each) \\
-\hline
+\begin{tabular}{l}
+\textbf{System:} The horizontal girder (treated as a rigid rod)\\[4pt]
+\textbf{Coordinate system:} $+x$ horizontal (away from wall), $+y$ vertical (upward)\\[4pt]
+\textbf{Pivot for torques:} Wall bolt (left end of girder, $x=0$)
 \end{tabular}
 \end{center}
 
+\medskip
+\noindent\textbf{Forces acting on the girder:}
+\begin{itemize}[nosep]
+  \item $W_g = 120\,\mathrm{lb}$ (weight of girder, downward, at $x = L/2 = 4.5\,\mathrm{ft}$)
+  \item $W_t = 150\,\mathrm{lb}$ (technician, downward, at $x = L = 9\,\mathrm{ft}$)
+  \item $W_f = 10\,\mathrm{lb}$ (flag system, downward, at $x = L = 9\,\mathrm{ft}$)
+  \item $T$ (cable tension at angle $30^\circ$ above horizontal, at $x = L = 9\,\mathrm{ft}$, directed toward the upper-left)
+  \item $\vec{R} = (R_x,\, R_y)$ (reaction force from wall bolt, at $x = 0$)
+\end{itemize}
+
+\medskip
+\noindent\textbf{Given:} $L = 9\,\mathrm{ft}$, bolt rated for $500\,\mathrm{lb}$.
 \end{diagbox}
 
-\subsection{Chromosome Territories}
+% ─────────────────────────────────────────────────────────────
+\subsection{Solution}
+% ─────────────────────────────────────────────────────────────
 
-\begin{diagbox}{4. Chromosome Territories}
+\begin{keybox}
 
-During interphase, chromosomes occupy \textbf{distinct regions (territories)} within the nucleus.
-\begin{itemize}[leftmargin=1.5em]
-  \item Particular chromosomes preferentially occupy specific nuclear regions.
-  \item This spatial organisation is non-random and influences gene regulation.
-\end{itemize}
+\textbf{Step 1 --- Find the cable tension $T$ (check cable bolt)}
 
-\end{diagbox}
+Apply the rotational equilibrium condition $\sum\tau = 0$ about the wall bolt. Choosing this pivot eliminates the unknown wall-bolt reaction from the torque equation.
 
-\subsection{Nucleosomes and Chromatin Structure}
-
-\begin{diagbox}{5. Nucleosomes and Chromatin Structure}
-
-The DNA--protein complex is called \textbf{chromatin}.
-
-\vspace{0.3cm}
-\textbf{Nucleosome} --- the repeating structural unit of eukaryotic chromatin:
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Histone octamer:} two copies each of H2A, H2B, H3, and H4 (core histones).
-  \item \textbf{146~bp} of DNA wrapped $\sim$1.65 times around the octamer.
-  \item \textbf{Linker histone H1} binds DNA in the linker region between nucleosomes.
-  \item Non-histone proteins also associate with chromatin.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Five types of histones:}
-\begin{itemize}[leftmargin=1.5em]
-  \item H2A, H2B, H3, H4 --- \emph{core histones} (two of each per octamer).
-  \item H1 --- \emph{linker histone} (binds between nucleosomes).
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Heterochromatin versus Euchromatin}
-
-\begin{diagbox}{6. Heterochromatin versus Euchromatin}
-
-The compaction level of interphase chromosomes is \emph{not} completely uniform.
-
-\vspace{0.3cm}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
-\hline
-\textbf{Feature} & \textbf{Heterochromatin} & \textbf{Euchromatin} \\
-\hline
-Compaction & Tightly compacted & Less condensed \\
-\hline
-Transcription & Inactive (in general) & Transcriptionally active \\
-\hline
-Protein access & Little to no access & DNA accessible to proteins \\
-\hline
-\end{tabular}
-\end{center}
-
-\end{diagbox}
-
-\subsection{Levels of Chromatin Compaction}
-
-\begin{diagbox}{7. Levels of Chromatin Compaction Leading to a Metaphase Chromosome}
-
-Eukaryotic chromosomal DNA undergoes successive levels of compaction:
-
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{2~nm} --- DNA double helix.
-  \item \textbf{11~nm} --- DNA wrapping around nucleosomes (``beads on a string'').
-  \item \textbf{30~nm} --- Zig-zag (solenoid) structure via histone H1 and non-histone proteins.
-  \item \textbf{300~nm} --- Radial loop domains: MARs (matrix attachment regions) bind the nuclear matrix.
-  \item \textbf{700~nm} --- Radial loops more compacted.
-  \item \textbf{1{,}400~nm} --- Metaphase chromosome; protein filaments (scaffold) give the chromosome its shape.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{DNase~I} cuts chromatin into repeating units containing $\sim$200~bp of DNA, demonstrating the nucleosomal repeat unit.
-
-\end{diagbox}
-
-\subsection{Condensin and Cohesin}
-
-\begin{diagbox}{8. Condensin and Cohesin}
-
-Two multiprotein complexes organise metaphase chromosomes, both containing \textbf{SMC proteins} (Structural Maintenance of Chromosomes) that use ATP energy to alter chromosome structure.
-
-\vspace{0.3cm}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|p{5.5cm}|p{5.5cm}|}
-\hline
-\textbf{Complex} & \textbf{Timing} & \textbf{Function} \\
-\hline
-Condensin & Cytoplasmic in interphase; enters nucleus at mitosis & Chromosome condensation; compacts radial loops \\
-\hline
-Cohesin & Present during S phase onward & Sister chromatid cohesion; also regulates transcription \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{Cornelia de Lange Syndrome (CdLS; MIM~122470):} caused by mutations in cohesin complex genes.
-Hallmarks: craniofacial dysmorphisms (synophrys, arched eyebrows, thin downturned upper lip, long philtrum), hirsutism,
-intellectual disability, microcephaly, growth retardation, and limb anomalies (micromelia, oligodactyly, phocomelia).
-
-\end{diagbox}
-
-\subsection{Bacterial Chromosome Organization}
-
-\begin{diagbox}{9. Bacterial Chromosome Organization}
-
-Bacterial chromosomal DNA is typically a \textbf{circular molecule}.
-\begin{itemize}[leftmargin=1.5em]
-  \item \textit{Escherichia coli}: $\sim$4.6~million bp.
-  \item \textit{Haemophilus influenzae}: $\sim$1.8~million bp.
-  \item Contains thousands of genes, mostly protein-encoding (\textbf{structural genes}).
-  \item Non-transcribed DNA between genes = \textbf{intergenic regions}.
-  \item \textbf{One origin of replication.}
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{The nucleoid:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Region of the cell where the bacterial chromosome resides.
-  \item \emph{Not} bounded by a membrane (no nucleus).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Compaction via loop domains:}
-\begin{itemize}[leftmargin=1.5em]
-  \item DNA must be compacted $\sim$1{,}000-fold to fit inside the cell.
-  \item \textit{E.\ coli} forms 50--100 loop domains, each containing 40{,}000--80{,}000~bp.
-  \item Micro-domain number varies with chromosome size and species.
-\end{itemize}
-
-\end{diagbox}
-
-\newpage
-% ────────────────────────────────────────────────────────────
-\section{Biotechnology}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Introduction to Biotechnology}
-
-\begin{diagbox}{10. Introduction to Biotechnology}
-
-\textbf{Biotechnology:} technologies that involve the use of living organisms,
-or their products, to benefit humans.
-
-\vspace{0.3cm}
-\textbf{Common uses of microorganisms:}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|p{8cm}|}
-\hline
-\textbf{Application} & \textbf{Examples} \\
-\hline
-Production of medicines & Antibiotics, vitamins; human insulin in recombinant \textit{E.\ coli} \\
-\hline
-Food fermentation & Cheese, yogurt, vinegar, wine, beer \\
-\hline
-Biological control & Plant disease, insect pest, weed control \\
-\hline
-Symbiotic nitrogen fixation & Prevention of frost formation \\
-\hline
-Bioremediation & Cleanup of petroleum hydrocarbons and synthetic pollutants \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{Human insulin:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A hormone consisting of two polypeptide chains (A and B).
-  \item Regulates glucose uptake into fat and muscle cells; produced by $\beta$~cells of the pancreas.
-  \item Persons with insulin-dependent diabetes cannot synthesise enough insulin.
-  \item Synthesised in recombinant \textit{E.\ coli} for therapeutic use.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Gene Knockouts and RNA Interference}
-
-\begin{diagbox}{11. Gene Knockouts and RNA Interference (RNAi)}
-
-\textbf{Gene knockouts (KO):}
-\begin{itemize}[leftmargin=1.5em]
-  \item Used to study how loss of gene function affects an organism.
-  \item The genomic DNA is perturbed to \emph{permanently prevent} expression of a specific gene.
-  \item No mRNA or protein product from the knocked-out gene.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{RNA interference (RNAi) --- gene knockdown:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Double-stranded RNA (dsRNA) results in \textbf{sequence-specific gene silencing}.
-  \item The target mRNA is degraded post-transcriptionally.
-  \item The gene is still present; mRNA is made but degraded.
-  \item Useful for transient, post-transcriptional knockdown.
-\end{itemize}
-
-\vspace{0.3cm}
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Feature} & \textbf{Knockout} & \textbf{Knockdown (RNAi)} \\
-\hline
-Gene present? & No & Yes \\
-mRNA produced? & No & Yes (then degraded) \\
-Protein produced? & No & No (or reduced) \\
-Permanence & Permanent & Transient \\
-\hline
-\end{tabular}
-\end{center}
-
-\end{diagbox}
-
-\subsection{Gene Cloning}
-
-\begin{diagbox}{12. Gene Cloning}
-
-\textbf{Gene cloning:} isolating and producing many copies of a gene.
-
-\vspace{0.3cm}
-\textbf{Two DNA molecules required:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Chromosomal (genomic) DNA} --- source of the gene of interest.
-  \item \textbf{Vector (plasmid) DNA} --- carrier for the insert; replicates independently of host chromosome.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Vector features (example: pMSH6-MYC):}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Bacterial origin of replication} (\textit{ori}) for replication in bacteria.
-  \item \textbf{Antibiotic resistance gene} (e.g.\ ampicillin resistance --- \textit{amp}$^R$) for selection.
-  \item \textbf{ARSH4 + CEN6} for replication and maintenance in yeast.
-  \item \textbf{Leucine marker} ($LEU2$) for yeast selection in leucine-deficient medium.
-  \item \textbf{Shuttle vector:} can replicate in both bacteria and yeast.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Steps in gene cloning:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Extract and purify genomic DNA from the organism of interest.
-  \item Digest both chromosomal DNA and vector with the same restriction enzyme.
-  \item Ligate the insert into the vector $\Rightarrow$ \textbf{recombinant vector}.
-  \item Transform \textbf{competent cells} (cells capable of taking up DNA).
-  \item Select transformants on antibiotic plates.
-  \item Identify recombinant clones by \textbf{blue-white screening} (lacZ).
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Blue-white screening (LacZ):}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Blue colonies:} vector re-circularised without insert; lacZ intact; $\beta$-galactosidase cleaves X-gal $\Rightarrow$ blue pigment.
-  \item \textbf{White colonies:} insert disrupts lacZ $\Rightarrow$ no $\beta$-galactosidase activity $\Rightarrow$ no blue pigment.
-  \item Select \emph{white} colonies to find recombinant plasmids.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Amplification:} a single bacterium harbouring a plasmid gives rise to millions of cells overnight ($\sim$25--50 plasmid copies per cell; division every 20~min).
-
-\end{diagbox}
-
-\subsection{Restriction Enzymes}
-
-\begin{diagbox}{13. Restriction Enzymes}
-
-\textbf{Restriction endonucleases (restriction enzymes):}
-\begin{itemize}[leftmargin=1.5em]
-  \item Naturally produced by many bacteria to protect against foreign DNA (bacteriophages).
-  \item Cleave DNA at specific \textbf{palindromic recognition sequences}.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Palindromic sequences:} the sequence on one strand (read 5$'\!\to\!$3$'$) is identical to the complementary strand read in the opposite direction.
-
-\vspace{0.3cm}
-\textbf{EcoRI example:}
+The cable pulls the end of the girder at angle $30^\circ$ above horizontal. Its moment arm is the perpendicular distance from the pivot to the cable's line of action. Because the cable is attached at the far end ($x = L$), the moment arm equals $L\sin(30^\circ)$---equivalently, the torque of the cable tension about the pivot is simply
 \[
-  5'\text{-}\underbrace{\texttt{G\,A\,A\,T\,T\,C}}_{\text{EcoRI site}}\text{-}3'
-  \qquad
-  3'\text{-}\underbrace{\texttt{C\,T\,T\,A\,A\,G}}_{}  \text{-}5'
+  \tau_T = T\sin(30^\circ)\cdot L
 \]
-Cuts between G and A on each strand, generating \textbf{sticky (cohesive) ends}.
+because only the \emph{vertical} component of $T$ (perpendicular to the horizontal girder) creates a torque about the horizontal pivot.
 
-\vspace{0.3cm}
-\textbf{Generating compatible ends:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Both insert and vector digested with the same enzyme $\Rightarrow$ complementary overhangs.
-  \item DNA ligase seals the nick to form a \textbf{recombinant molecule}.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Polymerase Chain Reaction (PCR)}
-
-\begin{diagbox}{14. Polymerase Chain Reaction (PCR)}
-
-\textbf{PCR:} a method to amplify a specific DNA sequence \emph{without} vectors or host cells.
-
-\vspace{0.3cm}
-\textbf{Required starting materials:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Template DNA} --- contains the region to be amplified.
-  \item \textbf{Two oligonucleotide primers} ($\sim$15--20~nt) complementary to each end of the target.
-  \item \textbf{Deoxynucleoside triphosphates (dNTPs)} --- precursors for DNA synthesis.
-  \item \textbf{Taq polymerase} --- thermostable DNA polymerase from \textit{Thermus aquaticus}; survives high-temperature denaturation steps.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{The three steps of each PCR cycle:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Denaturation} ($\sim$94--96$^\circ$C) --- strands separate.
-  \item \textbf{Annealing} ($\sim$50--65$^\circ$C) --- primers bind to complementary template.
-  \item \textbf{Extension/Synthesis} ($\sim$72$^\circ$C) --- Taq extends from each primer.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Amplification:}
-\begin{itemize}[leftmargin=1.5em]
-  \item 20 cycles $\Rightarrow$ $2^{20} \approx 1{,}000{,}000$-fold increase.
-  \item 30 cycles $\Rightarrow$ $2^{30} \approx 1{,}000{,}000{,}000$-fold increase.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Site-Directed Mutagenesis}
-
-\begin{diagbox}{15. Site-Directed Mutagenesis}
-
-\textbf{Site-directed mutagenesis:} alters the sequence of a cloned gene at a \emph{specific, defined position}.
-
-\vspace{0.3cm}
-\textbf{Procedure:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Denature the vector + insert to single-stranded DNA.
-  \item Anneal a synthetic primer containing the desired mutation (creates a mismatch).
-  \item Extend to produce a heteroduplex containing one mutant strand.
-  \item Transform into bacteria; identify mutant by DNA sequencing.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Uses:} study how specific mutations affect:
-\begin{itemize}[leftmargin=1.5em]
-  \item Gene expression.
-  \item Protein function.
-  \item Organismal phenotype.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Gel Electrophoresis and Molecular Blotting Techniques}
-
-\begin{diagbox}{16. Gel Electrophoresis and Molecular Blotting Techniques}
-
-\textbf{Gel electrophoresis} separates DNA (or RNA/protein) by size in an electric field.
-\begin{itemize}[leftmargin=1.5em]
-  \item Negatively charged DNA migrates from the negative electrode (cathode) toward the positive electrode (anode) (``run to red!'').
-  \item Smaller fragments migrate faster through the gel matrix.
-  \item \textbf{Ethidium bromide} (or safer alternatives) intercalates into DNA and fluoresces under UV light.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Topology and migration rate (slowest to fastest):}
+Setting the sum of torques equal to zero (counterclockwise positive):
 \[
-  \text{Nicked circle} > \text{Linear} > \text{Supercoiled}
+  T\sin(30^\circ)\cdot L
+  - W_g\cdot\frac{L}{2}
+  - W_t\cdot L
+  - W_f\cdot L = 0
+\]
+\[
+  T\,(0.5)\,(9\,\mathrm{ft})
+  = (120\,\mathrm{lb})(4.5\,\mathrm{ft})
+  + (150\,\mathrm{lb})(9\,\mathrm{ft})
+  + (10\,\mathrm{lb})(9\,\mathrm{ft})
+\]
+\[
+  4.5\,T = 540 + 1350 + 90 = 1980\,\mathrm{lb\cdot ft}
+\]
+\[
+  \boxed{T = 440\,\mathrm{lb}}
 \]
 
-\vspace{0.3cm}
-\textbf{Electrophoretic Mobility Shift Assay (EMSA):}
-\begin{itemize}[leftmargin=1.5em]
-  \item Detects protein--DNA interactions.
-  \item A protein bound to a labelled DNA fragment slows its migration (``shift'').
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Western blot:} detects a specific protein.
-\begin{enumerate}[leftmargin=1.5em]
-  \item Proteins separated by SDS-PAGE.
-  \item Transferred to nylon membrane.
-  \item Primary antibody binds the target protein.
-  \item Secondary antibody (linked to alkaline phosphatase) binds the primary antibody.
-  \item Addition of XP (5-bromo-4-chloro-3-indolyl phosphate) $\Rightarrow$ dark purple band.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Northern blot:} detects a specific RNA (mRNA).
-\begin{enumerate}[leftmargin=1.5em]
-  \item mRNA isolated and separated by gel electrophoresis.
-  \item Blotted to nylon membrane.
-  \item Hybridised with a labelled DNA probe complementary to the target mRNA.
-  \item Labelled bands appear where complementary mRNA is present.
-\end{enumerate}
-
-\end{diagbox}
-
-% ────────────────────────────────────────────────────────────
-\section{Gene Regulation in Eukaryotes}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Why Gene Regulation Is Necessary}
-
-\begin{diagbox}{17. Why Gene Regulation Is Necessary}
-
-Gene regulation is necessary to ensure:
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Expression of genes in an accurate pattern} during the various developmental stages of the life cycle.
-  \begin{itemize}[leftmargin=1.5em]
-    \item Some genes are only expressed during \textbf{embryonic stages}; others only in the adult.
-  \end{itemize}
-  \item \textbf{Differences among distinct cell types.}
-  \begin{itemize}[leftmargin=1.5em]
-    \item Nerve and muscle cells look different because of \textbf{gene regulation}, not differences in DNA content.
-    \item All somatic cells carry the same genome; cell identity arises from which genes are expressed.
-  \end{itemize}
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Levels at which eukaryotic gene expression can be regulated:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Transcriptional regulation (most common and best studied)
-  \item RNA processing (splicing, capping, polyadenylation)
-  \item RNA stability / degradation
-  \item Translational regulation
-  \item Post-translational modification
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Transcription Factors}
-
-\begin{diagbox}{18. Transcription Factors}
-
-\textbf{Transcription factors} are proteins that influence the ability of RNA polymerase to transcribe a given gene.
-
-\vspace{0.3cm}
-\textbf{Two main types:}
-
-\renewcommand{\arraystretch}{1.4}
-\begin{center}
-\begin{tabular}{|l|p{4.5cm}|p{5cm}|}
-\hline
-\textbf{Type} & \textbf{Examples} & \textbf{Function} \\
-\hline
-General (basal) transcription factors & TFIIB, TFIID, TFIIE, TFIIF, TFIIH & Required for binding of RNA pol~II to the core promoter and progression to elongation; necessary for \textbf{basal transcription} \\
-\hline
-Regulatory transcription factors & Activators, repressors & Regulate the \textbf{rate} of transcription of target genes; influence ability of RNA pol to begin transcription of a specific gene; 2--3\% of human genes encode transcription factors \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{TFIID} recognises the \textbf{TATA box} (core promoter element $\sim$25~bp upstream of TSS) via its TBP (TATA-box binding protein) subunit.
-The pre-initiation complex (PIC) assembled from general TFs plus RNA pol~II is required for basal transcription.
-
-\end{diagbox}
-
-\subsection{Regulatory Transcription Factors: Activators and Repressors}
-
-\begin{diagbox}{19. Regulatory Transcription Factors}
-
-\textbf{Gene activation:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A regulatory protein that \textbf{increases} the rate of transcription is an \textbf{activator}.
-  \item The DNA sequence an activator binds is called an \textbf{enhancer}.
-  \item Enhancers can be located thousands of bp upstream, downstream, or within introns.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Gene repression:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A regulatory protein that \textbf{decreases} the rate of transcription is a \textbf{repressor}.
-  \item The DNA sequence a repressor binds is called a \textbf{silencer}.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Domain structure of regulatory transcription factors:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{DNA-binding domain} --- recognises and binds specific DNA sequences (motifs: helix-turn-helix, zinc finger, leucine zipper, helix-loop-helix).
-  \item \textbf{Activation (or repression) domain} --- interacts with co-activators/co-repressors or the basal transcription machinery.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Combinatorial Control of Gene Expression}
-
-\begin{diagbox}{20. Combinatorial Control}
-
-\textbf{Combinatorial control} refers to the cooperative action of multiple regulatory proteins in determining whether a gene is transcribed.
-
-\vspace{0.3cm}
-\textbf{Mechanisms that contribute to combinatorial control:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Multiple activators binding at a single gene's enhancer region} --- additive or synergistic effects on transcription.
-  \item \textbf{Regulatory proteins altering nucleosomes} near the promoter --- loosening or tightening chromatin to permit or block RNA pol access.
-  \item \textbf{DNA methylation} at CpG islands --- can prevent binding of an activator protein or recruit proteins that compact chromatin.
-  \item \textbf{Chromatin compaction} --- recruitment of histone deacetylases or methyltransferases by repressors condenses chromatin.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Key concept:} The same gene can be regulated differently in different cell types depending on which combination of transcription factors is present.
-
-\end{diagbox}
-
-\subsection{Mediator Complex}
-
-\begin{diagbox}{21. The Mediator Complex}
-
-The \textbf{Mediator} is a large multi-subunit coactivator complex that serves as a \textbf{bridge} between regulatory transcription factors and the basal transcription machinery (RNA pol~II~+ general TFs).
-
-\vspace{0.3cm}
-\begin{itemize}[leftmargin=1.5em]
-  \item Activators bound to enhancers contact Mediator subunits.
-  \item Mediator in turn contacts the PIC assembled at the core promoter.
-  \item \textbf{DNA looping} brings distant enhancers into proximity with the promoter (cohesin facilitates stable loops).
-  \item Mediator stimulates phosphorylation of the RNA pol~II C-terminal domain (CTD), triggering promoter clearance and elongation.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Chromatin Remodeling and Histone Modifications}
-
-\begin{diagbox}{22. Chromatin Remodeling and Histone Modifications}
-
-\textbf{ATP-dependent chromatin remodeling complexes} (e.g.\ SWI/SNF) use ATP hydrolysis to:
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Slide} nucleosomes along DNA.
-  \item \textbf{Eject} nucleosomes, creating nucleosome-free regions (NFRs) at promoters.
-  \item \textbf{Exchange} histone variants (e.g.\ H2A.Z).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Covalent histone modifications (histone code):}
-
-\renewcommand{\arraystretch}{1.4}
-\begin{center}
-\begin{tabular}{|l|l|p{5.5cm}|}
-\hline
-\textbf{Modification} & \textbf{Residue(s)} & \textbf{Effect} \\
-\hline
-Acetylation (HAT) & H3K9ac, H3K27ac & Neutralises $+$ charge $\Rightarrow$ loosens DNA–histone interaction; marks \textbf{active} chromatin \\
-\hline
-Deacetylation (HDAC) & H3K9, H3K27 & Restores $+$ charge; promotes chromatin compaction; repression \\
-\hline
-Methylation & H3K4me3 & Active promoters \\
- & H3K27me3 & Polycomb repression \\
- & H3K9me3 & Constitutive heterochromatin \\
-\hline
-Phosphorylation & H3S10 & Chromosome condensation during mitosis \\
-\hline
-Ubiquitylation & H2BK120ub & Elongation; promotes H3K4 methylation \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{Epigenetic inheritance:} Some histone modifications are maintained through DNA replication, allowing stable inheritance of gene expression states.
-
-\end{diagbox}
-
-\subsection{DNA Methylation}
-
-\begin{diagbox}{23. DNA Methylation}
-
-\textbf{DNA methylation} in mammals occurs predominantly on the \textbf{cytosine} of \textbf{CpG dinucleotides} (forming 5-methylcytosine, 5mC).
-
-\vspace{0.3cm}
-\textbf{Enzymes:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{DNMT3A / DNMT3B} (de novo methyltransferases) --- establish new methylation patterns.
-  \item \textbf{DNMT1} (maintenance methyltransferase) --- copies methylation patterns to the daughter strand after replication (hemi-methylated $\to$ fully methylated).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Consequences of CpG methylation:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Prevents activator binding} at promoters → gene silencing.
-  \item \textbf{Recruits methyl-CpG binding proteins} (e.g.\ MeCP2) that attract HDACs → chromatin compaction.
-  \item \textbf{CpG islands} (clusters of CpGs near promoters) are usually \emph{unmethylated} at active genes; hypermethylation in cancer silences tumour-suppressor genes.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Genomic imprinting} is a biological process where only one parental allele is expressed; the silenced allele is marked by DNA methylation plus H3K27me3.
-
-\end{diagbox}
-
-\subsection{Insulator Sequences}
-
-\begin{diagbox}{24. Insulator Sequences}
-
-\textbf{Insulators} (boundary elements) are DNA sequences that \textbf{block} the effect of an enhancer on a gene if placed \textbf{between} them.
-
-\vspace{0.3cm}
-\textbf{Two functions of insulators:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Enhancer blocking} --- prevent an enhancer from activating a gene on the other side of the insulator.
-  \item \textbf{Barrier activity} --- prevent the spread of heterochromatin into adjacent active chromatin domains.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{CTCF} (CCCTC-binding factor) is the major vertebrate insulator-binding protein.
-\begin{itemize}[leftmargin=1.5em]
-  \item CTCF bound at two sites flanking a gene can form a \textbf{chromatin loop domain}, insulating the gene from surrounding regulatory influences.
-  \item Together with \textbf{cohesin}, CTCF organises the genome into \textbf{topologically associating domains (TADs)}.
-\end{itemize}
-
-\end{diagbox}
-
-% ────────────────────────────────────────────────────────────
-\section{Gene Regulation in Prokaryotes}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Introduction to Gene Regulation}
-
-\begin{diagbox}{25. Introduction to Gene Regulation in Prokaryotes}
-
-\textbf{Gene regulation} means the level of gene expression can vary under different conditions.
-
-\vspace{0.3cm}
-\textbf{Unregulated (constitutive) genes:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Constant levels of expression.
-  \item Encode proteins continuously necessary for organism survival.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Why regulate genes?} Encoded proteins are produced \emph{only when required}, saving cellular resources.
-
-\vspace{0.3cm}
-\textbf{Gene regulation is important for:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Metabolism} --- enzymes needed to metabolize certain sugars are made only when those sugars are present.
-  \item \textbf{Cell division} --- proteins needed for cell division are made only when cells are preparing to divide.
-  \item \textbf{Stress response} --- proteins produced when bacteria encounter heat shock or osmotic shock.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Levels at which gene expression can be regulated:}
-\begin{enumerate}[leftmargin=1.5em]
-  \item \textbf{Transcriptional level} (most common in bacteria)
-  \item \textbf{Translational level}
-  \item \textbf{Post-transcriptional level} (e.g.\ mRNA stability and degradation rate)
-  \item \textbf{Post-translational level}
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Two main types of regulatory proteins act at the transcriptional level:}
-
-\begin{center}
-\begin{tabular}{llll}
-\toprule
-\textbf{Protein} & \textbf{Binds} & \textbf{Effect} & \textbf{Type of control} \\
-\midrule
-Repressor & DNA & Inhibits transcription & Negative control \\
-Activator & DNA & Increases transcription & Positive control \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{Effector molecules} bind to regulatory proteins but not directly to DNA.
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Inducers} --- bind activators or block repressors $\Rightarrow$ increase transcription.
-  \item \textbf{Corepressors} --- bind repressors and enhance repression $\Rightarrow$ decrease transcription.
-  \item \textbf{Inhibitors} --- block activators $\Rightarrow$ decrease transcription.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{The lac Operon: Structure and Components}
-
-\begin{diagbox}{26. The lac Operon: Structure and Components}
-
-\textbf{Operon:} a regulatory unit consisting of a cluster of structural genes under the control of a single promoter.
-
-\vspace{0.3cm}
-\textbf{DNA regulatory elements of the lac operon:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Promoter (lacP)} --- RNA polymerase binding site.
-  \item \textbf{Operator (lacO)} --- binding site for the lac repressor protein.
-  \item \textbf{CAP site} --- binding site for Catabolite Activator Protein (CAP).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Structural genes and their protein products:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{lacZ} --- encodes $\beta$-galactosidase.
-    \begin{itemize}
-      \item Cleaves lactose into glucose + galactose.
-      \item Also converts lactose to \textbf{allolactose} (an isomer; the true inducer).
-    \end{itemize}
-  \item \textbf{lacY} --- encodes lactose permease (membrane protein for lactose transport).
-  \item \textbf{lacA} --- encodes galactoside transacetylase (prevents toxic build-up by attaching acetyl groups).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{The lacI gene:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \emph{Not} considered part of the lac operon; has its own promoter (the \textit{i} promoter).
-  \item Constitutively expressed at low levels.
-  \item Encodes the \textbf{lac repressor protein} (only a small amount is needed).
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Negative Control: The lac Repressor}
-
-\begin{diagbox}{27. Negative Control: The lac Repressor (Inducible)}
-
-The lac operon uses \textbf{inducible, negative control}:
-
-\vspace{0.2cm}
-\textbf{No lactose present (operon OFF):}
-\begin{enumerate}[leftmargin=1.5em]
-  \item No inducer (allolactose) is present.
-  \item Lac repressor binds the operator (lacO).
-  \item RNA polymerase cannot transcribe the operon $\Rightarrow$ \textbf{operon repressed}.
-  \item Result: lac proteins are not synthesized (no lactose to process).
-\end{enumerate}
-
-\vspace{0.2cm}
-\textbf{Lactose present (operon ON):}
-\begin{enumerate}[leftmargin=1.5em]
-  \item A small amount of lactose enters and is converted to \textbf{allolactose} by $\beta$-galactosidase.
-  \item Allolactose binds to the lac repressor $\Rightarrow$ repressor changes conformation.
-  \item Repressor can no longer bind the operator.
-  \item RNA polymerase transcribes the operon $\Rightarrow$ \textbf{operon induced}.
-  \item lacZ, lacY, lacA proteins are synthesized to metabolize lactose.
-\end{enumerate}
-
-\vspace{0.2cm}
-\textbf{The cycle of induction and repression:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Lactose is depleted $\Rightarrow$ allolactose decreases $\Rightarrow$ allolactose released from repressor $\Rightarrow$ repressor binds operator $\Rightarrow$ operon turned off.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Important lac mutants:}
-
-\begin{center}
-\begin{tabular}{lll}
-\toprule
-\textbf{Mutant} & \textbf{Defect} & \textbf{Phenotype} \\
-\midrule
-$\text{I}^-$ & No repressor made & Operon always ON (constitutive) \\
-$\text{I}^S$ & Super repressor; cannot bind allolactose & Operon always OFF \\
-$\text{Z}^-$ & No functional $\beta$-galactosidase & Cannot cleave lactose \\
-$\text{Y}^-$ & No functional permease & Cannot import lactose \\
-$\text{A}^-$ & No transacetylase & Cannot acetylate galactosides \\
-$\text{O}^c$ & Operator mutant; repressor cannot bind & Constitutive transcription \\
-$\text{P}^-$ & Promoter mutant; RNA pol binds weakly & Reduced/no transcription \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\vspace{0.3cm}
-\textbf{Merozygote (partial diploid) analysis:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A bacterium receiving an F$'$ factor carrying \textit{lacI}$^+$ will have two copies of the lacI gene.
-  \item Even if the chromosome carries \textit{lacI}$^-$, the F$'$-encoded repressor is \textbf{diffusible} and can travel to the operator $\Rightarrow$ \textbf{repressor acts in trans}.
-  \item This demonstrates the repressor is a \textbf{trans}-acting, diffusible protein.
-  \item The operator (O$^c$) mutant is only constitutive when it is in \textit{cis} with the structural genes, demonstrating the operator acts \textbf{in cis}.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Positive Control: CAP and Catabolite Repression}
-
-\begin{diagbox}{28. Positive Control: CAP and Catabolite Repression}
-
-The lac operon is also regulated by \textbf{catabolite repression} (positive control mechanism).
-
-\vspace{0.3cm}
-\textbf{Key concept --- diauxic growth:} when lactose and glucose are both present, \textit{E.~coli} uses glucose first. Only when glucose is depleted does catabolite repression lift and the lac operon become fully expressed.
-
-\vspace{0.3cm}
-\textbf{Effector molecule:} \textbf{cyclic AMP (cAMP)}
-\begin{itemize}[leftmargin=1.5em]
-  \item Enzyme \textbf{adenylyl cyclase} converts ATP $\rightarrow$ cAMP.
-  \item Glucose \textbf{inhibits} adenylyl cyclase $\Rightarrow$ low cAMP levels when glucose is present.
-  \item When glucose is absent, adenylyl cyclase is active $\Rightarrow$ high cAMP levels.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Catabolite Activator Protein (CAP):}
-\begin{itemize}[leftmargin=1.5em]
-  \item cAMP binds CAP $\Rightarrow$ cAMP--CAP complex forms.
-  \item cAMP--CAP complex binds the \textbf{CAP site} near the lac promoter.
-  \item This \textbf{increases transcription} (positive control).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Summary of all combinations:}
-
-\begin{center}
-\begin{tabular}{llll}
-\toprule
-\textbf{Glucose} & \textbf{Lactose} & \textbf{cAMP level} & \textbf{Transcription} \\
-\midrule
-Absent  & Present & High & High (CAP active + repressor off) \\
-Absent  & Absent  & High & Low (CAP active, but repressor on) \\
-Present & Present & Low  & Low (CAP inactive, repressor off) \\
-Present & Absent  & Low  & Very low (CAP inactive + repressor on) \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\end{diagbox}
-
-\subsection{The trp Operon: Repressible Regulation}
-
-\begin{diagbox}{29. The trp Operon: Repressible Regulation}
-
-The \textbf{trp operon} controls biosynthesis of the amino acid \textbf{tryptophan}.
-
-\vspace{0.3cm}
-\textbf{Structural genes:} \textit{trpE}, \textit{trpD}, \textit{trpC}, \textit{trpB}, \textit{trpA} --- encode enzymes for tryptophan biosynthesis.
-
-\vspace{0.3cm}
-\textbf{Regulatory genes:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textit{trpR} --- encodes the trp \textbf{repressor protein} (functions in repression).
-  \item \textit{trpL} --- encodes a short \textbf{leader peptide} (functions in attenuation).
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Low tryptophan (operon ON):}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Tryptophan does not bind to the trp repressor.
-  \item Repressor cannot bind the operator.
-  \item RNA polymerase transcribes the entire operon.
-  \item Tryptophan biosynthesis enzymes are produced.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{High tryptophan (operon OFF --- repressible):}
-\begin{enumerate}[leftmargin=1.5em]
-  \item Tryptophan acts as a \textbf{corepressor} (effector molecule): it binds to the trp repressor.
-  \item The tryptophan--repressor complex binds the operator.
-  \item Transcription is inhibited.
-\end{enumerate}
-
-\vspace{0.3cm}
-\textbf{Contrast with lac operon:}
-\begin{itemize}[leftmargin=1.5em]
-  \item lac operon: \textbf{inducible} (effector molecule \emph{inactivates} repressor).
-  \item trp operon: \textbf{repressible} (effector molecule \emph{activates} repressor).
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Attenuation of the trp Operon}
-
-\begin{diagbox}{30. Attenuation of the trp Operon}
-
-\textbf{Attenuation} is a second mechanism regulating the trp operon that operates \textbf{independently of and in addition to} repression.
-
-\vspace{0.3cm}
-\textbf{Key principle:} In bacteria, transcription and translation are \textbf{coupled} (occur simultaneously). The ribosome translates the mRNA as it is being transcribed.
-
-\vspace{0.3cm}
-\textbf{Mechanism:}
-\begin{itemize}[leftmargin=1.5em]
-  \item The \textbf{attenuator} is a sequence in the \textit{trpL} (leader) region.
-  \item Transcription begins, and the \textit{trpL} leader peptide contains two Trp codons.
-  \item The leader mRNA can form alternative stem-loop secondary structures (hairpins):
-    \begin{itemize}
-      \item \textbf{Terminator hairpin} (structures 3--4): leads to premature transcription termination (attenuation).
-      \item \textbf{Antiterminator hairpin} (structures 2--3): allows transcription to continue.
-    \end{itemize}
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{High tryptophan:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Tryptophanyl-tRNA (charged) is abundant.
-  \item Ribosome translates the leader peptide rapidly, without stalling.
-  \item Terminator hairpin forms $\Rightarrow$ transcription terminates at the attenuator $\Rightarrow$ structural genes NOT transcribed.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Low tryptophan:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Tryptophanyl-tRNA (charged) is scarce.
-  \item Ribosome stalls at the Trp codons in the leader sequence.
-  \item Antiterminator hairpin forms $\Rightarrow$ transcription continues into the structural genes $\Rightarrow$ tryptophan biosynthesis enzymes produced.
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Translational Regulation}
-
-\begin{diagbox}{31. Translational Regulation in Bacteria}
-
-Gene expression in bacteria can also be regulated at the \textbf{translational level}.
-
-\vspace{0.3cm}
-\textbf{Translational repressors:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Regulatory proteins that recognize specific sequences within the mRNA.
-  \item Generally act to \textbf{inhibit translation initiation}.
-  \item Two mechanisms:
-    \begin{enumerate}[leftmargin=1.5em]
-      \item Binding near the \textbf{Shine--Dalgarno sequence} and/or start codon $\Rightarrow$ sterically hinders ribosome from initiating translation.
-      \item Binding outside the Shine--Dalgarno/start codon region $\Rightarrow$ conformational change in mRNA that also prevents initiation.
-    \end{enumerate}
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Antisense RNA:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A second way to regulate translation.
-  \item \textbf{Antisense RNA} is an RNA strand complementary to a strand of mRNA (the ``sense'' strand).
-  \item When antisense RNA base-pairs with the mRNA, it prevents ribosome binding and translation.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Osmoregulation in \textit{E.~coli} (antisense RNA example):}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{ompF} gene: encodes \textbf{OmpF}, a porin (outer membrane channel protein) that allows passage of small molecules and ions; important for controlling membrane permeability during osmoregulation.
-  \item \textbf{Low osmolarity:} ompF protein is preferentially produced.
-  \item \textbf{High osmolarity:} expression of the \textit{micF} gene is induced.
-    \begin{itemize}
-      \item The \textit{micF} RNA is \textbf{antisense} to the ompF mRNA; it does not encode a polypeptide.
-      \item micF RNA base-pairs with ompF mRNA by hydrogen bonding.
-      \item Double-stranded RNA structure blocks ompF mRNA translation $\Rightarrow$ ompF protein synthesis decreases.
-    \end{itemize}
-\end{itemize}
-
-\end{diagbox}
-
-\subsection{Post-translational Regulation and Feedback Inhibition}
-
-\begin{diagbox}{32. Post-translational Regulation and Feedback Inhibition}
-
-\textbf{Post-translational regulation} controls protein activity \emph{after} the protein has been synthesized.
-
-\vspace{0.3cm}
-\textbf{Covalent modifications:}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Irreversible:} proteolytic processing, attachment of prosthetic groups, sugars, or lipids.
-  \item \textbf{Reversible} (transiently affect function):
-    \begin{itemize}
-      \item Phosphorylation ($-\mathrm{PO_4}$)
-      \item Acetylation ($-\mathrm{COCH_3}$)
-      \item Methylation ($-\mathrm{CH_3}$)
-    \end{itemize}
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Feedback inhibition:}
-\begin{itemize}[leftmargin=1.5em]
-  \item A common mechanism to regulate \textbf{metabolic enzymes}.
-  \item The \textbf{final product} of a biosynthetic pathway inhibits an enzyme that acts \textbf{early} in the pathway.
-  \item Prevents over-accumulation of the final product.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Allosteric enzymes:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Enzymes regulated by feedback inhibition are often \textbf{allosteric}: they contain two distinct binding sites.
-    \begin{itemize}
-      \item \textbf{Catalytic site} --- binds the substrate.
-      \item \textbf{Regulatory site} --- binds the final product of the pathway (allosteric inhibitor).
-    \end{itemize}
-  \item Binding of the final product to the regulatory site changes the enzyme's conformation and reduces catalytic activity.
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Classic example --- isoleucine biosynthesis:}
-\begin{itemize}[leftmargin=1.5em]
-  \item Threonine $\xrightarrow{\text{Enzyme 1}}$ $\cdots$ $\rightarrow$ Isoleucine.
-  \item Isoleucine is the final product and acts as an \textbf{allosteric inhibitor} of Enzyme~1 (the first step).
-  \item When isoleucine accumulates, it shuts down its own production (feedback inhibition).
-\end{itemize}
-
-\end{diagbox}
-
-\newpage
-% ══════════════════════════════════════════════════════════════
-\part{Comprehensive University-Level Practice Exam}
-% ══════════════════════════════════════════════════════════════
+\textit{Check cable bolt:} $T = 440\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark \quad \textbf{The cable bolt is safe.}
+
+\bigskip
+\textbf{Step 2 --- Find the wall-bolt reaction force $\vec{R}$ (check girder bolt)}
+
+The cable tension components are:
+\[
+  T_x = T\cos(30^\circ) = 440\,\tfrac{\sqrt{3}}{2} \approx 381.1\,\mathrm{lb}
+  \quad(\text{horizontal; cable pulls girder end in }{-x}\text{ direction, toward wall})
+\]
+\[
+  T_y = T\sin(30^\circ) = 440\,(0.5) = 220\,\mathrm{lb}
+  \quad(\text{upward})
+\]
+
+Apply force equilibrium $\sum F_x = 0$ and $\sum F_y = 0$. The cable tension has a component $T_x$ pulling the girder end toward the wall ($-x$). The wall bolt must push the girder away from the wall ($+x$) to maintain equilibrium, so:
+\[
+  \sum F_x = 0:\quad R_x - T_x = 0
+  \;\Longrightarrow\;
+  R_x = T\cos(30^\circ) \approx 381.1\,\mathrm{lb}
+\]
+\[
+  \sum F_y = 0:\quad R_y + T_y - W_g - W_t - W_f = 0
+\]
+\[
+  R_y = (120 + 150 + 10)\,\mathrm{lb} - 220\,\mathrm{lb}
+       = 280 - 220 = 60\,\mathrm{lb}
+\]
+
+The magnitude of the force on the wall bolt holding the girder:
+\[
+  R = \sqrt{R_x^2 + R_y^2}
+    = \sqrt{(381.1)^2 + (60)^2}
+    = \sqrt{145237 + 3600}
+    = \sqrt{148837}
+    \approx \boxed{385.8\,\mathrm{lb}}
+\]
+
+\textit{Check girder bolt:} $R \approx 386\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark \quad \textbf{The girder bolt is safe.}
+
+\bigskip
+\textbf{Conclusion:} Both bolts are below their 500~lb rated strength. \textbf{You should approve the technician's plan.}
+
+\end{keybox}
 
 \begin{warnbox}
-\textbf{Exam Format:} Each topic contains four multiple-choice questions (Questions A--D, 2~pts each) and one open-ended question (Question~E, 10~pts), for a total of 18~pts per topic.
+\textbf{Key Conceptual Points}
+\begin{itemize}[nosep]
+  \item Always choose the pivot at the point with the most unknown forces to simplify the torque equation.
+  \item The torque of a force equals (force magnitude) $\times$ (perpendicular distance from pivot to line of action), equivalent to $F_\perp \cdot r$ or $F \cdot r_\perp$.
+  \item Both translational \emph{and} rotational equilibrium must be checked.
+  \item The wall bolt experiences the \emph{vector sum} of all force components, not just one direction.
+\end{itemize}
 \end{warnbox}
-
-\section{Genetics Exam Problems: Chromosome Organization \& Biotechnology}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Topic 12 --- Nucleosomes and Chromatin Structure}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{12\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} How many histone proteins make up the nucleosome core octamer?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 4 (one each of H2A, H2B, H3, H4)
-          \item 6 (two each of H2A, H2B, and H3)
-          \item 8 (two each of H2A, H2B, H3, and H4)
-          \item 10 (two each of H1, H2A, H2B, H3, and H4)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Approximately how many base pairs of DNA are wrapped around a single nucleosome core particle?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 80 bp ($\sim$1 turn)
-          \item 146 bp ($\sim$1.65 turns)
-          \item 200 bp (2 complete turns)
-          \item 300 bp (3 complete turns)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} When isolated nuclei are treated with low concentrations of DNase~I and products are run on an agarose gel, the expected result is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item A single band at 146 bp (the protected core-particle DNA)
-          \item A continuous smear indicating random cleavage throughout chromatin
-          \item A ladder of bands at multiples of $\sim$200 bp (200, 400, 600 bp, etc.)
-          \item No visible bands because DNase I is inhibited by nucleosomes
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} If histone H1 is experimentally removed from chromatin, which outcome is most likely?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The 30-nm fibre condenses further; transcription decreases
-          \item The nucleosome core particle dissociates and DNA is released
-          \item The 30-nm fibre decompacts to 11-nm beads-on-a-string; transcription increases
-          \item No structural change occurs; H1 does not contribute to the 30-nm fibre
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} A eukaryotic chromosome contains 150~million base pairs of DNA.
-        (a) How many nucleosome core particles are present, given that 146~bp wraps each octamer and the linker DNA averages 54~bp per nucleosome?
-        (b) If the DNA contour length before packaging is $L_0$ and the 11-nm fibre is $\sim$6-fold shorter, estimate the compaction at the nucleosome level.
-        (c) What additional compaction is achieved by forming the 30-nm fibre from the 11-nm fibre?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 13 --- Levels of Chromatin Compaction}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{13\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Which level of chromatin organisation is described as ``beads on a string'' with a diameter of approximately 11 nm?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The DNA double helix (2 nm)
-          \item The nucleosome array (11-nm fibre)
-          \item The 30-nm zig-zag/solenoid fibre
-          \item The radial loop domain (300 nm)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} What is the approximate diameter of the fully condensed metaphase chromosome?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 30 nm
-          \item 300 nm
-          \item 700 nm
-          \item 1{,}400 nm
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Which histone modification pattern is characteristic of heterochromatin during interphase?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Enrichment of H3K4me3 and hyperacetylated histones
-          \item Enrichment of H3K27ac and H3K4me3 (activating marks)
-          \item Enrichment of H3K9me3 and H3K27me3 with hypoacetylated histones
-          \item Enrichment of H3K36me3 characteristic of actively transcribed gene bodies
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Matrix attachment regions (MARs) contribute to chromosome compaction by:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Adding methyl groups to cytosine residues in the DNA
-          \item Tethering the bases of chromatin loops to the nuclear matrix, forming topologically isolated loop domains
-          \item Recruiting RNA polymerase to actively transcribed gene clusters
-          \item Preventing DNA replication until the cell enters S phase
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} During the cell cycle, chromatin transitions between interphase and metaphase states.
-        (a) Describe the role of condensin in chromosome condensation, including where condensin localises during interphase versus mitosis.
-        (b) Explain how SMC proteins use ATP to compact chromosomes.
-        (c) What would be the consequence for cell division if condensin function were abolished?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 14 --- Genome Size and Repetitive Sequences}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{14\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Which category of eukaryotic genomic sequences is present in tens of thousands to millions of copies, each copy being short, and is exemplified by satellite DNA near centromeres?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Unique (non-repetitive) sequences
-          \item Moderately repetitive sequences
-          \item Highly repetitive sequences
-          \item Coding sequences
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} The C-value paradox refers to the observation that:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The number of chromosomes correlates directly with organismal complexity
-          \item Genome size (C-value) does not correlate with gene number or organismal complexity
-          \item All eukaryotes have the same haploid genome size
-          \item Cytosine content (C-value) determines the melting temperature of genomic DNA
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} The haploid chromosome number of \textit{Saccharomyces cerevisiae} is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 4
-          \item 16
-          \item 23
-          \item 46
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Two closely related salamander species differ twofold in genome size but have a similar gene number. The excess DNA in the larger genome is most likely composed of:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Unique coding sequences from gene duplications
-          \item Additional telomere repeats at every chromosome end
-          \item Repetitive DNA sequences (highly and moderately repetitive)
-          \item Extra copies of ribosomal RNA genes exclusively
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Every eukaryotic chromosome requires four functional elements.
-        (a) Name and describe the function of each element.
-        (b) Explain what would happen to a chromosome lacking a functional centromere during mitosis.
-        (c) Why are telomeres essential for the long-term stability of linear chromosomes?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 15 --- Bacterial Chromosome Organization}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{15\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Which statement correctly describes the bacterial nucleoid?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item It is an organelle enclosed by a double membrane analogous to the eukaryotic nucleus
-          \item It is an irregularly shaped, electron-dense region of the cytoplasm not bounded by a membrane
-          \item It contains multiple linear chromosomes compacted by histones H2A, H2B, H3, and H4
-          \item It is located outside the cell membrane and attached to the peptidoglycan layer
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} What is the approximate contour length of the \textit{E.\ coli} chromosome (4.6~Mbp) if fully extended at 0.34~nm per base pair?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 0.16 mm
-          \item 1.6 mm
-          \item 16 mm
-          \item 160 mm
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Which two structural mechanisms primarily compact the bacterial chromosome within the nucleoid?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Histone octamer wrapping and 30-nm fibre formation
-          \item DNA supercoiling by DNA gyrase and loop domain organisation by nucleoid-associated proteins
-          \item Telomerase activity and centromere attachment
-          \item RNA splicing and ribosome attachment to the chromosome
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Which proteins primarily anchor the bases of loop domains in the bacterial nucleoid?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Histone H1 and condensin
-          \item Topoisomerase I and RNA polymerase
-          \item Nucleoid-associated proteins (e.g.\ HU, H-NS) and MukBEF
-          \item Cohesin and CTCF
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Condensin and cohesin are SMC-containing complexes found in both bacteria and eukaryotes.
-        (a) Distinguish between the primary functions of condensin and cohesin.
-        (b) Cohesin has been implicated in gene regulation beyond its structural role.  Explain the mechanism by which cohesin facilitates enhancer--promoter interactions.
-        (c) A patient presents with Cornelia de Lange Syndrome. Name the protein complex affected and describe three clinical features of this disorder.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 16 --- Restriction Enzymes and Gene Cloning}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{16\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} EcoRI recognises the palindromic sequence 5'-GAATTC-3' and cuts between G and A on each strand. What type of ends does this produce?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Blunt ends (no single-stranded overhangs)
-          \item 3' overhangs of sequence AATT
-          \item 5' sticky ends of sequence AATT
-          \item 5' overhangs of sequence TTAA
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} A palindromic restriction site reads identically on both DNA strands in:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The 3' to 5' direction on both strands
-          \item The 5' to 3' direction on both strands
-          \item The same direction only on the coding strand
-          \item Any direction, depending on the enzyme
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In blue-white screening, a white colony on X-gal/IPTG plates indicates that:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The plasmid failed to enter the bacterial cell
-          \item The insert disrupted the \textit{lacZ} gene, so no functional $\beta$-galactosidase is produced
-          \item The antibiotic resistance gene was lost during cloning
-          \item The plasmid re-circularised without incorporating an insert
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} A yeast--bacteria shuttle vector must carry the yeast $LEU2$ gene as a selectable marker. This is useful because:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item $LEU2$ encodes $\beta$-galactosidase, enabling blue-white screening in yeast
-          \item Yeast strains with a \textit{leu2} deletion cannot grow on leucine-deficient medium unless they carry a $LEU2$ plasmid
-          \item $LEU2$ confers resistance to the antibiotic leucomycin in yeast cells
-          \item $LEU2$ activates the yeast origin of replication, allowing plasmid replication
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Human chromosomal DNA digested with EcoRI generates thousands of fragments.
-        (a) Explain why only one fragment typically inserts into a given vector molecule.
-        (b) After transformation, how does antibiotic selection ensure that only cells harbouring the vector are recovered?
-        (c) A plasmid vector replicates to 25--50 copies per cell. After 20 cell divisions overnight, estimate the total number of plasmid copies per millilitre of culture if the starting density is one cell/mL.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 17 --- Polymerase Chain Reaction (PCR)}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{17\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Which of the following is NOT one of the four essential starting materials for PCR?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Template DNA
-          \item Two sequence-specific primers (15--20 nt)
-          \item dNTPs (dATP, dTTP, dGTP, dCTP)
-          \item Restriction endonuclease
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} During the denaturation step of PCR, the reaction mixture is heated to approximately:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 50--65$^\circ$C to allow primers to anneal
-          \item 72$^\circ$C to activate Taq polymerase
-          \item 94--96$^\circ$C to separate the two DNA strands
-          \item 37$^\circ$C, the optimal temperature for mesophilic polymerases
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Starting with a single DNA molecule and performing 30 PCR cycles, the theoretical number of copies produced is approximately:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item $2^{10} \approx 10^3$
-          \item $2^{20} \approx 10^6$
-          \item $2^{30} \approx 10^9$
-          \item $30^2 = 900$
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} A primer is 18 nt long with 60\% GC content. Using $T_m = 4(G+C) + 2(A+T)$, the approximate melting temperature is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item 44$^\circ$C
-          \item 52$^\circ$C
-          \item 58$^\circ$C
-          \item 66$^\circ$C
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Site-directed mutagenesis uses a modified PCR strategy.
-        (a) Describe the molecular steps by which a specific point mutation is introduced into a cloned gene.
-        (b) How is the mutant clone identified after the procedure?
-        (c) Propose an experiment to determine whether the introduced mutation alters the protein's enzymatic activity.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 18 --- Gel Electrophoresis and Molecular Blotting}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{18\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} In agarose gel electrophoresis, DNA migrates toward the positive electrode (anode) because:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item DNA is positively charged due to its nitrogenous bases
-          \item DNA is negatively charged due to its phosphate backbone
-          \item DNA binds ethidium bromide, which carries a positive charge
-          \item The gel matrix repels DNA toward the anode
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} For linear double-stranded DNA fragments in agarose gel electrophoresis, the primary determinant of migration rate is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item GC content (fragments with more GC migrate slower)
-          \item Fragment length in base pairs (smaller fragments migrate faster)
-          \item Sequence of the DNA (unique sequences migrate faster than repetitive sequences)
-          \item The temperature of the electrophoresis buffer
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} When a plasmid preparation containing supercoiled, nicked circular, and linear forms is run on an agarose gel, which form migrates FASTEST?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Nicked circular (relaxed), because it has no topological constraints
-          \item Linear, because it migrates according to its true molecular weight
-          \item Supercoiled, because it is the most compact form
-          \item All three forms migrate at identical rates because they contain the same number of base pairs
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In an EMSA (Electrophoretic Mobility Shift Assay), a ``shift'' (band appearing higher in the gel than free DNA) indicates:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The DNA has been cleaved by the protein of interest
-          \item A protein is bound to the labelled DNA, increasing its molecular mass and decreasing mobility
-          \item The DNA was denatured and migrates as single-stranded fragments
-          \item The DNA sequence contains secondary structure that slows migration
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} A researcher performs a Northern blot and a Western blot simultaneously on tissue samples from brain and intestinal cells.
-        (a) Describe the steps for each blotting technique, from sample preparation to signal detection.
-        (b) In the Northern blot, a $\beta$-globin probe produces a signal in the brain lane but not the intestinal lane. In the Western blot, the $\beta$-globin antibody produces a signal in the brain lane only. Interpret both results.
-        (c) A band appears in the Northern blot at a larger size than expected. Propose two explanations.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 19 --- Gene Knockouts and RNA Interference}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{19\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} In an RNAi (RNA interference) knockdown, which of the following is correct?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The gene is absent; mRNA is absent; protein is absent
-          \item The gene is present; mRNA is degraded; protein is greatly reduced or absent
-          \item The gene is absent; mRNA is present; protein is absent due to proteasomal degradation
-          \item The gene is present; mRNA is present; protein is absent due to proteasomal degradation
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Which enzyme processes double-stranded RNA (dsRNA) into short interfering RNA (siRNA) duplexes of $\sim$21--23 nt during RNAi?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item RNA polymerase III
-          \item Dicer (an RNase III-family enzyme)
-          \item Argonaute (Slicer)
-          \item Reverse transcriptase
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} When producing human insulin in recombinant \textit{E.\ coli}, the cDNA for insulin is obtained by:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Directly cloning genomic DNA containing the insulin gene and all its introns
-          \item Using reverse transcriptase to synthesise cDNA from insulin mRNA isolated from pancreatic $\beta$ cells
-          \item Chemically synthesising the insulin gene without any template
-          \item Amplifying the insulin gene directly from bacterial chromosomal DNA
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} A key advantage of using \textit{E.\ coli} rather than mammalian cells for industrial insulin production is that:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item \textit{E.\ coli} can form disulfide bonds in its cytoplasm, producing correctly folded insulin
-          \item \textit{E.\ coli} grows rapidly and inexpensively and can produce large quantities of recombinant protein
-          \item \textit{E.\ coli} naturally processes proinsulin by removing the C-peptide
-          \item Mammalian cells cannot take up recombinant plasmids
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Mutations in the \textbf{cohesin} complex cause Cornelia de Lange Syndrome (CdLS).
-        (a) The cohesin complex normally promotes enhancer--promoter looping. Explain how loss of this function leads to altered gene expression patterns.
-        (b) CdLS displays variable expressivity. Propose a molecular explanation for why different mutations in the same cohesin subunit can produce varying degrees of clinical severity.
-        (c) A child is diagnosed with CdLS. Genetic testing reveals a \textit{de novo} missense mutation in the \textit{NIPBL} gene encoding the cohesin loader. Explain the role of NIPBL in cohesin function and why a de~novo mutation would cause disease.
-
-\end{enumerate}
-\end{planbox}
-
-
-% ── Gene Regulation in Eukaryotes Exam Problems ─────────────────────────────
-\section{Gene Regulation in Eukaryotes Exam Problems}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Topic 20 --- Transcription Factors and Gene Activation}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{20\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Which general transcription factor recognises and binds the TATA box at the core promoter to nucleate pre-initiation complex assembly?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item TFIIB
-          \item TFIID (via its TBP subunit)
-          \item TFIIH
-          \item TFIIF
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Regulatory transcription factors (activators and repressors) differ from general transcription factors in that they:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Are required at every RNA polymerase II-transcribed gene
-          \item Are expressed ubiquitously and assemble the pre-initiation complex
-          \item Bind enhancers or silencers and control gene expression in a cell-type-specific or signal-dependent manner
-          \item Unwind the DNA double helix at the transcription start site using ATP
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} The Mediator complex facilitates transcription activation by:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Directly methylating histone H3K4 at the promoter
-          \item Bridging enhancer-bound activators with the pre-initiation complex (RNA pol II and general TFs) at the promoter
-          \item Unwinding the promoter DNA for RNA polymerase entry
-          \item Methylating CpG islands to silence adjacent genes
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} A transcription factor has a zinc-finger DNA-binding domain and an acidic activation domain. When the acidic activation domain is deleted, transcription falls to basal levels. The most likely explanation is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The factor can no longer bind its enhancer sequence
-          \item The factor cannot recruit Mediator or stimulate pre-initiation complex assembly
-          \item The deletion causes degradation of the entire transcription factor
-          \item The TATA box is methylated and no longer accessible to TFIID
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} An insulator sequence is inserted between an upstream enhancer and a target gene.
-        (a) Predict and explain the effect on transcription.
-        (b) Describe the role of \textbf{CTCF} and \textbf{cohesin} in insulator function and TAD (topologically associating domain) organisation.
-        (c) Loss-of-function mutations in CTCF are associated with cancer. Propose two mechanisms by which loss of CTCF could dysregulate gene expression and contribute to oncogenesis.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 21 --- Chromatin Remodeling and Histone Modifications}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{21\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} ATP-dependent chromatin remodeling complexes (e.g.\ SWI/SNF) alter gene expression by:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Covalently modifying histone tails by adding methyl or acetyl groups
-          \item Repositioning or ejecting nucleosomes to change DNA accessibility
-          \item Methylating CpG dinucleotides in the promoter region
-          \item Degrading histones to expose the underlying DNA sequence
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} The histone modification H3K4me3 is associated with:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Polycomb-repressed, silent gene promoters
-          \item Actively transcribed gene promoters and open chromatin
-          \item Constitutive heterochromatin at centromeres and telomeres
-          \item DNA double-strand break repair sites
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Histone acetyltransferases (HATs) activate transcription, in part, because acetylation of histone lysine residues:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Increases the positive charge of histones, tightening their interaction with DNA
-          \item Neutralises the positive charge of lysine, reducing histone--DNA electrostatic interaction and opening chromatin
-          \item Targets histones for proteasomal degradation, creating nucleosome-free regions
-          \item Recruits heterochromatin protein HP1 to compact the chromatin
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} An HDAC (histone deacetylase) inhibitor is applied to cells in culture. The most likely effect on gene expression is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Global decrease in transcription due to increased chromatin compaction
-          \item Re-expression of previously silenced genes due to global hyperacetylation and chromatin decondensation
-          \item Specific activation of only histone-encoding genes
-          \item Irreversible degradation of all histone proteins
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} The SWI/SNF chromatin remodeling complex is mutated in $\sim$20\% of human cancers.
-        (a) Explain how loss of SWI/SNF function could prevent the transcription of tumour-suppressor genes.
-        (b) Propose a strategy using a small-molecule drug to restore tumour-suppressor gene expression in a SWI/SNF-deficient cancer cell, without correcting the mutation.
-        (c) SWI/SNF can both activate and repress genes depending on context. Explain how the same complex can have opposing effects.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 22 --- DNA Methylation and Epigenetic Regulation}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{22\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} In mammals, DNA methylation occurs primarily on which nucleotide and in which sequence context?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Adenine within GATC sequences (as in bacteria)
-          \item Cytosine within CpG dinucleotides, producing 5-methylcytosine
-          \item Guanine within GpC dinucleotides, producing O6-methylguanine
-          \item Thymine within TATA sequences at core promoters
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Which DNA methyltransferase is responsible for MAINTENANCE methylation (preserving existing methylation patterns after DNA replication)?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item DNMT3A (de novo methyltransferase)
-          \item DNMT3B (de novo methyltransferase)
-          \item DNMT1 (recognises hemi-methylated DNA and methylates the new strand)
-          \item TET1 (converts 5mC to 5-hydroxymethylcytosine)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} When a CpG island in a tumour-suppressor gene promoter becomes hypermethylated in cancer cells, one mechanism of silencing involves:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Recruitment of methyl-CpG binding domain (MBD) proteins that attract HDAC/NuRD complexes, leading to chromatin compaction
-          \item Insertion of a transposable element into the CpG island
-          \item Loss of the TATA box sequence by point mutation
-          \item Hyperacetylation of H3K27 by the EZH2 enzyme
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} The \textit{IGF2} gene is normally expressed only from the paternal allele (genomic imprinting). If the paternal imprinting control region (ICR) loses its DNA methylation, the most likely outcome is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Biallelic expression of \textit{IGF2} from both chromosomes, causing overgrowth (Beckwith--Wiedemann syndrome)
-          \item CTCF binds the now-unmethylated paternal ICR, redirecting the downstream enhancer to \textit{H19} instead of \textit{IGF2}, silencing paternal \textit{IGF2}
-          \item Demethylation of the maternal ICR, converting the maternal allele to paternal-like expression
-          \item No change, because imprinting is determined by DNA sequence alone
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} \textbf{Combinatorial control} means that multiple transcription factors act together to regulate a gene.
-        (a) Explain why combinatorial control allows a small number of transcription factors to generate a large number of distinct gene-expression patterns.
-        (b) Two transcription factors, TF-A and TF-B, each weakly activate a gene individually, but together they activate it 20-fold. Propose a molecular explanation for this synergy.
-        (c) In a cell-fate decision, the gene \textit{MyoD} is activated in muscle precursors but not in liver precursors. Both cell types express TF-A. Identify what additional regulatory logic could account for this cell-type specificity.
-
-\end{enumerate}
-\end{planbox}
-
-\section{Gene Regulation in Prokaryotes Exam Problems}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Topic 23 --- The lac Operon: Negative and Positive Control}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{23\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} The \textit{lacZ} gene of the \textit{E.~coli} lac operon encodes:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Lactose permease (membrane transporter for lactose uptake)
-          \item Galactoside transacetylase (prevents toxic accumulation of lactose analogues)
-          \item $\beta$-galactosidase (cleaves lactose into glucose and galactose)
-          \item The lac repressor (constitutively expressed regulatory protein)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Why is the \textit{lacI} gene NOT considered part of the lac operon?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item \textit{lacI} is located on a separate plasmid in most \textit{E.~coli} strains
-          \item \textit{lacI} is transcribed in the opposite direction to the structural genes
-          \item \textit{lacI} has its own constitutive promoter and is expressed independently of lac operon regulatory signals
-          \item \textit{lacI} encodes a structural protein, not a regulatory protein
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In an \textit{E.~coli} strain carrying $\text{I}^S$ (super-repressor), $\beta$-galactosidase activity is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item High even without IPTG, because the super-repressor constitutively activates the operon
-          \item Absent or very low even in the presence of excess IPTG, because the super-repressor cannot bind allolactose and permanently blocks the operator
-          \item Normal (inducible), because $\text{I}^S$ still responds to allolactose like wild-type
-          \item Present only when both glucose and lactose are absent simultaneously
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} cAMP--CAP (catabolite activator protein) stimulates lac operon transcription when:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Glucose is abundant and cAMP levels are high
-          \item Glucose is absent, causing adenylyl cyclase to raise cAMP levels
-          \item Lactose is absent, allowing the repressor to be removed from the operator
-          \item Both glucose and lactose are present simultaneously
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Compare inducible versus repressible operons using the lac and trp operons as examples.
-        (a) Define negative and positive control in the context of transcriptional regulation.
-        (b) In both operons, the effector molecule is not DNA-binding. Explain the role of effector molecules in each operon and how they alter repressor/activator activity.
-        (c) Predict the expression state of each operon under the following conditions:
-        (i) lac operon: glucose absent, lactose absent;
-        (ii) lac operon: glucose absent, lactose present;
-        (iii) trp operon: tryptophan absent;
-        (iv) trp operon: tryptophan present.
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 24 --- The trp Operon and Attenuation}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{24\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} The trp operon is described as a REPRESSIBLE operon because:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item It is transcribed constitutively and cannot be turned off
-          \item It is normally ON but is repressed when the end product (tryptophan) accumulates, preventing wasteful over-production
-          \item An inducer molecule activates the repressor to turn on transcription
-          \item It is repressed by glucose via catabolite repression, similar to the lac operon
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} For the trp repressor to bind the operator and block transcription, what must occur?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Allolactose must bind the repressor protein
-          \item Tryptophan (the corepressor) must bind the inactive trp aporepressor, causing a conformational change
-          \item cAMP must bind the CAP protein at the CAP site
-          \item The attenuator hairpin must form in the leader region of the mRNA
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} During attenuation of the trp operon, the antiterminator (2--3 hairpin) forms when:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Tryptophan is abundant and the ribosome translates the leader peptide without stalling
-          \item Tryptophan is scarce and the ribosome stalls at the Trp codons in region 1, freeing region 2 to pair with region 3
-          \item The trp repressor is bound to the operator, blocking RNA polymerase
-          \item cAMP--CAP binds the CAP site upstream of the trp promoter
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In a \textit{trpR} null mutant (no functional trp repressor), at HIGH tryptophan concentrations, trp operon expression is:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Fully induced (maximally expressed), because neither repression nor attenuation functions
-          \item Fully repressed, because attenuation alone can substitute for repressor function
-          \item Intermediate (elevated but reduced below maximum), because attenuation still terminates some transcripts early
-          \item Unchanged from wild-type, because tryptophan directly inhibits RNA polymerase
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Compare and contrast negative control of the lac operon (via the lac repressor) with negative control of the trp operon (via the trp repressor).
-        (a) In both cases, a repressor protein binds the operator to block transcription. What is the key difference in the role of the effector molecule in each system?
-        (b) The term ``inducible'' applies to the lac operon and ``repressible'' applies to the trp operon. Justify these terms based on the direction of the regulatory response.
-        (c) Propose an experiment using a \textit{lacO}$^c$ mutation to demonstrate that operator mutations act \textit{in cis}. What result would confirm \textit{cis} action?
-
-\end{enumerate}
-\end{planbox}
-
-\subsection{Topic 25 --- Translational and Post-translational Regulation}
-
-\begin{planbox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{25\Alph*.}]
-
-  \item \textbf{[2 pts --- MC]} Feedback inhibition in a biosynthetic pathway acts on:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item The final enzyme in the pathway, degrading the end product
-          \item An enzyme catalysing a middle step, re-routing flux to an alternative pathway
-          \item The enzyme catalysing the first committed step, preventing accumulation of all intermediates
-          \item RNA polymerase, repressing transcription of the biosynthetic genes
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In the isoleucine biosynthesis pathway, which enzyme is feedback-inhibited by the end product isoleucine?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Isoleucyl-tRNA synthetase (charging tRNA)
-          \item Threonine deaminase (the first committed step: threonine $\rightarrow$ $\alpha$-ketobutyrate)
-          \item Acetolactate synthase (a middle step in the branched-chain pathway)
-          \item Ribose-phosphate pyrophosphokinase (purine biosynthesis)
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} In the \textit{ompF}/\textit{micF} antisense RNA system, micF RNA inhibits OmpF protein synthesis by:
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item Cleaving the \textit{ompF} gene by acting as a ribozyme
-          \item Base-pairing with the 5$'$ region of \textit{ompF} mRNA (near the Shine--Dalgarno sequence), blocking ribosome binding and initiating mRNA degradation
-          \item Methylating the \textit{ompF} promoter to prevent transcription
-          \item Competing with \textit{ompF} mRNA for ribosome binding by occupying the A site
-        \end{enumerate}
-
-  \item \textbf{[2 pts --- MC]} Compared to transcriptional regulation, translational regulation offers which key advantage under conditions of sudden osmotic stress?
-        \begin{enumerate}[label=(\Alph*), leftmargin=2em]
-          \item A more permanent change in gene expression that persists across cell generations
-          \item A faster response, because it acts on existing mRNA without waiting for new transcription
-          \item Greater energy efficiency, because no mRNA is synthesised at all
-          \item Higher specificity, because only one specific mRNA can ever be regulated translationally
-        \end{enumerate}
-
-  \item \textbf{[10 pts --- Open-Ended]} Post-translational regulation controls enzyme activity via covalent modification and feedback inhibition.
-        (a) Distinguish between reversible and irreversible covalent modifications, giving two examples of each.
-        (b) An allosteric enzyme catalyses the first committed step of a biosynthetic pathway. Explain why inhibiting the \textbf{first} committed step is metabolically more efficient than inhibiting a later step in the pathway.
-        (c) In a biosynthetic pathway with two branches both leading from the same intermediate, how could the organism regulate flux through each branch independently? Describe a mechanism involving isoenzymes or cumulative feedback inhibition.
-
-\end{enumerate}
-\end{planbox}
 
 \newpage
-% ══════════════════════════════════════════════════════════════
-\part{Answer Key}
-% ══════════════════════════════════════════════════════════════
+
+% ════════════════════════════════════════════════════════════════
+\section{Problem 2: Spinal Loading During Improper Lifting}
+% ════════════════════════════════════════════════════════════════
+
+\begin{planbox}
+\textbf{Problem Statement}
+
+You are studying spinal damage caused by routine activities. Before starting this study, you need to determine
+how the force on the spine at the fifth lumbar vertebra, where the spine is connected to the pelvis, depends on
+the weight of a box lifted improperly from the floor. In this case, a person bends over so their back is
+horizontal and lifts the box straight up.
+
+To model the situation, you decide to represent the spine as a uniform horizontal rod with a known length $L$
+and negligible weight. You also neglect the weight of the back. One end of the rod is where the shoulders
+support the weight $W$ of the box as it is lifted off the floor. The other end of the rod is where the spine is
+attached to its pivot at the fifth lumbar vertebra. Although the back muscles are complicated, for this simple
+model you assume that the principal muscle lifting the spine is attached two-thirds of the way up the spine at
+an angle of $2^\circ$ to the horizontal spine.
+\end{planbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{Diagram \& Setup}
+% ─────────────────────────────────────────────────────────────
+
+\begin{diagbox}{Free-Body Diagram --- Horizontal Spine}
+\begin{center}
+\begin{tabular}{l}
+\textbf{System:} The spine (modeled as a massless horizontal rod of length $L$)\\[4pt]
+\textbf{Coordinate system:} $+x$ horizontal (away from pelvis toward shoulders), $+y$ upward\\[4pt]
+\textbf{Pivot:} Fifth lumbar vertebra at $x = 0$
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent\textbf{Forces acting on the spine:}
+\begin{itemize}[nosep]
+  \item $W$ (box weight, downward) at $x = L$ (shoulder end)
+  \item $F_m$ (back muscle force, at angle $2^\circ$ to horizontal) at $x = \tfrac{2}{3}L$
+  \item $\vec{F}_S = (F_{Sx},\, F_{Sy})$ (joint reaction force at fifth lumbar, at $x = 0$)
+\end{itemize}
+
+\medskip
+\noindent The muscle is nearly parallel to the spine. It pulls mostly horizontally (compressing the spine) with a small upward component that provides the restoring torque.
+\end{diagbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{Solution}
+% ─────────────────────────────────────────────────────────────
+
+\begin{keybox}
+
+\textbf{Step 1 --- Find the back muscle force $F_m$}
+
+Apply rotational equilibrium $\sum\tau = 0$ about the pivot at the fifth lumbar vertebra.
+
+Only the \emph{component of $F_m$ perpendicular to the spine} (i.e., the vertical component $F_m\sin 2^\circ$) contributes a torque. Counterclockwise is positive:
+\[
+  F_m\sin(2^\circ)\cdot\frac{2L}{3} - W\cdot L = 0
+\]
+\[
+  F_m\sin(2^\circ) = \frac{W\cdot L}{\dfrac{2L}{3}} = \frac{3W}{2}
+\]
+\[
+  F_m = \frac{3W}{2\sin(2^\circ)} = \frac{3W}{2\times 0.03490} = \frac{3W}{0.06981}
+  \approx \boxed{42.98\,W}
+\]
+
+\textit{Result:} The back muscle must exert a force approximately \textbf{43 times the weight of the box}! This enormous force is required because the muscle moment arm ($\tfrac{2}{3}L\,\sin 2^\circ$) is extremely small compared to the box moment arm ($L$).
+
+\bigskip
+\textbf{Step 2 --- Find the force on the fifth lumbar vertebra}
+
+Apply translational equilibrium:
+
+\[
+  \sum F_x = 0:\quad F_{Sx} - F_m\cos(2^\circ) = 0
+  \;\Longrightarrow\;
+  F_{Sx} = F_m\cos(2^\circ) \approx 42.98W\times 0.99939 \approx 42.95\,W
+\]
+\[
+  \sum F_y = 0:\quad F_{Sy} + F_m\sin(2^\circ) - W = 0
+\]
+\[
+  F_{Sy} = W - F_m\sin(2^\circ) = W - \frac{3W}{2} = -\frac{W}{2}
+\]
+(The negative sign indicates a downward component at the vertebra.)
+
+The magnitude of the total force on the fifth lumbar vertebra:
+\[
+  F_S = \sqrt{F_{Sx}^2 + F_{Sy}^2}
+      = \sqrt{(42.95W)^2 + (0.5W)^2}
+      = W\sqrt{1844.7 + 0.25}
+      = W\sqrt{1844.9}
+      \approx \boxed{42.95\,W}
+\]
+
+\textbf{The force on the fifth lumbar vertebra is approximately 43 times the weight of the box.}
+
+For example, if the box weighs 30~lb, the spine experiences a compressive force of approximately $43 \times 30 = 1290\,\mathrm{lb}$ --- nearly two-thirds of a ton!
+
+\bigskip
+\textbf{Conclusion:} The force on the spine scales linearly with the box weight:
+\[
+  F_S \approx \frac{3\cos(2^\circ)}{2\sin(2^\circ)}\,W \approx \frac{3}{2\tan(2^\circ)}\,W \approx 42.95\,W
+\]
+
+\end{keybox}
 
 \begin{warnbox}
-\textbf{Study Tip:} Attempt all questions in the Practice Exam before consulting
-this Answer Key.  For each solution, the \textit{Rationale} explains the
-reasoning; the numbered steps show every substitution for partial-credit
-verification.
+\textbf{Key Conceptual Points}
+\begin{itemize}[nosep]
+  \item A small angle ($2^\circ$) leads to a tiny torque arm for the muscle, requiring an enormous muscle force to balance a moderate load.
+  \item The dominant force at the lumbar vertebra is the large \emph{horizontal} compressive component $F_m\cos(2^\circ)$, which is almost entirely due to the muscle.
+  \item This result explains why improper lifting (back horizontal) causes far more spinal stress than proper lifting (back upright), where the geometry is far more favorable.
+  \item The force on the spine is \emph{independent of the length $L$}: longer or shorter spines all experience the same ratio $F_S/W \approx 43$.
+\end{itemize}
 \end{warnbox}
 
-\section{Genetics Solutions: Chromosome Organization \& Biotechnology}
-% ────────────────────────────────────────────────────────────
+\newpage
 
-\subsection{Topic 12 --- Nucleosomes and Chromatin Structure}
+% ════════════════════════════════════════════════════════════════
+\section{Problem 3: Spring-Ball Device Inside a Cylindrical Pipe}
+% ════════════════════════════════════════════════════════════════
 
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{12\Alph*.}]
+\begin{planbox}
+\textbf{Problem Statement}
 
-  \item \textbf{Answer: (C)} \textit{Rationale: The nucleosome core octamer contains two copies each of H2A, H2B, H3, and H4 (8 proteins total). H1 is the linker histone and is external to the core particle; it is not counted among the core octamer subunits.}
+You have been asked to evaluate a device designed to keep thin-walled cylindrical pipes from collapsing.
+The design has three identical very small balls connected in an equilateral triangle by three identical springs.
+When inserted into a pipe, the springs are compressed so that each ball exerts a force on the wall of the pipe.
+You worry that the thin-walled pipe might be damaged by the device, so you decide to calculate the push of
+one of the balls on the inside of the circular pipe wall.
 
-  \item \textbf{Answer: (B)} \textit{Rationale: Exactly 146 bp of dsDNA wraps $\sim$1.65 turns around the histone octamer to form the nucleosome core particle. The $\sim$200-bp figure also includes the linker DNA ($\sim$54 bp) between adjacent nucleosomes.}
+You know the spring constant $k$ and the compression distance $d$ of each spring when it is in the pipe.
+You also know that the sum of the angles of any triangle is $180^\circ$ and an equilateral triangle has equal
+angles.
+\end{planbox}
 
-  \item \textbf{Answer: (C)} \textit{Rationale: At low DNase~I concentrations, the enzyme preferentially cleaves linker DNA between nucleosomes, producing fragments at multiples of the $\sim$200-bp nucleosomal repeat unit (200, 400, 600 bp, etc.), the classic ``nucleosomal ladder.'' A single 146-bp band is only seen at very high DNase~I concentrations.}
+% ─────────────────────────────────────────────────────────────
+\subsection{Diagram \& Setup}
+% ─────────────────────────────────────────────────────────────
 
-  \item \textbf{Answer: (C)} \textit{Rationale: H1 promotes 30-nm fibre formation by bridging adjacent nucleosomes. Its removal causes decompaction to the 11-nm beads-on-a-string form, making DNA more accessible to transcription factors and increasing transcriptional activity.}
+\begin{diagbox}{Geometry --- Equilateral Triangle Inscribed in Circular Pipe}
+\begin{center}
+\begin{tabular}{l}
+\textbf{System:} One ball (at a vertex of the equilateral triangle, touching the pipe wall)\\[4pt]
+\textbf{Pipe radius:} $R$ (circumradius of the equilateral triangle)\\[4pt]
+\textbf{Each spring:} compressed by $d$, exerts force $F_s = kd$ pushing balls \emph{apart}
+\end{tabular}
+\end{center}
 
-  \item \textit{Rationale: Each nucleosome occupies 146 + 54 = 200~bp; total nucleosome number = total bp / 200. Compaction ratios follow from geometry.}
+\medskip
+\noindent\textbf{Key geometry:}
+\begin{itemize}[nosep]
+  \item Since the triangle is equilateral, all three angles are $60^\circ$ (because $3 \times 60^\circ = 180^\circ$).
+  \item Each ball is at the corner of an equilateral triangle inscribed in the pipe's circular cross-section.
+  \item Each ball is connected to \emph{two} springs (to the other two balls).
+  \item By symmetry, the line from the center of the pipe to a ball is exactly bisected by the $60^\circ$ interior angle at that ball, so \emph{each spring makes an angle of $30^\circ$ with the outward radial direction} at the ball.
+\end{itemize}
 
-        (a) Number of nucleosomes $= \dfrac{150{,}000{,}000\;\text{bp}}{200\;\text{bp/nucleosome}} = \mathbf{750{,}000}$ nucleosomes.
+\medskip
+\noindent\textbf{Forces on one ball:}
+\begin{itemize}[nosep]
+  \item Spring force 1: $F_s = kd$, directed $30^\circ$ away from radial (toward one neighbor)
+  \item Spring force 2: $F_s = kd$, directed $30^\circ$ away from radial (toward other neighbor)
+  \item Normal force from pipe wall: $N$, directed radially inward (toward center)
+\end{itemize}
+\end{diagbox}
 
-        (b) The DNA contour length $= 150\times10^6\;\text{bp} \times 0.34\;\text{nm/bp} = 51\;\text{mm}$.
-        At the 11-nm (nucleosome array) level, the DNA is $\sim$6-fold compacted, giving a fibre length of $\approx\mathbf{8.5\;\text{mm}}$.
-
-        (c) The 30-nm fibre further compacts the 11-nm fibre by $\approx$\textbf{6-fold} (i.e.\ from 11-nm to 30-nm diameter accompanies a $\sim$6$\times$ linear compaction), yielding a total compaction of $\approx$36-fold over naked DNA at this stage.
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 13 --- Levels of Chromatin Compaction}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{13\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The 11-nm fibre (``beads on a string'') is the nucleosome array formed when DNA wraps around histone octamers. The DNA double helix is 2 nm; the 30-nm zig-zag fibre is the next level; radial loop domains reach 300 nm.}
-
-  \item \textbf{Answer: (D)} \textit{Rationale: The fully condensed metaphase chromosome is approximately 1{,}400 nm (1.4 $\mu$m) in diameter. The 300-nm and 700-nm structures are intermediate compaction states; the 30-nm fibre is the third level.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: Heterochromatin is enriched in repressive histone marks H3K9me3 and H3K27me3 and contains hypoacetylated histones, maintaining a compact, transcriptionally inactive state. H3K4me3 and acetylation marks are characteristic of euchromatin.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: MARs (Matrix Attachment Regions) tether the bases of chromatin loops to the nuclear matrix, creating topologically isolated loop domains. This contributes an additional $\sim$10-fold compaction over the 30-nm fibre and insulates regulatory elements within each loop.}
-
-  \item \textit{Rationale: Condensin drives mitotic compaction; loss of function prevents cells from segregating chromosomes.}
-
-        (a) During interphase, condensin resides in the \textbf{cytoplasm}. At the onset of mitosis (prophase), condensin is imported into the nucleus, binds chromosomes, and \textbf{compacts the radial loop domains} into the highly condensed metaphase chromosome.
-
-        (b) SMC proteins form a ring-like structure with a hinge domain and two ATPase heads. ATP hydrolysis drives \textbf{conformational changes} that entrap and actively compact DNA strands, reducing their length.
-
-        (c) Without condensin, chromosomes \textbf{fail to condense properly}, resulting in tangled chromosomes that cannot be correctly attached to spindle fibres. The outcome is \textbf{mitotic arrest} and/or \textbf{chromosome mis-segregation}, leading to aneuploidy and cell death.
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 14 --- Genome Size and Repetitive Sequences}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{14\Alph*.}]
-
-  \item \textbf{Answer: (C)} \textit{Rationale: Highly repetitive sequences are present in tens of thousands to millions of copies and include satellite DNA (simple tandem repeats) found near centromeres and telomeres. Moderately repetitive sequences include rRNA genes and transposable elements; unique sequences are present once or a few times.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The C-value paradox is the observation that genome size (C-value, haploid DNA content) does not correlate with gene number or organismal complexity. The excess DNA in large genomes is primarily repetitive sequences.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: \textit{S.\ cerevisiae} has 16 haploid chromosomes. Humans have 23 haploid chromosomes. The human genome ($\sim$3{,}100 Mbp) is much larger than the yeast genome ($\sim$12 Mbp), despite yeast having fewer chromosomes.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: The larger genome is primarily composed of repetitive DNA sequences (highly and moderately repetitive), which are the main contributors to C-value differences between related species with similar gene numbers. Mechanisms include transposon amplification and unequal crossing over.}
-
-  \item \textit{Rationale: Centromere, telomere, origin, and sequence element functions on linear chromosomes.}
-
-        (a) The four elements:
-        \begin{enumerate}[leftmargin=1.5em]
-          \item \textbf{Origins of replication} --- initiation sites for DNA replication ($\sim$every 100{,}000~bp in eukaryotes).
-          \item \textbf{Centromere} --- site of kinetochore assembly; essential for correct attachment to the mitotic spindle.
-          \item \textbf{Telomeres} --- repetitive sequences at both ends that protect chromosomes from exonucleolytic degradation and prevent end-joining.
-          \item \textbf{Repetitive sequences} --- contribute to structural domains and, in some cases, gene regulation.
-        \end{enumerate}
-
-        (b) A chromosome lacking a centromere cannot attach to the spindle, and \textbf{fails to segregate} to daughter cells. It is typically lost within a few cell divisions.
-
-        (c) Because linear chromosomes cannot be fully replicated at their ends by conventional DNA polymerases (the ``end-replication problem''), telomeres provide a buffer of repetitive sequence. Telomerase replenishes these sequences. Without telomeres, chromosomes \textbf{shorten with each division}, eventually losing essential genes, triggering DNA damage responses and cellular senescence or apoptosis.
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 15 --- Bacterial Chromosome Organization}
+% ─────────────────────────────────────────────────────────────
+\subsection{Solution}
+% ─────────────────────────────────────────────────────────────
 
 \begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{15\Alph*.}]
 
-  \item \textbf{Answer: (B)} \textit{Rationale: The nucleoid is an irregularly shaped, electron-dense region within the cytoplasm that is NOT bounded by a membrane. Bacteria lack a true nucleus; the nucleoid is not an organelle. The bacterial chromosome is circular and not packaged by eukaryotic histones.}
+\textbf{Step 1 --- Determine the angle each spring makes with the radial direction}
 
-  \item \textbf{Answer: (B)} \textit{Rationale: Contour length $= 4.6\times10^6\;\text{bp} \times 0.34\;\text{nm/bp} = 1.564\;\text{mm} \approx 1.6\;\text{mm}$. The \textit{E.\ coli} cell is only $\sim$2 $\mu$m long, requiring $\sim$780-fold ($\sim$1{,}000-fold) compaction.}
+Since the triangle is equilateral, each interior angle is:
+\[
+  \theta_{\text{interior}} = \frac{180^\circ}{3} = 60^\circ
+\]
 
-  \item \textbf{Answer: (B)} \textit{Rationale: Bacterial chromosomes are compacted primarily by (1) DNA supercoiling introduced by DNA gyrase (negative supercoils compact the circular chromosome) and (2) nucleoid-associated proteins (NAPs; e.g.\ HU, H-NS, IHF) that bend and organise DNA into loop domains. Histone octamers and 30-nm fibres are eukaryotic features.}
+At any given ball (vertex), the two springs point toward the other two vertices. In an equilateral triangle, the circumcenter, centroid, and incenter all coincide at the same point. The line from any vertex through this common center is also the angle bisector at that vertex. Therefore, the outward radial direction at a vertex (pointing away from the center) bisects the interior $60^\circ$ angle, and each spring makes an angle of:
+\[
+  \phi = \frac{60^\circ}{2} = 30^\circ
+\]
+with the outward radial direction.
 
-  \item \textbf{Answer: (C)} \textit{Rationale: In bacteria, loop domain bases are anchored primarily by nucleoid-associated proteins (e.g.\ HU, H-NS) and the bacterial SMC complex MukBEF. Some RNA molecules also tether DNA loops. Histone H1 and cohesin/CTCF are eukaryotic proteins.}
+\bigskip
+\textbf{Step 2 --- Find the net outward (radial) force from the springs on the ball}
 
-  \item \textit{Rationale: Condensin compacts; cohesin coheres and regulates; NIPBL loads cohesin.}
+Each compressed spring pushes the ball radially outward (as well as tangentially). By symmetry, the two tangential components cancel exactly. The radial component of each spring force is:
+\[
+  F_{\text{radial, one spring}} = F_s\cos(30^\circ) = kd\cdot\frac{\sqrt{3}}{2}
+\]
 
-        (a) \textbf{Condensin} drives chromosome \emph{condensation} (compaction of radial loops at mitosis). \textbf{Cohesin} maintains \emph{cohesion} between sister chromatids from S phase until anaphase; it also facilitates transcriptional regulation by promoting enhancer--promoter looping.
+Both springs contribute equal outward components, so the total outward spring force on the ball is:
+\[
+  F_{\text{total, outward}} = 2\,F_s\cos(30^\circ) = 2\,kd\cdot\frac{\sqrt{3}}{2} = kd\sqrt{3}
+\]
 
-        (b) Cohesin forms a ring-shaped SMC complex that topologically entraps two DNA strands. When an enhancer and a promoter are each located within the same cohesin-encircled loop, direct interaction is facilitated, activating transcription. Loss of cohesin impairs these \textbf{enhancer--promoter contacts}, dysregulating developmental gene expression.
+\bigskip
+\textbf{Step 3 --- Find the normal force $N$ (ball's push on the pipe)}
 
-        (c) Cornelia de Lange Syndrome hallmarks: (i) craniofacial features --- synophrys (fused eyebrows), arched eyebrows, thin downturned upper lip, long philtrum; (ii) \textbf{intellectual disability} and microcephaly; (iii) \textbf{growth retardation} and limb anomalies (oligodactyly, micromelia, or phocomelia).
+For the ball to be in equilibrium, the inward normal force from the pipe wall must equal the outward spring force:
+\[
+  \sum F_{\text{radial}} = 0:\quad kd\sqrt{3} - N = 0
+\]
+\[
+  \boxed{N = kd\sqrt{3}}
+\]
 
-\end{enumerate}
+By Newton's third law, the ball pushes on the pipe wall with the same magnitude:
+\[
+  \text{Force of ball on pipe wall} = kd\sqrt{3}
+\]
+
+\bigskip
+\textbf{Verification --- tangential equilibrium:}
+
+The tangential (perpendicular-to-radial) components of the two spring forces are $+F_s\sin(30^\circ)$ and $-F_s\sin(30^\circ)$, which cancel exactly. No tangential friction is required. \checkmark
+
 \end{keybox}
 
-\subsection{Topic 16 --- Restriction Enzymes and Gene Cloning}
+\begin{warnbox}
+\textbf{Key Conceptual Points}
+\begin{itemize}[nosep]
+  \item \textbf{Why $30^\circ$?} The interior angle of an equilateral triangle is $60^\circ$. The outward radial direction bisects this angle, so each spring makes $30^\circ$ with radial.
+  \item The $\sqrt{3}$ factor arises from $2\cos(30^\circ) = \sqrt{3}$. It means each ball pushes harder than a single spring force: $kd\sqrt{3} \approx 1.73\,kd$.
+  \item By symmetry, all three balls exert the same normal force on the pipe, so the pipe experiences three equal, equally-spaced contact forces.
+  \item This result is independent of the pipe radius $R$: the geometry only depends on the triangle's angles, not its size.
+  \item To avoid pipe damage, ensure $kd\sqrt{3}$ is less than the pipe wall's rated lateral load capacity.
+\end{itemize}
+\end{warnbox}
 
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{16\Alph*.}]
+% ════════════════════════════════════════════════════════════════
+\newpage
+\part{Summary of Methods \& Results}
+% ════════════════════════════════════════════════════════════════
 
-  \item \textbf{Answer: (C)} \textit{Rationale: EcoRI cuts between G and A on both strands of 5'-GAATTC-3', generating 5' single-stranded overhangs (sticky ends) of sequence AATT. These 5' overhangs allow compatible fragments to anneal and be ligated.}
+\begin{diagbox}{Problem Summary Table}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}p{3.2cm} p{4.5cm} p{5.5cm}@{}}
+\toprule
+\textbf{Problem} & \textbf{Key Method} & \textbf{Answer} \\
+\midrule
+\textbf{1. Flag Girder} &
+  $\sum\tau = 0$ about wall bolt; then $\sum\vec{F}=0$ &
+  Cable bolt: $T = 440\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark\\
+  & &
+  Girder bolt: $R \approx 386\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark\\
+  & & \textbf{Approve the plan.} \\
+\midrule
+\textbf{2. Spinal Load} &
+  $\sum\tau = 0$ about lumbar pivot; then $\sum\vec{F}=0$ &
+  $F_m \approx 43\,W$; \; $F_S \approx 43\,W$ \\
+  & & Spine force is $\approx 43\times$ box weight \\
+\midrule
+\textbf{3. Pipe Springs} &
+  Equilateral geometry ($30^\circ$); radial $\sum F=0$ &
+  $N = kd\sqrt{3}$ \\
+\bottomrule
+\end{tabular}
+\end{diagbox}
 
-  \item \textbf{Answer: (B)} \textit{Rationale: A palindromic restriction sequence reads identically on both strands in the 5' to 3' direction. For EcoRI: top strand 5'-GAATTC-3' and bottom strand read 5'-GAATTC-3' (the complement is also GAATTC read 5'$\to$3').}
+\begin{instructbox}
+\textbf{General Strategy for Static Equilibrium Problems}
 
-  \item \textbf{Answer: (B)} \textit{Rationale: In blue-white screening, insertion of foreign DNA into the multiple cloning site within \textit{lacZ} disrupts $\beta$-galactosidase function. Without $\beta$-galactosidase, X-gal is not cleaved to produce the blue product, so colonies with a recombinant insert appear white. Blue colonies have re-circularised vector with intact \textit{lacZ}.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: $LEU2$ encodes an enzyme in the leucine biosynthesis pathway. Yeast host strains carry a \textit{leu2} deletion (leucine auxotroph); they can only grow on leucine-deficient medium if they carry a plasmid bearing the wild-type $LEU2$ gene. This provides strong selection for plasmid maintenance.}
-
-  \item \textit{Rationale: Probabilistic insertion, antibiotic selection, and copy-number amplification.}
-
-        (a) With thousands of genomic fragments and only one vector molecule per ligation event, the probability that any given fragment encounters and ligates into a given vector molecule is very low. Additionally, the ligation conditions are designed so that \textbf{one insert enters one vector}: at low insert:vector molar ratios, re-ligation of a single insert per vector is statistically favoured.
-
-        (b) Only bacteria that have taken up a plasmid acquire the $amp^R$ gene and can produce $\beta$-lactamase, which inactivates ampicillin. Cells without the plasmid \textbf{die in ampicillin medium}.
-
-        (c) Starting: 1 cell/mL. After 20 divisions: $2^{20} = 1{,}048{,}576$ cells/mL $\approx \mathbf{10^6}$ cells/mL.
-        Plasmid copies/cell $\approx 37$ (midpoint of 25--50). Total copies/mL $\approx 10^6 \times 37 \approx \mathbf{3.7\times10^7}$ copies/mL.
-
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Identify the system} and draw a complete free-body diagram.
+  \item \textbf{Choose a convenient pivot} for the torque equation (eliminate as many unknowns as possible).
+  \item \textbf{Write the torque equation} $\sum \tau = 0$. Only forces perpendicular to the moment arm contribute.
+  \item \textbf{Write force equations} $\sum F_x = 0$ and $\sum F_y = 0$.
+  \item \textbf{Solve the system} of equations. Always check units and signs.
+  \item \textbf{Check your answer} against physical intuition or additional constraints (e.g., rated bolt strength).
 \end{enumerate}
-\end{keybox}
+\end{instructbox}
 
-\subsection{Topic 17 --- Polymerase Chain Reaction (PCR)}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{17\Alph*.}]
-
-  \item \textbf{Answer: (D)} \textit{Rationale: The four essential PCR components are: (1) template DNA, (2) two sequence-specific primers, (3) dNTPs, and (4) a thermostable DNA polymerase (Taq). Restriction endonucleases are used to cut DNA but are not required for PCR amplification.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: The denaturation step requires $\sim$94--96$^\circ$C to break the hydrogen bonds between complementary bases and fully separate the two DNA strands. 50--65$^\circ$C is the annealing temperature; 72$^\circ$C is the extension temperature for Taq polymerase.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: After $n$ PCR cycles starting from 1 copy, the theoretical number of copies is $2^n$. After 30 cycles: $2^{30} = 1{,}073{,}741{,}824 \approx 10^9$ copies.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: The primer has 18 nt total; 60\% GC $\Rightarrow$ G+C $= 0.60\times18 \approx 11$; A+T $= 7$. $T_m = 4(11) + 2(7) = 44 + 14 = 58^\circ$C.}
-
-  \item \textit{Rationale: Site-directed mutagenesis is an application of PCR-based methods.}
-
-        (a) Steps: (i) Denature the cloned insert + vector to single-stranded DNA. (ii) Anneal a synthetic primer containing the desired mutation (creating a 1--3 nt mismatch at the mutation site). (iii) Extend the primer using Taq (or a high-fidelity polymerase) to copy the full plasmid. (iv) Treat with \textit{Dpn}I (which digests methylated, parental DNA) to eliminate the wild-type template. (v) Transform into bacteria; individual colonies carry plasmids.
-
-        (b) The mutant clone is identified by \textbf{DNA sequencing} of the insert, confirming the desired mutation and the absence of unintended mutations.
-
-        (c) Experimental strategy: (i) Express the wild-type and mutant proteins in a suitable expression system. (ii) Purify both proteins. (iii) Measure enzyme activity using a standard \textbf{biochemical assay} (e.g.\ substrate consumption or product formation over time). (iv) Compare kinetic parameters ($k_{\rm cat}$, $K_M$) between wild-type and mutant. (v) Include a \textbf{catalytic-dead mutant control} (known active-site residue mutated) as a negative control.
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 18 --- Gel Electrophoresis and Molecular Blotting}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{18\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: DNA is negatively charged because its phosphate backbone carries a net negative charge at physiological pH. In an electric field, negatively charged DNA migrates from the cathode toward the anode (``run to red''). The nitrogenous bases are uncharged under normal electrophoresis conditions.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: For linear dsDNA in agarose, fragment size (number of base pairs) is the primary determinant of migration rate because smaller fragments thread more easily through the gel matrix. GC content does not significantly affect migration under standard conditions.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: Supercoiled DNA is the most compact topological form and therefore migrates fastest through the agarose gel. Nicked circular DNA is relaxed and has the largest effective radius, so it migrates slowest. Linear DNA migrates at an intermediate rate.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: In EMSA, when a protein binds to the labelled DNA, the resulting protein--DNA complex has higher molecular mass than free DNA. This increased mass reduces the complex's mobility in the native gel, causing it to migrate more slowly and appear as a shifted (higher) band --- the diagnostic ``shift'' indicating protein--DNA interaction.}
-
-  \item \textit{Rationale: Northern detects RNA, Western detects protein; both use hybridisation/antibody-based detection.}
-
-        (a) \textbf{Northern blot}: isolate mRNA $\to$ separate by agarose gel electrophoresis under denaturing conditions $\to$ blot to nylon membrane $\to$ hybridise with labelled DNA probe complementary to target mRNA $\to$ wash off non-specific probe $\to$ detect labelled bands by autoradiography or fluorescence.
-        \textbf{Western blot}: separate proteins by SDS-PAGE $\to$ transfer to nitrocellulose or PVDF membrane $\to$ block with non-specific protein $\to$ add primary antibody (binds target protein) $\to$ add secondary antibody conjugated to alkaline phosphatase $\to$ add XP substrate $\to$ detect dark purple band.
-
-        (b) \textbf{Northern}: $\beta$-globin mRNA is present in brain cells but absent in intestinal cells; brain cells \textbf{express} the $\beta$-globin gene while intestinal cells do \textbf{not}. \textbf{Western}: $\beta$-globin protein is present in brain but not intestinal cells, consistent with the mRNA expression data. Together they confirm tissue-specific expression at both RNA and protein levels.
-
-        (c) Two explanations for an oversized Northern band: (i) \textbf{Alternative splicing} of the $\beta$-globin pre-mRNA in this tissue retains an intron, producing a larger transcript. (ii) The probe detects a \textbf{related but larger transcript} from a homologous gene (cross-hybridisation).
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 19 --- Gene Knockouts and RNA Interference}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{19\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: In RNAi knockdown, the gene itself is intact (present in the genome), but the corresponding mRNA is targeted for degradation by the RISC complex. As a result, protein levels are greatly reduced or absent. This contrasts with a complete knockout, where the gene itself is absent.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: Dicer is the RNase III-family enzyme that processes dsRNA into siRNA duplexes of $\sim$21--23 nt. The siRNA is then loaded into RISC, where the guide strand directs Argonaute (Slicer) to cleave the complementary target mRNA. RNA polymerase III and reverse transcriptase are not involved in siRNA biogenesis.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: To produce recombinant insulin in bacteria, the cDNA is synthesised using reverse transcriptase (RT) acting on insulin mRNA isolated from pancreatic $\beta$ cells. This generates a cDNA lacking introns, which can be expressed in bacteria. Bacteria cannot process pre-mRNA, so genomic DNA (with introns) cannot be used directly.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: \textit{E.\ coli} is preferred for insulin production because it grows rapidly and inexpensively, can be scaled up easily, and produces large quantities of recombinant protein. However, \textit{E.\ coli} does NOT form disulfide bonds in the cytoplasm and does not naturally process proinsulin; these post-translational challenges require additional engineering steps.}
-
-  \item \textit{Rationale: Cohesin-mediated gene regulation and disease mechanism.}
-
-        (a) Cohesin forms loops that juxtapose enhancers and promoters, activating specific developmental genes. Loss of cohesin disrupts these loops $\Rightarrow$ enhancers can no longer reach their target promoters $\Rightarrow$ \textbf{reduced expression of genes} normally activated by those enhancers. This leads to dysregulation of multiple developmental pathways simultaneously.
-
-        (b) Different missense mutations alter the cohesin complex to varying degrees: a mutation in a non-critical residue may only \textbf{partially impair} the protein-interaction surface of the ring, causing mild dysregulation. A mutation at a critical ATPase or hinge residue causes \textbf{severe loss of function}. Additionally, dominant-negative effects, haploinsufficiency, and genetic background modifiers contribute to variable expressivity.
-
-        (c) \textbf{NIPBL} (Nipped-B-like) is the \textbf{cohesin loader}; it recruits the cohesin ring to chromosomes at specific loading sites (especially replication forks and gene regulatory elements). Without functional NIPBL, cohesin is not efficiently loaded onto chromosomes, reducing the number of active enhancer--promoter loops and impairing gene regulation. A \textit{de~novo} mutation means the patient has a \textbf{new (non-inherited) mutation} not present in either parent; because CdLS is typically caused by heterozygous loss-of-function mutations (\textbf{haploinsufficiency}), a single defective copy of \textit{NIPBL} is sufficient to cause the syndrome.
-
-\end{enumerate}
-\end{keybox}
-
-% ── Gene Regulation in Eukaryotes Answer Key ─────────────────────────────────
-\section{Gene Regulation in Eukaryotes Solutions}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Topic 20 --- Transcription Factors and Gene Activation}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{20\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: TFIID, through its TBP (TATA-binding protein) subunit, recognises and binds the TATA box at the core promoter. This is the nucleating event for pre-initiation complex assembly. TFIIB subsequently bridges TFIID to RNA pol II; TFIIH unwinds the DNA at the TSS and phosphorylates the pol II CTD.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: Regulatory transcription factors are expressed in specific cell types or in response to specific signals; they bind enhancers or silencers to control transcription of specific target genes. General TFs (e.g.\ TFIID, TFIIB, TFIIH) are required at every RNA pol II gene and are expressed ubiquitously.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The Mediator complex acts as a bridge between enhancer-bound activators and the pre-initiation complex (RNA pol II + general TFs) at the core promoter. Activators contact Mediator via their activation domains; Mediator in turn stabilises PIC assembly and stimulates pol II CTD phosphorylation to initiate elongation.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The acidic activation domain recruits Mediator subunits and/or components of TFIID, thereby stimulating PIC assembly. Without the activation domain, the factor can still occupy the enhancer via its zinc-finger domain but cannot recruit Mediator or stimulate PIC formation, so transcription falls to basal levels.}
-
-  \item \textit{Rationale:} CTCF/cohesin-dependent insulation is mechanistically linked to TAD boundaries; its loss disrupts enhancer--promoter specificity.
-  \begin{enumerate}[label=\arabic*.]
-    \item The insulator \textbf{blocks enhancer-to-promoter communication}: if CTCF is bound between them, the enhancer's effect cannot cross the boundary, reducing transcription of the target gene to basal levels.
-    \item \textbf{CTCF} binds its 19-bp consensus motif at insulator sites; \textbf{cohesin} (loaded by NIPBL) is recruited to CTCF-bound sites and extrudes a chromatin loop until stalling.
-          Two convergently oriented CTCF sites anchor a stable loop domain (TAD), keeping regulatory elements and genes within each TAD insulated from those in neighbouring TADs.
-    \item \textbf{Mechanism 1 --- Enhancer hijacking:} Loss of a CTCF boundary allows an oncogene promoter to come under the influence of an enhancer from a neighbouring TAD, driving constitutive oncogene expression.
-          \textbf{Mechanism 2 --- Silencer escape:} A tumour-suppressor gene previously insulated from a repressive domain becomes exposed to that domain, leading to its silencing.
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 21 --- Chromatin Remodeling and Histone Modifications}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{21\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: ATP-dependent chromatin remodeling complexes (e.g.\ SWI/SNF, ISWI, NuRD) use ATP hydrolysis to reposition or eject nucleosomes, altering DNA accessibility for transcription factors. They do not directly add methyl or acetyl groups to histones (that is the role of HATs/HMTs) and do not degrade histones or methylate DNA.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: H3K4me3 (trimethylation of histone H3 lysine 4) is a hallmark of active gene promoters. It is read by PHD-finger proteins (e.g.\ TAF3, a TFIID subunit) that stabilise PIC assembly. H3K27me3 marks Polycomb-repressed genes; H3K9me3 marks constitutive heterochromatin; H3K36me3 marks actively transcribed gene bodies.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: Acetylation of histone lysine residues by HATs neutralises the positive (+) charge of the lysine $\varepsilon$-amino group, reducing the electrostatic attraction between histones and the negatively charged DNA phosphate backbone. This loosens the nucleosome and facilitates transcription factor access. Additionally, acetylated lysines are read by bromodomain-containing co-activators.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: HDAC inhibitors (e.g.\ vorinostat/SAHA) prevent HDACs from removing acetyl groups from histones, resulting in global hyperacetylation. Hyperacetylated chromatin is more open and accessible, causing decondensation of heterochromatin and re-expression of genes previously silenced by HDAC-mediated deacetylation (e.g.\ tumour-suppressor genes in cancer cells).}
-
-  \item \textit{Rationale:} SWI/SNF is a tumour suppressor; its loss impairs accessibility of proliferation-limiting genes.
-  \begin{enumerate}[label=\arabic*.]
-    \item Without SWI/SNF, nucleosomes are not repositioned at tumour-suppressor gene promoters $\Rightarrow$ TFIID cannot access the TATA box $\Rightarrow$ no PIC $\Rightarrow$ no transcription of e.g.\ \textit{CDKN2A} (p16$^{\text{INK4A}}$), \textit{RB1}, or \textit{PTEN} $\Rightarrow$ uncontrolled cell proliferation.
-    \item \textbf{Strategy --- exploit synthetic lethality:} SWI/SNF-deficient cells become dependent on the parallel EZH2 (PRC2) pathway for survival. Inhibiting EZH2 (e.g.\ with tazemetostat) re-activates tumour-suppressor genes and selectively kills SWI/SNF$^{-}$ cancer cells while sparing normal cells that retain SWI/SNF and can compensate.
-    \item Context-dependency arises from \textbf{subunit composition}: SWI/SNF exists as multiple sub-complexes (BAF, PBAF, ncBAF) with different subunits that recruit either co-activators or co-repressors.
-          For example, ARID1A-containing BAF activates enhancers, while PBRM1-containing PBAF represses certain loci.
-          Which genes are activated vs.\ repressed therefore depends on which SWI/SNF sub-complex variant is present.
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 22 --- DNA Methylation and Epigenetic Regulation}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{22\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: In mammals, DNA methylation occurs on cytosine residues within CpG dinucleotides, producing 5-methylcytosine (5mC). This is symmetrical: when CpG on one strand is methylated, the complementary CpG on the other strand is also methylated. Adenine GATC methylation occurs in bacteria (Dam methylase), not mammals.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: DNMT1 is the maintenance methyltransferase. It recognises hemi-methylated DNA (one parental strand methylated after replication) and methylates the newly synthesised daughter strand, faithfully propagating the methylation pattern through cell divisions. DNMT3A and DNMT3B are de novo methyltransferases that establish new methylation patterns during development.}
-
-  \item \textbf{Answer: (A)} \textit{Rationale: When CpG islands are hypermethylated, methyl-CpG binding domain (MBD) proteins (e.g.\ MeCP2, MBD2) bind the methylated cytosines and recruit HDAC/NuRD co-repressor complexes. Deacetylation of histones (and subsequent H3K9 methylation) leads to chromatin compaction and transcriptional silencing of the tumour-suppressor gene.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: On the wild-type paternal chromosome, the ICR is methylated, which blocks CTCF binding and allows the downstream enhancer to loop to \textit{IGF2}. If the paternal ICR loses its methylation, CTCF can now bind the paternal ICR, redirecting the enhancer to the non-coding RNA \textit{H19} instead of \textit{IGF2}. This silences the paternal \textit{IGF2} allele, leading to biallelic silencing and growth deficiency (Silver--Russell syndrome phenotype).}
-
-  \item \textit{Rationale:} Combinatorial logic enables a small TF vocabulary to specify many cell states; synergy arises from cooperative recruitment of co-activators.
-  \begin{enumerate}[label=\arabic*.]
-    \item DNA methylation occurs on \textbf{cytosine} residues within \textbf{CpG dinucleotides}, producing \textbf{5-methylcytosine (5mC)}.
-          CpG sites on both strands are methylated in a symmetrical pattern (each CpG on one strand is paired with a CpG on the complementary strand, read in the 5$'\to$3$'$ direction).
-    \item \textbf{DNMT3A / DNMT3B:} \emph{de novo} methyltransferases --- add methyl groups to previously unmethylated CpGs during development.
-          \textbf{DNMT1:} maintenance methyltransferase --- recognises hemi-methylated DNA (one strand methylated after replication) and methylates the new daughter strand, preserving the methylation pattern after each round of replication.
-  \end{enumerate}
-
-  \item \textit{Rationale:} CpG island methylation silences genes by steric exclusion and recruitment of chromatin-condensing complexes.
-  \begin{enumerate}[label=\arabic*.]
-    \item Unmethylated CpG islands are bound by \textbf{CpG-binding proteins} (e.g.\ CFP1/CXXC1) that recruit H3K4 methyltransferases (SET1/COMPASS) $\Rightarrow$ H3K4me3 $\Rightarrow$ open chromatin, allowing TF and TFIID binding.
-    \item \textbf{Mechanism 1 --- Steric exclusion:} 5mC directly prevents binding of transcription factors (e.g.\ SP1, E2F) whose binding sites overlap CpG motifs.
-          \textbf{Mechanism 2 --- MBD recruitment:} Methyl-CpG binding domain proteins (MeCP2, MBD2) bind 5mC and recruit HDAC/NuRD complexes $\Rightarrow$ deacetylation + H3K9 methylation $\Rightarrow$ heterochromatin $\Rightarrow$ silencing.
-    \item \textbf{5-Azacytidine} (azacitidine) is incorporated into DNA in place of cytosine during replication.
-          It forms a covalent adduct with DNMT1, trapping and degrading the enzyme $\Rightarrow$ DNMT1 cannot maintain methylation during subsequent replication $\Rightarrow$ passive demethylation over cell divisions $\Rightarrow$ CpG island becomes unmethylated $\Rightarrow$ tumour-suppressor gene is re-expressed.
-  \end{enumerate}
-
-  \item \textit{Rationale:} Imprinting is allele-specific silencing determined by parental origin; it is epigenetic because the DNA sequence is identical on both alleles.
-  \begin{enumerate}[label=\arabic*.]
-    \item The \textbf{imprinting control region (ICR)} is differentially methylated between parental alleles (established in the germline by DNMT3A/3L).
-          On the silenced allele, ICR methylation recruits MBD proteins + HDACs + H3K9 methyltransferases (e.g.\ G9a), generating compacted heterochromatin that spreads across the imprinted gene cluster.
-          Cohesin + CTCF on the active allele (where the ICR is unmethylated) can insulate the gene from repressive marks.
-    \item Normally, the paternal \textit{IGF2} is expressed because the paternal ICR is methylated, which \textbf{blocks CTCF binding} at the ICR, allowing the downstream enhancer to loop to \textit{IGF2}.
-          If the paternal ICR loses methylation, CTCF binds $\Rightarrow$ the enhancer is redirected to the non-coding RNA \textit{H19} $\Rightarrow$ \textit{IGF2} on the paternal allele is \textbf{silenced} $\Rightarrow$ biallelic silencing $\Rightarrow$ growth deficiency (Silver--Russell syndrome phenotype).
-    \item Imprinting is \textbf{epigenetic} because the maternal and paternal alleles have \emph{identical DNA sequences} but differ in methylation and histone modification; these marks are erased and re-established in the germline each generation, not encoded in the nucleotide sequence.
-  \end{enumerate}
-
-  \item \textit{Rationale:} Combinatorial logic enables a small TF vocabulary to specify many cell states; synergy arises from cooperative recruitment of co-activators.
-  \begin{enumerate}[label=\arabic*.]
-    \item If there are $n$ transcription factors and each can be either ON or OFF, there are $2^n$ possible combinations.
-          Even with 10 TFs, this gives 1{,}024 distinct patterns of gene expression.
-          Because different target genes require different TF combinations, a limited TF repertoire can specify a large number of distinct transcriptional states.
-    \item \textbf{Synergy (20-fold vs.\ additive $\sim$2-fold):}
-          TF-A alone weakly recruits Mediator sub-complex~A; TF-B alone weakly recruits co-activator~B.
-          When both are present simultaneously, their activation domains contact \emph{different} surfaces of Mediator in a cooperative manner, stabilising Mediator binding to the enhancer and dramatically accelerating PIC assembly $\Rightarrow$ superadditive (synergistic) transcription.
-    \item \textbf{Cell-type specificity:} Both cell types express TF-A, but:
-          \textbf{Muscle precursors} express \textbf{MyoD co-activators} (e.g.\ E-proteins as heterodimerisation partners) and have the \textit{MyoD} locus in a permissive chromatin state (H3K4me3 $+$ NFR at the \textit{MyoD} enhancer).
-          \textbf{Liver precursors} express \textbf{ID proteins} (inhibitors of differentiation) that sequester E-proteins, preventing MyoD heterodimerisation, and the \textit{MyoD} locus is in a repressive state (H3K27me3, Polycomb).
-          Therefore, TF-A alone is insufficient; the full activating combination (TF-A + MyoD + E-protein) is only assembled in muscle precursors.
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
-\section{Gene Regulation in Prokaryotes Solutions}
-% ────────────────────────────────────────────────────────────
-
-\subsection{Topic 23 --- The lac Operon: Negative and Positive Control}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{23\Alph*.}]
-
-  \item \textbf{Answer: (C)} \textit{Rationale: \textit{lacZ} encodes $\beta$-galactosidase, the enzyme that cleaves lactose into glucose and galactose (and also produces allolactose, the natural inducer). \textit{lacY} encodes lactose permease; \textit{lacA} encodes galactoside transacetylase; the lac repressor is encoded by \textit{lacI}, which is not part of the operon.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: \textit{lacI} has its own constitutive promoter (the \textit{i} promoter) and is expressed independently of the lac operon regulatory signals. It is considered a separate regulatory gene, not part of the operon. The lac operon consists only of the promoter, operator, and structural genes \textit{lacZ}, \textit{lacY}, \textit{lacA}.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The $\text{I}^S$ (super-repressor) cannot bind allolactose or IPTG (inducer) due to a mutation in its inducer-binding domain. Therefore, it permanently occupies the operator regardless of inducer concentration, resulting in constitutive repression. $\beta$-galactosidase activity is absent or very low even in the presence of excess IPTG.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: When glucose is depleted, the inhibition of adenylyl cyclase is relieved, causing cAMP levels to rise. High cAMP binds the CAP protein, forming the cAMP--CAP complex, which binds the CAP site upstream of the lac promoter and stimulates RNA polymerase binding and transcription. At high glucose, cAMP is low and CAP cannot bind, so the lac operon is poorly transcribed even if lactose is present.}
-
-  \item \textit{Rationale:} Comparing lac (inducible/negative) and trp (repressible/negative) operons reveals the versatility of the repressor-based strategy.
-  \begin{enumerate}[label=\arabic*.]
-    \item \textbf{Negative control:} a repressor protein inhibits transcription by binding the operator; removing the repressor (or preventing its binding) activates the operon.
-          \textbf{Positive control:} an activator protein stimulates transcription when it binds to DNA (e.g.\ CAP at the CAP site); removal of the activator decreases transcription.
-    \item \textbf{lac operon (inducible):} Allolactose (inducer) binds the lac repressor $\Rightarrow$ conformational change $\Rightarrow$ repressor cannot bind operator $\Rightarrow$ transcription ON. The effector \emph{inactivates} the repressor.
-          \textbf{trp operon (repressible):} Tryptophan (corepressor) binds the trp aporepressor $\Rightarrow$ conformational change $\Rightarrow$ repressor--corepressor complex binds operator $\Rightarrow$ transcription OFF. The effector \emph{activates} the repressor.
-    \item Expression predictions:
-          (i) lac, glucose absent/lactose absent: \textbf{Low} (CAP active, repressor ON $\Rightarrow$ no transcription; basal leaky level).
-          (ii) lac, glucose absent/lactose present: \textbf{High} (CAP active + repressor OFF $\Rightarrow$ full transcription).
-          (iii) trp, tryptophan absent: \textbf{High} (trp repressor inactive $\Rightarrow$ operator unoccupied $\Rightarrow$ full transcription; also attenuation is reduced).
-          (iv) trp, tryptophan present: \textbf{Low} (trp repressor--corepressor complex binds operator + attenuation terminates early transcripts).
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 24 --- The trp Operon and Attenuation}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{24\Alph*.}]
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The trp operon is repressible because it is normally ON when tryptophan is scarce (the trp aporepressor is inactive alone). When tryptophan accumulates, it acts as a corepressor that activates the trp repressor, turning the operon OFF. This prevents over-production of tryptophan --- the pathway end product represses its own synthesis.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The trp repressor is synthesised as an inactive aporepressor. For it to become active and bind the operator, the corepressor tryptophan must bind the aporepressor, inducing a conformational change that increases the protein's affinity for the operator DNA. Without tryptophan, the repressor cannot bind the operator and the operon remains active.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: The antiterminator (2--3 hairpin) forms when tryptophan is SCARCE: the ribosome stalls at the Trp codons in region 1 of the leader mRNA (because Trp-tRNA is limiting). The stalled ribosome occupies region 1 but not region 2, freeing region 2 to base-pair with region 3, forming the antiterminator. This prevents the terminator (3--4 hairpin) from forming and allows transcription to continue into the structural genes.}
-
-  \item \textbf{Answer: (C)} \textit{Rationale: In a \textit{trpR} null mutant, the repression mechanism is abolished. At high tryptophan, the repressor cannot repress transcription. However, attenuation is still functional: abundant Trp-tRNA allows rapid translation of the leader peptide, the terminator hairpin forms, and many transcripts terminate early. The result is intermediate (elevated but not maximal) trp operon expression --- higher than wild-type at high Trp, but lower than at low Trp.}
-
-  \item \textit{Rationale:} Comparing both operons illuminates the versatility of repressor-based regulation and the distinction between inducible and repressible systems.
-  \begin{enumerate}[label=\arabic*.]
-    \item \textbf{Key difference in effector molecule role:}
-          \textit{lac operon:} allolactose (inducer) binds the lac repressor and \emph{reduces} its affinity for the operator $\Rightarrow$ operon turned ON.
-          \textit{trp operon:} tryptophan (corepressor) binds the trp aporepressor and \emph{increases} its affinity for the operator $\Rightarrow$ operon turned OFF.
-          In both cases, the repressor cannot bind DNA by itself when conditions do not require the response.
-    \item \textbf{Inducible} (lac): the default state is OFF (repressor blocks transcription); an inducer molecule \emph{induces} (turns on) expression by removing the repressor. Useful for genes whose products are needed only when a substrate is present.
-          \textbf{Repressible} (trp): the default state is ON (repressor inactive, transcription proceeds); accumulation of the end product \emph{represses} expression. Useful for biosynthetic genes whose products must be made unless they are already abundant.
-    \item \textbf{Experimental design:} Construct a merozygote: one DNA molecule carries $\text{O}^c\,\text{Z}^+$; the other (F$'$) carries $\text{O}^+\,\text{Z}^-$.
-          If the operator acts \textit{in cis}, only the structural genes on the same chromosome as $\text{O}^c$ (i.e.\ $\text{Z}^+$) will be expressed constitutively, even in the absence of inducer.
-          The $\text{Z}^-$ gene on the F$'$ (associated with wild-type O$^+$) will remain regulated (expressed only in the presence of inducer).
-          \textbf{Confirming result:} $\beta$-galactosidase ($\text{Z}^+$) activity is constitutive (high without inducer); permease or other proteins from the F$'$ operon are inducible. This proves the operator affects only genes in \textit{cis} on the same DNA molecule.
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
-\subsection{Topic 25 --- Translational and Post-translational Regulation}
-
-\begin{keybox}
-\begin{enumerate}[leftmargin=1.5em, label=\textbf{25\Alph*.}]
-
-  \item \textbf{Answer: (C)} \textit{Rationale: Feedback inhibition acts on the enzyme catalysing the FIRST committed step of the pathway. This is the most metabolically efficient point of inhibition because it prevents all subsequent intermediates from accumulating, conserving ATP and precursors. Inhibiting a later step would allow intermediates before that step to accumulate, causing metabolic imbalance.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: In the isoleucine biosynthesis pathway, threonine deaminase catalyses the first committed step (conversion of threonine to $\alpha$-ketobutyrate). When isoleucine accumulates, it binds the allosteric/regulatory site of threonine deaminase, causing a conformational change that reduces catalytic activity and decreases flux through the pathway.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: micF RNA is antisense to the 5' region of ompF mRNA. At high osmolarity, micF RNA is transcribed and base-pairs with the Shine--Dalgarno sequence and/or AUG region of ompF mRNA via Watson--Crick hydrogen bonding. This prevents ribosome binding to the Shine--Dalgarno sequence, blocking translation initiation. The duplex also targets ompF mRNA for degradation.}
-
-  \item \textbf{Answer: (B)} \textit{Rationale: Translational regulation acts on existing mRNA molecules already present in the cell, providing a faster response than transcriptional regulation, which requires transcription of new mRNA. Under sudden osmotic stress, cells cannot wait for new transcription; translational control of existing ompF mRNA provides immediate adjustment of membrane permeability.}
-
-  \item \textit{Rationale:} Post-translational control via covalent modification and allosteric feedback inhibition is the fastest level of metabolic fine-tuning.
-  \begin{enumerate}[label=\arabic*.]
-    \item \textbf{Irreversible modifications:}
-          (1) Proteolytic cleavage (e.g.\ zymogen activation: trypsinogen $\rightarrow$ trypsin).
-          (2) Attachment of prosthetic groups, lipids, or sugars (e.g.\ lipid anchoring, glycosylation).
-          \textbf{Reversible modifications:}
-          (1) Phosphorylation ($-\mathrm{PO_4}$, added by kinases, removed by phosphatases).
-          (2) Acetylation ($-\mathrm{COCH_3}$, added by acetyltransferases, removed by deacetylases).
-    \item \textbf{Why inhibit the first committed step:}
-          If a later enzyme in the pathway is inhibited, intermediates before that enzyme still accumulate, consuming ATP and precursors unnecessarily and possibly causing metabolic imbalances.
-          Inhibiting the \textbf{first committed step} prevents all intermediates from accumulating; the entire metabolic flux through the pathway is stopped at the very beginning $\Rightarrow$ maximum energy conservation and no build-up of potentially toxic intermediates.
-    \item \textbf{Branched pathways --- isoenzyme or cumulative feedback inhibition:}
-          \textbf{Isoenzymes:} Two distinct enzymes (isoenzymes) catalyse the same first committed step; each isoenzyme is specifically inhibited by the end product of only one branch. This allows each branch to be independently regulated without cross-inhibition.
-          \textbf{Cumulative feedback inhibition:} Each end product \emph{partially} inhibits the common enzyme; when both end products accumulate, their partial inhibitory effects are additive (cumulative), achieving complete inhibition of the shared first step. This allows proportional regulation: if only one end product accumulates, flux through the pathway is only partially reduced, maintaining production of the other product.
-  \end{enumerate}
-
-\end{enumerate}
-\end{keybox}
-
+% ══════════════════════════════════════════════════════════════
 \end{document}
