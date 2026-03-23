@@ -16,8 +16,6 @@
 \usepackage{amsmath,amssymb}
 \usepackage{needspace}
 \usepackage[expansion=false]{microtype}
-\usepackage{tikz}
-\usetikzlibrary{calc}
 \setlength{\headheight}{14.5pt}
 \setlength{\emergencystretch}{5em}
 \hbadness=10000
@@ -41,21 +39,31 @@
 \newtcolorbox{gapbox}{colback=gapcolor,colframe=red!60!black,
   title=\textbf{Skill Gap Analysis},fonttitle=\bfseries,breakable}
 \newtcolorbox{planbox}{colback=plancolor,colframe=green!55!black,
-  title=\textbf{Practice Problems},fonttitle=\bfseries,breakable}
+  title=\textbf{Personalized Study Plan},fonttitle=\bfseries,breakable}
 \newtcolorbox{keybox}{colback=keycolor,colframe=gray!55!black,
-  title=\textbf{Solutions},fonttitle=\bfseries,breakable}
+  title=\textbf{Answer Key},fonttitle=\bfseries,breakable}
 \newtcolorbox{warnbox}{colback=warnbg,colframe=orange!70!black,
   title=\textbf{Important},fonttitle=\bfseries,breakable}
 
 % ── Page style ─────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Physics: Static Equilibrium \& Torque}
-\lhead{University Physics Problem Set}
+\rhead{Community Ecology}
+\lhead{Biology --- Community Ecology Module}
 \cfoot{\thepage}
+
+% ── Confidence scale macro ─────────────────────────────────────
+\newcommand{\confscale}{%
+  \hfill
+  \textbf{1}\,\small(no knowledge)\normalsize\quad
+  \textbf{2}\,\small(minimal)\normalsize\quad
+  \textbf{3}\,\small(partial)\normalsize\quad
+  \textbf{4}\,\small(mostly confident)\normalsize\quad
+  \textbf{5}\,\small(mastered)\normalsize}
 
 % ── Blank helpers ──────────────────────────────────────────────
 \newcommand{\blank}[1][3cm]{\underline{\hspace{#1}}}
+\newcommand{\circleone}{$\bigcirc$\,1\quad$\bigcirc$\,2\quad$\bigcirc$\,3\quad$\bigcirc$\,4\quad$\bigcirc$\,5}
 
 % ══════════════════════════════════════════════════════════════
 \begin{document}
@@ -63,583 +71,955 @@
 
 % ── Title page ────────────────────────────────────────────────
 \begin{center}
-  {\LARGE\bfseries University Physics: Static Equilibrium \& Torque}\\[0.4cm]
-  {\large\bfseries Applied Problems with Complete Solutions}\\[0.3cm]
+  {\LARGE\bfseries Community Ecology}\\[0.4cm]
+  {\large\bfseries Diagnostic Activity \& Study Guide}\\[0.3cm]
+  {\large Interspecific Interactions $\cdot$ Niche $\cdot$ Competition $\cdot$ Succession $\cdot$ Biodiversity}\\[0.2cm]
   \rule{\linewidth}{0.6pt}
 \end{center}
+
+\vspace{0.3cm}
+
+\begin{instructbox}
+\textbf{Module Learning Objectives} (connected to the course learning objective: \emph{Interactions in communities}).
+After completing this module you are expected to answer the following questions so that someone with an
+undergraduate Biology knowledge can fully understand your answers.
+
+\begin{itemize}[leftmargin=1.5em]
+  \item Describe all types of interspecific interactions.
+  \item Giving examples, describe how a niche of a species forms with biotic and abiotic factors of its environment.  Compare fundamental and realized niche.
+  \item Compare intraspecific and interspecific interactions.
+  \item Describe different types of competition avoidance in nature.
+  \item Explain how the Lotka--Volterra model helps understand if two competing species would co-exist in a habitat.
+  \item Describe major symbiotic interactions with examples.
+  \item Describe different types of ecological/community successions.
+  \item Demonstrate the use of the Shannon--Weiner index to measure biodiversity.
+\end{itemize}
+
+\bigskip
+\textbf{How to use this document:}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{Step 1 --- Pre-Diagnostic Self-Rating:} Before looking at any notes, rate your confidence on each topic using the 1--5 scale.
+  \item \textbf{Step 2 --- Diagnostic Questions:} Answer every question without referring to notes or textbook.  Leave blanks rather than guessing randomly.
+  \item \textbf{Step 3 --- Self-Score and Gap Analysis:} Use the Answer Key to score each section, then identify priority gaps.
+  \item \textbf{Step 4 --- Build Your Study Plan:} Any section where you scored \textbf{0} is a priority gap (each section is worth 1 point).  Fill in the personalized study plan.
+  \item \textbf{Step 5 --- Post-Activity Re-Rating:} After focused review, return to Section 1 and re-rate yourself.
+\end{enumerate}
+\end{instructbox}
 
 \tableofcontents
 \newpage
 
-\part{Static Equilibrium Problems}
+% ══════════════════════════════════════════════════════════════
+% SECTION 1 — PRE-DIAGNOSTIC SELF-RATING
+% ══════════════════════════════════════════════════════════════
+\section{Pre-Diagnostic Self-Rating Checklist}
 
-% ════════════════════════════════════════════════════════════════
-\section{Problem 1: The Flag-Raising Girder}
-% ════════════════════════════════════════════════════════════════
+\begin{selfbox}
+Rate your \emph{current} confidence for each topic below.  Circle one number per row.
 
-\begin{planbox}
-\textbf{Problem Statement}
+\vspace{0.2cm}
+\textbf{Scale:}\confscale
 
-You are managing a new office building when the 10~lb automatic flag raising system attached to the end of a
-horizontal girder fails. The maintenance technician for the building volunteers to climb out onto the girder
-wearing a safety harness and go to its end to fix the mechanism. Will you approve the technician's plan?
-
-A quick review of the building's plans shows that the girder is a 120~lb aluminum I-beam that is very strong and
-rigid. One end of the girder is bolted to the wall of the building. Nine feet away, the other end of the girder is
-supported by a strong, lightweight cable. The cable goes up from the end of the girder furthest from the
-building at an angle of $30^\circ$ to the girder until it reaches the vertical wall where it is bolted. The
-technician weighs 150~lbs including equipment. From the specifications of the building, the bolts attaching
-both the cable and the girder to the building have been tested to hold a force of 500~lbs. First you check to
-see if the bolts attaching the cable to the building will hold. If that is safe, then you do the same for the
-bolts holding the girder.
-\end{planbox}
-
-% ─────────────────────────────────────────────────────────────
-\subsection{Diagram \& Setup}
-% ─────────────────────────────────────────────────────────────
-
-\begin{diagbox}{Free-Body Diagram --- Girder}
+\vspace{0.4cm}
 \begin{center}
-\begin{tabular}{l}
-\textbf{System:} The horizontal girder (treated as a rigid rod)\\[4pt]
-\textbf{Coordinate system:} $+x$ horizontal (away from wall), $+y$ vertical (upward)\\[4pt]
-\textbf{Pivot for torques:} Wall bolt (left end of girder, $x=0$)
-\end{tabular}
+\renewcommand{\arraystretch}{1.55}
+\begin{longtable}{|p{0.42\linewidth}|c|c|c|c|c|c|}
+\hline
+\textbf{Topic / Learning Objective} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5}
+  & \parbox[c]{1.4cm}{\centering\textbf{Post-\\Review}} \\
+\hline
+\endhead
+Describe all types of interspecific interactions & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Define ecological niche and list biotic/abiotic factors that shape it & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Compare fundamental vs.\ realized niche & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Compare intraspecific and interspecific competition & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe competition avoidance mechanisms (resource partitioning, character displacement) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Apply the Lotka--Volterra competition model & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe major symbiotic interactions with examples & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Differentiate primary vs.\ secondary succession and autogenic vs.\ allogenic succession & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe microsuccession (serule) & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Calculate the Shannon--Weiner diversity index and interpret richness vs.\ evenness & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Describe dominant species, keystone species, and ecological engineers & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+Explain community equilibrium and trophic cascades & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & $\bigcirc$ & \\
+\hline
+\end{longtable}
 \end{center}
 
-\medskip
-\begin{center}
-\begin{tikzpicture}[scale=0.72, >=stealth, font=\small]
-  % Wall (hatched rectangle on the left)
-  \fill[gray!20] (-0.5,-0.6) rectangle (0,4.2);
-  \draw[thick] (0,-0.6) -- (0,4.2);
-  \foreach \yy in {-0.4,0.0,0.4,0.8,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4.0}
-    \draw[gray!55, thin] (-0.5,\yy) -- (0,\yy+0.38);
-  % Girder (horizontal beam, L = 5 units representing 9 ft)
-  \draw[very thick, brown!60!black] (0,1.0) -- (5.0,1.0);
-  \node[above] at (2.3,1.05) {Girder};
-  % Wall bolt / pivot at left end
-  \filldraw[black] (0,1.0) circle (4pt);
-  \node[above right] at (0,1.0) {Pivot};
-  % Cable bolt on wall at height 1 + 5*tan(30 deg) = 1 + 2.887 = 3.887
-  \filldraw[blue!70!black] (0,3.89) circle (3.5pt);
-  % Cable line from far end of girder up to wall bolt
-  \draw[thick, blue!70!black] (5.0,1.0) -- (0,3.89);
-  \node[right, blue!70!black] at (2.9,2.9) {Cable};
-  % 30-deg angle arc at far end of girder
-  \draw[blue!70!black] (4.3,1.0) arc[start angle=180,end angle=150,radius=0.7];
-  \node[blue!70!black, above] at (3.95,1.18) {$30^\circ$};
-  % Weight of girder: downward at midpoint x=2.5
-  \draw[->,thick,red!60!black] (2.5,1.0) -- (2.5,-0.45)
-    node[below] {$W_g{=}120\,\mathrm{lb}$};
-  % Weight of technician + flag: downward at far end of girder (x=5.0)
-  \draw[->,thick,red!60!black] (5.0,1.0) -- (5.0,-0.70)
-    node[below] {$W_t{+}W_f{=}160\,\mathrm{lb}$};
-  % Cable tension T: along cable direction from far end (toward upper-left)
-  % Direction: (-cos30, sin30) = (-0.866, 0.5)
-  \draw[->,thick,blue!70!black] (5.0,1.0)
-    -- ++({0.8*(-0.866)},{0.8*0.5})
-    node[right, blue!70!black] {$T$};
-  % Reaction force components at wall bolt
-  \draw[->,thick,green!50!black] (0,1.0) -- (1.2,1.0)
-    node[above] {$R_x$};
-  \draw[->,thick,green!50!black] (0,1.0) -- (0,2.3)
-    node[left] {$R_y$};
-  % Dimension lines (placed below weight arrows to avoid crossing them)
-  \draw[<->,gray!65,thin] (0,-1.15) -- (2.5,-1.15);
-  \node[below,gray!65] at (1.25,-1.20) {$L/2$};
-  \draw[<->,gray!65,thin] (0,-1.55) -- (5.0,-1.55);
-  \node[below,gray!65] at (2.5,-1.60) {$L = 9\,\mathrm{ft}$};
-\end{tikzpicture}
-\end{center}
-
-\medskip
-\noindent\textbf{Forces acting on the girder:}
-\begin{itemize}[nosep]
-  \item $W_g = 120\,\mathrm{lb}$ (weight of girder, downward, at $x = L/2 = 4.5\,\mathrm{ft}$)
-  \item $W_t = 150\,\mathrm{lb}$ (technician, downward, at $x = L = 9\,\mathrm{ft}$)
-  \item $W_f = 10\,\mathrm{lb}$ (flag system, downward, at $x = L = 9\,\mathrm{ft}$)
-  \item $T$ (cable tension at angle $30^\circ$ above horizontal, at $x = L = 9\,\mathrm{ft}$, directed toward the upper-left)
-  \item $\vec{R} = (R_x,\, R_y)$ (reaction force from wall bolt, at $x = 0$)
-\end{itemize}
-
-\medskip
-\noindent\textbf{Given:} $L = 9\,\mathrm{ft}$, bolt rated for $500\,\mathrm{lb}$.
-\end{diagbox}
-
-% ─────────────────────────────────────────────────────────────
-\subsection{Solution}
-% ─────────────────────────────────────────────────────────────
-
-\begin{keybox}
-
-\textbf{Step 1 --- Find the cable tension $T$ (check cable bolt)}
-
-Apply the rotational equilibrium condition $\sum\tau = 0$ about the wall bolt. Choosing this pivot eliminates the unknown wall-bolt reaction from the torque equation.
-
-The cable pulls the end of the girder at angle $30^\circ$ above horizontal. Its moment arm is the perpendicular distance from the pivot to the cable's line of action. Because the cable is attached at the far end ($x = L$), the moment arm equals $L\sin(30^\circ)$---equivalently, the torque of the cable tension about the pivot is simply
-\[
-  \tau_T = T\sin(30^\circ)\cdot L
-\]
-because only the \emph{vertical} component of $T$ (perpendicular to the horizontal girder) creates a torque about the horizontal pivot.
-
-Setting the sum of torques equal to zero (counterclockwise positive):
-\[
-  T\sin(30^\circ)\cdot L
-  - W_g\cdot\frac{L}{2}
-  - W_t\cdot L
-  - W_f\cdot L = 0
-\]
-\[
-  T\,(0.5)\,(9\,\mathrm{ft})
-  = (120\,\mathrm{lb})(4.5\,\mathrm{ft})
-  + (150\,\mathrm{lb})(9\,\mathrm{ft})
-  + (10\,\mathrm{lb})(9\,\mathrm{ft})
-\]
-\[
-  4.5\,T = 540 + 1350 + 90 = 1980\,\mathrm{lb\cdot ft}
-\]
-\[
-  \boxed{T = 440\,\mathrm{lb}}
-\]
-
-\textit{Check cable bolt:} $T = 440\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark \quad \textbf{The cable bolt is safe.}
-
-\bigskip
-\textbf{Step 2 --- Find the wall-bolt reaction force $\vec{R}$ (check girder bolt)}
-
-The cable tension components are:
-\[
-  T_x = T\cos(30^\circ) = 440\,\tfrac{\sqrt{3}}{2} \approx 381.1\,\mathrm{lb}
-  \quad(\text{horizontal; cable pulls girder end in }{-x}\text{ direction, toward wall})
-\]
-\[
-  T_y = T\sin(30^\circ) = 440\,(0.5) = 220\,\mathrm{lb}
-  \quad(\text{upward})
-\]
-
-Apply force equilibrium $\sum F_x = 0$ and $\sum F_y = 0$. The cable tension has a component $T_x$ pulling the girder end toward the wall ($-x$). The wall bolt must push the girder away from the wall ($+x$) to maintain equilibrium, so:
-\[
-  \sum F_x = 0:\quad R_x - T_x = 0
-  \;\Longrightarrow\;
-  R_x = T\cos(30^\circ) \approx 381.1\,\mathrm{lb}
-\]
-\[
-  \sum F_y = 0:\quad R_y + T_y - W_g - W_t - W_f = 0
-\]
-\[
-  R_y = (120 + 150 + 10)\,\mathrm{lb} - 220\,\mathrm{lb}
-       = 280 - 220 = 60\,\mathrm{lb}
-\]
-
-The magnitude of the force on the wall bolt holding the girder:
-\[
-  R = \sqrt{R_x^2 + R_y^2}
-    = \sqrt{(381.1)^2 + (60)^2}
-    = \sqrt{145237 + 3600}
-    = \sqrt{148837}
-    \approx \boxed{385.8\,\mathrm{lb}}
-\]
-
-\textit{Check girder bolt:} $R \approx 386\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark \quad \textbf{The girder bolt is safe.}
-
-\bigskip
-\textbf{Conclusion:} Both bolts are below their 500~lb rated strength. \textbf{You should approve the technician's plan.}
-
-\end{keybox}
-
-\begin{warnbox}
-\textbf{Key Conceptual Points}
-\begin{itemize}[nosep]
-  \item Always choose the pivot at the point with the most unknown forces to simplify the torque equation.
-  \item The torque of a force equals (force magnitude) $\times$ (perpendicular distance from pivot to line of action), equivalent to $F_\perp \cdot r$ or $F \cdot r_\perp$.
-  \item Both translational \emph{and} rotational equilibrium must be checked.
-  \item The wall bolt experiences the \emph{vector sum} of all force components, not just one direction.
-\end{itemize}
-\end{warnbox}
+\vspace{0.2cm}
+\textbf{Pre-Rating Total (sum of circled numbers):} \blank[2cm] / 60
+\quad\textbf{Post-Rating Total:} \blank[2cm] / 60
+\end{selfbox}
 
 \newpage
 
-% ════════════════════════════════════════════════════════════════
-\section{Problem 2: Spinal Loading During Improper Lifting}
-% ════════════════════════════════════════════════════════════════
+% ══════════════════════════════════════════════════════════════
+% SECTION 2 — INTERSPECIFIC INTERACTIONS
+% ══════════════════════════════════════════════════════════════
+\section{Interspecific Interactions}
 
-\begin{planbox}
-\textbf{Problem Statement}
+\begin{diagbox}{Interspecific Interactions --- 1 Point}
 
-You are studying spinal damage caused by routine activities. Before starting this study, you need to determine
-how the force on the spine at the fifth lumbar vertebra, where the spine is connected to the pelvis, depends on
-the weight of a box lifted improperly from the floor. In this case, a person bends over so their back is
-horizontal and lifts the box straight up.
+\textbf{Directions:} Answer the question below without using notes.
 
-To model the situation, you decide to represent the spine as a uniform horizontal rod with a known length $L$
-and negligible weight. You also neglect the weight of the back. One end of the rod is where the shoulders
-support the weight $W$ of the box as it is lifted off the floor. The other end of the rod is where the spine is
-attached to its pivot at the fifth lumbar vertebra. Although the back muscles are complicated, for this simple
-model you assume that the principal muscle lifting the spine is attached two-thirds of the way up the spine at
-an angle of $2^\circ$ to the horizontal spine.
-\end{planbox}
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.}]
 
-% ─────────────────────────────────────────────────────────────
-\subsection{Diagram \& Setup}
-% ─────────────────────────────────────────────────────────────
+  \item Complete the interspecific interactions table by filling in the name of each interaction
+        and the effect on each species ($+$, $-$, or $0$).  The first row is done for you as an example.
 
-\begin{diagbox}{Free-Body Diagram --- Horizontal Spine}
-\begin{center}
-\begin{tabular}{l}
-\textbf{System:} The spine (modeled as a massless horizontal rod of length $L$)\\[4pt]
-\textbf{Coordinate system:} $+x$ horizontal (away from pelvis toward shoulders), $+y$ upward\\[4pt]
-\textbf{Pivot:} Fifth lumbar vertebra at $x = 0$
-\end{tabular}
-\end{center}
+  \vspace{0.3cm}
+  \begin{center}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{|p{3.5cm}|c|c|p{5cm}|}
+  \hline
+  \textbf{Interaction} & \textbf{Species 1 effect} & \textbf{Species 2 effect} & \textbf{Brief description / example} \\
+  \hline
+  Competition & $-$ & $-$ & Both harmed; compete for shared resource \\
+  \hline
+  \blank[2.5cm] & $-$ & $0$ & \blank[4.5cm] \\
+  \hline
+  \blank[2.5cm] & $+$ & $-$ & \blank[4.5cm] \\
+  \hline
+  \blank[2.5cm] & $+$ & $0$ & \blank[4.5cm] \\
+  \hline
+  Mutualism & \blank & \blank & \blank[4.5cm] \\
+  \hline
+  \blank[2.5cm] & $0$ & $0$ & \blank[4.5cm] \\
+  \hline
+  \end{tabular}
+  \end{center}
+  \hfill\textit{(1 pt)}
 
-\medskip
-\begin{center}
-\begin{tikzpicture}[scale=0.82, >=stealth, font=\small]
-  % Spine rod (horizontal, pivot at left, shoulder at right)
-  % L = 8 units; muscle attachment at 2L/3 = 5.33 units
-  \draw[very thick] (0,0) -- (8,0);
-  \node[above] at (3.0,0.05) {Spine};
-  % Pivot: fifth lumbar vertebra at x=0
-  \filldraw[black] (0,0) circle (4pt);
-  \node[below left=3pt] at (0,0) {Pivot (L5)};
-  % Shoulder end at x=8
-  \filldraw[black] (8,0) circle (3pt);
-  \node[above right] at (8,0) {Shoulder};
-  % Joint reaction force components at pivot
-  \draw[->,thick,green!50!black] (0,0) -- (1.5,0)
-    node[above] {$F_{Sx}$};
-  \draw[->,thick,green!50!black] (0,0) -- (0,-1.1)
-    node[left] {$F_{Sy}$};
-  % Muscle attachment point at x = 2L/3 = 5.33
-  \filldraw[black] (5.33,0) circle (2.5pt);
-  % Muscle force Fm: 2 deg above horizontal, pointing left toward pivot
-  % Angle exaggerated (~10 deg) for print clarity; labeled 2 deg
-  % Direction: approximately (cos170, sin170) = (-0.985, 0.174)
-  \draw[->,thick,blue!70!black] (5.33,0)
-    -- ++({1.5*(-0.985)},{1.5*0.174})
-    node[above left, blue!70!black] {$F_m$};
-  % Angle arc and label for 2 deg (drawn at ~10 deg for visibility)
-  \draw[blue!70!black] (5.33,0) ++(-0.55,0)
-    arc[start angle=180,end angle=170,radius=0.55];
-  \node[blue!70!black, left] at (4.65,0.12) {$2^\circ$};
-  % Weight W: downward at shoulder (x=8)
-  \draw[->,thick,red!60!black] (8,0) -- (8,-1.60)
-    node[below] {$W$};
-  % Dimension lines (endpoints offset from force-arrow axes to avoid overlap)
-  \draw[<->,gray!65,thin] (0.25,-0.75) -- (5.33,-0.75);
-  \node[below,gray!65] at (2.79,-0.80) {$\tfrac{2}{3}L$};
-  \draw[<->,gray!65,thin] (0.25,-1.30) -- (7.75,-1.30);
-  \node[below,gray!65] at (4.0,-1.35) {$L$};
-\end{tikzpicture}
-\end{center}
-
-\medskip
-\noindent\textbf{Forces acting on the spine:}
-\begin{itemize}[nosep]
-  \item $W$ (box weight, downward) at $x = L$ (shoulder end)
-  \item $F_m$ (back muscle force, at angle $2^\circ$ to horizontal) at $x = \tfrac{2}{3}L$
-  \item $\vec{F}_S = (F_{Sx},\, F_{Sy})$ (joint reaction force at fifth lumbar, at $x = 0$)
-\end{itemize}
-
-\medskip
-\noindent The muscle is nearly parallel to the spine. It pulls mostly horizontally (compressing the spine) with a small upward component that provides the restoring torque.
-\end{diagbox}
-
-% ─────────────────────────────────────────────────────────────
-\subsection{Solution}
-% ─────────────────────────────────────────────────────────────
-
-\begin{keybox}
-
-\textbf{Step 1 --- Find the back muscle force $F_m$}
-
-Apply rotational equilibrium $\sum\tau = 0$ about the pivot at the fifth lumbar vertebra.
-
-Only the \emph{component of $F_m$ perpendicular to the spine} (i.e., the vertical component $F_m\sin 2^\circ$) contributes a torque. Counterclockwise is positive:
-\[
-  F_m\sin(2^\circ)\cdot\frac{2L}{3} - W\cdot L = 0
-\]
-\[
-  F_m\sin(2^\circ) = \frac{W\cdot L}{\dfrac{2L}{3}} = \frac{3W}{2}
-\]
-\[
-  F_m = \frac{3W}{2\sin(2^\circ)} = \frac{3W}{2\times 0.03490} = \frac{3W}{0.06981}
-  \approx \boxed{42.98\,W}
-\]
-
-\textit{Result:} The back muscle must exert a force approximately \textbf{43 times the weight of the box}! This enormous force is required because the muscle moment arm ($\tfrac{2}{3}L\,\sin 2^\circ$) is extremely small compared to the box moment arm ($L$).
-
-\bigskip
-\textbf{Step 2 --- Find the force on the fifth lumbar vertebra}
-
-Apply translational equilibrium:
-
-\[
-  \sum F_x = 0:\quad F_{Sx} - F_m\cos(2^\circ) = 0
-  \;\Longrightarrow\;
-  F_{Sx} = F_m\cos(2^\circ) \approx 42.98W\times 0.99939 \approx 42.95\,W
-\]
-\[
-  \sum F_y = 0:\quad F_{Sy} + F_m\sin(2^\circ) - W = 0
-\]
-\[
-  F_{Sy} = W - F_m\sin(2^\circ) = W - \frac{3W}{2} = -\frac{W}{2}
-\]
-(The negative sign indicates a downward component at the vertebra.)
-
-The magnitude of the total force on the fifth lumbar vertebra:
-\[
-  F_S = \sqrt{F_{Sx}^2 + F_{Sy}^2}
-      = \sqrt{(42.95W)^2 + (0.5W)^2}
-      = W\sqrt{1844.7 + 0.25}
-      = W\sqrt{1844.9}
-      \approx \boxed{42.95\,W}
-\]
-
-\textbf{The force on the fifth lumbar vertebra is approximately 43 times the weight of the box.}
-
-For example, if the box weighs 30~lb, the spine experiences a compressive force of approximately $43 \times 30 = 1290\,\mathrm{lb}$ --- nearly two-thirds of a ton!
-
-\bigskip
-\textbf{Conclusion:} The force on the spine scales linearly with the box weight:
-\[
-  F_S \approx \frac{3\cos(2^\circ)}{2\sin(2^\circ)}\,W \approx \frac{3}{2\tan(2^\circ)}\,W \approx 42.95\,W
-\]
-
-\end{keybox}
-
-\begin{warnbox}
-\textbf{Key Conceptual Points}
-\begin{itemize}[nosep]
-  \item A small angle ($2^\circ$) leads to a tiny torque arm for the muscle, requiring an enormous muscle force to balance a moderate load.
-  \item The dominant force at the lumbar vertebra is the large \emph{horizontal} compressive component $F_m\cos(2^\circ)$, which is almost entirely due to the muscle.
-  \item This result explains why improper lifting (back horizontal) causes far more spinal stress than proper lifting (back upright), where the geometry is far more favorable.
-  \item The force on the spine is \emph{independent of the length $L$}: longer or shorter spines all experience the same ratio $F_S/W \approx 43$.
-\end{itemize}
-\end{warnbox}
-
-\newpage
-
-% ════════════════════════════════════════════════════════════════
-\section{Problem 3: Spring-Ball Device Inside a Cylindrical Pipe}
-% ════════════════════════════════════════════════════════════════
-
-\begin{planbox}
-\textbf{Problem Statement}
-
-You have been asked to evaluate a device designed to keep thin-walled cylindrical pipes from collapsing.
-The design has three identical very small balls connected in an equilateral triangle by three identical springs.
-When inserted into a pipe, the springs are compressed so that each ball exerts a force on the wall of the pipe.
-You worry that the thin-walled pipe might be damaged by the device, so you decide to calculate the push of
-one of the balls on the inside of the circular pipe wall.
-
-You know the spring constant $k$ and the compression distance $d$ of each spring when it is in the pipe.
-You also know that the sum of the angles of any triangle is $180^\circ$ and an equilateral triangle has equal
-angles.
-\end{planbox}
-
-% ─────────────────────────────────────────────────────────────
-\subsection{Diagram \& Setup}
-% ─────────────────────────────────────────────────────────────
-
-\begin{diagbox}{Geometry --- Equilateral Triangle Inscribed in Circular Pipe}
-\begin{center}
-\begin{tabular}{l}
-\textbf{System:} One ball (at a vertex of the equilateral triangle, touching the pipe wall)\\[4pt]
-\textbf{Pipe radius:} $R$ (circumradius of the equilateral triangle)\\[4pt]
-\textbf{Each spring:} compressed by $d$, exerts force $F_s = kd$ pushing balls \emph{apart}
-\end{tabular}
-\end{center}
-
-\medskip
-\begin{center}
-\begin{tikzpicture}[scale=1.2, >=stealth, font=\small]
-  % Pipe wall circle (circumradius R = 1.5 units)
-  \draw[very thick, gray!60] (0,0) circle (1.5);
-  \node[gray!65] at (1.1,1.1) {Pipe wall};
-  % Ball positions: equilateral triangle, vertices at 0 deg, 120 deg, 240 deg
-  % ballA = focus ball at right (0 deg): (1.5, 0)
-  % ballB = upper-left (120 deg): (-0.75, 1.299)
-  % ballC = lower-left (240 deg): (-0.75, -1.299)
-  \coordinate (ballA) at (1.5,0);
-  \coordinate (ballB) at (-0.75,1.299);
-  \coordinate (ballC) at (-0.75,-1.299);
-  % Triangle sides (the three springs)
-  \draw[thick, blue!60!black] (ballA) -- (ballB);
-  \draw[thick, blue!60!black] (ballB) -- (ballC) node[midway,left,blue!60!black] {spring};
-  \draw[thick, blue!60!black] (ballC) -- (ballA);
-  \node[above right, blue!60!black] at (0.3,0.75) {spring};
-  \node[below right, blue!60!black] at (0.3,-0.75) {spring};
-  % All three balls
-  \filldraw[blue!80!black] (ballA) circle (3.5pt);
-  \filldraw[blue!70!black] (ballB) circle (3pt);
-  \filldraw[blue!70!black] (ballC) circle (3pt);
-  \node[above right=3pt] at (ballA) {ball A};
-  % Center of pipe
-  \filldraw[gray] (0,0) circle (1.5pt);
-  % Dashed radial line from center through focus ball A
-  \draw[dashed,gray!60] (0,0) -- (1.85,0);
-  \node[below right,gray!60] at (1.85,-0.08) {\tiny radial};
-  % Normal force N: pipe wall pushes ball A radially inward (leftward)
-  \draw[->,thick,green!50!black] (ballA) -- (0.62,0)
-    node[above] {$N$};
-  % Spring force on A from spring AB (compressed, pushes A away from B)
-  % Direction: 30 deg below radial = angle -30 deg
-  \draw[->,thick,red!60!black] (ballA)
-    -- ++({0.55*cos(-30)},{0.55*sin(-30)})
-    node[below right,red!60!black] {$F_s$};
-  % Spring force on A from spring AC (compressed, pushes A away from C)
-  % Direction: 30 deg above radial = angle +30 deg
-  \draw[->,thick,red!60!black] (ballA)
-    -- ++({0.55*cos(30)},{0.55*sin(30)})
-    node[above right,red!60!black] {$F_s$};
-  % Arc: 30 deg between upper spring force and radial (from 0 to +30 deg)
-  \draw[orange!80!black] (ballA) ++(0.38,0)
-    arc[start angle=0,end angle=30,radius=0.38];
-  \node[orange!80!black] at (2.10,0.22) {$30^\circ$};
-  % Arc: 30 deg between lower spring force and radial (from 0 to -30 deg)
-  \draw[orange!80!black] (ballA) ++(0.38,0)
-    arc[start angle=0,end angle=-30,radius=0.38];
-  \node[orange!80!black] at (2.10,-0.22) {$30^\circ$};
-  % Interior 60 deg angle at ball A
-  % Spring directions from A: toward B at angle 150 deg, toward C at angle 210 deg
-  % Arc from 150 to 210 deg, centered at A, radius 0.30
-  \draw[purple!70!black] (ballA) ++({0.3*cos(150)},{0.3*sin(150)})
-    arc[start angle=150,end angle=210,radius=0.3];
-  \node[purple!70!black] at (1.05,0) {$60^\circ$};
-  % Radius label
-  \draw[<->,gray!55,thin] (0,0) -- (0,1.5)
-    node[midway,right,gray!55] {$R$};
-\end{tikzpicture}
-\end{center}
-
-\medskip
-\noindent\textbf{Key geometry:}
-\begin{itemize}[nosep]
-  \item Since the triangle is equilateral, all three angles are $60^\circ$ (because $3 \times 60^\circ = 180^\circ$).
-  \item Each ball is at the corner of an equilateral triangle inscribed in the pipe's circular cross-section.
-  \item Each ball is connected to \emph{two} springs (to the other two balls).
-  \item By symmetry, the line from the center of the pipe to a ball is exactly bisected by the $60^\circ$ interior angle at that ball, so \emph{each spring makes an angle of $30^\circ$ with the outward radial direction} at the ball.
-\end{itemize}
-
-\medskip
-\noindent\textbf{Forces on one ball:}
-\begin{itemize}[nosep]
-  \item Spring force 1: $F_s = kd$, directed $30^\circ$ away from radial (toward one neighbor)
-  \item Spring force 2: $F_s = kd$, directed $30^\circ$ away from radial (toward other neighbor)
-  \item Normal force from pipe wall: $N$, directed radially inward (toward center)
-\end{itemize}
-\end{diagbox}
-
-% ─────────────────────────────────────────────────────────────
-\subsection{Solution}
-% ─────────────────────────────────────────────────────────────
-
-\begin{keybox}
-
-\textbf{Step 1 --- Determine the angle each spring makes with the radial direction}
-
-Since the triangle is equilateral, each interior angle is:
-\[
-  \theta_{\text{interior}} = \frac{180^\circ}{3} = 60^\circ
-\]
-
-At any given ball (vertex), the two springs point toward the other two vertices. In an equilateral triangle, the circumcenter, centroid, and incenter all coincide at the same point. The line from any vertex through this common center is also the angle bisector at that vertex. Therefore, the outward radial direction at a vertex (pointing away from the center) bisects the interior $60^\circ$ angle, and each spring makes an angle of:
-\[
-  \phi = \frac{60^\circ}{2} = 30^\circ
-\]
-with the outward radial direction.
-
-\bigskip
-\textbf{Step 2 --- Find the net outward (radial) force from the springs on the ball}
-
-Each compressed spring pushes the ball radially outward (as well as tangentially). By symmetry, the two tangential components cancel exactly. The radial component of each spring force is:
-\[
-  F_{\text{radial, one spring}} = F_s\cos(30^\circ) = kd\cdot\frac{\sqrt{3}}{2}
-\]
-
-Both springs contribute equal outward components, so the total outward spring force on the ball is:
-\[
-  F_{\text{total, outward}} = 2\,F_s\cos(30^\circ) = 2\,kd\cdot\frac{\sqrt{3}}{2} = kd\sqrt{3}
-\]
-
-\bigskip
-\textbf{Step 3 --- Find the normal force $N$ (ball's push on the pipe)}
-
-For the ball to be in equilibrium, the inward normal force from the pipe wall must equal the outward spring force:
-\[
-  \sum F_{\text{radial}} = 0:\quad kd\sqrt{3} - N = 0
-\]
-\[
-  \boxed{N = kd\sqrt{3}}
-\]
-
-By Newton's third law, the ball pushes on the pipe wall with the same magnitude:
-\[
-  \text{Force of ball on pipe wall} = kd\sqrt{3}
-\]
-
-\bigskip
-\textbf{Verification --- tangential equilibrium:}
-
-The tangential (perpendicular-to-radial) components of the two spring forces are $+F_s\sin(30^\circ)$ and $-F_s\sin(30^\circ)$, which cancel exactly. No tangential friction is required. \checkmark
-
-\end{keybox}
-
-\begin{warnbox}
-\textbf{Key Conceptual Points}
-\begin{itemize}[nosep]
-  \item \textbf{Why $30^\circ$?} The interior angle of an equilateral triangle is $60^\circ$. The outward radial direction bisects this angle, so each spring makes $30^\circ$ with radial.
-  \item The $\sqrt{3}$ factor arises from $2\cos(30^\circ) = \sqrt{3}$. It means each ball pushes harder than a single spring force: $kd\sqrt{3} \approx 1.73\,kd$.
-  \item By symmetry, all three balls exert the same normal force on the pipe, so the pipe experiences three equal, equally-spaced contact forces.
-  \item This result is independent of the pipe radius $R$: the geometry only depends on the triangle's angles, not its size.
-  \item To avoid pipe damage, ensure $kd\sqrt{3}$ is less than the pipe wall's rated lateral load capacity.
-\end{itemize}
-\end{warnbox}
-
-% ════════════════════════════════════════════════════════════════
-\newpage
-\part{Summary of Methods \& Results}
-% ════════════════════════════════════════════════════════════════
-
-\begin{diagbox}{Problem Summary Table}
-\renewcommand{\arraystretch}{1.6}
-\begin{tabular}{@{}p{3.2cm} p{4.5cm} p{5.5cm}@{}}
-\toprule
-\textbf{Problem} & \textbf{Key Method} & \textbf{Answer} \\
-\midrule
-\textbf{1. Flag Girder} &
-  $\sum\tau = 0$ about wall bolt; then $\sum\vec{F}=0$ &
-  Cable bolt: $T = 440\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark\\
-  & &
-  Girder bolt: $R \approx 386\,\mathrm{lb} < 500\,\mathrm{lb}$ \checkmark\\
-  & & \textbf{Approve the plan.} \\
-\midrule
-\textbf{2. Spinal Load} &
-  $\sum\tau = 0$ about lumbar pivot; then $\sum\vec{F}=0$ &
-  $F_m \approx 43\,W$; \; $F_S \approx 43\,W$ \\
-  & & Spine force is $\approx 43\times$ box weight \\
-\midrule
-\textbf{3. Pipe Springs} &
-  Equilateral geometry ($30^\circ$); radial $\sum F=0$ &
-  $N = kd\sqrt{3}$ \\
-\bottomrule
-\end{tabular}
-\end{diagbox}
-
-\begin{instructbox}
-\textbf{General Strategy for Static Equilibrium Problems}
-
-\begin{enumerate}[label=\arabic*.]
-  \item \textbf{Identify the system} and draw a complete free-body diagram.
-  \item \textbf{Choose a convenient pivot} for the torque equation (eliminate as many unknowns as possible).
-  \item \textbf{Write the torque equation} $\sum \tau = 0$. Only forces perpendicular to the moment arm contribute.
-  \item \textbf{Write force equations} $\sum F_x = 0$ and $\sum F_y = 0$.
-  \item \textbf{Solve the system} of equations. Always check units and signs.
-  \item \textbf{Check your answer} against physical intuition or additional constraints (e.g., rated bolt strength).
 \end{enumerate}
-\end{instructbox}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 3 — NICHE: BIOTIC AND ABIOTIC FACTORS
+% ══════════════════════════════════════════════════════════════
+\section{Niche --- Biotic and Abiotic Factors}
+
+\begin{diagbox}{Niche: Biotic and Abiotic Factors --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=2]
+
+  \item A newly described tropical bird occupies a multidimensional niche shaped by both biotic and
+        abiotic factors.
+        \begin{enumerate}[label=\alph*.]
+          \item List \textbf{three biotic} factors that help define this bird's niche
+                (e.g., interactions, diet, behaviour):\\[0.2cm]
+                1.~\blank[5cm]\quad 2.~\blank[5cm]\quad 3.~\blank[5cm]
+          \item List \textbf{three abiotic} factors relevant to the bird's niche
+                (e.g., physical tolerances, cycles):\\[0.2cm]
+                1.~\blank[5cm]\quad 2.~\blank[5cm]\quad 3.~\blank[5cm]
+          \item In one sentence, explain how a niche can be represented as a shape in
+                \emph{multidimensional} space where each axis is an environmental variable.\\[0.4cm]
+                \blank[12cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 4 — FUNDAMENTAL VS. REALIZED NICHE
+% ══════════════════════════════════════════════════════════════
+\section{Fundamental vs.\ Realized Niche}
+
+\begin{diagbox}{Fundamental vs.\ Realized Niche --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=3]
+
+  \item Distinguish between the \textbf{fundamental} niche and the \textbf{realized} niche,
+        and state which type of factors (biotic or abiotic) primarily determines each.
+
+        \begin{enumerate}[label=\alph*.]
+          \item \textbf{Fundamental niche:} \blank[10cm]\\[0.3cm]
+                Primarily determined by: \blank[5cm] factors.
+          \item \textbf{Realized niche:} \blank[10cm]\\[0.3cm]
+                Primarily determined by: \blank[5cm] factors.
+          \item Give one example of a biotic factor that shrinks a species' realized niche
+                below its fundamental niche.\\[0.3cm]
+                \blank[10cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 5 — INTRASPECIFIC VS. INTERSPECIFIC COMPETITION
+% ══════════════════════════════════════════════════════════════
+\section{Intraspecific vs.\ Interspecific Competition}
+
+\begin{diagbox}{Intraspecific vs.\ Interspecific Competition --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=4]
+
+  \item Compare intraspecific and interspecific competition by completing the table below,
+        then classify each scenario as intraspecific (IA) or interspecific (IE).
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.7}
+        \begin{tabular}{|p{4cm}|p{4.5cm}|p{4.5cm}|}
+        \hline
+        & \textbf{Intraspecific} & \textbf{Interspecific} \\
+        \hline
+        Individuals involved & \blank[3.8cm] & \blank[3.8cm] \\
+        \hline
+        Typical intensity & \blank[3.8cm] & \blank[3.8cm] \\
+        \hline
+        Main evolutionary consequence & \blank[3.8cm] & \blank[3.8cm] \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \vspace{0.3cm}
+        Classify each scenario: \quad IA = intraspecific \quad IE = interspecific\\[0.2cm]
+        (a) Two red foxes fighting over a rabbit carcass: \blank[2cm]\\[0.2cm]
+        (b) A coyote and a red fox competing for rabbits in the same field: \blank[2cm]\\[0.2cm]
+        (c) \emph{Paramecium aurelia} and \emph{P.\ caudatum} competing for bacteria: \blank[2cm]
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 6 — COMPETITION AVOIDANCE
+% ══════════════════════════════════════════════════════════════
+\section{Competition Avoidance}
+
+\begin{diagbox}{Competition Avoidance --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=5]
+
+  \item Describe \textbf{two mechanisms} by which species avoid competition, and provide a
+        real-world example for each.
+
+        \begin{enumerate}[label=\alph*.]
+          \item \textbf{Mechanism 1:} \blank[6cm]\\[0.2cm]
+                Definition: \blank[9cm]\\[0.3cm]
+                Example: \blank[9cm]\\[0.3cm]
+                Does this mechanism affect morphology over evolutionary time? \quad
+                $\bigcirc$\,Yes \quad $\bigcirc$\,No
+
+          \item \textbf{Mechanism 2:} \blank[6cm]\\[0.2cm]
+                Definition: \blank[9cm]\\[0.3cm]
+                Example: \blank[9cm]
+        \end{enumerate}
+
+        \vspace{0.3cm}
+        The \textbf{competitive exclusion principle} states that:
+        \blank[11cm]
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 7 — LOTKA-VOLTERRA COMPETITION MODEL
+% ══════════════════════════════════════════════════════════════
+\section{Lotka--Volterra Competition Model}
+
+\begin{diagbox}{Lotka--Volterra Competition Model --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=6]
+
+  \item Two species (Species 1 and Species 2) share a habitat.  Use the Lotka--Volterra
+        model to answer the following.
+
+        \begin{enumerate}[label=\alph*.]
+          \item In the model, $K_1$ and $K_2$ represent \blank[6cm] for each
+                species, and $\alpha$ and $\beta$ are \blank[6cm] coefficients.
+
+          \item State the condition under which \textbf{Species 1 wins} (Species 2 is excluded)
+                in terms of the model parameters:\\[0.3cm]
+                \blank[10cm]
+
+          \item State the condition for \textbf{stable coexistence} of both species:\\[0.3cm]
+                \blank[10cm]
+
+          \item A graph of Species 1 zero-growth isocline (ZNGI) has $N_1$-intercept $= K_1$
+                and $N_2$-intercept $= K_1/\alpha$.  If $K_1 = 200$ and $\alpha = 0.5$,
+                what is the $N_2$-intercept? \blank[3cm]
+
+          \item In plain language, what does it mean biologically when the two ZNGIs
+                \emph{cross} (intersect)?\\[0.3cm]
+                \blank[10cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 8 — SYMBIOSIS
+% ══════════════════════════════════════════════════════════════
+\section{Major Symbiotic Interactions}
+
+\begin{diagbox}{Major Symbiotic Interactions --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=7]
+
+  \item For each symbiotic interaction below, provide (i) the effect on each partner
+        ($+$, $-$, $0$) and (ii) a specific biological example.
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{|p{3cm}|c|c|p{6cm}|}
+        \hline
+        \textbf{Interaction} & \textbf{Partner A} & \textbf{Partner B} & \textbf{Specific example} \\
+        \hline
+        Mutualism & \blank & \blank & \blank[5.5cm] \\
+        \hline
+        Commensalism & \blank & \blank & \blank[5.5cm] \\
+        \hline
+        Parasitism & \blank & \blank & \blank[5.5cm] \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \vspace{0.3cm}
+        Name \textbf{two} globally critical mutualistic associations involving plant roots
+        and soil microorganisms:\\[0.2cm]
+        1.~\blank[6cm]\quad 2.~\blank[6cm]
+
+        \vspace{0.3cm}
+        Lichens are a mutualism between a \blank[3cm] (mycobiont) and a
+        \blank[3cm] (photobiont).  They serve as important \blank[4cm] in
+        primary succession.
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 9 — ECOLOGICAL / COMMUNITY SUCCESSION
+% ══════════════════════════════════════════════════════════════
+\section{Ecological/Community Succession}
+
+\begin{diagbox}{Ecological/Community Succession --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=8]
+
+  \item Compare the four types of ecological succession by completing the table and
+        answering the follow-up questions.
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.9}
+        \begin{tabular}{|p{2.8cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
+        \hline
+        \textbf{Type} & \textbf{Definition} & \textbf{Starting condition} & \textbf{Example} \\
+        \hline
+        Primary & \blank[3.3cm] & No prior community present & \blank[3.3cm] \\
+        \hline
+        Secondary & \blank[3.3cm] & \blank[3.3cm] & \blank[3.3cm] \\
+        \hline
+        Allogenic & \blank[3.3cm] & \blank[3.3cm] & \blank[3.3cm] \\
+        \hline
+        Autogenic & \blank[3.3cm] & \blank[3.3cm] & \blank[3.3cm] \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \vspace{0.3cm}
+        (a) Pioneer communities are characterized by \blank[3cm] (high/low) gross community
+        production (GCP) and \blank[3cm] (high/low) biodiversity.\\[0.3cm]
+        (b) In a climax community, $P$ \blank[1.5cm] $R$ (use $\approx$, $>$, or $<$),
+        meaning biomass accumulates \blank[3cm] (rapidly/very slowly).\\[0.3cm]
+        (c) Describe \textbf{microsuccession} (serule) using a decomposing log as an example:\\[0.3cm]
+        \blank[11cm]
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 10 — SHANNON-WEINER INDEX
+% ══════════════════════════════════════════════════════════════
+\section{Shannon--Weiner Diversity Index}
+
+\begin{diagbox}{Shannon--Weiner Diversity Index --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=9]
+
+  \item A survey of two grassland communities yields the following data.
+        Use the Shannon--Weiner index $H = -\sum p_i \ln p_i$ to answer all parts.
+
+        \begin{center}
+        \renewcommand{\arraystretch}{1.7}
+        \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Species} & \textbf{Community A (count)} & \textbf{Community B (count)} \\
+        \hline
+        Grass 1 & 40 & 10 \\
+        \hline
+        Grass 2 & 40 & 10 \\
+        \hline
+        Grass 3 & 10 & 70 \\
+        \hline
+        Grass 4 & 10 & 10 \\
+        \hline
+        \textbf{Total} & 100 & 100 \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \begin{enumerate}[label=\alph*.]
+          \item Both communities have \textbf{species richness} $S =$ \blank[1.5cm].
+          \item Calculate $H$ for Community A (show work in the space below):
+                \vspace{0.8cm}\par
+                $H_A =$ \blank[3cm]
+          \item Calculate $H$ for Community B (show work):
+                \vspace{0.8cm}\par
+                $H_B =$ \blank[3cm]
+          \item Which community has higher \textbf{evenness}?  \blank[5cm].
+                Explain: \blank[7cm]
+          \item Define \textbf{species evenness} in words (not the formula):\\[0.3cm]
+                \blank[11cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 11 — BIODIVERSITY IN COMMUNITIES
+% ══════════════════════════════════════════════════════════════
+\section{Biodiversity in Communities}
+
+\begin{diagbox}{Biodiversity in Communities --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=10]
+
+  \item Answer the following questions about species roles and community biodiversity.
+
+        \begin{enumerate}[label=\alph*.]
+          \item \textbf{Dominant species:} Define ecological dominance and give one example
+                of a community named after its dominant species.\\[0.3cm]
+                Definition: \blank[10cm]\\[0.2cm]
+                Example: \blank[6cm]
+
+          \item \textbf{Keystone species:} Explain why a keystone species has a
+                \emph{disproportionately large} effect relative to its abundance, and
+                name a classic example.\\[0.3cm]
+                Explanation: \blank[10cm]\\[0.2cm]
+                Example: \blank[6cm]
+
+          \item \textbf{Ecological engineer:} Name one ecological engineer and describe
+                how it modifies the habitat.\\[0.3cm]
+                Name: \blank[4cm]\quad How it modifies habitat: \blank[7cm]
+
+          \item Rank the following community types from \textbf{highest} (1) to
+                \textbf{lowest} (5) biodiversity:\\[0.2cm]
+                \blank\,Tropical rainforest \quad
+                \blank\,Arctic tundra \quad
+                \blank\,Coral reef \quad
+                \blank\,Agricultural land \quad
+                \blank\,Estuary
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 12 — PREDATOR-PREY RELATIONSHIPS
+% ══════════════════════════════════════════════════════════════
+\section{Predator--Prey Relationships}
+
+\begin{diagbox}{Predator--Prey Relationships --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=11]
+
+  \item Answer the following questions about predator--prey dynamics and defense mechanisms.
+
+        \begin{enumerate}[label=\alph*.]
+          \item The classic lynx--snowshoe hare population cycle in Northern Ontario demonstrates
+                that predator and prey populations \blank[5cm] (are independent of / oscillate out
+                of phase with) each other.  When hare numbers are high, lynx numbers
+                subsequently \blank[3cm] (increase/decrease) because \blank[7cm].
+
+          \item Match each defense type to the correct example (write the letter):
+
+                \begin{center}
+                \renewcommand{\arraystretch}{1.4}
+                \begin{tabular}{|p{5cm}|l|}
+                \hline
+                \textbf{Defense} & \textbf{Example (A--D)} \\
+                \hline
+                Mechanical defense & \blank \\
+                \hline
+                Chemical defense & \blank \\
+                \hline
+                Cryptic coloration & \blank \\
+                \hline
+                Aposematic coloration & \blank \\
+                \hline
+                \end{tabular}
+                \end{center}
+
+                A. A stick insect blends into bark.\\
+                B. A monarch butterfly stores toxins from milkweed.\\
+                C. A honey locust tree bears thorns.\\
+                D. A foxglove produces cardiac glycosides.
+
+          \item Distinguish \textbf{Batesian} from \textbf{M\"{u}llerian} mimicry:\\[0.2cm]
+                Batesian: \blank[9cm]\\[0.2cm]
+                M\"{u}llerian: \blank[9cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SECTION 13 — COMMUNITY EQUILIBRIUM & TROPHIC CASCADES
+% ══════════════════════════════════════════════════════════════
+\section{Community Equilibrium and Trophic Cascades}
+
+\begin{diagbox}{Community Equilibrium and Trophic Cascades --- 1 Point}
+
+\begin{enumerate}[leftmargin=1.5em, label=\textbf{\arabic*.},start=12]
+
+  \item Use the reintroduction of the grey wolf to Yellowstone National Park as a case study
+        to answer the following.
+
+        \begin{enumerate}[label=\alph*.]
+          \item Define a \textbf{trophic cascade} and state whether it is a top-down or
+                bottom-up process in this example.\\[0.3cm]
+                Definition: \blank[10cm]\\[0.2cm]
+                Direction: \blank[5cm]
+
+          \item Complete the cause-and-effect chain below by filling in the blanks:
+
+                \vspace{0.2cm}
+                Wolf reintroduced $\rightarrow$ elk/bison populations
+                \blank[2cm] $\rightarrow$ overgrazing
+                \blank[3cm] $\rightarrow$ riparian vegetation
+                \blank[3cm] $\rightarrow$ river banks stabilise $\rightarrow$
+                fish \& bird diversity \blank[2cm]
+
+          \item What term describes a community's resistance to change and ability to return to
+                equilibrium after a disturbance?  \blank[4cm]
+
+          \item Name one \textbf{human activity} that disrupts community equilibrium and briefly
+                explain its effect:\\[0.2cm]
+                Activity: \blank[5cm]\quad
+                Effect: \blank[6cm]
+        \end{enumerate}
+        \hfill\textit{(1 pt)}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Section Score:} \blank[1cm] / 1
+\end{diagbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% SKILL GAP ANALYSIS
+% ══════════════════════════════════════════════════════════════
+\section{Skill Gap Analysis}
+
+\begin{gapbox}
+Transfer your section scores below.  Any topic scored $0$ is a \textbf{priority gap} for review.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|p{0.5\linewidth}|c|c|}
+\hline
+\textbf{Topic} & \textbf{Score (0 or 1)} & \textbf{Priority?} \\
+\hline
+Interspecific Interactions (Section 2) & & \\
+\hline
+Niche: Biotic and Abiotic Factors (Section 3) & & \\
+\hline
+Fundamental vs.\ Realized Niche (Section 4) & & \\
+\hline
+Intraspecific vs.\ Interspecific Competition (Section 5) & & \\
+\hline
+Competition Avoidance (Section 6) & & \\
+\hline
+Lotka--Volterra Competition Model (Section 7) & & \\
+\hline
+Major Symbiotic Interactions (Section 8) & & \\
+\hline
+Ecological/Community Succession (Section 9) & & \\
+\hline
+Shannon--Weiner Diversity Index (Section 10) & & \\
+\hline
+Biodiversity in Communities (Section 11) & & \\
+\hline
+Predator--Prey Relationships (Section 12) & & \\
+\hline
+Community Equilibrium \& Trophic Cascades (Section 13) & & \\
+\hline
+\textbf{Total} & \textbf{\blank[1cm] / 12} & \\
+\hline
+\end{tabular}
+\end{center}
+\end{gapbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% PERSONALIZED STUDY PLAN
+% ══════════════════════════════════════════════════════════════
+\section{Personalized Study Plan}
+
+\begin{planbox}
+For each topic you marked as a priority gap, identify a specific study action and a target date.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{|p{0.35\linewidth}|p{0.35\linewidth}|p{0.15\linewidth}|}
+\hline
+\textbf{Priority Gap Topic} & \textbf{Specific Study Action} & \textbf{Target Date} \\
+\hline
+ & & \\
+\hline
+ & & \\
+\hline
+ & & \\
+\hline
+ & & \\
+\hline
+ & & \\
+\hline
+ & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{My overall study goal for this module:}
+\blank[12cm]
+\end{planbox}
+
+\newpage
+
+% ══════════════════════════════════════════════════════════════
+% ANSWER KEY
+% ══════════════════════════════════════════════════════════════
+\section{Answer Key}
+
+\begin{warnbox}
+\textbf{Do not review this section until after completing and self-scoring all diagnostic questions.}
+\end{warnbox}
+
+\bigskip
+
+% ── Section 2 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q1 --- Interspecific Interactions Table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|p{3.5cm}|c|c|p{5.5cm}|}
+\hline
+\textbf{Interaction} & \textbf{Sp.\ 1} & \textbf{Sp.\ 2} & \textbf{Description / Example} \\
+\hline
+Competition & $-$ & $-$ & Both harmed; compete for food, space, or mates \\
+\hline
+Amensalism & $-$ & $0$ & Sp.\ 1 harmed, Sp.\ 2 unaffected; e.g., large tree shades out small herb \\
+\hline
+Predation / Antagonism & $+$ & $-$ & Sp.\ 1 (predator/parasite) benefits; Sp.\ 2 (prey/host) harmed \\
+\hline
+Commensalism & $+$ & $0$ & Sp.\ 1 benefits, Sp.\ 2 unaffected; e.g., barnacles on whale \\
+\hline
+Mutualism & $+$ & $+$ & Both benefit; e.g., mycorrhizal fungi with plant roots \\
+\hline
+Neutralism & $0$ & $0$ & No effect on either; rare in practice \\
+\hline
+\end{tabular}
+\end{center}
+\end{keybox}
+
+\bigskip
+
+% ── Section 3 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q2 --- Niche: Biotic and Abiotic Factors}
+
+\textit{Biotic factors} (any three): interspecific interactions including coevolution; diet and foraging behaviour; trophic position; life history timing; morphological specialisations; habitat specialisations.
+
+\textit{Abiotic factors} (any three): temperature range tolerance; oxygen/CO$_2$ levels; pH; salinity; diurnal and seasonal light cycles; substrate type; nutrient availability.
+
+\textit{Multidimensional niche:} Each environmental variable is one axis; the organism's tolerable range on every axis together defines an $n$-dimensional hypervolume representing all conditions under which the species can persist.
+\end{keybox}
+
+\bigskip
+
+% ── Section 4 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q3 --- Fundamental vs.\ Realized Niche}
+
+\textbf{Fundamental niche:} The full range of conditions and resources under which a species \emph{could} survive and reproduce if there were no biotic limiting factors; primarily determined by \textbf{abiotic} factors.
+
+\textbf{Realized niche:} The actual subset of conditions the species occupies in the wild, after accounting for biotic interactions (predators, competitors, parasites, disease); primarily determined by \textbf{biotic} factors.
+
+\textit{Example biotic factor:} A superior competitor excludes the focal species from part of its temperature range, reducing its realized niche.
+\end{keybox}
+
+\bigskip
+
+% ── Section 5 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q4 --- Intraspecific vs.\ Interspecific Competition}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{4cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+& \textbf{Intraspecific} & \textbf{Interspecific} \\
+\hline
+Individuals involved & Same species & Different species \\
+\hline
+Typical intensity & Often higher (identical resource needs) & Varies; depends on niche overlap \\
+\hline
+Main evolutionary consequence & Natural selection; can drive niche expansion & Character displacement; competitive exclusion or coexistence \\
+\hline
+\end{tabular}
+\end{center}
+
+Scenario answers: (a) IA \quad (b) IE \quad (c) IE
+\end{keybox}
+
+\bigskip
+
+% ── Section 6 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q5 --- Competition Avoidance}
+
+\textbf{Mechanism 1 --- Resource partitioning:} Species divide up a resource in time, space, or type so that direct competition is reduced.
+\textit{Example:} Five warbler species partition the vertical zones of a spruce tree (Bay-breasted uses lower branches; Cape May uses the crown, etc.).
+Does it affect morphology? Yes --- can lead to character displacement.
+
+\textbf{Mechanism 2 --- Character displacement:} When two species co-occur, natural selection drives their morphologies (e.g., beak depth) further apart, reducing niche overlap and competition.
+\textit{Example:} Darwin's finch species on the same Gal\'{a}pagos island have more different bill sizes than populations of the same species on islands where they occur alone.
+
+\textbf{Competitive exclusion principle:} Two species occupying exactly the same ecological niche cannot coexist indefinitely; one will competitively exclude the other.
+\end{keybox}
+
+\bigskip
+
+% ── Section 7 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q6 --- Lotka--Volterra Competition Model}
+
+(a) $K_1$, $K_2$ = carrying capacities; $\alpha$, $\beta$ = interspecific competition coefficients.
+
+(b) Species 1 wins when $K_1 > K_2/\beta$ \emph{and} $K_1/\alpha > K_2$ (Species 1's isocline lies entirely outside Species 2's isocline).
+
+(c) Stable coexistence occurs when each species inhibits itself more than it inhibits the other species: $K_1 < K_2/\beta$ \emph{and} $K_2 < K_1/\alpha$ (isoclines cross with a stable equilibrium point).
+
+(d) $N_2$-intercept $= K_1/\alpha = 200/0.5 = \mathbf{400}$.
+
+(e) When the two ZNGIs cross, there is an equilibrium point at which both species can potentially coexist; stability depends on the slopes (i.e., the relative magnitudes of intra- vs.\ interspecific competition).
+\end{keybox}
+
+\bigskip
+
+% ── Section 8 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q7 --- Major Symbiotic Interactions}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{3cm}|c|c|p{6cm}|}
+\hline
+Mutualism & $+$ & $+$ & Mycorrhizal fungi and plant roots; clownfish and sea anemone \\
+\hline
+Commensalism & $+$ & $0$ & Barnacles on a whale; orchids growing on tree branches \\
+\hline
+Parasitism & $+$ & $-$ & Tapeworm in a vertebrate host; mistletoe on oak \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Two globally critical root mutualisms:} (1) Mycorrhizal (arbuscular or ectomycorrhizal) fungi--plant associations; (2) Nitrogen-fixing bacteria (\textit{Rhizobium}) in legume root nodules (or actinorhizal nodules in non-legumes).
+
+\textbf{Lichens:} fungus (mycobiont, mainly Ascomycota) + photosynthesiser (photobiont, green alga or cyanobacterium).  Pioneer colonisers in primary succession.
+\end{keybox}
+
+\bigskip
+
+% ── Section 9 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q8 --- Ecological/Community Succession}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+Primary & Colonisation of bare, lifeless substrate & No prior community & Lava flows; retreating glaciers \\
+\hline
+Secondary & Recolonisation after disturbance & Community previously present & Forest regrowth after fire \\
+\hline
+Allogenic & Succession triggered by abiotic event & External physical disturbance & Landslide, volcano, pollution \\
+\hline
+Autogenic & Succession driven by organisms themselves & Biotic changes alter conditions & Growing tree creates shade for new understory species; serule in a log \\
+\hline
+\end{tabular}
+\end{center}
+
+(a) Pioneer communities: \textbf{high} GCP; \textbf{low} biodiversity.\\
+(b) Climax community: $P \approx R$ (production $\approx$ respiration); biomass accumulates \textbf{very slowly}.\\
+(c) \textit{Microsuccession (serule):} A decomposing log undergoes a predictable series of microbial and invertebrate communities; each community alters the substrate (temperature, moisture, chemistry), enabling the next community.  The log is eventually decomposed, eliminating the microhabitat without reaching a climax.
+\end{keybox}
+
+\bigskip
+
+% ── Section 10 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q9 --- Shannon--Weiner Diversity Index}
+
+(a) Both communities: $S = 4$ species.
+
+(b) \textbf{Community A:} $p_1=p_2=0.40$, $p_3=p_4=0.10$
+\[
+H_A = -[2(0.40\ln 0.40) + 2(0.10\ln 0.10)]
+    = -[2(-0.3665) + 2(-0.2303)]
+    = -[-0.7330 - 0.4606]
+    \approx \mathbf{1.19}
+\]
+
+(c) \textbf{Community B:} $p_1=p_2=0.10$, $p_3=0.70$, $p_4=0.10$
+\[
+H_B = -[3(0.10\ln 0.10) + 0.70\ln 0.70]
+    = -[3(-0.2303) + (-0.2496)]
+    = -[-0.6909 - 0.2496]
+    \approx \mathbf{0.94}
+\]
+
+(d) \textbf{Community A} has higher evenness; its species are distributed more equally
+    (40:40:10:10) compared to Community B (10:10:70:10), where one species dominates.
+
+(e) \textit{Species evenness} is the relative homogeneity (equitability) of individuals
+    among species --- how similar the proportions of different species are in a community.
+\end{keybox}
+
+\bigskip
+
+% ── Section 11 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q10 --- Biodiversity in Communities}
+
+(a) \textbf{Dominant species:} The species that is most abundant or makes up the greatest biomass in a community.
+Example: Beech--maple forest (named for the dominant trees); mussel zone in an intertidal community.
+
+(b) \textbf{Keystone species:} Has effects on community structure and species diversity far larger than its abundance would predict; often controls populations of other species or maintains habitat structure.
+Example: Sea otter (controls sea urchin populations, thereby maintaining kelp forests).
+
+(c) \textbf{Ecological engineer:} Beaver --- builds dams that create wetland habitats, alter water flow, and increase habitat diversity for many species.
+
+(d) Ranked highest to lowest: Tropical rainforest (1) $\approx$ Coral reef (2) $>$ Estuary (3) $>$ Arctic tundra (4) $>$ Agricultural land (5).
+\end{keybox}
+
+\bigskip
+
+% ── Section 12 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q11 --- Predator--Prey Relationships}
+
+(a) Predator and prey populations \textbf{oscillate out of phase with} each other.
+When hare numbers are high, lynx numbers subsequently \textbf{increase} because abundant prey supports higher predator survival and reproduction.
+
+(b) Defense matching:
+\begin{itemize}[leftmargin=1.5em]
+  \item Mechanical defense: \textbf{C} (honey locust thorns)
+  \item Chemical defense: \textbf{D} (foxglove cardiac glycosides) [also acceptable: B]
+  \item Cryptic coloration: \textbf{A} (stick insect)
+  \item Aposematic coloration: \textbf{B} (monarch butterfly --- also chemical; the bright orange coloration warns predators)
+\end{itemize}
+
+(c) \textbf{Batesian mimicry:} A harmless species (mimic) resembles a dangerous or unpalatable species (model) to deter predators; the mimic gains protection but the model does not benefit.
+\textbf{M\"{u}llerian mimicry:} Two or more genuinely unpalatable/dangerous species resemble each other; predators learn to avoid the shared warning pattern faster, benefiting all co-models.
+\end{keybox}
+
+\bigskip
+
+% ── Section 13 ─────────────────────────────────────────────────
+\begin{keybox}
+\textbf{Q12 --- Community Equilibrium and Trophic Cascades}
+
+(a) A \textbf{trophic cascade} is a powerful indirect interaction that propagates through multiple trophic levels when one component of a community changes.  The Yellowstone example is a \textbf{top-down} cascade (apex predator suppresses herbivore, which releases vegetation).
+
+(b) Cause-and-effect chain:
+Wolf reintroduced $\rightarrow$ elk/bison populations \textbf{decrease} $\rightarrow$ overgrazing \textbf{reduced} $\rightarrow$ riparian vegetation \textbf{increases} $\rightarrow$ river banks stabilise $\rightarrow$ fish \& bird diversity \textbf{increases}.
+
+(c) \textbf{Community stability} (or \emph{ecological resilience}).
+
+(d) Example: \textit{Agricultural land clearing} removes native vegetation and biodiversity, simplifies food chains, disrupts nutrient cycling, and increases community instability (e.g., pest outbreaks, soil erosion).
+\end{keybox}
 
 % ══════════════════════════════════════════════════════════════
 \end{document}
