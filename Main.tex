@@ -2,6 +2,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{booktabs}
@@ -28,22 +30,35 @@
 \definecolor{keycolor}{RGB}{245,245,245}
 \definecolor{warnbg}{RGB}{255,240,220}
 \definecolor{infobg}{RGB}{220,235,255}
+\definecolor{sectioncolor}{RGB}{85,105,20}
+
+% ── Section heading style ─────────────────────────────────────
+\titleformat{\section}{\large\bfseries\color{sectioncolor}}%
+  {\thesection.}{0.5em}{}[\vspace{1pt}{\color{sectioncolor!55}\rule{\linewidth}{0.5pt}}]
 
 % ── tcolorbox environments ─────────────────────────────────────
-\newtcolorbox{instructbox}{colback=infobg,colframe=blue!60!black,
-  title=\textbf{Instructions},fonttitle=\bfseries,breakable}
-\newtcolorbox{selfbox}{colback=selfcolor,colframe=blue!50!black,
-  title=\textbf{Pre-Diagnostic Self-Rating},fonttitle=\bfseries,breakable}
-\newtcolorbox{diagbox}[1]{colback=diagcolor,colframe=olive!70!black,
-  title=\textbf{#1},fonttitle=\bfseries,breakable,before={\needspace{6\baselineskip}}}
-\newtcolorbox{gapbox}{colback=gapcolor,colframe=red!60!black,
-  title=\textbf{Skill Gap Analysis},fonttitle=\bfseries,breakable}
-\newtcolorbox{planbox}{colback=plancolor,colframe=green!55!black,
-  title=\textbf{Personalized Study Plan},fonttitle=\bfseries,breakable}
-\newtcolorbox{keybox}{colback=keycolor,colframe=gray!55!black,
-  title=\textbf{Answer Key},fonttitle=\bfseries,breakable}
-\newtcolorbox{warnbox}{colback=warnbg,colframe=orange!70!black,
-  title=\textbf{Important},fonttitle=\bfseries,breakable}
+\newtcolorbox{instructbox}{enhanced,colback=infobg,colframe=blue!60!black,
+  coltitle=white,colbacktitle=blue!60!black,
+  title=\textbf{Instructions},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
+\newtcolorbox{selfbox}{enhanced,colback=selfcolor,colframe=blue!50!black,
+  coltitle=white,colbacktitle=blue!50!black,
+  title=\textbf{Pre-Diagnostic Self-Rating},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
+\newtcolorbox{diagbox}[1]{enhanced,colback=diagcolor,colframe=olive!70!black,
+  coltitle=white,colbacktitle=olive!70!black,
+  title=\textbf{#1},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt,
+  before={\needspace{6\baselineskip}}}
+\newtcolorbox{gapbox}{enhanced,colback=gapcolor,colframe=red!60!black,
+  coltitle=white,colbacktitle=red!60!black,
+  title=\textbf{Skill Gap Analysis},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
+\newtcolorbox{planbox}{enhanced,colback=plancolor,colframe=green!55!black,
+  coltitle=white,colbacktitle=green!55!black,
+  title=\textbf{Personalized Study Plan},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
+\newtcolorbox{keybox}[1][Answer Key]{enhanced,colback=keycolor,colframe=gray!55!black,
+  coltitle=white,colbacktitle=gray!60!black,
+  title=\textbf{#1},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
+\newtcolorbox{warnbox}{enhanced,colback=warnbg,colframe=orange!70!black,
+  coltitle=white,colbacktitle=orange!70!black,
+  title=\textbf{Important},fonttitle=\bfseries,breakable,arc=4pt,boxrule=0.7pt}
 
 % ── Page style ─────────────────────────────────────────────────
 \pagestyle{fancy}
@@ -51,6 +66,7 @@
 \rhead{Community Ecology}
 \lhead{Biology --- Community Ecology Module}
 \cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.6pt}
 
 % ── Confidence scale macro ─────────────────────────────────────
 \newcommand{\confscale}{%
@@ -70,12 +86,13 @@
 % ══════════════════════════════════════════════════════════════
 
 % ── Title page ────────────────────────────────────────────────
-\begin{center}
-  {\LARGE\bfseries Community Ecology}\\[0.4cm]
-  {\large\bfseries Diagnostic Activity \& Study Guide}\\[0.3cm]
-  {\large Interspecific Interactions $\cdot$ Niche $\cdot$ Competition $\cdot$ Succession $\cdot$ Biodiversity}\\[0.2cm]
-  \rule{\linewidth}{0.6pt}
-\end{center}
+\begin{tcolorbox}[enhanced,colback=olive!8,colframe=olive!70!black,
+  arc=6pt,boxrule=1.4pt,halign=center,top=0.6cm,bottom=0.5cm]
+  {\LARGE\bfseries\color{sectioncolor} Community Ecology}\\[0.25cm]
+  {\large\bfseries Diagnostic Activity \& Study Guide}\\[0.25cm]
+  {\normalsize Interspecific Interactions $\cdot$ Niche $\cdot$ Competition
+   $\cdot$ Succession $\cdot$ Biodiversity}
+\end{tcolorbox}
 
 \vspace{0.3cm}
 
@@ -184,21 +201,22 @@ Describe eco-agriculture (conservation/regenerative farming) practices and their
   \vspace{0.3cm}
   \begin{center}
   \renewcommand{\arraystretch}{1.8}
-  \begin{tabular}{|p{3.5cm}|c|c|p{5cm}|}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|p{3.2cm}|c|c|p{5cm}|}
   \hline
-  \textbf{Interaction} & \textbf{Species 1 effect} & \textbf{Species 2 effect} & \textbf{Brief description / example} \\
+  \textbf{Interaction} & \textbf{Sp.\ 1} & \textbf{Sp.\ 2} & \textbf{Brief description / example} \\
   \hline
   Competition & $-$ & $-$ & Both harmed; compete for shared resource \\
   \hline
-  \blank[2.5cm] & $-$ & $0$ & \blank[4.5cm] \\
+  \blank[2.5cm] & $-$ & $0$ & \blank[4.2cm] \\
   \hline
-  \blank[2.5cm] & $+$ & $-$ & \blank[4.5cm] \\
+  \blank[2.5cm] & $+$ & $-$ & \blank[4.2cm] \\
   \hline
-  \blank[2.5cm] & $+$ & $0$ & \blank[4.5cm] \\
+  \blank[2.5cm] & $+$ & $0$ & \blank[4.2cm] \\
   \hline
-  Mutualism & \blank & \blank & \blank[4.5cm] \\
+  Mutualism & \blank[1.5cm] & \blank[1.5cm] & \blank[4.2cm] \\
   \hline
-  \blank[2.5cm] & $0$ & $0$ & \blank[4.5cm] \\
+  \blank[2.5cm] & $0$ & $0$ & \blank[4.2cm] \\
   \hline
   \end{tabular}
   \end{center}
@@ -861,9 +879,7 @@ For each topic you marked as a priority gap, identify a specific study action an
 
 \bigskip
 
-% ── Section 2 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q1 --- Interspecific Interactions Table}
+\begin{keybox}[Q1 --- Interspecific Interactions]
 
 \begin{center}
 \renewcommand{\arraystretch}{1.6}
@@ -890,8 +906,7 @@ Neutralism & $0$ & $0$ & No effect on either; rare in practice \\
 \bigskip
 
 % ── Section 3 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q2 --- Niche: Biotic and Abiotic Factors + Evolutionary Niche}
+\begin{keybox}[Q2 --- Niche: Biotic, Abiotic and Evolutionary Factors]
 
 \textit{Biotic factors} (any three): interspecific interactions including coevolution; diet and foraging behaviour; trophic position; life history timing; morphological specialisations; habitat specialisations.
 
@@ -907,8 +922,7 @@ Neutralism & $0$ & $0$ & No effect on either; rare in practice \\
 \bigskip
 
 % ── Section 4 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q3 --- Fundamental vs.\ Realized Niche}
+\begin{keybox}[Q3 --- Fundamental vs.\ Realized Niche]
 
 \textbf{Fundamental niche:} The full range of conditions and resources under which a species \emph{could} survive and reproduce if there were no biotic limiting factors; primarily determined by \textbf{abiotic} factors.
 
@@ -920,8 +934,7 @@ Neutralism & $0$ & $0$ & No effect on either; rare in practice \\
 \bigskip
 
 % ── Section 5 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q4 --- Intraspecific vs.\ Interspecific Competition; Types by Mechanism \& Outcome}
+\begin{keybox}[Q4 --- Intraspecific vs.\ Interspecific Competition]
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
@@ -956,8 +969,7 @@ Scenario answers: (a) IA \quad (b) IE \quad (c) IE
 \bigskip
 
 % ── Section 6 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q5 --- Competition Avoidance}
+\begin{keybox}[Q5 --- Competition Avoidance]
 
 \textbf{Mechanism 1 --- Resource partitioning:} Species divide up a resource in time, space, or type so that direct competition is reduced.
 \textit{Example:} Five warbler species partition the vertical zones of a spruce tree (Bay-breasted uses lower branches; Cape May uses the crown, etc.).
@@ -972,8 +984,7 @@ Does it affect morphology? Yes --- can lead to character displacement.
 \bigskip
 
 % ── Section 7 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q6 --- Lotka--Volterra Competition Model}
+\begin{keybox}[Q6 --- Lotka--Volterra Competition Model]
 
 (a) $K_1$, $K_2$ = carrying capacities; $\alpha$, $\beta$ = interspecific competition coefficients.
 
@@ -989,8 +1000,7 @@ Does it affect morphology? Yes --- can lead to character displacement.
 \bigskip
 
 % ── Section 8 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q7 --- Major Symbiotic Interactions}
+\begin{keybox}[Q7 --- Major Symbiotic Interactions]
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
@@ -1013,8 +1023,7 @@ Parasitism & $+$ & $-$ & Tapeworm in a vertebrate host; mistletoe on oak \\
 \bigskip
 
 % ── Section 9 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q8 --- Ecological/Community Succession}
+\begin{keybox}[Q8 --- Ecological/Community Succession]
 
 \begin{center}
 \renewcommand{\arraystretch}{1.6}
@@ -1039,26 +1048,25 @@ Autogenic & Succession driven by organisms themselves & Biotic changes alter con
 \bigskip
 
 % ── Section 10 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q9 --- Shannon--Weiner Diversity Index}
+\begin{keybox}[Q9 --- Shannon--Weiner Diversity Index]
 
 (a) Both communities: $S = 4$ species.
 
 (b) \textbf{Community A:} $p_1=p_2=0.40$, $p_3=p_4=0.10$
-\[
-H_A = -[2(0.40\ln 0.40) + 2(0.10\ln 0.10)]
-    = -[2(-0.3665) + 2(-0.2303)]
-    = -[-0.7330 - 0.4606]
-    \approx \mathbf{1.19}
-\]
+\begin{align*}
+H_A &= -[2(0.40\ln 0.40) + 2(0.10\ln 0.10)]\\
+    &= -[2(-0.3665) + 2(-0.2303)]\\
+    &= -[-0.7330 - 0.4606]\\
+    &\approx \mathbf{1.19}
+\end{align*}
 
 (c) \textbf{Community B:} $p_1=p_2=0.10$, $p_3=0.70$, $p_4=0.10$
-\[
-H_B = -[3(0.10\ln 0.10) + 0.70\ln 0.70]
-    = -[3(-0.2303) + (-0.2496)]
-    = -[-0.6909 - 0.2496]
-    \approx \mathbf{0.94}
-\]
+\begin{align*}
+H_B &= -[3(0.10\ln 0.10) + 0.70\ln 0.70]\\
+    &= -[3(-0.2303) + (-0.2497)]\\
+    &= -[-0.6909 - 0.2497]\\
+    &\approx \mathbf{0.94}
+\end{align*}
 
 (d) \textbf{Community A} has higher evenness; its species are distributed more equally
     (40:40:10:10) compared to Community B (10:10:70:10), where one species dominates.
@@ -1070,8 +1078,7 @@ H_B = -[3(0.10\ln 0.10) + 0.70\ln 0.70]
 \bigskip
 
 % ── Section 11 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q10 --- Biodiversity in Communities}
+\begin{keybox}[Q10 --- Biodiversity in Communities]
 
 (a) \textbf{Dominant species:} The species that is most abundant or makes up the greatest biomass in a community.
 Example: Beech--maple forest (named for the dominant trees); mussel zone in an intertidal community.
@@ -1087,8 +1094,7 @@ Example: Sea otter (controls sea urchin populations, thereby maintaining kelp fo
 \bigskip
 
 % ── Section 12 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q11 --- Predator--Prey Relationships}
+\begin{keybox}[Q11 --- Predator--Prey Relationships]
 
 (a) Predator and prey populations \textbf{oscillate out of phase with} each other.
 When hare numbers are high, lynx numbers subsequently \textbf{increase} because abundant prey supports higher predator survival and reproduction.
@@ -1109,8 +1115,7 @@ When hare numbers are high, lynx numbers subsequently \textbf{increase} because 
 \bigskip
 
 % ── Section 13 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q12 --- Community Equilibrium and Trophic Cascades}
+\begin{keybox}[Q12 --- Community Equilibrium and Trophic Cascades]
 
 (a) A \textbf{trophic cascade} is a powerful indirect interaction that propagates through multiple trophic levels when one component of a community changes.  The Yellowstone example is a \textbf{top-down} cascade (apex predator suppresses herbivore, which releases vegetation).
 
@@ -1125,8 +1130,7 @@ Wolf reintroduced $\rightarrow$ elk/bison populations \textbf{decrease} $\righta
 \bigskip
 
 % ── Section 14 ─────────────────────────────────────────────────
-\begin{keybox}
-\textbf{Q13 --- Eco-agriculture, Conservation Farming, and Regenerative Agriculture}
+\begin{keybox}[Q13 --- Eco-agriculture, Conservation Farming and Regenerative Agriculture]
 
 \textbf{Three main practices and their ecological benefits:}
 
