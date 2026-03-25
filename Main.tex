@@ -21,6 +21,7 @@
 \setlength{\emergencystretch}{5em}
 \usepackage{needspace}
 \usepackage{etoolbox}
+\usepackage{pifont}
 
 % Colors
 \definecolor{examplecolor}{RGB}{220,240,255}
@@ -986,8 +987,7 @@ The \textbf{discriminant} of $ax^2 + bx + c = 0$ is $\Delta = b^2 - 4ac$.
 
 \begin{insightbox}
 \textbf{Desmos Shortcut for Discriminant Questions:} Instead of computing $b^2 - 4ac$ by hand, just graph the quadratic and \textit{look}. Count how many times it crosses the $x$-axis. Zero crossings = no real solutions. One touch = one solution. Two crossings = two solutions. This is faster and error-free.
-\end{ins
-ightbox}
+\end{insightbox}
 
 \begin{analogy}
 Think of the discriminant like checking whether a basketball shot will hit the rim. If $\Delta > 0$, the ball goes through the hoop (crosses the $x$-axis twice). If $\Delta = 0$, it barely grazes the rim (touches once). If $\Delta < 0$, it's an air ball---misses completely (never touches the $x$-axis).
@@ -2393,8 +2393,7 @@ The predicted score is approximately $99$ points.
 
 \subsection{Interpreting Slope and $y$-Intercept in Context}
 
-\begin{ins
-ightbox}
+\begin{insightbox}
 \textbf{Interpreting Slope and $y$-Intercept in Context:}
 
 The SAT \textit{loves} asking you to interpret the slope and $y$-intercept of a linear model in the context of a word problem. Here is the framework:
@@ -3479,8 +3478,7 @@ A \textbf{rational equation} contains fractions with variables in the denominato
 
 \textbf{Desmos:} Graph both sides. You might see what looks like an intersection at $x = 3$, but $x = 3$ makes the denominator $0$. The actual solution comes from $x + 1 = 4$, so $x = 3$---but this is extraneous! The equation has \textbf{no solution}.
 
-\textbf{Alternative Desmos check:} Type \texttt{(x+
-1}{x-3} - 4/(x-3)} and see if Desmos shows any $x$-intercept. It won't (or it will show a hole at $x=3$), confirming no solution.
+\textbf{Alternative Desmos check:} Type \texttt{(x+1)/(x-3) - 4/(x-3)} and see if Desmos shows any $x$-intercept. It won't (or it will show a hole at $x=3$), confirming no solution.
 \end{example}
 
 \subsection{Solving Radical Equations}
@@ -6169,8 +6167,7 @@ What is the solution to the equation above?
 \item $x = 2$
 \end{enumerate}
 
-\textbf{Correct Answer: C
-}
+\textbf{Correct Answer: C}
 
 \textbf{Desmos Strategy:} Note that $x^2 - x - 2 = (x+1)(x-2)$, so the right side has the common denominator. In Desmos, type the left side and right side as separate functions:
 \begin{itemize}
@@ -9820,31 +9817,30 @@ The function $f(x) = x^2 - 8x + 12$ can be written as $f(x) = (x - a)(x - b)$ wh
 9 & B & Verify & 44 & C & Desmos \\
 10 & A & Both & 45 & D & Desmos \\
 11 & B & Desmos & 46 & B & Both \\
-12 & C & Desmos & 47 & C
-& Concept & 48 & B & Both \\
-13 & D & Desmos & 49 & A & Desmos \\
-14 & B & Desmos & 50 & C & Desmos \\
-15 & A & Both & 51 & B & Desmos \\
-16 & C & Desmos & 52 & D & Both \\
-17 & B & Desmos & 53 & A & Desmos \\
-18 & D & Desmos & 54 & C & Desmos \\
-19 & A & Desmos & 55 & B & Desmos \\
-20 & C & Both & 56 & A & Desmos \\
-21 & D & Desmos & 57 & C & Desmos \\
-22 & A & Desmos & 58 & B & Both \\
-23 & B & Both & 59 & A & Both \\
-24 & A & Both & 60 & C & Desmos \\
-25 & C & Desmos & 61 & B & Desmos \\
-26 & B & Desmos & 62 & D & Both \\
-27 & D & Desmos & 63 & A & Desmos \\
-28 & A & Desmos & 64 & C & Desmos \\
-29 & C & Desmos & 65 & B & Desmos \\
-30 & B & Desmos & 66 & A & Desmos \\
-31 & D & Desmos & 67 & C & Desmos \\
-32 & A & Desmos & 68 & B & Desmos \\
-33 & C & Desmos & 69 & B & Both \\
-34 & B & Desmos & 70 & A & Both \\
-35 & A & Both & & & \\
+12 & C & Desmos & 47 & C & Concept \\
+13 & D & Desmos & 48 & B & Both \\
+14 & B & Desmos & 49 & A & Desmos \\
+15 & A & Both & 50 & C & Desmos \\
+16 & C & Desmos & 51 & B & Desmos \\
+17 & B & Desmos & 52 & D & Both \\
+18 & D & Desmos & 53 & A & Desmos \\
+19 & A & Desmos & 54 & C & Desmos \\
+20 & C & Both & 55 & B & Desmos \\
+21 & D & Desmos & 56 & A & Desmos \\
+22 & A & Desmos & 57 & C & Desmos \\
+23 & B & Both & 58 & B & Both \\
+24 & A & Both & 59 & A & Both \\
+25 & C & Desmos & 60 & C & Desmos \\
+26 & B & Desmos & 61 & B & Desmos \\
+27 & D & Desmos & 62 & D & Both \\
+28 & A & Desmos & 63 & A & Desmos \\
+29 & C & Desmos & 64 & C & Desmos \\
+30 & B & Desmos & 65 & B & Desmos \\
+31 & D & Desmos & 66 & A & Desmos \\
+32 & A & Desmos & 67 & C & Desmos \\
+33 & C & Desmos & 68 & B & Desmos \\
+34 & B & Desmos & 69 & B & Both \\
+35 & A & Both & 70 & A & Both \\
 \end{longtable}
 \end{center}
 
@@ -12279,7 +12275,7 @@ sqrt{7}$
 \item $9$
 \end{enumerate}
 
-\textbf{Desmos Method:} Create a table with $(0, 4)$ and $(2, 36)$. Type \texttt{y1 \textasciitilde{} a \cdot b\^{}x1}. Desmos returns $a = 4$, $b = 3$.
+\textbf{Desmos Method:} Create a table with $(0, 4)$ and $(2, 36)$. Type \texttt{y1 \textasciitilde{} a * b\^{}x1}. Desmos returns $a = 4$, $b = 3$.
 \end{exercise}
 
 \begin{exercise}
@@ -12369,7 +12365,7 @@ What is the value of $y$ when $x = 10$?
 \item $71$
 \end{enumerate}
 
-\textbf{Desmos Method:} Enter the table data. Type \texttt{y1 \textasciitilde{} mx1 + b}. Desmos gives $m = 6$, $b = -1$. So $y = 6x - 1$. Type \texttt{6(10) - 1 = 59$.
+\textbf{Desmos Method:} Enter the table data. Type \texttt{y1 \textasciitilde{} mx1 + b}. Desmos gives $m = 6$, $b = -1$. So $y = 6x - 1$. Type \texttt{6(10) - 1 = 59}.
 \end{exercise}
 
 %% ================================================================
@@ -12492,7 +12488,7 @@ $f(-2) = 3(-2)^2 - 2(-2) + 1 = 3(4) + 4 + 1 = 12 + 4 + 1 = 17$
 \begin{solution}
 \textbf{Problem 14: Answer --- B ($b = 3$)}
 
-Enter the points $(0, 4)$ and $(2, 36)$ in a table. Type \texttt{y1 \textasciitilde{} a \cdot b\^{}x1}. Desmos returns $a = 4$ and $b = 3$.
+Enter the points $(0, 4)$ and $(2, 36)$ in a table. Type \texttt{y1 \textasciitilde{} a * b\^{}x1}. Desmos returns $a = 4$ and $b = 3$.
 
 \textbf{Check:} $4 \cdot 3^0 = 4$ \checkmark \quad $4 \cdot 3^2 = 4 \cdot 9 = 36$ \checkmark
 \end{solution}
@@ -13059,7 +13055,7 @@ Which type of function best models this data?
 \begin{itemize}
 \item \texttt{y1 \textasciitilde{} mx1 + b} (linear) --- $R^2 \approx 0.986$
 \item \texttt{y1 \textasciitilde{} ax1\^{}2 + bx1 + c} (quadratic) --- $R^2 = 1.000$
-\item \texttt{y1 \textasciitilde{} a \cdot b\^{}x1} (exponential) --- $R^2 \approx 0.993$
+\item \texttt{y1 \textasciitilde{} a * b\^{}x1} (exponential) --- $R^2 \approx 0.993$
 \end{itemize}
 
 The quadratic regression has $R^2 = 1.000$ (perfect fit), so the data is quadratic.
