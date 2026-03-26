@@ -39,13 +39,32 @@
 \newtcolorbox{analogy}{colback=analogycolor,colframe=purple!70!black,title=Simple Analogy,fonttitle=\bfseries,breakable}
 \newtcolorbox{stepbox}{colback=red!5!white,colframe=red!70!black,title=Step-by-Step,fonttitle=\bfseries,breakable}
 \newtcolorbox{contextbox}{colback=contextcolor,colframe=blue!50!black,title=Context,fonttitle=\bfseries,breakable}
-\newtcolorbox{highlightbox}{colback=red!5!white,colframe=red!60!black,title=Practice Question,fonttitle=\bfseries,breakable,before={\needspace{10\baselineskip}}}
+\newtcolorbox{highlightbox}{%
+  bicolor,
+  colback=red!5!white,
+  colbacklower=gray!12!white,
+  colframe=red!60!black,
+  title=Practice Question,
+  fonttitle=\bfseries,
+  breakable,
+  before={\needspace{10\baselineskip}},
+  lower separated=true,
+  before lower={\textit{\textbf{Answer \& Rationale:}}\\[2pt]}}
 \newtcolorbox{criticalbox}{colback=criticalcolor,colframe=red!80!black,title=Critical Alert,fonttitle=\bfseries,breakable}
 \newtcolorbox{insightbox}{colback=green!5!white,colframe=green!60!black,title=Key Insight,fonttitle=\bfseries,breakable}
 \definecolor{warnbgcolor}{RGB}{255,240,220}
 \newtcolorbox{warningbox}{colback=warnbgcolor,colframe=orange!80!black,title=Warning,fonttitle=\bfseries,breakable}
 \definecolor{exercisecolor}{RGB}{255,250,220}
-\newtcolorbox{exercise}{colback=exercisecolor,colframe=olive!70!black,title=Practice Question,fonttitle=\bfseries,breakable,before={\needspace{15\baselineskip}}}
+\newtcolorbox{exercise}{%
+  bicolor,
+  colback=exercisecolor,
+  colbacklower=gray!12!white,
+  colframe=olive!70!black,
+  title=Practice Question,
+  fonttitle=\bfseries,
+  breakable,
+  before={\needspace{15\baselineskip}},
+  before lower={\textit{\textbf{Full Solution:}}\\[2pt]}}
 
 \newtcolorbox{skillbox}{colback=skillcolor,colframe=red!70!black,title=Nursing Skill,fonttitle=\bfseries,breakable,lines before break=4}
 \newtcolorbox{nclexbox}{colback=nclexcolor,colframe=red!60!black,title=Next Generation NCLEX Question,fonttitle=\bfseries,breakable,before={\needspace{10\baselineskip}}}
@@ -230,8 +249,7 @@ F_{\text{avg}} = \frac{J}{\Delta t} = \frac{13.05}{0.002} = 6{,}525\;\text{N}
 \end{highlightbox}
 
 \begin{highlightbox}
-\textbf{Question 9.1.5:} A constant force of 25\,N acts on an object for 4
-\,s. What is the impulse delivered to the object?
+\textbf{Question 9.1.5:} A constant force of 25\,N acts on an object for 4\,s. What is the impulse delivered to the object?
 
 \textbf{(A)} 6.25\,N$\cdot$s \quad \textbf{(B)} 100\,N$\cdot$s \quad \textbf{(C)} 50\,N$\cdot$s \quad \textbf{(D)} 625\,N$\cdot$s
 
@@ -467,7 +485,6 @@ Doubles when\ldots & Mass doubles OR speed doubles & Mass doubles; speed doubles
 \end{highlightbox}
 
 \begin{highlightbox}
-\
 \textbf{Question 9.2.4:} The impulse-momentum theorem states that the impulse on an object equals:
 
 \textbf{(A)} The object's final momentum \\
@@ -957,8 +974,7 @@ A \textbf{non-isolated system} has external forces acting on it. Total momentum 
 \end{definition}
 
 \begin{warningbox}
-\textbf{Common Mistake: Confusing ``system'' boundaries.} If you include only one object in your system, the force from the other object is \emph{external}, and momentum of that single object is not conserved. You must include \
-emph{all} interacting objects in your system for momentum to be conserved.
+\textbf{Common Mistake: Confusing ``system'' boundaries.} If you include only one object in your system, the force from the other object is \emph{external}, and momentum of that single object is not conserved. You must include \emph{all} interacting objects in your system for momentum to be conserved.
 \end{warningbox}
 
 \subsection{Applying Conservation of Momentum}
@@ -1474,8 +1490,7 @@ v_f = \frac{m_1 v_{1i}}{m_1 + m_2} = \frac{(5)(4)}{5+3} = \frac{20}{8} = 2.5\;\t
 \tcblower
 \textbf{Correct Answer: (B)}
 
-\textbf{Rationale:} For equal-mass elastic collisions with the target at rest, there is a complete transfer of motion: $v_{1f} = 0$ and $v_{2f} = v_{1i} = 6$
-\,m/s. This is the ``Newton's cradle'' effect---in a head-on elastic collision between equal masses, the velocities simply exchange.
+\textbf{Rationale:} For equal-mass elastic collisions with the target at rest, there is a complete transfer of motion: $v_{1f} = 0$ and $v_{2f} = v_{1i} = 6$\,m/s. This is the ``Newton's cradle'' effect---in a head-on elastic collision between equal masses, the velocities simply exchange.
 \end{highlightbox}
 
 \begin{highlightbox}
@@ -2056,8 +2071,7 @@ a = \frac{\Delta v}{\Delta t} \quad \text{(average)} \qquad \text{or} \qquad a =
 \begin{theorem}
 \textbf{From the Definition of Acceleration:} If acceleration is constant, then:
 \[
-a = \frac{\
-v_f - v_i}{\Delta t} \implies v_f = v_i + a\,\Delta t
+a = \frac{v_f - v_i}{\Delta t} \implies v_f = v_i + a\,\Delta t
 \]
 This is not a ``kinematic equation''---it is simply the \textbf{definition of acceleration} rearranged. We use this relationship because it \emph{is} the definition.
 \end{theorem}
@@ -2880,7 +2894,6 @@ Analysis method & Apply definitions/laws directly & Resolve into components, ana
 \midrule
 Recombination & Not needed & $|\vec{v}| = \sqrt{v_x^2 + v_y^2}$, $\theta = \tan^{-1}(v_y/v_x)$ \\
 \bottomrule
-ule
 \end{longtable}
 \end{center}
 
@@ -3213,7 +3226,7 @@ v_f = \sqrt{v_x^2 + v_{fy}^2} = \sqrt{15^2 + 29.7^2} = \sqrt{225 + 882} = \sqrt{
 \begin{highlightbox}
 \textbf{Question 3.5.3:} A projectile is launched from ground level at 40\,m/s at $45^\circ$. Using energy conservation, what is its speed when it reaches a height of 30\,m?
 
-\textbf{(A)} 28.0\,m/s \quad \textbf{(B)} 30.5\,m/s \quad \textbf{(C)} 33.0\,m/s \quad \textbf{(D)} 35.7\,m/s
+\textbf{(A)} 28.0\,m/s \quad \textbf{(B)} 29.5\,m/s \quad \textbf{(C)} 31.8\,m/s \quad \textbf{(D)} 35.7\,m/s
 
 \tcblower
 \textbf{Correct Answer: (C)}
@@ -3222,7 +3235,6 @@ v_f = \sqrt{v_x^2 + v_{fy}^2} = \sqrt{15^2 + 29.7^2} = \sqrt{225 + 882} = \sqrt{
 \[
 \frac{1}{2}v_0^2 = \frac{1}{2}v_f^2 + g\,h \implies v_f = \sqrt{v_0^2 - 2gh} = \sqrt{40^2 - 2(9.8)(30)} = \sqrt{1600 - 588} = \sqrt{1012} = 31.8\;\text{m/s}
 \]
-The closest answer is \textbf{(C)} 33.0\,m/s. (Note: slight rounding differences in answer choices are common on exams; always pick the closest match.)
 \end{highlightbox}
 
 \begin{highlightbox}
@@ -3670,8 +3682,7 @@ v_{0y} = 45\sin 40^\circ = 45(0.643) = 28.9\;\text{m/s}
 
 \textbf{(b) Time of flight:} From the definition of acceleration, the time to reach the peak:
 \[
-0 = v_{0y} - g
-\,t_{\text{up}} \implies t_{\text{up}} = \frac{v_{0y}}{g} = \frac{28.9}{9.8} = 2.95\;\text{s}
+0 = v_{0y} - g\,t_{\text{up}} \implies t_{\text{up}} = \frac{v_{0y}}{g} = \frac{28.9}{9.8} = 2.95\;\text{s}
 \]
 
 By symmetry (level ground), total time of flight:
@@ -3827,7 +3838,7 @@ h = \frac{v_{0y}^2}{2g} = \frac{(26.0)^2}{2(9.8)} = \frac{676}{19.6} = 34.5\;\te
 \begin{highlightbox}
 \textbf{Question 3.6.5:} A ball is kicked from the top of a 50\,m building at 25\,m/s at $37^\circ$ above horizontal. What is the speed just before it hits the ground?
 
-\textbf{(A)} 25\,m/s \quad \textbf{(B)} 31.3\,m/s \quad \textbf{(C)} 38.4\,m/s \quad \textbf{(D)} 42.0\,m/s
+\textbf{(A)} 25\,m/s \quad \textbf{(B)} 35.0\,m/s \quad \textbf{(C)} 40.1\,m/s \quad \textbf{(D)} 50.0\,m/s
 
 \tcblower
 \textbf{Correct Answer: (C)}
@@ -3836,15 +3847,7 @@ h = \frac{v_{0y}^2}{2g} = \frac{(26.0)^2}{2(9.8)} = \frac{676}{19.6} = 34.5\;\te
 \[
 v_f = \sqrt{v_0^2 + 2g\,h} = \sqrt{25^2 + 2(9.8)(50)} = \sqrt{625 + 980} = \sqrt{1605} = 40.1\;\text{m/s}
 \]
-Hmm---let's recheck: $\sqrt{1605} = 40.1$\,m/s. The closest answer is (C) 38.4\,m/s if the problem intended $h=40$\,m, but with $h=50$\,m the answer is 40.1\,m/s. Let us correct the problem: with $h = 35$\,m:
-\[
-v_f = \sqrt{625 + 686} = \sqrt{1311} = 36.2\;\text{m/s}
-\]
-Let's use the original $h = 50$\,m and correct the choices:
-
-\textbf{Corrected:} \textbf{(A)} 25\,m/s \quad \textbf{(B)} 35.0\,m/s \quad \textbf{(C)} 40.1\,m/s \quad \textbf{(D)} 50.0\,m/s
-
-\textbf{Correct Answer: (C)} $v_f = \sqrt{25^2 + 2(9.8)(50)} = 40.1$\,m/s. The launch angle does not affect the final speed---only the height and initial speed matter.
+The launch angle does not affect the final speed---only the initial speed and the height fallen matter.
 \end{highlightbox}
 
 \begin{highlightbox}
@@ -4218,8 +4221,7 @@ Minimum speed condition & Any speed (as long as force is available) & $v_{\min} 
 \begin{highlightbox}
 \textbf{Question 3.7.3:} A 0.30\,kg ball is swung in a horizontal circle on a 0.80\,m string at 5.0\,m/s. What is the tension in the string?
 
-\textbf{(A)} 1.9\,N \quad \textbf{(B)} 3.8\,N \quad \textbf{(C)} 9.4\,N \quad \textbf{(D)} 18
-\,N
+\textbf{(A)} 1.9\,N \quad \textbf{(B)} 3.8\,N \quad \textbf{(C)} 9.4\,N \quad \textbf{(D)} 18\,N
 
 \tcblower
 \textbf{Correct Answer: (C)}
@@ -4502,8 +4504,7 @@ By aiming upstream, the boat sacrifices some of its speed to counteract the curr
 \end{solution}
 
 \begin{criticalbox}
-\textbf
-{Critical Distinction: Aiming vs.\ Traveling}
+\textbf{Critical Distinction: Aiming vs.\ Traveling}
 
 \begin{itemize}
 \item \textbf{Aiming direction:} The direction the boat (or plane) points---this determines $\vec{v}_{B/W}$.
@@ -4725,8 +4726,7 @@ v_{H/G} = 180\cos 19.5^\circ = 180(0.943) = 169.7\;\text{km/h}
 \textbf{Part D:} Travel time:
 \[
 t = \frac{d}{v} = \frac{50}{169.7} = 0.295\;\text{h} = 17.7\;\text{min}
-\
-]
+\]
 
 \textbf{Part E:} On the return trip, the helicopter must travel due west while the wind still blows north at 60\,km/h. The pilot must aim south of west.
 
@@ -5124,8 +5124,7 @@ These are the standard projectile equations, derived purely from the definitions
 \begin{solution}
 Given: $v_0 = 30$\,m/s, $\theta = 60^\circ$, launched from ground level.
 
-Components: $v_{0x} = 30\cos 60^\circ = 15.0$\,m/s, $v_{0y} = 
-30\sin 60^\circ = 25.98$\,m/s.
+Components: $v_{0x} = 30\cos 60^\circ = 15.0$\,m/s, $v_{0y} = 30\sin 60^\circ = 25.98$\,m/s.
 
 \textbf{(a) Maximum height using energy conservation:}
 
@@ -5789,8 +5788,7 @@ V = \sqrt{2gh} = \sqrt{2(9.8)(0.15)} = \sqrt{2.94} = 1.71\;\text{m/s}
 mv_0 = (m + M)V
 \]
 \[
-0.010\,v_0 = (0.010 + 2.0
-)(1.71)
+0.010\,v_0 = (0.010 + 2.0)(1.71)
 \]
 \[
 v_0 = \frac{(2.010)(1.71)}{0.010} = \frac{3.437}{0.010} = 343.7\;\text{m/s}
@@ -6101,8 +6099,7 @@ Distance: $d_1 = \frac{0 + 10}{2}(5.0) = 25.0$\,m
 
 \textbf{Phase 2: Constant velocity} ($t_2 = 10.0$\,s, $v = 10.0$\,m/s)
 
-Distance: $d_2 
-= 10.0(10.0) = 100.0$\,m
+Distance: $d_2 = 10.0(10.0) = 100.0$\,m
 
 \textbf{Phase 3: Deceleration} ($a = -2.0$\,m/s$^2$, $v_0 = 10.0$\,m/s, $v_f = 0$)
 
@@ -6761,8 +6758,7 @@ m_A \vec{v}_{Ai} + m_B \vec{v}_{Bi} = m_A \vec{v}_{Af} + m_B \vec{v}_{Bf}
 2.0(5.0\,\hat{i}) + 0 = 2.0(3.0\,\hat{i} + 2.0\,\hat{j}) + 3.0\,\vec{v}_{Bf}
 \]
 \[
-10\,\hat{i} = 6.0\,\hat{i} + 4.0\,\hat{j} + 3.0\,\vec
-_{Bf}
+10\,\hat{i} = 6.0\,\hat{i} + 4.0\,\hat{j} + 3.0\,\vec{v}_{Bf}
 \]
 
 \textbf{$x$-component:}
@@ -7059,8 +7055,6 @@ This problem integrates uniform circular motion, tangential velocity, conservati
 
 \begin{center}
 \renewcommand{\arraystretch}{1.6}
-\begin{longtable}{>{\raggedright\
-\arraystretch}{1.6}
 \begin{longtable}{>{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{7.5cm}}
 \toprule
 \textbf{Concept} & \textbf{Formula / Relationship} \\
